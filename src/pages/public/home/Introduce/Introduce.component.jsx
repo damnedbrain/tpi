@@ -32,12 +32,12 @@ const Introduce = () => {
           />
         </div>
         <div className={styles['content']} ref={refContent}>
-          <div className={styles['content__title']}>
+          {/*<div className={styles['content__title']}>
             {refArrLanguage.current?.title}
           </div>
           <div className={styles['content__desc']}>
             {refArrLanguage.current?.desc}
-          </div>
+          </div>*/}
           <div className={styles['content__btn']}>
             <div className={styles['detail']}>
               {refArrLanguage.current?.button}

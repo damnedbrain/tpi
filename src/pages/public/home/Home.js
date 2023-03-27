@@ -19,7 +19,8 @@ export default function Home({ news }){
       <TeamMember />
       <LeaderIndustrial />
       <TrustedBy />
-      <Testimonial />
+      {//<Testimonial />
+      }
       <OurProject />
     </>
   );

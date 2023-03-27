@@ -34,7 +34,7 @@ export default function News({ news }) {
   return (
     <>
       <div className={styles['main-container']}>
-        <div className={styles['title']}>Tin tức nổi bật</div>
+        <div className={styles['title']}>Thị Trường</div>
         <div className={styles['container']}>
           {/*<LatestNews
             title={refLang.current?.latestNews.title}
