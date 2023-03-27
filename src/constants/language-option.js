@@ -116,7 +116,29 @@ export const headerMenu = [
       //   link: '',
       // },
 
-      { title: 'Logistic HUB', status: '', link: RoutePages.LOGISTIC_HUB }, //new
+      {
+        //Binh add
+        title: 'Logistic HUB',
+        sub: [
+          {
+            title: 'Irradiation',
+            status: 'sub',
+            link: RoutePages.FOOD_IRRADIATION,
+          },
+          {
+            title: 'Cold Storage',
+            status: 'sub',
+            link: RoutePages.COLD_STORAGE,
+          },
+          {
+            title: 'Logistics',
+            status: 'sub',
+            link: RoutePages.LOGISTIC_HUB,
+          },
+        ],
+        status: 'wrapper',
+        link: '',
+      },
       { title: 'Location', status: '', link: RoutePages.LOCATION }, // new
       /*{
         title: 'Customer & Partner',
@@ -129,21 +151,21 @@ export const headerMenu = [
         link: RoutePages.MARKET,
       }, // new
       {
-        title: 'Support - Q&A',
-        sub: [
-          {
-            title: 'Support',
-            status: 'sub',
-            link: RoutePages.SUPPORT,
-          },
-          {
-            title: 'Q&A',
-            status: 'sub',
-            link: RoutePages.QUESTION_AND_ANSWER,
-          },
-        ],
-        status: 'wrapper',
-        link: '',
+        title: 'FAQs',
+        // sub: [
+        //   {
+        //     title: 'Support',
+        //     status: 'sub',
+        //     link: RoutePages.SUPPORT,
+        //   },
+        //   {
+        //     title: 'Q&A',
+        //     status: 'sub',
+        //     link: RoutePages.QUESTION_AND_ANSWER,
+        //   },
+        // ],
+        status: '',
+        link: RoutePages.QUESTION_AND_ANSWER,
       }, //new
       {
         title: `Contact`,
@@ -436,11 +458,7 @@ export const humanResource = [
     locale: 'vi',
     title: 'Đội ngũ nhân sự ',
     desc: `Mỗi cá nhân sẽ tạo nên tập thể, từng đóng góp nhỏ là tiền đề của những thành quả lớn. Tại TPG, chúng tôi trân trọng giá trị của từng cá nhân, từ lãnh đạo, quản lý cấp cao am hiểu kiến thức chuyên môn đến những người trẻ với nguồn năng lượng tích cực và ham học hỏi. Một tập thể luôn coi trọng lợi ích chung và hướng đến sự cải tiến sẽ tạo nên một doanh nghiệp phát triển vững mạnh. Và tất cả những giá trị, kết quả tích cực đó đều được hình thành từ việc coi trọng Văn hóa doanh nghiệp.`,
-    subDesc: [
-      { desc: `` },
-      { desc: `` },
-      { desc: `` },
-    ],
+    subDesc: [{ desc: `` }, { desc: `` }, { desc: `` }],
     button: `Chi tiết`,
   },
   {
@@ -730,13 +748,11 @@ export const foodIrradiationSystem = [
     title: 'Chiếu xạ',
     desc: `TPG là một trong những đơn vị tiên phong ứng dụng cả 3 công nghệ chiếu xạ`,
     subDesc: [
-      { desc: `Hệ thống chiếu xạ bằng nguồn Cobalt 60 sử dụng tia gamma.`,
-      },
+      { desc: `Hệ thống chiếu xạ bằng nguồn Cobalt 60 sử dụng tia gamma.` },
       {
         desc: `Hệ thống máy chiếu xạ bằng chùm tia điện tử (E-Beam) sử dụng chùm electron.`,
       },
-      { desc: `Hệ thống máy chiếu xạ Bremsstrahlung (X-ray) sử dụng tia X.`,
-      },
+      { desc: `Hệ thống máy chiếu xạ Bremsstrahlung (X-ray) sử dụng tia X.` },
     ],
     concludeDesc: `Đây là 3 công nghệ chiếu xạ tiên tiến nhất hiện nay nhằm đẩy nhanh tiến độ xử lý hàng hóa; nâng cao chất lượng dịch vụ, đáp ứng tối đa nhu cầu khách hàng; giảm thời gian chờ đợi và tiết kiệm chi phí tối ưu nhất. Đặc biệt, TPG là đơn vị tiên phong duy nhất hiện nay đã sản xuất, lắp đặt thành công phần mềm điều khiển, dây chuyền cơ khí vận hành phát triển bởi đội ngũ kỹ thuật công ty 100% người Việt Nam và được APHIS công nhận đủ điều kiện chiếu xạ trái cây tươi cho thị trường Hoa Kỳ.
         Với sự kết hợp của cả ba công nghệ, cùng việc không ngừng mở rộng nghiên cứu, TPG có thể ứng dụng đa dạng hóa vào nhiều mặt hàng chiếu xạ và tiếp tục khẳng định vị thế trên thị trường. 
