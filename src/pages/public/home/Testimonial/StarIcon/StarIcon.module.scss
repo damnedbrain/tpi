@@ -1,0 +1,14 @@
+@import '/styles/main';
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 111px;
+  height: 18px;
+  .star-icon {
+    width: 18px;
+    height: 18px;
+    opacity: 0;
+  }
+}

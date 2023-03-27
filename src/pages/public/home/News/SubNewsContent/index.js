@@ -1,0 +1,1 @@
+export { default as SubNewsContent } from './SubNewsContent.component';

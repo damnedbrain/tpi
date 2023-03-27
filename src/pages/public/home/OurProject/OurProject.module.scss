@@ -1,0 +1,91 @@
+@import '/styles/main';
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1440px;
+  width: 100%;
+  height: max-content;
+  margin: 100px auto 0;
+  text-align: center;
+  opacity: 0;
+  &.active-anim {
+    @include anim-opacity(0.5s, 0s);
+
+    @for $i from 1 through 3 {
+      & > :nth-child(#{$i}) {
+        @include anim-move-top(20px, 0.5s, 0.3s * $i);
+      }
+    }
+  }
+  @include responsive-size(screen-l) {
+    margin-top: 60px;
+  }
+  .title {
+    width: 100%;
+    height: 24px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    color: #2c1c5a;
+    margin-bottom: 24px;
+  }
+  .main-title {
+    width: 100%;
+    height: 40px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120%;
+    color: #06703a;
+    margin-bottom: 24px;
+  }
+  .desc {
+    max-width: 621px;
+    width: 100%;
+    height: 44px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 130%;
+    color: #000000;
+    margin-bottom: 29px;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 8px;
+    width: 100%;
+    height: 100%;
+    grid-auto-flow: dense;
+    grid-gap: 8px;
+    overflow: visible;
+    opacity: 0;
+    &.active-anim {
+      @include anim-opacity(0.7s, 0s);
+
+      @for $i from 1 through 6 {
+        & > :nth-child(#{$i}) {
+          @include anim-move-circle(10px, 0.8s, 0.25s * $i);
+        }
+      }
+      @include responsive-size(screen-m) {
+        @for $i from 1 through 6 {
+          & > :nth-child(#{$i}) {
+            @include anim-move-circle(2px * $i, 0.8s, 0.25s * $i);
+          }
+        }
+      }
+    }
+    &__image {
+      width: auto;
+      max-height: 350px;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+}
