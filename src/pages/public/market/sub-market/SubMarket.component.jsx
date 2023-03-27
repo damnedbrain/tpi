@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { RoutePages } from '@constants/router';
 import { useObserverItem } from 'components/hook/useObserverItem';
 import { useRouter } from 'next/router';
+import { convertTime } from '@utils/uti';
 
 const SubMarket = ({ news }) => {
   const { title, image, desc, slug, time, author, avatar, hightLight } =
@@ -12,6 +13,7 @@ const SubMarket = ({ news }) => {
   const refContent = useRef(null);
   useObserverItem(refContent, styles);
   const router = useRouter();
+  const { locale } = useRouter();
 
   const redirectToPage = useCallback(
     (_link) => {
@@ -49,16 +51,6 @@ const SubMarket = ({ news }) => {
     'height',
   ]);
 
-  const convertTime = (time) => {
-    const event = new Date(time);
-    const options = {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    };
-    return event.toLocaleDateString('vi', options);
-  };
-
   return (
     <>
       <div className={styles['container']} ref={refContent}>
@@ -83,7 +75,7 @@ const SubMarket = ({ news }) => {
           >
             {title}
           </div>
-          <div className={styles['time']}>{convertTime(time)}</div>
+          <div className={styles['time']}>{convertTime(time, locale)}</div>
           <div className={styles['desc']}>{_desc}</div>
           <div className={styles['author']}>
             <div className={styles['author__avatar']}>

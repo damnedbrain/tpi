@@ -4,9 +4,10 @@ import Image from 'next/image';
 import { get } from 'lodash';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { Breadcrumb } from 'components/own/breadcrumb';
-import { breadcrumb } from '@constants/language-option';
+import { RoutePages } from '@constants/router';
+import { convertTime } from '@utils/uti';
 
-const MarketDetail = ({ news }) => {
+const MarketDetail = ({ news, locale }) => {
   if (!news?.fields) return;
   const { title, image, desc, time, author, avatar, slug } = news?.fields;
 
@@ -36,20 +37,27 @@ const MarketDetail = ({ news }) => {
     'height',
   ]);
 
-  const convertTime = (time) => {
-    const event = new Date(time);
-    const options = {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    };
-    return event.toLocaleDateString('vi', options);
-  };
+  const marketDetailBreadcrumb = [
+    {
+      locale: 'vi',
+      sub: [
+        { path: RoutePages.MARKET, title: 'Thị trường' },
+        { path: RoutePages.MARKET + `/${slug}`, title: title },
+      ],
+    },
+    {
+      locale: 'en-US',
+      sub: [
+        { path: RoutePages.MARKET, title: 'Market' },
+        { path: RoutePages.MARKET + `/${slug}`, title: title },
+      ],
+    },
+  ];
 
   return (
     <>
       <div className={styles['container']}>
-        <Breadcrumb data={breadcrumb.market} />
+        <Breadcrumb data={marketDetailBreadcrumb} />
 
         <div className={styles['content-wrapper']}>
           <div className={styles['title']}>{title}</div>
@@ -79,7 +87,7 @@ const MarketDetail = ({ news }) => {
               quality={100}
             />
           </div>
-          <div className={styles['time']}>{convertTime(time)}</div>
+          <div className={styles['time']}>{convertTime(time, locale)}</div>
 
           <div className={styles['desc']}>
             {documentToReactComponents(desc)}

@@ -8,7 +8,8 @@ import styles from './News.module.scss';
 import { SubNewsContent } from './SubNewsContent';
 import { BigNewsContent } from './BigNewsContent';
 
-{/*
+{
+  /*
 import news_1 from '@assets/news/News-1.png';
 import news_2 from '@assets/news/News-2.png';
 import news_3 from '@assets/news/News-3.png';
@@ -20,8 +21,8 @@ const action = [
   { image: news_3 },
   { image: news_4 },
 ];
-*/}
-
+*/
+}
 
 export default function News({ news }) {
   //const refContainer = useRef();
@@ -51,26 +52,34 @@ export default function News({ news }) {
               />
             ))}
           </div>*/}
-          
-            {news?.map((item, index) => {
-              return item?.fields?.homePage ? 
-                (item?.fields?.hightLight ? (
-                  <BigNewsContent key={item.fields.id} news={item} />
-                ) : ('')) : ( '');
-              })
-            }
-          
+
+          {news?.map((item, index) => {
+            return item?.fields?.homePage ? (
+              item?.fields?.hightLight ? (
+                <BigNewsContent key={index} news={item} />
+              ) : (
+                ''
+              )
+            ) : (
+              ''
+            );
+          })}
+
           <div className={styles['sub-news']}>
             {news?.map((item, index) => {
-              return !item?.fields?.homePage ? 
-                (item?.fields?.hightLight ? (
-                  <SubNewsContent key={item.fields.id} news={item} />
-                ) : ('')) : ( '');
-              })
-            }
+              return !item?.fields?.homePage ? (
+                item?.fields?.hightLight ? (
+                  <SubNewsContent key={index} news={item} />
+                ) : (
+                  ''
+                )
+              ) : (
+                ''
+              );
+            })}
           </div>
         </div>
       </div>
     </>
   );
-};
+}

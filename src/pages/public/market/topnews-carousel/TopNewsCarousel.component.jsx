@@ -93,18 +93,6 @@ const TopNewsCarousel = ({ news }) => {
                   ''
                 );
               })}
-            {/* {Array.isArray(refContent.current?.comments) &&
-              refContent.current?.comments?.map((item, index) => {
-                return (
-                  <SubTopNewsCarousel
-                    key={index}
-                    name={item.name}
-                    title={item.title}
-                    avatar={clientAvatar[index].avatar}
-                    comment={item.comment}
-                  />
-                );
-              })} */}
           </Slider>
         </div>
       </div>

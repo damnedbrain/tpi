@@ -11,29 +11,33 @@ const client = createClient({
 
 export async function getStaticPaths() {
   const res = await client.getEntries({ content_type: 'toanPhatMarketNews' });
-  const paths = res.items.map((item) => {
-    return {
+  let paths = [];
+  res.items.map((item) => {
+    paths.push({
       params: {
         slug: item.fields.slug,
-        locale: 'en-US',
       },
+      locale: 'vi',
+    });
+    paths.push({
       params: {
         slug: item.fields.slug,
-        locale: 'vi',
       },
-    };
+      locale: 'en-US',
+    });
   });
 
   return {
     paths,
-    fallback: true,
+    fallback: 'blocking',
   };
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params, locale }) {
   const res = await client.getEntries({
     content_type: 'toanPhatMarketNews',
     'fields.slug': params.slug,
+    locale: locale,
   });
 
   if (!res) {
@@ -46,15 +50,15 @@ export async function getStaticProps({ params }) {
   }
 
   return {
-    props: { news: res.items[0] },
+    props: { news: res.items[0], locale },
     revalidate: 10,
   };
 }
 
-export default function Detail({ news }) {
+export default function Detail({ news, locale }) {
   return (
     <Layout>
-      <MarketDetail news={news} />;
+      <MarketDetail news={news} locale={locale} />;
     </Layout>
   );
 }
