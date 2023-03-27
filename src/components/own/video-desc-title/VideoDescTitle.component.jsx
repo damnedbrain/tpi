@@ -53,10 +53,8 @@ const VideoDescTitle = ({ videoInfo, title, desc, videoID }) => {
           </div>
         </div>
         <div>
-    
-            <div class={styles['title']}>{title}</div>
-            <div class={styles['videoDesc']}>{desc}</div>
-
+          <div className={styles['title']}>{title}</div>
+          <div className={styles['videoDesc']}>{desc}</div>
         </div>
       </div>
     </>
