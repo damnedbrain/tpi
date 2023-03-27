@@ -81,6 +81,21 @@ const ContactAConsultant = () => {
             </Form.Control.Feedback>
           </Form.Group>
 
+          <div className={styles['form-title']}>
+            {refLang.current?.phone.label}
+          </div>
+          <Form.Group className='mb-4' controlId='formHorizontalEmail'>
+            <Form.Control
+              type='text'
+              name='username'
+              placeholder={refLang.current?.phone.desc}
+              required
+            />
+            <Form.Control.Feedback type='invalid'>
+              Nhập địa chỉ vào đây
+            </Form.Control.Feedback>
+          </Form.Group>
+
           <div className={styles['form-title-important']}>
             {refLang.current?.email.label}
           </div>
@@ -119,21 +134,6 @@ const ContactAConsultant = () => {
               type='text'
               name='username'
               placeholder={refLang.current?.typeProduct.desc}
-              required
-            />
-            <Form.Control.Feedback type='invalid'>
-              Nhập địa chỉ vào đây
-            </Form.Control.Feedback>
-          </Form.Group>
-
-          <div className={styles['form-title']}>
-            {refLang.current?.phone.label}
-          </div>
-          <Form.Group className='mb-4' controlId='formHorizontalEmail'>
-            <Form.Control
-              type='text'
-              name='username'
-              placeholder={refLang.current?.phone.desc}
               required
             />
             <Form.Control.Feedback type='invalid'>

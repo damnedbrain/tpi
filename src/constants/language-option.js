@@ -577,8 +577,7 @@ export const ourProject = [
     locale: 'vi',
     title: 'Thư viện',
     mainTitle: 'Hình ảnh',
-    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed amet,
-          consequat egestas dictum posuere pellentesque fermentum.`,
+    desc: `Những hình ảnh về hoạt động, dịch vụ tại Nhà Máy Chiếu Xạ Toàn Phát & Kho Lạnh Toàn Phát của chúng tôi `,
   },
   {
     locale: 'en-US',
@@ -754,9 +753,7 @@ export const foodIrradiationSystem = [
       },
       { desc: `Hệ thống máy chiếu xạ Bremsstrahlung (X-ray) sử dụng tia X.` },
     ],
-    concludeDesc: `Đây là 3 công nghệ chiếu xạ tiên tiến nhất hiện nay nhằm đẩy nhanh tiến độ xử lý hàng hóa; nâng cao chất lượng dịch vụ, đáp ứng tối đa nhu cầu khách hàng; giảm thời gian chờ đợi và tiết kiệm chi phí tối ưu nhất. Đặc biệt, TPG là đơn vị tiên phong duy nhất hiện nay đã sản xuất, lắp đặt thành công phần mềm điều khiển, dây chuyền cơ khí vận hành phát triển bởi đội ngũ kỹ thuật công ty 100% người Việt Nam và được APHIS công nhận đủ điều kiện chiếu xạ trái cây tươi cho thị trường Hoa Kỳ.
-        Với sự kết hợp của cả ba công nghệ, cùng việc không ngừng mở rộng nghiên cứu, TPG có thể ứng dụng đa dạng hóa vào nhiều mặt hàng chiếu xạ và tiếp tục khẳng định vị thế trên thị trường. 
-        `,
+    concludeDesc: `Đây là 3 công nghệ chiếu xạ tiên tiến nhất hiện nay nhằm đẩy nhanh tiến độ xử lý hàng hóa; nâng cao chất lượng dịch vụ, đáp ứng tối đa nhu cầu khách hàng; giảm thời gian chờ đợi và tiết kiệm chi phí tối ưu nhất. Đặc biệt, TPG là đơn vị tiên phong duy nhất hiện nay đã sản xuất, lắp đặt thành công phần mềm điều khiển, dây chuyền cơ khí vận hành bằng nguồn Cobalt 60 phát triển bởi đội ngũ kỹ thuật công ty 100% người Việt Nam và được APHIS công nhận đủ điều kiện chiếu xạ trái cây tươi cho thị trường Hoa Kỳ. Với sự kết hợp của cả ba công nghệ, cùng việc không ngừng mở rộng nghiên cứu, TPG có thể ứng dụng đa dạng hóa vào nhiều mặt hàng chiếu xạ và tiếp tục khẳng định vị thế trên thị trường. `,
   },
   {
     locale: 'en-US',
@@ -776,7 +773,7 @@ export const foodIrradiationSystem = [
 export const productOfIrradiation = [
   {
     locale: 'vi',
-    title: 'Các sản phẩm được chiếu xạ tại TPI:',
+    title: 'Các sản phẩm được chiếu xạ tại Nhà máy Chiếu xạ Toàn Phát:',
     subDesc: [
       { desc: 'Trái cây tươi' },
       { desc: 'Trái cây đông lạnh' },
@@ -1084,12 +1081,12 @@ export const contactAConsultant = [
   {
     locale: 'vi',
     title: 'Liên hệ tư vấn',
-    desc: `Khách hàng cần tư vấn từ TPI, xin vui lòng điền đầy đủ thông tin sẽ có nhân viên liên hệ hỗ trợ trong vòng 24 giờ.`,
+    desc: `Khách hàng cần tư vấn từ TPG, xin vui lòng điền đầy đủ thông tin sẽ có nhân viên liên hệ hỗ trợ trong vòng 24 giờ.`,
     username: { label: `Họ tên`, desc: `Nhập họ tên vào đây` },
+    phone: { label: `Số điện thoại`, desc: `Nhập số điện thoại vào đây` },
     email: { label: `Email`, desc: `Nhập Email vào đây` },
     address: { label: `Địa chỉ`, desc: `Nhập địa chỉ vào đây` },
-    typeProduct: { label: `Loại hàng`, desc: `Nhập loại hàng vào đây` },
-    phone: { label: `Tư vấn dịch vụ`, desc: `Nhập số điện thoại vào đây` },
+    typeProduct: { label: `Loại hàng`, desc: `Nhập loại hàng vào đây` }, 
     register: { title: `Đăng ký`, label1: `Chiếu xạ`, label2: `Gửi kho` },
     note: { label: `Ghi chú`, desc: `Nhập ghi chú vào đây` },
     button: `Gửi thông tin`,
@@ -1351,7 +1348,7 @@ export const questionContent = [
   {
     locale: 'vi',
     title: `Q&A - Hỏi đáp`,
-    desc: `Thông tin chi tiết về TPI`,
+    desc: `Thông tin chi tiết về TPG`,
     sub: [
       {
         number: 1,

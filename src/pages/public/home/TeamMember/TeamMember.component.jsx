@@ -62,7 +62,7 @@ const TeamMember = () => {
     <>
       <div className={styles['container']} ref={refContainer}>
         <div className={styles['content-wrapper']}>
-          <div className={styles['title']}>{refContent.current?.title}</div>
+          {/*<div className={styles['title']}>{refContent.current?.title}</div>*/}
           <div className={styles['title-main']}>
             {refContent.current?.titleMain}
           </div>

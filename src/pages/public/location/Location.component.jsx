@@ -13,7 +13,7 @@ const Location = () => {
         <Breadcrumb data={breadcrumb.location} />
         <LocationMap />
         {/*<LocationMapListImage />*/}
-        <VideoTop />
+        {/*<VideoTop />*/}
       </div>
     </>
   );
