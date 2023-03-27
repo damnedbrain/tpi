@@ -7,11 +7,12 @@ import { RoutePages } from '@constants/router';
 import { useRouter } from 'next/router';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { ReadMoreBtn } from '../ReadMoreBtn';
-
+import { convertTime } from '@utils/uti';
 
 const BigNewsContent = ({ news }) => {
   const { title, image, desc, slug, time, author, avatar } = news?.fields;
   const router = useRouter();
+  const { locale } = useRouter();
   const refContainer = useRef();
 
   useObserverItem(refContainer, styles);
@@ -49,41 +50,21 @@ const BigNewsContent = ({ news }) => {
     'height',
   ]);
 
-  const convertTime = (time) => {
-    const event = new Date(time);
-    const options = {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    };
-    return event.toLocaleDateString('vi', options);
-  };
-
-  const activeImage = (e) => {
-    let threshold = 3;
-    let distance = 0;
-
-    const onMouseMove = () => {
-      distance++;
-    };
-    const onMouseUp = () => {
-      if (distance <= threshold) redirectToPage(RoutePages.MARKET + `/${slug}`);
-    };
-    e.currentTarget.addEventListener('mousemove', onMouseMove);
-    e.currentTarget.addEventListener('mouseup', onMouseUp, { once: true });
-  };
-
   return (
     <>
-        <div className={styles['container']} ref={refContainer} 
-        onMo
-        onMouseDown={(e) => activeImage(e)}>
+      <div
+        className={styles['container']}
+        ref={refContainer}
+        onClick={() => redirectToPage(RoutePages.MARKET + `/${slug}`)}
+      >
         <div className={styles['content']}>
           <div className={styles['content-left']}>
             <div className={styles['content-left__title']}>{title}</div>
-            <div className={styles['content-left__time']}>{convertTime(time)}</div>
+            <div className={styles['content-left__time']}>
+              {convertTime(time, locale)}
+            </div>
             <div className={styles['content-left__desc']}>
-                {documentToReactComponents(desc)}
+              {documentToReactComponents(desc)}
             </div>
             <div className={styles['content-left__author']}>
               <div className={styles['content-left__author__avatar']}>
@@ -102,15 +83,15 @@ const BigNewsContent = ({ news }) => {
             <ReadMoreBtn readMore={RoutePages.MARKET + `/${slug}`} />
           </div>
           <div className={styles['content-right']}>
-          <Image
-            src={`https:${_imageURL}`}
-            alt=''
-            width={_imageWidth ? _imageWidth : 383}
-            height={_imageHeight ? _imageHeight : 200}
-            layout='responsive'
-            objectFit='cover'
-            quality={100}
-          />
+            <Image
+              src={`https:${_imageURL}`}
+              alt=''
+              width={_imageWidth ? _imageWidth : 383}
+              height={_imageHeight ? _imageHeight : 200}
+              layout='responsive'
+              objectFit='cover'
+              quality={100}
+            />
           </div>
         </div>
       </div>

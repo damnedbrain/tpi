@@ -6,10 +6,13 @@ import { get } from 'lodash';
 import { RoutePages } from '@constants/router';
 import { useRouter } from 'next/router';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { convertTime } from '@utils/uti';
 
 const SubTopNewsCarousel = ({ news }) => {
   const { title, image, desc, slug, time, author, avatar } = news?.fields;
   const router = useRouter();
+  const { locale } = useRouter();
+
   const refContainer = useRef();
 
   useObserverItem(refContainer, styles);
@@ -47,16 +50,6 @@ const SubTopNewsCarousel = ({ news }) => {
     'height',
   ]);
 
-  const convertTime = (time) => {
-    const event = new Date(time);
-    const options = {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    };
-    return event.toLocaleDateString('vi', options);
-  };
-
   const activeImage = (e) => {
     let threshold = 3;
     let distance = 0;
@@ -76,7 +69,6 @@ const SubTopNewsCarousel = ({ news }) => {
       <div
         className={styles['container']}
         ref={refContainer}
-        onMo
         onMouseDown={(e) => activeImage(e)}
       >
         <div className={styles['main-image']}>
@@ -93,7 +85,9 @@ const SubTopNewsCarousel = ({ news }) => {
         <div className={styles['client-wrapper']}>
           <div className={styles['client']}>
             <div className={styles['client__title']}>{title}</div>
-            <div className={styles['client__time']}>{convertTime(time)}</div>
+            <div className={styles['client__time']}>
+              {convertTime(time, locale)}
+            </div>
             <div className={styles['client__desc']}>
               {documentToReactComponents(desc)}
             </div>

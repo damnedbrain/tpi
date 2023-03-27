@@ -48,55 +48,32 @@ const SubNewsContent = ({ news }) => {
     'height',
   ]);
 
-  const convertTime = (time) => {
-    const event = new Date(time);
-    const options = {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    };
-    return event.toLocaleDateString('vi', options);
-  };
-
-  const activeImage = (e) => {
-    let threshold = 3;
-    let distance = 0;
-
-    const onMouseMove = () => {
-      distance++;
-    };
-    const onMouseUp = () => {
-      if (distance <= threshold) redirectToPage(RoutePages.MARKET + `/${slug}`);
-    };
-    e.currentTarget.addEventListener('mousemove', onMouseMove);
-    e.currentTarget.addEventListener('mouseup', onMouseUp, { once: true });
-  };
-
   return (
     <>
       <div
         className={styles['container']}
         ref={refContainer}
-        onMo
-        onMouseDown={(e) => activeImage(e)}
+        onClick={() => redirectToPage(RoutePages.MARKET + `/${slug}`)}
       >
-      <div className={styles['container']} ref={refContainer}>
-        <div className={styles['image']}>
-          <Image
-            src={`https:${_imageURL}`}
-            alt=''
-            width={_imageWidth ? _imageWidth : 383}
-            height={_imageHeight ? _imageHeight : 200}
-            layout='responsive'
-            objectFit='cover'
-            quality={100}
-          />
+        <div className={styles['container']} ref={refContainer}>
+          <div className={styles['image']}>
+            <Image
+              src={`https:${_imageURL}`}
+              alt=''
+              width={_imageWidth ? _imageWidth : 383}
+              height={_imageHeight ? _imageHeight : 200}
+              layout='responsive'
+              objectFit='cover'
+              quality={100}
+            />
+          </div>
+          <div className={styles['title']}>{title}</div>
+          <div className={styles['desc']}>
+            {documentToReactComponents(desc)}
+          </div>
+          <ReadMoreBtn readMore={RoutePages.MARKET + `/${slug}`} />
         </div>
-        <div className={styles['title']}>{title}</div>
-        <div className={styles['desc']}>{documentToReactComponents(desc)}</div>
-        <ReadMoreBtn readMore={RoutePages.MARKET + `/${slug}`} />
-      </div>
-      {/*
+        {/*
         <div className={styles['main-image']}>
           <Image
             src={`https:${_imageURL}`}
@@ -132,7 +109,6 @@ const SubNewsContent = ({ news }) => {
           </div>
         </div>
       */}
-
       </div>
     </>
   );
