@@ -55,11 +55,11 @@ export const headerMenu = [
       },
 
       { title: 'Vị trí', status: '', link: RoutePages.LOCATION }, // new
-      {
+      /*{
         title: `Khách hàng & đối tác`,
         status: '',
         link: RoutePages.CUSTOMER_AND_PARTNER,
-      }, // new
+      },*/ // new
       {
         title: `Thị trường`,
         status: '',
@@ -118,11 +118,11 @@ export const headerMenu = [
 
       { title: 'Logistic HUB', status: '', link: RoutePages.LOGISTIC_HUB }, //new
       { title: 'Location', status: '', link: RoutePages.LOCATION }, // new
-      {
+      /*{
         title: 'Customer & Partner',
         status: '',
         link: RoutePages.CUSTOMER_AND_PARTNER,
-      }, // new
+      },*/ // new
       {
         title: `Market`,
         status: '',
