@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import styles from './AboutUs.module.scss';
 import { Breadcrumb } from 'components/own/breadcrumb';
 import { AboutUsTop } from './about-us-top';
@@ -15,7 +15,7 @@ import { useRouter } from 'next/router';
 
 const AboutUs = () => {
   const { asPath } = useRouter();
-  const refMember = useRef();
+
   const scrollTop = (asPath) => {
     if (!asPath.includes('van-hoa-doanh-nghiep')) return;
     const ele = document.getElementById('van-hoa-doanh-nghiep');
@@ -43,7 +43,7 @@ const AboutUs = () => {
         <FutureGoal />
         <HumanResource />
         <a id='van-hoa-doanh-nghiep'>
-          <AboutUsTeamMember ref={refMember} />
+          <AboutUsTeamMember />
         </a>
       </div>
     </>
