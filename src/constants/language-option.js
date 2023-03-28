@@ -87,6 +87,11 @@ export const headerMenu = [
         status: '',
         link: RoutePages.CONTACT,
       }, // new
+      {
+        title: `Đăng nhập`,
+        status: '',
+        link: RoutePages.LOGISTIC_HUB,
+      }, // new
 
       // { title: 'Mục tiêu phát triển', status: '', link: RoutePages.GOALS },
       // { title: 'Khách hàng', status: '', link: RoutePages.CUSTOMER },
