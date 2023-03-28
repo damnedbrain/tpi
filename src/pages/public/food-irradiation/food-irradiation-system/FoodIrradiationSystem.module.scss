@@ -53,6 +53,9 @@
     font-weight: 500;
     line-height: 200%;
     margin: 32px 0;
+    @include responsive-size(screen-m) {
+      padding: 0 6px;
+    }
   }
   .sub-content-wrapper {
     display: flex;
