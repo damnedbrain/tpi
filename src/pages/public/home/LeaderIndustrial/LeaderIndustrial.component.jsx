@@ -47,7 +47,7 @@ const LeaderIndustrial = () => {
               </div>
             ))}
           </div>
-          <Link href={RoutePages.ABOUT_US + '/#van-hoa-doanh-nghiep'} passHref>
+          <Link href={RoutePages.ABOUT_US + '#van-hoa-doanh-nghiep'} passHref>
           <div className={styles['content__button']}>
             {refLanguage.current?.button}
             <div className={styles['icon-arrow']}>
