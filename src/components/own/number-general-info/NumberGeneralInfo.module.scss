@@ -40,5 +40,8 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     white-space: pre-line;
+    @include responsive-size(screen-m) {
+      margin-right: 0;
+    }
   }
 }

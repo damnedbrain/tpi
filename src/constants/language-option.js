@@ -1091,7 +1091,7 @@ export const contactAConsultant = [
     phone: { label: `Số điện thoại`, desc: `Nhập số điện thoại vào đây` },
     email: { label: `Email`, desc: `Nhập Email vào đây` },
     address: { label: `Địa chỉ`, desc: `Nhập địa chỉ vào đây` },
-    typeProduct: { label: `Loại hàng`, desc: `Nhập loại hàng vào đây` }, 
+    typeProduct: { label: `Loại hàng`, desc: `Nhập loại hàng vào đây` },
     register: { title: `Đăng ký`, label1: `Chiếu xạ`, label2: `Gửi kho` },
     note: { label: `Ghi chú`, desc: `Nhập ghi chú vào đây` },
     button: `Gửi thông tin`,
@@ -1460,14 +1460,14 @@ export const breadcrumb = {
     {
       locale: 'vi',
       sub: [
-        { path: '#', title: 'Lĩnh vực tiên phong' },
+        { path: '#', title: 'Logistic HUB' },
         { path: '#', title: 'Chiếu xạ' },
       ],
     },
     {
       locale: 'en-US',
       sub: [
-        { path: '#', title: 'Pioneering field' },
+        { path: '#', title: 'Logistic HUB' },
         { path: '#', title: 'Irradiation' },
       ],
     },
@@ -1486,14 +1486,14 @@ export const breadcrumb = {
     {
       locale: 'vi',
       sub: [
-        { path: '#', title: 'Lĩnh vực tiên phong' },
+        { path: '#', title: 'Logistic HUB' },
         { path: '#', title: 'Kho lạnh lưu trữ' },
       ],
     },
     {
       locale: 'en-US',
       sub: [
-        { path: '#', title: 'Pioneering field' },
+        { path: '#', title: 'Logistic HUB' },
         { path: '#', title: 'Cold storage' },
       ],
     },
