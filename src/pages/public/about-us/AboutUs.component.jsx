@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import styles from './AboutUs.module.scss';
 import { Breadcrumb } from 'components/own/breadcrumb';
 import { AboutUsTop } from './about-us-top';
@@ -11,8 +11,26 @@ import { TimelineTPG } from './Timeline-TPG';
 import { SixWord } from './six-word';
 import { FutureGoal } from './future-goal';
 import { HumanResource } from './HumanResource';
+import { useRouter } from 'next/router';
 
 const AboutUs = () => {
+  const { asPath } = useRouter();
+  const refMember = useRef();
+  const scrollTop = (asPath) => {
+    if (!asPath.includes('van-hoa-doanh-nghiep')) return;
+    const ele = document.getElementById('van-hoa-doanh-nghiep');
+    if (!ele) return;
+    ele.scrollIntoView({
+      behavior: 'instant',
+      block: 'center',
+      inline: 'center',
+    });
+  };
+
+  useEffect(() => {
+    scrollTop(asPath);
+  }, [asPath]);
+
   return (
     <>
       <div className={styles['container']}>
@@ -24,8 +42,8 @@ const AboutUs = () => {
         <SixWord />
         <FutureGoal />
         <HumanResource />
-        <a id="van-hoa-doanh-nghiep">
-        <AboutUsTeamMember />
+        <a id='van-hoa-doanh-nghiep'>
+          <AboutUsTeamMember ref={refMember} />
         </a>
       </div>
     </>

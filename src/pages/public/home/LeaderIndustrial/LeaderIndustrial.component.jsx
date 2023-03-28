@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useCallback } from 'react';
 import styles from './LeaderIndustrial.module.scss';
 import { useObserverItem } from 'components/hook/useObserverItem';
 import { useChooseLanguage } from 'components/hook/useChooseLanguage';
@@ -6,10 +6,11 @@ import { leaderIndustrial } from '@constants/language-option';
 import Image from 'next/image';
 import leader from '@assets/leader-industrial/LeaderIndustrial.png';
 import arrow_right from '@assets/introduce/arrow-right.png';
-import Link from 'next/link';
 import { RoutePages } from '@constants/router';
+import { useRouter } from 'next/router';
 
 const LeaderIndustrial = () => {
+  const router = useRouter();
   const refContainer = useRef();
   const refContent = useRef();
   const refLanguage = useRef();
@@ -17,6 +18,13 @@ const LeaderIndustrial = () => {
   useObserverItem(refContainer, styles);
   useObserverItem(refContent, styles);
   useChooseLanguage(leaderIndustrial, refLanguage);
+  const redirectToPage = useCallback(
+    (_link) => {
+      router.push(_link);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    },
+    [router]
+  );
 
   return (
     <>
@@ -47,8 +55,12 @@ const LeaderIndustrial = () => {
               </div>
             ))}
           </div>
-          <Link href={RoutePages.ABOUT_US + '/#van-hoa-doanh-nghiep'} passHref>
-          <div className={styles['content__button']}>
+          <div
+            className={styles['content__button']}
+            onClick={() =>
+              redirectToPage(RoutePages.ABOUT_US + '/#van-hoa-doanh-nghiep')
+            }
+          >
             {refLanguage.current?.button}
             <div className={styles['icon-arrow']}>
               <Image
@@ -62,7 +74,6 @@ const LeaderIndustrial = () => {
               />
             </div>
           </div>
-          </Link>
         </div>
       </div>
     </>
