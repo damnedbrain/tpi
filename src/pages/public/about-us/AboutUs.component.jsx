@@ -24,7 +24,9 @@ const AboutUs = () => {
         <SixWord />
         <FutureGoal />
         <HumanResource />
+        <a id="van-hoa-doanh-nghiep">
         <AboutUsTeamMember />
+        </a>
       </div>
     </>
   );

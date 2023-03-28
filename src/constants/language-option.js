@@ -211,14 +211,17 @@ export const bestServices = [
       {
         title: 'Chiếu Xạ',
         desc: ` TPG là một trong những đơn vị tiên phong trên thị trường hiện nay ứng dụng cả 3 công nghệ chiếu xạ: Cobalt 60, E-Beam, X-ray nhằm đẩy nhanh tiến độ xử lý hàng hóa và đảm bảo chất lượng tốt nhất cho Nông - Thuỷ sản. `,
+        linksrc: RoutePages.FOOD_IRRADIATION,
       },
       {
         title: 'Kho Lạnh Lưu Trữ',
         desc: ` TPG xây dựng và đưa vào vận hành Kho Lạnh Toàn Phát với tổng số vị trí 12.000 pallet, tương đương với sức chứa lưu trữ tối đa lên đến 12.000 tấn. Nhiệt độ lưu trữ từ -18 độ C (+/-3 độ C), kho hạ độ: -35 độ C.`,
+        linksrc: RoutePages.COLD_STORAGE,
       },
       {
         title: 'Vận Chuyển',
         desc: ` Chúng tôi hướng đến trở thành một Trung tâm Logistic với đầy đủ chức năng: Chiếu xạ - Lưu trữ - Vận chuyển, nhằm tối ưu chi phí, tạo đòn bẩy cạnh tranh cho hoạt động xuất khẩu Nông - Thủy sản.`,
+        linksrc: RoutePages.LOGISTIC_HUB,
       },
     ],
   },
@@ -368,8 +371,7 @@ export const teamMember = [
     locale: 'vi',
     title: 'Đội ngũ nhân sự & Văn hóa doanh nghiệp',
     titleMain: 'Đội ngũ nhân sự',
-    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed amet,
-            consequat egestas dictum posuere pellentesque fermentum.`,
+    desc: `Mỗi cá nhân sẽ tạo nên tập thể, từng đóng góp nhỏ là tiền đề của những thành quả lớn. Tại TPG, chúng tôi trân trọng giá trị của từng cá nhân, từ lãnh đạo, quản lý cấp cao am hiểu kiến thức chuyên môn đến những người trẻ với nguồn năng lượng tích cực và ham học hỏi. Một tập thể luôn coi trọng lợi ích chung và hướng đến sự cải tiến sẽ tạo nên một doanh nghiệp phát triển vững mạnh. Và tất cả những giá trị, kết quả tích cực đó đều được hình thành từ việc coi trọng Văn hóa doanh nghiệp. `,
     sub: [
       {
         title: 'Tên',
@@ -1104,7 +1106,7 @@ export const contactAConsultant = [
             `Công ty TNHH Chiếu Xạ Toàn Phát`,
             `Địa chỉ: Lô A24-1, Đường Ngang 1, Khu Công Nghiệp Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,
             `MST: 1101846577`,
-            `Hotline: 093 1000 001`,
+            `Hotline: 093 100 0001`,
             `Email: info@tpirr.vn | tiepnhan@tpirr.vn`,
           ],
           button1: facebookButton,

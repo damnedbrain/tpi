@@ -6,6 +6,8 @@ import { leaderIndustrial } from '@constants/language-option';
 import Image from 'next/image';
 import leader from '@assets/leader-industrial/LeaderIndustrial.png';
 import arrow_right from '@assets/introduce/arrow-right.png';
+import Link from 'next/link';
+import { RoutePages } from '@constants/router';
 
 const LeaderIndustrial = () => {
   const refContainer = useRef();
@@ -45,6 +47,7 @@ const LeaderIndustrial = () => {
               </div>
             ))}
           </div>
+          <Link href={RoutePages.ABOUT_US + '/#van-hoa-doanh-nghiep'} passHref>
           <div className={styles['content__button']}>
             {refLanguage.current?.button}
             <div className={styles['icon-arrow']}>
@@ -59,6 +62,7 @@ const LeaderIndustrial = () => {
               />
             </div>
           </div>
+          </Link>
         </div>
       </div>
     </>

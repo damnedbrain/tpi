@@ -34,6 +34,7 @@ const BestServices = () => {
               number={action[_i].number}
               title={item.title}
               desc={item.desc}
+              linksrc={item.linksrc}
             />
           ))}
         </div>
