@@ -190,35 +190,38 @@ const ContactAConsultant = () => {
                   {_item}
                 </div>
               ))}
-              <Link href={item.link1} passHref>
-                <div className={styles['sub-content__image']}>
+              <div className={styles['sub-content-image']} key={idx}>
+              <div className={styles['sub-content-image__image']}>
+                <Link href={item.link1} passHref>
+
                   {/*Facebook&Youtube Button*/}
                   <Image
                     src={item.button1}
                     alt=''
-                    width={422}
+                    width={80}
                     height={70}
                     layout='responsive'
                     objectFit='contain'
                     quality={100}
                     priority
                   />
-                </div>
-              </Link>
-              <Link href={item.link2} passHref>
-                <div className={styles['sub-content__image']}>
+                </Link>
+              </div>
+              <div className={styles['sub-content-image__image']}>
+                <Link href={item.link2} passHref>
                   <Image
                     src={item.button2}
                     alt=''
-                    width={422}
+                    width={80}
                     height={70}
                     layout='responsive'
                     objectFit='contain'
                     quality={100}
                     priority
                   />
-                </div>
-              </Link>
+                </Link>
+              </div>
+              </div>
             </div>
           ))}
         </div>

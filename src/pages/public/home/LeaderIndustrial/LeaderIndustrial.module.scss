@@ -98,7 +98,7 @@
 
       display: -webkit-box;
       text-overflow: ellipsis;
-      -webkit-line-clamp: 2;
+      -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
       overflow: hidden;
       @media only screen and (max-width: 1200px) {
@@ -116,7 +116,7 @@
       font-size: 16px;
       line-height: 300%;
       color: #ffffff;
-      margin-top: 40px;
+      margin-top: 20px;
       @media only screen and (max-width: 1200px) {
         margin-top: 24px;
         line-height: 130%;

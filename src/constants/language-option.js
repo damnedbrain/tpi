@@ -431,7 +431,7 @@ export const leaderIndustrial = [
   {
     locale: 'vi',
     title: 'Văn hóa doanh nghiệp',
-    desc: `Từ những con người có cá tính khác biệt, để kiến tạo nên một tập thể đồng lòng, gắn kết và có chung mục tiêu, chúng tôi xây dựng văn hoá doanh nghiệp dựa trên 03 tiêu chí: `,
+    desc: `Từ những con người với những cá tính khác biệt, để kiến tạo nên một tập thể đồng lòng, gắn kết và đặt mục tiêu vì sự phát triển chung, chúng tôi xây dựng văn hoá doanh nghiệp dựa trên 03 tiêu chí:`,
     subDesc: [
       { desc: `Sự đa dạng hòa hợp` },
       { desc: `Phát triển không ngừng` },
@@ -1100,7 +1100,7 @@ export const contactAConsultant = [
             `Địa chỉ: Lô A24-1, Đường Ngang 1, Khu Công Nghiệp Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,
             `MST: 1101846577`,
             `Hotline: 093 1000 001`,
-            `Email: info@tpirr.vn`,
+            `Email: info@tpirr.vn | tiepnhan@tpirr.vn`,
           ],
           button1: facebookButton,
           link1: item1_link1,
@@ -1114,7 +1114,7 @@ export const contactAConsultant = [
             `Địa chỉ: Lô A24-2, Đường Ngang 1, Khu Công Nghiệp Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,
             `MST: 1101966433`,
             `Hotline: 092 191 6999`,
-            `Email: tiepnhan@tprw.vn`,
+            `Email: info@tprw.vn | tiepnhan@tprw.vn`,
           ],
           button1: facebookButton,
           link1: item2_link1,
