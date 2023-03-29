@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { useObserverItem } from 'components/hook/useObserverItem';
 import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 import { ourProject } from '@constants/language-option';
+import { Gallery } from 'react-grid-gallery';
+
 import our_project_1 from '@assets/our-project/OurProject-1.png';
 import our_project_2 from '@assets/our-project/OurProject-2.png';
 import our_project_3 from '@assets/our-project/OurProject-3.png';
@@ -20,7 +22,7 @@ const action = [
   { image: our_project_6 },
 ];
 
-const OurProject = () => {
+const OurProject = ({ images }) => {
   const refContainer = useRef();
   const refContent = useRef();
   const refLang = useRef();
@@ -36,7 +38,9 @@ const OurProject = () => {
         <div className={styles['main-title']}>{refLang.current?.mainTitle}</div>
         <div className={styles['desc']}>{refLang.current?.desc}</div>
         <div className={styles['content']} ref={refContent}>
-          {action.map((item, index) => (
+          <Gallery images={images} enableImageSelection={false} />
+
+          {/* {action.map((item, index) => (
             <div className={styles['content__image']} key={index}>
               <Image
                 src={item.image}
@@ -48,7 +52,7 @@ const OurProject = () => {
                 quality={100}
               />
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
     </>

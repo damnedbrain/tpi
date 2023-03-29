@@ -7,9 +7,9 @@ import { Testimonial } from './Testimonial';
 import { OurProject } from './OurProject';
 import { News } from './News';
 import { Question } from './Question';
-import { LocationVideo } from 'components/own/location-video'
+import { LocationVideo } from 'components/own/location-video';
 
-export default function Home({ news }){
+export default function Home({ news, images }) {
   return (
     <>
       <Introduce />
@@ -19,10 +19,10 @@ export default function Home({ news }){
       <TeamMember />
       <LeaderIndustrial />
       <TrustedBy />
-      {//<Testimonial />
+      {
+        //<Testimonial />
       }
-      <OurProject />
+      <OurProject images={images} />
     </>
   );
-};
-
+}
