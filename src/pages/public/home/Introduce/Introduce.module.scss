@@ -31,10 +31,11 @@
   .content {
     position: absolute;
     left: 136px;
+    margin-bottom: -40px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-end;
     max-width: 520px;
     width: 100%;
     max-height: 500px;
@@ -52,9 +53,9 @@
       position: relative;
       color: $text-color;
       left: 0;
-      margin-top: 24px;
+      margin-top: 12px;
       max-width: none;
-      padding: 0 10px;
+      padding: 0 5px;
     }
     &__title {
       font-style: normal;
@@ -86,7 +87,7 @@
       background: linear-gradient(45deg, #009e4a, #009e4a);
 
       border-radius: 5px;
-      margin-top: 180px;
+      margin-top: -30px;
       cursor: pointer;
 
       color: $White;
