@@ -1,5 +1,6 @@
 @import '/styles/main';
 
+
 .container {
   display: flex;
   align-items: center;
@@ -7,6 +8,7 @@
   flex-direction: column;
   width: 100%;
   height: max-content;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
   .wrapper {
     max-width: 1440px;

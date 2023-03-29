@@ -104,13 +104,13 @@
           background-color: $Black-80;
           transition: width 0.3s ease-out;
         }
-        @include setting-font('Josefin Sans', normal, 700, 32px, 120%);
+        @include setting-font('Arial', normal, 700, 28px, 120%);
         @include responsive-size(screen-m) {
           margin-bottom: 8px;
         }
       }
       &__desc {
-        max-width: 334px;
+        max-width: 450px;
         height: 50%;
         max-height: 100px;
         display: -webkit-box;
@@ -133,7 +133,7 @@
           -webkit-box-orient: vertical;
           overflow: hidden;
         }
-        @include setting-font('Josefin Sans', normal, 500, 16px, 130%);
+        @include setting-font('Arial', normal, 350, 24px, 120%);
       }
 
       .author {
@@ -149,7 +149,7 @@
           border-radius: 100%;
         }
         &__name {
-          @include setting-font('Josefin Sans', normal, 700, 16px, 130%);
+          @include setting-font('Arial', normal, 350, 16px, 120%);
         }
       }
     }

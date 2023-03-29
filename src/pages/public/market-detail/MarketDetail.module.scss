@@ -33,7 +33,7 @@
       cursor: pointer;
       max-width: 800px;
       padding-left: 16px;
-      @include setting-font('Josefin Sans', normal, 700, 40px, 120%);
+      @include setting-font('Arial', bold, 600, 40px, 120%);
       @include responsive-size(screen-m) {
         margin-bottom: 8px;
       }
@@ -58,7 +58,7 @@
         margin-right: 16px;
       }
       &__name {
-        @include setting-font('Josefin Sans', normal, 700, 18px, 130%);
+        @include setting-font('Arial', bold, 700, 18px, 120%);
       }
     }
     .main-image {
@@ -80,7 +80,7 @@
       text-align: left;
       max-width: 800px;
       margin-top: 16px;
-      @include setting-font('Josefin Sans', normal, 500, 16px, 130%);
+      @include setting-font('Arial', normal, 350, 16px, 120%);
     }
     .time {
       max-width: 800px;
@@ -99,7 +99,7 @@
       overflow: hidden;
       margin-bottom: 8px;
       cursor: pointer;
-      @include setting-font('Josefin Sans', normal, 500, 16px, 130%);
+      @include setting-font('Arial', normal, 350, 16px, 120%);
     }
   }
 }
