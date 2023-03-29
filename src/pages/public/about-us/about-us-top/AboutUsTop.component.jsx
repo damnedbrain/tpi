@@ -20,18 +20,18 @@ const AboutUsTop = () => {
           <NumberGeneralInfo title={title} desc={desc} />
         </div>
         <div className={styles['content-right']}>
-          <div className={styles['icon-number']}>
+          
             <Image
               src={about_us_img}
               alt=''
-              width={580}
-              height={513}
+              width={1440}
+              height={624}
               layout='responsive'
               objectFit='contain'
               quality={100}
               priority
             />
-          </div>
+          
         </div>
       </div>
     </>

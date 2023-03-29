@@ -8,7 +8,7 @@
   width: 100%;
   max-width: 1440px;
   height: max-content;
-  margin-top: 120px;
+  margin-top: 20px;
 
   @include responsive-size(screen-m) {
     margin-top: 46px;
@@ -48,7 +48,7 @@
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    max-width: 960px;
+    max-width: 1170px;
     width: 100%;
     height: max-content;
     @include responsive-size(screen-m) {
@@ -57,7 +57,7 @@
     &__title {
       color: $Dark-Green-100;
       //margin: 16px 0;
-      margin-top: 60px;
+      margin-top: 40px;
       margin-left: -100px;
       text-align: center;
       @include setting-font('Josefin Sans', normal, 400, 40px, 120%);
@@ -71,10 +71,10 @@
       justify-content: space-between;
       //grid-template-columns: max-content;
       width: 100%;
-      margin-top: 10px;
+      margin-top: 20px;
       //border-top: 1px dashed #f1f1f1;
-      padding-top: 20px;
-      max-width: 960px;
+      //padding-top: 20px;
+      max-width: 1170px;
       height: max-content;
       &___child{
         max-width: 460px;
