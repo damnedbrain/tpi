@@ -10,7 +10,7 @@
   height: max-content;
   background-color: #292f5f;
   margin: 200px auto 0;
-  color: #ffffff;
+  color: $White;
   @include responsive-size(screen-m) {
     margin-top: 60px;
   }
@@ -95,7 +95,7 @@
     margin-top: 58px;
     &__bar {
       width: 100%;
-      border: 1px solid #ffffff;
+      border: 1px solid $White;
     }
     &__desc {
       text-align: center;

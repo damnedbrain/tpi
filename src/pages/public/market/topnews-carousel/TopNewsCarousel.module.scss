@@ -46,7 +46,7 @@
   width: 100%;
   max-width: 1440px;
   height: 400px;
-  max-height: calc(400px / 1200px * 100vw);
+  // max-height: calc(400px / 1200px * 100vw);
 
   & > :nth-child(2) {
     overflow: visible;
@@ -94,7 +94,7 @@
 }
 
 .setting-dots {
-  position: absolute; 
+  position: absolute;
   display: flex !important;
   justify-content: center;
   align-items: center;

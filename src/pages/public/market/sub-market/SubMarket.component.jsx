@@ -61,10 +61,10 @@ const SubMarket = ({ news }) => {
           <Image
             src={`https:${_image}`}
             alt=''
-            width={_imageWidth ? _imageWidth : 383}
-            height={_imageHeight ? _imageHeight : 200}
+            width={640}
+            height={480}
             layout='responsive'
-            objectFit='contain'
+            objectFit='fill'
             quality={100}
           />
         </div>

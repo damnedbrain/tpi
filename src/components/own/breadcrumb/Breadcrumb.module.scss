@@ -30,6 +30,7 @@
     }
   }
   &__link {
+    display: flex;
     &:not(:first-child) {
       &::before {
         content: '/';
