@@ -39,7 +39,7 @@ export async function getStaticProps({ locale }) {
         public_id: result.public_id,
         format: result.format,
         caption: result.filename,
-        thumbnailCaption: result.filename,
+        thumbnailCaption: "",
       });
     }
 
