@@ -77,8 +77,8 @@ const SubTopNewsCarousel = ({ news }) => {
             alt=''
             width={_imageWidth ? _imageWidth : 383}
             height={_imageHeight ? _imageHeight : 200}
-            layout='responsive'
-            objectFit='cover'
+            layout='fill'
+            objectFit='fill'
             quality={100}
           />
         </div>

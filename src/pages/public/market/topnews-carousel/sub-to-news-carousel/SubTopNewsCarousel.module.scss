@@ -24,7 +24,7 @@
       }
     }
   }
-  max-height: calc(680px / 1200px * 100vw);
+  max-height: calc(400px / 1200px * 100vw);
 
   opacity: 0;
   &.active-anim {
@@ -50,6 +50,9 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    @include responsive-size(screen-m) {
+      object-fit: fill;
+    }
   }
   .client-wrapper {
     display: flex;

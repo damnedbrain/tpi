@@ -8,10 +8,10 @@ const ReadMoreBtn = ({ readMore }) => {
   return (
     <>
       <div className={styles['container']}>
-      <Link href={readMore} passHref>
-        <div className={styles['title']}>Read More</div> 
-      </Link>
-      <div className={styles['arrow-icon']}>
+        <Link href={readMore ? readMore : '#'} passHref>
+          <div className={styles['title']}>Read More</div>
+        </Link>
+        <div className={styles['arrow-icon']}>
           <Image
             src={arrow_right}
             alt=''
@@ -21,7 +21,7 @@ const ReadMoreBtn = ({ readMore }) => {
             objectFit='contain'
             quality={100}
           />
-      </div>
+        </div>
       </div>
     </>
   );

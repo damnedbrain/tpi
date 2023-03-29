@@ -27,7 +27,7 @@
       margin-bottom: 16px;
       display: -webkit-box;
       text-overflow: ellipsis;
-      -webkit-line-clamp: 3;
+      // -webkit-line-clamp: 5;
       -webkit-box-orient: vertical;
       overflow: hidden;
       cursor: pointer;
@@ -35,7 +35,7 @@
       padding-left: 16px;
       @include setting-font('Arial', bold, 600, 40px, 120%);
       @include responsive-size(screen-m) {
-        margin-bottom: 8px;
+        font-size: 32px;
       }
     }
     .author {
@@ -49,9 +49,6 @@
       max-width: 800px;
       padding-left: 16px;
 
-      @include responsive-size(screen-m) {
-        margin-bottom: 8px;
-      }
       &__avatar {
         width: 40px;
         height: 100%;
@@ -84,6 +81,9 @@
       max-width: 800px;
       margin-top: 16px;
       @include setting-font('Arial', normal, 350, 16px, 120%);
+      @include responsive-size(screen-m) {
+        padding: 0 8px;
+      }
       & > p {
         display: block;
         -webkit-margin-before: 1em;
