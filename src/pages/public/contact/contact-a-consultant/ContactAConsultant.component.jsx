@@ -81,7 +81,7 @@ const ContactAConsultant = () => {
             </Form.Control.Feedback>
           </Form.Group>
 
-          <div className={styles['form-title']}>
+          <div className={styles['form-title-important']}>
             {refLang.current?.phone.label}
           </div>
           <Form.Group className='mb-4' controlId='formHorizontalEmail'>
