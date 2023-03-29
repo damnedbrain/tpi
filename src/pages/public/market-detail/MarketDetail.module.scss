@@ -69,9 +69,12 @@
     }
     .desc {
       width: 100%;
+      height: -webkit-max-content;
+      height: -moz-max-content;
       height: max-content;
       //max-height: 70px;
       display: -webkit-box;
+      -o-text-overflow: ellipsis;
       text-overflow: ellipsis;
       // -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
@@ -81,6 +84,17 @@
       max-width: 800px;
       margin-top: 16px;
       @include setting-font('Arial', normal, 350, 16px, 120%);
+      & > p {
+        display: block;
+        -webkit-margin-before: 1em;
+        margin-block-start: 1em;
+        -webkit-margin-after: 1em;
+        margin-block-end: 1em;
+        -webkit-margin-start: 0px;
+        margin-inline-start: 0px;
+        -webkit-margin-end: 0px;
+        margin-inline-end: 0px;
+      }
     }
     .time {
       max-width: 800px;
