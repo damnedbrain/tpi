@@ -9,6 +9,7 @@ const SubBestServices = ({ icon, number, title, desc, linksrc }) => {
     <>
       <div className={styles['container']}>
         <div className={styles['content']}>
+        <Link href={linksrc} passHref>
           <div className={styles['content__icon-arrow-right']}>
             <Image
               src={icon}
@@ -20,6 +21,7 @@ const SubBestServices = ({ icon, number, title, desc, linksrc }) => {
               quality={100}
             />
           </div>
+          </Link>
           <Link href={linksrc} passHref><div className={styles['content__title']}>{title}</div></Link>
           <div className={styles['content__desc']}>{desc}</div>
         </div>
