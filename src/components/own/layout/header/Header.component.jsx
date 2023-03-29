@@ -154,6 +154,7 @@ const Header = () => {
               </React.Fragment>
             ))}
           </div>
+          {/* START LANGUAGUE SECTION */}
           <div
             className={styles['language']}
             onClick={(e) => activeLanguage(e)}
@@ -186,6 +187,7 @@ const Header = () => {
               </div>
             </div>
           </div>
+          {/* END LANGUAGUE SECTION */}
         </div>
         <div className={styles['menu-mobile']}>
           <div
