@@ -22,7 +22,7 @@ const AboutUs = () => {
     if (!ele) return;
     ele.scrollIntoView({
       behavior: 'instant',
-      block: 'center',
+      block: 'start',
       inline: 'center',
     });
   };
@@ -42,9 +42,9 @@ const AboutUs = () => {
         <SixWord />
         <FutureGoal />
         <HumanResource />
-        <a id='van-hoa-doanh-nghiep'>
-          <AboutUsTeamMember />
-        </a>
+        <div id='van-hoa-doanh-nghiep' className={styles['wrapper']}>
+          <AboutUsTeamMember id='van-hoa-doanh-nghiep' />
+        </div>
       </div>
     </>
   );

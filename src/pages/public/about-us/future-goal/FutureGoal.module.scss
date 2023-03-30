@@ -10,7 +10,7 @@
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  margin-top: 20px;
+  margin-top: 48px;
 
   @include responsive-size(screen-m) {
     margin-top: 46px;
@@ -59,14 +59,10 @@
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
-    @include responsive-size(screen-m) {
-      padding: 0 10px;
-    }
+    padding: 0 10px;
     &__title {
       color: $Dark-Green-100;
-      //margin: 16px 0;
       margin-top: 40px;
-      margin-left: -100px;
       text-align: center;
       @include setting-font('Josefin Sans', normal, 400, 40px, 120%);
       @include responsive-size(screen-m) {
@@ -89,9 +85,13 @@
       &___child {
         max-width: 460px;
         width: 320px;
-        margin-right: 30px;
         padding-left: 20px;
         //border-left: 2px dashed darkgreen;
+        @media only screen and (max-width: 767px) {
+          width: 100%;
+          margin-bottom: 16px;
+          padding-left: 0;
+        }
       }
       &.active-anim {
         @for $i from 1 through 3 {
@@ -107,8 +107,11 @@
         }
       }
       @include responsive-size(screen-m) {
-        flex-direction: column;
         max-width: none;
+      }
+      @media only screen and (max-width: 767px) {
+        flex-direction: column;
+        align-items: center;
       }
     }
   }

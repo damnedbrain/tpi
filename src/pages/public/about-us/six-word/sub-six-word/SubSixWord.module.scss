@@ -10,10 +10,10 @@
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-
+  margin: 24px auto;
+  padding: 0 6px;
   @include responsive-size(screen-m) {
-    margin: 24px auto;
-    max-width: 375px;
+    max-width: 350px;
   }
 
   .content {
@@ -27,10 +27,6 @@
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
     @include responsive-size(screen-m) {
       max-width: 375px;
     }
@@ -56,7 +52,7 @@
       font-style: normal;
       font-weight: 300;
       font-size: 16px;
-      line-height: 130%;
+      line-height: 140%;
     }
   }
   .number {

@@ -59,9 +59,8 @@
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
-    @include responsive-size(screen-m) {
-      padding: 0 10px;
-    }
+    padding: 0 10px;
+
     &__title {
       color: $Dark-Green-100;
       margin: 16px 0;
@@ -93,7 +92,7 @@
         }
       }
       &.active-anim {
-        @for $i from 1 through 3 {
+        @for $i from 1 through 10 {
           & > :nth-child(#{$i}) {
             @include anim-move-top(50px, 0.7s, 0.1s * $i);
             & > :nth-child(1) {

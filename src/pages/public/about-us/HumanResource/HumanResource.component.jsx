@@ -19,7 +19,7 @@ const HumanResource = () => {
   return (
     <>
       <div className={styles['container']} ref={refContainer}>
-      <div className={styles['content']} ref={refContent}>
+        <div className={styles['content']} ref={refContent}>
           <div className={styles['content__title']}>
             {refLanguage.current?.title}
           </div>
@@ -54,13 +54,12 @@ const HumanResource = () => {
             src={imageHR}
             alt=''
             width={720}
-            height={584}
-            layout='responsive'
-            objectFit='contain'
+            height={474}
+            layout='fill'
+            objectFit='fill'
             quality={100}
           />
         </div>
-        
       </div>
     </>
   );
