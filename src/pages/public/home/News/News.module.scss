@@ -7,6 +7,8 @@
   justify-content: center;
   max-width: 1440px;
   width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   margin: 20px auto 0;
   //opacity: 0;
@@ -35,22 +37,32 @@
     justify-content: center;
     max-width: 1170px;
     width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
-    @include responsive-size(screen-m) {
-      flex-direction: row;
-      align-items: flex-start;
-    }
 
     .sub-news {
       display: flex;
       align-items: flex-start;
       justify-content: flex-start;
       flex-direction: row;
-      width: max-content;
+      width: 100%;
+      height: -webkit-max-content;
+      height: -moz-max-content;
       height: max-content;
       @include responsive-size(screen-m) {
-        flex-direction: row;
-        align-items: flex-start;
+        padding: 0 8px;
+      }
+      @media only screen and (max-width: 767px) {
+        padding: 0;
+        width: 80%;
+        flex-direction: column;
+        margin-top: 16px;
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+      @include responsive-size(screen-s) {
+        width: 100%;
       }
     }
   }

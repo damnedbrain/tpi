@@ -118,6 +118,8 @@
       }
       @include responsive-size(screen-m) {
         flex-direction: column;
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
         width: max-content;
         color: $text-color;
@@ -149,7 +151,6 @@
 
         @include responsive-size(screen-l) {
           margin-right: 8px;
-          min-width: 115px;
         }
         @include responsive-size(screen-m) {
           width: 100%;
@@ -178,6 +179,8 @@
           align-items: center;
           justify-content: center;
           position: relative;
+          height: -webkit-max-content;
+          height: -moz-max-content;
           height: max-content;
           max-width: 160px;
           width: 100%;
@@ -251,6 +254,8 @@
             flex-direction: column;
             max-width: 150px;
             width: 100%;
+            height: -webkit-max-content;
+            height: -moz-max-content;
             height: max-content;
             cursor: pointer;
             color: $White;
@@ -385,6 +390,8 @@
         justify-content: center;
         flex-direction: column;
         width: max-content;
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
         cursor: pointer;
         color: $White;
@@ -401,6 +408,8 @@
         &__sub-item {
           position: relative;
           width: 100%;
+          height: -webkit-max-content;
+          height: -moz-max-content;
           height: max-content;
           padding: 8px 16px;
           border-top: 1px solid rgba(255, 255, 255, 0.3);

@@ -23,6 +23,8 @@
   }
   .content {
     margin-top: 32px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     width: 100%;
     &__title {

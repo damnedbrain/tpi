@@ -7,6 +7,8 @@
   flex-direction: column;
   max-width: 383px;
   width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   margin: 0 5px;
   &.active-anim {
@@ -38,6 +40,8 @@
   .desc {
     max-width: 320px;
     width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     margin-bottom: 24px;
     margin-left: 32px;
@@ -45,6 +49,7 @@
     @include setting-font('Josefin Sans', normal, 500, 32px, 130%);
 
     display: -webkit-box;
+    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;

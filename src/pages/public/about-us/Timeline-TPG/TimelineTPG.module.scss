@@ -10,6 +10,8 @@
   max-width: 1252px;
   width: 100%;
   max-height: 800px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   background-color: $White;
   border-top: 1px dashed #e3e6e9;
@@ -38,6 +40,8 @@
     align-items: flex-start;
     justify-content: top;
     width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     opacity: 0;
     &.active-anim {

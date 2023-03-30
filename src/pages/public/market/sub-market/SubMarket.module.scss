@@ -56,6 +56,8 @@
     align-items: flex-start;
     justify-content: flex-start;
     width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     padding: 0 16px 16px;
     opacity: 1;
@@ -70,6 +72,7 @@
       max-height: 90px;
       margin-bottom: 11px;
       display: -webkit-box;
+      -o-text-overflow: ellipsis;
       text-overflow: ellipsis;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
@@ -88,9 +91,12 @@
     }
     .desc {
       width: 100%;
+      max-height: -webkit-max-content;
+      max-height: -moz-max-content;
       max-height: max-content;
       max-height: 70px;
       display: -webkit-box;
+      -o-text-overflow: ellipsis;
       text-overflow: ellipsis;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
@@ -103,9 +109,12 @@
     }
     .detail {
       width: 100%;
+      height: -webkit-max-content;
+      height: -moz-max-content;
       height: max-content;
       max-height: 70px;
       display: -webkit-box;
+      -o-text-overflow: ellipsis;
       text-overflow: ellipsis;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;

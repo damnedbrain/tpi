@@ -55,15 +55,15 @@ const SubNewsContent = ({ news }) => {
         ref={refContainer}
         onClick={() => redirectToPage(RoutePages.MARKET + `/${slug}`)}
       >
-        <div className={styles['container']} ref={refContainer}>
+        <div className={styles['wrapper']} ref={refContainer}>
           <div className={styles['image']}>
             <Image
               src={`https:${_imageURL}`}
               alt=''
-              width={_imageWidth ? _imageWidth : 383}
-              height={_imageHeight ? _imageHeight : 200}
+              width={600}
+              height={400}
               layout='responsive'
-              objectFit='cover'
+              objectFit='fill'
               quality={100}
             />
           </div>

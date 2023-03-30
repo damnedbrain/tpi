@@ -8,7 +8,7 @@
   justify-content: center;
   max-width: 1440px;
   width: 100%;
-  margin: 20px auto 0;
+  margin: 60px auto 0;
   opacity: 0;
   height: 460px;
   &.active-anim {
@@ -24,6 +24,8 @@
   @include responsive-size(screen-m) {
     margin-top: 60px;
     flex-direction: column;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     align-items: center;
   }
@@ -69,11 +71,18 @@
     @include responsive-size(screen-m) {
       padding: 0 24px;
       width: 100%;
+      height: -webkit-max-content;
+      height: -moz-max-content;
       height: max-content;
       max-width: none;
     }
+    @include responsive-size(screen-s) {
+      padding: 0 12px;
+    }
     &__title {
       width: 100%;
+      height: -webkit-max-content;
+      height: -moz-max-content;
       height: max-content;
       font-style: normal;
       font-weight: 400;
@@ -99,6 +108,7 @@
       margin-top: 40px;
 
       display: -webkit-box;
+      -o-text-overflow: ellipsis;
       text-overflow: ellipsis;
       -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
@@ -112,6 +122,8 @@
     }
     &__sub-desc {
       width: 100%;
+      height: -webkit-max-content;
+      height: -moz-max-content;
       height: max-content;
       font-style: normal;
       font-weight: 300;
@@ -125,6 +137,7 @@
       }
       & > div {
         display: -webkit-box;
+        -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;

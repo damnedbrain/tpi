@@ -61,6 +61,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     max-width: 600px;
     width: 100%;
@@ -98,9 +100,12 @@
         position: relative;
         margin-top: 16px;
         width: 100%;
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
         min-height: 50px;
         display: -webkit-box;
+        -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
@@ -131,6 +136,7 @@
         height: 50%;
         max-height: 100px;
         display: -webkit-box;
+        -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
@@ -147,6 +153,7 @@
           display: block;
           width: 100%;
           display: -webkit-box;
+          -o-text-overflow: ellipsis;
           text-overflow: ellipsis;
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;

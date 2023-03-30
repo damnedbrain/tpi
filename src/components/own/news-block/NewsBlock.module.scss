@@ -5,6 +5,8 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   width: 100%;
   max-width: 1282px;
@@ -28,6 +30,8 @@
     align-items: flex-start;
     justify-content: center;
     width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
 
     .slider-wrapper {

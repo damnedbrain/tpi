@@ -33,9 +33,12 @@
     color: $text-color;
     margin-right: 20px;
     width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     @include setting-font('Josefin Sans', normal, 500, 14px, 200%);
     display: inline-flex;
+    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
     overflow: hidden;

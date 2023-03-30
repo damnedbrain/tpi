@@ -42,6 +42,8 @@
     &-left {
       //width: 50%;
       //max-width: 580px;
+      height: -webkit-max-content;
+      height: -moz-max-content;
       height: max-content;
       //margin-right: 25px;
       @include responsive-size(screen-m) {
@@ -53,6 +55,8 @@
     &-right {
       //width: 590px;
       width: 1170px;
+      height: -webkit-max-content;
+      height: -moz-max-content;
       height: max-content;
       margin-top: 20px;
       @include responsive-size(screen-m) {

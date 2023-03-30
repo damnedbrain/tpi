@@ -7,6 +7,8 @@
   flex-direction: column;
   max-width: 1170px;
   width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   margin-top: 32px;
   opacity: 0;
@@ -51,6 +53,8 @@
     justify-content: center;
     max-width: 976px;
     width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     @include responsive-size(screen-l) {
       padding: 0 10px;
@@ -66,6 +70,8 @@
       flex-direction: column;
       max-width: 479px;
       width: 100%;
+      height: -webkit-max-content;
+      height: -moz-max-content;
       height: max-content;
       margin-right: 16px;
       @include responsive-size(screen-m) {

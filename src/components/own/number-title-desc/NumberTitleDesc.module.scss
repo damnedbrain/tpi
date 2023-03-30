@@ -9,6 +9,8 @@
   flex-wrap: wrap;
   width: 100%;
   max-width: 280px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   @include responsive-size(screen-m) {
     max-width: none;
@@ -32,6 +34,8 @@
     }
   }
   &__desc {
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     width: 100%;
     //max-width: 200px;
@@ -39,6 +43,8 @@
     @include setting-font('Josefin Sans', normal, 500, 14px, 200%);
   }
   &__title {
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     max-width: 100%;
     //max-width: 285px;

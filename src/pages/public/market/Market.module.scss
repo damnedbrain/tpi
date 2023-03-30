@@ -1,14 +1,16 @@
 @import '/styles/main';
 
-
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
   .wrapper {
     max-width: 1440px;
@@ -21,6 +23,8 @@
     grid-column-gap: 8px;
     max-width: 1024px;
     width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     grid-auto-flow: dense;
     grid-gap: 32px;
@@ -47,6 +51,8 @@
     grid-column-gap: 8px;
     max-width: 1024px;
     width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     grid-auto-flow: dense;
     grid-gap: 32px;

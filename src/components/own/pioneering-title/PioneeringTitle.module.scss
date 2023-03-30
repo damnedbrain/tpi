@@ -5,6 +5,8 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   opacity: 0;
   &.active-anim {

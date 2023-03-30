@@ -6,6 +6,8 @@
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   max-width: 1170px;
   border-radius: 8px;
@@ -28,6 +30,8 @@
     align-items: flex-start;
     justify-content: flex-start;
     color: $Grass-100;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     width: 100%;
     margin-bottom: 24px;
@@ -43,6 +47,8 @@
     font-size: 14px;
     line-height: 130%;
     width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     white-space: pre-line;
   }

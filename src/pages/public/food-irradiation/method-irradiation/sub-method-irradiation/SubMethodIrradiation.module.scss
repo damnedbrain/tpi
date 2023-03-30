@@ -5,6 +5,8 @@
   align-items: flex-start;
   justify-content: center;
   width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   margin-bottom: 24px;
   opacity: 0;
@@ -56,6 +58,8 @@
       justify-content: flex-start;
       flex-direction: column;
       width: 100%;
+      height: -webkit-max-content;
+      height: -moz-max-content;
       height: max-content;
       &.active-anim {
         @include anim-opacity(0.1s, 0s);
@@ -81,6 +85,8 @@
     flex-direction: column;
     max-width: 683px;
     width: calc(683px * 100% / 978px);
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     @include responsive-size(screen-m) {
       width: 100%;

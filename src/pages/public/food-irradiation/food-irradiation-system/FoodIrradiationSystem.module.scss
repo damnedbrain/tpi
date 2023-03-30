@@ -7,6 +7,8 @@
   flex-direction: column;
   width: 100%;
   max-width: 1170px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   margin-top: 40px;
   opacity: 0;
@@ -33,6 +35,8 @@
     justify-content: center;
     max-width: 482px;
     width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     @include responsive-size(screen-xs) {
       padding: 0 10px;
@@ -63,6 +67,8 @@
     justify-content: center;
     width: 100%;
     max-width: 1170px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     @include responsive-size(screen-m) {
       flex-direction: column;
@@ -75,6 +81,8 @@
       flex-direction: column;
       width: 100%;
       max-width: 383px;
+      height: -webkit-max-content;
+      height: -moz-max-content;
       height: max-content;
       margin-right: 10px;
       @include responsive-size(screen-m) {
@@ -95,6 +103,7 @@
         width: 100%;
         height: 100%;
         display: -webkit-box;
+        -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
         -webkit-box-orient: vertical;
         font-weight: 500;

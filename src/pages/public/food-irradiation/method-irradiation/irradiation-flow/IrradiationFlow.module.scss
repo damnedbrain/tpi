@@ -8,6 +8,8 @@
   justify-content: center;
   max-width: 1440px;
   width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   margin: 30px auto 0;
   padding: 0 10px;
@@ -39,6 +41,8 @@
     align-items: flex-start;
     justify-content: space-between;
     width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     margin: 0 auto;
     padding: 20px;
@@ -63,6 +67,8 @@
       }
     }
     @include responsive-size(screen-l) {
+      height: -webkit-max-content;
+      height: -moz-max-content;
       height: max-content;
       flex-wrap: wrap;
       justify-content: space-evenly;

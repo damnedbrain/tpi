@@ -5,6 +5,8 @@
   align-items: flex-start;
   justify-content: center;
   width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   max-width: 1170px;
   margin-top: 20px;
@@ -61,7 +63,7 @@
         margin-bottom: 30px;
       }
     }
-  
+
     &-subwrapper {
       display: flex;
       flex-direction: row;
@@ -85,6 +87,5 @@
         max-width: none;
       }
     }
-
   }
 }

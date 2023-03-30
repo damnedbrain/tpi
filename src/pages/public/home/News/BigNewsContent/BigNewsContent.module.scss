@@ -4,9 +4,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   max-width: 1170px;
   width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   margin: 0 auto 16px;
   opacity: 0;
@@ -14,22 +15,40 @@
     @include anim-move-top(50px, 0.5s, 0.2s);
   }
 
-  @include responsive-size(screen-m) {
-    display: none;
-  }
+  // @include responsive-size(screen-m) {
+  //   display: none;
+  // }
 
   .content {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
+    @media only screen and (max-width: 767px) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
 
     .content-left {
-      width: calc(100% - 485px);
+      width: 50%;
+      height: -webkit-max-content;
+      height: -moz-max-content;
       height: max-content;
-      padding-left: 24px;
-
+      padding-left: 16px;
+      padding-right: 16px;
+      align-self: center;
+      @media only screen and (max-width: 767px) {
+        width: 80%;
+        margin-top: 8px;
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+      @include responsive-size(screen-s) {
+        width: 100%;
+      }
       &__author {
         display: flex;
         align-items: center;
@@ -49,12 +68,16 @@
 
       &__time {
         width: 100%;
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
-        //margin-bottom: 16px;
+        margin-bottom: 8px;
       }
 
       &__title {
         width: 100%;
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
         font-style: normal;
         font-weight: 400;
@@ -62,9 +85,16 @@
         line-height: 120%;
         color: #06703a;
         margin-bottom: 18px;
+        @include responsive-size(screen-m) {
+          margin-bottom: 8px;
+        }
+        @include responsive-size(screen-s) {
+          font-size: 24px;
+        }
       }
       &__desc {
         display: -webkit-box;
+        -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
         -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
@@ -72,6 +102,9 @@
 
         max-width: 580px;
         width: 100%;
+
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
         font-style: normal;
         font-weight: 500;
@@ -79,11 +112,22 @@
         line-height: 130%;
         margin-bottom: 24px;
         color: #000000;
+        @include responsive-size(screen-m) {
+          font-size: 16px;
+          -webkit-line-clamp: 3;
+        }
       }
     }
     .content-right {
-      width: 485px;
-      height: 285px;
+      width: 50%;
+      height: 100%;
+      @media only screen and (max-width: 767px) {
+        width: 80%;
+      }
+      @include responsive-size(screen-s) {
+        width: 100%;
+        padding: 0 8px;
+      }
     }
   }
 }

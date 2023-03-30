@@ -4,7 +4,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100px;
+  width: 120px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   cursor: pointer;
   user-select: none;

@@ -35,8 +35,8 @@ const LeaderIndustrial = () => {
             alt=''
             width={720}
             height={584}
-            layout='responsive'
-            objectFit='contain'
+            layout='fill'
+            objectFit='fill'
             quality={100}
           />
         </div>

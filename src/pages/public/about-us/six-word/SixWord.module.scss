@@ -8,6 +8,8 @@
   justify-content: center;
   max-width: 1440px;
   width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   margin: 30px auto 0;
   padding: 0 10px;
@@ -41,6 +43,8 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     margin: 0 auto;
     &.active-anim {
@@ -64,6 +68,8 @@
       }
     }
     @include responsive-size(screen-l) {
+      height: -webkit-max-content;
+      height: -moz-max-content;
       height: max-content;
       flex-wrap: wrap;
       justify-content: space-evenly;

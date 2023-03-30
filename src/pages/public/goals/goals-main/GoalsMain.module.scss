@@ -7,6 +7,8 @@
   flex-direction: column;
   width: 100%;
   max-width: 1170px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   margin-top: 32px;
   opacity: 0;

@@ -7,6 +7,8 @@
   justify-content: center;
   width: 100%;
   max-width: 1200px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   overflow: hidden;
   margin-bottom: 32px;
@@ -57,12 +59,20 @@
       width: max-content !important;
 
       @include responsive-size(screen-m) {
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
+        max-height: -webkit-max-content;
+        max-height: -moz-max-content;
         max-height: max-content;
       }
     }
     @include responsive-size(screen-m) {
+      height: -webkit-max-content;
+      height: -moz-max-content;
       height: max-content;
+      max-height: -webkit-max-content;
+      max-height: -moz-max-content;
       max-height: max-content;
     }
   }
@@ -70,19 +80,27 @@
   //   overflow: visible;
   //   // max-height: calc(288px / 1440px * 100vw);
   //   @include responsive-size(screen-m) {
-  //     height: max-content;
-  //     max-height: max-content;
+  //     height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  //      max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
   //   }
   //   // & > :first-child {
   //   //   max-height: calc(288px / 1440px * 100vw);
 
   //   //   @include responsive-size(screen-m) {
-  //   //     max-height: max-content;
+  //   //      max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
   //   //   }
   //   // }
   // }
 
   @include responsive-size(screen-m) {
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
   }
 
@@ -102,6 +120,8 @@
   padding: 0;
   width: 100%;
   max-width: 1440px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
 
   // @include responsive-size(screen-m) {
@@ -112,6 +132,8 @@
     position: relative;
     display: inline-flex;
     width: max-content;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     margin: auto 6px;
     height: 10px;

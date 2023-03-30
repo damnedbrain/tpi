@@ -8,6 +8,8 @@
   justify-content: center;
   max-width: 1440px;
   width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   margin: 0 auto;
 
@@ -17,15 +19,22 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     margin: 0 auto;
     opacity: 1;
     .title {
       width: 100%;
+      height: -webkit-max-content;
+      height: -moz-max-content;
       height: max-content;
+      height: -webkit-max-content;
+      height: -moz-max-content;
       height: max-content;
       margin-bottom: 16px;
       display: -webkit-box;
+      -o-text-overflow: ellipsis;
       text-overflow: ellipsis;
       // -webkit-line-clamp: 5;
       -webkit-box-orient: vertical;
@@ -44,6 +53,8 @@
       justify-content: flex-start;
       flex-direction: row;
       width: 100%;
+      height: -webkit-max-content;
+      height: -moz-max-content;
       height: max-content;
       margin-bottom: 16px;
       max-width: 800px;
@@ -104,9 +115,12 @@
     }
     .detail {
       width: 100%;
+      height: -webkit-max-content;
+      height: -moz-max-content;
       height: max-content;
       max-height: 70px;
       display: -webkit-box;
+      -o-text-overflow: ellipsis;
       text-overflow: ellipsis;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
