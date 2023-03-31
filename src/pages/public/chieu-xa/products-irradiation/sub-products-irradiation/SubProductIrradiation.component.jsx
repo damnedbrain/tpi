@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './SubProductIrradiation.module.scss';
 
 import Image from 'next/image';
-import pro1 from '@assets/food-irradiation/pro-1.png';
+import pro1 from '@assets/chieu-xa/pro-1.png';
 
 const SubProductIrradiation = ({ image = pro1, desc = 'Trái cây tươi' }) => {
   return (

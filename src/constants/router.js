@@ -1,8 +1,8 @@
 export const RoutePages = {
   ABOUT_US: '/gioi-thieu',
-  FOOD_IRRADIATION: '/food-irradiation',
+  FOOD_IRRADIATION: '/chieu-xa',
   COLD_STORAGE: '/cold-storage',
-  LOGISTIC_HUB: '/logistic-hub', //new
+  LOGISTIC_HUB: '/van-chuyen', //new
   LOCATION: '/location', //new
   CUSTOMER_AND_PARTNER: '/customer-partner', //new
   MARKET: '/market', //new

@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from './LogisticHUB.module.scss';
+import styles from './VanChuyen.module.scss';
 import Image from 'next/image';
 
-import comingSoon from '@assets/logistic-hub/coming_soon.png';
-import comingSoonBG from '@assets/logistic-hub/coming_soon_bg.png';
-import comingSoonText from '@assets/logistic-hub/coming_soon_text.png';
+import comingSoon from '@assets/van-chuyen/coming_soon.png';
+import comingSoonBG from '@assets/van-chuyen/coming_soon_bg.png';
+import comingSoonText from '@assets/van-chuyen/coming_soon_text.png';
 
-const LogisticHUB = () => {
+const VanChuyen = () => {
   return (
     <>
       <div className={styles['container']}>
@@ -36,4 +36,4 @@ const LogisticHUB = () => {
     </>
   );
 };
-export default LogisticHUB;
+export default VanChuyen;

@@ -5,9 +5,9 @@ import { foodIrradiationSystem } from '@constants/language-option';
 import { PioneeringTitle } from 'components/own/pioneering-title';
 import { useObserverItem } from 'components/hook/useObserverItem';
 import { useChooseLanguage } from 'components/hook/useChooseLanguage';
-import pictureSrc1 from '@assets/food-irradiation/food-irradiation-system1.png';
-import pictureSrc2 from '@assets/food-irradiation/food-irradiation-system2.png';
-import pictureSrc3 from '@assets/food-irradiation/food-irradiation-system3.png';
+import pictureSrc1 from '@assets/chieu-xa/chieu-xa-system1.png';
+import pictureSrc2 from '@assets/chieu-xa/chieu-xa-system2.png';
+import pictureSrc3 from '@assets/chieu-xa/chieu-xa-system3.png';
 import { ref } from 'yup';
 
 const action = [

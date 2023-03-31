@@ -1,10 +1,10 @@
 import { Layout } from '@my-components';
-import { FoodIrradiation } from '@pages/public/food-irradiation';
+import { ChieuXa } from '@pages/public/chieu-xa';
 
 const HomePage = () => {
   return (
     <Layout>
-      <FoodIrradiation />
+      <ChieuXa />
     </Layout>
   );
 };

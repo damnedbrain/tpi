@@ -1,10 +1,10 @@
 import { Layout } from '@my-components';
-import { LogisticHUB } from '@pages/public/logistic-hub';
+import { VanChuyen } from '@pages/public/van-chuyen';
 
 const HomePage = () => {
   return (
     <Layout>
-      <LogisticHUB />
+      <VanChuyen />
     </Layout>
   );
 };

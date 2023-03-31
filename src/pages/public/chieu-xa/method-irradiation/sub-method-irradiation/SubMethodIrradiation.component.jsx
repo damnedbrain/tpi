@@ -5,7 +5,7 @@ import { SubMethodStep } from './sub-method-step';
 import { subMethodIrradiation } from '@constants/language-option';
 import { useObserverItem } from 'components/hook/useObserverItem';
 import { useChooseLanguage } from 'components/hook/useChooseLanguage';
-import method_image from '@assets/food-irradiation/method-image.png';
+import method_image from '@assets/chieu-xa/method-image.png';
 
 const SubMethodIrradiation = () => {
   const refContainer = useRef();

@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { Breadcrumb } from 'components/own/breadcrumb';
 import { NewsBlock } from 'components/own/news-block';
 import { VideoTop } from 'components/own/video-top';
-import { FoodIrradiationSystem } from './food-irradiation-system';
+import { FoodIrradiationSystem } from './chieu-xa-system';
 import styles from './FoodIrradiation.module.scss';
 import { LogisticsAndSocial } from 'components/own/logistics-and-social';
 import { MethodIrradiation } from './method-irradiation';
