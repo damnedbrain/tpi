@@ -63,7 +63,7 @@ const SubMarket = ({ news }) => {
             alt=''
             width={640}
             height={480}
-            layout='responsive'
+            layout='fill'
             objectFit='fill'
             quality={100}
           />
@@ -82,8 +82,8 @@ const SubMarket = ({ news }) => {
               <Image
                 src={`https:${_avatar}`}
                 alt=''
-                width={_imageAvatarrWidth ? _imageAvatarrWidth : 50}
-                height={_imageAvatarrHeight ? _imageAvatarrHeight : 50}
+                width={40}
+                height={40}
                 layout='responsive'
                 objectFit='contain'
                 quality={100}
