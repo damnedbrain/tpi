@@ -1,5 +1,5 @@
 import { Layout } from '@my-components';
-import { AboutUs } from '@pages/public/about-us';
+import { AboutUs } from '@pages/public/gioi-thieu';
 
 const HomePage = () => {
   return (

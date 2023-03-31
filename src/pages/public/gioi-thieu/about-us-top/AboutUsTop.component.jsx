@@ -3,7 +3,7 @@ import styles from './AboutUsTop.module.scss';
 import Image from 'next/image';
 import { useObserverItem } from 'components/hook/useObserverItem';
 import { NumberGeneralInfo } from 'components/own/number-general-info';
-import about_us_img from '@assets/about-us/About-Us-Image.png';
+import about_us_img from '@assets/gioi-thieu/gioi-thieu-Image.png';
 
 const title = `Giới thiệu về TOAN PHAT GROUP`;
 const desc = `Năm 2017, bắt nguồn từ mong muốn chung tay cùng các doanh nghiệp nâng tầm thương hiệu và giá trị Nông - Thủy sản Việt, Toàn Phát Group (TPG) đã được xây dựng và phát triển. Để đặt nền móng cho sự khởi đầu, Dịch vụ Chiếu xạ (Công ty TNHH Chiếu Xạ Toàn Phát) là bước triển khai đầu tiên trong kế hoạch của TPG, thông qua đó đồng hành hỗ trợ các doanh nghiệp xuất khẩu Nông - Thủy sản giảm đi những áp lực về chi phí, nghiên cứu ứng dụng công nghệ để chủ động hơn trong lĩnh vực chiếu xạ và có thêm nhiều lợi thế khi xuất khẩu thực phẩm, hàng hóa ra quốc tế.

@@ -4,7 +4,7 @@ import { useObserverItem } from 'components/hook/useObserverItem';
 import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 import { humanResource } from '@constants/language-option';
 import Image from 'next/image';
-import imageHR from '@assets/about-us/human-resource.png';
+import imageHR from '@assets/gioi-thieu/human-resource.png';
 import arrow_right from '@assets/introduce/arrow-right.png';
 
 const HumanResource = () => {

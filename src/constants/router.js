@@ -1,5 +1,5 @@
 export const RoutePages = {
-  ABOUT_US: '/about-us',
+  ABOUT_US: '/gioi-thieu',
   FOOD_IRRADIATION: '/food-irradiation',
   COLD_STORAGE: '/cold-storage',
   LOGISTIC_HUB: '/logistic-hub', //new

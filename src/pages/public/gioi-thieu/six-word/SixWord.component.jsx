@@ -4,12 +4,12 @@ import { SubSixWord } from './sub-six-word';
 import { useObserverItem } from 'components/hook/useObserverItem';
 import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 import { sixWord } from '@constants/language-option';
-import icon1 from '@assets/about-us/six-word-icons/icon1.png';
-import icon2 from '@assets/about-us/six-word-icons/icon2.png';
-import icon3 from '@assets/about-us/six-word-icons/icon3.png';
-import icon4 from '@assets/about-us/six-word-icons/icon4.png';
-import icon5 from '@assets/about-us/six-word-icons/icon5.png';
-import icon6 from '@assets/about-us/six-word-icons/icon6.png';
+import icon1 from '@assets/gioi-thieu/six-word-icons/icon1.png';
+import icon2 from '@assets/gioi-thieu/six-word-icons/icon2.png';
+import icon3 from '@assets/gioi-thieu/six-word-icons/icon3.png';
+import icon4 from '@assets/gioi-thieu/six-word-icons/icon4.png';
+import icon5 from '@assets/gioi-thieu/six-word-icons/icon5.png';
+import icon6 from '@assets/gioi-thieu/six-word-icons/icon6.png';
 import Arrow_top from '@assets/best-services/Arrow-top.png';
 
 const action = [

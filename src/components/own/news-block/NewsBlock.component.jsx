@@ -6,9 +6,9 @@ import { useObserverItem } from 'components/hook/useObserverItem';
 import { newsBlock } from '@constants/language-option';
 import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 
-import news1 from '@assets/about-us/News-block-1.png';
-import news2 from '@assets/about-us/News-block-2.png';
-import news3 from '@assets/about-us/News-block-3.png';
+import news1 from '@assets/gioi-thieu/News-block-1.png';
+import news2 from '@assets/gioi-thieu/News-block-2.png';
+import news3 from '@assets/gioi-thieu/News-block-3.png';
 
 const newsImages = [
   {

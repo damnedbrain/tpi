@@ -3,7 +3,7 @@ import styles from './TimelineTPG.module.scss';
 import { useObserverItem } from 'components/hook/useObserverItem';
 import { introduce } from '@constants/language-option';
 import { useChooseLanguage } from 'components/hook/useChooseLanguage';
-import timeline_img from '@assets/about-us/TPG_timeline.png';
+import timeline_img from '@assets/gioi-thieu/TPG_timeline.png';
 
 import Image from 'next/image';
 const TimelineTitle = 'Lịch sử phát triển TOAN PHAT GROUP';

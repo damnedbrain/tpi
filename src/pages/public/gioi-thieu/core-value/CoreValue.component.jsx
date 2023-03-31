@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import styles from './CoreValue.module.scss';
 import { useObserverItem } from 'components/hook/useObserverItem';
 import Image from 'next/image';
-import mission from '@assets/about-us/Mission-and-value.png';
+import mission from '@assets/gioi-thieu/Mission-and-value.png';
 
 import { NumberGeneralInfo } from 'components/own/number-general-info';
 

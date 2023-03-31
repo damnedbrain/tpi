@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import styles from './AboutUs.module.scss';
 import { Breadcrumb } from 'components/own/breadcrumb';
-import { AboutUsTop } from './about-us-top';
-import { AboutUsTopAdd } from './about-us-top-add';
-import { AboutUsTeamMember } from './about-us-team-member';
+import { AboutUsTop } from './gioi-thieu-top';
+import { AboutUsTopAdd } from './gioi-thieu-top-add';
+import { AboutUsTeamMember } from './gioi-thieu-team-member';
 import { CoreValue } from './core-value';
 // import { NewsBlock } from 'components/own/news-block';
 import { breadcrumb } from '@constants/language-option';

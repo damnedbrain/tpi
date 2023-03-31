@@ -3,7 +3,7 @@ import styles from './AboutUsTopAdd.module.scss';
 import Image from 'next/image';
 import { useObserverItem } from 'components/hook/useObserverItem';
 import { NumberGeneralInfo } from 'components/own/number-general-info';
-import about_us_img from '@assets/about-us/About-Us-Image-message.png';
+import about_us_img from '@assets/gioi-thieu/gioi-thieu-Image-message.png';
 
 const title = `Thông điệp Ban Lãnh Đạo`;
 const desc = `Việt Nam có nhiều tiềm năng để phát triển Nông nghiệp, Đồng Bằng Sông Cửu Long là trung tâm lớn của ngành sản xuất Nông - Thủy sản, tuy nhiên những lợi thế đó vẫn chưa được tận dụng để có thể khẳng định thương hiệu và giá trị Nông - Thuỷ sản Quốc gia trên thị trường Quốc tế. 
