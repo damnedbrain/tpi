@@ -38,7 +38,7 @@
     height: 100%;
     width: 50%;
     @include responsive-size(screen-m) {
-      height: 100vw;
+      height: 70vw;
       width: 100%;
     }
   }

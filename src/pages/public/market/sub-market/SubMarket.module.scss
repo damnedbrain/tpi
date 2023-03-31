@@ -84,6 +84,9 @@
       @include responsive-size(screen-m) {
         margin-bottom: 8px;
       }
+      @include responsive-size(screen-s) {
+        height: max-content;
+      }
     }
     .time {
       width: 100%;

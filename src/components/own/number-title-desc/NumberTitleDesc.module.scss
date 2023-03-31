@@ -5,18 +5,25 @@
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  //grid-template-columns: auto;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 280px;
+  flex: calc(100% / 3);
+  max-width: calc(100% / 3);
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  padding: 16px;
+  @media only screen and (max-width: 900px) {
+    flex: calc(100% / 2);
+    max-width: calc(100% / 2);
+  }
   @include responsive-size(screen-m) {
     max-width: none;
     justify-content: space-evenly;
     margin-bottom: 16px;
+    flex: 100%;
+    max-width: none;
+    padding: 0;
   }
+
   &__num {
     display: flex;
     align-items: center;
@@ -39,7 +46,7 @@
     height: max-content;
     width: 100%;
     //max-width: 200px;
-    padding-right: 20px;
+    // padding-right: 20px;
     @include setting-font('Josefin Sans', normal, 500, 14px, 200%);
   }
   &__title {

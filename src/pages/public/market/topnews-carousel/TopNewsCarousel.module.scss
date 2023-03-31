@@ -81,19 +81,16 @@
   //   // max-height: calc(288px / 1440px * 100vw);
   //   @include responsive-size(screen-m) {
   //     height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+
   //      max-height: -webkit-max-content;
-  max-height: -moz-max-content;
-  max-height: max-content;
+
   //   }
   //   // & > :first-child {
   //   //   max-height: calc(288px / 1440px * 100vw);
 
   //   //   @include responsive-size(screen-m) {
   //   //      max-height: -webkit-max-content;
-  max-height: -moz-max-content;
-  max-height: max-content;
+
   //   //   }
   //   // }
   // }
@@ -103,7 +100,9 @@
     height: -moz-max-content;
     height: max-content;
   }
-
+  @media only screen and (max-width: 393px) {
+    height: 80vw;
+  }
   & > :first-child {
     & > :first-child {
       width: max-content !important;
