@@ -1,10 +1,10 @@
 import { Layout } from '@my-components';
-import { AboutUs } from '@pages/public/gioi-thieu';
+import { GioiThieu } from '@pages/public/gioi-thieu';
 
 const HomePage = () => {
   return (
     <Layout>
-      <AboutUs />
+      <GioiThieu />
     </Layout>
   );
 };

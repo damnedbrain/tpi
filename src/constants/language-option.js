@@ -1448,7 +1448,7 @@ Factories operating irradiation technology must follow a very strict and safe te
 ];
 
 export const breadcrumb = {
-  aboutUs: [
+  gioiThieu: [
     {
       locale: 'vi',
       sub: [{ path: '#', title: 'Giới thiệu về TOAN PHAT GROUP' }],

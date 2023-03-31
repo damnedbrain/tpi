@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import styles from './HumanResource.module.scss';
+import styles from './NhanSu.module.scss';
 import { useObserverItem } from 'components/hook/useObserverItem';
 import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 import { humanResource } from '@constants/language-option';
@@ -7,7 +7,7 @@ import Image from 'next/image';
 import imageHR from '@assets/gioi-thieu/human-resource.png';
 import arrow_right from '@assets/introduce/arrow-right.png';
 
-const HumanResource = () => {
+const NhanSu = () => {
   const refContainer = useRef();
   const refContent = useRef();
   const refLanguage = useRef();
@@ -64,4 +64,4 @@ const HumanResource = () => {
     </>
   );
 };
-export default React.memo(HumanResource);
+export default React.memo(NhanSu);

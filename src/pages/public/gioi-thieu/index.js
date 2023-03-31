@@ -1,1 +1,1 @@
-export { default as AboutUs } from './AboutUs.component';
+export { default as GioiThieu } from './GioiThieu.component';
