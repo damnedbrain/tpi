@@ -63,8 +63,8 @@ const SubMarket = ({ news }) => {
             alt=''
             width={640}
             height={480}
-            layout='fill'
-            objectFit='fill'
+            layout='responsive'
+            objectFit='cover'
             quality={100}
           />
         </div>
