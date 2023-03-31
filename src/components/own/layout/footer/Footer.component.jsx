@@ -13,7 +13,7 @@ const Footer = () => {
         <div className={styles['content-wrapper']}>
           <div className={styles['content']}>
             <div className={styles['content__title']}>
-              Nhà Máy Chiếu Xạ Toàn Phát
+              Chiếu Xạ Toàn Phát
             </div>
             <div className={styles['content__sub']}>
               Hotline 24/7: 093 100 0001
