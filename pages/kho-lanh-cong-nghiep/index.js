@@ -1,5 +1,5 @@
 import { Layout } from '@my-components';
-import { ColdStorage } from '@pages/public/cold-storage';
+import { ColdStorage } from '@pages/public/logistic-hub/cold-storage';
 
 const HomePage = () => {
   return (
