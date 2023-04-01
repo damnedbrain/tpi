@@ -17,9 +17,6 @@ import pro9 from '@assets/chieu-xa/pro-9.png';
 import pro10 from '@assets/chieu-xa/pro-10.png';
 import pro11 from '@assets/chieu-xa/pro-11.png';
 import pro12 from '@assets/chieu-xa/pro-12.png';
-import pro13 from '@assets/chieu-xa/pro-13.png';
-import pro14 from '@assets/chieu-xa/pro-14.png';
-import pro15 from '@assets/chieu-xa/pro-15.png';
 
 const proImages = [
   { image: pro1 },
@@ -33,10 +30,7 @@ const proImages = [
   { image: pro9 },
   { image: pro10 },
   { image: pro11 },
-  { image: pro12 },
-  /*{ image: pro13 },
-  { image: pro14 },
-  { image: pro15 },*/
+  { image: pro12 }
 ];
 
 const ProductOfIrradiation = () => {

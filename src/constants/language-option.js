@@ -37,7 +37,7 @@ export const headerMenu = [
           {
             title: 'Chiếu xạ',
             status: 'sub',
-            link: RoutePages.FOOD_IRRADIATION,
+            link: RoutePages.CHIEU_XA,
           },
           {
             title: 'Kho lạnh lưu trữ',

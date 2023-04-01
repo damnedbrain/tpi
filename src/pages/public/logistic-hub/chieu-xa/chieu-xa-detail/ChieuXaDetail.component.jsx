@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import styles from './FoodIrradiationSystem.module.scss';
+import styles from './ChieuXaDetail.module.scss';
 import Image from 'next/image';
 import { foodIrradiationSystem } from '@constants/language-option';
 import { PioneeringTitle } from 'components/own/pioneering-title';
@@ -16,7 +16,7 @@ const action = [
   { source: pictureSrc3 },
 ];
 
-const FoodIrradiationSystem = () => {
+const ChieuXa = () => {
   const refContainer = useRef();
   const refLang = useRef(null);
 
@@ -53,4 +53,4 @@ const FoodIrradiationSystem = () => {
     </>
   );
 };
-export default React.memo(FoodIrradiationSystem);
+export default React.memo(ChieuXa);

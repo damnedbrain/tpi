@@ -1,5 +1,5 @@
 import { Layout } from '@my-components';
-import { ChieuXa } from '@pages/public/chieu-xa';
+import { ChieuXa } from '@pages/public/logistic-hub/chieu-xa/';
 
 const HomePage = () => {
   return (

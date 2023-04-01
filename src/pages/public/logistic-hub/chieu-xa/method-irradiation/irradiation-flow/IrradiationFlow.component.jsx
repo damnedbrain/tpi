@@ -4,7 +4,7 @@ import { SubIrradiationFlow } from './sub-irradiation-flow';
 import { useObserverItem } from 'components/hook/useObserverItem';
 import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 import { irradiationFlow } from '@constants/language-option';
-import arrow from '@assets/chieu-xa/arrow.png';
+import arrow from '@assets/logistic-hub/arrow.png';
 
 const action = [
   { icon: arrow, number: 1 },
