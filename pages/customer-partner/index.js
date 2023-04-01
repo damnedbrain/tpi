@@ -1,5 +1,5 @@
 import { Layout } from '@my-components';
-import { VanChuyen } from '@pages/public/van-chuyen';
+import { VanChuyen } from '@pages/public/logistic-hub/van-chuyen';
 
 const HomePage = () => {
   return (
