@@ -3,9 +3,9 @@ export const RoutePages = {
   CHIEU_XA: '/chieu-xa',
   COLD_STORAGE: '/kho-lanh-cong-nghiep',
   LOGISTIC_HUB: '/van-chuyen', //new
-  LOCATION: '/location', //new
+  LOCATION: '/vi-tri', //new
   CUSTOMER_AND_PARTNER: '/customer-partner', //new
-  MARKET: '/market', //new
+  MARKET: '/thi-truong', //new
   CONTACT: '/contact', //new
 
   GOALS: '/goals',
