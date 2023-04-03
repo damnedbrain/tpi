@@ -23,7 +23,7 @@ const icons = [
   icon_2,
   icon_3,
   icon_4,
-  
+  icon_5,
 ];
 const TrustedBy = () => {
   const refContentWrapper = useRef();

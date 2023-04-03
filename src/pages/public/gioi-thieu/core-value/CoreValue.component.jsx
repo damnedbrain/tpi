@@ -20,7 +20,6 @@ const subDesc2 = 'Trở thành đối tác tin cậy của các doanh nghiệp x
 
 const desc2 = `Trong quá trình phát triển, đội ngũ CBCNV của TPG luôn hành động và giữ vững 6 giá trị cốt lõi: 
 “TRỌNG - TÍN - TÂM - TRÍ - PHÁT - ÍCH”.
-
 Từng mỗi bộ phận đảm nhiệm một vai trò nhất định nhưng luôn hướng về mục tiêu chung và không thể tách rời. Tất cả tạo nên sự kết hợp hài hoà, một tập thể đoàn kết và luôn tuân thủ những giá trị cốt lõi để nâng tầm phát triển mỗi ngày.`;
 
 const CoreValue = () => {

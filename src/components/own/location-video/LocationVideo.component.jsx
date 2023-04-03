@@ -5,7 +5,7 @@ import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 import { LocationMapContent } from '@constants/language-option';
 
 const videoLocationInfo =
-  'https://ik.imagekit.io/damnedbrain/location_map_video.mp4?updatedAt=1680055113759';
+  'https://res.cloudinary.com/dy2gaer1o/video/upload/v1680506072/videos/location_map_video_a4mhx7.mp4';
 
 const LocationVideo = () => {
   const refContainer = useRef();

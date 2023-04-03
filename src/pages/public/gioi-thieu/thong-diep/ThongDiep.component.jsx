@@ -12,7 +12,7 @@ Toàn Phát Group ra đời với tầm nhìn trở thành một Trung tâm Logi
 
 Từng mục tiêu nhỏ hướng về mục tiêu lớn, chúng tôi không chỉ nỗ lực đầu tư cả về trí tuệ con người, công nghệ hiện đại, trang thiết bị tiên tiến, mà còn quan tâm đến phản hồi của khách hàng để nâng cao chất lượng dịch vụ, tạo dựng uy tín thương hiệu và đưa TPG ngày càng vững mạnh.
 
-ÔNG VƯƠNG HIẾU
+Ông VƯƠNG HIẾU
 Giám đốc Điều hành
 `;
 

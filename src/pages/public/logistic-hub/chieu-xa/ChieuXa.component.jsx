@@ -21,6 +21,7 @@ const ChieuXa = () => {
         <ChieuXaDetail />
         <ProductOfIrradiation />
         {/*<MethodIrradiation />*/}
+        {/*
         <VideoDescTitle 
           videoInfo = 'https://www.youtube.com/watch?v=dj5dRScaCjc'
           title = 'Chiếu xạ bằng tia gamma (Cobalt 60)'
@@ -36,7 +37,7 @@ const ChieuXa = () => {
           videoID = 'logistic-hub-ebeam-1'
         />
         {/*<LogisticsAndSocial logisticsAndSocial={refLang.current?.sub} />*/}
-         
+        
       </div>
     </>
   );

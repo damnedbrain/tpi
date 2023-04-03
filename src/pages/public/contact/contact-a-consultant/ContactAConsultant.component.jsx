@@ -59,7 +59,7 @@ const ContactAConsultant = () => {
       <div className={styles['container']} ref={refContainer}>
         <div className={styles['title']}>{refLang.current?.title}</div>
         <div className={styles['desc']}>{refLang.current?.desc}</div>
-
+        {/*}
         <Form
           noValidate
           validated={validated}
@@ -177,11 +177,11 @@ const ContactAConsultant = () => {
           <Button type='submit' color='primary'>
             {refLang.current?.button}
           </Button>
-        </Form>
+        </Form>*/}
         <div className={styles['bottom-content']} ref={refBotton}>
-          <div className={styles['title']}>
+          {/*<div className={styles['title']}>
             {refLang.current?.directContact.title}
-          </div>
+          </div>*/}
           {refLang.current?.directContact.sub.map((item, idx) => (
             <div className={styles['sub-content']} key={idx}>
               <div className={styles['sub-content__title']}>{item.title}</div>

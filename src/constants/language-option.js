@@ -252,27 +252,27 @@ export const sixWord = [
     sub: [
       {
         title: 'TRỌNG',
-        desc: `Trong mọi hoàn cảnh, TPG luôn đề cao giá trị của sự tôn trọng. Tôn trọng bản thân, đồng nghiệp, tập thể, đối tác và khách hàng, đó là kim chỉ nam cho sự phát triển bền vững và gắn kết những mối quan hệ lâu dài. Hơn thế nữa, sự tự trọng cũng là một điều thiết yếu, từng cá nhân luôn biết coi trọng những phẩm chất tốt đẹp của bản thân, coi trọng danh dự, uy tín của tổ chức, hình thành nên một tập thể chính trực và luôn coi trọng lẽ phải.`,
+        desc: `Trong mọi hoàn cảnh, TPG luôn đề cao giá trị của sự TÔN TRỌNG: tôn trọng bản thân, đồng nghiệp, tập thể, đối tác và khách hàng, đó là kim chỉ nam cho sự phát triển bền vững và gắn kết những mối quan hệ lâu dài. Hơn thế nữa, sự tự trọng cũng là một điều thiết yếu, từng cá nhân luôn biết coi trọng những phẩm chất tốt đẹp của bản thân, coi trọng danh dự, uy tín của tổ chức, hình thành nên một tập thể chính trực và luôn coi trọng lẽ phải.`,
       },
       {
         title: 'TÍN',
-        desc: ` Chữ “Tín” là giá trị chuẩn mực mà mỗi thành viên TPG đặt lên hàng đầu trong quá trình làm việc với khách hàng, đối tác. Từng mỗi dịch vụ cung cấp đều đem lại giá trị thực, minh bạch trong tất cả các giao dịch, chuyên nghiệp trong mọi quy trình để đảm bảo chất lượng, hiệu quả và uy tín thương hiệu.`,
+        desc: `Chữ TÍN là giá trị chuẩn mực mà mỗi thành viên TPG đặt lên hàng đầu trong quá trình làm việc với khách hàng, đối tác. Từng mỗi dịch vụ cung cấp đều đem lại giá trị thực, minh bạch trong tất cả các giao dịch, chuyên nghiệp trong mọi quy trình để đảm bảo chất lượng, hiệu quả và uy tín thương hiệu.`,
       },
       {
         title: 'TÂM',
-        desc: `Với chúng tôi, hành động từ tâm là tham chiếu cho sự trường tồn của TPG. Đó là cái tâm, cái đức trong những dịch vụ mang đến cho khách hàng, trong việc đối xử với CBCNV hay cả trong những hành động có ảnh hưởng đến sự phát triển của cộng đồng xã hội. Khi xuất phát từ những giá trị tốt đẹp, chúng tôi tin rằng sẽ tạo được nền tảng vững chắc để vươn đến những tầm cao mới.`,
+        desc: `Với chúng tôi, hành động từ T M là tham chiếu cho sự trường tồn của TPG. Đó là cái tâm, cái đức trong những dịch vụ mang đến cho khách hàng, trong việc đối xử với CBCNV hay cả trong những hành động có ảnh hưởng đến sự phát triển của cộng đồng xã hội. Khi xuất phát từ những giá trị tốt đẹp, chúng tôi tin rằng sẽ tạo được nền tảng vững chắc để vươn đến những tầm cao mới.`,
       },
       {
         title: 'TRÍ',
-        desc: `TPG lấy trí làm sức mạnh cạnh tranh và nguồn năng lượng cho sự sáng tạo. Luôn khuyến khích toàn bộ CBCNV nghiên cứu, học hỏi, khai phá giá trị tiềm năng của mỗi người; từ đó ứng dụng công nghệ vào quản trị, vận hành, kỹ thuật để ngày một nâng cao các giá trị và chất lượng dịch vụ.`,
+        desc: ` TPG lấy TRÍ làm sức mạnh cạnh tranh và nguồn năng lượng cho sự sáng tạo. Luôn khuyến khích toàn bộ CBCNV nghiên cứu, học hỏi, khai phá giá trị tiềm năng của mỗi người; từ đó ứng dụng công nghệ vào quản trị, vận hành, kỹ thuật để ngày một nâng cao các giá trị và chất lượng dịch vụ.`,
       },
       {
         title: 'PHÁT',
-        desc: `Chúng tôi luôn tạo động lực và thúc đẩy tinh thần dám nghĩ dám làm của tập thể CBCNV trong công ty, vì sự phát triển của mỗi cá nhân, sự nỗ lực để vượt qua những giới hạn và thách thức đó là điều kiện thiết yếu tạo nên một tập thể vững mạnh, thành công.`,
+        desc: `Chúng tôi luôn tạo động lực và thúc đẩy tinh thần dám nghĩ dám làm của tập thể CBCNV trong công ty, vì sự tiến bộ của mỗi cá nhân, sự nỗ lực để vượt qua những giới hạn và thách thức đó là điều kiện thiết yếu tạo nên một tập thể PHÁT TRIỂN vững mạnh, thành công`,
       },
       {
         title: 'ÍCH',
-        desc: `Với tâm niệm lợi ích của khách hàng/đối tác/cộng đồng phải được đặt lên trên hết, chúng tôi luôn lấy đó làm trọng tâm để phụng sự, cống hiến vì sự phát triển chung của xã hội. Ở khía cạnh khác, Ban lãnh đạo TPG luôn coi trọng lợi ích của từng thành viên đã đồng hành, gắn bó vì sự phát triển của tập thể. Khi mỗi cá nhân luôn giữ tinh thần cầu tiến, biết trau dồi nội lực và tích cực đóng góp, đó là giữ vững lợi ích của chính mình.`,
+        desc: `Với tâm niệm LỢI ÍCH của khách hàng/đối tác/cộng đồng phải được đặt lên trên hết, chúng tôi luôn lấy đó làm trọng tâm để phụng sự, cống hiến vì sự phát triển chung của xã hội. Ở khía cạnh khác, Ban lãnh đạo TPG luôn coi trọng lợi ích của từng thành viên đã đồng hành, gắn bó vì sự phát triển của tập thể. Khi mỗi cá nhân luôn giữ tinh thần cầu tiến, biết trau dồi nội lực và tích cực đóng góp, đó là giữ vững lợi ích của chính mình.`,
       },
     ],
   },
@@ -966,31 +966,35 @@ export const coldStorageTopContent = [
     sub: [
       {
         title: `Vị trí cửa ngõ`,
-        desc: `Toạ lạc tại Lô A24-2, Đường Ngang 1, Khu công nghiệp Phú An Thạnh, xã An Thạnh, huyện Bến Lức, tỉnh Long An; Kho Lạnh Toàn Phát kết nối dễ dàng, nhanh chóng đến các trục đường huyết mạch, hệ thống cảng biển, cảng hàng không và các tỉnh thành lân cận. Nhờ đó giúp các doanh nghiệp thuận tiện và tiết kiệm trong việc vận chuyển hàng hóa.`,
+        desc: `Toạ lạc tại Lô A24-2, Đường Ngang 1, Khu công nghiệp Phú An Thạnh, xã An Thạnh, huyện Bến Lức, tỉnh Long An; Kho Lạnh Toàn Phát kết nối dễ dàng, nhanh chóng đến các trục đường huyết mạch, hệ thống cảng sông, cảng biển, cảng hàng không và các tỉnh thành lân cận. Nhờ đó giúp các doanh nghiệp thuận tiện trong việc vận chuyển hàng hóa khi xuất khẩu.`,
       },
       {
         title: `Tiết kiệm chi phí`,
-        desc: `Sở hữu đồng thời kho lạnh lưu trữ và nhà máy chiếu xạ, TPG giúp các doanh nghiệp xuất khẩu hàng hóa giảm bớt chi phí vận chuyển. Đặc biệt luôn cam kết đồng hành về giá và mang đến những chính sách tối ưu nhất cho khách hàng.`,
+        desc: `Lợi thế vị trí đắc địa cùng việc sở hữu đồng thời cả kho lạnh lưu trữ và nhà máy chiếu xạ, TPG giúp các doanh nghiệp xuất khẩu Nông - Thủy sản tiết kiệm chi phí vận chuyển, chi phí bốc dỡ khi xuất - nhập hàng hóa. Đặc biệt, chúng tôi luôn cam kết đồng hành về giá và mang đến những chính sách tối ưu nhất cho khách hàng.`,
       },
       {
         title: `Hoạt động 24/7`,
-        desc: `Kho lạnh Toàn Phát hoạt động 24/7, dịch vụ tốc hành, đáp ứng tối đa nhu cầu lưu trữ và xuất hàng trong các thời điểm cần thiết của khách hàng.`,
+        desc:  `Kho lạnh Toàn Phát hoạt động 24/7, dịch vụ tốc hành, đội ngũ chuyên nghiệp luôn xử lý nhanh gọn các yêu cầu và thắc mắc của khách hàng; đáp ứng tối đa nhu cầu lưu trữ và xuất nhập hàng trong mọi thời điểm cần thiết.`,
       },
       {
-        title: `Trang thiết bị hiện đại, hệ thống quản lý thông minh`,
-        desc: `Với trang thiết bị hiện đại, ứng dụng công nghệ, kỹ thuật tiên tiến nhất trong điều khiển và quản lý; liên tục bảo dưỡng, nâng cấp hệ thống kho, Kho Lạnh Toàn Phát đảm bảo quá trình vận hành xử lý thông minh, chính xác, tinh gọn, đạt tiêu chuẩn.`,
+        title: `Đầu tư công nghệ hiện đại`,
+        desc: `Hệ thống kho lạnh được đầu tư công nghệ hiện đại nhất về bảo quản - lưu trữ, trang thiết bị kỹ thuật cập nhật tiên tiến; thường xuyên bảo dưỡng, nâng cấp hệ thống kho; nhờ đó luôn đảm bảo quá trình xử lý vận hành thông minh, tinh gọn và đạt tiêu chuẩn.`,
       },
       {
-        title: `Cam kết đảm bảo chất lượng hàng hóa`,
-        desc: `Hàng hóa của doanh nghiệp khi lưu trữ và bảo quản tại Kho Lạnh Toàn Phát sẽ được đảm bảo an toàn tối đa nhờ hệ thống quản lý và quy trình vận hành một cách nghiêm ngặt.`,
+        title: `Tốc độ xuất nhập hàng nhanh`,
+        desc: `Với hệ thống điều khiển và quản lý bằng phần mềm tối ưu; đội ngũ vận hành - xử lý dịch vụ lưu trữ được huấn luyện bài bản, luôn tuân thủ quy trình; Kho Lạnh Toàn Phát đảm bảo tốc độ xuất nhập hàng nhanh, chính xác, an toàn, đáp ứng cao các yêu cầu của khách hàng.`,
+      },
+      {
+        title: `Đảm bảo chất lượng hàng hóa`,
+        desc: `Hàng hóa của doanh nghiệp khi lưu trữ và bảo quản tại Kho Lạnh Toàn Phát sẽ được đảm bảo an toàn tối đa nhờ hệ thống quản lý và quy trình nghiêm ngặt. Nhiệt độ và độ ẩm của kho luôn được kiểm soát phù hợp, mỗi loại hàng được phân khu và khai thác ở các khu vực hợp lý để không làm ảnh hưởng đến chất lượng hàng hóa.`,
       },
       {
         title: `Gói thuê kho lạnh linh hoạt`,
-        desc: `Đề cao tiêu chí linh hoạt và tối ưu hóa cho doanh nghiệp, khách hàng có thể đăng ký gói thuê kho lạnh lưu trữ dựa trên nhu cầu thực tế. Có thể thuê theo thời gian ngắn hạn, trung hạn, dài hạn và tính theo trọng lượng hàng hóa thực tế hoặc tính theo số lượng vị trí pallet.`,
+        desc: `Đề cao tiêu chí linh hoạt và tối ưu hóa cho doanh nghiệp, tại Kho Lạnh Toàn Phát khách hàng có thể đăng ký gói thuê kho lạnh lưu trữ dựa trên nhu cầu thực tế. Có thể thuê theo thời gian ngắn hạn, trung hạn, dài hạn và tính theo trọng lượng hàng hóa thực tế hoặc tính theo số lượng vị trí (pallet).`,
       },
       {
-        title: `Dịch vụ hỗ trợ`,
-        desc: `Kho Lạnh Toàn Phát hỗ trợ các dịch vụ đi kèm khác như: đóng gói, dán tem, thay bao bì, phân loại hàng hóa, quấn PE,… với mức phí cạnh tranh nhất.`,
+        title: `Dịch vụ bổ trợ đa dạng`,
+        desc: `Ngoài dịch vụ lưu trữ nhiệt lạnh, Kho Lạnh Toàn Phát cung cấp nhiều dịch vụ bổ trợ khác như: đóng gói, dán tem, thay bao bì, phân loại hàng hóa, quấn PE,… với mức phí cạnh tranh nhất.`,
       },
     ],
   },
@@ -1002,31 +1006,35 @@ Toan Phat cold storage service brings many values to customers:`,
     sub: [
       {
         title: `Vị trí cửa ngõ`,
-        desc: `Toạ lạc tại Lô A24-2, Đường Ngang 1, Khu công nghiệp Phú An Thạnh, xã An Thạnh, huyện Bến Lức, tỉnh Long An; Kho Lạnh Toàn Phát kết nối dễ dàng, nhanh chóng đến các trục đường huyết mạch, hệ thống cảng biển, cảng hàng không và các tỉnh thành lân cận. Nhờ đó giúp các doanh nghiệp thuận tiện và tiết kiệm trong việc vận chuyển hàng hóa.`,
+        desc: `Toạ lạc tại Lô A24-2, Đường Ngang 1, Khu công nghiệp Phú An Thạnh, xã An Thạnh, huyện Bến Lức, tỉnh Long An; Kho Lạnh Toàn Phát kết nối dễ dàng, nhanh chóng đến các trục đường huyết mạch, hệ thống cảng sông, cảng biển, cảng hàng không và các tỉnh thành lân cận. Nhờ đó giúp các doanh nghiệp thuận tiện trong việc vận chuyển hàng hóa khi xuất khẩu.`,
       },
       {
         title: `Tiết kiệm chi phí`,
-        desc: `Sở hữu đồng thời kho lạnh lưu trữ và nhà máy chiếu xạ, TPG giúp các doanh nghiệp xuất khẩu hàng hóa giảm bớt chi phí vận chuyển. Đặc biệt luôn cam kết đồng hành về giá và mang đến những chính sách tối ưu nhất cho khách hàng.`,
+        desc: `Lợi thế vị trí đắc địa cùng việc sở hữu đồng thời cả kho lạnh lưu trữ và nhà máy chiếu xạ, TPG giúp các doanh nghiệp xuất khẩu Nông - Thủy sản tiết kiệm chi phí vận chuyển, chi phí bốc dỡ khi xuất - nhập hàng hóa. Đặc biệt, chúng tôi luôn cam kết đồng hành về giá và mang đến những chính sách tối ưu nhất cho khách hàng.`,
       },
       {
         title: `Hoạt động 24/7`,
-        desc: `Kho lạnh Toàn Phát hoạt động 24/7, dịch vụ tốc hành, đáp ứng tối đa nhu cầu lưu trữ và xuất hàng trong các thời điểm cần thiết của khách hàng.`,
+        desc:  `Kho lạnh Toàn Phát hoạt động 24/7, dịch vụ tốc hành, đội ngũ chuyên nghiệp luôn xử lý nhanh gọn các yêu cầu và thắc mắc của khách hàng; đáp ứng tối đa nhu cầu lưu trữ và xuất nhập hàng trong mọi thời điểm cần thiết.`,
       },
       {
-        title: `Trang thiết bị hiện đại, hệ thống quản lý thông minh`,
-        desc: `Với trang thiết bị hiện đại, ứng dụng công nghệ, kỹ thuật tiên tiến nhất trong điều khiển và quản lý; liên tục bảo dưỡng, nâng cấp hệ thống kho, Kho Lạnh Toàn Phát đảm bảo quá trình vận hành xử lý thông minh, chính xác, tinh gọn, đạt tiêu chuẩn.`,
+        title: `Đầu tư công nghệ hiện đại`,
+        desc: `Hệ thống kho lạnh được đầu tư công nghệ hiện đại nhất về bảo quản - lưu trữ, trang thiết bị kỹ thuật cập nhật tiên tiến; thường xuyên bảo dưỡng, nâng cấp hệ thống kho; nhờ đó luôn đảm bảo quá trình xử lý vận hành thông minh, tinh gọn và đạt tiêu chuẩn.`,
       },
       {
-        title: `Cam kết đảm bảo chất lượng hàng hóa`,
-        desc: `Hàng hóa của doanh nghiệp khi lưu trữ và bảo quản tại Kho Lạnh Toàn Phát sẽ được đảm bảo an toàn tối đa nhờ hệ thống quản lý và quy trình vận hành một cách nghiêm ngặt.`,
+        title: `Tốc độ xuất nhập hàng nhanh`,
+        desc: `Với hệ thống điều khiển và quản lý bằng phần mềm tối ưu; đội ngũ vận hành - xử lý dịch vụ lưu trữ được huấn luyện bài bản, luôn tuân thủ quy trình; Kho Lạnh Toàn Phát đảm bảo tốc độ xuất nhập hàng nhanh, chính xác, an toàn, đáp ứng cao các yêu cầu của khách hàng.`,
+      },
+      {
+        title: `Đảm bảo chất lượng hàng hóa`,
+        desc: `Hàng hóa của doanh nghiệp khi lưu trữ và bảo quản tại Kho Lạnh Toàn Phát sẽ được đảm bảo an toàn tối đa nhờ hệ thống quản lý và quy trình nghiêm ngặt. Nhiệt độ và độ ẩm của kho luôn được kiểm soát phù hợp, mỗi loại hàng được phân khu và khai thác ở các khu vực hợp lý để không làm ảnh hưởng đến chất lượng hàng hóa.`,
       },
       {
         title: `Gói thuê kho lạnh linh hoạt`,
-        desc: `Đề cao tiêu chí linh hoạt và tối ưu hóa cho doanh nghiệp, khách hàng có thể đăng ký gói thuê kho lạnh lưu trữ dựa trên nhu cầu thực tế. Có thể thuê theo thời gian ngắn hạn, trung hạn, dài hạn và tính theo trọng lượng hàng hóa thực tế hoặc tính theo số lượng vị trí pallet.`,
+        desc: `Đề cao tiêu chí linh hoạt và tối ưu hóa cho doanh nghiệp, tại Kho Lạnh Toàn Phát khách hàng có thể đăng ký gói thuê kho lạnh lưu trữ dựa trên nhu cầu thực tế. Có thể thuê theo thời gian ngắn hạn, trung hạn, dài hạn và tính theo trọng lượng hàng hóa thực tế hoặc tính theo số lượng vị trí (pallet).`,
       },
       {
-        title: `Dịch vụ hỗ trợ`,
-        desc: `Kho Lạnh Toàn Phát hỗ trợ các dịch vụ đi kèm khác như: đóng gói, dán tem, thay bao bì, phân loại hàng hóa, quấn PE,… với mức phí cạnh tranh nhất.`,
+        title: `Dịch vụ bổ trợ đa dạng`,
+        desc: `Ngoài dịch vụ lưu trữ nhiệt lạnh, Kho Lạnh Toàn Phát cung cấp nhiều dịch vụ bổ trợ khác như: đóng gói, dán tem, thay bao bì, phân loại hàng hóa, quấn PE,… với mức phí cạnh tranh nhất.`,
       },
     ],
   },
@@ -1036,26 +1044,26 @@ export const LocationMapContent = [
   {
     locale: 'vi',
     title: 'Vị trí cửa ngõ',
-    desc: `Nhà máy Chiếu Xạ Toàn Phát và Kho Lạnh Toàn Phát được đặt tại Khu công nghiệp Phú An Thạnh (Bến Lức - Long An). Đây là vị trí vàng để kết nối đến các tuyến đường huyết mạch quốc gia, các “trục xương sống” trong hạ tầng giao thông của Đồng Bằng Sông Cửu Long. Đồng thời là tâm điểm kết nối đến hệ thống cảng sông, cảng biển và cảng hàng không quốc tế của khu vực. Lợi thế về vị trí sẽ giúp các doanh nghiệp tiết kiệm được chi phí lớn trong lộ trình vận chuyển hàng hoá đến cơ sở chiếu xạ, hay từ kho lạnh lưu trữ đến hệ thống cảng để xuất khẩu Nông - Thuỷ sản ra nước ngoài.`,
+    desc: `Nhà máy Chiếu Xạ Toàn Phát và Kho Lạnh Toàn Phát được đặt tại Khu công nghiệp Phú An Thạnh (Bến Lức - Long An). Đây là vị trí vàng để kết nối đến các tuyến đường huyết mạch quốc gia, các “trục xương sống” trong hạ tầng giao thông của Đồng Bằng Sông Cửu Long. Đồng thời là tâm điểm kết nối đến hệ thống cảng sông, cảng biển và cảng hàng không quốc tế của khu vực. Lợi thế về vị trí sẽ giúp các doanh nghiệp tiết kiệm được chi phí lớn trong lộ trình vận chuyển hàng hoá đến cơ sở chiếu xạ, hay từ kho lạnh lưu trữ đến hệ thống cảng để xuất khẩu Nông - Thuỷ sản ra nước ngoài`,
     sub: [
       {
-        desc: `Ngay nút giao Cao tốc Trung Lương - Bến Lức , Cách Quốc lộ 1A: 3km`,
+        desc: `Ngay nút giao Cao tốc Trung Lương - Bến Lức, cách Quốc lộ 1A: 3km`,
       },
-      { desc: `Cách cảng Hiệp Phước: 35km` },
+      { desc: `Cách Cảng Hiệp Phước: 35km` },
       {
-        desc: `Cách cảng Cát Lái: 40km`,
-      },
-      {
-        desc: `Cách cảng quốc tế Long An: 40km`,
+        desc: `Cách Cảng Cát Lái: 40km`,
       },
       {
-        desc: `Cách cảng Cái Mép: 95km `,
+        desc: `Cách Cảng Quốc tế Long An: 40km`,
       },
       {
-        desc: `Cách cảng hàng không Quốc tế Tân Sơn Nhất: 42 km`,
+        desc: `Cách Cảng Cái Mép: 95km`,
       },
       {
-        desc: `Giáp ranh với huyện Bình Chánh (TP. HCM) `,
+        desc: `Cách Cảng Hàng không Quốc tế Tân Sơn Nhất: 42 km`,
+      },
+      {
+        desc: `Giáp ranh với huyện Bình Chánh (TP. HCM)`,
       },
       {
         desc: `Cách trung tâm TP. HCM: 36km`,
@@ -1106,7 +1114,8 @@ export const contactAConsultant = [
             `Công ty TNHH Chiếu Xạ Toàn Phát`,
             `Địa chỉ: Lô A24-1, Đường Ngang 1, Khu Công Nghiệp Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,
             `MST: 1101846577`,
-            `Hotline: 093 100 0001`,
+            `Hotline: 092 100 0001 - 092 452 3888`,
+            `Phone: 0272 378 6888`,
             `Email: info@tpirr.vn | tiepnhan@tpirr.vn`,
           ],
           button1: facebookButton,
@@ -1120,7 +1129,8 @@ export const contactAConsultant = [
             `Công ty TNHH Toàn Phát - Kho Vận `,
             `Địa chỉ: Lô A24-2, Đường Ngang 1, Khu Công Nghiệp Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,
             `MST: 1101966433`,
-            `Hotline: 092 191 6999`,
+            `092 100 0001 – 092 191 6999`,
+            `Phone: 0272 391 6999`,
             `Email: info@tprw.vn | tiepnhan@tprw.vn`,
           ],
           button1: facebookButton,

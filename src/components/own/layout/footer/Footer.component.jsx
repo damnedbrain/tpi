@@ -74,8 +74,8 @@ const Footer = () => {
         <div className={styles['bottom']}>
           <div className={styles['bottom__bar']}></div>
           <div className={styles['bottom__desc']}>
-            2022 ©︎TOAN PHAT GROUP. Ltd. All rights Reserved.
-            support@toanphat.com
+            2022 ©︎TOAN PHAT GROUP. All rights Reserved.
+            admin@tpgr.vn
           </div>
         </div>
       </div>

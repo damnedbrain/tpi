@@ -7,7 +7,7 @@ import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 import { LocationMapContent } from '@constants/language-option';
 
 const videoLocationInfo =
-  'https://ik.imagekit.io/damnedbrain/location_map_video.mp4?updatedAt=1680055113759';
+  'https://res.cloudinary.com/dy2gaer1o/video/upload/v1680506072/videos/location_map_video_a4mhx7.mp4';
 
 const opts = {
     playerVars: {
@@ -34,19 +34,21 @@ const LocationMap = () => {
   return (
     <>
       <div className={styles['container']}>
+      
         <div className={styles['desc-wrapper']}>
           <div className={styles['desc-wrapper__title']}>
             {refLang.current?.title}
           </div>
-          <div className={styles['desc-wrapper__desc']}>
-            {refLang.current?.desc}
-          </div>
-        </div>
-        <div className={styles['video']}>
+          <div className={styles['video']}>
           <video autoPlay muted loop className={styles['video']}>
             <source src={videoLocationInfo} type='video/mp4' />
           </video>
         </div>
+          <div className={styles['desc-wrapper__desc']}>
+            {refLang.current?.desc}
+          </div>
+        </div>
+        
         <div className={styles['sub-content']} ref={refContent}>
           {refLang.current?.sub.map((item, index) => (
             <NumberAndDescMap key={index} number={index + 1} desc={item.desc} />

@@ -19,12 +19,13 @@ const ColdStorageTopContent = () => {
           <PioneeringTitle number={2} title={refLang.current?.title} />
         </div>
         <div className={styles['desc-wrapper']}>
-          <div className={styles['desc-wrapper__title']}>
+          {/*<div className={styles['desc-wrapper__title']}>
             {refLang.current?.title}
-          </div>
+          </div>*/}
           <div className={styles['desc-wrapper__desc']}>
             {refLang.current?.desc}
           </div>
+          <div className={styles['desc-wrapper__title']}>Ưu thế vượt trội</div>
         </div>
         <div className={styles['sub-content']} ref={refContent}>
           {refLang.current?.sub.map((item, index) => (
