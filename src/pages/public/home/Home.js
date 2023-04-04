@@ -8,11 +8,13 @@ import { OurProject } from './OurProject';
 import { News } from './News';
 import { Question } from './Question';
 import { LocationVideo } from 'components/own/location-video';
+import { BannerPromo } from 'components/own/banner-promo';
 
 export default function Home({ news, images }) {
   return (
     <>
       <Introduce />
+      <BannerPromo news={news} />
       <BestServices />
       <LocationVideo />
       <News news={news} />

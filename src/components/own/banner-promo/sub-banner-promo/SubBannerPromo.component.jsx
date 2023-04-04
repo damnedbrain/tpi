@@ -1,5 +1,5 @@
 import React, { useRef, useCallback } from 'react';
-import styles from './SubBannerCarousel.module.scss';
+import styles from './SubBannerPromo.module.scss';
 import Image from 'next/image';
 import { useObserverItem } from 'components/hook/useObserverItem';
 import { get } from 'lodash';
@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { convertTime } from '@utils/uti';
 
-const SubBannerCarousel = ({ news }) => {
+const SubBannerPromo = ({ news }) => {
   const { title, image, desc, slug, time, author, avatar } = news?.fields;
   const router = useRouter();
   const { locale } = useRouter();
@@ -75,13 +75,14 @@ const SubBannerCarousel = ({ news }) => {
           <Image
             src={`https:${_imageURL}`}
             alt=''
-            width={_imageWidth ? _imageWidth : 383}
-            height={_imageHeight ? _imageHeight : 200}
-            layout='fill'
-            objectFit='fill'
+            width={_imageWidth ? _imageWidth : 1440}
+            height={_imageHeight ? _imageHeight : 500}
+            layout='responsive'
+            //objectFit='fill'
             quality={100}
           />
         </div>
+        {/*}
         <div className={styles['client-wrapper']}>
           <div className={styles['client']}>
             <div className={styles['client__title']}>{title}</div>
@@ -107,8 +108,9 @@ const SubBannerCarousel = ({ news }) => {
             </div>
           </div>
         </div>
+        */}
       </div>
     </>
   );
 };
-export default React.memo(SubBannerCarousel);
+export default React.memo(SubBannerPromo);

@@ -1,9 +1,10 @@
 import React, { useMemo, useRef } from 'react';
-import styles from './BannerCarousel.module.scss';
+import styles from './BannerPromo.module.scss';
 import Slider from 'react-slick';
-import { SubBannerCarousel } from './SubBannerCarousel';
+import { SubBannerPromo } from './sub-banner-promo';
 import { useObserverItem } from 'components/hook/useObserverItem';
-
+import introduce_img from '@assets/introduce/introduce-img.png';
+import Image from 'next/image';
 
 function ArrowLef(props) {
   const { currentSlide, onClick } = props;
@@ -33,7 +34,7 @@ function ArrowRight(props) {
   );
 }
 
-const BannerCarousel = ({ news }) => {
+const BannerPromo = ({ news }) => {
   const refSlider = useRef(null);
   // const refContent = useRef(null);
 
@@ -41,6 +42,7 @@ const BannerCarousel = ({ news }) => {
     () => ({
       className: styles['setting-slider'],
       dotsClass: styles['setting-dots'],
+      autoplay: true,
       variableWidth: true,
       dots: true,
       arrows: true,
@@ -69,10 +71,22 @@ const BannerCarousel = ({ news }) => {
       <div className={styles['container']}>
         <div className={styles['slider-wrapper']} ref={refSlider}>
           <Slider {...settings}>
+          <div className={styles['introduce-img']}>
+          <Image
+            src={introduce_img}
+            alt=''
+            width={1440}
+            height={500}
+            layout='responsive'
+            objectFit='contain'
+            quality={100}
+            priority
+          />
+          </div>
             {Array.isArray(news) &&
               news.map((item, index) => {
-                return item?.fields?.hightLight ? (
-                  <SubBannerCarousel key={index} news={item} />
+                return item?.fields?.promo ? (
+                  <SubBannerPromo key={index} news={item} />
                 ) : (
                   ''
                 );
@@ -83,4 +97,4 @@ const BannerCarousel = ({ news }) => {
     </>
   );
 };
-export default React.memo(BannerCarousel);
+export default React.memo(BannerPromo);
