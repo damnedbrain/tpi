@@ -13,7 +13,7 @@ import { BannerPromo } from 'components/own/banner-promo';
 export default function Home({ news, images }) {
   return (
     <>
-      <Introduce />
+      
       <BannerPromo news={news} />
       <BestServices />
       <LocationVideo />

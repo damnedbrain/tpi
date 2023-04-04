@@ -49,7 +49,7 @@ const BannerPromo = ({ news }) => {
       swipeToSlide: true,
       touchMove: true,
       swipe: true,
-      infinite: false,
+      infinite: true,
       speed: 300,
       slidesToShow: 1,
       touchThreshold: 50,
@@ -65,24 +65,14 @@ const BannerPromo = ({ news }) => {
 
   useObserverItem(refSlider, styles);
   // useChooseLanguage(testimonial, refContent);
-
+  
+  
+  news?.field?.unshift(introduceBlock);
   return (
     <>
       <div className={styles['container']}>
         <div className={styles['slider-wrapper']} ref={refSlider}>
           <Slider {...settings}>
-          <div className={styles['introduce-img']}>
-          <Image
-            src={introduce_img}
-            alt=''
-            width={1440}
-            height={500}
-            layout='responsive'
-            objectFit='contain'
-            quality={100}
-            priority
-          />
-          </div>
             {Array.isArray(news) &&
               news.map((item, index) => {
                 return item?.fields?.promo ? (

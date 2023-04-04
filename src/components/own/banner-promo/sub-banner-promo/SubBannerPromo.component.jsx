@@ -78,7 +78,7 @@ const SubBannerPromo = ({ news }) => {
             width={_imageWidth ? _imageWidth : 1440}
             height={_imageHeight ? _imageHeight : 500}
             layout='responsive'
-            //objectFit='fill'
+            objectFit='contain'
             quality={100}
           />
         </div>
