@@ -757,7 +757,7 @@ export const foodIrradiationSystem = [
       {
         title: 'Hệ thống máy chiếu xạ bằng nguồn Cobalt-60 sử dụng tia gamma',
         eventKey: "cobalt-60",
-        imgSrc: 'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680634971/chieuxaImgs/chieu-xa-system1_byvych.png',
+        imgSrc: 'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680704158/chieuxaImgs/Cobalt_60_btrxzy.png',
         desc: `Phương pháp chiếu xạ bằng tia gamma sử dụng bức xạ tạo ra bởi sự phân rã của đồng vị phóng xạ Cobalt-60. Những chất này phát ra các photon có năng lượng cao (1,17MeV và 1,33MeV), có khả năng xuyên thấu vào thực phẩm đến độ sâu vài chục cm, vậy nên đặc biệt thích hợp để xử lý các sản phẩm có mật độ cao. Quá trình chiếu xạ gamma được ứng dụng để khử trùng, xử lý hiệu quả nhiều loại sản phẩm khác nhau: thiết bị y tế, dược phẩm, mỹ phẩm, thực phẩm và thiết bị gia dụng…`,
         midTitle:`Ưu điểm của phương pháp chiếu xạ bằng tia gamma`,
         desc2:[
@@ -769,7 +769,7 @@ export const foodIrradiationSystem = [
       {
         title: 'Hệ thống máy chiếu xạ bằng chùm tia điện tử (E-Beam) sử dụng chùm electron',
         eventKey: "e-beam",
-        imgSrc: 'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680634970/chieuxaImgs/chieu-xa-system2_t4jnwp.png',
+        imgSrc: 'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680704172/chieuxaImgs/ebeam_airgqs.jpg',
         desc: `Quá trình chiếu xạ bằng công nghệ E-beam sử dụng bức xạ ion hoá là electron năng lượng cao. Các electron được tạo ra bởi electron gun, được gia tốc bởi sóng cao tần qua cấu trúc cộng hưởng sử dụng nguồn điện. Electron có điện tích âm, khối lượng nhỏ do đó dễ dàng tương tác với các nguyên tử trong thực phẩm và gây ra phản ứng rất nhanh trên các phân tử hoặc vi sinh vật. `,
         midTitle:`Ưu điểm của phương pháp chiếu xạ bằng chùm tia electron`,
         desc2:[
@@ -782,7 +782,7 @@ export const foodIrradiationSystem = [
       {
         title: 'Hệ thống máy chiếu xạ Bremsstrahlung (X-ray) sử dụng tia X',
         eventKey: "x-ray",
-        imgSrc: 'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680634970/chieuxaImgs/chieu-xa-system2_t4jnwp.png',
+        imgSrc: 'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680704180/chieuxaImgs/X-Ray_m29sgf.png',
         desc: `Công nghệ chiếu xạ bằng tia X là một phương pháp được phát triển dựa trên công nghệ chiếu xạ bằng chùm tia điện tử. Electron được tạo ra trong thiết bị có năng lượng từ 5 đến 7,5 MeV. Các electron tương tác với tấm tantalum tạo ra Tia X - Bremsstrahlung (bức xạ hãm).`,
         midTitle:`Ưu điểm của công nghệ chiếu xạ bằng tia X`,
         desc2:[
