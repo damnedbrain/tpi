@@ -90,7 +90,7 @@ export const headerMenu = [
       {
         title: `Đăng nhập`,
         status: '',
-        link: RoutePages.LOGISTIC_HUB,
+        link: RoutePages.LOGIN,
       }, // new
 
       // { title: 'Mục tiêu phát triển', status: '', link: RoutePages.GOALS },

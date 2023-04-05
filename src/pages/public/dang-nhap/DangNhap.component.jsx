@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from './VanChuyen.module.scss';
+import styles from './DangNhap.module.scss';
 import Image from 'next/image';
 
 import comingSoon from '@assets/van-chuyen/coming_soon.png';
 import comingSoonBG from '@assets/van-chuyen/coming_soon_bg.png';
 import comingSoonText from '@assets/van-chuyen/coming_soon_text.png';
 
-const VanChuyen = () => {
+const DangNhap = () => {
   return (
     <>
       <div className={styles['container']}>
@@ -36,4 +36,4 @@ const VanChuyen = () => {
     </>
   );
 };
-export default VanChuyen;
+export default DangNhap;

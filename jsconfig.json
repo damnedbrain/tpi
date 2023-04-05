@@ -30,7 +30,6 @@
     "next-env.d.js",
     "**/*.js",
     "**/*.jsx",
-    "src/pages/public/van-chuyen/VanChuyen.component.jsx"
   ],
   "exclude": ["node_modules"]
 }

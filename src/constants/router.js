@@ -7,6 +7,7 @@ export const RoutePages = {
   CUSTOMER_AND_PARTNER: '/customer-partner', //new
   MARKET: '/thi-truong', //new
   CONTACT: '/contact', //new
+  LOGIN: '/dang-nhap', //new
 
   GOALS: '/goals',
   SUPPORT: '/support',
