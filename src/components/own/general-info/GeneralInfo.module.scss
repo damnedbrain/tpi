@@ -1,0 +1,53 @@
+@import '/styles/main';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  opacity: 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  &.active-anim {
+    @include anim-opacity(0.1s, 0s);
+
+    & > :nth-child(1) {
+      @include anim-move-top(50px, 1.2s);
+    }
+    & > :nth-child(2) {
+      @include anim-move-right(-50px, 1.2s);
+    }
+  }
+
+  .title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 60px;
+    color: $Dark-Green-100;
+    margin: 16px 0;
+    @include setting-font('Josefin Sans', normal, 400, 32px, 120%);
+  }
+  .desc {
+    color: $text-color;
+    //margin-right: 20px;
+    width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    @include setting-font('Josefin Sans', normal, 500, 14px, 200%);
+    display: inline-flex;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: pre-line;
+    @include responsive-size(screen-m) {
+      margin-right: 0;
+    }
+  }
+}

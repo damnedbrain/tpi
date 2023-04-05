@@ -8,6 +8,7 @@ import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 import { breadcrumb } from '@constants/language-option';
 import { VideoDescTitle } from 'components/own/video-desc-title';
 import { IrrdiationAccordion } from './irradiation-accordion';
+import { ChieuXaTab } from './chieu-xa-tab';
 
 
 const ChieuXa = () => {
@@ -19,8 +20,9 @@ const ChieuXa = () => {
       <div className={styles['container']}>
         <Breadcrumb data={breadcrumb.foodIrradiation} />
         {/*<VideoTop />*/}
-        <IrrdiationAccordion />
-        <ChieuXaDetail />
+        {/*<IrrdiationAccordion />*/}
+        <ChieuXaTab />
+        {/*<ChieuXaDetail />*/}
         <ProductOfIrradiation />
         {/*<MethodIrradiation />*/}
         {/*

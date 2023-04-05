@@ -1,0 +1,166 @@
+@import '/styles/main';
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  max-width: 960px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin-top: 40px;
+  opacity: 0;
+
+  &.active-anim {
+    @include anim-opacity(0.1s, 0s);
+    & > :nth-child(2) {
+      @include anim-move-right(-50px, 1.2s);
+    }
+    & > :nth-child(5) {
+      @for $i from 1 through 3 {
+        & > :nth-child(#{$i}) {
+          @include anim-move-revert-circle(-30px, 1s, 0.2s * $i);
+          & > :last-child {
+            @include anim-move-revert-circle(-30px, 1s, 0.2s * $i);
+          }
+        }
+      }
+    }
+  }
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 482px;
+    width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    @include responsive-size(screen-xs) {
+      padding: 0 10px;
+    }
+  }
+  .desc {
+    text-align: center;
+    width: 100%;
+    min-height: 32px;
+    font-weight: 500;
+    line-height: 200%;
+    margin: 32px 0;
+  }
+  .concludedesc {
+    text-align: left;
+    width: 100%;
+    min-height: 32px;
+    font-weight: 500;
+    line-height: 200%;
+    margin: 32px 0;
+    @include responsive-size(screen-m) {
+      padding: 0 6px;
+    }
+  }
+  .sub-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 1170px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    @include responsive-size(screen-m) {
+      flex-direction: column;
+      align-items: center;
+    }
+    .sub-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      max-width: 960px;
+      height: -webkit-max-content;
+      height: -moz-max-content;
+      height: max-content;
+      margin-right: 10px;
+      @include responsive-size(screen-m) {
+        max-width: none;
+        margin-right: auto;
+        margin-bottom: 16px;
+      }
+      &__image {
+        width: 100%;
+        height: 100%;
+        max-width: 383px;
+        margin-bottom: 24px;
+        @include responsive-size(screen-m) {
+          margin-bottom: 16px;
+        }
+      }
+      &__title {
+        //max-width: 482px;
+        text-align: center;
+        width: 100%;
+        height: -webkit-max-content;
+        height: -moz-max-content;
+        height: max-content;
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: 500;
+        color: darkgreen;
+        @include responsive-size(screen-xs) {
+          padding: 0 10px;
+        }
+      }
+      &__desc {
+        text-align:left;
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        font-weight: 500;
+        line-height: 200%;
+        color: $Black-80;
+        padding: 0 40px;
+        @include responsive-size(screen-l) {
+          padding: 0 20px;
+        }
+        @include responsive-size(screen-m) {
+          padding: 0 10px;
+        }
+      }
+
+      &__desc2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content:space-between;
+        margin: auto;
+        text-align:left;
+        width: 100%;
+        max-width: 840px;
+        height: 100%;
+        //display: -webkit-box;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        font-weight: 500;
+        line-height: 200%;
+        color: $Black-80;
+        padding: 0 40px;
+        @include responsive-size(screen-l) {
+          padding: 0 20px;
+        }
+        @include responsive-size(screen-m) {
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}
