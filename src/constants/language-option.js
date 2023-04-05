@@ -754,27 +754,73 @@ export const foodIrradiationSystem = [
     title: 'Chiếu xạ',
     desc: `TPG là một trong những đơn vị tiên phong ứng dụng cả 3 công nghệ chiếu xạ`,
     subDesc: [
-      { desc: `Hệ thống chiếu xạ bằng nguồn Cobalt 60 sử dụng tia gamma.` },
       {
-        desc: `Hệ thống máy chiếu xạ bằng chùm tia điện tử (E-Beam) sử dụng chùm electron.`,
+        title: 'Hệ thống máy chiếu xạ bằng nguồn Cobalt-60 sử dụng tia gamma', 
+        imgSrc: 'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680634971/chieuxaImgs/chieu-xa-system1_byvych.png',
+        desc: `Phương pháp chiếu xạ bằng tia gamma sử dụng bức xạ tạo ra bởi sự phân rã của đồng vị phóng xạ Cobalt-60. Những chất này phát ra các photon có năng lượng cao (1,17MeV và 1,33MeV), có khả năng xuyên thấu vào thực phẩm đến độ sâu vài chục cm, vậy nên đặc biệt thích hợp để xử lý các sản phẩm có mật độ cao. Quá trình chiếu xạ gamma được ứng dụng để khử trùng, xử lý hiệu quả nhiều loại sản phẩm khác nhau: thiết bị y tế, dược phẩm, mỹ phẩm, thực phẩm và thiết bị gia dụng…
+        Ưu điểm của phương pháp chiếu xạ bằng tia gamma 
+        - Phương pháp thích hợp và an toàn để chiếu xạ hầu hết các loại thực phẩm
+        - Có khả năng xuyên thấu rất cao (khả năng ion hóa mạnh trong môi trường vật chất). 
+        - Thâm nhập tốt vào nhiều loại vật liệu, sản phẩm, bao bì, giúp xử lý hiệu quả các sản phẩm dày, mật độ cao và các gói hàng có tỷ trọn lớn.`},
+      {
+        title: 'Hệ thống máy chiếu xạ bằng chùm tia điện tử (E-Beam) sử dụng chùm electron',
+        imgSrc: 'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680634970/chieuxaImgs/chieu-xa-system2_t4jnwp.png',
+        desc: `Quá trình chiếu xạ bằng công nghệ E-beam sử dụng bức xạ ion hoá là electron năng lượng cao. Các electron được tạo ra bởi electron gun, được gia tốc bởi sóng cao tần qua cấu trúc cộng hưởng sử dụng nguồn điện. Electron có điện tích âm, khối lượng nhỏ do đó dễ dàng tương tác với các nguyên tử trong thực phẩm và gây ra phản ứng rất nhanh trên các phân tử hoặc vi sinh vật. 
+        Ưu điểm của phương pháp chiếu xạ bằng chùm tia electron 
+        - Tốc độ xử lý nhanh chóng và hiệu quả, tối ưu hóa thời gian chiếu xạ 
+        - Có khả năng đáp ứng yêu cầu chiếu xạ sản lượng lớn
+        - An toàn, không phát xạ, không còn dư lượng hóa chất trên các sản phẩm
+        - Sử dụng nguồn năng lượng điện tử an toàn và thân thiện với môi trường`,
       },
-      { desc: `Hệ thống máy chiếu xạ Bremsstrahlung (X-ray) sử dụng tia X.` },
+      {
+        title: 'Hệ thống máy chiếu xạ Bremsstrahlung (X-ray) sử dụng tia X', 
+        imgSrc: 'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680634970/chieuxaImgs/chieu-xa-system2_t4jnwp.png',
+        desc: `Công nghệ chiếu xạ bằng tia X là một phương pháp được phát triển dựa trên công nghệ chiếu xạ bằng chùm tia điện tử. Electron được tạo ra trong thiết bị có năng lượng từ 5 đến 7,5 MeV. Các electron tương tác với tấm tantalum tạo ra Tia X - Bremsstrahlung (bức xạ hãm).
+        Ưu điểm của công nghệ chiếu xạ bằng tia X
+        - An toàn và hiệu quả cao trong việc xử lý nhiều loại sản phẩm với mật độ khác nhau. 
+        - Cải thiện khả năng thâm nhập của năng lượng photon, tăng khả năng xuyên thấu qua thực phẩm (tương tự như gamma) 
+        - Quá trình xử lý nhanh chóng và đạt chuẩn, thuận lợi cho quy mô từ thùng carton.
+        - Tính linh hoạt cao, có khả năng xử lý các sản phẩm khác nhau với các yêu cầu về liều lượng chiếu xạ trong cùng một chu kỳ chiếu xạ.`, 
+      },
     ],
     concludeDesc: `Đây là 3 công nghệ chiếu xạ tiên tiến nhất hiện nay nhằm đẩy nhanh tiến độ xử lý hàng hóa; nâng cao chất lượng dịch vụ, đáp ứng tối đa nhu cầu khách hàng; giảm thời gian chờ đợi và tiết kiệm chi phí tối ưu nhất. Đặc biệt, TPG là đơn vị tiên phong duy nhất hiện nay đã sản xuất, lắp đặt thành công phần mềm điều khiển, dây chuyền cơ khí vận hành bằng nguồn Cobalt 60 phát triển bởi đội ngũ kỹ thuật công ty 100% người Việt Nam và được APHIS công nhận đủ điều kiện chiếu xạ trái cây tươi cho thị trường Hoa Kỳ. Với sự kết hợp của cả ba công nghệ, cùng việc không ngừng mở rộng nghiên cứu, TPG có thể ứng dụng đa dạng hóa vào nhiều mặt hàng chiếu xạ và tiếp tục khẳng định vị thế trên thị trường. `,
   },
   {
     locale: 'en-US',
-    title: 'Irradiation',
-    desc: `TPI - The only factory in Vietnam that fully applies 3 irradiation technologies:`,
+    title: 'Chiếu xạ',
+    desc: `TPG là một trong những đơn vị tiên phong ứng dụng cả 3 công nghệ chiếu xạ`,
     subDesc: [
-      { desc: `CoBalt 60 irradiation line using gamma rays.` },
       {
-        desc: `An electron beam irradiator (E-eam) system uses an electron beam.`,
+        title: 'Hệ thống máy chiếu xạ bằng nguồn Cobalt-60 sử dụng tia gamma', 
+        imgSrc: 'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680634971/chieuxaImgs/chieu-xa-system1_byvych.png',
+        desc: `Phương pháp chiếu xạ bằng tia gamma sử dụng bức xạ tạo ra bởi sự phân rã của đồng vị phóng xạ Cobalt-60. Những chất này phát ra các photon có năng lượng cao (1,17MeV và 1,33MeV), có khả năng xuyên thấu vào thực phẩm đến độ sâu vài chục cm, vậy nên đặc biệt thích hợp để xử lý các sản phẩm có mật độ cao. Quá trình chiếu xạ gamma được ứng dụng để khử trùng, xử lý hiệu quả nhiều loại sản phẩm khác nhau: thiết bị y tế, dược phẩm, mỹ phẩm, thực phẩm và thiết bị gia dụng…
+        Ưu điểm của phương pháp chiếu xạ bằng tia gamma 
+        - Phương pháp thích hợp và an toàn để chiếu xạ hầu hết các loại thực phẩm
+        - Có khả năng xuyên thấu rất cao (khả năng ion hóa mạnh trong môi trường vật chất). 
+        - Thâm nhập tốt vào nhiều loại vật liệu, sản phẩm, bao bì, giúp xử lý hiệu quả các sản phẩm dày, mật độ cao và các gói hàng có tỷ trọn lớn.`},
+      {
+        title: 'Hệ thống máy chiếu xạ bằng chùm tia điện tử (E-Beam) sử dụng chùm electron',
+        imgSrc: 'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680634970/chieuxaImgs/chieu-xa-system2_t4jnwp.png',
+        desc: `Quá trình chiếu xạ bằng công nghệ E-beam sử dụng bức xạ ion hoá là electron năng lượng cao. Các electron được tạo ra bởi electron gun, được gia tốc bởi sóng cao tần qua cấu trúc cộng hưởng sử dụng nguồn điện. Electron có điện tích âm, khối lượng nhỏ do đó dễ dàng tương tác với các nguyên tử trong thực phẩm và gây ra phản ứng rất nhanh trên các phân tử hoặc vi sinh vật. 
+        Ưu điểm của phương pháp chiếu xạ bằng chùm tia electron 
+        - Tốc độ xử lý nhanh chóng và hiệu quả, tối ưu hóa thời gian chiếu xạ 
+        - Có khả năng đáp ứng yêu cầu chiếu xạ sản lượng lớn
+        - An toàn, không phát xạ, không còn dư lượng hóa chất trên các sản phẩm
+        - Sử dụng nguồn năng lượng điện tử an toàn và thân thiện với môi trường`,
       },
-      { desc: `The Bremsstrahlung (X-ray) irradiator system uses X-rays.` },
+      {
+        title: 'Hệ thống máy chiếu xạ Bremsstrahlung (X-ray) sử dụng tia X', 
+        imgSrc: 'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680634970/chieuxaImgs/chieu-xa-system2_t4jnwp.png',
+        desc: `Công nghệ chiếu xạ bằng tia X là một phương pháp được phát triển dựa trên công nghệ chiếu xạ bằng chùm tia điện tử. Electron được tạo ra trong thiết bị có năng lượng từ 5 đến 7,5 MeV. Các electron tương tác với tấm tantalum tạo ra Tia X - Bremsstrahlung (bức xạ hãm).
+        Ưu điểm của công nghệ chiếu xạ bằng tia X
+        - An toàn và hiệu quả cao trong việc xử lý nhiều loại sản phẩm với mật độ khác nhau. 
+        - Cải thiện khả năng thâm nhập của năng lượng photon, tăng khả năng xuyên thấu qua thực phẩm (tương tự như gamma) 
+        - Quá trình xử lý nhanh chóng và đạt chuẩn, thuận lợi cho quy mô từ thùng carton.
+        - Tính linh hoạt cao, có khả năng xử lý các sản phẩm khác nhau với các yêu cầu về liều lượng chiếu xạ trong cùng một chu kỳ chiếu xạ.`, 
+      },
     ],
-    concludeDesc: `Lorem ipsum`,
-  },
+    concludeDesc: `Đây là 3 công nghệ chiếu xạ tiên tiến nhất hiện nay nhằm đẩy nhanh tiến độ xử lý hàng hóa; nâng cao chất lượng dịch vụ, đáp ứng tối đa nhu cầu khách hàng; giảm thời gian chờ đợi và tiết kiệm chi phí tối ưu nhất. Đặc biệt, TPG là đơn vị tiên phong duy nhất hiện nay đã sản xuất, lắp đặt thành công phần mềm điều khiển, dây chuyền cơ khí vận hành bằng nguồn Cobalt 60 phát triển bởi đội ngũ kỹ thuật công ty 100% người Việt Nam và được APHIS công nhận đủ điều kiện chiếu xạ trái cây tươi cho thị trường Hoa Kỳ. Với sự kết hợp của cả ba công nghệ, cùng việc không ngừng mở rộng nghiên cứu, TPG có thể ứng dụng đa dạng hóa vào nhiều mặt hàng chiếu xạ và tiếp tục khẳng định vị thế trên thị trường. `,
+  }
 ];
 
 export const productOfIrradiation = [

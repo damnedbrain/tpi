@@ -7,6 +7,8 @@ import { logisticsAndSocial } from '@constants/language-option';
 import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 import { breadcrumb } from '@constants/language-option';
 import { VideoDescTitle } from 'components/own/video-desc-title';
+import { IrrdiationAccordion } from './irradiation-accordion';
+
 
 const ChieuXa = () => {
   const refLang = useRef();
@@ -17,7 +19,7 @@ const ChieuXa = () => {
       <div className={styles['container']}>
         <Breadcrumb data={breadcrumb.foodIrradiation} />
         {/*<VideoTop />*/}
-
+        <IrrdiationAccordion />
         <ChieuXaDetail />
         <ProductOfIrradiation />
         {/*<MethodIrradiation />*/}

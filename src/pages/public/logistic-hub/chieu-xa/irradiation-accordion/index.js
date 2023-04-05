@@ -1,0 +1,1 @@
+export { default as IrrdiationAccordion } from './IrradiationAccordion.component';
