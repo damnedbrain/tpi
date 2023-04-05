@@ -5,6 +5,7 @@ import { NumberTitleDesc } from 'components/own/number-title-desc';
 import { useObserverItem } from 'components/hook/useObserverItem';
 import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 import { coldStorageTopContent } from '@constants/language-option';
+import { NumberAndDescMap } from 'components/own/number-and-desc-map';
 
 const ColdStorageTopContent = () => {
   const refContent = useRef(null);
@@ -23,7 +24,10 @@ const ColdStorageTopContent = () => {
             {refLang.current?.title}
           </div>*/}
           <div className={styles['desc-wrapper__desc']}>
-            {refLang.current?.desc}
+            {refLang.current?.desc?.map((item, index) => (
+              <NumberAndDescMap key={index} number={index + 1} desc={item.descc} />
+
+            ))}
           </div>
           <div className={styles['desc-wrapper__title']}>Ưu thế vượt trội</div>
         </div>

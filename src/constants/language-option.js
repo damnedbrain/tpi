@@ -1023,12 +1023,13 @@ export const coldStorageTopContent = [
   {
     locale: 'vi',
     title: 'Kho lạnh lưu trữ',
-    desc: `Quy mô: 1.0 ha
-    Tổng vị trí: 12.000 pallet
-    Khả năng lưu trữ tối đa lên đến 12.000 tấn
-    Thời gian hoạt động: 24/7 
-    Nhiệt độ lưu trữ: -18 độ C (+/-3 độ C), có kho hạ độ: -35 độ C
-    `,
+    desc: [
+      {descc:`Quy mô: 1.0 ha`},
+      {descc:`Tổng vị trí: 12.000 pallet`},
+      {descc:`Khả năng lưu trữ tối đa lên đến 12.000 tấn`},
+      {descc:`Thời gian hoạt động: 24/7 `},
+      {descc:`Nhiệt độ lưu trữ: -18 độ C (+/-3 độ C), có kho hạ độ: -35 độ C`},
+    ],
     sub: [
       {
         title: `Vị trí cửa ngõ`,

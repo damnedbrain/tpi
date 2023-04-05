@@ -49,7 +49,7 @@
     justify-content: center;
     max-width: 383px;
     max-height: 64px;
-    width: 100%;
+    width: max-content;
     height: 100%;
     &__title {
       color: $Dark-Green-100;
