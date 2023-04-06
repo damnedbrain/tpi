@@ -111,6 +111,28 @@
         font-size: 18px;
         font-weight: 500;
         color: darkgreen;
+        &active {
+          color:purple;
+        }
+        @include responsive-size(screen-xs) {
+          padding: 0 10px;
+        }
+      }
+
+      &__titlelink {
+        //max-width: 482px;
+        text-align: center;
+        width: 100%;
+        height: -webkit-max-content;
+        height: -moz-max-content;
+        height: max-content;
+        margin-top: 4px;
+        font-size: 16px;
+        font-weight: 500;
+        color: darkgreen;
+        :active {
+          color: purple;
+        }
         @include responsive-size(screen-xs) {
           padding: 0 10px;
         }

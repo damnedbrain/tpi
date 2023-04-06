@@ -34,7 +34,10 @@ const ChieuXaTab=() => {
                 justify
             >
                 {refLang.current?.subDesc.map(({ title, eventKey, desc, imgSrc, midTitle, desc2 }) => 
-                    <Tab eventKey={eventKey} title={title} className='mb-3'>
+                    <Tab 
+                        eventKey={eventKey} 
+                        title={<div className={styles['sub-content__titlelink']}>{title}</div>} 
+                        className='mb-3'>
                         <div className={styles['sub-content']}>
                             <div className={styles['sub-content__image']}>
                                 <Image
