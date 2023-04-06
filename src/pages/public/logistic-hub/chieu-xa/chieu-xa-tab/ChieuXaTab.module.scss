@@ -1,5 +1,13 @@
 @import '/styles/main';
 
+.tabstyle {
+  //border-color: $Purple-100;
+  --bs-nav-tabs-border-width: 0.125rem;
+  --bs-nav-tabs-border-color : #2c1c5a;
+  --bs-nav-tabs-link-active-border-color: #2c1c5a #2c1c5a #fff;
+  --bs-nav-tabs-link-active-color: #fff;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -96,6 +104,7 @@
         height: 100%;
         max-width: 383px;
         margin-bottom: 24px;
+        margin-top: 12px;
         @include responsive-size(screen-m) {
           margin-bottom: 16px;
         }
@@ -130,9 +139,6 @@
         font-size: 16px;
         font-weight: 500;
         color: darkgreen;
-        :active {
-          color: purple;
-        }
         @include responsive-size(screen-xs) {
           padding: 0 10px;
         }
