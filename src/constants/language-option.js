@@ -769,7 +769,7 @@ export const foodIrradiationSystem = [
       {
         title: 'Hệ thống máy chiếu xạ E-Beam sử dụng chùm Electron',
         eventKey: "e-beam",
-        imgSrc: 'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680704172/chieuxaImgs/ebeam_airgqs.jpg',
+        imgSrc: 'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680802374/chieuxaImgs/TI_Tech_EBeam_Header_rdujvo.webp',
         desc: `Quá trình chiếu xạ bằng công nghệ E-Beam sử dụng bức xạ ion hoá là Electron năng lượng cao. Các Electron được tạo ra bởi Electron Gun, được gia tốc bởi sóng cao tần qua cấu trúc cộng hưởng sử dụng nguồn điện. Electron có điện tích âm, khối lượng nhỏ do đó dễ dàng tương tác với các nguyên tử trong thực phẩm và gây ra phản ứng rất nhanh trên các phân tử hoặc vi sinh vật.`,
         midTitle:`Ưu điểm của phương pháp chiếu xạ bằng chùm tia Electron`,
         desc2:[
