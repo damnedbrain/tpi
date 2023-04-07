@@ -14,7 +14,7 @@ export default function Home({ news, images }) {
   return (
     <>
       
-      <BannerPromo news={news} />
+      {/*<BannerPromo news={news} />*/}
       <BestServices />
       <LocationVideo />
       <News news={news} />
