@@ -108,3 +108,7 @@ select option:not(:selected) {
   background-color: red !important;
   color: #fff;
 }
+
+.nav-link.active {
+  border-bottom: #fff !important;
+}

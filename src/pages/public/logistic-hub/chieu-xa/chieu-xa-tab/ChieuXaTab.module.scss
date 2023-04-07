@@ -3,9 +3,22 @@
 .tabstyle {
   //border-color: $Purple-100;
   --bs-nav-tabs-border-width: 0.125rem;
-  --bs-nav-tabs-border-color : #2c1c5a;
+  // --bs-nav-tabs-border-color: #2c1c5a;
+  --bs-nav-tabs-border-color: #fff;
+
   --bs-nav-tabs-link-active-border-color: #2c1c5a #2c1c5a #fff;
   --bs-nav-tabs-link-active-color: #fff;
+  height: max-content;
+  & > li {
+    height: auto;
+    & > button {
+      height: 100%;
+      border-bottom: 1px solid #2c1c5a !important;
+      @media only screen and (max-width: 394px) {
+        border-bottom: #fff !important;
+      }
+    }
+  }
 }
 
 .container {
@@ -121,7 +134,7 @@
         font-weight: 500;
         color: darkgreen;
         &active {
-          color:purple;
+          color: purple;
         }
         @include responsive-size(screen-xs) {
           padding: 0 10px;
@@ -144,7 +157,7 @@
         }
       }
       &__desc {
-        text-align:left;
+        text-align: left;
         width: 100%;
         height: 100%;
         display: -webkit-box;
@@ -164,20 +177,24 @@
       }
 
       &__desc2 {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content:space-between;
-        margin: auto;
-        text-align:left;
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr 8px 1fr 8px 1fr 8px 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 8px;
         width: 100%;
-        max-width: 840px;
         height: 100%;
-        //display: -webkit-box;
-        -o-text-overflow: ellipsis;
-        text-overflow: ellipsis;
-        -webkit-box-orient: vertical;
+        grid-auto-flow: dense;
+        grid-gap: 8px;
+        overflow: visible;
+        @include responsive-size(screen-m) {
+          -ms-grid-columns: 1fr 8px 1fr 8px 1fr;
+          grid-template-columns: repeat(2, 1fr);
+        }
+        @include responsive-size(screen-xs) {
+          -ms-grid-columns: 1fr 8px 1fr;
+          grid-template-columns: repeat(1, 1fr);
+        }
         font-weight: 500;
         line-height: 200%;
         color: $Black-80;
