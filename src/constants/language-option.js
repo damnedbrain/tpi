@@ -128,7 +128,7 @@ export const headerMenu = [
           {
             title: 'Irradiation',
             status: 'sub',
-            link: RoutePages.FOOD_IRRADIATION,
+            link: RoutePages.CHIEU_XA,
           },
           {
             title: 'Cold Storage',
@@ -756,41 +756,62 @@ export const foodIrradiationSystem = [
     subDesc: [
       {
         title: 'Hệ thống máy chiếu xạ bằng nguồn Cobalt-60 sử dụng tia gamma',
-        eventKey: "cobalt-60",
-        imgSrc: 'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680704158/chieuxaImgs/Cobalt_60_btrxzy.png',
+        eventKey: 'cobalt-60',
+        imgSrc:
+          'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680704158/chieuxaImgs/Cobalt_60_btrxzy.png',
         desc: `Phương pháp chiếu xạ bằng tia Gamma sử dụng bức xạ tạo ra bởi sự phân rã của đồng vị phóng xạ Cobalt-60. Những chất này phát ra các photon có năng lượng cao (1,17MeV và 1,33MeV), có khả năng xuyên thấu vào thực phẩm đến độ sâu vài chục cm, vậy nên đặc biệt thích hợp để xử lý các sản phẩm có tỷ trọng cao. Quá trình chiếu xạ Gamma được ứng dụng để khử trùng, xử lý hiệu quả nhiều loại sản phẩm khác nhau như: thiết bị y tế, dược phẩm, mỹ phẩm, thực phẩm và thiết bị gia dụng…`,
-        midTitle:`Ưu điểm của phương pháp chiếu xạ bằng tia gamma`,
-        desc2:[
-          {descc:`Phương pháp thích hợp và an toàn để chiếu xạ hầu hết các loại thực phẩm`},
-          {descc:`Có khả năng xuyên thấu rất cao (khả năng ion hóa mạnh trong môi trường vật chất)`},
-          {descc:`Thâm nhập tốt vào nhiều loại vật liệu, sản phẩm, bao bì và giúp xử lý hiệu quả các gói hàng có tỷ trọng cao`},
-          ],
+        midTitle: `Ưu điểm của phương pháp chiếu xạ bằng tia gamma`,
+        desc2: [
+          {
+            descc: `Phương pháp thích hợp và an toàn để chiếu xạ hầu hết các loại thực phẩm`,
+          },
+          {
+            descc: `Có khả năng xuyên thấu rất cao (khả năng ion hóa mạnh trong môi trường vật chất)`,
+          },
+          {
+            descc: `Thâm nhập tốt vào nhiều loại vật liệu, sản phẩm, bao bì và giúp xử lý hiệu quả các gói hàng có tỷ trọng cao`,
+          },
+        ],
       },
       {
         title: 'Hệ thống máy chiếu xạ E-Beam sử dụng chùm Electron',
-        eventKey: "e-beam",
-        imgSrc: 'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680802374/chieuxaImgs/TI_Tech_EBeam_Header_rdujvo.webp',
+        eventKey: 'e-beam',
+        imgSrc:
+          'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680802374/chieuxaImgs/TI_Tech_EBeam_Header_rdujvo.webp',
         desc: `Quá trình chiếu xạ bằng công nghệ E-Beam sử dụng bức xạ ion hoá là Electron năng lượng cao. Các Electron được tạo ra bởi Electron Gun, được gia tốc bởi sóng cao tần qua cấu trúc cộng hưởng sử dụng nguồn điện. Electron có điện tích âm, khối lượng nhỏ do đó dễ dàng tương tác với các nguyên tử trong thực phẩm và gây ra phản ứng rất nhanh trên các phân tử hoặc vi sinh vật.`,
-        midTitle:`Ưu điểm của phương pháp chiếu xạ bằng chùm tia Electron`,
-        desc2:[
-          {descc:`Tốc độ xử lý nhanh chóng và hiệu quả, tối ưu hóa thời gian chiếu xạ`},
-          {descc:`Có khả năng đáp ứng yêu cầu chiếu xạ sản lượng lớn`},
-          {descc:`An toàn, không để lại chất phóng xạ tồn dư trên các sản phẩm`},
-          {descc:`Sử dụng nguồn năng lượng điện tử an toàn và thân thiện với môi trường`},
-          ],
+        midTitle: `Ưu điểm của phương pháp chiếu xạ bằng chùm tia Electron`,
+        desc2: [
+          {
+            descc: `Tốc độ xử lý nhanh chóng và hiệu quả, tối ưu hóa thời gian chiếu xạ`,
+          },
+          { descc: `Có khả năng đáp ứng yêu cầu chiếu xạ sản lượng lớn` },
+          {
+            descc: `An toàn, không để lại chất phóng xạ tồn dư trên các sản phẩm`,
+          },
+          {
+            descc: `Sử dụng nguồn năng lượng điện tử an toàn và thân thiện với môi trường`,
+          },
+        ],
       },
       {
         title: 'Hệ thống máy chiếu xạ Bremsstrahlung (X-ray) sử dụng tia X',
-        eventKey: "x-ray",
-        imgSrc: 'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680704180/chieuxaImgs/X-Ray_m29sgf.png',
+        eventKey: 'x-ray',
+        imgSrc:
+          'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680704180/chieuxaImgs/X-Ray_m29sgf.png',
         desc: `Công nghệ chiếu xạ bằng tia X là một phương pháp được phát triển dựa trên công nghệ chiếu xạ bằng chùm tia điện tử. Electron được tạo ra trong thiết bị có năng lượng từ 5MeV - 7,5MeV. Các Electron tương tác với tấm Titanium tạo ra Tia X - Bremsstrahlung (bức xạ hãm).`,
-        midTitle:`Ưu điểm của công nghệ chiếu xạ bằng tia X`,
-        desc2:[
-          {descc:`An toàn và hiệu quả cao trong việc xử lý nhiều loại sản phẩm với mật độ khác nhau.`},
-          {descc:`Cải thiện khả năng thâm nhập của năng lượng photon, tăng khả năng xuyên thấu qua thực phẩm (tương tự như Gamma)`},
-          {descc:`Quá trình xử lý nhanh chóng và đạt chuẩn.`},
-          {descc:`Tính linh hoạt cao, có khả năng xử lý các sản phẩm khác nhau với các yêu cầu về liều lượng chiếu xạ trong cùng một chu kỳ chiếu xạ.`},
-          ],
+        midTitle: `Ưu điểm của công nghệ chiếu xạ bằng tia X`,
+        desc2: [
+          {
+            descc: `An toàn và hiệu quả cao trong việc xử lý nhiều loại sản phẩm với mật độ khác nhau.`,
+          },
+          {
+            descc: `Cải thiện khả năng thâm nhập của năng lượng photon, tăng khả năng xuyên thấu qua thực phẩm (tương tự như Gamma)`,
+          },
+          { descc: `Quá trình xử lý nhanh chóng và đạt chuẩn.` },
+          {
+            descc: `Tính linh hoạt cao, có khả năng xử lý các sản phẩm khác nhau với các yêu cầu về liều lượng chiếu xạ trong cùng một chu kỳ chiếu xạ.`,
+          },
+        ],
       },
     ],
     concludeDesc: `Đây là 3 công nghệ chiếu xạ tiên tiến nhất hiện nay nhằm đẩy nhanh tiến độ xử lý hàng hóa; nâng cao chất lượng dịch vụ, đáp ứng tối đa nhu cầu khách hàng; giảm thời gian chờ đợi và tiết kiệm chi phí tối ưu nhất. Đặc biệt, TPG là đơn vị tiên phong duy nhất hiện nay đã sản xuất, lắp đặt thành công phần mềm điều khiển, dây chuyền cơ khí vận hành bằng nguồn Cobalt 60 phát triển bởi đội ngũ kỹ thuật công ty 100% người Việt Nam và được APHIS công nhận đủ điều kiện chiếu xạ trái cây tươi cho thị trường Hoa Kỳ. Với sự kết hợp của cả ba công nghệ, cùng việc không ngừng mở rộng nghiên cứu, TPG có thể ứng dụng đa dạng hóa vào nhiều mặt hàng chiếu xạ và tiếp tục khẳng định vị thế trên thị trường. `,
@@ -802,41 +823,65 @@ export const foodIrradiationSystem = [
     subDesc: [
       {
         title: 'Hệ thống máy chiếu xạ bằng nguồn Cobalt-60 sử dụng tia gamma',
-        eventKey: "cobalt-60",
-        imgSrc: 'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680634971/chieuxaImgs/chieu-xa-system1_byvych.png',
+        eventKey: 'cobalt-60',
+        imgSrc:
+          'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680634971/chieuxaImgs/chieu-xa-system1_byvych.png',
         desc: `Phương pháp chiếu xạ bằng tia gamma sử dụng bức xạ tạo ra bởi sự phân rã của đồng vị phóng xạ Cobalt-60. Những chất này phát ra các photon có năng lượng cao (1,17MeV và 1,33MeV), có khả năng xuyên thấu vào thực phẩm đến độ sâu vài chục cm, vậy nên đặc biệt thích hợp để xử lý các sản phẩm có mật độ cao. Quá trình chiếu xạ gamma được ứng dụng để khử trùng, xử lý hiệu quả nhiều loại sản phẩm khác nhau: thiết bị y tế, dược phẩm, mỹ phẩm, thực phẩm và thiết bị gia dụng…`,
-        midTitle:`Ưu điểm của phương pháp chiếu xạ bằng tia gamma`,
-        desc2:[
-          {descc:`Phương pháp thích hợp và an toàn để chiếu xạ hầu hết các loại thực phẩm`,},
-          {descc:`Có khả năng xuyên thấu rất cao (khả năng ion hóa mạnh trong môi trường vật chất.`,},
-          {descc:`Thâm nhập tốt vào nhiều loại vật liệu, sản phẩm, bao bì, giúp xử lý hiệu quả các sản phẩm dày, mật độ cao và các gói hàng có tỷ trọn lớn.`,},
+        midTitle: `Ưu điểm của phương pháp chiếu xạ bằng tia gamma`,
+        desc2: [
+          {
+            descc: `Phương pháp thích hợp và an toàn để chiếu xạ hầu hết các loại thực phẩm`,
+          },
+          {
+            descc: `Có khả năng xuyên thấu rất cao (khả năng ion hóa mạnh trong môi trường vật chất.`,
+          },
+          {
+            descc: `Thâm nhập tốt vào nhiều loại vật liệu, sản phẩm, bao bì, giúp xử lý hiệu quả các sản phẩm dày, mật độ cao và các gói hàng có tỷ trọn lớn.`,
+          },
         ],
       },
       {
-        title: 'Hệ thống máy chiếu xạ bằng chùm tia điện tử (E-Beam) sử dụng chùm electron',
-        eventKey: "e-beam",
-        imgSrc: 'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680634970/chieuxaImgs/chieu-xa-system2_t4jnwp.png',
+        title:
+          'Hệ thống máy chiếu xạ bằng chùm tia điện tử (E-Beam) sử dụng chùm electron',
+        eventKey: 'e-beam',
+        imgSrc:
+          'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680634970/chieuxaImgs/chieu-xa-system2_t4jnwp.png',
         desc: `Quá trình chiếu xạ bằng công nghệ E-beam sử dụng bức xạ ion hoá là electron năng lượng cao. Các electron được tạo ra bởi electron gun, được gia tốc bởi sóng cao tần qua cấu trúc cộng hưởng sử dụng nguồn điện. Electron có điện tích âm, khối lượng nhỏ do đó dễ dàng tương tác với các nguyên tử trong thực phẩm và gây ra phản ứng rất nhanh trên các phân tử hoặc vi sinh vật. `,
-        midTitle:`Ưu điểm của phương pháp chiếu xạ bằng chùm tia electron`,
-        desc2:[
-          {descc:`Tốc độ xử lý nhanh chóng và hiệu quả, tối ưu hóa thời gian chiếu xạ`,},
-          {descc:`Có khả năng đáp ứng yêu cầu chiếu xạ sản lượng lớn`,},
-          {descc:`An toàn, không phát xạ, không còn dư lượng hóa chất trên các sản phẩm`,},
-          {descc:`Sử dụng nguồn năng lượng điện tử an toàn và thân thiện với môi trường`,},
-          ],
+        midTitle: `Ưu điểm của phương pháp chiếu xạ bằng chùm tia electron`,
+        desc2: [
+          {
+            descc: `Tốc độ xử lý nhanh chóng và hiệu quả, tối ưu hóa thời gian chiếu xạ`,
+          },
+          { descc: `Có khả năng đáp ứng yêu cầu chiếu xạ sản lượng lớn` },
+          {
+            descc: `An toàn, không phát xạ, không còn dư lượng hóa chất trên các sản phẩm`,
+          },
+          {
+            descc: `Sử dụng nguồn năng lượng điện tử an toàn và thân thiện với môi trường`,
+          },
+        ],
       },
       {
         title: 'Hệ thống máy chiếu xạ Bremsstrahlung (X-ray) sử dụng tia X',
-        eventKey: "x-ray",
-        imgSrc: 'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680634970/chieuxaImgs/chieu-xa-system2_t4jnwp.png',
+        eventKey: 'x-ray',
+        imgSrc:
+          'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680634970/chieuxaImgs/chieu-xa-system2_t4jnwp.png',
         desc: `Công nghệ chiếu xạ bằng tia X là một phương pháp được phát triển dựa trên công nghệ chiếu xạ bằng chùm tia điện tử. Electron được tạo ra trong thiết bị có năng lượng từ 5 đến 7,5 MeV. Các electron tương tác với tấm tantalum tạo ra Tia X - Bremsstrahlung (bức xạ hãm).`,
-        midTitle:`Ưu điểm của công nghệ chiếu xạ bằng tia X`,
-        desc2:[
-          {descc:`An toàn và hiệu quả cao trong việc xử lý nhiều loại sản phẩm với mật độ khác nhau.`,},
-          {descc:`Cải thiện khả năng thâm nhập của năng lượng photon, tăng khả năng xuyên thấu qua thực phẩm (tương tự như gamma)`,},
-          {descc:`Quá trình xử lý nhanh chóng và đạt chuẩn, thuận lợi cho quy mô từ thùng carton.`,},
-          {descc:`Tính linh hoạt cao, có khả năng xử lý các sản phẩm khác nhau với các yêu cầu về liều lượng chiếu xạ trong cùng một chu kỳ chiếu xạ.`,},
-          ],
+        midTitle: `Ưu điểm của công nghệ chiếu xạ bằng tia X`,
+        desc2: [
+          {
+            descc: `An toàn và hiệu quả cao trong việc xử lý nhiều loại sản phẩm với mật độ khác nhau.`,
+          },
+          {
+            descc: `Cải thiện khả năng thâm nhập của năng lượng photon, tăng khả năng xuyên thấu qua thực phẩm (tương tự như gamma)`,
+          },
+          {
+            descc: `Quá trình xử lý nhanh chóng và đạt chuẩn, thuận lợi cho quy mô từ thùng carton.`,
+          },
+          {
+            descc: `Tính linh hoạt cao, có khả năng xử lý các sản phẩm khác nhau với các yêu cầu về liều lượng chiếu xạ trong cùng một chu kỳ chiếu xạ.`,
+          },
+        ],
       },
     ],
     concludeDesc: `Đây là 3 công nghệ chiếu xạ tiên tiến nhất hiện nay nhằm đẩy nhanh tiến độ xử lý hàng hóa; nâng cao chất lượng dịch vụ, đáp ứng tối đa nhu cầu khách hàng; giảm thời gian chờ đợi và tiết kiệm chi phí tối ưu nhất. Đặc biệt, TPG là đơn vị tiên phong duy nhất hiện nay đã sản xuất, lắp đặt thành công phần mềm điều khiển, dây chuyền cơ khí vận hành bằng nguồn Cobalt 60 phát triển bởi đội ngũ kỹ thuật công ty 100% người Việt Nam và được APHIS công nhận đủ điều kiện chiếu xạ trái cây tươi cho thị trường Hoa Kỳ. Với sự kết hợp của cả ba công nghệ, cùng việc không ngừng mở rộng nghiên cứu, TPG có thể ứng dụng đa dạng hóa vào nhiều mặt hàng chiếu xạ và tiếp tục khẳng định vị thế trên thị trường. `,
@@ -1024,11 +1069,13 @@ export const coldStorageTopContent = [
     locale: 'vi',
     title: 'Kho lạnh lưu trữ',
     desc: [
-      {descc:`Quy mô: 1.0 ha`},
-      {descc:`Tổng vị trí: 12.000 pallet`},
-      {descc:`Khả năng lưu trữ tối đa lên đến 12.000 tấn`},
-      {descc:`Thời gian hoạt động: 24/7 `},
-      {descc:`Nhiệt độ lưu trữ: -18 độ C (+/-3 độ C), có kho hạ độ: -35 độ C`},
+      { descc: `Quy mô: 1.0 ha` },
+      { descc: `Tổng vị trí: 12.000 pallet` },
+      { descc: `Khả năng lưu trữ tối đa lên đến 12.000 tấn` },
+      { descc: `Thời gian hoạt động: 24/7 ` },
+      {
+        descc: `Nhiệt độ lưu trữ: -18 độ C (+/-3 độ C), có kho hạ độ: -35 độ C`,
+      },
     ],
     sub: [
       {
@@ -1041,7 +1088,7 @@ export const coldStorageTopContent = [
       },
       {
         title: `Hoạt động 24/7`,
-        desc:  `Kho lạnh Toàn Phát hoạt động 24/7, dịch vụ tốc hành, đội ngũ chuyên nghiệp luôn xử lý nhanh gọn các yêu cầu và thắc mắc của khách hàng; đáp ứng tối đa nhu cầu lưu trữ và xuất nhập hàng trong mọi thời điểm cần thiết.`,
+        desc: `Kho lạnh Toàn Phát hoạt động 24/7, dịch vụ tốc hành, đội ngũ chuyên nghiệp luôn xử lý nhanh gọn các yêu cầu và thắc mắc của khách hàng; đáp ứng tối đa nhu cầu lưu trữ và xuất nhập hàng trong mọi thời điểm cần thiết.`,
       },
       {
         title: `Đầu tư công nghệ hiện đại`,
@@ -1068,8 +1115,15 @@ export const coldStorageTopContent = [
   {
     locale: 'en-US',
     title: 'Cold storage',
-    desc: `Cold storage system with a capacity of about 10,000 tons of goods.
-Toan Phat cold storage service brings many values to customers:`,
+    desc: [
+      { descc: `Quy mô: 1.0 ha` },
+      { descc: `Tổng vị trí: 12.000 pallet` },
+      { descc: `Khả năng lưu trữ tối đa lên đến 12.000 tấn` },
+      { descc: `Thời gian hoạt động: 24/7 ` },
+      {
+        descc: `Nhiệt độ lưu trữ: -18 độ C (+/-3 độ C), có kho hạ độ: -35 độ C`,
+      },
+    ],
     sub: [
       {
         title: `Vị trí cửa ngõ`,
@@ -1081,7 +1135,7 @@ Toan Phat cold storage service brings many values to customers:`,
       },
       {
         title: `Hoạt động 24/7`,
-        desc:  `Kho lạnh Toàn Phát hoạt động 24/7, dịch vụ tốc hành, đội ngũ chuyên nghiệp luôn xử lý nhanh gọn các yêu cầu và thắc mắc của khách hàng; đáp ứng tối đa nhu cầu lưu trữ và xuất nhập hàng trong mọi thời điểm cần thiết.`,
+        desc: `Kho lạnh Toàn Phát hoạt động 24/7, dịch vụ tốc hành, đội ngũ chuyên nghiệp luôn xử lý nhanh gọn các yêu cầu và thắc mắc của khách hàng; đáp ứng tối đa nhu cầu lưu trữ và xuất nhập hàng trong mọi thời điểm cần thiết.`,
       },
       {
         title: `Đầu tư công nghệ hiện đại`,
