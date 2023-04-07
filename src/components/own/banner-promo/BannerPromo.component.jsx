@@ -85,7 +85,7 @@ const BannerPromo = ({ news }) => {
         }
     };
   
-  news.unshift(introduceBlock);
+  //news.unshift(introduceBlock);
   return (
     <>
       <div className={styles['container']}>
