@@ -11,7 +11,7 @@
   height: -moz-max-content;
   height: max-content;
   background-color: #292f5f;
-  margin: 200px auto 0;
+  margin:auto;
   color: $White;
   @include responsive-size(screen-m) {
     margin-top: 60px;

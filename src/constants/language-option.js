@@ -210,12 +210,12 @@ export const bestServices = [
     sub: [
       {
         title: 'Chiếu Xạ',
-        desc: ` TPG là một trong những đơn vị tiên phong trên thị trường hiện nay ứng dụng cả 3 công nghệ chiếu xạ: Cobalt 60, E-Beam, X-ray nhằm đẩy nhanh tiến độ xử lý hàng hóa và đảm bảo chất lượng tốt nhất cho Nông - Thuỷ sản. `,
+        desc: ` TPG là một trong những đơn vị tiên phong trên thị trường hiện nay ứng dụng cả 3 công nghệ chiếu xạ: Cobalt-60, E-Beam, X-ray nhằm đẩy nhanh tiến độ xử lý hàng hóa và đảm bảo chất lượng tốt nhất cho Nông - Thuỷ sản. `,
         linksrc: RoutePages.FOOD_IRRADIATION,
       },
       {
         title: 'Kho Lạnh Lưu Trữ',
-        desc: ` TPG xây dựng và đưa vào vận hành Kho Lạnh Toàn Phát với tổng số vị trí 12.000 pallet, tương đương với sức chứa lưu trữ tối đa lên đến 12.000 tấn. Nhiệt độ lưu trữ từ -18 độ C (+/-3 độ C), kho hạ độ: -35 độ C.`,
+        desc: ` TPG xây dựng và đưa vào vận hành Kho Lạnh Toàn Phát với tổng số vị trí 12.000 pallet, tương đương với sức chứa lưu trữ tối đa lên đến 12.000 tấn. Nhiệt độ lưu trữ từ -20 độ C (+/-2 độ C), kho hạ độ: -35 độ C.`,
         linksrc: RoutePages.COLD_STORAGE,
       },
       {
@@ -252,7 +252,7 @@ export const sixWord = [
     sub: [
       {
         title: 'TRỌNG',
-        desc: `Trong mọi hoàn cảnh, TPG luôn đề cao giá trị của sự TÔN TRỌNG: tôn trọng bản thân, đồng nghiệp, tập thể, đối tác và khách hàng, đó là kim chỉ nam cho sự phát triển bền vững và gắn kết những mối quan hệ lâu dài. Hơn thế nữa, sự tự trọng cũng là một điều thiết yếu, từng cá nhân luôn biết coi trọng những phẩm chất tốt đẹp của bản thân, coi trọng danh dự, uy tín của tổ chức, hình thành nên một tập thể chính trực và luôn coi trọng lẽ phải.`,
+        desc: `Trong mọi hoàn cảnh, TPG luôn đề cao giá trị của sự TÔN TRỌNG: tôn trọng bản thân, đồng nghiệp, tập thể, đối tác và khách hàng, đó là kim chỉ nam cho sự phát triển bền vững và gắn kết những mối quan hệ lâu dài. Hơn thế nữa, sự TỰ TRỌNG cũng là một điều thiết yếu, từng cá nhân luôn biết coi trọng những phẩm chất tốt đẹp của bản thân, coi trọng danh dự, uy tín của tổ chức, hình thành nên một tập thể chính trực và luôn coi trọng lẽ phải.`,
       },
       {
         title: 'TÍN',
@@ -260,7 +260,7 @@ export const sixWord = [
       },
       {
         title: 'TÂM',
-        desc: `Với chúng tôi, hành động từ T M là tham chiếu cho sự trường tồn của TPG. Đó là cái tâm, cái đức trong những dịch vụ mang đến cho khách hàng, trong việc đối xử với CBCNV hay cả trong những hành động có ảnh hưởng đến sự phát triển của cộng đồng xã hội. Khi xuất phát từ những giá trị tốt đẹp, chúng tôi tin rằng sẽ tạo được nền tảng vững chắc để vươn đến những tầm cao mới.`,
+        desc: `Với chúng tôi, hành động từ TÂM là tham chiếu cho sự trường tồn của TPG. Đó là cái tâm, cái đức trong những dịch vụ mang đến cho khách hàng, trong việc đối xử với CBCNV hay cả trong những hành động có ảnh hưởng đến sự phát triển của cộng đồng xã hội. Khi xuất phát từ những giá trị tốt đẹp, chúng tôi tin rằng sẽ tạo được nền tảng vững chắc để vươn đến những tầm cao mới.`,
       },
       {
         title: 'TRÍ',
@@ -268,7 +268,7 @@ export const sixWord = [
       },
       {
         title: 'PHÁT',
-        desc: `Chúng tôi luôn tạo động lực và thúc đẩy tinh thần dám nghĩ dám làm của tập thể CBCNV trong công ty, vì sự tiến bộ của mỗi cá nhân, sự nỗ lực để vượt qua những giới hạn và thách thức đó là điều kiện thiết yếu tạo nên một tập thể PHÁT TRIỂN vững mạnh, thành công`,
+        desc: `Chúng tôi luôn tạo động lực và thúc đẩy tinh thần dám nghĩ dám làm của tập thể CBCNV trong công ty. Vì sự tiến bộ của mỗi cá nhân, sự nỗ lực để vượt qua những giới hạn và thách thức đó là điều kiện thiết yếu tạo nên một tập thể PHÁT TRIỂN vững mạnh, thành công.`,
       },
       {
         title: 'ÍCH',
@@ -752,29 +752,36 @@ export const foodIrradiationSystem = [
   {
     locale: 'vi',
     title: 'Chiếu xạ',
-    desc: `TPG là một trong những đơn vị tiên phong ứng dụng cả 3 công nghệ chiếu xạ`,
+    desc: `TPG là một trong những đơn vị tiên phong ứng dụng cả 03 công nghệ chiếu xạ tiên tiến nhất hiện nay: Cobalt-60, E-Beam, X-ray. Mỗi công nghệ có những đặc tính riêng nhưng đều đảm bảo được tính an toàn cho các thực phẩm và hàng hóa khi chiếu xạ. Nhờ ứng dụng công nghệ hiện đại, TPG đẩy nhanh tiến độ xử lý hàng hóa chiếu xạ, nâng cao chất lượng dịch vụ, giảm thời gian chờ đợi và tối ưu hóa chi phí cho khách hàng.
+
+    Đặc biệt, TPG tự hào là đơn vị chiếu xạ đã thành công trong việc sản xuất, lắp đặt dây chuyền cơ khí, phần mềm điều khiển cho hệ thống chiếu xạ Cobalt-60, thực hiện bởi đội ngũ của công ty 100% người Việt Nam được Cục An toàn Bức xạ và Hạt nhân (Bộ Khoa học Công nghệ Việt Nam) cấp phép. Đồng thời được APHIS (USDA) công nhận đủ điều kiện thực hiện chiếu xạ trái cây tươi sang thị trường Hoa Kỳ.
+
+    Với sự kết hợp của cả ba công nghệ, cùng việc không ngừng mở rộng nghiên cứu phát triển, TPG đã ứng dụng đa dạng hóa vào các mặt hàng chiếu xạ, đáp ứng tối đa nhu cầu của khách hàng và khẳng định vị thế vững mạnh trên thị trường.`,
     subDesc: [
       {
-        title: 'Hệ thống máy chiếu xạ bằng nguồn Cobalt-60 sử dụng tia gamma',
+        title: 'Hệ thống máy chiếu xạ bằng nguồn Cobalt-60 sử dụng tia Gamma',
         eventKey: 'cobalt-60',
         imgSrc:
           'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680704158/chieuxaImgs/Cobalt_60_btrxzy.png',
         desc: `Phương pháp chiếu xạ bằng tia Gamma sử dụng bức xạ tạo ra bởi sự phân rã của đồng vị phóng xạ Cobalt-60. Những chất này phát ra các photon có năng lượng cao (1,17MeV và 1,33MeV), có khả năng xuyên thấu vào thực phẩm đến độ sâu vài chục cm, vậy nên đặc biệt thích hợp để xử lý các sản phẩm có tỷ trọng cao. Quá trình chiếu xạ Gamma được ứng dụng để khử trùng, xử lý hiệu quả nhiều loại sản phẩm khác nhau như: thiết bị y tế, dược phẩm, mỹ phẩm, thực phẩm và thiết bị gia dụng…`,
-        midTitle: `Ưu điểm của phương pháp chiếu xạ bằng tia gamma`,
+        midTitle: `Ưu điểm của phương pháp chiếu xạ bằng tia Gamma`,
         desc2: [
           {
-            descc: `Phương pháp thích hợp và an toàn để chiếu xạ hầu hết các loại thực phẩm`,
+            descc: `Phương pháp thích hợp và an toàn để chiếu xạ hầu hết các loại thực phẩm.`,
           },
           {
-            descc: `Có khả năng xuyên thấu rất cao (khả năng ion hóa mạnh trong môi trường vật chất)`,
+            descc: `Đạt được liều lượng đồng đều cao trong xử lý sản phẩm.`,
           },
           {
-            descc: `Thâm nhập tốt vào nhiều loại vật liệu, sản phẩm, bao bì và giúp xử lý hiệu quả các gói hàng có tỷ trọng cao`,
+            descc: `Không phụ thuộc vào hình dáng, nhiệt độ, áp suất, không tiêu hao vật chiếu.`,
+          },
+          {
+            descc: `Có khả năng xuyên thấu tốt, giúp xử lý hiệu quả các gói hàng có tỷ trọng cao.`,
           },
         ],
       },
       {
-        title: 'Hệ thống máy chiếu xạ E-Beam sử dụng chùm Electron',
+        title: 'Hệ thống máy chiếu xạ E-Beam sử dụng chùm tia Electron',
         eventKey: 'e-beam',
         imgSrc:
           'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680802374/chieuxaImgs/TI_Tech_EBeam_Header_rdujvo.webp',
@@ -782,14 +789,14 @@ export const foodIrradiationSystem = [
         midTitle: `Ưu điểm của phương pháp chiếu xạ bằng chùm tia Electron`,
         desc2: [
           {
-            descc: `Tốc độ xử lý nhanh chóng và hiệu quả, tối ưu hóa thời gian chiếu xạ`,
+            descc: `Tốc độ xử lý nhanh chóng và hiệu quả, tối ưu hóa thời gian chiếu xạ.`,
           },
-          { descc: `Có khả năng đáp ứng yêu cầu chiếu xạ sản lượng lớn` },
+          { descc: `Có khả năng đáp ứng yêu cầu chiếu xạ sản lượng lớn.` },
           {
-            descc: `An toàn, không để lại chất phóng xạ tồn dư trên các sản phẩm`,
+            descc: `An toàn, không để lại chất phóng xạ tồn dư trên các sản phẩm sau khi xử lý.`,
           },
           {
-            descc: `Sử dụng nguồn năng lượng điện tử an toàn và thân thiện với môi trường`,
+            descc: `Sử dụng nguồn năng lượng điện tử an toàn và thân thiện với môi trường.`,
           },
         ],
       },
@@ -802,14 +809,14 @@ export const foodIrradiationSystem = [
         midTitle: `Ưu điểm của công nghệ chiếu xạ bằng tia X`,
         desc2: [
           {
-            descc: `An toàn và hiệu quả cao trong việc xử lý nhiều loại sản phẩm với mật độ khác nhau.`,
+            descc: `Quá trình xử lý sản phẩm chiếu xạ nhanh chóng và đạt chuẩn.`,
           },
           {
-            descc: `Cải thiện khả năng thâm nhập của năng lượng photon, tăng khả năng xuyên thấu qua thực phẩm (tương tự như Gamma)`,
+            descc: `An toàn và hiệu quả cao trong việc xử lý nhiều loại sản phẩm với tỷ trọng khác nhau.`,
           },
-          { descc: `Quá trình xử lý nhanh chóng và đạt chuẩn.` },
+          { descc: `Cải thiện khả năng thâm nhập của năng lượng photon, tăng khả năng xuyên thấu qua sản phẩm (tương tự như tia Gamma).` },
           {
-            descc: `Tính linh hoạt cao, có khả năng xử lý các sản phẩm khác nhau với các yêu cầu về liều lượng chiếu xạ trong cùng một chu kỳ chiếu xạ.`,
+            descc: `Tính linh hoạt cao, có khả năng xử lý các sản phẩm khác nhau với các yêu cầu về liều lượng trong cùng một chu kỳ.`,
           },
         ],
       },
@@ -1074,7 +1081,7 @@ export const coldStorageTopContent = [
       { descc: `Khả năng lưu trữ tối đa lên đến 12.000 tấn` },
       { descc: `Thời gian hoạt động: 24/7 ` },
       {
-        descc: `Nhiệt độ lưu trữ: -18 độ C (+/-3 độ C), có kho hạ độ: -35 độ C`,
+        descc: `Nhiệt độ lưu trữ: -20 độ C (+/-2 độ C), có kho hạ độ: -35 độ C`,
       },
     ],
     sub: [
@@ -1165,7 +1172,7 @@ export const LocationMapContent = [
   {
     locale: 'vi',
     title: 'Vị trí cửa ngõ',
-    desc: `Nhà máy Chiếu Xạ Toàn Phát và Kho Lạnh Toàn Phát được đặt tại Khu công nghiệp Phú An Thạnh (Bến Lức - Long An). Đây là vị trí vàng để kết nối đến các tuyến đường huyết mạch quốc gia, các “trục xương sống” trong hạ tầng giao thông của Đồng Bằng Sông Cửu Long. Đồng thời là tâm điểm kết nối đến hệ thống cảng sông, cảng biển và cảng hàng không quốc tế của khu vực. Lợi thế về vị trí sẽ giúp các doanh nghiệp tiết kiệm được chi phí lớn trong lộ trình vận chuyển hàng hoá đến cơ sở chiếu xạ, hay từ kho lạnh lưu trữ đến hệ thống cảng để xuất khẩu Nông - Thuỷ sản ra nước ngoài`,
+    desc: `Nhà máy Chiếu Xạ Toàn Phát và Kho Lạnh Toàn Phát được đặt tại Khu công nghiệp Phú An Thạnh (Bến Lức - Long An). Đây là vị trí vàng để kết nối đến các tuyến đường huyết mạch quốc gia, các “trục xương sống” trong hạ tầng giao thông của Đồng Bằng Sông Cửu Long. Đồng thời là tâm điểm kết nối đến hệ thống cảng sông, cảng biển và cảng hàng không quốc tế của khu vực. Lợi thế về vị trí sẽ giúp các doanh nghiệp tiết kiệm được chi phí lớn trong lộ trình vận chuyển hàng hoá đến cơ sở chiếu xạ, hay từ kho lạnh lưu trữ đến hệ thống cảng để xuất khẩu Nông - Thuỷ sản ra nước ngoài.`,
     sub: [
       {
         desc: `Ngay nút giao Cao tốc Trung Lương - Bến Lức, cách Quốc lộ 1A: 3km`,
@@ -1216,8 +1223,8 @@ Toan Phat cold storage service brings many values to customers:`,
 export const contactAConsultant = [
   {
     locale: 'vi',
-    title: 'Liên hệ tư vấn',
-    desc: `Khách hàng cần tư vấn từ TPG, xin vui lòng điền đầy đủ thông tin sẽ có nhân viên liên hệ hỗ trợ trong vòng 24 giờ.`,
+    title: 'Thông tin liên hệ',
+    desc: ``,
     username: { label: `Họ tên`, desc: `Nhập họ tên vào đây` },
     phone: { label: `Số điện thoại`, desc: `Nhập số điện thoại vào đây` },
     email: { label: `Email`, desc: `Nhập Email vào đây` },

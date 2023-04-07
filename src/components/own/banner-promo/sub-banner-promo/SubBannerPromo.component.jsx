@@ -82,33 +82,6 @@ const SubBannerPromo = ({ news }) => {
             quality={100}
           />
         </div>
-        {/*}
-        <div className={styles['client-wrapper']}>
-          <div className={styles['client']}>
-            <div className={styles['client__title']}>{title}</div>
-            <div className={styles['client__time']}>
-              {convertTime(time, locale)}
-            </div>
-            <div className={styles['client__desc']}>
-              {documentToReactComponents(desc)}
-            </div>
-            <div className={styles['author']}>
-              <div className={styles['author__avatar']}>
-                <Image
-                  src={`https:${_avatar}`}
-                  alt=''
-                  width={_imageAvatarrWidth ? _imageAvatarrWidth : 50}
-                  height={_imageAvatarrHeight ? _imageAvatarrHeight : 50}
-                  layout='responsive'
-                  objectFit='contain'
-                  quality={100}
-                />
-              </div>
-              <div className={styles['author__name']}>{author}</div>
-            </div>
-          </div>
-        </div>
-        */}
       </div>
     </>
   );

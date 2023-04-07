@@ -18,7 +18,7 @@ const subTitle2 = 'Sứ mệnh:';
 const subDesc1 = 'TPG hướng đến mục tiêu trở thành Trung tâm Logistic hiện đại, thông minh với đầy đủ 03 chức năng: Chiếu xạ - Lưu trữ - Vận chuyển tại khu vực Đồng Bằng Sông Cửu Long.';
 const subDesc2 = 'Trở thành đối tác tin cậy của các doanh nghiệp xuất khẩu Nông - Thủy sản Việt Nam ra thị trường thế giới; mang đến những sản phẩm an toàn nhất cho cộng đồng xã hội; không ngừng nghiên cứu phát triển để chào đón, phục vụ các đối tác tiềm năng trong và ngoài nước.';
 
-const desc2 = `Trong quá trình phát triển, đội ngũ CBCNV của TPG luôn hành động và giữ vững 6 giá trị cốt lõi: 
+const desc2 = `Trong quá trình phát triển, đội ngũ Cán bộ công nhân viên (CBCNV) của TPG luôn hành động và giữ vững 6 giá trị cốt lõi:
 “TRỌNG - TÍN - TÂM - TRÍ - PHÁT - ÍCH”.
 Từng mỗi bộ phận đảm nhiệm một vai trò nhất định nhưng luôn hướng về mục tiêu chung và không thể tách rời. Tất cả tạo nên sự kết hợp hài hoà, một tập thể đoàn kết và luôn tuân thủ những giá trị cốt lõi để nâng tầm phát triển mỗi ngày.`;
 

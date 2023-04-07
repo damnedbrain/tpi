@@ -9,7 +9,7 @@ const ReadMoreBtn = ({ readMore }) => {
     <>
       <div className={styles['container']}>
         <Link href={readMore ? readMore : '#'} passHref>
-          <div className={styles['title']}>Read More</div>
+          <div className={styles['title']}>Xem thêm</div>
         </Link>
         <div className={styles['arrow-icon']}>
           <Image

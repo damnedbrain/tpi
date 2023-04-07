@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  max-width: 445px;
+  max-width: 960px;
   width: 100%;
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -66,12 +66,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
-    margin-top: 12px;
+    margin-top: 36px;
     &.active-anim {
       & > :first-child {
         @include anim-move-right(20px, 1s, 0.3s);
@@ -102,7 +102,7 @@
         @include setting-font('Josefin Sans', normal, 700, 20px, 24px);
       }
       &__desc {
-        padding-left: 20px;
+        //padding-left: 20px;
         @include setting-font('Josefin Sans', normal, 300, 16px, 130%);
       }
       &__image {

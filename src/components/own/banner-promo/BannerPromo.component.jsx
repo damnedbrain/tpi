@@ -66,8 +66,26 @@ const BannerPromo = ({ news }) => {
   useObserverItem(refSlider, styles);
   // useChooseLanguage(testimonial, refContent);
   
+  const introduceBlock = 
+    {
+      fields: 
+        {
+          image: 
+            {
+              fields:
+                {
+                  file: 
+                    {
+                      contentType: 'image/jpeg',
+                      url:'//res.cloudinary.com/dy2gaer1o/image/upload/v1680814466/TPG-Website-Homepage/banner/introduce-img_aqll7c.png',
+                    }
+                },
+            },
+            promo: true, 
+        }
+    };
   
-  news?.field?.unshift(introduceBlock);
+  news.unshift(introduceBlock);
   return (
     <>
       <div className={styles['container']}>
@@ -87,4 +105,5 @@ const BannerPromo = ({ news }) => {
     </>
   );
 };
+
 export default React.memo(BannerPromo);

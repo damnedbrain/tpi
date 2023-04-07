@@ -58,8 +58,8 @@ const ContactAConsultant = () => {
     <>
       <div className={styles['container']} ref={refContainer}>
         <div className={styles['title']}>{refLang.current?.title}</div>
-        <div className={styles['desc']}>{refLang.current?.desc}</div>
-        {/*}
+        {/*<div className={styles['desc']}>{refLang.current?.desc}</div>
+        }
         <Form
           noValidate
           validated={validated}
