@@ -102,7 +102,7 @@
     height: max-content;
   }
   @include responsive-size(screen-xs) {
-    height: 70vw;
+    height: calc(500px / 1440px * 100vw);
   }
   & > :first-child {
     & > :first-child {

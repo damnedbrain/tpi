@@ -12,7 +12,7 @@
   width: 100vw;
   height: max-content;
   @include responsive-size(screen-xs) {
-    height: 70vw;
+    height: calc(500px / 1440px * 100vw);
   }
   &:hover {
     & > :first-child {
@@ -59,7 +59,7 @@
       max-width: none;
     }
     @include responsive-size(screen-xs) {
-      height: 70vw;
+      height: calc(500px / 1440px * 100vw);
     }
   }
   .client-wrapper {
