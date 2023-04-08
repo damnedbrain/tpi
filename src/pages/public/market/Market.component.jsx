@@ -15,7 +15,8 @@ const Market = ({ news }) => {
 
         <div className={styles['wrapper']}>
           {news?.map((item, idx) => (
-            <SubMarket key={idx} news={item} />
+            item.sys.id != "28JSczaoxHXsESGHY5EYb4" ? (
+            <SubMarket key={idx} news={item} /> ) : ('')
           ))}
         </div>
       </div>
