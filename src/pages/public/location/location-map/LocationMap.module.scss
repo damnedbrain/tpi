@@ -13,7 +13,7 @@
   height: max-content;
   //argin-top: 12px;
   padding: 0 10px;
-
+  margin-bottom: 40px;
   .title {
     display: flex;
     align-items: center;
@@ -54,24 +54,30 @@
     }
   }
   .sub-content {
-    margin-top: 32px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 8px 1fr 8px 1fr 8px 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 8px;
     width: 100%;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
+    height: 100%;
+    grid-auto-flow: dense;
+    grid-gap: 8px;
+    overflow: visible;
+    margin-top: 32px;
     opacity: 0;
-    @media only screen and (max-width: 1200px) {
-      justify-content: center;
+    @include responsive-size(screen-s) {
+      -ms-grid-columns: 1fr 8px 1fr 8px 1fr;
+      grid-template-columns: repeat(2, 1fr);
     }
-    @include responsive-size(screen-m) {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    @include responsive-size(screen-xs) {
+      -ms-grid-columns: 1fr 8px 1fr;
+      grid-template-columns: repeat(1, 1fr);
     }
+    font-weight: 500;
+    line-height: 200%;
+    color: $Black-80;
+
     &.active-anim {
       @include anim-opacity(0.1s, 0s);
       @for $i from 1 through 10 {
