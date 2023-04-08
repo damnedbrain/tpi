@@ -129,7 +129,7 @@
         height: -webkit-max-content;
         height: -moz-max-content;
         height: max-content;
-        margin-top: 20px;
+        margin: 20px auto;
         font-size: 18px;
         font-weight: 500;
         color: darkgreen;
@@ -187,9 +187,13 @@
         grid-auto-flow: dense;
         grid-gap: 8px;
         overflow: visible;
+        @include responsive-size(screen-l) {
+          padding: 0 20px;
+        }
         @include responsive-size(screen-m) {
           -ms-grid-columns: 1fr 8px 1fr 8px 1fr;
           grid-template-columns: repeat(2, 1fr);
+          padding: 0 10px;
         }
         @include responsive-size(screen-xs) {
           -ms-grid-columns: 1fr 8px 1fr;
@@ -199,12 +203,6 @@
         line-height: 200%;
         color: $Black-80;
         padding: 0 40px;
-        @include responsive-size(screen-l) {
-          padding: 0 20px;
-        }
-        @include responsive-size(screen-m) {
-          padding: 0 10px;
-        }
       }
     }
   }
