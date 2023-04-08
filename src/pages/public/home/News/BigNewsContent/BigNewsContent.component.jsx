@@ -86,8 +86,8 @@ const BigNewsContent = ({ news }) => {
             <Image
               src={`https:${_imageURL}`}
               alt=''
-              width={640}
-              height={480}
+              width={_imageWidth}
+              height={_imageHeight}
               layout='responsive'
               objectFit='fill'
               quality={100}
