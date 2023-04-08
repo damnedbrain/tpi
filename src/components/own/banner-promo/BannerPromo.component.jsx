@@ -46,11 +46,13 @@ const BannerPromo = ({ news }) => {
       variableWidth: true,
       dots: true,
       arrows: true,
+      fade: true,
       swipeToSlide: true,
       touchMove: true,
       swipe: true,
       infinite: true,
       speed: 300,
+      autoplaySpeed: 5000,
       slidesToShow: 1,
       touchThreshold: 50,
       slidesToScroll: 1,
@@ -63,28 +65,23 @@ const BannerPromo = ({ news }) => {
     []
   );
 
-  useObserverItem(refSlider, styles);
+  // useObserverItem(refSlider, styles);
   // useChooseLanguage(testimonial, refContent);
-  
-  const introduceBlock = 
-    {
-      fields: 
-        {
-          image: 
-            {
-              fields:
-                {
-                  file: 
-                    {
-                      contentType: 'image/jpeg',
-                      url:'//res.cloudinary.com/dy2gaer1o/image/upload/v1680814466/TPG-Website-Homepage/banner/introduce-img_aqll7c.png',
-                    }
-                },
-            },
-            promo: true, 
-        }
-    };
-  
+
+  const introduceBlock = {
+    fields: {
+      image: {
+        fields: {
+          file: {
+            contentType: 'image/jpeg',
+            url: '//res.cloudinary.com/dy2gaer1o/image/upload/v1680814466/TPG-Website-Homepage/banner/introduce-img_aqll7c.png',
+          },
+        },
+      },
+      promo: true,
+    },
+  };
+
   //news.unshift(introduceBlock);
   return (
     <>

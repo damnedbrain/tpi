@@ -1,17 +1,17 @@
-import React, { useRef, useCallback } from 'react';
+import React, { useRef, useCallback, useState, useEffect } from 'react';
 import styles from './SubBannerPromo.module.scss';
 import Image from 'next/image';
 import { useObserverItem } from 'components/hook/useObserverItem';
 import { get } from 'lodash';
 import { RoutePages } from '@constants/router';
 import { useRouter } from 'next/router';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { convertTime } from '@utils/uti';
+import produce from 'immer';
 
 const SubBannerPromo = ({ news }) => {
   const { title, image, desc, slug, time, author, avatar } = news?.fields;
   const router = useRouter();
   const { locale } = useRouter();
+  const [{ isMobileBanner }, setState] = useState({ isMobileBanner: false });
 
   const refContainer = useRef();
 
@@ -64,6 +64,26 @@ const SubBannerPromo = ({ news }) => {
     e.currentTarget.addEventListener('mouseup', onMouseUp, { once: true });
   };
 
+  const onResize = useCallback(() => {
+    setState(
+      produce((draft) => {
+        draft.isMobileBanner = window.innerWidth <= 480;
+      })
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isMobileBanner]);
+
+  useEffect(() => {
+    onResize();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('resize', () => onResize());
+    return () => window.removeEventListener('resize', () => onResize());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [window.innerWidth]);
+
   return (
     <>
       <div
@@ -77,8 +97,8 @@ const SubBannerPromo = ({ news }) => {
             alt=''
             width={_imageWidth ? _imageWidth : 1440}
             height={_imageHeight ? _imageHeight : 500}
-            layout='responsive'
-            objectFit='contain'
+            layout={isMobileBanner ? 'fill' : 'responsive'}
+            objectFit={isMobileBanner ? 'fill' : 'cover'}
             quality={100}
           />
         </div>
