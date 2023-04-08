@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 import { convertTime } from '@utils/uti';
 
 const SubMarket = ({ news }) => {
-  const { title, image, desc, slug, time, author, avatar, hightLight } =
+  const { title, image, thumbImage, desc, slug, time, author, avatar, hightLight } =
     news?.fields;
   const refContent = useRef(null);
   useObserverItem(refContent, styles);
@@ -51,6 +51,16 @@ const SubMarket = ({ news }) => {
     'height',
   ]);
 
+  let _thumbImageURL = get(thumbImage, ['fields', 'file', 'url']);
+  let _thumbImageWidth = get(thumbImage, ['fields', 'file', 'details', 'image', 'width']);
+  let _thumbImageHeight = get(thumbImage, [
+    'fields',
+    'file',
+    'details',
+    'image',
+    'height',
+  ]);
+
   return (
     <>
       <div className={styles['container']} ref={refContent}>
@@ -59,10 +69,10 @@ const SubMarket = ({ news }) => {
           onClick={() => redirectToPage(RoutePages.MARKET + `/${slug}`)}
         >
           <Image
-            src={`https:${_image}`}
+            src={`https:${_thumbImageURL}`}
             alt=''
-            width={640}
-            height={480}
+            width={_thumbImageWidth}
+            height={_thumbImageHeight}
             layout='responsive'
             objectFit='cover'
             quality={100}

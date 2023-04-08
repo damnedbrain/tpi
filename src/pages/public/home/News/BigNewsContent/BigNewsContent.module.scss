@@ -10,7 +10,7 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  max-width: 1170px;
+  max-width: 1440px;
   width: 100%;
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -50,7 +50,7 @@
     }
 
     .content-left {
-      width: 50%;
+      width: 40%;
       height: -webkit-max-content;
       height: -moz-max-content;
       height: max-content;
@@ -139,7 +139,7 @@
         font-weight: 100;
         font-size: 18px;
         line-height: 130%;
-        margin-bottom: 24px;
+        margin-bottom: 5px;
         color: #000000;
         & > p {
           display: block;
@@ -160,7 +160,7 @@
       }
     }
     .content-right {
-      width: 50%;
+      width: 60%;
       height: 100%;
       @media only screen and (max-width: 767px) {
         width: 80%;

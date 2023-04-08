@@ -60,8 +60,8 @@ const SubNewsContent = ({ news }) => {
             <Image
               src={`https:${_imageURL}`}
               alt=''
-              width={600}
-              height={400}
+              width={_imageWidth}
+              height={_imageHeight}
               layout='responsive'
               objectFit='fill'
               quality={100}

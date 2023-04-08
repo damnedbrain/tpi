@@ -14,13 +14,13 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  max-width: 383px;
+  max-width: 350px;
   width: calc((100% / 3));
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  margin-right: 15px;
-  &:nth-child(3) {
+  margin: 10px auto;
+  &:nth-child(4) {
     margin-right: 0px;
   }
   &.active-anim {

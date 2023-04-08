@@ -15,6 +15,7 @@ export async function getStaticProps({ locale }) {
     const res = await client.getEntries({
       content_type: 'toanPhatMarketNews',
       locale: locale,
+      order: '-sys.createdAt',
     });
 
     if (!res) {

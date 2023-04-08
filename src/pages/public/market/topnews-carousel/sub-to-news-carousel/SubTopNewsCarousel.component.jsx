@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 import { convertTime } from '@utils/uti';
 
 const SubTopNewsCarousel = ({ news }) => {
-  const { title, image, desc, slug, time, author, avatar } = news?.fields;
+  const { title, image, thumbImage, desc, slug, time, author, avatar } = news?.fields;
   const router = useRouter();
   const { locale } = useRouter();
 
@@ -34,6 +34,17 @@ const SubTopNewsCarousel = ({ news }) => {
     'image',
     'height',
   ]);
+
+  let _thumbImageURL = get(thumbImage, ['fields', 'file', 'url']);
+  let _thumbImageWidth = get(thumbImage, ['fields', 'file', 'details', 'image', 'width']);
+  let _thumbImageHeight = get(thumbImage, [
+    'fields',
+    'file',
+    'details',
+    'image',
+    'height',
+  ]);
+
   let _imageAvatarrWidth = get(avatar, [
     'fields',
     'file',
@@ -73,10 +84,10 @@ const SubTopNewsCarousel = ({ news }) => {
       >
         <div className={styles['main-image']}>
           <Image
-            src={`https:${_imageURL}`}
+            src={`https:${_thumbImageURL}`}
             alt=''
-            width={_imageWidth ? _imageWidth : 383}
-            height={_imageHeight ? _imageHeight : 200}
+            width={_thumbImageWidth ? _thumbImageWidth : 383}
+            height={_thumbImageHeight ? _thumbImageHeight : 200}
             layout='fill'
             objectFit='fill'
             quality={100}
