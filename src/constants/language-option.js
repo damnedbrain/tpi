@@ -753,7 +753,7 @@ export const foodIrradiationSystem = [
     locale: 'vi',
     title: 'Chiếu xạ',
     desc: `TPG là một trong những đơn vị tiên phong ứng dụng cả 03 công nghệ chiếu xạ tiên tiến nhất hiện nay: Cobalt-60, E-Beam, X-ray. Mỗi công nghệ có những đặc tính riêng nhưng đều đảm bảo được tính an toàn cho các thực phẩm và hàng hóa khi chiếu xạ. Nhờ ứng dụng công nghệ hiện đại, TPG đẩy nhanh tiến độ xử lý hàng hóa chiếu xạ, nâng cao chất lượng dịch vụ, giảm thời gian chờ đợi và tối ưu hóa chi phí cho khách hàng.
-
+    
     Đặc biệt, TPG tự hào là đơn vị chiếu xạ đã thành công trong việc sản xuất, lắp đặt dây chuyền cơ khí, phần mềm điều khiển cho hệ thống chiếu xạ Cobalt-60, thực hiện bởi đội ngũ của công ty 100% người Việt Nam được Cục An toàn Bức xạ và Hạt nhân (Bộ Khoa học Công nghệ Việt Nam) cấp phép. Đồng thời được APHIS (USDA) công nhận đủ điều kiện thực hiện chiếu xạ trái cây tươi sang thị trường Hoa Kỳ.
 
     Với sự kết hợp của cả ba công nghệ, cùng việc không ngừng mở rộng nghiên cứu phát triển, TPG đã ứng dụng đa dạng hóa vào các mặt hàng chiếu xạ, đáp ứng tối đa nhu cầu của khách hàng và khẳng định vị thế vững mạnh trên thị trường.`,
