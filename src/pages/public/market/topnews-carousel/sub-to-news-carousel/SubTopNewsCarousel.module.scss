@@ -139,7 +139,7 @@
       &__desc {
         max-width: 450px;
         height: 50%;
-        max-height: 100px;
+        max-height: 85px;
         display: -webkit-box;
         -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
@@ -150,6 +150,7 @@
         @include responsive-size(screen-s) {
           display: none;
         }
+
         & > p {
           display: none;
         }

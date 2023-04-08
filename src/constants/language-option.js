@@ -177,7 +177,11 @@ export const headerMenu = [
         status: '',
         link: RoutePages.CONTACT,
       }, // new
-
+      {
+        title: `Login`,
+        status: '',
+        link: RoutePages.LOGIN,
+      }, // new
       // { title: 'Goals', status: '', link: RoutePages.GOALS },
       // { title: 'Customer', status: '', link: RoutePages.CUSTOMER },
       // { title: 'Support', status: '', link: RoutePages.SUPPORT },
@@ -814,7 +818,9 @@ export const foodIrradiationSystem = [
           {
             descc: `An toàn và hiệu quả cao trong việc xử lý nhiều loại sản phẩm với tỷ trọng khác nhau.`,
           },
-          { descc: `Cải thiện khả năng thâm nhập của năng lượng photon, tăng khả năng xuyên thấu qua sản phẩm (tương tự như tia Gamma).` },
+          {
+            descc: `Cải thiện khả năng thâm nhập của năng lượng photon, tăng khả năng xuyên thấu qua sản phẩm (tương tự như tia Gamma).`,
+          },
           {
             descc: `Tính linh hoạt cao, có khả năng xử lý các sản phẩm khác nhau với các yêu cầu về liều lượng trong cùng một chu kỳ.`,
           },

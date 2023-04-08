@@ -93,7 +93,7 @@
     }
     .desc {
       width: 100%;
-      max-height: 64px;
+      height: 64px;
       display: -webkit-box;
       -o-text-overflow: ellipsis;
       text-overflow: ellipsis;
@@ -104,6 +104,7 @@
       @include setting-font('Arial', normal, 350, 18px, 120%);
       @include responsive-size(screen-m) {
         -webkit-line-clamp: 2;
+        height: 42px;
       }
     }
 

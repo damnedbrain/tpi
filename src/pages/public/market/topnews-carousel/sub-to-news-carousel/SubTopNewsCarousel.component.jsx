@@ -5,7 +5,6 @@ import { useObserverItem } from 'components/hook/useObserverItem';
 import { get } from 'lodash';
 import { RoutePages } from '@constants/router';
 import { useRouter } from 'next/router';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { convertTime } from '@utils/uti';
 
 const SubTopNewsCarousel = ({ news }) => {
@@ -24,7 +23,7 @@ const SubTopNewsCarousel = ({ news }) => {
     },
     [router]
   );
-
+  let _desc = get(desc, ['content', 0, 'content', 0, 'value']);
   let _avatar = get(avatar, ['fields', 'file', 'url']);
   let _imageURL = get(image, ['fields', 'file', 'url']);
   let _imageWidth = get(image, ['fields', 'file', 'details', 'image', 'width']);
@@ -63,6 +62,7 @@ const SubTopNewsCarousel = ({ news }) => {
     e.currentTarget.addEventListener('mousemove', onMouseMove);
     e.currentTarget.addEventListener('mouseup', onMouseUp, { once: true });
   };
+  console.log('desc ' + JSON.stringify(desc));
 
   return (
     <>
@@ -88,9 +88,7 @@ const SubTopNewsCarousel = ({ news }) => {
             <div className={styles['client__time']}>
               {convertTime(time, locale)}
             </div>
-            <div className={styles['client__desc']}>
-              {documentToReactComponents(desc)}
-            </div>
+            <div className={styles['client__desc']}>{_desc}</div>
             <div className={styles['author']}>
               <div className={styles['author__avatar']}>
                 <Image
