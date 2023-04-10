@@ -97,7 +97,10 @@
       justify-content: flex-start;
       flex-direction: column;
       width: 100%;
+      margin: 38px;
+      white-space:pre-wrap;
       margin-bottom: 24px;
+      
       &__title {
         @include setting-font('Josefin Sans', normal, 700, 20px, 24px);
       }

@@ -822,7 +822,7 @@ export const foodIrradiationSystem = [
             descc: `Cải thiện khả năng thâm nhập của năng lượng photon, tăng khả năng xuyên thấu qua sản phẩm (tương tự như tia Gamma).`,
           },
           {
-            descc: `Tính linh hoạt cao, có khả năng xử lý các sản phẩm khác nhau với các yêu cầu về liều lượng trong cùng một chu kỳ.`,
+            descc: `Tính linh hoạt cao, có khả năng xử lý nhiều sản phẩm với các yêu cầu khác nhau về liều chiếu trong cùng một chu kỳ chiếu xạ.`,
           },
         ],
       },
@@ -904,7 +904,7 @@ export const foodIrradiationSystem = [
 export const productOfIrradiation = [
   {
     locale: 'vi',
-    title: 'Các sản phẩm được chiếu xạ tại Nhà máy Chiếu xạ Toàn Phát:',
+    title: 'Các sản phẩm được chiếu xạ tại Nhà máy Chiếu xạ Toàn Phát',
     subDesc: [
       { desc: 'Trái cây tươi' },
       { desc: 'Trái cây đông lạnh' },
@@ -1096,32 +1096,36 @@ export const coldStorageTopContent = [
         desc: `Toạ lạc tại Lô A24-2, Đường Ngang 1, Khu công nghiệp Phú An Thạnh, xã An Thạnh, huyện Bến Lức, tỉnh Long An; Kho Lạnh Toàn Phát kết nối dễ dàng, nhanh chóng đến các trục đường huyết mạch, hệ thống cảng sông, cảng biển, cảng hàng không và các tỉnh thành lân cận. Nhờ đó giúp các doanh nghiệp thuận tiện trong việc vận chuyển hàng hóa khi xuất khẩu.`,
       },
       {
-        title: `Tiết kiệm chi phí`,
-        desc: `Lợi thế vị trí đắc địa cùng việc sở hữu đồng thời cả kho lạnh lưu trữ và nhà máy chiếu xạ, TPG giúp các doanh nghiệp xuất khẩu Nông - Thủy sản tiết kiệm chi phí vận chuyển, chi phí bốc dỡ khi xuất - nhập hàng hóa. Đặc biệt, chúng tôi luôn cam kết đồng hành về giá và mang đến những chính sách tối ưu nhất cho khách hàng.`,
-      },
-      {
-        title: `Hoạt động 24/7`,
-        desc: `Kho lạnh Toàn Phát hoạt động 24/7, dịch vụ tốc hành, đội ngũ chuyên nghiệp luôn xử lý nhanh gọn các yêu cầu và thắc mắc của khách hàng; đáp ứng tối đa nhu cầu lưu trữ và xuất nhập hàng trong mọi thời điểm cần thiết.`,
-      },
-      {
         title: `Đầu tư công nghệ hiện đại`,
         desc: `Hệ thống kho lạnh được đầu tư công nghệ hiện đại nhất về bảo quản - lưu trữ, trang thiết bị kỹ thuật cập nhật tiên tiến; thường xuyên bảo dưỡng, nâng cấp hệ thống kho; nhờ đó luôn đảm bảo quá trình xử lý vận hành thông minh, tinh gọn và đạt tiêu chuẩn.`,
       },
       {
+        title: `Tiết kiệm chi phí`,
+        desc: `Lợi thế vị trí đắc địa cùng việc sở hữu đồng thời cả kho lạnh lưu trữ và nhà máy chiếu xạ, TPG giúp các doanh nghiệp xuất khẩu Nông - Thủy sản tiết kiệm chi phí vận chuyển, chi phí bốc dỡ khi xuất - nhập hàng hóa. Đặc biệt, chúng tôi luôn cam kết đồng hành về giá và mang đến những chính sách tối ưu nhất cho khách hàng.`,
+      },
+      {
+        title: `Gói thuê kho lạnh linh hoạt`,
+        desc: ` Đề cao tiêu chí linh hoạt và tối ưu hóa cho doanh nghiệp, tại Kho Lạnh Toàn Phát khách hàng có thể đăng ký gói thuê kho lạnh lưu trữ dựa trên nhu cầu thực tế. Có thể thuê theo thời gian ngắn hạn, trung hạn, dài hạn và tính theo trọng lượng hàng hóa thực tế hoặc tính theo số lượng vị trí (pallet).`,
+      },
+      {
+        title: `Dịch vụ bổ trợ đa dạng`,
+        desc: `Ngoài dịch vụ lưu trữ nhiệt lạnh, Kho Lạnh Toàn Phát cung cấp nhiều dịch vụ bổ trợ khác như: đóng gói, dán tem, thay bao bì, phân loại hàng hóa, quấn PE,… với mức phí cạnh tranh nhất.`,
+      },
+      {
+        title:`Hoạt động 24/7`,
+        desc: `Kho lạnh Toàn Phát hoạt động 24/7, dịch vụ tốc hành, đội ngũ chuyên nghiệp luôn xử lý nhanh gọn các yêu cầu và thắc mắc của khách hàng; đáp ứng tối đa nhu cầu lưu trữ và xuất nhập hàng trong mọi thời điểm cần thiết.`,
+      },
+      {
         title: `Tốc độ xuất nhập hàng nhanh`,
-        desc: `Với hệ thống điều khiển và quản lý bằng phần mềm tối ưu; đội ngũ vận hành - xử lý dịch vụ lưu trữ được huấn luyện bài bản, luôn tuân thủ quy trình; Kho Lạnh Toàn Phát đảm bảo tốc độ xuất nhập hàng nhanh, chính xác, an toàn, đáp ứng cao các yêu cầu của khách hàng.`,
+        desc: `Với hệ thống điều khiển và quản lý bằng phần mềm tối ưu; đội ngũ vận hành - xử lý dịch vụ lưu trữ được huấn luyện bài bản, luôn thận trọng, tuân thủ quy trình; Kho Lạnh Toàn Phát đảm bảo tốc độ xuất nhập hàng nhanh, chính xác, an toàn, đáp ứng cao các yêu cầu của khách hàng.`,
       },
       {
         title: `Đảm bảo chất lượng hàng hóa`,
         desc: `Hàng hóa của doanh nghiệp khi lưu trữ và bảo quản tại Kho Lạnh Toàn Phát sẽ được đảm bảo an toàn tối đa nhờ hệ thống quản lý và quy trình nghiêm ngặt. Nhiệt độ và độ ẩm của kho luôn được kiểm soát phù hợp, mỗi loại hàng được phân khu và khai thác ở các khu vực hợp lý để không làm ảnh hưởng đến chất lượng hàng hóa.`,
       },
       {
-        title: `Gói thuê kho lạnh linh hoạt`,
-        desc: `Đề cao tiêu chí linh hoạt và tối ưu hóa cho doanh nghiệp, tại Kho Lạnh Toàn Phát khách hàng có thể đăng ký gói thuê kho lạnh lưu trữ dựa trên nhu cầu thực tế. Có thể thuê theo thời gian ngắn hạn, trung hạn, dài hạn và tính theo trọng lượng hàng hóa thực tế hoặc tính theo số lượng vị trí (pallet).`,
-      },
-      {
-        title: `Dịch vụ bổ trợ đa dạng`,
-        desc: `Ngoài dịch vụ lưu trữ nhiệt lạnh, Kho Lạnh Toàn Phát cung cấp nhiều dịch vụ bổ trợ khác như: đóng gói, dán tem, thay bao bì, phân loại hàng hóa, quấn PE,… với mức phí cạnh tranh nhất.`,
+        title: `Chính trực, minh bạch trong công việc`,
+        desc: `Kho Lạnh Toàn Phát luôn tuân thủ các nguyên tắc, đạo đức nghề nghiệp. Đó là sự trung thực trong các giao dịch, chính xác trong việc xử lý số liệu xuất - nhập hàng hóa và rõ ràng khi thực hiện các quy trình, thủ tục đối với khách hàng. Mặt khác, cam kết bảo mật thông tin và hoạt động kinh doanh của đối tác/khách hàng.`,
       },
     ],
   },
@@ -1246,8 +1250,8 @@ export const contactAConsultant = [
           title: `Chiếu Xạ`,
           desc: [
             `Công ty TNHH Chiếu Xạ Toàn Phát`,
-            `Địa chỉ: Lô A24-1, Đường Ngang 1, Khu Công Nghiệp Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,
             `MST: 1101846577`,
+            `Địa chỉ: Lô A24-1, Đường Ngang 1, KCN Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,            
             `Hotline: 092 100 0001 - 092 452 3888`,
             `Phone: 0272 378 6888`,
             `Email: info@tpirr.vn | tiepnhan@tpirr.vn`,
@@ -1261,9 +1265,9 @@ export const contactAConsultant = [
           title: `Kho Lạnh`,
           desc: [
             `Công ty TNHH Toàn Phát - Kho Vận `,
-            `Địa chỉ: Lô A24-2, Đường Ngang 1, Khu Công Nghiệp Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,
             `MST: 1101966433`,
-            `092 100 0001 – 092 191 6999`,
+            `Địa chỉ: Lô A24-2, Đường Ngang 1, KCN Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,            
+            `Hotline: 092 100 0001 – 092 191 6999`,
             `Phone: 0272 391 6999`,
             `Email: info@tprw.vn | tiepnhan@tprw.vn`,
           ],
