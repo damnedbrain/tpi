@@ -8,8 +8,17 @@ import { useRouter } from 'next/router';
 import { convertTime } from '@utils/uti';
 
 const SubMarket = ({ news }) => {
-  const { title, image, thumbImage, desc, slug, time, author, avatar, hightLight } =
-    news?.fields;
+  const {
+    title,
+    image,
+    thumbImage,
+    desc,
+    slug,
+    time,
+    author,
+    avatar,
+    hightLight,
+  } = news?.fields;
   const refContent = useRef(null);
   useObserverItem(refContent, styles);
   const router = useRouter();
@@ -25,41 +34,47 @@ const SubMarket = ({ news }) => {
   //if (hightLight) return;
 
   let _desc = get(desc, ['content', 0, 'content', 0, 'value']);
-  let _image = get(image, ['fields', 'file', 'url']);
+  // let _image = get(image, ['fields', 'file', 'url']);
   let _avatar = get(avatar, ['fields', 'file', 'url']);
 
-  let _imageWidth = get(image, ['fields', 'file', 'details', 'image', 'width']);
-  let _imageHeight = get(image, [
-    'fields',
-    'file',
-    'details',
-    'image',
-    'height',
-  ]);
-  let _imageAvatarrWidth = get(avatar, [
-    'fields',
-    'file',
-    'details',
-    'image',
-    'width',
-  ]);
-  let _imageAvatarrHeight = get(avatar, [
-    'fields',
-    'file',
-    'details',
-    'image',
-    'height',
-  ]);
+  // let _imageWidth = get(image, ['fields', 'file', 'details', 'image', 'width']);
+  // let _imageHeight = get(image, [
+  //   'fields',
+  //   'file',
+  //   'details',
+  //   'image',
+  //   'height',
+  // ]);
+  // let _imageAvatarrWidth = get(avatar, [
+  //   'fields',
+  //   'file',
+  //   'details',
+  //   'image',
+  //   'width',
+  // ]);
+  // let _imageAvatarrHeight = get(avatar, [
+  //   'fields',
+  //   'file',
+  //   'details',
+  //   'image',
+  //   'height',
+  // ]);
 
   let _thumbImageURL = get(thumbImage, ['fields', 'file', 'url']);
-  let _thumbImageWidth = get(thumbImage, ['fields', 'file', 'details', 'image', 'width']);
-  let _thumbImageHeight = get(thumbImage, [
-    'fields',
-    'file',
-    'details',
-    'image',
-    'height',
-  ]);
+  // let _thumbImageWidth = get(thumbImage, [
+  //   'fields',
+  //   'file',
+  //   'details',
+  //   'image',
+  //   'width',
+  // ]);
+  // let _thumbImageHeight = get(thumbImage, [
+  //   'fields',
+  //   'file',
+  //   'details',
+  //   'image',
+  //   'height',
+  // ]);
 
   return (
     <>
@@ -71,8 +86,8 @@ const SubMarket = ({ news }) => {
           <Image
             src={`https:${_thumbImageURL}`}
             alt=''
-            width={_thumbImageWidth}
-            height={_thumbImageHeight}
+            width={494}
+            height={338}
             layout='responsive'
             objectFit='cover'
             quality={100}
