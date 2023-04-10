@@ -26,6 +26,7 @@ export async function getStaticProps({ locale }) {
 
     return {
       props: { news: res.items },
+      revalidate: 10,
     };
   } catch (error) {
     // res.statusCode = 404;
