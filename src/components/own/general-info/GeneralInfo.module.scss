@@ -54,7 +54,7 @@
     white-space: pre-line;
     @include responsive-size(screen-m) {
       margin-right: 0;
-      max-height: 120px;
+      max-width: 120px;
     }
   }
 }
