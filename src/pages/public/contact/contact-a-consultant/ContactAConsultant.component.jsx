@@ -182,21 +182,40 @@ const ContactAConsultant = () => {
           {/*<div className={styles['title']}>
             {refLang.current?.directContact.title}
           </div>*/}
-          {refLang.current?.directContact.sub.map((item, idx) => (
+          {refLang.current?.directContact.sub.map((ite, idx) => (
             <div className={styles['sub-content']} key={idx}>
-              <div className={styles['sub-content__title']}>{item.title}</div>
-              {item.desc.map((_item, _idx) => (
+              <div className={styles['sub-content__title']}>{ite.title}</div>
+              {ite.desc.map((_item, _idx) => (
                 <div className={styles['sub-content__desc']} key={_idx}>
                   {_item}
                 </div>
               ))}
+              {ite.desc2.map((_item2, _idx2) => (
+              <div className={styles['iconLineDesc']} key={_idx2}>
+                <div className={styles['iconLineDesc__image']} key={_idx2}>
+                  <Image
+                    src={_item2.icon}
+                    alt=''
+                    width={60}
+                    height={60}
+                    layout='responsive'
+                    objectFit='contain'
+                    quality={100}
+                    priority
+                  />
+                </div>
+                <div className={styles['iconLineDesc_desc']} key={_idx2}>
+                  {_item2.desc}
+                </div>
+              </div>
+              ))}
               <div className={styles['sub-content-image']} key={idx}>
               <div className={styles['sub-content-image__image']}>
-                <Link href={item.link1} passHref>
+                <Link href={ite.link1} passHref>
 
                   {/*Facebook&Youtube Button*/}
                   <Image
-                    src={item.button1}
+                    src={ite.button1}
                     alt=''
                     width={80}
                     height={70}
@@ -208,9 +227,9 @@ const ContactAConsultant = () => {
                 </Link>
               </div>
               <div className={styles['sub-content-image__image']}>
-                <Link href={item.link2} passHref>
+                <Link href={ite.link2} passHref>
                   <Image
-                    src={item.button2}
+                    src={ite.button2}
                     alt=''
                     width={80}
                     height={70}

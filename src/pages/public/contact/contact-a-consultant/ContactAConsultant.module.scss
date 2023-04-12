@@ -35,6 +35,7 @@
   @include responsive-size(screen-m) {
     padding: 0 10px;
   }
+  
   .title {
     display: flex;
     align-items: center;
@@ -82,6 +83,9 @@
         }
       }
     }
+    @include responsive-size(screen-s) {
+      flex-direction: column;
+    }
     .title {
       display: flex;
       align-items: center;
@@ -97,8 +101,8 @@
       justify-content: flex-start;
       flex-direction: column;
       width: 100%;
-      margin: 38px;
-      white-space:pre-wrap;
+      margin: 12px;
+      //white-space:pre-wrap;
       margin-bottom: 24px;
       
       &__title {
@@ -106,7 +110,7 @@
       }
       &__desc {
         //padding-left: 20px;
-        @include setting-font('Josefin Sans', normal, 300, 16px, 130%);
+        @include setting-font('Josefin Sans', normal, 400, 16px, 130%);
       }
       &__image {
         flex-direction: row;
@@ -119,6 +123,28 @@
         margin-bottom: 10px;
         cursor: pointer;
       }
+      
+    }
+    .iconLineDesc {
+      //max-height: 22px;
+      //width: max-content;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-bottom: 4px;
+      &__desc {
+        width: max-content;
+        @include setting-font('Josefin Sans', normal, 300, 16px, 130%);
+      }
+      &__image {
+        max-width: 20px;
+        height: 100%;
+        width: 100%;
+        margin-right: 10px;
+      }
+
     }
     .sub-content-image {
       display: flex;

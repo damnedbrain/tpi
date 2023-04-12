@@ -1,10 +1,16 @@
 import { RoutePages } from './router';
+
 import facebookButton from '@assets/icons/facebook-button.png';
 import youtubeButton from '@assets/icons/youtube-button.png';
 const item1_link1 = ' https://www.facebook.com/chieuxatoanphat';
 const item1_link2 = ' https://www.youtube.com/channel/UCJoEaA2uVz0YXs2iWCanQOA';
 const item2_link1 = ' https://www.facebook.com/kholanhtoanphat';
 const item2_link2 = ' https://www.youtube.com/channel/UCJoEaA2uVz0YXs2iWCanQOA';
+
+import addressIcon from '@assets/icons/address.png';
+import hotlineIcon from '@assets/icons/hotline.png';
+import phoneIcon from '@assets/icons/phone.png';
+import mailIcon from '@assets/icons/mail.png';
 
 export const headerMenu = [
   {
@@ -1236,8 +1242,8 @@ export const contactAConsultant = [
     title: 'Thông tin liên hệ',
     desc: ``,
     username: { label: `Họ tên`, desc: `Nhập họ tên vào đây` },
-    phone: { label: `Số điện thoại`, desc: `Nhập số điện thoại vào đây` },
-    email: { label: `Email`, desc: `Nhập Email vào đây` },
+    phone: { label: `Số điện thoại`, desc: `Nhập số điện thoại vào đây`,},
+    email: { label: `Email`, desc: `Nhập Email vào đây`,},
     address: { label: `Địa chỉ`, desc: `Nhập địa chỉ vào đây` },
     typeProduct: { label: `Loại hàng`, desc: `Nhập loại hàng vào đây` },
     register: { title: `Đăng ký`, label1: `Chiếu xạ`, label2: `Gửi kho` },
@@ -1250,11 +1256,25 @@ export const contactAConsultant = [
           title: `Chiếu Xạ`,
           desc: [
             `Công ty TNHH Chiếu Xạ Toàn Phát`,
-            `MST: 1101846577`,
-            `Địa chỉ: Lô A24-1, Đường Ngang 1, KCN Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,            
-            `Hotline: 092 100 0001 - 092 452 3888`,
-            `Phone: 0272 378 6888`,
-            `Email: info@tpirr.vn | tiepnhan@tpirr.vn`,
+            `MST: 1101846577`,           
+          ],
+          desc2: [
+            {
+              icon: addressIcon,
+              desc: `Lô A24-1, Đường Ngang 1, KCN Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,
+            },           
+            {
+              icon: hotlineIcon,
+              desc: `092 100 0001 - 092 452 3888`,
+            },           
+            {
+              icon: phoneIcon,
+              desc: `0272 378 6888`,
+            },          
+            {
+              icon: mailIcon,
+              desc: `info@tpirr.vn | tiepnhan@tpirr.vn`,
+            },
           ],
           button1: facebookButton,
           link1: item1_link1,
@@ -1266,10 +1286,24 @@ export const contactAConsultant = [
           desc: [
             `Công ty TNHH Toàn Phát - Kho Vận `,
             `MST: 1101966433`,
-            `Địa chỉ: Lô A24-2, Đường Ngang 1, KCN Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,            
-            `Hotline: 092 100 0001 – 092 191 6999`,
-            `Phone: 0272 391 6999`,
-            `Email: info@tprw.vn | tiepnhan@tprw.vn`,
+          ],
+          desc2: [
+            {
+              icon: addressIcon,
+              desc: `Lô A24-2, Đường Ngang 1, KCN Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,
+            },           
+            {
+              icon: hotlineIcon,
+              desc: `092 100 0001 – 092 191 6999`,
+            },           
+            {
+              icon: phoneIcon,
+              desc: `0272 391 6999`,
+            },          
+            {
+              icon: mailIcon,
+              desc: `info@tprw.vn | tiepnhan@tprw.vn`,
+            },
           ],
           button1: facebookButton,
           link1: item2_link1,
@@ -1298,16 +1332,58 @@ export const contactAConsultant = [
       title: `Direct contact`,
       sub: [
         {
-          title: `Direct consulting: Information Department.`,
-          desc: [`Phone number:`, `Email:`],
+          title: `Chiếu Xạ`,
+          desc: [
+            `Công ty TNHH Chiếu Xạ Toàn Phát`,
+            `MST: 1101846577`,           
+          ],
+          desc2: [
+            {
+              icon: addressIcon,
+              desc: `Lô A24-1, Đường Ngang 1, KCN Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,
+            },           
+            {
+              icon: hotlineIcon,
+              desc: `092 100 0001 - 092 452 3888`,
+            },           
+            {
+              icon: phoneIcon,
+              desc: `0272 378 6888`,
+            },          
+            {
+              icon: mailIcon,
+              desc: `info@tpirr.vn | tiepnhan@tpirr.vn`,
+            },
+          ],
           button1: facebookButton,
           link1: item1_link1,
           button2: youtubeButton,
           link2: item1_link2,
         },
         {
-          title: `Get registration schedule:`,
-          desc: [`Receiving Department:`, `Phone number:`, `Email:`],
+          title: `Kho Lạnh`,
+          desc: [
+            `Công ty TNHH Toàn Phát - Kho Vận `,
+            `MST: 1101966433`,
+          ],
+          desc2: [
+            {
+              icon: addressIcon,
+              desc: `Lô A24-1, Đường Ngang 1, KCN Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,
+            },           
+            {
+              icon: hotlineIcon,
+              desc: `092 100 0001 - 092 452 3888`,
+            },           
+            {
+              icon: phoneIcon,
+              desc: `0272 378 6888`,
+            },          
+            {
+              icon: mailIcon,
+              desc: `info@tpirr.vn | tiepnhan@tpirr.vn`,
+            },
+          ],
           button1: facebookButton,
           link1: item2_link1,
           button2: youtubeButton,
