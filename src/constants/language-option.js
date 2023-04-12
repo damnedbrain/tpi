@@ -11,6 +11,7 @@ import addressIcon from '@assets/icons/address.png';
 import hotlineIcon from '@assets/icons/hotline.png';
 import phoneIcon from '@assets/icons/phone.png';
 import mailIcon from '@assets/icons/mail.png';
+import taxIcon from '@assets/icons/tax.png';
 
 export const headerMenu = [
   {
@@ -1260,8 +1261,8 @@ export const contactAConsultant = [
           ],
           desc2: [
             {
-              icon: addressIcon,
-              desc: `Lô A24-1, Đường Ngang 1, KCN Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,
+              icon: taxIcon,
+              desc: `1101846577`,
             },           
             {
               icon: hotlineIcon,
@@ -1274,6 +1275,10 @@ export const contactAConsultant = [
             {
               icon: mailIcon,
               desc: `info@tpirr.vn | tiepnhan@tpirr.vn`,
+            },
+            {
+              icon: addressIcon,
+              desc: `Lô A24-1, Đường Ngang 1, KCN Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,
             },
           ],
           button1: facebookButton,
@@ -1289,8 +1294,8 @@ export const contactAConsultant = [
           ],
           desc2: [
             {
-              icon: addressIcon,
-              desc: `Lô A24-2, Đường Ngang 1, KCN Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,
+              icon: taxIcon,
+              desc: `1101846577`,
             },           
             {
               icon: hotlineIcon,
@@ -1303,6 +1308,10 @@ export const contactAConsultant = [
             {
               icon: mailIcon,
               desc: `info@tprw.vn | tiepnhan@tprw.vn`,
+            },
+            {
+              icon: addressIcon,
+              desc: `Lô A24-2, Đường Ngang 1, KCN Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,
             },
           ],
           button1: facebookButton,
@@ -1339,20 +1348,24 @@ export const contactAConsultant = [
           ],
           desc2: [
             {
-              icon: addressIcon,
-              desc: `Lô A24-1, Đường Ngang 1, KCN Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,
+              icon: taxIcon,
+              desc: `1101846577`,
             },           
             {
               icon: hotlineIcon,
-              desc: `092 100 0001 - 092 452 3888`,
+              desc: `092 100 0001 – 092 191 6999`,
             },           
             {
               icon: phoneIcon,
-              desc: `0272 378 6888`,
+              desc: `0272 391 6999`,
             },          
             {
               icon: mailIcon,
-              desc: `info@tpirr.vn | tiepnhan@tpirr.vn`,
+              desc: `info@tprw.vn | tiepnhan@tprw.vn`,
+            },
+            {
+              icon: addressIcon,
+              desc: `Lô A24-2, Đường Ngang 1, KCN Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,
             },
           ],
           button1: facebookButton,
@@ -1368,20 +1381,24 @@ export const contactAConsultant = [
           ],
           desc2: [
             {
-              icon: addressIcon,
-              desc: `Lô A24-1, Đường Ngang 1, KCN Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,
+              icon: taxIcon,
+              desc: `1101846577`,
             },           
             {
               icon: hotlineIcon,
-              desc: `092 100 0001 - 092 452 3888`,
+              desc: `092 100 0001 – 092 191 6999`,
             },           
             {
               icon: phoneIcon,
-              desc: `0272 378 6888`,
+              desc: `0272 391 6999`,
             },          
             {
               icon: mailIcon,
-              desc: `info@tpirr.vn | tiepnhan@tpirr.vn`,
+              desc: `info@tprw.vn | tiepnhan@tprw.vn`,
+            },
+            {
+              icon: addressIcon,
+              desc: `Lô A24-2, Đường Ngang 1, KCN Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,
             },
           ],
           button1: facebookButton,
