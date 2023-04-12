@@ -90,6 +90,7 @@
     .time {
       width: 100%;
       min-height: 24px;
+      font-style: italic;
     }
     .desc {
       width: 100%;
@@ -101,7 +102,7 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
       margin-bottom: 8px;
-      @include setting-font('Arial', normal, 350, 18px, 120%);
+      @include setting-font('Arial', normal, 400, 15px, 140%);
       @include responsive-size(screen-m) {
         -webkit-line-clamp: 2;
         height: 42px;

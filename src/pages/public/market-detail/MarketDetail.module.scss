@@ -18,11 +18,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 720px;
     width: 100%;
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
     margin: 0 auto;
+    padding: 20px;
     opacity: 1;
     .title {
       width: 100%;
@@ -41,7 +43,7 @@
       overflow: hidden;
       cursor: pointer;
       max-width: 800px;
-      padding-left: 16px;
+      //padding-left: 16px;
       @include setting-font('Arial', bold, 600, 40px, 120%);
       @include responsive-size(screen-m) {
         font-size: 32px;
@@ -59,21 +61,21 @@
       height: -webkit-max-content;
       height: -moz-max-content;
       height: max-content;
-      margin-bottom: 16px;
-      max-width: 800px;
-      padding-left: 16px;
+      margin-bottom: 4px;
+      max-width: 720px;
+      //padding-left: 16px;
 
       &__avatar {
-        width: 40px;
+        width: 32px;
         height: 100%;
         margin-right: 16px;
       }
       &__name {
-        @include setting-font('Arial', bold, 700, 18px, 120%);
+        @include setting-font('Arial', bold, 700, 14px, 120%);
       }
     }
     .main-image {
-      max-width: 500px;
+      max-width: 720px;
       width: 100%;
       height: 100%;
       opacity: 1;
@@ -94,7 +96,7 @@
       text-align: left;
       max-width: 800px;
       margin-top: 16px;
-      @include setting-font('Arial', normal, 350, 16px, 120%);
+      @include setting-font('Arial', normal, 400, 15px, 150%);
       @include responsive-size(screen-m) {
         padding: 0 8px;
       }
@@ -109,12 +111,25 @@
         -webkit-margin-end: 0px;
         margin-inline-end: 0px;
       }
+      img {
+        display: block;
+        max-width: 720px;
+        height: 100%;
+        -webkit-margin-before: 1em;
+        margin-block-start: 1em;
+        -webkit-margin-after: 1em;
+        margin-block-end: 1em;
+        -webkit-margin-start: 0px;
+        margin-inline-start: 0px;
+        -webkit-margin-end: 0px;
+        margin-inline-end: 0px;
+      }
     }
     .time {
       max-width: 800px;
       width: 100%;
       height: 100%;
-      margin: 16px 0px 0px 24px;
+      margin: 5px;
     }
     .detail {
       width: 100%;

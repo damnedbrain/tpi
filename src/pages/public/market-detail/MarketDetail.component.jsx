@@ -129,6 +129,7 @@ const MarketDetail = ({ news, locale }) => {
             </div>
             <div className={styles['author__name']}>{author}</div>
           </div>
+          <div className={styles['time']}>{convertTime(time, locale)}</div>
 
           <div className={styles['main-image']}>
             <Image
@@ -141,7 +142,7 @@ const MarketDetail = ({ news, locale }) => {
               quality={100}
             />
           </div>
-          <div className={styles['time']}>{convertTime(time, locale)}</div>
+          
 
           <div className={styles['desc']}>
             {documentToReactComponents(desc, renderOptions)}
