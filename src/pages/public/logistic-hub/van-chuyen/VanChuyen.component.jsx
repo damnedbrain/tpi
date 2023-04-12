@@ -10,17 +10,16 @@ const VanChuyen = () => {
   return (
     <>
       <div className={styles['container']}>
-        {/*<div className={styles['bg']}>
+        <div className={styles['bg']}>
           <Image
             src={comingSoonBG}
             alt=''
-            width='100vw'
-            height={900}
-            layout='fill'
+            
+            layout='responsive'
             objectFit='fill'
             quality={100}
           />
-          </div>*/}
+          </div>
         <div className={styles['text']}>
           <Image
             src={comingSoonText}

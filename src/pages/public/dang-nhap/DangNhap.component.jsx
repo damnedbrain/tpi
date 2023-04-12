@@ -3,24 +3,23 @@ import styles from './DangNhap.module.scss';
 import Image from 'next/image';
 
 import comingSoon from '@assets/van-chuyen/coming_soon.png';
-import comingSoonBG from '@assets/van-chuyen/coming_soon_bg.png';
+import comingSoonBG from '@assets/dang-nhap/bg.png';
 import comingSoonText from '@assets/van-chuyen/coming_soon_text.png';
 
 const DangNhap = () => {
   return (
     <>
       <div className={styles['container']}>
-        {/*<div className={styles['bg']}>
+        <div className={styles['bg']}>
           <Image
             src={comingSoonBG}
             alt=''
-            width='100vw'
-            height={900}
-            layout='fill'
+            
+            layout='responsive'
             objectFit='fill'
             quality={100}
           />
-          </div>*/}
+          </div>
         <div className={styles['text']}>
           <Image
             src={comingSoonText}
