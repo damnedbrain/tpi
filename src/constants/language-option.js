@@ -1256,8 +1256,7 @@ export const contactAConsultant = [
         {
           title: `Chiếu Xạ`,
           desc: [
-            `Công ty TNHH Chiếu Xạ Toàn Phát`,
-            `MST: 1101846577`,           
+            `Công ty TNHH Chiếu Xạ Toàn Phát`,          
           ],
           desc2: [
             {
@@ -1289,13 +1288,12 @@ export const contactAConsultant = [
         {
           title: `Kho Lạnh`,
           desc: [
-            `Công ty TNHH Toàn Phát - Kho Vận `,
-            `MST: 1101966433`,
+            `Công ty TNHH Toàn Phát - Kho Vận `,          
           ],
           desc2: [
             {
               icon: taxIcon,
-              desc: `1101846577`,
+              desc: `1101966433`,
             },           
             {
               icon: hotlineIcon,
@@ -1343,8 +1341,7 @@ export const contactAConsultant = [
         {
           title: `Chiếu Xạ`,
           desc: [
-            `Công ty TNHH Chiếu Xạ Toàn Phát`,
-            `MST: 1101846577`,           
+            `Công ty TNHH Chiếu Xạ Toàn Phát`,          
           ],
           desc2: [
             {
@@ -1377,12 +1374,11 @@ export const contactAConsultant = [
           title: `Kho Lạnh`,
           desc: [
             `Công ty TNHH Toàn Phát - Kho Vận `,
-            `MST: 1101966433`,
           ],
           desc2: [
             {
               icon: taxIcon,
-              desc: `1101846577`,
+              desc: `1101966433`,
             },           
             {
               icon: hotlineIcon,
