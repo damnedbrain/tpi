@@ -9,7 +9,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { ReadMoreBtn } from '../ReadMoreBtn';
 
 const SubNewsContent = ({ news }) => {
-  const { title, image, desc, slug, time, author, avatar } = news?.fields;
+  const { title, thumbImage, desc, slug, time, author, avatar } = news?.fields;
   const router = useRouter();
   const refContainer = useRef();
 
@@ -24,9 +24,9 @@ const SubNewsContent = ({ news }) => {
   );
 
   let _avatar = get(avatar, ['fields', 'file', 'url']);
-  let _imageURL = get(image, ['fields', 'file', 'url']);
-  let _imageWidth = get(image, ['fields', 'file', 'details', 'image', 'width']);
-  let _imageHeight = get(image, [
+  let _imageURL = get(thumbImage, ['fields', 'file', 'url']);
+  let _imageWidth = get(thumbImage, ['fields', 'file', 'details', 'image', 'width']);
+  let _imageHeight = get(thumbImage, [
     'fields',
     'file',
     'details',

@@ -10,7 +10,7 @@ import { ReadMoreBtn } from '../ReadMoreBtn';
 import { convertTime } from '@utils/uti';
 
 const BigNewsContent = ({ news }) => {
-  const { title, image, desc, slug, time, author, avatar } = news?.fields;
+  const { title, thumbImage, desc, slug, time, author, avatar } = news?.fields;
   const router = useRouter();
   const { locale } = useRouter();
   const refContainer = useRef();
@@ -26,9 +26,9 @@ const BigNewsContent = ({ news }) => {
   );
 
   let _avatar = get(avatar, ['fields', 'file', 'url']);
-  let _imageURL = get(image, ['fields', 'file', 'url']);
-  let _imageWidth = get(image, ['fields', 'file', 'details', 'image', 'width']);
-  let _imageHeight = get(image, [
+  let _imageURL = get(thumbImage, ['fields', 'file', 'url']);
+  let _imageWidth = get(thumbImage, ['fields', 'file', 'details', 'image', 'width']);
+  let _imageHeight = get(thumbImage, [
     'fields',
     'file',
     'details',
