@@ -15,7 +15,6 @@
   justify-self: center;
   @include responsive-size(screen-xs) {
     max-width: none;
-    max-height: 120px;
   }
   &.active-anim {
     @include anim-opacity(0.1s, 0s);
