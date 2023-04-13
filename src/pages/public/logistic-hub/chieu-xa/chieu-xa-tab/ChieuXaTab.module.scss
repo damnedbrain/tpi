@@ -67,10 +67,12 @@
     white-space:pre-line;
     text-align: left;
     width: 100vw;
+    max-width: 960px;
     min-height: 32px;
     font-weight: 500;
     line-height: 200%;
-    margin: 32px 0;
+    margin: 32px;
+    padding: 12px;
   }
   .concludedesc {
     text-align: left;
@@ -89,7 +91,7 @@
     align-items: flex-start;
     justify-content: center;
     width: 100vw;
-    max-width: 1170px;
+    max-width: 960px;
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
@@ -119,7 +121,7 @@
         height: -webkit-max-content;
         height: -moz-max-content;
         height: max-content;
-        max-width: 383px;
+        max-width: 720px;
         margin-bottom: 12px;
         margin-top: 12px;
         @include responsive-size(screen-m) {
@@ -130,6 +132,7 @@
         //max-width: 482px;
         text-align: center;
         width: 100vw;
+        max-width: 960px;
         height: -webkit-max-content;
         height: -moz-max-content;
         height: max-content;
@@ -163,6 +166,7 @@
       &__desc {
         text-align: left;
         width: 100vw;
+        max-width: 900px;
         height: -webkit-max-content;
         height: -moz-max-content;
         height: max-content;
@@ -190,6 +194,7 @@
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 8px;
         width: 100vw;
+        max-width: 960px;
         height: -webkit-max-content;
         height: -moz-max-content;
         height: max-content;

@@ -5,7 +5,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
+  width: 100vw;
+  max-width: 1070px;
+  margin: auto;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
