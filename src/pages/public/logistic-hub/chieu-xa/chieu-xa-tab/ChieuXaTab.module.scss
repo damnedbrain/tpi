@@ -183,7 +183,6 @@
         display: -moz-grid;
         display: grid;
         -ms-grid-columns: 1fr 8px 1fr 8px 1fr 8px 1fr;
-        grid-column: 1fr 8px 1fr 8px 1fr 8px 1fr;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 8px;
         width: 100%;
@@ -193,7 +192,7 @@
         height: 100%;
         grid-auto-flow: dense;
         grid-gap: 8px;
-        overflow: visible;
+        overflow: hidden;
         @include responsive-size(screen-l) {
           padding: 0 20px;
         }
