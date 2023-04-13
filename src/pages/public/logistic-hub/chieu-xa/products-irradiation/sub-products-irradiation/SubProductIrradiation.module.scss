@@ -5,16 +5,20 @@
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
-  min-height: 112px;
+  width: max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  
   margin: 0 auto;
   .content {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: max-content;
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
@@ -39,7 +43,9 @@
     margin-top: 4px;
     min-height: 28px;
     max-width: 285px;
-    width: 100%;
+    width: max-content;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     text-align: center;
     font-style: normal;
     line-height: 200%;
