@@ -180,8 +180,10 @@
 
       &__desc2 {
         display: -ms-grid;
+        display: -moz-grid;
         display: grid;
         -ms-grid-columns: 1fr 8px 1fr 8px 1fr 8px 1fr;
+        grid-column: 1fr 8px 1fr 8px 1fr 8px 1fr;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 8px;
         width: 100%;
