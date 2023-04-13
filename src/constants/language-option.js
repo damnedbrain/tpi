@@ -1265,7 +1265,7 @@ export const contactAConsultant = [
             },           
             {
               icon: hotlineIcon,
-              desc: `092 100 0001 - 092 452 3888`,
+              desc: `092 452 3888 - 093 100 0001 `,
             },           
             {
               icon: phoneIcon,
@@ -1297,7 +1297,7 @@ export const contactAConsultant = [
             },           
             {
               icon: hotlineIcon,
-              desc: `092 100 0001 – 092 191 6999`,
+              desc: `092 191 6999 - 093 100 0001`,
             },           
             {
               icon: phoneIcon,
@@ -1350,7 +1350,7 @@ export const contactAConsultant = [
             },           
             {
               icon: hotlineIcon,
-              desc: `092 100 0001 – 092 191 6999`,
+              desc: `092 452 3888 - 093 100 0001 `,
             },           
             {
               icon: phoneIcon,
@@ -1382,7 +1382,7 @@ export const contactAConsultant = [
             },           
             {
               icon: hotlineIcon,
-              desc: `092 100 0001 – 092 191 6999`,
+              desc: `092 191 6999 - 093 100 0001`,
             },           
             {
               icon: phoneIcon,
