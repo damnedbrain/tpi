@@ -36,15 +36,17 @@
     -ms-grid-columns: 1fr 8px 1fr 8px 1fr 8px 1fr;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 8px;
-    width: 960px;
-    height: 500px;
+    //width: 960px;
+    //height: 500px;
     /*display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;*/
     width: 100vw;
-    height: 100vh;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
     max-width: 1070px;
     grid-auto-flow: dense;
     grid-gap: 8px;
