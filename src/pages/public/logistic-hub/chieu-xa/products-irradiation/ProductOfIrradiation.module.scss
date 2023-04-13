@@ -40,10 +40,8 @@
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;*/
-    width: 100vh;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
+    width: 100vw;
+    height: 100vh;
     grid-auto-flow: dense;
     grid-gap: 8px;
     overflow: visible;
