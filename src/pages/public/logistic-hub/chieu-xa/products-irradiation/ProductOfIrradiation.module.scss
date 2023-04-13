@@ -35,8 +35,13 @@
     -ms-grid-columns: 1fr 8px 1fr 8px 1fr 8px 1fr;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 8px;
-    width: 100%;
-    height: 100%;
+    /*display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;*/
+    //width: 100%;
+    //height: 100%;
     grid-auto-flow: dense;
     grid-gap: 8px;
     overflow: visible;
