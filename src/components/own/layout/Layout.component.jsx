@@ -9,6 +9,8 @@ import { ROOT_DOMAIN } from '@constants/Api.constants';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import produce from 'immer';
 
+import ContactBar from './contact-bar/ContactBar.component';
+
 const Layout = ({ children, SEOInfo = {} }) => {
   const location = useRouter();
   const [{ firstClientX }, setState] = useState({
@@ -56,6 +58,7 @@ const Layout = ({ children, SEOInfo = {} }) => {
   return (
     <div className={styles.container} id='layout-container'>
       <LayoutHead SEOInfo={Object.assign(SEOInfo, { url })} />
+      <ContactBar />
       <Header />
       {children}
       <Footer />

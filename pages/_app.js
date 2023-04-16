@@ -8,6 +8,7 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 import Aos from 'aos';
 import { ScreenLoading } from '@my-components';
 
+
 function MyApp({ Component, pageProps }) {
   const [isLoading, setIsLoading] = useState(false);
 

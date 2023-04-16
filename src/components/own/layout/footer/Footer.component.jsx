@@ -5,12 +5,26 @@ import ToanPhat from '@assets/header/ToanPhat-Icon-white.svg';
 import socialYoutube from '@assets/icons/social-icon-youtube.png';
 import socialFacebook from '@assets/icons/social-icon-facebook.png';
 import Link from 'next/link';
+import { Button, Dropdown, DropdownButton, DropdownButtonProps } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookMessenger, faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
     <>
       <div className={styles['container']}>
         <div className={styles['content-wrapper']}>
+        <Dropdown drop="up">
+          <Dropdown.Toggle variant="success" id="dropdown-basic">
+            <FontAwesomeIcon icon={faFacebookMessenger} style={{color: "#029d49",}} size='3x' />
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+        
           <div className={styles['content']}>
             <div className={styles['content__title']}>
               Chiếu Xạ Toàn Phát
