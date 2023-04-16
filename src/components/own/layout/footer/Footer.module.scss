@@ -52,6 +52,9 @@
       &__sub {
         width: 100%;
         height: 16px;
+        & > span{
+         display: inline-block;
+        }
         font-style: normal;
         font-weight: 300;
         font-size: 12px;

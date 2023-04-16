@@ -16,7 +16,7 @@ const Footer = () => {
               Chiếu Xạ Toàn Phát
             </div>
             <div className={styles['content__sub']}>
-              Hotline 24/7: 093 100 0001
+              Hotline 24/7: <span>093 100 0001</span>
             </div>
             <div className={styles['content__sub']}>Email: info@tpirr.vn - tiepnhan@tpirr.vn </div>
           </div>
@@ -64,7 +64,7 @@ const Footer = () => {
           <div className={styles['content']}>
             <div className={styles['content__title']}>Kho Lạnh Toàn Phát</div>
             <div className={styles['content__sub']}>
-              Hotline 24/7: 092 191 6999
+              Hotline 24/7: <span>092 191 6999</span>
             </div>
             <div className={styles['content__sub']}>
               Email: info@tprw.vn - tiepnhan@tprw.vn
