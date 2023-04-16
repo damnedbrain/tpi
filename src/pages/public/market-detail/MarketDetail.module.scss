@@ -19,7 +19,7 @@
     align-items: center;
     justify-content: center;
     max-width: 720px;
-    width: 100%;
+    width: calc(100vw - 40px);
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
@@ -27,7 +27,7 @@
     padding: 20px;
     opacity: 1;
     .title {
-      width: 100vw;
+      width: calc(100vw - 40px);
       height: -webkit-max-content;
       height: -moz-max-content;
       height: max-content;
@@ -57,7 +57,7 @@
       align-items: center;
       justify-content: flex-start;
       flex-direction: row;
-      width: 100vw;
+      width: calc(100vw - 40px);
       height: -webkit-max-content;
       height: -moz-max-content;
       height: max-content;
@@ -76,14 +76,14 @@
     }
     .main-image {
       max-width: 720px;
-      width: 100vw;
+      width: calc(100vw - 40px);
       height: -webkit-max-content;
       height: -moz-max-content;
       height: max-content;
       opacity: 1;
     }
     .desc {
-      width: 100vw;
+      width: calc(100vw - 40px);
       height: -webkit-max-content;
       height: -moz-max-content;
       height: max-content;
@@ -129,14 +129,14 @@
     }
     .time {
       max-width: 720px;
-      width: 100vw;
+      width: calc(100vw - 40px);
       height: -webkit-max-content;
       height: -moz-max-content;
       height: max-content;
       margin: 5px;
     }
     .detail {
-      width: 100vw;
+      width: calc(100vw - 40px);
       height: -webkit-max-content;
       height: -moz-max-content;
       height: max-content;
