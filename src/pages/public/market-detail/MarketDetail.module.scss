@@ -27,7 +27,7 @@
     padding: 20px;
     opacity: 1;
     .title {
-      width: 100%;
+      width: 100vw;
       height: -webkit-max-content;
       height: -moz-max-content;
       height: max-content;
@@ -42,7 +42,7 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
       cursor: pointer;
-      max-width: 800px;
+      max-width: 720px;
       //padding-left: 16px;
       @include setting-font('Arial', bold, 600, 40px, 120%);
       @include responsive-size(screen-m) {
@@ -57,7 +57,7 @@
       align-items: center;
       justify-content: flex-start;
       flex-direction: row;
-      width: 100%;
+      width: 100vw;
       height: -webkit-max-content;
       height: -moz-max-content;
       height: max-content;
@@ -76,16 +76,18 @@
     }
     .main-image {
       max-width: 720px;
-      width: 100%;
-      height: 100%;
-      opacity: 1;
-    }
-    .desc {
-      width: 100%;
+      width: 100vw;
       height: -webkit-max-content;
       height: -moz-max-content;
       height: max-content;
-      //max-height: 70px;
+      opacity: 1;
+    }
+    .desc {
+      width: 100vw;
+      height: -webkit-max-content;
+      height: -moz-max-content;
+      height: max-content;
+      //max-width: 720px;
       display: -webkit-box;
       -o-text-overflow: ellipsis;
       text-overflow: ellipsis;
@@ -94,7 +96,7 @@
       overflow: hidden;
       margin-bottom: 8px;
       text-align: left;
-      max-width: 800px;
+      max-width: 720px;
       margin-top: 16px;
       @include setting-font('Arial', normal, 400, 15px, 150%);
       @include responsive-size(screen-m) {
@@ -111,28 +113,30 @@
         -webkit-margin-end: 0px;
         margin-inline-end: 0px;
       }
-      img {
+      & > img {
         display: block;
+        padding: 5px;
+        width: 100vw;
         max-width: 720px;
+        object-fit: contain;
+        
         height: 100%;
-        -webkit-margin-before: 1em;
-        margin-block-start: 1em;
-        -webkit-margin-after: 1em;
-        margin-block-end: 1em;
-        -webkit-margin-start: 0px;
-        margin-inline-start: 0px;
-        -webkit-margin-end: 0px;
-        margin-inline-end: 0px;
+        height: -webkit-max-content;
+        height: -moz-max-content;
+        height: max-content;
+      
       }
     }
     .time {
-      max-width: 800px;
-      width: 100%;
-      height: 100%;
+      max-width: 720px;
+      width: 100vw;
+      height: -webkit-max-content;
+      height: -moz-max-content;
+      height: max-content;
       margin: 5px;
     }
     .detail {
-      width: 100%;
+      width: 100vw;
       height: -webkit-max-content;
       height: -moz-max-content;
       height: max-content;
