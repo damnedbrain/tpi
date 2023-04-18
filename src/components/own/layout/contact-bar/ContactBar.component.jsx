@@ -56,7 +56,7 @@ const ContactBar = () => {
         <div className={styles['container']}>
             <Dropdown drop="up">
                 <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
-                    <FontAwesomeIcon icon={faArrowUpFromBracket} style={{color: "#fff",}} size='3x' />
+                    <FontAwesomeIcon icon={faArrowUpFromBracket} style={{color: "#fff",}} size='2x' />
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className={styles['dropdown-menu-add']}>

@@ -9,7 +9,7 @@ import { ROOT_DOMAIN } from '@constants/Api.constants';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import produce from 'immer';
 
-import ContactBar from './contact-bar/ContactBar.component';
+import { ContactBar } from './contact-bar';
 
 const Layout = ({ children, SEOInfo = {} }) => {
   const location = useRouter();
