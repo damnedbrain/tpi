@@ -5,6 +5,7 @@ import { faFacebookMessenger, faFacebook } from '@fortawesome/free-brands-svg-ic
 import { faArrowUpFromBracket, faPhone } from '@fortawesome/free-solid-svg-icons';
 import zaloIcon from '@assets/icons/zalo-seeklogo.com.svg'
 import Link from 'next/link';
+import Image from 'react-bootstrap';
 
 import React, { useState } from 'react';
 
@@ -65,7 +66,9 @@ const ContactBar = () => {
                             href='http://m.me/116671641370296' 
                         >
                             <FontAwesomeIcon icon={faFacebookMessenger} style={{color: "#fff",}} size='2x' />
+                            
                         </Link>
+                        <div className={styles['dropdown-item-add_desc']}>Kho Lạnh</div>
                     </Dropdown.Item>
                     <Dropdown.Item className={styles['dropdown-item-add']} eventKey="1">
                         <Link
@@ -73,6 +76,24 @@ const ContactBar = () => {
                         >
                             <FontAwesomeIcon icon={faFacebookMessenger} style={{color: "#fff",}} size='2x' />
                         </Link>
+                        <div className={styles['dropdown-item-add_desc']}>Chiếu Xạ</div>
+                    </Dropdown.Item>
+                    
+                    <Dropdown.Item className={styles['dropdown-item-add']} eventKey="3">
+                        <Link
+                            href='https://www.facebook.com/kholanhtoanphat'
+                        >
+                          <FontAwesomeIcon icon={faFacebook} style={{color: "#fff",}} size='2x' />
+                        </Link>
+                        <div className={styles['dropdown-item-add_desc']}>Kho Lạnh</div>
+                    </Dropdown.Item>
+                    <Dropdown.Item className={styles['dropdown-item-add']} eventKey="3">
+                        <Link
+                            href='https://www.facebook.com/chieuxatoanphat'
+                        >
+                          <FontAwesomeIcon icon={faFacebook} style={{color: "#fff",}} size='2x' />
+                        </Link>
+                        <div className={styles['dropdown-item-add_desc']}>Chiếu Xạ</div>
                     </Dropdown.Item>
                     <Dropdown.Item className={styles['dropdown-item-add']} eventKey="2">
                         <Link
@@ -80,18 +101,8 @@ const ContactBar = () => {
                         >
                             <FontAwesomeIcon icon={faPhone} style={{color: "#fff",}} size='2x' />
                         </Link>
+                        <div className={styles['dropdown-item-add_desc']}>Hotline</div>
                     </Dropdown.Item>
-                    <Dropdown.Item className={styles['dropdown-item-add']} eventKey="3">
-                        <FontAwesomeIcon icon={faFacebook} style={{color: "#fff",}} size='2x' />
-                    </Dropdown.Item>
-                    <Dropdown.Item className={styles['dropdown-item-add']} eventKey="1">
-                        <Link
-                            href='http://zalo.me/0931000001' 
-                        >
-                            <FontAwesomeIcon icon={zaloIcon} style={{color: "#fff",}} size='2x' />
-                        </Link>
-                    </Dropdown.Item>
-
                 </Dropdown.Menu>
             </Dropdown>
         </div>

@@ -38,5 +38,14 @@
     justify-content: center;
     margin: 10px;
     box-shadow: 0 3px 6px rgba(36, 36, 36, 0.7);
-    
+    & > svg{
+        position: absolute;
+    }
+    &_desc {
+        position: relative;
+        top: 18px;
+        z-index: 5;
+        font-size: 8px;
+        color: #fff;
+    }
 }
