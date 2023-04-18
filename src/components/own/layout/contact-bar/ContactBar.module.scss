@@ -1,0 +1,51 @@
+@import '/styles/main';
+
+.container {
+    z-index: 3;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    display: block;
+    box-shadow: 0 5px 10px rgba(36, 36, 36, 0.7);
+    border-radius: 40px;
+    .custom-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100px;
+        width: 70px;
+        height: 70px;
+        background-color: #06703a;
+        
+    } 
+}
+
+.dropdown-menu-add {
+    --bs-dropdown-bg: transparent;
+    --bs-dropdown-border-color: transparent;
+    --bs-dropdown-min-width: 0;
+    //width: 60px;
+}
+
+.dropdown-item-add {
+    width: 50px;
+    height: 50px;
+    background-color: #06703a;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    box-shadow: 0 3px 6px rgba(36, 36, 36, 0.7);
+    & > svg{
+        position: absolute;
+    }
+    &_desc {
+        position: relative;
+        top: 18px;
+        z-index: 5;
+        font-size: 8px;
+        color: #fff;
+    }
+}

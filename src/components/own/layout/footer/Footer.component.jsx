@@ -5,6 +5,9 @@ import ToanPhat from '@assets/header/ToanPhat-Icon-white.svg';
 import socialYoutube from '@assets/icons/social-icon-youtube.png';
 import socialFacebook from '@assets/icons/social-icon-facebook.png';
 import Link from 'next/link';
+import { Button, Dropdown, DropdownButton, DropdownButtonProps } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookMessenger, faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
