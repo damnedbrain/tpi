@@ -7,6 +7,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import Aos from 'aos';
 import { ScreenLoading } from '@my-components';
+import { Analytics } from '@vercel/analytics/react';
 
 
 function MyApp({ Component, pageProps }) {
@@ -29,7 +30,13 @@ function MyApp({ Component, pageProps }) {
     };
   }, [setIsLoading]);
 
-  return <>{isLoading ? <ScreenLoading /> : <Component {...pageProps} />}</>;
+  return <>
+  {isLoading ? <ScreenLoading /> : 
+    <>
+      <Component {...pageProps} />
+      <Analytics />
+    </>
+  }</>;
 }
 
 export default MyApp;
