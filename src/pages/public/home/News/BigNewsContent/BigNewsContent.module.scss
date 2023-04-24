@@ -138,7 +138,7 @@
         font-style: normal;
         font-weight: 100;
         font-size: 18px;
-        line-height: 1rem;
+        line-height: 130%;
         margin-bottom: 5px;
         color: #000000;
         & > p {
@@ -153,12 +153,11 @@
           margin-inline-end: 0px;
         }
         @include responsive-size(screen-m) {
-          font-size: 1em;
+          font-size: 16px;
           -webkit-line-clamp: 3;
-          height: 3.5em;
-          //height: max-content;
-          //height: -moz-max-content;
-          //height: -webkit-max-content;
+          height: max-content;
+          height: -moz-max-content;
+          height: -webkit-max-content;
           //line-height: 100%;
         }
       }

@@ -88,19 +88,17 @@
         margin-inline-end: 0px;
       }
       @media only screen and (max-width: 1200px) {
-        font-size: 1.2em;
-        height: 4em;
-        // height: max-content;
-        // height: -moz-max-content;
-        // height: -webkit-max-content;
+        font-size: 18px;
+        height: max-content;
+        height: -moz-max-content;
+        height: -webkit-max-content;
       }
       @media only screen and (max-width: 767px) {
         -webkit-line-clamp: 3;
-        font-size: 1em;
-        height: 4em;
-        // height: max-content;
-        // height: -moz-max-content;
-        // height: -webkit-max-content;
+        font-size: 16px;
+        height: max-content;
+        height: -moz-max-content;
+        height: -webkit-max-content;
         max-width: none;
       }
     }
