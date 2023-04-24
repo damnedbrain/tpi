@@ -44,7 +44,6 @@
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
-  
     & > :nth-child(1) {
       padding-left: 0px;
     }
@@ -102,22 +101,10 @@
       //   // height: -moz-max-content;
       //   // height: -webkit-max-content;
       // }
-      & > h6 {
-        font-size: 20px;
-      }
-      @include responsive-size(screen-m) {
-        font-size: 1em;
-        -webkit-line-clamp: 3;
-        height: 3.5em;
-        //height: max-content;
-        //height: -moz-max-content;
-        //height: -webkit-max-content;
-        //line-height: 100%;
-      }
       @media only screen and (max-width: 767px) {
         -webkit-line-clamp: 3;
-        font-size: 1em;
-        height: 3.5em;
+        // font-size: 1em;
+        // height: 4em;
         // height: max-content;
         // height: -moz-max-content;
         // height: -webkit-max-content;
