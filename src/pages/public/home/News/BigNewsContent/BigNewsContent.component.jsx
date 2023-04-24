@@ -1,4 +1,5 @@
-import React, { useRef, useCallback } from 'react';
+import React, { useRef, useCallback, Component } from 'react';
+import ReactDOM from 'react-dom';
 import styles from './BigNewsContent.module.scss';
 import Image from 'next/image';
 import { useObserverItem } from 'components/hook/useObserverItem';
@@ -8,6 +9,7 @@ import { useRouter } from 'next/router';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { ReadMoreBtn } from '../ReadMoreBtn';
 import { convertTime } from '@utils/uti';
+import ClampLines from 'react-clamp-lines';
 
 const BigNewsContent = ({ news }) => {
   const { title, thumbImage, desc, slug, time, author, avatar } = news?.fields;
@@ -64,7 +66,14 @@ const BigNewsContent = ({ news }) => {
               {convertTime(time, locale)}
             </div>
             <div className={styles['content-left__desc']}>
-              {documentToReactComponents(desc)}
+              {/* {documentToReactComponents(desc)} */}
+              <ClampLines
+                text={desc.content[0].content[0].value}
+                id="slug"
+                lines={4}
+                ellipsis="..."
+                buttons={false}
+              />
             </div>
             <div className={styles['content-left__author']}>
               <div className={styles['content-left__author__avatar']}>

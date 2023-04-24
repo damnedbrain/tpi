@@ -7,6 +7,7 @@ import { RoutePages } from '@constants/router';
 import { useRouter } from 'next/router';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { ReadMoreBtn } from '../ReadMoreBtn';
+import ClampLines from 'react-clamp-lines';
 
 const SubNewsContent = ({ news }) => {
   const { title, thumbImage, desc, slug, time, author, avatar } = news?.fields;
@@ -69,7 +70,13 @@ const SubNewsContent = ({ news }) => {
           </div>
           <div className={styles['title']}>{title}</div>
           <div className={styles['desc']}>
-            {documentToReactComponents(desc)}
+            <ClampLines
+                text={desc.content[0].content[0].value}
+                id="slug"
+                lines={4}
+                ellipsis="..."
+                buttons={false}
+            />
           </div>
           <ReadMoreBtn readMore={RoutePages.MARKET + `/${slug}`} />
         </div>

@@ -121,26 +121,32 @@
         }
       }
       &__desc {
-        display: -webkit-box;
-        -o-text-overflow: ellipsis;
-        text-overflow: ellipsis;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
+        // display: -webkit-box;
+        // box-sizing: content-box;
+        // -o-text-overflow: ellipsis;
+        // text-overflow: ellipsis;
+        // -webkit-line-clamp: 4;
+        // -webkit-box-orient: vertical;
+        // overflow: hidden;
         word-wrap: break-word;
-        height: 112px;
-        max-width: 580px;
-        width: 100%;
-
+        // height: 67px;
+        //max-width: 580px;
+        // width: 100%;
+        display: flexbox;
+        
+        overflow: hidden;
+        
         // height: -webkit-max-content;
         // height: -moz-max-content;
         // height: max-content;
+        
         font-style: normal;
         font-weight: 100;
         font-size: 18px;
         line-height: 130%;
         margin-bottom: 5px;
         color: #000000;
+        height
         & > p {
           display: block;
           -webkit-margin-before: 1em;
