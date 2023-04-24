@@ -80,7 +80,7 @@
         // text-overflow: ellipsis;
       font-style: normal;
       font-weight: 100;
-      font-size: 16px;
+      font-size: 18px;
       line-height: 130%;
       margin-bottom: 5px;
       color: #000000;
@@ -103,18 +103,12 @@
       //   // height: -webkit-max-content;
       // }
       & > h6 {
-        font-size: 15px;
-        @include responsive-size(screen-m) {
-          font-size: 12px;
-        }
-        @media only screen and (max-width: 767px) {
-          font-size: 12px;
-        }
+        font-size: 20px;
       }
       @include responsive-size(screen-m) {
-        font-size: 0.8em;
+        font-size: 1em;
         -webkit-line-clamp: 3;
-        height: 2.8em;
+        height: 3.5em;
         //height: max-content;
         //height: -moz-max-content;
         //height: -webkit-max-content;
@@ -122,8 +116,8 @@
       }
       @media only screen and (max-width: 767px) {
         -webkit-line-clamp: 3;
-        font-size: 0.8em;
-        height: 2.8em;
+        font-size: 1em;
+        height: 3.5em;
         // height: max-content;
         // height: -moz-max-content;
         // height: -webkit-max-content;
