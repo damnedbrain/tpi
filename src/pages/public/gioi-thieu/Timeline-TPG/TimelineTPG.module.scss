@@ -3,7 +3,7 @@
 .container {
   position: relative;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
 
   justify-content: center;
@@ -34,37 +34,11 @@
       margin-top: 16px;
     }
   }
-  .content {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: top;
-    width: 100%;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
-    opacity: 0;
-    &.active-anim {
-      @include anim-opacity(1.2s, 1s);
-      @for $i from 1 through 3 {
-        & > :nth-child(#{$i}) {
-          @include anim-move-right(30px, 0.5s, 0.2s * $i);
-        }
-      }
-    }
-    @include responsive-size(screen-m) {
-      color: $text-color;
-    }
-    &__title {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 32px;
-      line-height: 120%;
-      color: $Dark-Green-100;
-      margin: 16px 0;
-      @include responsive-size(screen-m) {
-        color: $text-color;
-      }
-    }
+  .title {
+    color: #06703a;
+    font-size: 32px;
+    align-self: flex-start;
+    margin-top: 16px;
   }
+  
 }

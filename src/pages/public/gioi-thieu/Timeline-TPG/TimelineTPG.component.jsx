@@ -19,6 +19,10 @@ const TimelineTPG = () => {
   return (
     <>
       <div className={styles['container']} ref={refContainer}>
+      
+          <div className={styles['title']}>
+            {TimelineTitle}
+          </div>
         
         <div className={styles['introduce-img']}>
           <Image
@@ -32,11 +36,7 @@ const TimelineTPG = () => {
             priority
           />
         </div>
-        <div className={styles['content']} ref={refContent}>
-          <div className={styles['content__title']}>
-            {TimelineTitle}
-          </div>
-        </div>
+        
       </div>
     </>
   );
