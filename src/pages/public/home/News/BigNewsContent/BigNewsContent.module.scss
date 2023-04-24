@@ -161,7 +161,7 @@
         @include responsive-size(screen-m) {
           font-size: 16px;
           -webkit-line-clamp: 3;
-          height: 75px;
+          // height: 75px;
         }
       }
     }
