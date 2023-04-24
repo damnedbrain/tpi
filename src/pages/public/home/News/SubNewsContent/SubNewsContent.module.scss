@@ -89,16 +89,11 @@
       }
       @media only screen and (max-width: 1200px) {
         font-size: 18px;
-        height: max-content;
-        height: -moz-max-content;
-        height: -webkit-max-content;
+        height: 111px;
       }
       @media only screen and (max-width: 767px) {
         -webkit-line-clamp: 3;
-        font-size: 16px;
-        height: max-content;
-        height: -moz-max-content;
-        height: -webkit-max-content;
+        height: 85px;
         max-width: none;
       }
     }
