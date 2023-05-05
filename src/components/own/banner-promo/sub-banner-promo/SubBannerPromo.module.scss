@@ -134,7 +134,7 @@
           background-color: $Black-80;
           transition: width 0.3s ease-out;
         }
-        @include setting-font('Josefin Sans', normal, 700, 28px, 120%);
+        @include setting-font('Montserrat', normal, 700, 28px, 120%);
         @include responsive-size(screen-m) {
           margin-bottom: 8px;
         }
@@ -170,7 +170,7 @@
           -webkit-box-orient: vertical;
           overflow: hidden;
         }
-        @include setting-font('Josefin Sans', normal, 350, 24px, 120%);
+        @include setting-font('Montserrat', normal, 350, 24px, 120%);
       }
 
       .author {
@@ -186,7 +186,7 @@
           border-radius: 100%;
         }
         &__name {
-          @include setting-font('Josefin Sans', normal, 350, 16px, 120%);
+          @include setting-font('Montserrat', normal, 350, 16px, 120%);
         }
       }
     }

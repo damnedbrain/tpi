@@ -64,7 +64,7 @@
       color: $Dark-Green-100;
       margin-top: 40px;
       text-align: center;
-      @include setting-font('Josefin Sans', normal, 400, 40px, 120%);
+      @include setting-font('Montserrat', normal, 400, 40px, 120%);
       @include responsive-size(screen-m) {
         margin-top: 16px;
       }

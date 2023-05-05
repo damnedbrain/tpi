@@ -65,7 +65,7 @@
       color: $Dark-Green-100;
       margin: 16px 0;
       margin-top: 36px;
-      @include setting-font('Josefin Sans', normal, 400, 32px, 120%);
+      @include setting-font('Montserrat', normal, 400, 32px, 120%);
       @include responsive-size(screen-m) {
         margin-top: 16px;
       }
@@ -86,7 +86,7 @@
         margin-left: 40px;
         margin-top: 60px;
         max-width: 80px;
-        @include setting-font('Josefin Sans', normal, 500, 18px, 120%);
+        @include setting-font('Montserrat', normal, 500, 18px, 120%);
         @include responsive-size(screen-m) {
           margin-top: 16px;
         }
@@ -113,7 +113,7 @@
       color: $Dark-Green-100;
       margin: 16px 0;
       margin-top: 18px;
-      @include setting-font('Josefin Sans', normal, 400, 18px, 120%);
+      @include setting-font('Montserrat', normal, 400, 18px, 120%);
       @include responsive-size(screen-m) {
         margin-top: 16px;
       }

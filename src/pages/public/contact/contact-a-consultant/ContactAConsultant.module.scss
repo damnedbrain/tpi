@@ -41,7 +41,7 @@
     align-items: center;
     justify-content: center;
     color: $Grass-100;
-    @include setting-font('Josefin Sans', normal, 700, 20px, 120%);
+    @include setting-font('Montserrat', normal, 700, 20px, 120%);
   }
   .desc {
     display: flex;
@@ -93,7 +93,7 @@
       color: $Grass-100;
       width: 100%;
       margin-bottom: 24px;
-      @include setting-font('Josefin Sans', normal, 700, 20px, 120%);
+      @include setting-font('Montserrat', normal, 700, 20px, 120%);
     }
     .sub-content {
       display: flex;
@@ -106,11 +106,11 @@
       margin-bottom: 24px;
       
       &__title {
-        @include setting-font('Josefin Sans', normal, 700, 20px, 24px);
+        @include setting-font('Montserrat', normal, 700, 20px, 24px);
       }
       &__desc {
         //padding-left: 20px;
-        @include setting-font('Josefin Sans', normal, 400, 16px, 130%);
+        @include setting-font('Montserrat', normal, 400, 16px, 130%);
       }
       &__image {
         flex-direction: row;
@@ -136,7 +136,7 @@
       margin-bottom: 4px;
       &__desc {
         width: max-content;
-        @include setting-font('Josefin Sans', normal, 300, 16px, 130%);
+        @include setting-font('Montserrat', normal, 300, 16px, 130%);
       }
       &__image {
         max-width: 20px;

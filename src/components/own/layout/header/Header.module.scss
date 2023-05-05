@@ -147,7 +147,7 @@
         margin-right: 16px;
         color: $White;
         text-align: center;
-        @include setting-font('Josefin Sans', normal, 700, 13px, 120%);
+        @include setting-font('Montserrat', normal, 700, 13px, 120%);
 
         @include responsive-size(screen-l) {
           margin-right: 8px;
@@ -214,7 +214,7 @@
             color: $White;
             margin-right: 8px;
             text-align: center;
-            @include setting-font('Josefin Sans', normal, 700, 14px, 120%);
+            @include setting-font('Montserrat', normal, 700, 14px, 120%);
             @include responsive-size(screen-m) {
               width: 100%;
               max-width: none;
@@ -292,7 +292,7 @@
                 content: none;
               }
             }
-            @include setting-font('Josefin Sans', normal, 700, 14px, 120%);
+            @include setting-font('Montserrat', normal, 700, 14px, 120%);
             .sub-item {
               display: flex;
               align-items: center;

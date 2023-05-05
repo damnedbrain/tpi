@@ -24,7 +24,7 @@
     margin-right: 10px;
     color: rgba(137, 137, 137, 0.3);
     opacity: 0.8;
-    @include setting-font('Josefin Sans', normal, 400, 64px, 120%);
+    @include setting-font('Montserrat', normal, 400, 64px, 120%);
     @include responsive-size(screen-m) {
       min-height: 115px;
       height: 115px;
@@ -37,6 +37,6 @@
     width: 100%;
     max-width: 285px;
     margin-top: 30px;
-    @include setting-font('Josefin Sans', normal, 500, 14px, 200%);
+    @include setting-font('Montserrat', normal, 500, 14px, 200%);
   }
 }
