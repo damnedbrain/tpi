@@ -13,8 +13,8 @@
         align-items: center;
         justify-content: center;
         border-radius: 100px;
-        width: 70px;
-        height: 70px;
+        width: 30px;
+        height: 30px;
         background-color: #06703a;
         
     } 
@@ -25,18 +25,29 @@
     --bs-dropdown-border-color: transparent;
     --bs-dropdown-min-width: 0;
     //width: 60px;
+    
+}
+
+.zalo {
+    font-family: untitled-font-1;
+    color:#fff;
+    font-size: 24px;
+    align-self: center;
+    position: absolute;
+    top: 216px;
 }
 
 .dropdown-item-add {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     background-color: #06703a;
     border-radius: 40px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 10px;
+    align-self: center;
     box-shadow: 0 3px 6px rgba(36, 36, 36, 0.7);
     & > svg{
         position: absolute;
@@ -47,5 +58,6 @@
         z-index: 5;
         font-size: 8px;
         color: #fff;
+        text-shadow: 0 1px 2px rgba(36, 36, 36, 0.7);;
     }
 }

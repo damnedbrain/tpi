@@ -54,9 +54,9 @@ const ContactBar = () => {
     return(
         <>
         <div className={styles['container']}>
-            <Dropdown drop="up">
+            <Dropdown drop="up-centered">
                 <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
-                    <FontAwesomeIcon icon={faArrowUpFromBracket} style={{color: "#fff",}} size='2x' />
+                    <FontAwesomeIcon icon={faArrowUpFromBracket} style={{color: "#fff",}} size='1x' />
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className={styles['dropdown-menu-add']}>
@@ -65,16 +65,16 @@ const ContactBar = () => {
                         <Link
                             href='http://m.me/116671641370296' 
                         >
-                            <FontAwesomeIcon icon={faFacebookMessenger} style={{color: "#fff",}} size='2x' />
+                            <FontAwesomeIcon icon={faFacebookMessenger} style={{color: "#fff",}} size='1x' />
                             
                         </Link>
                         <div className={styles['dropdown-item-add_desc']}>Kho Lạnh</div>
                     </Dropdown.Item>
-                    <Dropdown.Item className={styles['dropdown-item-add']} eventKey="1">
+                    <Dropdown.Item className={styles['dropdown-item-add']} eventKey="2">
                         <Link
                             href='http://m.me/1305438312916916' 
                         >
-                            <FontAwesomeIcon icon={faFacebookMessenger} style={{color: "#fff",}} size='2x' />
+                            <FontAwesomeIcon icon={faFacebookMessenger} style={{color: "#fff",}} size='1x' />
                         </Link>
                         <div className={styles['dropdown-item-add_desc']}>Chiếu Xạ</div>
                     </Dropdown.Item>
@@ -83,25 +83,33 @@ const ContactBar = () => {
                         <Link
                             href='https://www.facebook.com/kholanhtoanphat'
                         >
-                          <FontAwesomeIcon icon={faFacebook} style={{color: "#fff",}} size='2x' />
+                          <FontAwesomeIcon icon={faFacebook} style={{color: "#fff",}} size='1x' />
                         </Link>
                         <div className={styles['dropdown-item-add_desc']}>Kho Lạnh</div>
                     </Dropdown.Item>
-                    <Dropdown.Item className={styles['dropdown-item-add']} eventKey="3">
+                    <Dropdown.Item className={styles['dropdown-item-add']} eventKey="4">
                         <Link
                             href='https://www.facebook.com/chieuxatoanphat'
                         >
-                          <FontAwesomeIcon icon={faFacebook} style={{color: "#fff",}} size='2x' />
+                          <FontAwesomeIcon icon={faFacebook} style={{color: "#fff",}} size='1x' />
                         </Link>
                         <div className={styles['dropdown-item-add_desc']}>Chiếu Xạ</div>
                     </Dropdown.Item>
-                    <Dropdown.Item className={styles['dropdown-item-add']} eventKey="2">
+                    <Dropdown.Item className={styles['dropdown-item-add']} eventKey="5">
                         <Link
                             href='tel:093 100 0001'
                         >
-                            <FontAwesomeIcon icon={faPhone} style={{color: "#fff",}} size='2x' />
+                            <FontAwesomeIcon icon={faPhone} style={{color: "#fff",}} size='1x' />
                         </Link>
                         <div className={styles['dropdown-item-add_desc']}>Hotline</div>
+                    </Dropdown.Item>
+                    <Dropdown.Item className={styles['dropdown-item-add']} eventKey="6">
+                        <Link
+                            href='https://zalo.me/0931000001' 
+                        >
+                             <div className={styles['zalo']}>b</div>
+                        </Link>
+                        <div className={styles['dropdown-item-add_desc']}>Zalo</div>
                     </Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
