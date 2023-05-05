@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Router } from 'next/router';
+import { Router, useRouter } from 'next/router';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/globals.scss';
 import 'slick-carousel/slick/slick.css';
