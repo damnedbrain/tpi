@@ -9,6 +9,7 @@ import Aos from 'aos';
 import { ScreenLoading } from '@my-components';
 import { Analytics } from '@vercel/analytics/react';
 import { SSRProvider } from 'react-bootstrap';
+import * as gtag from "gtag"
 
 
 function MyApp({ Component, pageProps }) {
@@ -35,6 +36,26 @@ function MyApp({ Component, pageProps }) {
   {isLoading ? <ScreenLoading /> : 
     <>
       <SSRProvider>
+
+        <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${gtag.GA_TRACKING_ID}', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
+
         <Component {...pageProps} />
         <Analytics />
       </SSRProvider>
