@@ -17,7 +17,7 @@ const Button = styled.button`
   max-width: 445px;
   background: #009e4a;
 
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
