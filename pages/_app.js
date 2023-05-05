@@ -9,7 +9,7 @@ import Aos from 'aos';
 import { ScreenLoading } from '@my-components';
 import { Analytics } from '@vercel/analytics/react';
 import { SSRProvider } from 'react-bootstrap';
-import * as gtag from 'gtag';
+import * as gtag from './gtag';
 
 
 function MyApp({ Component, pageProps }) {
