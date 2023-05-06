@@ -56,7 +56,7 @@ const ContactBar = () => {
         <div className={styles['container']}>
             <Dropdown drop="up-centered">
                 <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
-                    <FontAwesomeIcon icon={faArrowUpFromBracket} style={{color: "#fff",}} size='1x' />
+                    <FontAwesomeIcon icon={faArrowUpFromBracket} style={{color: "#fff",}} size='2x' />
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className={styles['dropdown-menu-add']}>
@@ -65,7 +65,7 @@ const ContactBar = () => {
                         <Link
                             href='http://m.me/116671641370296' 
                         >
-                            <FontAwesomeIcon icon={faFacebookMessenger} style={{color: "#fff",}} size='1x' />
+                            <FontAwesomeIcon icon={faFacebookMessenger} style={{color: "#fff",}} size='2x' />
                             
                         </Link>
                         <div className={styles['dropdown-item-add_desc']}>Kho Lạnh</div>
@@ -74,7 +74,7 @@ const ContactBar = () => {
                         <Link
                             href='http://m.me/1305438312916916' 
                         >
-                            <FontAwesomeIcon icon={faFacebookMessenger} style={{color: "#fff",}} size='1x' />
+                            <FontAwesomeIcon icon={faFacebookMessenger} style={{color: "#fff",}} size='2x' />
                         </Link>
                         <div className={styles['dropdown-item-add_desc']}>Chiếu Xạ</div>
                     </Dropdown.Item>
@@ -83,7 +83,7 @@ const ContactBar = () => {
                         <Link
                             href='https://www.facebook.com/kholanhtoanphat'
                         >
-                          <FontAwesomeIcon icon={faFacebook} style={{color: "#fff",}} size='1x' />
+                          <FontAwesomeIcon icon={faFacebook} style={{color: "#fff",}} size='2x' />
                         </Link>
                         <div className={styles['dropdown-item-add_desc']}>Kho Lạnh</div>
                     </Dropdown.Item>
@@ -91,7 +91,7 @@ const ContactBar = () => {
                         <Link
                             href='https://www.facebook.com/chieuxatoanphat'
                         >
-                          <FontAwesomeIcon icon={faFacebook} style={{color: "#fff",}} size='1x' />
+                          <FontAwesomeIcon icon={faFacebook} style={{color: "#fff",}} size='2x' />
                         </Link>
                         <div className={styles['dropdown-item-add_desc']}>Chiếu Xạ</div>
                     </Dropdown.Item>
@@ -99,7 +99,7 @@ const ContactBar = () => {
                         <Link
                             href='tel:093 100 0001'
                         >
-                            <FontAwesomeIcon icon={faPhone} style={{color: "#fff",}} size='1x' />
+                            <FontAwesomeIcon icon={faPhone} style={{color: "#fff",}} size='2x' />
                         </Link>
                         <div className={styles['dropdown-item-add_desc']}>Hotline</div>
                     </Dropdown.Item>

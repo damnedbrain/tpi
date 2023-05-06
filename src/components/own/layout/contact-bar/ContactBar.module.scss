@@ -3,8 +3,8 @@
 .container {
     z-index: 3;
     position: absolute;
-    bottom: 40px;
-    right: 40px;
+    bottom: 60px;
+    right: 60px;
     display: block;
     box-shadow: 0 5px 10px rgba(36, 36, 36, 0.7);
     border-radius: 40px;
@@ -13,8 +13,8 @@
         align-items: center;
         justify-content: center;
         border-radius: 100px;
-        width: 30px;
-        height: 30px;
+        width: 55px;
+        height: 55px;
         background-color: #06703a;
         
     } 
@@ -31,15 +31,15 @@
 .zalo {
     font-family: untitled-font-1;
     color:#fff;
-    font-size: 24px;
+    font-size: 30px;
     align-self: center;
     position: absolute;
-    top: 216px;
+    top: 320px;
 }
 
 .dropdown-item-add {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     background-color: #06703a;
     border-radius: 40px;
     display: flex;
