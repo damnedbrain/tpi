@@ -11,12 +11,12 @@ const LayoutHead = ({ SEOInfo }) => (
       name='viewport'
       content='minimum-scale=1, initial-scale=1, width=device-width'
     />
-    <link rel='icon' href='/favicon.ico' />
+    <link rel='icon' href='/favicon.ico' />``
     {/* <link href='/fonts/all.min.css' rel='stylesheet' /> */}
 
   
 
-    <meta name='title' content={SEOInfo?.title || TITLE} />
+    {/* <meta name='title' content={SEOInfo?.title || TITLE} />
     <meta name='description' content={SEOInfo?.desc || ''} />
     <meta name='image' content={SEOInfo?.image || ''} />
 
@@ -32,7 +32,7 @@ const LayoutHead = ({ SEOInfo }) => (
     <meta property='og:type' content='website' />
     <meta property='og:title' content={SEOInfo?.title || TITLE} />
     <meta property='og:description' content={SEOInfo?.desc || ''} />
-    <meta property='og:image' content={SEOInfo?.image || ''} />
+    <meta property='og:image' content={SEOInfo?.image || ''} /> */}
   </Head>
 );
 

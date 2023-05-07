@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './MarketDetail.module.scss';
 import Image from 'next/image';
+import Head from 'next/head';
 import { get } from 'lodash';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { Breadcrumb } from 'components/own/breadcrumb';
@@ -111,6 +112,27 @@ const MarketDetail = ({ news, locale }) => {
 
   return (
     <>
+      <Head>
+        <title>{title}</title>
+        <meta name='title' content={title} />
+        <meta name='description' content={title} />
+        <meta name='image' content={`https:${_image}`} />
+
+        <meta name='og:title' content={title} />
+        <meta name='og:description' content={title} />
+        <meta name='og:image' content={`https:${_image}`} />
+
+        <meta itemProp='name' content={title} />
+        <meta itemProp='description' content={title} />
+        <meta itemProp='image' content={`https:${_image}`} />
+
+        <meta property='og:url' content={RoutePages.MARKET + `/${slug}`} />
+        <meta property='og:type' content='website' />
+        <meta property='og:title' content={title} />
+        <meta property='og:description' content={title} />
+        <meta property='og:image' content={`https:${_image}`} />
+
+      </Head>
       <div className={styles['container']}>
         <Breadcrumb data={marketDetailBreadcrumb} />
 
