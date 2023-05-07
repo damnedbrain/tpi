@@ -63,7 +63,7 @@ $breakpoints: (
   $size: $default-size,
   $height: none
 ) {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: $family;
   font-style: $style;
   font-weight: $weight;
   font-size: $size;
