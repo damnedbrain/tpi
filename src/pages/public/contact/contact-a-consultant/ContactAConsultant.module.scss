@@ -129,6 +129,9 @@
     }
     .sub-content:first-child {
       margin-right: 120px;
+      @include responsive-size(screen-m) {
+        margin-right: 0;
+      }
     }
     .iconLineDesc {
       //max-height: 22px;
