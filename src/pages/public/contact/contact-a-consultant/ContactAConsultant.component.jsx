@@ -204,7 +204,7 @@ const ContactAConsultant = () => {
                     priority
                   />
                 </div>
-                <div className={styles['iconLineDesc_desc']} key={_idx2}>
+                <div className={styles['iconLineDesc__desc']} key={_idx2}>
                   {_item2.desc}
                 </div>
               </div>

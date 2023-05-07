@@ -1264,20 +1264,22 @@ export const contactAConsultant = [
               desc: `1101846577`,
             },           
             {
-              icon: hotlineIcon,
+              icon: phoneIcon,
               desc: `092 452 3888 - 093 100 0001 `,
             },           
             {
-              icon: phoneIcon,
+              icon: hotlineIcon,
               desc: `0272 378 6888`,
             },          
             {
               icon: mailIcon,
-              desc: `info@tpirr.vn | tiepnhan@tpirr.vn`,
+              desc: `thongtin@tpirr.vn  | tiepnhan@tpirr.vn`,
             },
             {
               icon: addressIcon,
-              desc: `Lô A24-1, Đường Ngang 1, KCN Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,
+              desc: `Lô A24-1, Đường Ngang 1,
+              KCN Phú An Thạnh, Xã An Thạnh,
+              Huyện Bến Lức, Tỉnh Long An.`,
             },
           ],
           button1: facebookButton,
@@ -1288,7 +1290,7 @@ export const contactAConsultant = [
         {
           title: `Kho Lạnh`,
           desc: [
-            `Công ty TNHH Toàn Phát - Kho Vận `,          
+            `Công ty TNHH Kho Vận Toàn Phát`,          
           ],
           desc2: [
             {
@@ -1296,20 +1298,22 @@ export const contactAConsultant = [
               desc: `1101966433`,
             },           
             {
-              icon: hotlineIcon,
+              icon: phoneIcon,
               desc: `092 191 6999 - 093 100 0001`,
             },           
             {
-              icon: phoneIcon,
+              icon: hotlineIcon,
               desc: `0272 391 6999`,
             },          
             {
               icon: mailIcon,
-              desc: `info@tprw.vn | tiepnhan@tprw.vn`,
+              desc: `thongtin@tprw.vn | tiepnhan@tprw.vn`,
             },
             {
               icon: addressIcon,
-              desc: `Lô A24-2, Đường Ngang 1, KCN Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,
+              desc: `Lô A24-2, Đường Ngang 1,
+              KCN Phú An Thạnh, Xã An Thạnh,
+              Huyện Bến Lức, Tỉnh Long An.`,
             },
           ],
           button1: facebookButton,

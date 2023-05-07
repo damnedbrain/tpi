@@ -107,6 +107,7 @@
       
       &__title {
         @include setting-font('Josefin Sans', normal, 700, 20px, 24px);
+        color: #2c1c5a;
       }
       &__desc {
         //padding-left: 20px;
@@ -136,6 +137,7 @@
       margin-bottom: 4px;
       &__desc {
         width: max-content;
+        white-space: pre-line;
         @include setting-font('Josefin Sans', normal, 300, 16px, 130%);
       }
       &__image {

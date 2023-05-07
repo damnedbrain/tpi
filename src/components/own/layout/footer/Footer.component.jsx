@@ -21,7 +21,7 @@ const Footer = () => {
             <div className={styles['content__sub']}>
               Hotline 24/7: <span>093 100 0001</span>
             </div>
-            <div className={styles['content__sub']}>Email: info@tpirr.vn - tiepnhan@tpirr.vn </div>
+            <div className={styles['content__sub']}>Email: thongtin@tpirr.vn  - tiepnhan@tpirr.vn </div>
           </div>
           <div className={styles['content-mid']}>
             <div className={styles['content-mid__icon-toan-phat']}>
@@ -70,7 +70,7 @@ const Footer = () => {
               Hotline 24/7: <span>092 191 6999</span>
             </div>
             <div className={styles['content__sub']}>
-              Email: info@tprw.vn - tiepnhan@tprw.vn
+              Email: thongtin@tprw.vn - tiepnhan@tprw.vn
             </div>
           </div>
         </div>
