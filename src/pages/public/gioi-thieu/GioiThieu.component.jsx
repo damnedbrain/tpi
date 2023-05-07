@@ -12,6 +12,7 @@ import { SixWord } from './six-word';
 import { FutureGoal } from './future-goal';
 import { NhanSu } from './nhan-su';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 const GioiThieu = () => {
   const { asPath } = useRouter();
@@ -33,6 +34,9 @@ const GioiThieu = () => {
 
   return (
     <>
+      <Head>
+        <title>TOAN PHAT - About Us</title>
+      </Head>
       <div className={styles['container']}>
         <Breadcrumb data={breadcrumb?.gioiThieu} />
         <GioiThieuTPG />

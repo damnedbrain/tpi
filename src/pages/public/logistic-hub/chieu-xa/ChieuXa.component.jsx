@@ -9,6 +9,7 @@ import { breadcrumb } from '@constants/language-option';
 import { VideoDescTitle } from 'components/own/video-desc-title';
 import { IrrdiationAccordion } from './irradiation-accordion';
 import { ChieuXaTab } from './chieu-xa-tab';
+import Head from 'next/head';
 
 
 const ChieuXa = () => {
@@ -17,6 +18,9 @@ const ChieuXa = () => {
 
   return (
     <>
+      <Head>
+        <title>TOAN PHAT - Irradiation</title>
+      </Head>
       <div className={styles['container']}>
         <Breadcrumb data={breadcrumb.foodIrradiation} />
         {/*<VideoTop />*/}

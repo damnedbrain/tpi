@@ -9,10 +9,14 @@ import { News } from './News';
 import { Question } from './Question';
 import { LocationVideo } from 'components/own/location-video';
 import { BannerPromo } from 'components/own/banner-promo';
+import Head from 'next/head';
 
 export default function Home({ news, images }) {
   return (
     <>
+      <Head>
+        <title>TOAN PHAT - Home</title>
+      </Head>
       
       <BannerPromo news={news} />
       <BestServices />

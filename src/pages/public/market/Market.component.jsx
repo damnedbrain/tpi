@@ -4,10 +4,14 @@ import { SubMarket } from './sub-market';
 import { Breadcrumb } from 'components/own/breadcrumb';
 import { breadcrumb } from '@constants/language-option';
 import { TopNewsCarousel } from './topnews-carousel';
+import Head from 'next/head';
 
 const Market = ({ news }) => {
   return (
     <>
+      <Head>
+      <title>TOAN PHAT - Market News</title>
+      </Head>
       <div className={styles['container']}>
         <Breadcrumb data={breadcrumb.market} />
 

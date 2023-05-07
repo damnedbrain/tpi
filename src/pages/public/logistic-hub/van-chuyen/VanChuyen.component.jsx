@@ -5,10 +5,14 @@ import Image from 'next/image';
 import comingSoon from '@assets/van-chuyen/coming_soon.png';
 import comingSoonBG from '@assets/van-chuyen/coming_soon_bg.png';
 import comingSoonText from '@assets/van-chuyen/coming_soon_text.png';
+import Head from 'next/head';
 
 const VanChuyen = () => {
   return (
     <>
+      <Head>
+      <title>TOAN PHAT - Logistics</title>
+      </Head>
       <div className={styles['container']}>
         <div className={styles['bg']}>
           <Image

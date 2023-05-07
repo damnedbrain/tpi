@@ -5,10 +5,14 @@ import { QuestionAndAnswerBanner } from './question-and-answer-banner';
 import { QuestionContent } from './question-content';
 import { NewsBlock } from 'components/own/news-block';
 import { breadcrumb } from '@constants/language-option';
+import Head from 'next/head';
 
 const QuestionAndAnswer = () => {
   return (
     <>
+      <Head>
+      <title>TOAN PHAT - Q&A</title>
+      </Head>
       <div className={styles['container']}>
         <Breadcrumb data={breadcrumb.questionAndAnswer} />
         <QuestionAndAnswerBanner />

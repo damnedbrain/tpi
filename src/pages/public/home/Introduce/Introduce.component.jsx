@@ -7,6 +7,7 @@ import introduce_img from '@assets/introduce/introduce-img.png';
 import arrow_right from '@assets/introduce/arrow-right.png';
 
 import Image from 'next/image';
+import Head from 'next/head';
 
 const Introduce = () => {
   const refContainer = useRef();
@@ -18,6 +19,9 @@ const Introduce = () => {
   useChooseLanguage(introduce, refArrLanguage);
   return (
     <>
+      <Head>
+        <title>TOAN PHAT - About Us</title>
+      </Head>
       <div className={styles['container']} ref={refContainer}>
         <div className={styles['introduce-img']}>
           <Image
