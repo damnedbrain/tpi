@@ -6,7 +6,7 @@
   justify-content: center;
   flex-direction: column;
   max-width: 960px;
-  width: 100%;
+  //width: 100%;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -73,6 +73,7 @@
     height: -moz-max-content;
     height: max-content;
     margin-top: 36px;
+    
     &.active-anim {
       & > :first-child {
         @include anim-move-right(20px, 1s, 0.3s);
@@ -125,6 +126,9 @@
         cursor: pointer;
       }
       
+    }
+    .sub-content:first-child {
+      margin-right: 120px;
     }
     .iconLineDesc {
       //max-height: 22px;
