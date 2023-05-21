@@ -2,7 +2,7 @@ import { Layout } from '@my-components';
 import { Home } from '@pages/public/home';
 import { createClient } from 'contentful';
 import ErrorPage from 'next/error';
-import cloudinary from 'cloudinary';
+// import cloudinary from 'cloudinary';
 
 export async function getStaticProps({ locale }) {
   try {
@@ -18,31 +18,31 @@ export async function getStaticProps({ locale }) {
       order: '-sys.createdAt',
     });
 
-    cloudinary.v2.config({
-      cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
-      api_key: process.env.CLOUDINARY_API_KEY,
-      api_secret: process.env.CLOUDINARY_API_SECRET,
-      secure: true,
-    });
+    // cloudinary.v2.config({
+    //   cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
+    //   api_key: process.env.CLOUDINARY_API_KEY,
+    //   api_secret: process.env.CLOUDINARY_API_SECRET,
+    //   secure: true,
+    // });
 
-    const resultsCloudinary = await cloudinary.v2.search
-      .expression(`folder:${process.env.CLOUDINARY_FOLDER}/*`)
-      .sort_by('public_id', 'asc')
-      .max_results(30)
-      .execute();
+    // const resultsCloudinary = await cloudinary.v2.search
+    //   .expression(`folder:${process.env.CLOUDINARY_FOLDER}/*`)
+    //   .sort_by('public_id', 'asc')
+    //   .max_results(30)
+    //   .execute();
 
-    let arrImage = [];
-    for (let result of resultsCloudinary.resources) {
-      arrImage.push({
-        src: result.url,
-        width: result.width,
-        height: result.height,
-        public_id: result.public_id,
-        format: result.format,
-        caption: result.filename,
-        thumbnailCaption: "",
-      });
-    }
+    // let arrImage = [];
+    // for (let result of resultsCloudinary.resources) {
+    //   arrImage.push({
+    //     src: result.url,
+    //     width: result.width,
+    //     height: result.height,
+    //     public_id: result.public_id,
+    //     format: result.format,
+    //     caption: result.filename,
+    //     thumbnailCaption: "",
+    //   });
+    // }
 
     if (!res) {
       return {
@@ -53,7 +53,7 @@ export async function getStaticProps({ locale }) {
     return {
       props: {
         news: res.items,
-        images: arrImage,
+        // images: arrImage,
       },
     };
   } catch (error) {
@@ -62,10 +62,10 @@ export async function getStaticProps({ locale }) {
   }
 }
 
-export default function HomePage({ news, images }) {
+export default function HomePage({ news }) {
   return (
     <Layout>
-      <Home news={news} images={images} />
+      <Home news={news} />
     </Layout>
   );
 }

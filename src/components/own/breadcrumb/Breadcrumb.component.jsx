@@ -11,7 +11,7 @@ import { RoutePages } from '@constants/router';
 const defaultData = [
   {
     locale: 'vi',
-    sub: [{ path: '#', title: 'Giới thiệu về TOAN PHAT GROUP' }],
+    sub: [{ path: '#', title: 'Giới thiệu về TOANPHAT GROUP' }],
   },
 ];
 

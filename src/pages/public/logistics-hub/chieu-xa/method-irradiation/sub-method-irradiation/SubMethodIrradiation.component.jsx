@@ -5,7 +5,7 @@ import { SubMethodStep } from './sub-method-step';
 import { subMethodIrradiation } from '@constants/language-option';
 import { useObserverItem } from 'components/hook/useObserverItem';
 import { useChooseLanguage } from 'components/hook/useChooseLanguage';
-import method_image from '@assets/logistic-hub/method-image.png';
+import method_image from '@assets/Logistics-hub/method-image.png';
 
 const SubMethodIrradiation = () => {
   const refContainer = useRef();

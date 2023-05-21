@@ -6,7 +6,7 @@ import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 import timeline_img from '@assets/gioi-thieu/TPG_timeline.png';
 
 import Image from 'next/image';
-const TimelineTitle = 'Lịch sử phát triển TOAN PHAT GROUP';
+const TimelineTitle = 'Lịch sử phát triển TOANPHAT GROUP';
 
 const TimelineTPG = () => {
   const refContainer = useRef();

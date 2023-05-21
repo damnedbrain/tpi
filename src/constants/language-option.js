@@ -36,10 +36,10 @@ export const headerMenu = [
       //   link: '',
       // },
 
-      //{ title: 'Logistic HUB', status: '', link: RoutePages.LOGISTIC_HUB }, // new
+      //{ title: 'Logistics HUB', status: '', link: RoutePages.Logistics_HUB }, // new
       {
         //Binh add
-        title: 'Logistic HUB',
+        title: 'Logistics HUB',
         sub: [
           {
             title: 'Chiếu xạ',
@@ -54,7 +54,7 @@ export const headerMenu = [
           {
             title: 'Vận chuyển',
             status: 'sub',
-            link: RoutePages.LOGISTIC_HUB,
+            link: RoutePages.Logistics_HUB,
           },
         ],
         status: 'wrapper',
@@ -130,7 +130,7 @@ export const headerMenu = [
 
       {
         //Binh add
-        title: 'Logistic HUB',
+        title: 'Logistics HUB',
         sub: [
           {
             title: 'Irradiation',
@@ -143,9 +143,9 @@ export const headerMenu = [
             link: RoutePages.COLD_STORAGE,
           },
           {
-            title: 'Logistics',
+            title: 'Logisticss',
             status: 'sub',
-            link: RoutePages.LOGISTIC_HUB,
+            link: RoutePages.Logistics_HUB,
           },
         ],
         status: 'wrapper',
@@ -231,8 +231,8 @@ export const bestServices = [
       },
       {
         title: 'Vận Chuyển',
-        desc: ` Chúng tôi hướng đến trở thành một Trung tâm Logistic với đầy đủ chức năng: Chiếu xạ - Lưu trữ - Vận chuyển, nhằm tối ưu chi phí, tạo đòn bẩy cạnh tranh cho hoạt động xuất khẩu Nông - Thủy sản.`,
-        linksrc: RoutePages.LOGISTIC_HUB,
+        desc: ` Chúng tôi hướng đến trở thành một Trung tâm Logistics với đầy đủ chức năng: Chiếu xạ - Lưu trữ - Vận chuyển, nhằm tối ưu chi phí, tạo đòn bẩy cạnh tranh cho hoạt động xuất khẩu Nông - Thủy sản.`,
+        linksrc: RoutePages.Logistics_HUB,
       },
     ],
   },
@@ -765,7 +765,7 @@ export const foodIrradiationSystem = [
     title: 'Chiếu xạ',
     desc: `TPG là một trong những đơn vị tiên phong ứng dụng cả 03 công nghệ chiếu xạ tiên tiến nhất hiện nay: Cobalt-60, E-Beam, X-ray. Mỗi công nghệ có những đặc tính riêng nhưng đều đảm bảo được tính an toàn cho các thực phẩm và hàng hóa khi chiếu xạ. Nhờ ứng dụng công nghệ hiện đại, TPG đẩy nhanh tiến độ xử lý hàng hóa chiếu xạ, nâng cao chất lượng dịch vụ, giảm thời gian chờ đợi và tối ưu hóa chi phí cho khách hàng.
     
-    Đặc biệt, TPG tự hào là đơn vị chiếu xạ đã thành công trong việc sản xuất, lắp đặt dây chuyền cơ khí, phần mềm điều khiển cho hệ thống chiếu xạ Cobalt-60, thực hiện bởi đội ngũ của công ty 100% người Việt Nam được Cục An toàn Bức xạ và Hạt nhân (Bộ Khoa học Công nghệ Việt Nam) cấp phép. Đồng thời được APHIS (USDA) công nhận đủ điều kiện thực hiện chiếu xạ trái cây tươi sang thị trường Hoa Kỳ.
+    Đặc biệt, TPG tự hào là đơn vị chiếu xạ đã thành công trong việc sản xuất, lắp đặt dây chuyền cơ khí, phần mềm điều khiển cho hệ thống chiếu xạ Cobalt-60, thực hiện bởi đội ngũ của công ty 100% người Việt Nam được Cục An toàn Bức xạ và Hạt nhân (Bộ Khoa học và Công nghệ Việt Nam) cấp phép. Đồng thời được APHIS (USDA) công nhận đủ điều kiện thực hiện chiếu xạ trái cây tươi sang thị trường Hoa Kỳ.
 
     Với sự kết hợp của cả ba công nghệ, cùng việc không ngừng mở rộng nghiên cứu phát triển, TPG đã ứng dụng đa dạng hóa vào các mặt hàng chiếu xạ, đáp ứng tối đa nhu cầu của khách hàng và khẳng định vị thế vững mạnh trên thị trường.`,
     subDesc: [
@@ -968,19 +968,19 @@ export const subMethodIrradiation = [
   },
 ];
 
-export const logisticsAndSocial = [
+export const LogisticssAndSocial = [
   {
     locale: 'vi',
     sub: [
       {
         title: 'Vận chuyển',
-        desc: `Với định hướng trở thành một trung tâm logistics với đầy đủ chức năng: vận tải - phân phối - lưu trữ - chiếu xạ. Trong tương lai kho lạnh Toàn Phát sẽ kết hợp chặt chẽ với các doanh nghiệp vận chuyển lạnh để có thể đáp ứng tối đa nhu cầu của khách hàng tạo dựng chuỗi cung ứng khép kín hiện đại nhất.
+        desc: `Với định hướng trở thành một trung tâm Logisticss với đầy đủ chức năng: vận tải - phân phối - lưu trữ - chiếu xạ. Trong tương lai kho lạnh Toàn Phát sẽ kết hợp chặt chẽ với các doanh nghiệp vận chuyển lạnh để có thể đáp ứng tối đa nhu cầu của khách hàng tạo dựng chuỗi cung ứng khép kín hiện đại nhất.
 Một kho lạnh đạt chuẩn.
 Cung ứng xe tải đông lạnh riêng để vận chuyển hàng hóa.`,
       },
       {
         title: 'Phân phối',
-        desc: `Hệ thống kho lạnh Toàn Phát định hướng phát triển trở thành một trung tâm phân phối logistics với đầy đủ chức năng đáp ứng hầu hết nhu cầu của khách hàng.
+        desc: `Hệ thống kho lạnh Toàn Phát định hướng phát triển trở thành một trung tâm phân phối Logisticss với đầy đủ chức năng đáp ứng hầu hết nhu cầu của khách hàng.
 Nhiều dịch vụ đa dạng: vận chuyển, bốc xếp, dán nhãn, đóng gói hàng nhỏ lẻ, xử lý đơn hàng, giao nhận.
 Nhập hàng an toàn, nhanh chóng, phục vụ tốt.
 Có khu vực riêng để xử lý đơn hàng, áp dụng tính công nghệ cao.
@@ -993,13 +993,13 @@ Cầu nối giữa nhà cung cấp và khách hàng`,
     sub: [
       {
         title: 'Transport',
-        desc: `With the orientation to become a logistics center with full functions: transport - distribution - storage - irradiation. In the future, Toan Phat cold storage will work closely with cold transport businesses to be able to meet the needs of customers to create the most modern closed supply chain.
+        desc: `With the orientation to become a Logisticss center with full functions: transport - distribution - storage - irradiation. In the future, Toan Phat cold storage will work closely with cold transport businesses to be able to meet the needs of customers to create the most modern closed supply chain.
 A standard cold storage.
 Provide separate refrigerated trucks to transport goods.`,
       },
       {
         title: 'Distribution',
-        desc: `Toan Phat cold storage system is oriented to become a logistics distribution center with full functions to meet most of the needs of customers.
+        desc: `Toan Phat cold storage system is oriented to become a Logisticss distribution center with full functions to meet most of the needs of customers.
 Various services: transportation, loading and unloading, labeling, packaging of small goods, order processing, delivery.
 Import goods safely, quickly, good service.
 There is a separate area for order processing, applying high technology.
@@ -1057,7 +1057,7 @@ export const newsBlock = [
       },
       {
         time: `05/23/2022`,
-        title: `Groundbreaking ceremony of Toan Phat cold storage - logistics`,
+        title: `Groundbreaking ceremony of Toan Phat cold storage - Logisticss`,
         desc: `The waitlist is an invaluable marketing tool when used appropriately. Here's how to`,
       },
       {
@@ -1077,7 +1077,7 @@ export const newsBlock = [
       },
       {
         time: `05/23/2022`,
-        title: `Groundbreaking ceremony of Toan Phat cold storage - logistics`,
+        title: `Groundbreaking ceremony of Toan Phat cold storage - Logisticss`,
         desc: `The waitlist is an invaluable marketing tool when used appropriately. Here's how to`,
       },
     ],
@@ -1089,7 +1089,7 @@ export const coldStorageTopContent = [
     locale: 'vi',
     title: 'Kho lạnh lưu trữ',
     desc: [
-      { descc: `Quy mô: 1.0 ha` },
+      { descc: `Quy mô: 10.000m²` },
       { descc: `Tổng vị trí: 12.000 pallet` },
       { descc: `Khả năng lưu trữ tối đa lên đến 12.000 tấn` },
       { descc: `Thời gian hoạt động: 24/7 ` },
@@ -1140,7 +1140,7 @@ export const coldStorageTopContent = [
     locale: 'en-US',
     title: 'Cold storage',
     desc: [
-      { descc: `Quy mô: 1.0 ha` },
+      { descc: `Quy mô: 10.000m²` },
       { descc: `Tổng vị trí: 12.000 pallet` },
       { descc: `Khả năng lưu trữ tối đa lên đến 12.000 tấn` },
       { descc: `Thời gian hoạt động: 24/7 ` },
@@ -1189,7 +1189,7 @@ export const LocationMapContent = [
   {
     locale: 'vi',
     title: 'Vị trí cửa ngõ',
-    desc: `Nhà máy Chiếu Xạ Toàn Phát và Kho Lạnh Toàn Phát được đặt tại Khu công nghiệp Phú An Thạnh (Bến Lức - Long An). Đây là vị trí vàng để kết nối đến các tuyến đường huyết mạch quốc gia, các “trục xương sống” trong hạ tầng giao thông của Đồng Bằng Sông Cửu Long. Đồng thời là tâm điểm kết nối đến hệ thống cảng sông, cảng biển và cảng hàng không quốc tế của khu vực. Lợi thế về vị trí sẽ giúp các doanh nghiệp tiết kiệm được chi phí lớn trong lộ trình vận chuyển hàng hoá đến cơ sở chiếu xạ, hay từ kho lạnh lưu trữ đến hệ thống cảng để xuất khẩu Nông - Thuỷ sản ra nước ngoài.`,
+    desc: `Nhà máy Chiếu Xạ Toàn Phát và Kho Lạnh Toàn Phát được đặt tại Khu công nghiệp Phú An Thạnh (Bến Lức - Long An). Đây là vị trí vàng để kết nối đến các tuyến đường huyết mạch quốc gia, các “trục xương sống” trong hạ tầng giao thông của Đồng bằng sông Cửu Long. Đồng thời là tâm điểm kết nối đến hệ thống cảng sông, cảng biển và cảng hàng không quốc tế của khu vực. Lợi thế về vị trí sẽ giúp các doanh nghiệp tiết kiệm được chi phí lớn trong lộ trình vận chuyển hàng hoá đến cơ sở chiếu xạ, hay từ kho lạnh lưu trữ đến hệ thống cảng để xuất khẩu Nông - Thuỷ sản ra nước ngoài.`,
     sub: [
       {
         desc: `Ngay nút giao Cao tốc Trung Lương - Bến Lức, cách Quốc lộ 1A: 3km`,
@@ -1525,7 +1525,7 @@ export const goalsMain = [
   },
 ];
 
-export const goalsLogisticsAndSocial = [
+export const goalsLogisticssAndSocial = [
   {
     locale: 'vi',
     sub: [
@@ -1611,6 +1611,7 @@ export const questionContent = [
 Bảo quản: Chiếu xạ có thể được sử dụng để tiêu diệt hoặc vô hoạt vi sinh vật gây hư hỏng và phân hủy thực phẩm, đồng thời kéo dài tuổi thọ của các loại thực phẩm.
 
 Kiểm soát côn trùng: Chiếu xạ có thể được sử dụng để tiêu diệt côn trùng bên trong hoặc trên bề mặt các loại trái cây. Chiếu xạ cũng giúp giảm các hoạt động kiểm soát sâu bệnh khác có thể gây hại cho trái cây.
+
 Ức chế sự nảy mầm và quá trình chín: Chiếu xạ có thể được sử dụng để ức chế sự nảy mầm (ví dụ như khoai tây) và trì hoãn quá trình chín của trái cây để tăng thời gian bảo quản.
 `,
       },
@@ -1619,7 +1620,7 @@ Kiểm soát côn trùng: Chiếu xạ có thể được sử dụng để tiê
         title: `Lợi ích của việc chiếu xạ thực phẩm?`,
         desc: `Thực phẩm chiếu xạ rất an toàn và mang lại nhiều lợi ích.
 
-Tính an toàn về mặt sức khỏe cũng như lợi ích về mặt kinh tế của thực phẩm chiếu xạ đã được các tổ chức có uy tín của Liên Hiệp Quốc như: Tổ chức Y tế thể giới (WHO), Tổ chức Lương nông (FAO) và Cơ quan Năng lượng nguyên`,
+Tính an toàn về mặt sức khỏe cũng như lợi ích về mặt kinh tế của thực phẩm chiếu xạ đã được các tổ chức có uy tín của Liên Hiệp Quốc như: Tổ chức Y tế Thế giới (WHO), Tổ chức Lương thực và Nông nghiệp (FAO) và Cơ quan Năng lượng Nguyên tử Quốc tế (IAEA)… chứng thực. `,
       },
       {
         number: 4,
@@ -1636,8 +1637,33 @@ Các nhà máy vận hành công nghệ chiếu xạ phải tuân theo quy trìn
       {
         number: 6,
         title: `Chiếu xạ có làm giảm các chất dinh dưỡng có trong thực phẩm?`,
-        desc: `Chiếu xạ không làm giảm giá trị dinh dưỡng mà vẫn giữ nguyên các vitamin acid amin và acid béo có trong thực phẩm… ủy ban hỗn hợp giữa FAO, WHO và IAEA, đã có nhiều nghiên cứu và khẳng định chiếu xạ không làm giảm các tố chất dinh dưỡng trong thực phẩm.`,
+        desc: `Chiếu xạ không làm giảm giá trị dinh dưỡng mà vẫn giữ nguyên các vitamin acid amin và acid béo có trong thực phẩm… Ủy ban hỗn hợp giữa FAO, WHO và IAEA đã có nhiều nghiên cứu và khẳng định chiếu xạ không làm giảm các tố chất dinh dưỡng trong thực phẩm.`,
       },
+      {
+    number: 7,
+    title: 'Vị trí của Nhà máy Chiếu xạ Toàn Phát và Kho Lạnh Toàn Phát có thuận tiện để vận chuyển hàng hóa xuất nhập khẩu?',
+    desc: 'Nhà máy Chiếu xạ Toàn Phát và Kho Lạnh Toàn Phát được đặt tại Khu công nghiệp Phú An Thạnh (Bến Lức - Long An). Đây là vị trí vàng để kết nối đến các tuyến đường huyết mạch quốc gia, các “trục xương sống” trong hạ tầng giao thông của Đồng bằng sông Cửu Long. Đồng thời là tâm điểm kết nối đến hệ thống cảng sông, cảng biển và cảng hàng không quốc tế của khu vực như: Cảng Hiệp Phước, Cảng Cát Lái, Cảng Cái Mép, Cảng Quốc tế Long An, Cảng hàng không quốc tế Tân Sơn Nhất... Lợi thế về vị trí sẽ giúp các doanh nghiệp thuận tiện và tiết kiệm được chi phí lớn trong lộ trình vận chuyển hàng hoá để xuất khẩu Nông - Thuỷ sản ra nước ngoài.',
+  },
+  {
+    number: 8,
+    title: 'Khả năng lưu trữ tối đa của Kho Lạnh Toàn Phát là bao nhiêu?',
+    desc: 'Với quy mô 10.000m2, Kho lạnh Toàn Phát sở hữu hệ thống lưu trữ đạt tiêu chuẩn quốc tế có tổng vị trí 12.000 pallet tương đương với sức chứa tối đa lên đến 12.000 tấn.',
+  },
+  {
+    number: 9,
+    title: 'Nhiệt độ lưu trữ của Kho Lạnh Toàn Phát như thế nào?',
+    desc: 'Nhiệt độ lưu trữ từ -20oC (+/-2oC) cùng với kho hạ độ -35oC, Kho Lạnh Toàn Phát phù hợp để lưu trữ nhiều loại hàng hóa, thực phẩm và đảm bảo an toàn chất lượng tối đa trong quá trình lưu kho.',
+  },
+  {
+    number: 10,
+    title: 'Các dịch vụ tại Kho Lạnh Toàn Phát là gì?',
+    desc: 'Ngoài dịch vụ chính là lưu trữ nhiệt lạnh, Kho Lạnh Toàn Phát cung cấp các dịch vụ bổ trợ đa dạng khác như: đóng gói, dán tem, thay bao bì, phân loại hàng hóa, quấn PE… với mức phí cạnh tranh nhất để phục vụ tối đa các nhu cầu của khách hàng.',
+  },
+  {
+    number: 11,
+    title: 'Thời gian hoạt động của Nhà máy Chiếu xạ Toàn Phát và Kho Lạnh Toàn Phát như thế nào?',
+    desc: 'Nhà máy Chiếu xạ Toàn Phát và Kho Lạnh Toàn Phát hoạt động 24/7 kể cả các ngày Lễ Tết, Quý Khách hàng có nhu cầu tư vấn, đăng ký sử dụng dịch vụ chiếu xạ và lưu trữ kho lạnh vui lòng liên hệ Hotline 093 100 0001 hoặc 092 191 6999.',
+  },
     ],
   },
   {
@@ -1684,6 +1710,31 @@ Factories operating irradiation technology must follow a very strict and safe te
         title: `Does irradiation reduce the nutrients present in food?`,
         desc: `Irradiation does not reduce the nutritional value, but still preserves the vitamins, amino acids and fatty acids found in food… Joint committee between FAO, WHO and IAEA, there have been many studies and confirmed that irradiation does not reduce the nutrients in food.`,
       },
+      {
+    number: 7,
+    title: 'Vị trí của Nhà máy Chiếu xạ Toàn Phát và Kho Lạnh Toàn Phát có thuận tiện để vận chuyển hàng hóa xuất nhập khẩu?',
+    desc: 'Nhà máy Chiếu xạ Toàn Phát và Kho Lạnh Toàn Phát được đặt tại Khu công nghiệp Phú An Thạnh (Bến Lức - Long An). Đây là vị trí vàng để kết nối đến các tuyến đường huyết mạch quốc gia, các “trục xương sống” trong hạ tầng giao thông của Đồng bằng sông Cửu Long. Đồng thời là tâm điểm kết nối đến hệ thống cảng sông, cảng biển và cảng hàng không quốc tế của khu vực như: Cảng Hiệp Phước, Cảng Cát Lái, Cảng Cái Mép, Cảng Quốc tế Long An, Cảng hàng không quốc tế Tân Sơn Nhất... Lợi thế về vị trí sẽ giúp các doanh nghiệp thuận tiện và tiết kiệm được chi phí lớn trong lộ trình vận chuyển hàng hoá để xuất khẩu Nông - Thuỷ sản ra nước ngoài.',
+  },
+  {
+    number: 8,
+    title: 'Khả năng lưu trữ tối đa của Kho Lạnh Toàn Phát là bao nhiêu?',
+    desc: 'Với quy mô 10.000m2, Kho lạnh Toàn Phát sở hữu hệ thống lưu trữ đạt tiêu chuẩn quốc tế có tổng vị trí 12.000 pallet tương đương với sức chứa tối đa lên đến 12.000 tấn.',
+  },
+  {
+    number: 9,
+    title: 'Nhiệt độ lưu trữ của Kho Lạnh Toàn Phát như thế nào?',
+    desc: 'Nhiệt độ lưu trữ từ -20oC (+/-2oC) cùng với kho hạ độ -35oC, Kho Lạnh Toàn Phát phù hợp để lưu trữ nhiều loại hàng hóa, thực phẩm và đảm bảo an toàn chất lượng tối đa trong quá trình lưu kho.',
+  },
+  {
+    number: 10,
+    title: 'Các dịch vụ tại Kho Lạnh Toàn Phát là gì?',
+    desc: 'Ngoài dịch vụ chính là lưu trữ nhiệt lạnh, Kho Lạnh Toàn Phát cung cấp các dịch vụ bổ trợ đa dạng khác như: đóng gói, dán tem, thay bao bì, phân loại hàng hóa, quấn PE… với mức phí cạnh tranh nhất để phục vụ tối đa các nhu cầu của khách hàng.',
+  },
+  {
+    number: 11,
+    title: 'Thời gian hoạt động của Nhà máy Chiếu xạ Toàn Phát và Kho Lạnh Toàn Phát như thế nào?',
+    desc: 'Nhà máy Chiếu xạ Toàn Phát và Kho Lạnh Toàn Phát hoạt động 24/7 kể cả các ngày Lễ Tết, Quý Khách hàng có nhu cầu tư vấn, đăng ký sử dụng dịch vụ chiếu xạ và lưu trữ kho lạnh vui lòng liên hệ Hotline 093 100 0001 hoặc 092 191 6999.',
+  },
     ],
   },
 ];
@@ -1692,7 +1743,7 @@ export const breadcrumb = {
   gioiThieu: [
     {
       locale: 'vi',
-      sub: [{ path: '#', title: 'Giới thiệu về TOAN PHAT GROUP' }],
+      sub: [{ path: '#', title: 'Giới thiệu về TOANPHAT GROUP' }],
     },
     {
       locale: 'en-US',
@@ -1703,14 +1754,14 @@ export const breadcrumb = {
     {
       locale: 'vi',
       sub: [
-        { path: '#', title: 'Logistic HUB' },
+        { path: '#', title: 'Logistics HUB' },
         { path: '#', title: 'Chiếu xạ' },
       ],
     },
     {
       locale: 'en-US',
       sub: [
-        { path: '#', title: 'Logistic HUB' },
+        { path: '#', title: 'Logistics HUB' },
         { path: '#', title: 'Irradiation' },
       ],
     },
@@ -1729,14 +1780,14 @@ export const breadcrumb = {
     {
       locale: 'vi',
       sub: [
-        { path: '#', title: 'Logistic HUB' },
+        { path: '#', title: 'Logistics HUB' },
         { path: '#', title: 'Kho lạnh lưu trữ' },
       ],
     },
     {
       locale: 'en-US',
       sub: [
-        { path: '#', title: 'Logistic HUB' },
+        { path: '#', title: 'Logistics HUB' },
         { path: '#', title: 'Cold storage' },
       ],
     },

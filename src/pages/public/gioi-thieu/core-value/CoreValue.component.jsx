@@ -10,12 +10,12 @@ const title1 = `Tầm nhìn - sứ mệnh`;
 const title2 = `Giá trị cốt lõi`;
 
 const subTitle1 = 'Tầm nhìn:';
-/*const desc1 = `TPG hướng đến mục tiêu trở thành Trung tâm Logistic hiện đại, thông minh với đầy đủ 03 chức năng: Chiếu xạ - Lưu trữ - Vận chuyển tại khu vực Đồng Bằng Sông Cửu Long.
+/*const desc1 = `TPG hướng đến mục tiêu trở thành Trung tâm Logistics hiện đại, thông minh với đầy đủ 03 chức năng: Chiếu xạ - Lưu trữ - Vận chuyển tại khu vực Đồng bằng sông Cửu Long.
 
 Trở thành đối tác tin cậy của các doanh nghiệp xuất khẩu Nông - Thủy sản Việt Nam ra thị trường thế giới; mang đến những sản phẩm an toàn nhất cho cộng đồng xã hội; không ngừng nghiên cứu phát triển để chào đón, phục vụ các đối tác tiềm năng trong và ngoài nước. `;
 */
 const subTitle2 = 'Sứ mệnh:';
-const subDesc1 = 'TPG hướng đến mục tiêu trở thành Trung tâm Logistic hiện đại, thông minh với đầy đủ 03 chức năng: Chiếu xạ - Lưu trữ - Vận chuyển tại khu vực Đồng Bằng Sông Cửu Long.';
+const subDesc1 = 'TPG hướng đến mục tiêu trở thành Trung tâm Logistics hiện đại, thông minh với đầy đủ 03 chức năng: Chiếu xạ - Lưu trữ - Vận chuyển tại khu vực Đồng bằng sông Cửu Long.';
 const subDesc2 = 'Trở thành đối tác tin cậy của các doanh nghiệp xuất khẩu Nông - Thủy sản Việt Nam ra thị trường thế giới; mang đến những sản phẩm an toàn nhất cho cộng đồng xã hội; không ngừng nghiên cứu phát triển để chào đón, phục vụ các đối tác tiềm năng trong và ngoài nước.';
 
 const desc2 = `Trong quá trình phát triển, đội ngũ Cán bộ công nhân viên (CBCNV) của TPG luôn hành động và giữ vững 6 giá trị cốt lõi:

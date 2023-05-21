@@ -1,1 +1,1 @@
-export { default as LogisticsAndSocial } from './LogisticsAndSocial.component';
+export { default as LogisticssAndSocial } from './LogisticssAndSocial.component';

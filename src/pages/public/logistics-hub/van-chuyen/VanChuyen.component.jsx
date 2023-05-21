@@ -11,7 +11,7 @@ const VanChuyen = () => {
   return (
     <>
       <Head>
-      <title>TOAN PHAT - Logistics</title>
+      <title>TOAN PHAT - Logisticss</title>
       </Head>
       <div className={styles['container']}>
         <div className={styles['bg']}>
