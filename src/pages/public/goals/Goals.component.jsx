@@ -3,7 +3,7 @@ import styles from './Goals.module.scss';
 import { Breadcrumb } from 'components/own/breadcrumb';
 import { GoalsBanner } from './goals-banner';
 import { GoalsMain } from './goals-main';
-import { LogisticssAndSocial } from 'components/own/logisticss-and-social';
+import { LogisticssAndSocial } from 'components/own/logistics-and-social';
 import { goalsLogisticssAndSocial } from '@constants/language-option';
 import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 import { NewsBlock } from 'components/own/news-block';
