@@ -11,7 +11,10 @@ const LayoutHead = ({ SEOInfo }) => (
       name='viewport'
       content='minimum-scale=1, initial-scale=1, width=device-width'
     />
-    <link rel='icon' href='/favicon.ico' />``
+    <link rel='icon' href='/favicon.ico' />
+    <meta name='og:image' content='/favicon.ico' />
+    <meta itemProp='image' content='/favicon.ico' />
+    <meta property='og:image' content='/favicon.ico' />
     {/* <link href='/fonts/all.min.css' rel='stylesheet' /> */}
 
   

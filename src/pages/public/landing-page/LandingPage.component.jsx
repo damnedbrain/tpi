@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 import styles from './LandingPage.module.scss';
 import Image from 'next/image';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { RoutePages } from '@constants/router';
 import ToanPhat from '@assets/header/ToanPhat-Mobile-Icon.svg';
@@ -50,6 +51,12 @@ const LandingPage = () => {
 
   return (
     <>
+      <Head>
+        <title>TOAN PHAT</title>
+        <meta name='og:image' content='/favicon.ico' />
+        <meta itemProp='image' content='/favicon.ico' />
+        <meta property='og:image' content='/favicon.ico' />
+      </Head>
       <div className={styles['container']}>
         <video autoPlay muted loop className={styles['video']}>
           <source src={urlVideoDrive} type='video/mp4' />
