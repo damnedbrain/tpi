@@ -3,11 +3,11 @@ import styles from './LogisticssAndSocial.module.scss';
 
 import { NumberGeneralInfo } from 'components/own/number-general-info';
 
-const LogisticssAndSocial = ({ LogisticssAndSocial }) => {
+const LogisticsAndSocial = ({ LogisticsAndSocial }) => {
   return (
     <>
       <div className={styles['container']}>
-        {LogisticssAndSocial?.map((item, index) => (
+        {LogisticsAndSocial?.map((item, index) => (
           <div className={styles['content']} key={index}>
             <NumberGeneralInfo title={item.title} desc={item.desc} />
           </div>
@@ -16,4 +16,4 @@ const LogisticssAndSocial = ({ LogisticssAndSocial }) => {
     </>
   );
 };
-export default React.memo(LogisticssAndSocial);
+export default React.memo(LogisticsAndSocial);
