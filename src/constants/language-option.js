@@ -445,6 +445,74 @@ export const teamMember = [
   },
 ];
 
+export const certificate = [
+  {
+    locale: 'vi',
+    title: 'Đội ngũ nhân sự & Văn hóa doanh nghiệp',
+    titleMain: 'Chất lượng được bảo chứng Quốc tế',
+    desc: `Nhằm mục đích đảm bảo chất lượng, hiệu quả, an toàn trong mỗi dịch vụ cung cấp cho khách hàng, TOANPHAT GROUP luôn tuân thủ các nguyên tắc về ngành nghề hoạt động và chuẩn hóa mọi quy trình phù hợp với tiêu chuẩn quốc tế. Chất lượng và uy tín của TOANPHAT GROUP được bảo chứng bởi các cơ quan, tổ chức quốc tế.`,
+    sub: [
+      {
+        title: 'Tên',
+        desc: `Cục Kiểm dịch động thực vật (APHIS) trực thuộc Bộ Nông nghiệp Hoa Kỳ (USDA) công nhận Nhà máy Chiếu xạ Toàn Phát đủ điều kiện thực hiện chiếu xạ trái cây tươi sang thị trường Hoa Kỳ.`,
+      },
+      {
+        title: 'Tên',
+        desc: `Bureau Veritas công nhận Nhà máy Chiếu xạ Toàn Phát đạt tiêu chuẩn quốc tế HACCP (Hazard Analysis and Critical Control Points) về hệ thống quản lý chất lượng vệ sinh an toàn thực phẩm.`,
+      },
+      {
+        title: 'Tên',
+        desc: `Bureau Veritas công nhận Nhà máy Chiếu xạ Toàn Phát đạt tiêu chuẩn Hệ thống quản lý chất lượng quốc tế ISO 9001:2015`,
+      },
+      {
+        title: 'Tên',
+        desc: `Cục Kiểm dịch động thực vật (APHIS) trực thuộc Bộ Nông nghiệp Hoa Kỳ (USDA) công nhận Nhà máy Chiếu xạ Toàn Phát đủ điều kiện thực hiện chiếu xạ trái cây tươi sang thị trường Hoa Kỳ.`,
+      },
+      {
+        title: 'Tên',
+        desc: `Bureau Veritas công nhận Nhà máy Chiếu xạ Toàn Phát đạt tiêu chuẩn quốc tế HACCP (Hazard Analysis and Critical Control Points) về hệ thống quản lý chất lượng vệ sinh an toàn thực phẩm.`,
+      },
+      {
+        title: 'Tên',
+        desc: `Bureau Veritas công nhận Nhà máy Chiếu xạ Toàn Phát đạt tiêu chuẩn Hệ thống quản lý chất lượng quốc tế ISO 9001:2015 `,
+      },
+    ],
+  },
+  {
+    locale: 'en-US',
+    title: 'Our team',
+    titleMain: 'Our team member is ready to help our clients!',
+    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed amet,
+            consequat egestas dictum posuere pellentesque fermentum.`,
+    sub: [
+      {
+        title: 'Name goes here',
+        desc: `Tittle goes here`,
+      },
+      {
+        title: 'Name goes here',
+        desc: `Tittle goes here`,
+      },
+      {
+        title: 'Name goes here',
+        desc: `Tittle goes here`,
+      },
+      {
+        title: 'Name goes here',
+        desc: `Tittle goes here`,
+      },
+      {
+        title: 'Name goes here',
+        desc: `Tittle goes here`,
+      },
+      {
+        title: 'Name goes here',
+        desc: `Tittle goes here`,
+      },
+    ],
+  },
+];
+
 export const leaderIndustrial = [
   {
     locale: 'vi',

@@ -8,6 +8,7 @@ import { OurProject } from './OurProject';
 import { News } from './News';
 import { Question } from './Question';
 import { LocationVideo } from 'components/own/location-video';
+import { Certificate } from './Certificate';
 import { BannerPromo } from 'components/own/banner-promo';
 import Head from 'next/head';
 
@@ -23,6 +24,7 @@ export default function Home({ news, images }) {
       {/* <LocationVideo /> */}
       <News news={news} />
       <TeamMember />
+      <Certificate />
       <LeaderIndustrial />
       <TrustedBy />
       {
