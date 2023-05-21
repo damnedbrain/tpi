@@ -1,5 +1,5 @@
 import { Layout } from '@my-components';
-import { ColdStorage } from '@pages/public/Logistics-hub/cold-storage';
+import { ColdStorage } from '@pages/public/logistics-hub/cold-storage';
 import { createClient } from 'contentful';
 
 export async function getStaticProps({ locale }) {
