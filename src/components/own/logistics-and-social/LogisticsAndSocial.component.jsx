@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './LogisticssAndSocial.module.scss';
+import styles from './LogisticsAndSocial.module.scss';
 
 import { NumberGeneralInfo } from 'components/own/number-general-info';
 
