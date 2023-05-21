@@ -36,7 +36,7 @@ const Footer = () => {
               />
             </div>
             <div className={styles['content-mid-social']}>
-              <div className={styles['content-mid-social__social-icon']}>
+              {/* <div className={styles['content-mid-social__social-icon']}>
               <Link href='https://www.facebook.com/kholanhtoanphat/' passHref>
                 <Image
                   src={socialFacebook}
@@ -48,7 +48,7 @@ const Footer = () => {
                   quality={100}
                 />
                 </Link>
-              </div>
+              </div> */}
               <div className={styles['content-mid-social__social-icon']}>
               <Link href='https://www.youtube.com/channel/UCJoEaA2uVz0YXs2iWCanQOA' passHref>
                 <Image
