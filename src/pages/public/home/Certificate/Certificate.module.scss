@@ -120,6 +120,7 @@
         width: 384px;
         height: 100a;
         max-height: 436px;
+        box-shadow: 0 2px 4px rgba(36,36,36,.7);
         @include responsive-size(screen-m) {
           width: 300px;
           margin-right: 2px;
