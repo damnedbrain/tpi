@@ -450,7 +450,7 @@ export const certificate = [
     locale: 'vi',
     title: 'Đội ngũ nhân sự & Văn hóa doanh nghiệp',
     titleMain: 'Chất lượng được bảo chứng Quốc tế',
-    desc: `Nhằm mục đích đảm bảo chất lượng, hiệu quả, an toàn trong mỗi dịch vụ cung cấp cho khách hàng, TOANPHAT GROUP luôn tuân thủ các nguyên tắc về ngành nghề hoạt động và chuẩn hóa mọi quy trình phù hợp với tiêu chuẩn quốc tế. Chất lượng và uy tín của TOANPHAT GROUP được bảo chứng bởi các cơ quan, tổ chức quốc tế.`,
+    desc: `Nhằm mục đích đảm bảo chất lượng, hiệu quả, an toàn trong mỗi dịch vụ cung cấp đến khách hàng, TOANPHAT GROUP luôn tuân thủ các nguyên tắc về ngành nghề hoạt động và chuẩn hóa mọi quy trình phù hợp với tiêu chuẩn quốc tế. Chất lượng, uy tín của TOANPHAT GROUP được bảo chứng bởi các cơ quan, tổ chức quốc tế.`,
     sub: [
       {
         title: 'Tên',
