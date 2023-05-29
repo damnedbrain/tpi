@@ -16,6 +16,13 @@ export async function getStaticProps({ locale }) {
       content_type: 'toanPhatMarketNews',
       locale: locale,
       order: '-sys.createdAt',
+      limit : 10
+    });
+
+    const resF = await client.getEntries({
+      content_type: 'toanPhatMarketNews',
+      locale: locale,
+      order: '-sys.createdAt',
     });
 
     if (!res) {
@@ -25,7 +32,7 @@ export async function getStaticProps({ locale }) {
     }
 
     return {
-      props: { news: res.items },
+      props: { news: res.items, newsF: resF.items },
       revalidate: 10,
     };
   } catch (error) {
@@ -34,12 +41,12 @@ export async function getStaticProps({ locale }) {
   }
 }
 
-export default function News({ news }) {
+export default function News({ news, newsF }) {
   // if (!news) return <ErrorPage statusCode={statusCode} />;
 
   return (
     <Layout>
-      <Market news={news} />
+      <Market news={news} newsF={newsF} currentPage ={1} />
     </Layout>
   );
 }

@@ -1,10 +1,12 @@
 {
     "configurations": [
+
+
         {
             "type": "chrome",
-            "name": "http://localhost:3000/chieu-xa/",
+            "name": "http://localhost:3000/thi-truong/pages/2/",
             "request": "launch",
-            "url": "http://localhost:3000/chieu-xa/"
+            "url": "http://localhost:3000/thi-truong/pages/2/"
         }
     ]
 }
