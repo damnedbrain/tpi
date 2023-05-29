@@ -24,8 +24,9 @@ export default function Home({ news, images }) {
       {/* <LocationVideo /> */}
       <News news={news} />
       <TeamMember />
-      <Certificate />
       <LeaderIndustrial />
+      <Certificate />
+      
       <TrustedBy />
       {
         //<Testimonial />
