@@ -12,7 +12,7 @@ import { Certificate } from './Certificate';
 import { BannerPromo } from 'components/own/banner-promo';
 import Head from 'next/head';
 
-export default function Home({ news, images }) {
+export default function Home({ news }) {
   return (
     <>
       <Head>
@@ -31,7 +31,7 @@ export default function Home({ news, images }) {
       {
         //<Testimonial />
       }
-      {/* <OurProject images={images} /> */}
+      <OurProject /> 
     </>
   );
 }
