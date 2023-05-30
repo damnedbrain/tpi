@@ -1330,7 +1330,8 @@ export const contactAConsultant = [
             },          
             {
               icon: mailIcon,
-              desc: `thongtin@tpirr.vn  | tiepnhan@tpirr.vn`,
+              desc: `thongtin@tpirr.vn
+              tiepnhan@tpirr.vn`,
             },
             {
               icon: addressIcon,
@@ -1364,7 +1365,8 @@ export const contactAConsultant = [
             },          
             {
               icon: mailIcon,
-              desc: `thongtin@tprw.vn | tiepnhan@tprw.vn`,
+              desc: `thongtin@tprw.vn
+              tiepnhan@tprw.vn`,
             },
             {
               icon: addressIcon,
