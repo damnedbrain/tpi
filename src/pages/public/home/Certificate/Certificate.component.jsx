@@ -20,15 +20,7 @@ const certs = [
   {
     image: cert3,
   },
-  {
-    image: cert1,
-  },
-  {
-    image: cert2,
-  },
-  {
-    image: cert3,
-  },
+ 
 ];
 
 const Certificate = () => {
@@ -54,6 +46,8 @@ const Certificate = () => {
       adaptiveHeight: true,
       lazyLoad: 'progressive',
       cssEase: 'ease-out',
+      responsive: true,
+
     }),
     []
   );
@@ -69,7 +63,7 @@ const Certificate = () => {
           <div className={styles['desc']}>{refContent.current?.desc}</div>
         </div>
         <div className={styles['member-wrapper']}>
-          <Slider {...settings}>
+          
             {refContent.current?.sub.map((item, index) => (
               <div className={styles['member']} key={index}>
                 <div className={styles['member__img']}>
@@ -90,10 +84,10 @@ const Certificate = () => {
                     
                     {item.desc}
                   </div>
-            </div>
+                </div>
               </div>
             ))}
-          </Slider>
+          
           {/* {refContent.current?.sub.map((item, index) => (
             <div className={styles['member']} key={index}>
               <div className={styles['member__img']}>
