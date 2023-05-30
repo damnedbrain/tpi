@@ -35,11 +35,11 @@ import { useState } from "react";
         width: 1582,
         height: 1186,
       },
-      {
-        src: '/gallery/6.png',
-        width: 1586,
-        height: 1189,
-      },
+      // {
+      //   src: '/gallery/6.png',
+      //   width: 1586,
+      //   height: 1189,
+      // },
       {
         src: '/gallery/7.png',
         width: 1585,
@@ -80,11 +80,11 @@ import { useState } from "react";
         width: 1706,
         height: 1190,
       },
-      {
-        src: '/gallery/15.png',
-        width: 1276,
-        height: 954,
-      },
+      // {
+      //   src: '/gallery/15.png',
+      //   width: 1276,
+      //   height: 954,
+      // },
       {
         src: '/gallery/16.png',
         width: 1277,
