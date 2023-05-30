@@ -21,7 +21,7 @@ export default function Home({ news, images }) {
       
       <BannerPromo news={news} />
       <BestServices />
-      {/* <LocationVideo /> */}
+      <LocationVideo />
       <News news={news} />
       <TeamMember />
       <LeaderIndustrial />
