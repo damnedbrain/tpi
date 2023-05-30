@@ -3,6 +3,7 @@ import styles from './LocationVideo.module.scss';
 import { useObserverItem } from 'components/hook/useObserverItem';
 import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 import { LocationMapContent } from '@constants/language-option';
+// import locationVideoT from "assets/location/location_map_video.mp4";
 
 const videoLocationInfo =
   'https://res.cloudinary.com/dy2gaer1o/video/upload/v1680506072/videos/location_map_video_a4mhx7.mp4';
@@ -49,7 +50,7 @@ const LocationVideo = () => {
         </div>
         <div className={styles['video']}>
           <video autoPlay muted loop className={styles['video']}>
-            <source src={videoLocationInfo} type='video/mp4' />
+            <source src="/location_map_video.mp4" type="video/mp4"/>
           </video>
         </div>
       </div>
