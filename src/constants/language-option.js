@@ -464,18 +464,7 @@ export const certificate = [
         title: 'Tên',
         desc: `Bureau Veritas công nhận Nhà máy Chiếu xạ Toàn Phát đạt tiêu chuẩn Hệ thống quản lý chất lượng quốc tế ISO 9001:2015`,
       },
-      {
-        title: 'Tên',
-        desc: `Cục Kiểm dịch động thực vật (APHIS) trực thuộc Bộ Nông nghiệp Hoa Kỳ (USDA) công nhận Nhà máy Chiếu xạ Toàn Phát đủ điều kiện thực hiện chiếu xạ trái cây tươi sang thị trường Hoa Kỳ.`,
-      },
-      {
-        title: 'Tên',
-        desc: `Bureau Veritas công nhận Nhà máy Chiếu xạ Toàn Phát đạt tiêu chuẩn quốc tế HACCP (Hazard Analysis and Critical Control Points) về hệ thống quản lý chất lượng vệ sinh an toàn thực phẩm.`,
-      },
-      {
-        title: 'Tên',
-        desc: `Bureau Veritas công nhận Nhà máy Chiếu xạ Toàn Phát đạt tiêu chuẩn Hệ thống quản lý chất lượng quốc tế ISO 9001:2015 `,
-      },
+      
     ],
   },
   {
