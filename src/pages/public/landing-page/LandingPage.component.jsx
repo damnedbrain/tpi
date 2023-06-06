@@ -92,11 +92,11 @@ const LandingPage = () => {
           <div
             className={styles['btn-wrapper__btn']}
             onClick={() => chooseLanguageAndRedirect('vi')}
-          >{`ENTER`}</div>
-          {/*<div
+          >{`Tiếng Việt`}</div>
+          <div
             className={styles['btn-wrapper__btn']}
             onClick={() => chooseLanguageAndRedirect('en-US')}
-      >{`ENG`}</div>*/}
+      >{`English`}</div>
         </div>
       </div>
     </>
