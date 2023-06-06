@@ -1820,7 +1820,7 @@ export const breadcrumb = {
     },
     {
       locale: 'en-US',
-      sub: [{ path: '#', title: 'About TPI' }],
+      sub: [{ path: '#', title: 'About TPG' }],
     },
   ],
   foodIrradiation: [
