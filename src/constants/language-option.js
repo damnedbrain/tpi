@@ -647,7 +647,7 @@ export const ourProject = [
   },
 ];
 
-export const news = [
+export const newsSection = [
   {
     locale: 'vi',
     title: 'Thị trường',
@@ -682,7 +682,7 @@ export const news = [
   },
   {
     locale: 'en-US',
-    title: 'Latest news',
+    title: 'Market',
     latestNews: {
       title: 'BEST PRACTICES',
       desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar 
@@ -1208,7 +1208,11 @@ export const coldStorageTopContent = [
         desc: `The refrigerated warehouse system is equipped with the most modern of preserves, i.e., refrigerated technology, which has been updated with the latest technical equipment. This equipment is regularly maintained and upgraded as a storage system, thereby always ensuring that the process of operating and handling is intelligent and lean, and will always meet the required standards.`,
       },
       {
-        title: `Flexibility in refrigerated warehouse rental service packages `,
+        title: `Cost-saving`,
+        desc: `Having its advantageous location and owning the refrigerated warehouse and the irradiation factory, TPG has helped many businesses to save on transport expenses as well as loading/unloading costs of goods in exporting Agricultural - Fisheries products. In particular, we always make a commitment for a reasonable price for companionship and bring the most optimal policies to customers.`,
+      },
+      {
+        title: `Flexibility in refrigerated warehouse rental service packages`,
         desc: `In order to facilitate the flexibility and optimize the operation of enterprises at the Toan Phat Refrigerated Warehouse, customers can register for a refrigerated storage rental package according to their specific needs. It is possible to rent for short-, medium- and long-term periods, depending on the actual weight of the goods or the required number of positions (or pallets).`,
       },
       {
@@ -1216,20 +1220,20 @@ export const coldStorageTopContent = [
         desc: `Besides the refrigerated warehouse rental service, the Toan Phat Refrigerated Warehouse also offers a wide range of additional services such as packaging, stamping, packaging change, goods classification, PE wrapping, etc., with the most competitive prices.`,
       },
       {
-        title: `Tốc độ xuất nhập hàng nhanh`,
-        desc: `Với hệ thống điều khiển và quản lý bằng phần mềm tối ưu; đội ngũ vận hành - xử lý dịch vụ lưu trữ được huấn luyện bài bản, luôn tuân thủ quy trình; Kho Lạnh Toàn Phát đảm bảo tốc độ xuất nhập hàng nhanh, chính xác, an toàn, đáp ứng cao các yêu cầu của khách hàng.`,
-      },
-      {
         title: `24/7 Operation`,
-        desc: `Hàng hóa của doanh nghiệp khi lưu trữ và bảo quản tại Kho Lạnh Toàn Phát sẽ được đảm bảo an toàn tối đa nhờ hệ thống quản lý và quy trình nghiêm ngặt. Nhiệt độ và độ ẩm của kho luôn được kiểm soát phù hợp, mỗi loại hàng được phân khu và khai thác ở các khu vực hợp lý để không làm ảnh hưởng đến chất lượng hàng hóa.`,
+        desc: `The Toan Phat Refrigerated Warehouse operates 24/7 with an express service implemented by a professional team to handle customer requests quickly as well as responding to questions as soon as possible. This will meet the maximizing of the needs of storage and importing and exporting goods at all necessary times.`,
       },
       {
-        title: `Gói thuê kho lạnh linh hoạt`,
-        desc: `Đề cao tiêu chí linh hoạt và tối ưu hóa cho doanh nghiệp, tại Kho Lạnh Toàn Phát khách hàng có thể đăng ký gói thuê kho lạnh lưu trữ dựa trên nhu cầu thực tế. Có thể thuê theo thời gian ngắn hạn, trung hạn, dài hạn và tính theo trọng lượng hàng hóa thực tế hoặc tính theo số lượng vị trí (pallet).`,
+        title: `Fast import-export speed`,
+        desc: `With the optimal software control and management system, the operation team which handles the storage service is well-trained, always cautious, and complies with the process. The Toan Phat Refrigerated Warehouse ensures fast, accurate, safe import and export speeds, always satisfying customer requirements.`,
       },
       {
-        title: `Dịch vụ bổ trợ đa dạng`,
-        desc: `Ngoài dịch vụ lưu trữ nhiệt lạnh, Kho Lạnh Toàn Phát cung cấp nhiều dịch vụ bổ trợ khác như: đóng gói, dán tem, thay bao bì, phân loại hàng hóa, quấn PE,… với mức phí cạnh tranh nhất.`,
+        title: `Quality assurance of goods`,
+        desc: `Due to the strict management system and procedures, enterprise goods shall be ensured optimum safety when stored and maintained in the Toan Phat Refrigerated Warehouse. The warehouse temperature and humidity shall be maintained in an appropriate manner to avoid affecting the quality of the stored goods. Moreover, all types of goods shall be classified and processed according to the necessary storage requirements.`,
+      },
+      {
+        title: `Integrity and transparency at work`,
+        desc: `Professional principles and ethics are always followed by the Toan Phat Refrigerated Warehouse. This includes honesty in commercial transactions, an accuracy of import and export data handling as well as clarity with regard to the implementation of customer procedures. In addition, it also adheres to the obligation of keeping confidential information and business activities for partners and customers.`,
       },
     ],
   },

@@ -3,8 +3,8 @@ import styles from './News.module.scss';
 //import { useObserverItem } from 'components/hook/useObserverItem';
 //import { LatestNews } from './LatestNews';
 //import { SubNews } from './SubNews';
-//import { useChooseLanguage } from 'components/hook/useChooseLanguage';
-//import { news } from '@constants/language-option';
+import { useChooseLanguage } from 'components/hook/useChooseLanguage';
+import { newsSection } from '@constants/language-option';
 import { SubNewsContent } from './SubNewsContent';
 import { BigNewsContent } from './BigNewsContent';
 
@@ -26,15 +26,15 @@ const action = [
 
 export default function News({ news }) {
   //const refContainer = useRef();
-  //const refLang = useRef();
+  const refLang = useRef();
 
   //useObserverItem(refContainer, styles);
-  //useChooseLanguage(news, refLang);
+  useChooseLanguage(newsSection, refLang);
 
   return (
     <>
       <div className={styles['main-container']}>
-        <div className={styles['title']}>Thị Trường</div>
+        <div className={styles['title']}>{refLang.current?.title}</div>
         <div className={styles['container']}>
           {/*<LatestNews
             title={refLang.current?.latestNews.title}
