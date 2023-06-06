@@ -1861,7 +1861,7 @@ export const breadcrumb = {
       locale: 'en-US',
       sub: [
         { path: '#', title: 'Logistics HUB' },
-        { path: '#', title: 'Cold storage' },
+        { path: '#', title: 'Refrigerated Warehouse' },
       ],
     },
   ],
