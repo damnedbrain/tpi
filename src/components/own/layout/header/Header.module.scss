@@ -384,7 +384,7 @@
         position: absolute;
         display: flex;
         top: 50%;
-        left: 50%;
+        left: 20%;
         transform: translate(-50%, 30%);
 
         align-items: center;
@@ -405,6 +405,7 @@
         @include responsive-size(screen-m) {
           padding-bottom: 16px;
           background: $White;
+          left: 50%;
         }
         &__sub-item {
           position: relative;
