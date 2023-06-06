@@ -2046,9 +2046,9 @@ export const footerInfo = [
   },
   {
     locale: 'en-US',
-    title1: `TOANPHAT
+    title1: `Toan Phat
 Irradiation`,
-    title2: `TOANPHAT
+    title2: `Toan Phat
 Refrigerated Warehouse`,
   },
 ];
