@@ -22,7 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 720px;
+    max-width: 960px;
     width: 100%;
     height: -webkit-max-content;
     height: -moz-max-content;
@@ -48,6 +48,9 @@
         font-size: 20px;
         line-height: 120%;
         margin-bottom: 24px;
+        white-space:pre-line;
+        text-align: center;
+        
       }
       &__sub {
         width: 100%;

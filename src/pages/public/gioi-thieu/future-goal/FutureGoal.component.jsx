@@ -1,11 +1,13 @@
 import React, { useRef } from 'react';
 import styles from './FutureGoal.module.scss';
 import { useObserverItem } from 'components/hook/useObserverItem';
+import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 import Image from 'next/image';
 import mem1 from '@assets/team-member/future-goal-1.png';
 import mem2 from '@assets/team-member/future-goal-2.png';
 import { NumberAndDesc } from 'components/own/number-and-desc';
 import { NumberGeneralInfo } from 'components/own/number-general-info';
+import { FutureGoalTPG } from '@constants/language-option';
 
 const title1 = `Phát triển kinh doanh`;
 const desc1 =
@@ -17,9 +19,11 @@ const desc3 = `Giá trị doanh nghiệp luôn gắn liền với những giá t
 const FutureGoal = () => {
   const refImageWrapper = useRef();
   const refMemberContent = useRef();
+  const refContent = useRef();
 
   useObserverItem(refImageWrapper, styles);
   useObserverItem(refMemberContent, styles);
+  useChooseLanguage(FutureGoalTPG, refContent);
   return (
     <>
       <div className={styles['container']}>
@@ -48,14 +52,14 @@ const FutureGoal = () => {
           </div>
         </div>
         <div className={styles['member-content']}>
-          <div className={styles['member-content__title']}>Mục tiêu phát triển</div>
+          <div className={styles['member-content__title']}>{refContent.current?.mainTitle}</div>
           <div
             className={styles['member-content__content']}
             ref={refMemberContent}
           >
-            <div className={styles['member-content__content___child']}><NumberGeneralInfo title={title1} desc={desc1} /></div>
-            <div className={styles['member-content__content___child']}><NumberGeneralInfo title={title2} desc={desc2} /></div>
-            <div className={styles['member-content__content___child']}><NumberGeneralInfo title={title3} desc={desc3} /></div>
+            <div className={styles['member-content__content___child']}><NumberGeneralInfo title={refContent.current?.title1} desc={refContent.current?.desc1} /></div>
+            <div className={styles['member-content__content___child']}><NumberGeneralInfo title={refContent.current?.title2} desc={refContent.current?.desc2} /></div>
+            <div className={styles['member-content__content___child']}><NumberGeneralInfo title={refContent.current?.title3} desc={refContent.current?.desc3} /></div>
           </div>
         </div>
       </div>

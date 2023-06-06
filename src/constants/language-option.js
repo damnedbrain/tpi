@@ -138,7 +138,7 @@ export const headerMenu = [
             link: RoutePages.CHIEU_XA,
           },
           {
-            title: 'Cold Storage',
+            title: 'Refrigerated Warehouse',
             status: 'sub',
             link: RoutePages.COLD_STORAGE,
           },
@@ -200,14 +200,18 @@ export const headerMenu = [
 export const introduce = [
   {
     locale: 'vi',
-    title: 'Lorem ipsum dolor sit amet, consectetur',
+    id:1,
+    title: 'Lịch sử phát triển TOANPHAT GROUP',
+    videoLink: '/TPG_timeline.mp4',
     desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem etiam
             luctus amet ultrices sapien id gravida iaculis mattis.`,
     button: `Chi tiết`,
   },
   {
     locale: 'en-US',
-    title: 'Lorem ipsum dolor sit amet, consectetur',
+    id:2,
+    title: 'Company Milestones and Achievement',
+    videoLink: '/TPG_timeline_ENG.mp4',
     desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem etiam
             luctus amet ultrices sapien id gravida iaculis mattis.`,
     button: `Detail`,
@@ -238,19 +242,19 @@ export const bestServices = [
   },
   {
     locale: 'en-US',
-    title: 'Provide Best Services Industries',
+    title: 'Outstanding services',
     sub: [
       {
-        title: 'Lorem ipsum',
-        desc: ` Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt`,
+        title: 'Irradiation service',
+        desc: `With a view to accelerating the processing of the merchandise, TPG is one of the leading companies on the market today; in order to be certain of providing a good quality of Agricultural – Fishing products, TPG applies all three irradiation technologies - namely, Cobalt-60, E-Beam and X- ray.`,
       },
       {
-        title: 'Lorem ipsum',
-        desc: ` Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt`,
+        title: 'Refrigerated Warehouse rental service',
+        desc: `The Toan Phat Refrigerated Warehouse has been constructed and operated by the TPG with a total of 12.000 pallets, enough to allow for a maximum capacity of 12.000 tons. The storage temperature ranges from -20 degrees Celsius (+/-2 degrees Celsius) to the coolest storage: -35 degrees Celsius.`,
       },
       {
-        title: 'Lorem ipsum',
-        desc: ` Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt`,
+        title: 'Transport service',
+        desc: `We aim to become a Logistics Center supplying a variety of services: Irradiation, Storage, and Transport, developing to optimize expenses, and creating a competitive avenue for exports of Agricultural and Aquacultural products.`,
       },
     ],
   },
@@ -289,31 +293,31 @@ export const sixWord = [
   },
   {
     locale: 'en-US',
-    title: 'Provide Best Services Industries',
+    title: '6 CORE VALUES ',
     sub: [
       {
-        title: 'Lorem ipsum',
-        desc: ` Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt`,
+        title: 'RESPECT',
+        desc: `Regardless of the circumstances, TPG always places a high importance on RESPECT to our company, our colleagues, our team, our partners, and our customers, and that is the practical guide for sustainable development and binding permanent relationships. Additionally, RESPECT is a fundamental element, meaning that each individual has a high self-esteem for his/her moral quality, honor, and the prestige that has built up the group on integrity and justice.`,
       },
       {
-        title: 'Lorem ipsum',
-        desc: ` Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt`,
+        title: 'PRESTIGE',
+        desc: `The PRESTIGE is the standard, and must be the top priority in the process of working with customers and partners by every member of TPG. In each service, we bring real values, transparency in payments, and professionalism in actions to ensure the quality, effectiveness, and prestigious reputation. `,
       },
       {
-        title: 'Lorem ipsum',
-        desc: ` Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt`,
+        title: 'HEART',
+        desc: `Every action we take from the bottom of the HEART is a measure of the stability of TPG. The heart and virtue appear in our services supplied to customers, the way we treat our staff, and also actions impacting on the social community’s development. When the actions we take are based on good values, we believe that we will create a solid foundation to reach new heights.`,
       },
       {
-        title: 'Lorem ipsum',
-        desc: ` Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt`,
+        title: 'MINDSET',
+        desc: `TPG chooses MINDSET as our competitive strength and our source of energy for creativity. We always encourage all our employees to research, to keep learning, and to discover the potential value of each person, thereby applying technology to management, operation, and our techniques, always with the aim of improving our value and the quality of our services.`,
       },
       {
-        title: 'Lorem ipsum',
-        desc: ` Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt`,
+        title: 'DEVELOPMENT',
+        desc: `We place an emphasis on creating motivation and promoting the enterprising spirit of the group of employees in the company, because developing and enabling each individual to give the effort to overcome limits and challenges is an essential condition to building a strong and successful DEVELOPMENT for the team.`,
       },
       {
-        title: 'Lorem ipsum',
-        desc: ` Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt`,
+        title: 'BENEFIT',
+        desc: `In view of our belief that the BENEFIT of customers, partners, and communities must be our first priority, it has always been the main point in serving, and then contributing to the common development of society. On the other hand, the board of TPG always values the benefits of each member who has accompanied and contributed to the development of the group. Each individual understands that having a progressive spirit, proactively cultivating internal strength and actively contributing is the best way to maintain their own interests.`,
       },
     ],
   },
@@ -373,7 +377,7 @@ export const trustedBy = [
   },
   {
     locale: 'en-US',
-    title: 'Trusted by the Top-tier Companies',
+    title: 'Trusted by our leading organisations',
   },
 ];
 
@@ -412,10 +416,9 @@ export const teamMember = [
   },
   {
     locale: 'en-US',
-    title: 'Our team',
-    titleMain: 'Our team member is ready to help our clients!',
-    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed amet,
-            consequat egestas dictum posuere pellentesque fermentum.`,
+    title: 'Human resources',
+    titleMain: 'Human resources',
+    desc: `Each person will be an integral part of the team, because even the smallest of contributions can be a key to a great achievement. At TPG, we respect the value of each individual, from leaders and senior managers with professional knowledge to young people with positive energy and eagerness to learn. A successful business will be a team that values common interests and seeks improvement. A respect of corporate culture is at the heart of all these values and positive results.`,
     sub: [
       {
         title: 'Name goes here',
@@ -469,35 +472,23 @@ export const certificate = [
   },
   {
     locale: 'en-US',
-    title: 'Our team',
-    titleMain: 'Our team member is ready to help our clients!',
-    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed amet,
-            consequat egestas dictum posuere pellentesque fermentum.`,
+    title: 'Đội ngũ nhân sự & Văn hóa doanh nghiệp',
+    titleMain: 'International Quality Assurance',
+    desc: `In order to ensure quality, efficiency, and safety in every service provided to customers, TOANPHAT GROUP always adheres to industry practices and standardizes all processes in accordance with international standards. The quality and reputation of TOANPHAT GROUP are guaranteed by international agencies and organizations.`,
     sub: [
       {
-        title: 'Name goes here',
-        desc: `Tittle goes here`,
+        title: 'Tên',
+        desc: `The Animal and Plant Health Inspection Service (APHIS) under the United States Department of Agriculture (USDA) recognizes Toan Phat Irradiation as eligible to perform irradiation on fresh fruits for the US market.`,
       },
       {
-        title: 'Name goes here',
-        desc: `Tittle goes here`,
+        title: 'Tên',
+        desc: `Bureau Veritas certifies that Toan Phat Irradiation meets the international standard of Hazard Analysis and Critical Control Points (HACCP) for food safety and hygiene management systems.`,
       },
       {
-        title: 'Name goes here',
-        desc: `Tittle goes here`,
+        title: 'Tên',
+        desc: `Bureau Veritas certifies that Toan Phat Irradiation meets the international standard of the ISO 9001:2015 Quality Management System.`,
       },
-      {
-        title: 'Name goes here',
-        desc: `Tittle goes here`,
-      },
-      {
-        title: 'Name goes here',
-        desc: `Tittle goes here`,
-      },
-      {
-        title: 'Name goes here',
-        desc: `Tittle goes here`,
-      },
+      
     ],
   },
 ];
@@ -516,37 +507,31 @@ export const leaderIndustrial = [
   },
   {
     locale: 'en-US',
-    title: 'We are leader in industiral market',
-    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed amet, 
-    consequat egestas dictum posuere pellentesque fermentum.`,
+    title: 'Corporate culture',
+    desc: `By engaging individuals with different personalities, creating a united, cohesive team and setting goals for the common development, we are building a corporate culture based on the following three criteria:`,
     subDesc: [
-      { desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.` },
-      { desc: `Metus, tristique faucibus sem sed aenean commodo velit.` },
-      { desc: `Enim varius pellentesque posuere mattis.` },
+      { desc: `Compatible diversity` },
+      { desc: `Consistent developments` },
+      { desc: `The ability to work together and to comprehend our values.` },
     ],
-    button: `Detail`,
+    button: `Read more`,
   },
 ];
 
 export const humanResource = [
   {
     locale: 'vi',
-    title: 'Đội ngũ nhân sự ',
+    title: 'Đội ngũ nhân sự',
     desc: `Mỗi cá nhân sẽ tạo nên tập thể, từng đóng góp nhỏ là tiền đề của những thành quả lớn. Tại TPG, chúng tôi trân trọng giá trị của từng cá nhân, từ lãnh đạo, quản lý cấp cao am hiểu kiến thức chuyên môn đến những người trẻ với nguồn năng lượng tích cực và ham học hỏi. Một tập thể luôn coi trọng lợi ích chung và hướng đến sự cải tiến sẽ tạo nên một doanh nghiệp phát triển vững mạnh. Và tất cả những giá trị, kết quả tích cực đó đều được hình thành từ việc coi trọng Văn hóa doanh nghiệp.`,
     subDesc: [{ desc: `` }, { desc: `` }, { desc: `` }],
     button: `Chi tiết`,
   },
   {
     locale: 'en-US',
-    title: 'We are leader in industiral market',
-    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed amet, 
-    consequat egestas dictum posuere pellentesque fermentum.`,
-    subDesc: [
-      { desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.` },
-      { desc: `Metus, tristique faucibus sem sed aenean commodo velit.` },
-      { desc: `Enim varius pellentesque posuere mattis.` },
-    ],
-    button: `Detail`,
+    title: 'Human resources',
+    desc: `Each individual bonds together to form a team and every little contribution is the foundation for great success. At TPG, we appreciate the value of every individual, whether they are a leader, a senior manager with professional qualifications, or young people having positive energy and enthusiasm for learning. A prosperous business must be built upon a team that always values common interests and aims for improvement. A respect of Corporate Culture is at the core of all those values and brings good results.`,
+    subDesc: [{ desc: `` }, { desc: `` }, { desc: `` }],
+    button: `Details`,
   },
 ];
 
@@ -656,10 +641,9 @@ export const ourProject = [
   },
   {
     locale: 'en-US',
-    title: 'Our project',
-    mainTitle: 'Latest project',
-    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed amet,
-          consequat egestas dictum posuere pellentesque fermentum.`,
+    title: 'Library',
+    mainTitle: 'Images Gallery',
+    desc: `Activities and services at Toan Phat Irradiation & Toan Phat Refrigerated Warehouse`,
   },
 ];
 
@@ -895,68 +879,75 @@ export const foodIrradiationSystem = [
   },
   {
     locale: 'en-US',
-    title: 'Chiếu xạ',
-    desc: `TPG là một trong những đơn vị tiên phong ứng dụng cả 3 công nghệ chiếu xạ`,
+    title: 'Irradiation ',
+    desc: `In order to speed up the handling of goods and ensure the highest quality for Agricultural and Fisheries, TPG is one of the leading companies which use all three irradiation technologies: Cobalt-60, E-Beam, and X-ray. Even though each type of technology has its own features, they must all ensure the safety of food and goods during the irradiation process. Through the application of modern technology, TPG accelerates the processing of irradiated goods, improves service quality, decreases waiting time, and optimizes costs for customers.
+    
+    In particular, TPG is proud to be one of the irradiation groups that has succeeded in manufacturing and installing mechanical lines and the controlling software for the Cobalt-60 irradiation system, which has been implemented by the company's team of 100% Vietnamese staffs and licensed by the Department of Radiation and Nuclear Safety (Ministry of Science and Technology of Vietnam). Additionally, our group has been recognized by APHIS (USDA) as being eligible to carry out irradiation for fresh fruits exported to the US market.
+    
+    Along with the consistent expansion of research and development, TPG has applied the combination of all three technologies in various ways into irradiation products in order to meet the needs of its customers and to guarantee its firm position in the market.`,
     subDesc: [
       {
-        title: 'Hệ thống máy chiếu xạ bằng nguồn Cobalt-60 sử dụng tia gamma',
+        title: 'Cobalt-60 irradiation system by gamma rays',
         eventKey: 'cobalt-60',
         imgSrc:
           'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680634971/chieuxaImgs/chieu-xa-system1_byvych.png',
-        desc: `Phương pháp chiếu xạ bằng tia gamma sử dụng bức xạ tạo ra bởi sự phân rã của đồng vị phóng xạ Cobalt-60. Những chất này phát ra các photon có năng lượng cao (1,17MeV và 1,33MeV), có khả năng xuyên thấu vào thực phẩm đến độ sâu vài chục cm, vậy nên đặc biệt thích hợp để xử lý các sản phẩm có mật độ cao. Quá trình chiếu xạ gamma được ứng dụng để khử trùng, xử lý hiệu quả nhiều loại sản phẩm khác nhau: thiết bị y tế, dược phẩm, mỹ phẩm, thực phẩm và thiết bị gia dụng…`,
-        midTitle: `Ưu điểm của phương pháp chiếu xạ bằng tia gamma`,
+        desc: `The gamma irradiation process is generated by the decay of the radioisotope Cobalt-60. These emit the resultant high energy photons (1.17MeV and 1.33MeV), which are able to penetrate food to a depth of several tens of centimeters, so they are especially suitable for handling products with a high density. Gamma irradiation is applied to sterilize and to handle many varieties of products effectively. Examples of these products include medical equipment, pharmaceuticals, cosmetics, food, and household appliances.`,
+        midTitle: `Advantages of Gamma-ray irradiation`,
         desc2: [
           {
-            descc: `Phương pháp thích hợp và an toàn để chiếu xạ hầu hết các loại thực phẩm`,
+            descc: `It is a suitable and safe irradiation method for most kinds of foods.`,
           },
           {
-            descc: `Có khả năng xuyên thấu rất cao (khả năng ion hóa mạnh trong môi trường vật chất.`,
+            descc: `It can achieve high dosages in product handling.`,
           },
           {
-            descc: `Thâm nhập tốt vào nhiều loại vật liệu, sản phẩm, bao bì, giúp xử lý hiệu quả các sản phẩm dày, mật độ cao và các gói hàng có tỷ trọn lớn.`,
+            descc: `It can still achieve independently of shape, temperature, and pressure and there will be no damage to the other products.`,
+          },
+          {
+            descc: `It can be effective in having a good penetration of high-density packages.`,
           },
         ],
       },
       {
         title:
-          'Hệ thống máy chiếu xạ bằng chùm tia điện tử (E-Beam) sử dụng chùm electron',
+          'E-Beam irradiation system by Electron beam',
         eventKey: 'e-beam',
         imgSrc:
           'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680634970/chieuxaImgs/chieu-xa-system2_t4jnwp.png',
-        desc: `Quá trình chiếu xạ bằng công nghệ E-beam sử dụng bức xạ ion hoá là electron năng lượng cao. Các electron được tạo ra bởi electron gun, được gia tốc bởi sóng cao tần qua cấu trúc cộng hưởng sử dụng nguồn điện. Electron có điện tích âm, khối lượng nhỏ do đó dễ dàng tương tác với các nguyên tử trong thực phẩm và gây ra phản ứng rất nhanh trên các phân tử hoặc vi sinh vật. `,
-        midTitle: `Ưu điểm của phương pháp chiếu xạ bằng chùm tia electron`,
+        desc: `The irradiation process by E-Beam technology uses ionizing radiation with high energy electrons. Electrons are generated by the Electron Gun, and then accelerated by high frequency waves through a resonance structure using an electrical source. Electrons have a negative charge and a small mass, so they easily interact with atoms in food and cause very rapid reactions on molecules or microorganisms.`,
+        midTitle: `Advantages of Electron beam irradiation`,
         desc2: [
           {
-            descc: `Tốc độ xử lý nhanh chóng và hiệu quả, tối ưu hóa thời gian chiếu xạ`,
+            descc: `There is a fast and efficient processing speed, optimizing irradiation time.`,
           },
-          { descc: `Có khả năng đáp ứng yêu cầu chiếu xạ sản lượng lớn` },
+          { descc: `It is capable of meeting irradiation requirements for large outputs.` },
           {
-            descc: `An toàn, không phát xạ, không còn dư lượng hóa chất trên các sản phẩm`,
+            descc: `There are only safe and nonradioactive residues on products after irradiation.`,
           },
           {
-            descc: `Sử dụng nguồn năng lượng điện tử an toàn và thân thiện với môi trường`,
+            descc: `E-beam irradiation uses electronic energy sources that are safe and friendly to the environment.`,
           },
         ],
       },
       {
-        title: 'Hệ thống máy chiếu xạ Bremsstrahlung (X-ray) sử dụng tia X',
+        title: 'Bremsstrahlung irradiation system by X-rays',
         eventKey: 'x-ray',
         imgSrc:
           'https://res.cloudinary.com/dy2gaer1o/image/upload/v1680634970/chieuxaImgs/chieu-xa-system2_t4jnwp.png',
-        desc: `Công nghệ chiếu xạ bằng tia X là một phương pháp được phát triển dựa trên công nghệ chiếu xạ bằng chùm tia điện tử. Electron được tạo ra trong thiết bị có năng lượng từ 5 đến 7,5 MeV. Các electron tương tác với tấm tantalum tạo ra Tia X - Bremsstrahlung (bức xạ hãm).`,
-        midTitle: `Ưu điểm của công nghệ chiếu xạ bằng tia X`,
+        desc: `The X-ray irradiation is a method that has been developed by using electron beams to irradiate. Electrons are generated in the device with energy from between 5MeV and 7.5MeV. Electrons interact with the Titanium plate to produce X-Rays in what is known as Bremsstrahlung (braking) radiation.`,
+        midTitle: `Advantages of X-ray irradiation technology`,
         desc2: [
           {
-            descc: `An toàn và hiệu quả cao trong việc xử lý nhiều loại sản phẩm với mật độ khác nhau.`,
+            descc: `The processing of irradiated products is quick and ensures standardization.`,
           },
           {
-            descc: `Cải thiện khả năng thâm nhập của năng lượng photon, tăng khả năng xuyên thấu qua thực phẩm (tương tự như gamma)`,
+            descc: `It Is a safe and highly effective way of handling a wide range of products with different densities.`,
           },
           {
-            descc: `Quá trình xử lý nhanh chóng và đạt chuẩn, thuận lợi cho quy mô từ thùng carton.`,
+            descc: `It improves the penetration of photon energy, increasing the penetration to products (similar to Gamma rays).`,
           },
           {
-            descc: `Tính linh hoạt cao, có khả năng xử lý các sản phẩm khác nhau với các yêu cầu về liều lượng chiếu xạ trong cùng một chu kỳ chiếu xạ.`,
+            descc: `It has a high flexibility, which can be used in the same irradiation cycle for a variety of products with different dose requirements.`,
           },
         ],
       },
@@ -986,18 +977,18 @@ export const productOfIrradiation = [
   },
   {
     locale: 'en-US',
-    title: 'Products irradiated at TPI:',
+    title: 'Irradiated products at Toan Phat Irradiation Factory',
     subDesc: [
-      { desc: 'Fresh fruits' },
-      { desc: 'Frozen fruits' },
-      { desc: 'Frozen fish' },
-      { desc: 'Processed food' },
+      { desc: 'Fresh fruit' },
+      { desc: 'Frozen fruit' },
+      { desc: 'Frozen seafood' },
+      { desc: 'Processed foods' },
       { desc: 'Medical equipment' },
-      { desc: 'Hand-mades' },
-      { desc: 'Bamboo, Wood' },
-      { desc: 'Cosmetic' },
-      { desc: 'Medicine' },
-      { desc: 'Jewelries' },
+      { desc: 'Handicrafts' },
+      { desc: 'Bamboo and other wooden products' },
+      { desc: 'Cosmetics and pharmaceuticals' },
+      { desc: 'Herbal medicine and oriental medicine' },
+      { desc: 'Gems' },
       { desc: 'Spices' },
       { desc: 'Pet food' },
     ],
@@ -1145,6 +1136,7 @@ export const coldStorageTopContent = [
   {
     locale: 'vi',
     title: 'Kho lạnh lưu trữ',
+    midTitle: ' Ưu thế vượt trội',
     desc: [
       { descc: `Quy mô: 10.000m²` },
       { descc: `Tổng vị trí: 12.000 pallet` },
@@ -1195,39 +1187,40 @@ export const coldStorageTopContent = [
   },
   {
     locale: 'en-US',
-    title: 'Cold storage',
+    title: 'Refrigerated Warehouse',
+    midTitle: 'Dominances',
     desc: [
-      { descc: `Quy mô: 10.000m²` },
-      { descc: `Tổng vị trí: 12.000 pallet` },
-      { descc: `Khả năng lưu trữ tối đa lên đến 12.000 tấn` },
-      { descc: `Thời gian hoạt động: 24/7 ` },
+      { descc: `Scale: 10.000m²` },
+      { descc: `Total of position: 12.000 pallets` },
+      { descc: `Maximum storage up to 12.000 tons` },
+      { descc: `Opening time: 24/7` },
       {
-        descc: `Nhiệt độ lưu trữ: -18 độ C (+/-3 độ C), có kho hạ độ: -35 độ C`,
+        descc: `Storage temperature: -20 degree Celsius (+/-2 degree Celsius), the coolest storage: - 35 degree Celsius.`,
       },
     ],
     sub: [
       {
-        title: `Vị trí cửa ngõ`,
-        desc: `Toạ lạc tại Lô A24-2, Đường Ngang 1, Khu công nghiệp Phú An Thạnh, xã An Thạnh, huyện Bến Lức, tỉnh Long An; Kho Lạnh Toàn Phát kết nối dễ dàng, nhanh chóng đến các trục đường huyết mạch, hệ thống cảng sông, cảng biển, cảng hàng không và các tỉnh thành lân cận. Nhờ đó giúp các doanh nghiệp thuận tiện trong việc vận chuyển hàng hóa khi xuất khẩu.`,
+        title: `Gateway Location`,
+        desc: `Located at Lot A24-2, Ngang 1 Road, Phu An Thanh Industrial Park, An Thanh Commune, Ben Luc District, Long An Province, which is a prime location to connect arterial roads with the riverport and seaport system to the international airport as well as neighboring provinces. As a result, a refrigerated warehouse will make it convenient for businesses in the transportation of cargo when they are exporting.`,
       },
       {
-        title: `Tiết kiệm chi phí`,
-        desc: `Lợi thế vị trí đắc địa cùng việc sở hữu đồng thời cả kho lạnh lưu trữ và nhà máy chiếu xạ, TPG giúp các doanh nghiệp xuất khẩu Nông - Thủy sản tiết kiệm chi phí vận chuyển, chi phí bốc dỡ khi xuất - nhập hàng hóa. Đặc biệt, chúng tôi luôn cam kết đồng hành về giá và mang đến những chính sách tối ưu nhất cho khách hàng.`,
+        title: `Investment of modern technology`,
+        desc: `The refrigerated warehouse system is equipped with the most modern of preserves, i.e., refrigerated technology, which has been updated with the latest technical equipment. This equipment is regularly maintained and upgraded as a storage system, thereby always ensuring that the process of operating and handling is intelligent and lean, and will always meet the required standards.`,
       },
       {
-        title: `Hoạt động 24/7`,
-        desc: `Kho lạnh Toàn Phát hoạt động 24/7, dịch vụ tốc hành, đội ngũ chuyên nghiệp luôn xử lý nhanh gọn các yêu cầu và thắc mắc của khách hàng; đáp ứng tối đa nhu cầu lưu trữ và xuất nhập hàng trong mọi thời điểm cần thiết.`,
+        title: `Flexibility in refrigerated warehouse rental service packages `,
+        desc: `In order to facilitate the flexibility and optimize the operation of enterprises at the Toan Phat Refrigerated Warehouse, customers can register for a refrigerated storage rental package according to their specific needs. It is possible to rent for short-, medium- and long-term periods, depending on the actual weight of the goods or the required number of positions (or pallets).`,
       },
       {
-        title: `Đầu tư công nghệ hiện đại`,
-        desc: `Hệ thống kho lạnh được đầu tư công nghệ hiện đại nhất về bảo quản - lưu trữ, trang thiết bị kỹ thuật cập nhật tiên tiến; thường xuyên bảo dưỡng, nâng cấp hệ thống kho; nhờ đó luôn đảm bảo quá trình xử lý vận hành thông minh, tinh gọn và đạt tiêu chuẩn.`,
+        title: `Variety of additional services `,
+        desc: `Besides the refrigerated warehouse rental service, the Toan Phat Refrigerated Warehouse also offers a wide range of additional services such as packaging, stamping, packaging change, goods classification, PE wrapping, etc., with the most competitive prices.`,
       },
       {
         title: `Tốc độ xuất nhập hàng nhanh`,
         desc: `Với hệ thống điều khiển và quản lý bằng phần mềm tối ưu; đội ngũ vận hành - xử lý dịch vụ lưu trữ được huấn luyện bài bản, luôn tuân thủ quy trình; Kho Lạnh Toàn Phát đảm bảo tốc độ xuất nhập hàng nhanh, chính xác, an toàn, đáp ứng cao các yêu cầu của khách hàng.`,
       },
       {
-        title: `Đảm bảo chất lượng hàng hóa`,
+        title: `24/7 Operation`,
         desc: `Hàng hóa của doanh nghiệp khi lưu trữ và bảo quản tại Kho Lạnh Toàn Phát sẽ được đảm bảo an toàn tối đa nhờ hệ thống quản lý và quy trình nghiêm ngặt. Nhiệt độ và độ ẩm của kho luôn được kiểm soát phù hợp, mỗi loại hàng được phân khu và khai thác ở các khu vực hợp lý để không làm ảnh hưởng đến chất lượng hàng hóa.`,
       },
       {
@@ -1277,18 +1270,35 @@ export const LocationMapContent = [
   },
   {
     locale: 'en-US',
-    title: 'Cold storage',
-    desc: `Cold storage system with a capacity of about 10,000 tons of goods.
-Toan Phat cold storage service brings many values to customers:`,
+    title: 'Gateway location',
+    desc: `Toan Phat Irradiation and the Toan Phat Refrigerated Warehouse are located in Phu An Thanh Industrial Park (Ben Luc - Long An). This is a prime location to link to the national arterial roads, which form the "backbone" of the transport infrastructure of the Mekong Delta. Furthermore, this is also the central point of connection with the river port and seaport system and the international airport in the region. Because of the advantageous location, enterprises can save on transport expenses when delivering cargo to the irradiation factories as well as from refrigerated warehouse to the port system for the export of agricultural - fishing products into foreign markets.`,
     sub: [
       {
-        desc: `No cost of construction, operation, warehouse management, saving investment costs`,
+        desc: `Turn right on the intersection of Trung Luong and Ben Luc Expressway, 3km from National Highway 1A`,
       },
       {
-        desc: `Be proactive in importing and exporting goods throughout (24/7).`,
+        desc: `To Hiep Phuoc Port: 35km`,
       },
       {
-        desc: `Be proactive in irradiating goods stored at the warehouse without additional shipping costs.`,
+        desc: `To Cat Lai Port: 40km`,
+      },
+      {
+        desc: `To Long An International Port: 40km`,
+      },
+      {
+        desc: `To Cai Mep Port: 95km`,
+      },
+      {
+        desc: `To Tan Son Nhat International Airport: 42km`,
+      },
+      {
+        desc: `Bordering with Binh Chanh district (HCMC)`,
+      },
+      {
+        desc: `To HCMC centre: 36km`,
+      },
+      {
+        desc: `This will directly connect to Ben Luc - Long Thanh highway very soon.`,
       },
     ],
   },
@@ -1385,26 +1395,23 @@ export const contactAConsultant = [
   },
   {
     locale: 'en-US',
-    title: 'Contact consultation',
-    desc: `Customers need advice from TPI, please fill in the information and a staff member will contact support within 24 hours.`,
-    username: { label: `Full name`, desc: `Enter your name here` },
-    email: { label: `Email`, desc: `Enter Email here` },
-    address: { label: `Address`, desc: `Enter your address here` },
-    typeProduct: { label: `Product Type`, desc: `Enter product type here` },
-    phone: {
-      label: `Consulting Services`,
-      desc: `Enter your phone number here`,
-    },
-    register: { title: `Register`, label1: `Irradiation`, label2: `warehouse` },
-    note: { label: `Note`, desc: `Enter a note here` },
-    button: `Send information`,
+    title: 'Contact Info',
+    desc: ``,
+    username: { label: `Họ tên`, desc: `Nhập họ tên vào đây` },
+    phone: { label: `Số điện thoại`, desc: `Nhập số điện thoại vào đây`,},
+    email: { label: `Email`, desc: `Nhập Email vào đây`,},
+    address: { label: `Địa chỉ`, desc: `Nhập địa chỉ vào đây` },
+    typeProduct: { label: `Loại hàng`, desc: `Nhập loại hàng vào đây` },
+    register: { title: `Đăng ký`, label1: `Chiếu xạ`, label2: `Gửi kho` },
+    note: { label: `Ghi chú`, desc: `Nhập ghi chú vào đây` },
+    button: `Gửi thông tin`,
     directContact: {
-      title: `Direct contact`,
+      title: `Liên hệ trực tiếp`,
       sub: [
         {
-          title: `Chiếu Xạ`,
+          title: `Irradiation`,
           desc: [
-            `Công ty TNHH Chiếu Xạ Toàn Phát`,          
+            `Toan Phat Irradiation Co., Ltd`,          
           ],
           desc2: [
             {
@@ -1412,20 +1419,23 @@ export const contactAConsultant = [
               desc: `1101846577`,
             },           
             {
-              icon: hotlineIcon,
+              icon: phoneIcon,
               desc: `092 452 3888 - 093 100 0001 `,
             },           
             {
-              icon: phoneIcon,
-              desc: `0272 391 6999`,
+              icon: hotlineIcon,
+              desc: `0272 378 6888`,
             },          
             {
               icon: mailIcon,
-              desc: `info@tprw.vn | tiepnhan@tprw.vn`,
+              desc: `thongtin@tpirr.vn
+              tiepnhan@tpirr.vn`,
             },
             {
               icon: addressIcon,
-              desc: `Lô A24-2, Đường Ngang 1, KCN Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,
+              desc: `Lot A24-1, Ngang 1 Road,
+              Phu An Thanh Industrial Park, An Thanh Commune
+              Ben Luc District, Long An Province.`,
             },
           ],
           button1: facebookButton,
@@ -1434,9 +1444,9 @@ export const contactAConsultant = [
           link2: item1_link2,
         },
         {
-          title: `Kho Lạnh`,
+          title: `Refrigerated Warehouse`,
           desc: [
-            `Công ty TNHH Toàn Phát - Kho Vận `,
+            `Toan Phat Logistics Co., Ltd `,          
           ],
           desc2: [
             {
@@ -1444,20 +1454,23 @@ export const contactAConsultant = [
               desc: `1101966433`,
             },           
             {
-              icon: hotlineIcon,
+              icon: phoneIcon,
               desc: `092 191 6999 - 093 100 0001`,
             },           
             {
-              icon: phoneIcon,
+              icon: hotlineIcon,
               desc: `0272 391 6999`,
             },          
             {
               icon: mailIcon,
-              desc: `info@tprw.vn | tiepnhan@tprw.vn`,
+              desc: `thongtin@tprw.vn
+              tiepnhan@tprw.vn`,
             },
             {
               icon: addressIcon,
-              desc: `Lô A24-2, Đường Ngang 1, KCN Phú An Thạnh, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An.`,
+              desc: `Lot A24-2, Ngang 1 Road,
+              Phu An Thanh Industrial Park, An Thanh Commune,
+              Ben Luc District, Long An Province.`,
             },
           ],
           button1: facebookButton,
@@ -1727,72 +1740,69 @@ Các nhà máy vận hành công nghệ chiếu xạ phải tuân theo quy trìn
   },
   {
     locale: 'en-US',
-    title: 'Q&A',
-    desc: `Detailed information about TPI`,
+    title: 'Q&A – Questions & Answers',
+    desc: `Information of TPG`,
     sub: [
       {
         number: 1,
         title: `What is irradiation?`,
-        desc: `Irradiation is the use of ionizing radiation energy to process goods to ensure hygiene and safety for products and food. Currently, there are many countries in the world that use this technology to process and preserve more than 40 different types of products and foods, including fruits, vegetables, grains, fish, shrimp, meat, poultry, medical equipment…`,
+        desc: `In order to ensure hygiene and safety of products and food, irradiation is a method of utilizing ionizing radiation to sterilize cargos. Nowadays, a large number of countries around the world are using this technology to store and preserve over 40 different kinds of products, such as fruits, vegetables, cereal, fishes, meals, poultry, medical equipment, etc.`,
       },
       {
         number: 2,
         title: `What is the purpose of Food Irradiation?`,
-        desc: `Prevention of foodborne illness: Irradiation can be used effectively to eliminate foodborne pathogens, such as Salmonella and Escherichia coli.
+        desc: `Protecting food from foodborne illness (or food poisoning): if used effectively, irradiation can kill germs that can cause food poisoning, such as Salmonella and Escherichia coli.
 
-Preservation: Irradiation can be used to kill or inactivate microorganisms that cause spoilage and decomposition of food and prolong the shelf life of foods.
+Preserving: irradiation can be used to remove or inactivate microorganisms that cause food spoilage and decomposition, and prolongs the shelf life of foods.
 
-Insect control: Irradiation can be used to kill insects inside or on the surface of fruits. Irradiation also helps reduce other pest control activities that can damage fruit.
-Inhibition of germination and ripening: Irradiation can be used to inhibit germination (e.g. potatoes) and delay fruit ripening to increase shelf life.`,
+Pest control: irradiation can be used to kill pests inside or on the surface of fruits. Irradiation helps to reduce the impact of other pest controls that can damage fruits.
+
+Inhibition of germination and ripening: irradiation can be used to inhibit germination (excluding potatoes) and decrease the ripening process of fruits to increase the preservation period.`,
       },
       {
         number: 3,
-        title: `What are the benefits of food irradiation?`,
-        desc: `Irradiated foods are very safe and offer many benefits.
-
-The safety of health as well as economic benefits of irradiated foods have been recognized by prestigious United Nations organizations such as the World Health Organization (WHO), Food and Agriculture Organization (FAO) ) and the Raw Energy Agency`,
+        title: `The benefits of Food Irradiation?`,
+        desc: `Food irradiation is safe and has many benefits. The safety of health as well as the advantage of economy for food irradiation have full recognition of organizations in the United Nations including: World Health Organization (WHO), Food and Agriculture Organization (FAO), and International Atomic Energy Agency (IAEA).`,
       },
       {
         number: 4,
-        title: `Does irradiation make food contaminated?`,
-        desc: `Irradiated food does not come into direct contact with radioactive sources, so it cannot become “radioactive food” and therefore has no adverse effects on the consumer.`,
+        title: `Does irradiation make food radioactive?`,
+        desc: `Irradiated food does not come into direct contact with the radioactive source, so it cannot become “radioactive food”, meaning that there is no side effect on the user.`,
       },
       {
         number: 5,
-        title: `Does irradiation produce substances that are toxic to food and humans?`,
-        desc: `Food after irradiation does not cause negative effects on human health because there is no toxicity and no change in chemical composition.
-
-Factories operating irradiation technology must follow a very strict and safe technical process, so they do not cause any negative effects to the human living environment.`,
+        title: `Does irradiation create poison for food and humans?`,
+        desc: `Because of the absence of toxicity and no change in chemical composition, irradiated food does not cause adverse effects on human health. The production facilities using irradiation technology must also follow a very stringent and secure technical process, thus not causing any negative impact on the human environment.`,
       },
       {
         number: 6,
-        title: `Does irradiation reduce the nutrients present in food?`,
-        desc: `Irradiation does not reduce the nutritional value, but still preserves the vitamins, amino acids and fatty acids found in food… Joint committee between FAO, WHO and IAEA, there have been many studies and confirmed that irradiation does not reduce the nutrients in food.`,
+        title: `Does irradiation reduce the nutritional value of food?`,
+        desc: `The irradiation does not reduce the nutritional value of food; instead, it retains the vitamins, amino acids, and fatty acids contained in the food. It is confirmed that irradiation does not reduce nutrients in food, according to a number of studies carried out by the Committee taken from members of FAO, WHO, and IAEA.`,
       },
       {
     number: 7,
-    title: 'Vị trí của Nhà máy Chiếu xạ Toàn Phát và Kho Lạnh Toàn Phát có thuận tiện để vận chuyển hàng hóa xuất nhập khẩu?',
-    desc: 'Nhà máy Chiếu xạ Toàn Phát và Kho Lạnh Toàn Phát được đặt tại Khu công nghiệp Phú An Thạnh (Bến Lức - Long An). Đây là vị trí vàng để kết nối đến các tuyến đường huyết mạch quốc gia, các “trục xương sống” trong hạ tầng giao thông của Đồng bằng sông Cửu Long. Đồng thời là tâm điểm kết nối đến hệ thống cảng sông, cảng biển và cảng hàng không quốc tế của khu vực như: Cảng Hiệp Phước, Cảng Cát Lái, Cảng Cái Mép, Cảng Quốc tế Long An, Cảng hàng không quốc tế Tân Sơn Nhất... Lợi thế về vị trí sẽ giúp các doanh nghiệp thuận tiện và tiết kiệm được chi phí lớn trong lộ trình vận chuyển hàng hoá để xuất khẩu Nông - Thuỷ sản ra nước ngoài.',
+    title: 'Is the location of the Toan Phat Irradiation Factory and the Toan Phat Refrigerated Warehouse convenient for the transportation of both import and export goods?',
+    desc: 'The Toan Phat Irradiation Factory and the Toan Phat Refrigerated Warehouse are located in Phu An Thanh Industrial Park (Ben Luc ward, Long An province). This is an excellent position to connect to the national arterial roads, the "backbone" of the transport infrastructure of the Mekong Delta region. Simultaneously, it is the focal point connecting to the river port systems, seaports and international airports of the region such as: Hiep Phuoc Port, Cat Lai Port, Cai Mep Port, Long An International Port, Tan Son Nhat International Airport, etc. Because of this favorable location, our clients can benefit from the most convenient and economical transportation routes for exporting Agriculture - Fisheries commodities overseas. ',
   },
   {
     number: 8,
-    title: 'Khả năng lưu trữ tối đa của Kho Lạnh Toàn Phát là bao nhiêu?',
-    desc: 'Với quy mô 10.000m2, Kho lạnh Toàn Phát sở hữu hệ thống lưu trữ đạt tiêu chuẩn quốc tế có tổng vị trí 12.000 pallet tương đương với sức chứa tối đa lên đến 12.000 tấn.',
+    title: 'What is the maximum storage capacity of the Toan Phat Refrigerated Warehouse?',
+    desc: 'The Toan Phat Refrigerated Warehouse possesses a storage system that adheres to international standards, spanning across a scale of 10,000m². The facility is capable of accommodating a total of 12,000 pallets, which is equivalent to having a maximum capacity of 12,000 tons.',
   },
   {
     number: 9,
-    title: 'Nhiệt độ lưu trữ của Kho Lạnh Toàn Phát như thế nào?',
-    desc: 'Nhiệt độ lưu trữ từ -20oC (+/-2oC) cùng với kho hạ độ -35oC, Kho Lạnh Toàn Phát phù hợp để lưu trữ nhiều loại hàng hóa, thực phẩm và đảm bảo an toàn chất lượng tối đa trong quá trình lưu kho.',
+    title: 'How is the storage temperature of the Toan Phat Refrigerated Warehouse?',
+    desc: 'The Toan Phat Refrigerated Warehouse is a suitable facility for preserving a diverse range of commodities and food items, as it maintains a storage temperature ranging from -20°C (+/-2°C) to a quick cooling warehouse temperature of -35°C, thereby guaranteeing optimal safety and quality throughout the storage process. ',
   },
   {
     number: 10,
-    title: 'Các dịch vụ tại Kho Lạnh Toàn Phát là gì?',
-    desc: 'Ngoài dịch vụ chính là lưu trữ nhiệt lạnh, Kho Lạnh Toàn Phát cung cấp các dịch vụ bổ trợ đa dạng khác như: đóng gói, dán tem, thay bao bì, phân loại hàng hóa, quấn PE… với mức phí cạnh tranh nhất để phục vụ tối đa các nhu cầu của khách hàng.',
+    title: 'What are the services offered by the Toan Phat Refrigerated Warehouse?',
+    desc: 'In addition to the main service of cold storage, the Toan Phat Refrigerated Warehouse provides a variety of supplementary services, including packaging, stamping, packaging alteration, goods classification, and PE wrapping… all at highly competitive rates to serve our customers needs in the best way possible.',
   },
   {
     number: 11,
-    title: 'Thời gian hoạt động của Nhà máy Chiếu xạ Toàn Phát và Kho Lạnh Toàn Phát như thế nào?',
-    desc: 'Nhà máy Chiếu xạ Toàn Phát và Kho Lạnh Toàn Phát hoạt động 24/7 kể cả các ngày Lễ Tết, Quý Khách hàng có nhu cầu tư vấn, đăng ký sử dụng dịch vụ chiếu xạ và lưu trữ kho lạnh vui lòng liên hệ Hotline 093 100 0001 hoặc 092 191 6999.',
+    title: 'What Is the operating time of Toan Phat Irradiation Factory and Toan Phat Refrigerated Warehouse?',
+    desc: 'The Toan Phat Irradiation Factory and Toan Phat Refrigerated Warehouse operate continuously 24/7 including holidays or new year period. For further assistance with consultation or registration of irradiation and refrigerated warehouse service, please contact us via Hotline 093 100 0001 or 092 191 6999.',
   },
     ],
   },
@@ -1902,3 +1912,139 @@ export const breadcrumb = {
     },
   ],
 };
+
+export const AboutTPGDesc = [
+  {
+    locale: 'vi',
+    title: 'Giới thiệu về TOANPHAT GROUP',
+    desc: `Năm 2017, bắt nguồn từ mong muốn chung tay cùng các doanh nghiệp nâng tầm thương hiệu và giá trị Nông - Thủy sản Việt, TOANPHAT GROUP (TPG) đã được xây dựng và phát triển. Để đặt nền móng cho sự khởi đầu, Dịch vụ Chiếu xạ (Công ty TNHH Chiếu Xạ Toàn Phát) là bước triển khai đầu tiên trong kế hoạch của TPG, thông qua đó đồng hành hỗ trợ các doanh nghiệp xuất khẩu Nông - Thủy sản giảm đi những áp lực về chi phí, nghiên cứu ứng dụng công nghệ để chủ động hơn trong lĩnh vực chiếu xạ và có thêm nhiều lợi thế khi xuất khẩu thực phẩm, hàng hóa ra quốc tế.
+
+    Với tầm nhìn xa hơn để con đường đưa Nông - Thủy sản Việt Nam có mặt trên thị trường thế giới được thuận lợi hơn nữa, năm 2023 TPG đã mở rộng lĩnh vực phát triển, xây dựng và đưa vào vận hành Kho Lạnh Toàn Phát (Công ty TNHH Kho Vận Toàn Phát) với khả năng lưu trữ tối đa lên đến 12.000 tấn. Trong chiến lược phát triển dài hạn, TPG hướng đến trở thành Trung tâm Logistics (Logistics HUB) tại khu vực Đồng bằng sông Cửu Long cung cấp đầy đủ 03 dịch vụ: Chiếu xạ - Lưu trữ - Vận chuyển.`,
+  },
+  {
+    locale: 'en-US',
+    title: 'About TOANPHAT GROUP',
+    desc: `In 2017, TOANPHAT GROUP (TPG) was set up and built as a result of the desire to cooperate with enterprises and to enhance the brand image and value of Vietnamese Agricultural-Fisheries Products. In the beginning, Irradiation Service (Toan Phat Irradiation Co., Ltd.) was the initial step in TPG's plan to lay the fundamental foundation, thereby supporting Agricultural - Fisheries exporters to reduce the pressure on costs, as well as researching and utilizing technologies to lead more proactively in the field of irradiation and gain more advantages in exporting food and goods in the international market.
+    
+    In 2023, with a strategic vision and a desire to facilitate the development of Vietnam's Agriculture and Fisheries on the world market, TPG has expanded its scale by constructing and operating Toan Phat Refrigerated Warehouse (Toan Phat Logistics Co., Ltd.) with a maximum storage capacity of up to 12.000 tons. In its long-term development strategy, TPG has always intended to become a Logistics Center (LOGISTICS HUB) of the Mekong Delta, providing the full three services: Irradiation - Storage - Transport.`,
+  },
+];
+
+export const ThongDiepTPG = [
+  {
+    locale: 'vi',
+    title: 'Thông điệp Ban Lãnh Đạo',
+    desc: `Việt Nam có nhiều tiềm năng để phát triển Nông nghiệp, Đồng bằng sông Cửu Long là trung tâm lớn của ngành sản xuất Nông - Thủy sản, tuy nhiên những lợi thế đó vẫn chưa được tận dụng để có thể khẳng định thương hiệu và giá trị Nông - Thuỷ sản Quốc gia trên thị trường Quốc tế. 
+
+    TOANPHAT GROUP ra đời với tầm nhìn trở thành một Trung tâm Logistics (Logistics HUB) cung cấp cả 03 dịch vụ: “Chiếu xạ - Lưu trữ - Vận chuyển” với công nghệ hiện đại, kỹ thuật tiên tiến và chi phí tối ưu nhất. Chúng tôi luôn cam kết đồng hành về giá, hỗ trợ các doanh nghiệp xuất khẩu Nông - Thủy sản có thêm lợi thế cạnh tranh trên thị trường Quốc tế.
+    
+    Từng mục tiêu nhỏ hướng về mục tiêu lớn, chúng tôi không chỉ nỗ lực đầu tư cả về trí tuệ con người, công nghệ hiện đại, trang thiết bị tiên tiến, mà còn quan tâm đến phản hồi của khách hàng để nâng cao chất lượng dịch vụ, tạo dựng uy tín thương hiệu và đưa TPG ngày càng vững mạnh.
+    
+    Ông VƯƠNG HIẾU
+    Giám đốc Điều hành
+    `,
+  },
+  {
+    locale: 'en-US',
+    title: 'Message from the Board of Management',
+    desc: `There are a lot of potential developments in Agriculture in Vietnam, one of which is the Mekong Delta, a major center for the Agricultural - Fisheries field. Nevertheless, those advantages have not been exploited to enhance the brand name and value of the national Agricultural-Fisheries on the international market.
+
+    With the strategic vision to become a Logistics Center (LOGISTICS HUB), which provides all three services: "Irradiation - Storage - Transport", with modern technologies and advanced techniques, TOANPHAT GROUP was founded at the most optimal cost. We always make a commitment for a reasonable price for companionship to support Agricultural-Fisheries' exporters to gain more competitive advantages on the international market.
+
+    Taking small steps toward big goals, we would both strive to invest in human intelligence, modern technology and advanced equipment, and also put an emphasis on customer feedback to enhance service quality, build brand reputation and prestige, and to develop a stronger TPG.
+
+    Mr. VUONG HIEU
+    Managing Director
+    `,
+  },
+];
+
+export const CoreValueTPG = [
+  {
+    locale: 'vi',
+    title1: 'Tầm nhìn - sứ mệnh',
+    title2: `Giá trị cốt lõi`,
+    subTitle1: 'Tầm nhìn:',
+    subTitle2: 'Sứ mệnh:',
+    subDesc1: 'TPG hướng đến mục tiêu trở thành Trung tâm Logistics hiện đại, thông minh với đầy đủ 03 chức năng: Chiếu xạ - Lưu trữ - Vận chuyển tại khu vực Đồng bằng sông Cửu Long.',
+    subDesc2: 'Trở thành đối tác tin cậy của các doanh nghiệp xuất khẩu Nông - Thủy sản Việt Nam ra thị trường thế giới; mang đến những sản phẩm an toàn nhất cho cộng đồng xã hội; không ngừng nghiên cứu phát triển để chào đón, phục vụ các đối tác tiềm năng trong và ngoài nước.',
+    desc: `Trong quá trình phát triển, đội ngũ Cán bộ công nhân viên (CBCNV) của TPG luôn hành động và giữ vững 6 giá trị cốt lõi:
+    “TRỌNG - TÍN - TÂM - TRÍ - PHÁT - ÍCH”.
+    Từng mỗi bộ phận đảm nhiệm một vai trò nhất định nhưng luôn hướng về mục tiêu chung và không thể tách rời. Tất cả tạo nên sự kết hợp hài hoà, một tập thể đoàn kết và luôn tuân thủ những giá trị cốt lõi để nâng tầm phát triển mỗi ngày.`,
+  },
+  {
+    locale: 'en-US',
+    title1: 'Vision - Mission',
+    title2: `CORE VALUES`,
+    subTitle1: 'Vision:',
+    subTitle2: 'Mission:',
+    subDesc1: 'TPG aims to become a Logistics Center which is modern and high-tech in the Mekong Delta, with three services: Irradiation - Storage – Transport.',
+    subDesc2: 'To become a reliable partner of enterprises exporting Agricultural-Fisheries Products in Vietnam to the international market; providing the safest products for the social community; and consistently researching and developing to collaborate and serve potential partners, both in the country and abroad.',
+    desc: `Throughout the development path of TPG, six core values have been consistently implemented and upheld:
+    "Respect – Prestige – Heart – Mindset – Development - Benefit".
+    Although each value plays a certain role, it is always toward the common and inseparable goal. All values combine to create a harmony, and a united team always adheres to the core values to enhance development every day.`,
+  },
+];
+
+export const FutureGoalTPG = [
+  {
+    locale: 'vi',
+    mainTitle: 'Mục tiêu phát triển',
+    title1: `Phát triển kinh doanh`,
+    title2: `Phát triển nguồn nhân lực`,
+    title3: `Phát triển cộng đồng & xã hội`,
+    desc1:  `Chúng tôi liên tục cập nhật công nghệ, cải tiến kỹ thuật, đầu tư trang thiết bị hiện đại trong cả dịch vụ chiếu xạ, kho lạnh lưu trữ và vận chuyển. Luôn coi trọng việc nghiên cứu, ứng dụng công nghệ nhằm đáp ứng yêu cầu khắt khe của thị trường, đồng thời tiếp nhận, lắng nghe phản hồi của khách hàng để nâng cao chất lượng dịch vụ, góp phần thúc đẩy hoạt động xuất khẩu hàng hóa, khẳng định giá trị Nông sản - Thuỷ sản Việt Nam và sự phát triển của TPG.`,
+    desc2:  `Đội ngũ nhân sự là tài sản quý giá nhất của doanh nghiệp, chúng tôi chú trọng việc bồi dưỡng, đào tạo nên những nhân sự ưu tú, không ngừng tạo động lực, thúc đẩy nguồn nhân lực phát triển, hướng đến xây dựng môi trường làm việc năng động, sáng tạo, chuyên nghiệp và có nhiều cơ hội thăng tiến.`,
+    desc3:  `Giá trị doanh nghiệp luôn gắn liền với những giá trị mang đến cho cộng đồng. Trong quá trình hoạt động, TPG cam kết giảm thiểu những tác động đến môi trường, tạo công ăn việc làm cho người lao động, đóng góp trách nhiệm với xã hội thông qua các hoạt động thiện nguyện, xây dựng vì sự phát triển, văn minh của cộng đồng.`,
+  },
+  {
+    locale: 'en-US',
+    mainTitle: 'Development Goals',
+    title1: `Business development `,
+    title2: `Human resource development`,
+    title3: `Community & Social Development`,
+    desc1:  `We keep updating technology, improving techniques, and investing in modern equipment in both of the irradiation services, refrigerated and transportation. In order to meet the strict requirements of the market, we always put an emphasis on the research and application of technology. In addition, we appreciate and internalize customer feedback to enhance service quality as well as contributing to promote the export activities of our goods, and give assurance as to the value of Vietnam's Agricultural - Fisheries products and the development of TPG.`,
+    desc2:  `Human resources are the greatest asset of an enterprise. We concentrate on promotion and training of excellent staff, creating motivation, developing human resources, and establishing a dynamic, creative, and professional working environment with many career opportunities.`,
+    desc3:  `Corporate values are always associated with the values created for the community. Throughout the operation, TPG commits to minimizing environmental damages, to creating jobs for employees and contributing to social responsibility with volunteering activities for the development of community civilization.`,
+  },
+];
+
+export const CorpCulture = [
+  {
+    locale: 'vi',
+    mainTitle: 'Văn hóa doanh nghiệp',
+    mainDesc: `Từ những con người với những cá tính khác biệt, để kiến tạo nên một tập thể đồng lòng, gắn kết và đặt mục tiêu vì sự phát triển chung, chúng tôi xây dựng văn hoá doanh nghiệp dựa trên 03 tiêu chí:`,
+    title1: `Sự đa dạng hòa hợp`,
+    title2: `Phát triển không ngừng`,
+    title3: `Gắn kết và thấu hiểu`,
+    desc1:  `TPG chú trọng xây dựng văn hóa doanh nghiệp xuất phát từ sự đa dạng hòa hợp. Dù là bất cứ ai, không phân biệt vùng miền, xuất phát điểm, từ những nhân sự cốt cán đến những nhân sự mới đều được công nhận năng lực, khuyến khích học hỏi, phát huy điểm mạnh và thúc đẩy tư duy khác biệt để phát triển nhân tài.`,
+    desc2:  `Luôn nâng cao kỹ năng làm việc, không ngừng sáng tạo và chinh phục các mục tiêu to lớn hơn là những thách thức mà các thành viên TPG cần vượt qua. Để kiến tạo nên tương lai mơ ước, mỗi cá nhân đều cần thử nghiệm những điều mới, đưa ra thử thách và vượt giới hạn chính là công thức để đạt được những thành quả cao hơn.`,
+    desc3:  `TPG xây dựng một môi trường làm việc cởi mở, thân thiện, nhân viên được tự do đóng góp và tự do nêu ý kiến, đó là chìa khóa giúp mọi người hiểu nhau hơn. Nhân sự tại TPG thường xuyên có những hoạt động tập thể để tăng tính gắn kết và thấu hiểu; tham gia các hoạt động vì cộng đồng để tri ân những cơ hội và giá trị mà TPG đạt được, cũng như trân trọng hơn những gì mình đang có.`,
+  },
+  {
+    locale: 'en-US',
+    mainTitle: 'Corporate culture',
+    mainDesc: `We create the corporate culture based on three criteria to build a united and cohesive team, including individuals with various personality types and set goals for the joint development:`,
+    title1: `Business development `,
+    title2: `Human resource development`,
+    title3: `Community & Social Development`,
+    desc1:  `TPG focuses on building the corporate culture based on harmony, compatibility, and diversity. Everyone, from core employees to new employees, regardless of region or starting foundation is appreciated for their ability, encouraged to learn, promote strengths, and promote different mindsets for talent development.`,
+    desc2:  `TPG members must face the challenges of developing their professional skills, always creating, and constantly conquering larger aims. To fulfill dreams for the future, each individual must experience new things and succeed in dealing with challenges. The formula for achieving better results is going beyond the bounds.`,
+    desc3:  `In order to help everyone understand each other better, TPG designs an open and friendly workplace in which workers are free to contribute ideas and express their views freely. TPG's staff are regularly taking part in team activities with a view to fostering cohesion and comprehension, volunteering their time at community events to show their gratitude of the opportunities and values that TPG has gained as well as appreciating what they have. `,
+  },
+];
+
+export const footerInfo = [
+  {
+    locale: 'vi',
+    title1: `Chiếu Xạ Toàn Phát`,
+    title2: `Kho Lạnh Toàn Phát`,
+  },
+  {
+    locale: 'en-US',
+    title1: `TOANPHAT
+Irradiation`,
+    title2: `TOANPHAT
+Refrigerated Warehouse`,
+  },
+];

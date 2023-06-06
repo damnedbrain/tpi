@@ -6,26 +6,35 @@ import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 import timeline_img from '@assets/gioi-thieu/TPG_timeline.png';
 
 import Image from 'next/image';
-const TimelineTitle = 'Lịch sử phát triển TOANPHAT GROUP';
+
 
 const TimelineTPG = () => {
   const refContainer = useRef();
   const refContent = useRef();
   const refArrLanguage = useRef();
 
+
   useObserverItem(refContainer, styles);
   useObserverItem(refContent, styles);
   useChooseLanguage(introduce, refArrLanguage);
+  var linkSrc = '';
+
+  if (refArrLanguage.current?.locale == 'en-US'){
+    linkSrc = '/TPG_timeline_ENG.mp4';
+  } else {
+    linkSrc = '/TPG_timeline.mp4';
+  }
   return (
     <>
+      
       <div className={styles['container']} ref={refContainer}>
       
           <div className={styles['title']}>
-            {TimelineTitle}
+            {refArrLanguage.current?.title}
           </div>
         
         <div className={styles['introduce-img']}>
-          <Image
+          {/* <Image
             src={timeline_img}
             alt=''
             width={1252}
@@ -34,7 +43,12 @@ const TimelineTPG = () => {
             objectFit='contain'
             quality={100}
             priority
-          />
+          /> */}
+          <div className={styles['video']}>
+          <video autoPlay muted loop className={styles['video']}>
+            <source src='/TPG_timeline_ENG.mp4' type="video/mp4"/>
+          </video>
+        </div>
         </div>
         
       </div>

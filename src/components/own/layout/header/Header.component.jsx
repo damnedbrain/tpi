@@ -173,12 +173,12 @@ const Header = () => {
             </div>
             <div className={styles['language__caret-down']}></div>
             <div className={styles['language-option']}>
-              {/*<div
+              <div
                 className={styles['language-option__sub-item']}
                 onClick={() => chooseLanguage('en-US')}
               >
                 English
-                </div>*/}
+                </div>
               <div
                 className={styles['language-option__sub-item']}
                 onClick={() => chooseLanguage('vi')}

@@ -2,11 +2,13 @@
     "configurations": [
 
 
+
+
         {
             "type": "chrome",
-            "name": "http://localhost:3000/thi-truong/pages/2/",
+            "name": "http://localhost:3000/gioi-thieu/",
             "request": "launch",
-            "url": "http://localhost:3000/thi-truong/pages/2/"
+            "url": "http://localhost:3000/gioi-thieu/"
         }
     ]
 }

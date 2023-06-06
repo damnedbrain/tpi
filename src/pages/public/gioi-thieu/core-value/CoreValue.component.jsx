@@ -1,8 +1,10 @@
 import React, { useRef } from 'react';
 import styles from './CoreValue.module.scss';
 import { useObserverItem } from 'components/hook/useObserverItem';
+import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 import Image from 'next/image';
 import mission from '@assets/gioi-thieu/Mission-and-value.png';
+import { CoreValueTPG } from '@constants/language-option';
 
 import { NumberGeneralInfo } from 'components/own/number-general-info';
 
@@ -24,23 +26,25 @@ Từng mỗi bộ phận đảm nhiệm một vai trò nhất định nhưng lu�
 
 const CoreValue = () => {
   const refContainer = useRef();
+  const refContent = useRef();
+  useChooseLanguage(CoreValueTPG, refContent);
   useObserverItem(refContainer, styles);
   return (
     <>
       <div className={styles['container']} ref={refContainer}>
         <div className={styles['content-left']}>
-          <NumberGeneralInfo title={title1} desc={
+          <NumberGeneralInfo title={refContent.current?.title1} desc={
             <>
               <div className={styles['container-subwrapper']}>
-              <div className={styles['content-subwrapper__title']}>{subTitle1}</div>
-              <div>{subDesc1}</div>
-              <div className={styles['content-subwrapper__title']}>{subTitle2}</div>
-              <div>{subDesc2}</div>
+              <div className={styles['content-subwrapper__title']}>{refContent.current?.subTitle1}</div>
+              <div>{refContent.current?.subDesc1}</div>
+              <div className={styles['content-subwrapper__title']}>{refContent.current?.subTitle2}</div>
+              <div>{refContent.current?.subDesc2}</div>
             </div>
             </>
             } />
           <div className={styles['line']}></div>
-          <NumberGeneralInfo title={title2} desc={desc2} />
+          <NumberGeneralInfo title={refContent.current?.title2} desc={refContent.current?.desc} />
         </div>
 
         <div className={styles['content-right']}>

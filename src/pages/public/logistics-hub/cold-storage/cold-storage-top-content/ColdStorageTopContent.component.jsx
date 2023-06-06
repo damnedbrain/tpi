@@ -51,7 +51,7 @@ const ColdStorageTopContent = () => {
 
             ))}
           </div>
-          <div className={styles['desc-wrapper__title']}>Ưu thế vượt trội</div>
+          <div className={styles['desc-wrapper__title']}>{refLang.current?.midTitle}</div>
         </div>
         <div className={styles['sub-content']} ref={refContent}>
           {refLang.current?.sub.map((item, index) => (

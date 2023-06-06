@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
+import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 import styles from './Footer.module.scss';
 import Image from 'next/image';
 import ToanPhat from '@assets/header/ToanPhat-Icon-white.svg';
@@ -8,15 +9,21 @@ import Link from 'next/link';
 import { Button, Dropdown, DropdownButton, DropdownButtonProps } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookMessenger, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { footerInfo } from '@constants/language-option';
+import { ref } from 'yup';
 
 const Footer = () => {
+
+  const refLang = useRef();
+  useChooseLanguage(footerInfo, refLang);
+
   return (
     <>
       <div className={styles['container']}>
         <div className={styles['content-wrapper']}>
           <div className={styles['content']}>
             <div className={styles['content__title']}>
-              Chiếu Xạ Toàn Phát
+              {refLang.current?.title1}
             </div>
             <div className={styles['content__sub']}>
               Hotline 24/7: <span>093 100 0001</span>
@@ -65,7 +72,7 @@ const Footer = () => {
             </div>
           </div>
           <div className={styles['content']}>
-            <div className={styles['content__title']}>Kho Lạnh Toàn Phát</div>
+            <div className={styles['content__title']}>{refLang.current?.title2}</div>
             <div className={styles['content__sub']}>
               Hotline 24/7: <span>092 191 6999</span>
             </div>
