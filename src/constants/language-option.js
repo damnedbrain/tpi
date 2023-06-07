@@ -1436,7 +1436,8 @@ export const contactAConsultant = [
             {
               icon: addressIcon,
               desc: `Lot A24-1, Ngang 1 Road,
-              Phu An Thanh Industrial Park, An Thanh Commune
+              Phu An Thanh Industrial Park, 
+              An Thanh Commune,
               Ben Luc District, Long An Province.`,
             },
           ],
@@ -1471,7 +1472,8 @@ export const contactAConsultant = [
             {
               icon: addressIcon,
               desc: `Lot A24-2, Ngang 1 Road,
-              Phu An Thanh Industrial Park, An Thanh Commune,
+              Phu An Thanh Industrial Park, 
+              An Thanh Commune,
               Ben Luc District, Long An Province.`,
             },
           ],
