@@ -147,7 +147,7 @@ export const headerMenu = [
             link: RoutePages.COLD_STORAGE,
           },
           {
-            title: 'Logisticss',
+            title: 'Transportation',
             status: 'sub',
             link: RoutePages.Logistics_HUB,
           },
