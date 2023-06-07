@@ -378,6 +378,7 @@
         margin-left: 6px;
         @include responsive-size(screen-m) {
           border-color: #2c1c5a;
+          transform: rotate(-45deg);
         }
       }
       .language-option {
@@ -405,7 +406,8 @@
         @include responsive-size(screen-m) {
           padding-bottom: 16px;
           background: $White;
-          left: 50%;
+          left: 210%;
+          top: -320%;
         }
         &__sub-item {
           position: relative;
