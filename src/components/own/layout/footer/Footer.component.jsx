@@ -26,7 +26,7 @@ const Footer = () => {
               {refLang.current?.title1}
             </div>
             <div className={styles['content__sub']}>
-              Hotline 24/7: <span>093 100 0001</span>
+              Hotline 24/7: <span>{refLang.current?.hotlineCX}</span>
             </div>
             <div className={styles['content__sub']}>Email: thongtin@tpirr.vn  - tiepnhan@tpirr.vn </div>
           </div>
@@ -74,7 +74,7 @@ const Footer = () => {
           <div className={styles['content']}>
             <div className={styles['content__title']}>{refLang.current?.title2}</div>
             <div className={styles['content__sub']}>
-              Hotline 24/7: <span>092 191 6999</span>
+              Hotline 24/7: <span>{refLang.current?.hotlineKL}</span>
             </div>
             <div className={styles['content__sub']}>
               Email: thongtin@tprw.vn - tiepnhan@tprw.vn

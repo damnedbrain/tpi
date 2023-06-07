@@ -1422,11 +1422,12 @@ export const contactAConsultant = [
             },           
             {
               icon: phoneIcon,
-              desc: `092 452 3888 - 093 100 0001 `,
+              desc: `(+84) 092 452 3888
+              (+84) 093 100 0001 `,
             },           
             {
               icon: hotlineIcon,
-              desc: `0272 378 6888`,
+              desc: `(+84) 0272 378 6888`,
             },          
             {
               icon: mailIcon,
@@ -1458,11 +1459,12 @@ export const contactAConsultant = [
             },           
             {
               icon: phoneIcon,
-              desc: `092 191 6999 - 093 100 0001`,
+              desc: `(+84) 092 191 6999
+              (+84) 093 100 0001`,
             },           
             {
               icon: hotlineIcon,
-              desc: `0272 391 6999`,
+              desc: `(+84) 0272 391 6999`,
             },          
             {
               icon: mailIcon,
@@ -2043,6 +2045,8 @@ export const footerInfo = [
     locale: 'vi',
     title1: `Chiếu Xạ Toàn Phát`,
     title2: `Kho Lạnh Toàn Phát`,
+    hotlineCX: `093 100 0001`,
+    hotlineKL: `092 191 6999`,
   },
   {
     locale: 'en-US',
@@ -2050,5 +2054,7 @@ export const footerInfo = [
 Irradiation`,
     title2: `Toan Phat
 Refrigerated Warehouse`,
+    hotlineCX: `(+84) 093 100 0001`,
+    hotlineKL: `(+84) 092 191 6999`,
   },
 ];
