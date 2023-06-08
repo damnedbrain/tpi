@@ -162,7 +162,7 @@ export const headerMenu = [
         link: RoutePages.CUSTOMER_AND_PARTNER,
       },*/ // new
       {
-        title: `Market`,
+        title: `Market News`,
         status: '',
         link: RoutePages.MARKET,
       }, // new
@@ -234,7 +234,7 @@ export const bestServices = [
       },
       {
         title: 'Kho Lạnh Lưu Trữ',
-        desc: ` TPG xây dựng và đưa vào vận hành Kho Lạnh Toàn Phát với tổng số vị trí 12.000 pallet, tương đương với sức chứa lưu trữ tối đa lên đến 12.000 tấn. Nhiệt độ lưu trữ từ -20°C (+/-2°C), kho hạ độ: -35°C.`,
+        desc: ` TPG xây dựng và đưa vào vận hành Kho Lạnh Toàn Phát với tổng số vị trí 12.000 pallet, tương đương với sức chứa lưu trữ tối đa lên đến 12.000 tấn. Nhiệt độ lưu trữ từ -20°C (+/-2°C), kho làm lạnh nhanh: -35°C.`,
         linksrc: RoutePages.COLD_STORAGE,
       },
       {
@@ -686,7 +686,7 @@ export const newsSection = [
   },
   {
     locale: 'en-US',
-    title: 'Market',
+    title: 'Market News',
     latestNews: {
       title: 'BEST PRACTICES',
       desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar 
@@ -1141,7 +1141,7 @@ export const coldStorageTopContent = [
       { descc: `Khả năng lưu trữ tối đa lên đến 12.000 tấn` },
       { descc: `Thời gian hoạt động: 24/7 ` },
       {
-        descc: `Nhiệt độ lưu trữ: -20°C (+/-2°C), có kho hạ độ: -35°C`,
+        descc: `Nhiệt độ lưu trữ: -20°C (+/-2°C), có kho làm lạnh nhanh: -35°C`,
       },
     ],
     sub: [
@@ -1730,7 +1730,7 @@ Các nhà máy vận hành công nghệ chiếu xạ phải tuân theo quy trìn
   {
     number: 9,
     title: 'Nhiệt độ lưu trữ của Kho Lạnh Toàn Phát như thế nào?',
-    desc: 'Nhiệt độ lưu trữ từ -20°C (+/-2°C) cùng với kho hạ độ -35°C, Kho Lạnh Toàn Phát phù hợp để lưu trữ nhiều loại hàng hóa, thực phẩm và đảm bảo an toàn chất lượng tối đa trong quá trình lưu kho.',
+    desc: 'Nhiệt độ lưu trữ từ -20°C (+/-2°C) cùng với kho làm lạnh nhanh -35°C, Kho Lạnh Toàn Phát phù hợp để lưu trữ nhiều loại hàng hóa, thực phẩm và đảm bảo an toàn chất lượng tối đa trong quá trình lưu kho.',
   },
   {
     number: 10,
