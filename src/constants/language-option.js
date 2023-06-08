@@ -147,7 +147,7 @@ export const headerMenu = [
             link: RoutePages.COLD_STORAGE,
           },
           {
-            title: 'Transportation',
+            title: 'Transport',
             status: 'sub',
             link: RoutePages.Logistics_HUB,
           },
@@ -234,7 +234,7 @@ export const bestServices = [
       },
       {
         title: 'Kho Lạnh Lưu Trữ',
-        desc: ` TPG xây dựng và đưa vào vận hành Kho Lạnh Toàn Phát với tổng số vị trí 12.000 pallet, tương đương với sức chứa lưu trữ tối đa lên đến 12.000 tấn. Nhiệt độ lưu trữ từ -20 độ C (+/-2 độ C), kho hạ độ: -35 độ C.`,
+        desc: ` TPG xây dựng và đưa vào vận hành Kho Lạnh Toàn Phát với tổng số vị trí 12.000 pallet, tương đương với sức chứa lưu trữ tối đa lên đến 12.000 tấn. Nhiệt độ lưu trữ từ -20°C (+/-2°C), kho hạ độ: -35°C.`,
         linksrc: RoutePages.COLD_STORAGE,
       },
       {
@@ -1141,7 +1141,7 @@ export const coldStorageTopContent = [
       { descc: `Khả năng lưu trữ tối đa lên đến 12.000 tấn` },
       { descc: `Thời gian hoạt động: 24/7 ` },
       {
-        descc: `Nhiệt độ lưu trữ: -20 độ C (+/-2 độ C), có kho hạ độ: -35 độ C`,
+        descc: `Nhiệt độ lưu trữ: -20°C (+/-2°C), có kho hạ độ: -35°C`,
       },
     ],
     sub: [
@@ -1422,12 +1422,12 @@ export const contactAConsultant = [
             },           
             {
               icon: phoneIcon,
-              desc: `(+84) 092 452 3888
-              (+84) 093 100 0001 `,
+              desc: `(+84) 92 452 3888
+              (+84) 93 100 0001 `,
             },           
             {
               icon: hotlineIcon,
-              desc: `(+84) 0272 378 6888`,
+              desc: `(+84) 272 378 6888`,
             },          
             {
               icon: mailIcon,
@@ -1459,12 +1459,12 @@ export const contactAConsultant = [
             },           
             {
               icon: phoneIcon,
-              desc: `(+84) 092 191 6999
-              (+84) 093 100 0001`,
+              desc: `(+84) 92 191 6999
+              (+84) 93 100 0001`,
             },           
             {
               icon: hotlineIcon,
-              desc: `(+84) 0272 391 6999`,
+              desc: `(+84) 272 391 6999`,
             },          
             {
               icon: mailIcon,
@@ -1730,7 +1730,7 @@ Các nhà máy vận hành công nghệ chiếu xạ phải tuân theo quy trìn
   {
     number: 9,
     title: 'Nhiệt độ lưu trữ của Kho Lạnh Toàn Phát như thế nào?',
-    desc: 'Nhiệt độ lưu trữ từ -20oC (+/-2oC) cùng với kho hạ độ -35oC, Kho Lạnh Toàn Phát phù hợp để lưu trữ nhiều loại hàng hóa, thực phẩm và đảm bảo an toàn chất lượng tối đa trong quá trình lưu kho.',
+    desc: 'Nhiệt độ lưu trữ từ -20°C (+/-2°C) cùng với kho hạ độ -35°C, Kho Lạnh Toàn Phát phù hợp để lưu trữ nhiều loại hàng hóa, thực phẩm và đảm bảo an toàn chất lượng tối đa trong quá trình lưu kho.',
   },
   {
     number: 10,
@@ -2054,7 +2054,7 @@ export const footerInfo = [
 Irradiation`,
     title2: `Toan Phat
 Refrigerated Warehouse`,
-    hotlineCX: `(+84) 093 100 0001`,
-    hotlineKL: `(+84) 092 191 6999`,
+    hotlineCX: `(+84) 93 100 0001`,
+    hotlineKL: `(+84) 92 191 6999`,
   },
 ];
