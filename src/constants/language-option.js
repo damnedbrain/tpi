@@ -13,7 +13,7 @@ import phoneIcon from '@assets/icons/phone.png';
 import mailIcon from '@assets/icons/mail.png';
 import taxIcon from '@assets/icons/tax.png';
 
-import cobaltIMG from '@assets/chieu-xa/Cobalt 60.jpeg';
+import cobaltIMG from '@assets/chieu-xa/Cobalt-60.jpg';
 import ebeamIMG from '@assets/chieu-xa/ebeam.jpg';
 import xrayIMG from '@assets/chieu-xa/X-Ray.png';
 
