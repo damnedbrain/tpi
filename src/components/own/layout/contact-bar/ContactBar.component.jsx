@@ -6,8 +6,10 @@ import { faArrowUpFromBracket, faPhone } from '@fortawesome/free-solid-svg-icons
 import zaloIcon from '@assets/icons/zalo-seeklogo.com.svg'
 import Link from 'next/link';
 import Image from 'react-bootstrap';
+import { contactBarLabel } from '@constants/language-option';
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 
 // The forwardRef is important!!
 // Dropdown needs access to the DOM node in order to position the Menu
@@ -51,6 +53,13 @@ const CustomMenu = React.forwardRef(
 );
 */
 const ContactBar = () => {
+
+  const refContainer = useRef();
+  const refContent = useRef();
+  const refTitle = useRef();
+
+  useChooseLanguage(contactBarLabel, refTitle);
+
     return(
         <>
         <div className={styles['container']}>
@@ -68,7 +77,7 @@ const ContactBar = () => {
                             <FontAwesomeIcon icon={faFacebookMessenger} style={{color: "#fff",}} size='2x' />
                             
                         </Link>
-                        <div className={styles['dropdown-item-add_desc']}>Kho Lạnh</div>
+                        <div className={styles['dropdown-item-add_desc']}>{refTitle.current?.kholanh}</div>
                     </Dropdown.Item>
                     <Dropdown.Item className={styles['dropdown-item-add']} eventKey="2">
                         <Link
@@ -76,7 +85,7 @@ const ContactBar = () => {
                         >
                             <FontAwesomeIcon icon={faFacebookMessenger} style={{color: "#fff",}} size='2x' />
                         </Link>
-                        <div className={styles['dropdown-item-add_desc']}>Chiếu Xạ</div>
+                        <div className={styles['dropdown-item-add_desc']}>{refTitle.current?.chieuxa}</div>
                     </Dropdown.Item>
                     
                     <Dropdown.Item className={styles['dropdown-item-add']} eventKey="3">
@@ -85,7 +94,7 @@ const ContactBar = () => {
                         >
                           <FontAwesomeIcon icon={faFacebook} style={{color: "#fff",}} size='2x' />
                         </Link>
-                        <div className={styles['dropdown-item-add_desc']}>Kho Lạnh</div>
+                        <div className={styles['dropdown-item-add_desc']}>{refTitle.current?.kholanh}</div>
                     </Dropdown.Item>
                     <Dropdown.Item className={styles['dropdown-item-add']} eventKey="4">
                         <Link
@@ -93,7 +102,7 @@ const ContactBar = () => {
                         >
                           <FontAwesomeIcon icon={faFacebook} style={{color: "#fff",}} size='2x' />
                         </Link>
-                        <div className={styles['dropdown-item-add_desc']}>Chiếu Xạ</div>
+                        <div className={styles['dropdown-item-add_desc']}>{refTitle.current?.chieuxa}</div>
                     </Dropdown.Item>
                     <Dropdown.Item className={styles['dropdown-item-add']} eventKey="5">
                         <Link

@@ -7,6 +7,7 @@ import { LocationMapContent } from '@constants/language-option';
 
 const videoLocationInfo =
   'https://res.cloudinary.com/dy2gaer1o/video/upload/v1680506072/videos/location_map_video_a4mhx7.mp4';
+var liiink = "/location_map_video.mp4";
 
 const LocationVideo = () => {
   const refContainer = useRef();
@@ -15,27 +16,31 @@ const LocationVideo = () => {
   const refLang = useRef();
   useObserverItem(refContent, styles);
   useChooseLanguage(LocationMapContent, refLang);
+  
+if (refLang.current?.ttt == 2) {
+    liiink = "/location_map_video_eng.mp4";
+}
 
-  const opts = {
-    playerVars: {
-      // https://developers.google.com/youtube/player_parameters
-      autoplay: 1,
-      controls: 0,
-      showinfo: 0,
-      modestbranding: 1,
-      rel: 0,
-      enablejsapi: 1,
-      disablekb: 1,
-      mute: 1,
-      loop: 1,
-      playsinline: 1,
-    },
-  };
+  // const opts = {
+  //   playerVars: {
+  //     // https://developers.google.com/youtube/player_parameters
+  //     autoplay: 1,
+  //     controls: 0,
+  //     showinfo: 0,
+  //     modestbranding: 1,
+  //     rel: 0,
+  //     enablejsapi: 1,
+  //     disablekb: 1,
+  //     mute: 1,
+  //     loop: 1,
+  //     playsinline: 1,
+  //   },
+  // };
 
-  function _onReady(event) {
-    // access to player in all event handlers via event.target
-    event.target.playVideo();
-  }
+  // function _onReady(event) {
+  //   // access to player in all event handlers via event.target
+  //   event.target.playVideo();
+  // }
 
   return (
     <>
@@ -50,7 +55,7 @@ const LocationVideo = () => {
         </div>
         <div className={styles['video']}>
           <video autoPlay muted loop className={styles['video']}>
-            <source src="/location_map_video.mp4" type="video/mp4"/>
+            <source src={liiink} type="video/mp4"/>
           </video>
         </div>
       </div>

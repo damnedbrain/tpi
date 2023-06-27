@@ -254,7 +254,7 @@ export const bestServices = [
       },
       {
         title: 'Refrigerated Warehouse rental service',
-        desc: `The Toan Phat Refrigerated Warehouse has been constructed and operated by the TPG with a total of 12.000 pallets, enough to allow for a maximum capacity of 12.000 tons. The storage temperature ranges from -20 degrees Celsius (+/-2 degrees Celsius) to the coolest storage: -35 degrees Celsius.`,
+        desc: `The Toan Phat Refrigerated Warehouse has been constructed and operated by the TPG with a total of 12.000 pallets, enough to allow for a maximum capacity of 12.000 tons. The storage temperature ranges from -20 degrees Celsius (+/-2 degrees Celsius) to the quick cooling warehouse: -35 degrees Celsius.`,
       },
       {
         title: 'Transport service',
@@ -977,9 +977,9 @@ export const productOfIrradiation = [
     locale: 'en-US',
     title: 'Irradiated products at Toan Phat Irradiation Factory',
     subDesc: [
-      { desc: 'Fresh fruit' },
-      { desc: 'Frozen fruit' },
-      { desc: 'Frozen seafood' },
+      { desc: 'Fresh fruits' },
+      { desc: 'Frozen fruits' },
+      { desc: 'Frozen seafoods' },
       { desc: 'Processed foods' },
       { desc: 'Medical equipment' },
       { desc: 'Handicrafts' },
@@ -988,7 +988,7 @@ export const productOfIrradiation = [
       { desc: 'Herbal medicine and oriental medicine' },
       { desc: 'Gems' },
       { desc: 'Spices' },
-      { desc: 'Pet food' },
+      { desc: 'Pet foods' },
     ],
   },
 ];
@@ -1193,7 +1193,7 @@ export const coldStorageTopContent = [
       { descc: `Maximum storage up to 12.000 tons` },
       { descc: `Opening time: 24/7` },
       {
-        descc: `Storage temperature: -20 degree Celsius (+/-2 degree Celsius), the coolest storage: - 35 degree Celsius.`,
+        descc: `Storage temperature: -20 degree Celsius (+/-2 degree Celsius), the quick cooling warehouse: - 35 degree Celsius.`,
       },
     ],
     sub: [
@@ -1241,6 +1241,7 @@ export const LocationMapContent = [
   {
     locale: 'vi',
     title: 'Vị trí cửa ngõ',
+    ttt: 1,
     desc: `Nhà máy Chiếu Xạ Toàn Phát và Kho Lạnh Toàn Phát được đặt tại Khu công nghiệp Phú An Thạnh (Bến Lức - Long An). Đây là vị trí vàng để kết nối đến các tuyến đường huyết mạch quốc gia, các “trục xương sống” trong hạ tầng giao thông của Đồng bằng sông Cửu Long. Đồng thời là tâm điểm kết nối đến hệ thống cảng sông, cảng biển và cảng hàng không quốc tế của khu vực. Lợi thế về vị trí sẽ giúp các doanh nghiệp tiết kiệm được chi phí lớn trong lộ trình vận chuyển hàng hoá đến cơ sở chiếu xạ, hay từ kho lạnh lưu trữ đến hệ thống cảng để xuất khẩu Nông - Thuỷ sản ra nước ngoài.`,
     sub: [
       {
@@ -1273,6 +1274,7 @@ export const LocationMapContent = [
   {
     locale: 'en-US',
     title: 'Gateway location',
+    ttt: 2,
     desc: `Toan Phat Irradiation and the Toan Phat Refrigerated Warehouse are located in Phu An Thanh Industrial Park (Ben Luc - Long An). This is a prime location to link to the national arterial roads, which form the "backbone" of the transport infrastructure of the Mekong Delta. Furthermore, this is also the central point of connection with the river port and seaport system and the international airport in the region. Because of the advantageous location, enterprises can save on transport expenses when delivering cargo to the irradiation factories as well as from refrigerated warehouse to the port system for the export of agricultural - fishing products into foreign markets.`,
     sub: [
       {
@@ -1288,7 +1290,7 @@ export const LocationMapContent = [
         desc: `To Long An International Port: 40km`,
       },
       {
-        desc: `To Cai Mep Port: 95km`,
+        desc: `To Cai Mep International Terminal: 95km`,
       },
       {
         desc: `To Tan Son Nhat International Airport: 42km`,
@@ -1436,7 +1438,7 @@ export const contactAConsultant = [
             },
             {
               icon: addressIcon,
-              desc: `Lot A24-1, Ngang 1 Road,
+              desc: `Block A24-1, Ngang 1 Road,
               Phu An Thanh Industrial Park, 
               An Thanh Commune,
               Ben Luc District, Long An Province.`,
@@ -1473,7 +1475,7 @@ export const contactAConsultant = [
             },
             {
               icon: addressIcon,
-              desc: `Lot A24-2, Ngang 1 Road,
+              desc: `Block A24-2, Ngang 1 Road,
               Phu An Thanh Industrial Park, 
               An Thanh Commune,
               Ben Luc District, Long An Province.`,
@@ -1763,7 +1765,7 @@ Preserving: irradiation can be used to remove or inactivate microorganisms that 
 
 Pest control: irradiation can be used to kill pests inside or on the surface of fruits. Irradiation helps to reduce the impact of other pest controls that can damage fruits.
 
-Inhibition of germination and ripening: irradiation can be used to inhibit germination (excluding potatoes) and decrease the ripening process of fruits to increase the preservation period.`,
+Inhibition of germination and ripening: irradiation can be used to inhibit germination (e.g. potatoes) and decrease the ripening process of fruits to increase the preservation period.`,
       },
       {
         number: 3,
@@ -1788,7 +1790,7 @@ Inhibition of germination and ripening: irradiation can be used to inhibit germi
       {
     number: 7,
     title: 'Is the location of the Toan Phat Irradiation Factory and the Toan Phat Refrigerated Warehouse convenient for the transportation of both import and export goods?',
-    desc: 'The Toan Phat Irradiation Factory and the Toan Phat Refrigerated Warehouse are located in Phu An Thanh Industrial Park (Ben Luc ward, Long An province). This is an excellent position to connect to the national arterial roads, the "backbone" of the transport infrastructure of the Mekong Delta region. Simultaneously, it is the focal point connecting to the river port systems, seaports and international airports of the region such as: Hiep Phuoc Port, Cat Lai Port, Cai Mep Port, Long An International Port, Tan Son Nhat International Airport, etc. Because of this favorable location, our clients can benefit from the most convenient and economical transportation routes for exporting Agriculture - Fisheries commodities overseas. ',
+    desc: 'The Toan Phat Irradiation Factory and the Toan Phat Refrigerated Warehouse are located in Phu An Thanh Industrial Park (Ben Luc ward, Long An province). This is an excellent position to connect to the national arterial roads, the "backbone" of the transport infrastructure of the Mekong Delta region. Simultaneously, it is the focal point connecting to the river port systems, seaports and international airports of the region such as: Hiep Phuoc Port, Cat Lai Port, Cai Mep International Terminal, Long An International Port, Tan Son Nhat International Airport, etc. Because of this favorable location, our clients can benefit from the most convenient and economical transportation routes for exporting Agriculture - Fisheries commodities overseas. ',
   },
   {
     number: 8,
@@ -2056,5 +2058,18 @@ Irradiation`,
 Refrigerated Warehouse`,
     hotlineCX: `(+84) 93 100 0001`,
     hotlineKL: `(+84) 92 191 6999`,
+  },
+];
+
+export const contactBarLabel = [
+  {
+    locale: 'vi',
+    kholanh: "Kho Lạnh",
+    chieuxa: "Chiếu Xạ",
+  },
+  {
+    locale: 'en-US',
+    kholanh: "TPRW",
+    chieuxa: "TPI",
   },
 ];
