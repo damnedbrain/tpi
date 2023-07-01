@@ -7,7 +7,7 @@ import { LocationMapContent } from '@constants/language-option';
 
 const videoLocationInfo =
   'https://res.cloudinary.com/dy2gaer1o/video/upload/v1680506072/videos/location_map_video_a4mhx7.mp4';
-var liiink = "/location_map_video.mp4";
+var liiink = "/location_map_video_end.mp4";
 
 const LocationVideo = () => {
   const refContainer = useRef();
@@ -17,9 +17,9 @@ const LocationVideo = () => {
   useObserverItem(refContent, styles);
   useChooseLanguage(LocationMapContent, refLang);
   
-if (refLang.current?.ttt == 2) {
-    liiink = "/location_map_video_eng.mp4";
-}
+// if (refLang.current?.ttt == 2) {
+//     liiink = "/location_map_video_eng.mp4";
+// }
 
   // const opts = {
   //   playerVars: {
