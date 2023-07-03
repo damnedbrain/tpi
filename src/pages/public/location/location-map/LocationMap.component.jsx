@@ -23,7 +23,7 @@ const LocationMap = () => {
           </div>
           <div className={styles['video']}>
           <video autoPlay muted loop className={styles['video']}>
-            <source src="/location_map_video.mp4" type='video/mp4' />
+            <source src="/location_map_video_eng.mp4" type='video/mp4' />
           </video>
         </div>
           <div className={styles['desc-wrapper__desc']}>

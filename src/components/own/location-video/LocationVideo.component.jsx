@@ -55,7 +55,7 @@ const LocationVideo = () => {
         </div>
         <div className={styles['video']}>
           <video autoPlay muted loop className={styles['video']}>
-            <source src={liiink} type="video/mp4"/>
+            <source src="/location_map_video_eng.mp4" type="video/mp4"/>
           </video>
         </div>
       </div>
