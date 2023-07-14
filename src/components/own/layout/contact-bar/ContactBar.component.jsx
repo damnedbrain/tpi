@@ -88,7 +88,7 @@ const ContactBar = () => {
                         <div className={styles['dropdown-item-add_desc']}>{refTitle.current?.chieuxa}</div>
                     </Dropdown.Item>
                     
-                    <Dropdown.Item className={styles['dropdown-item-add']} eventKey="3">
+                    {/* <Dropdown.Item className={styles['dropdown-item-add']} eventKey="3">
                         <Link
                             href='https://www.facebook.com/kholanhtoanphat'
                         >
@@ -103,22 +103,38 @@ const ContactBar = () => {
                           <FontAwesomeIcon icon={faFacebook} style={{color: "#fff",}} size='2x' />
                         </Link>
                         <div className={styles['dropdown-item-add_desc']}>{refTitle.current?.chieuxa}</div>
-                    </Dropdown.Item>
+                    </Dropdown.Item> */}
                     <Dropdown.Item className={styles['dropdown-item-add']} eventKey="5">
                         <Link
-                            href='tel:093 100 0001'
+                            href='tel:092 452 3888'
                         >
                             <FontAwesomeIcon icon={faPhone} style={{color: "#fff",}} size='2x' />
                         </Link>
-                        <div className={styles['dropdown-item-add_desc']}>Hotline</div>
+                        <div className={styles['dropdown-item-add_desc']}>{refTitle.current?.chieuxa}</div>
+                    </Dropdown.Item>
+                    <Dropdown.Item className={styles['dropdown-item-add']} eventKey="5">
+                        <Link
+                            href='tel:092 191 6999'
+                        >
+                            <FontAwesomeIcon icon={faPhone} style={{color: "#fff",}} size='2x' />
+                        </Link>
+                        <div className={styles['dropdown-item-add_desc']}>{refTitle.current?.kholanh}</div>
                     </Dropdown.Item>
                     <Dropdown.Item className={styles['dropdown-item-add']} eventKey="6">
                         <Link
-                            href='https://zalo.me/0931000001' 
+                            href='http://zalo.me/0924523888' 
                         >
                              <div className={styles['zalo']}>b</div>
                         </Link>
-                        <div className={styles['dropdown-item-add_desc']}>Zalo</div>
+                        <div className={styles['dropdown-item-add_desc']}>{refTitle.current?.chieuxa}</div>
+                    </Dropdown.Item>
+                    <Dropdown.Item className={styles['dropdown-item-add']} eventKey="6">
+                        <Link
+                            href='http://zalo.me/0921916999' 
+                        >
+                             <div className={styles['zalo']}>b</div>
+                        </Link>
+                        <div className={styles['dropdown-item-add_desc']}>{refTitle.current?.kholanh}</div>
                     </Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>

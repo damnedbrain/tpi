@@ -5,6 +5,7 @@ import Image from 'next/image';
 import ToanPhat from '@assets/header/ToanPhat-Icon-white.svg';
 import socialYoutube from '@assets/icons/social-icon-youtube.png';
 import socialFacebook from '@assets/icons/social-icon-facebook.png';
+import socialLinkedIn from '@assets/icons/social-icon-linkedin.png';
 import Link from 'next/link';
 import { Button, Dropdown, DropdownButton, DropdownButtonProps } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -43,8 +44,8 @@ const Footer = () => {
               />
             </div>
             <div className={styles['content-mid-social']}>
-              {/* <div className={styles['content-mid-social__social-icon']}>
-              <Link href='https://www.facebook.com/kholanhtoanphat/' passHref>
+              <div className={styles['content-mid-social__social-icon']}>
+              <Link href='https://www.facebook.com/chieuxatoanphat' passHref>
                 <Image
                   src={socialFacebook}
                   alt=''
@@ -55,11 +56,37 @@ const Footer = () => {
                   quality={100}
                 />
                 </Link>
-              </div> */}
+              </div>
               <div className={styles['content-mid-social__social-icon']}>
               <Link href='https://www.youtube.com/channel/UCJoEaA2uVz0YXs2iWCanQOA' passHref>
                 <Image
                   src={socialYoutube}
+                  alt=''
+                  width={20}
+                  height={20}
+                  layout='responsive'
+                  objectFit='contain'
+                  quality={100}
+                />
+                </Link>
+              </div>
+              <div className={styles['content-mid-social__social-icon']}>
+              <Link href='https://www.linkedin.com/company/toanphat-group/' passHref>
+                <Image
+                  src={socialLinkedIn}
+                  alt=''
+                  width={20}
+                  height={20}
+                  layout='responsive'
+                  objectFit='contain'
+                  quality={100}
+                />
+                </Link>
+              </div>
+              <div className={styles['content-mid-social__social-icon']}>
+              <Link href='https://www.facebook.com/kholanhtoanphat' passHref>
+                <Image
+                  src={socialFacebook}
                   alt=''
                   width={20}
                   height={20}
