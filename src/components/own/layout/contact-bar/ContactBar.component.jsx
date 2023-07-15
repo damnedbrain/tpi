@@ -124,7 +124,7 @@ const ContactBar = () => {
                         <Link
                             href='http://zalo.me/0924523888' 
                         >
-                             <div className={styles['zalo']}>b</div>
+                             <div className={styles['zalo2']}>b</div>
                         </Link>
                         <div className={styles['dropdown-item-add_desc']}>{refTitle.current?.chieuxa}</div>
                     </Dropdown.Item>
