@@ -1336,7 +1336,7 @@ export const contactAConsultant = [
             },           
             {
               icon: phoneIcon,
-              desc: `092 452 3888 - 092 452 1888`,
+              desc: `092 452 1888 - 092 452 3888`,
             },           
             {
               icon: hotlineIcon,
@@ -1371,7 +1371,7 @@ export const contactAConsultant = [
             },           
             {
               icon: phoneIcon,
-              desc: `092 191 6999 - 092 452 1888`,
+              desc: `092 452 1888 - 092 191 6999`,
             },           
             {
               icon: hotlineIcon,
@@ -1424,8 +1424,8 @@ export const contactAConsultant = [
             },           
             {
               icon: phoneIcon,
-              desc: `(+84) 92 452 3888
-              (+84) 92 452 1888`,
+              desc: `(+84) 92 452 1888
+              (+84) 92 452 3888`,
             },           
             {
               icon: hotlineIcon,
@@ -1461,8 +1461,8 @@ export const contactAConsultant = [
             },           
             {
               icon: phoneIcon,
-              desc: `(+84) 92 191 6999
-              (+84) 92 452 1888`,
+              desc: `(+84) 92 452 1888
+              (+84) 92 191 6999`,
             },           
             {
               icon: hotlineIcon,
