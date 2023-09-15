@@ -16,6 +16,7 @@ export async function getStaticProps({ locale }) {
       content_type: 'toanPhatMarketNews',
       locale: locale,
       order: '-sys.createdAt',
+      limit : 300
     });
 
     // cloudinary.v2.config({

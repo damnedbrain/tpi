@@ -6,9 +6,9 @@
 
         {
             "type": "chrome",
-            "name": "http://localhost:3000/gioi-thieu/",
+            "name": "http://localhost:3000/home/",
             "request": "launch",
-            "url": "http://localhost:3000/gioi-thieu/"
+            "url": "http://localhost:3000/home/"
         }
     ]
 }
