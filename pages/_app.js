@@ -10,10 +10,15 @@ import { ScreenLoading } from '@my-components';
 import { Analytics } from '@vercel/analytics/react';
 import { SSRProvider } from 'react-bootstrap';
 import * as ga from 'components/lib/ga';
+import TagManager from 'react-gtm-module';
 
 
 function MyApp({ Component, pageProps }) {
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    TagManager.initialize({ gtmId: 'GTM-NSRRC4KB' });
+  }, []);
 
   useEffect(() => {
     Aos.init();
