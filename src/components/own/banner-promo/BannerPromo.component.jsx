@@ -43,7 +43,8 @@ const BannerPromo = ({ news }) => {
       className: styles['setting-slider'],
       dotsClass: styles['setting-dots'],
       autoplay: true,
-      variableWidth: true,
+      variableWidth: false,
+      width: 1440,
       dots: true,
       arrows: true,
       fade: true,
@@ -56,7 +57,8 @@ const BannerPromo = ({ news }) => {
       slidesToShow: 1,
       touchThreshold: 50,
       slidesToScroll: 1,
-      adaptiveHeight: true,
+      adaptiveHeight: false,
+      height: 500,
       lazyLoad: 'progressive',
       cssEase: 'ease-out',
       nextArrow: <ArrowRight />,
@@ -68,19 +70,6 @@ const BannerPromo = ({ news }) => {
   // useObserverItem(refSlider, styles);
   // useChooseLanguage(testimonial, refContent);
 
-  const introduceBlock = {
-    fields: {
-      image: {
-        fields: {
-          file: {
-            contentType: 'image/jpeg',
-            url: '//res.cloudinary.com/dy2gaer1o/image/upload/v1680814466/TPG-Website-Homepage/banner/introduce-img_aqll7c.png',
-          },
-        },
-      },
-      promo: true,
-    },
-  };
 
   //news.unshift(introduceBlock);
   return (
