@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './SubBestServices.module.scss';
+import { RoutePages } from '@constants/router';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -9,7 +10,7 @@ const SubBestServices = ({ icon, number, title, desc, linksrc }) => {
     <>
       <div className={styles['container']}>
         <div className={styles['content']}>
-          <Link href={linksrc ? linksrc : '#'} passHref>
+ 
             <div className={styles['content__icon-arrow-right']}>
               <Image
                 src={icon}
@@ -21,11 +22,12 @@ const SubBestServices = ({ icon, number, title, desc, linksrc }) => {
                 quality={100}
               />
             </div>
-          </Link>
-          <Link href={linksrc ? linksrc : '#'} passHref>
+
+
             <div className={styles['content__title']}>{title}</div>
-          </Link>
+
           <div className={styles['content__desc']}>{desc}</div>
+          <div className={styles['content__read-more']}><Link className='link-style' href={linksrc ? linksrc : '#'} passHref>{"Read More >>"}</Link></div>
         </div>
         <div className={styles['number']}>{number}</div>
       </div>

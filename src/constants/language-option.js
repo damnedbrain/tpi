@@ -251,14 +251,17 @@ export const bestServices = [
       {
         title: 'Irradiation service',
         desc: `With a view to accelerating the processing of the merchandise, TPG is one of the leading companies on the market today; in order to be certain of providing a good quality of Agricultural – Fishing products, TPG applies all three irradiation technologies - namely, Cobalt-60, E-Beam and X- ray.`,
+        linksrc: RoutePages.FOOD_IRRADIATION,
       },
       {
         title: 'Refrigerated Warehouse rental service',
         desc: `The Toan Phat Refrigerated Warehouse has been constructed and operated by the TPG with a total of 12.000 pallets, enough to allow for a maximum capacity of 12.000 tons. The storage temperature ranges from -20 degrees Celsius (+/-2 degrees Celsius) to the quick cooling warehouse: -35 degrees Celsius.`,
+        linksrc: RoutePages.COLD_STORAGE,
       },
       {
         title: 'Transport service',
         desc: `We aim to become a Logistics Center supplying a variety of services: Irradiation, Storage, and Transport, developing to optimize expenses, and creating a competitive avenue for exports of Agricultural and Aquacultural products.`,
+        linksrc: RoutePages.Logistics_HUB,
       },
     ],
   },
