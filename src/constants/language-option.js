@@ -28,7 +28,7 @@ export const headerMenu = [
       //     {
       //       title: 'Chiếu xạ',
       //       status: 'sub',
-      //       link: RoutePages.FOOD_IRRADIATION,
+      //       link: RoutePages.CHIEU_XA,
       //     },
       //     {
       //       title: 'Kho lạnh lưu trữ',
@@ -120,7 +120,7 @@ export const headerMenu = [
       //     {
       //       title: 'Irradiation',
       //       status: 'sub',
-      //       link: RoutePages.FOOD_IRRADIATION,
+      //       link: RoutePages.CHIEU_XA,
       //     },
       //     {
       //       title: 'Cold Storage',
@@ -230,7 +230,7 @@ export const bestServices = [
       {
         title: 'Chiếu Xạ',
         desc: ` TPG là một trong những đơn vị tiên phong trên thị trường hiện nay ứng dụng cả 3 công nghệ chiếu xạ: Cobalt-60, E-Beam, X-ray nhằm đẩy nhanh tiến độ xử lý hàng hóa và đảm bảo chất lượng tốt nhất cho Nông - Thuỷ sản. `,
-        linksrc: RoutePages.FOOD_IRRADIATION,
+        linksrc: RoutePages.CHIEU_XA,
       },
       {
         title: 'Kho Lạnh Lưu Trữ',
@@ -251,7 +251,7 @@ export const bestServices = [
       {
         title: 'Irradiation service',
         desc: `With a view to accelerating the processing of the merchandise, TPG is one of the leading companies on the market today; in order to be certain of providing a good quality of Agricultural – Fishing products, TPG applies all three irradiation technologies - namely, Cobalt-60, E-Beam and X- ray.`,
-        linksrc: RoutePages.FOOD_IRRADIATION,
+        linksrc: RoutePages.CHIEU_XA,
       },
       {
         title: 'Refrigerated Warehouse rental service',
