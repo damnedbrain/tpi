@@ -35,6 +35,7 @@ const BestServices = () => {
               title={item.title}
               desc={item.desc}
               linksrc={item.linksrc}
+              btnText={item.btnText}
             />
           ))}
         </div>

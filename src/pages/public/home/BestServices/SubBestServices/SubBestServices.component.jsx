@@ -5,7 +5,7 @@ import { RoutePages } from '@constants/router';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const SubBestServices = ({ icon, number, title, desc, linksrc }) => {
+const SubBestServices = ({ icon, number, title, desc, linksrc, btnText }) => {
   return (
     <>
       <div className={styles['container']}>
@@ -27,7 +27,7 @@ const SubBestServices = ({ icon, number, title, desc, linksrc }) => {
             <div className={styles['content__title']}>{title}</div>
 
           <div className={styles['content__desc']}>{desc}</div>
-          <div className={styles['content__read-more']}><Link className='link-style' href={linksrc ? linksrc : '#'} passHref>{"Read More >>"}</Link></div>
+          <div className={styles['content__read-more']}><Link className='link-style' href={linksrc ? linksrc : '#'} passHref>{btnText}</Link></div>
         </div>
         <div className={styles['number']}>{number}</div>
       </div>
