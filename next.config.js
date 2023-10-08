@@ -1,5 +1,5 @@
 const path = require('path');
-
+const { THITRUONG_V2_URL } = process.env;
 const securityHeaders = [
   {
     key: 'Cache-Control',
@@ -8,6 +8,22 @@ const securityHeaders = [
 ];
 
 module.exports = {
+  async rewrites() {
+    return [
+      {
+        source: '/:path*',
+        destination: `/:path*`,
+      },
+      {
+        source: '/thi-truong',
+        destination: `${THITRUONG_V2_URL}/blog`,
+      },
+      {
+        source: '/thi-truong/:path*',
+        destination: `${THITRUONG_V2_URL}/blog/:path*`,
+      },
+    ]
+  },
   reactStrictMode: false,
   trailingSlash: true,
   generateEtags: false,
