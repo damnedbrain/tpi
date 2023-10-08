@@ -16,11 +16,11 @@ module.exports = {
       },
       {
         source: '/thi-truong-v2',
-        destination: `${THITRUONG_V2_URL}/blog`,
+        destination: `${THITRUONG_V2_URL}/thi-truong-v2`,
       },
       {
         source: '/thi-truong-v2/:path*',
-        destination: `${THITRUONG_V2_URL}/blog/:path*`,
+        destination: `${THITRUONG_V2_URL}/thi-truong-v2/:path*`,
       },
     ]
   },
