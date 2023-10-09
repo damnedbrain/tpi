@@ -25,7 +25,7 @@ module.exports = {
     ]
   },
   reactStrictMode: false,
-  basePath: "/",
+  basePath: "",
   trailingSlash: true,
   generateEtags: false,
   i18n: {
