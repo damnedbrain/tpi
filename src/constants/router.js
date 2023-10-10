@@ -6,7 +6,7 @@ export const RoutePages = {
   Logistics_HUB: '/van-chuyen', //new
   LOCATION: '/vi-tri', //new
   CUSTOMER_AND_PARTNER: '/customer-partner', //new
-  MARKET: '/thi-truong', //new
+  MARKET: '/thi-truong-v2', //new
   CONTACT: '/contact', //new
   LOGIN: '/dang-nhap', //new
 
