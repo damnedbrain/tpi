@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 import produce from 'immer';
 
 const SubBannerPromo = ({ news }) => {
-  const { title, image, desc, slug, time, author, avatar } = news?.fields;
+  const { title, image, desc, slug, time, author, avatar, thumbImage } = news?.fields;
   const router = useRouter();
   const { locale } = useRouter();
   const [{ isMobileBanner }, setState] = useState({ isMobileBanner: false });
