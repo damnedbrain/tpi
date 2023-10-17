@@ -72,7 +72,7 @@ export const headerMenu = [
         link: RoutePages.CUSTOMER_AND_PARTNER,
       },*/ // new
       {
-        title: `Thị trường`,
+        title: `Tin tức`,
         status: '',
         link: RoutePages.MARKET,
       }, // new
@@ -162,7 +162,7 @@ export const headerMenu = [
         link: RoutePages.CUSTOMER_AND_PARTNER,
       },*/ // new
       {
-        title: `Market News`,
+        title: `News`,
         status: '',
         link: RoutePages.MARKET,
       }, // new
@@ -231,19 +231,19 @@ export const bestServices = [
         title: 'Chiếu Xạ',
         desc: ` TPG là một trong những đơn vị tiên phong trên thị trường hiện nay ứng dụng cả 3 công nghệ chiếu xạ: Cobalt-60, E-Beam, X-ray nhằm đẩy nhanh tiến độ xử lý hàng hóa và đảm bảo chất lượng tốt nhất cho Nông - Thuỷ sản. `,
         linksrc: RoutePages.CHIEU_XA,
-        btnText: 'Đọc Thêm >>'
+        btnText: 'Xem Thêm >>'
       },
       {
         title: 'Kho Lạnh Lưu Trữ',
         desc: ` TPG xây dựng và đưa vào vận hành Kho Lạnh Toàn Phát với tổng số vị trí 12.000 pallet, tương đương với sức chứa lưu trữ tối đa lên đến 12.000 tấn. Nhiệt độ lưu trữ từ -20°C (+/-2°C), kho làm lạnh nhanh: -35°C.`,
         linksrc: RoutePages.COLD_STORAGE,
-        btnText: 'Đọc Thêm >>'
+        btnText: 'Xem Thêm >>'
       },
       {
         title: 'Vận Chuyển',
         desc: ` Chúng tôi hướng đến trở thành một Trung tâm Logistics với đầy đủ chức năng: Chiếu xạ - Lưu trữ - Vận chuyển, nhằm tối ưu chi phí, tạo đòn bẩy cạnh tranh cho hoạt động xuất khẩu Nông - Thủy sản.`,
         linksrc: RoutePages.Logistics_HUB,
-        btnText: 'Đọc Thêm >>'
+        btnText: 'Xem Thêm >>'
       },
     ],
   },
