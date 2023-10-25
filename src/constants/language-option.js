@@ -231,19 +231,19 @@ export const bestServices = [
         title: 'Chiếu Xạ',
         desc: ` TPG là một trong những đơn vị tiên phong trên thị trường hiện nay ứng dụng cả 3 công nghệ chiếu xạ: Cobalt-60, E-Beam, X-ray nhằm đẩy nhanh tiến độ xử lý hàng hóa và đảm bảo chất lượng tốt nhất cho Nông - Thuỷ sản. `,
         linksrc: RoutePages.CHIEU_XA,
-        btnText: 'Xem Thêm >>'
+        btnText: 'Xem thêm >>'
       },
       {
         title: 'Kho Lạnh Lưu Trữ',
         desc: ` TPG xây dựng và đưa vào vận hành Kho Lạnh Toàn Phát với tổng số vị trí 12.000 pallet, tương đương với sức chứa lưu trữ tối đa lên đến 12.000 tấn. Nhiệt độ lưu trữ từ -20°C (+/-2°C), kho làm lạnh nhanh: -35°C.`,
         linksrc: RoutePages.COLD_STORAGE,
-        btnText: 'Xem Thêm >>'
+        btnText: 'Xem thêm >>'
       },
       {
         title: 'Vận Chuyển',
         desc: ` Chúng tôi hướng đến trở thành một Trung tâm Logistics với đầy đủ chức năng: Chiếu xạ - Lưu trữ - Vận chuyển, nhằm tối ưu chi phí, tạo đòn bẩy cạnh tranh cho hoạt động xuất khẩu Nông - Thủy sản.`,
         linksrc: RoutePages.Logistics_HUB,
-        btnText: 'Xem Thêm >>'
+        btnText: 'Xem thêm >>'
       },
     ],
   },
@@ -255,19 +255,19 @@ export const bestServices = [
         title: 'Irradiation service',
         desc: `With a view to accelerating the processing of the merchandise, TPG is one of the leading companies on the market today; in order to be certain of providing a good quality of Agricultural – Fishing products, TPG applies all three irradiation technologies - namely, Cobalt-60, E-Beam and X- ray.`,
         linksrc: RoutePages.CHIEU_XA,
-        btnText: 'Read More >>'
+        btnText: 'Read more >>'
       },
       {
         title: 'Refrigerated Warehouse rental service',
         desc: `The Toan Phat Refrigerated Warehouse has been constructed and operated by the TPG with a total of 12.000 pallets, enough to allow for a maximum capacity of 12.000 tons. The storage temperature ranges from -20 degrees Celsius (+/-2 degrees Celsius) to the quick cooling warehouse: -35 degrees Celsius.`,
         linksrc: RoutePages.COLD_STORAGE,
-        btnText: 'Read More >>'
+        btnText: 'Read more >>'
       },
       {
         title: 'Transport service',
         desc: `We aim to become a Logistics Center supplying a variety of services: Irradiation, Storage, and Transport, developing to optimize expenses, and creating a competitive avenue for exports of Agricultural and Aquacultural products.`,
         linksrc: RoutePages.Logistics_HUB,
-        btnText: 'Read More >>'
+        btnText: 'Read more >>'
       },
     ],
   },
