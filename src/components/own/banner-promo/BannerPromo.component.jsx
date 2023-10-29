@@ -5,6 +5,7 @@ import { SubBannerPromo } from './sub-banner-promo';
 import { useObserverItem } from 'components/hook/useObserverItem';
 import introduce_img from '@assets/introduce/introduce-img.png';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function ArrowLef(props) {
   const { currentSlide, onClick } = props;
@@ -40,29 +41,37 @@ const BannerPromo = ({ news }) => {
 
   const settings = useMemo(
     () => ({
-      className: styles['setting-slider'],
-      dotsClass: styles['setting-dots'],
+      slidesToShow: 1,
+      infinite: true,
       autoplay: true,
-      variableWidth: false,
+      autoplaySpeed: 5000,
+      slidesToScroll: 1,
+      // arrows: false,
+      fade: true,
+      // className: styles['setting-slider'],
+      dotsClass: styles['setting-dots'],
+      // autoplay: true,
+      // variableWidth: false,
       width: 1440,
       dots: true,
       arrows: true,
-      fade: true,
+      // fade: true,
       swipeToSlide: true,
       touchMove: true,
       swipe: true,
       infinite: true,
-      speed: 300,
-      autoplaySpeed: 5000,
-      slidesToShow: 1,
-      touchThreshold: 50,
-      slidesToScroll: 1,
+      // speed: 300,
+      // autoplaySpeed: 5000,
+      // slidesToShow: 1,
+      // touchThreshold: 50,
+      // slidesToScroll: 1,
       adaptiveHeight: false,
       height: 500,
-      lazyLoad: 'progressive',
+      // lazyLoad: 'progressive',
       cssEase: 'ease-out',
       nextArrow: <ArrowRight />,
       prevArrow: <ArrowLef />,
+
     }),
     []
   );
@@ -80,7 +89,24 @@ const BannerPromo = ({ news }) => {
             {Array.isArray(news) &&
               news.map((item, index) => {
                 return item?.fields?.promo ? (
-                  <SubBannerPromo key={index} news={item} />
+                  // <SubBannerPromo key={index} news={item} />
+                  <Link href={`/thi-truong-v2/${item.fields.slug}`}>
+                  <div className="binduz-er-hero-area d-flex align-items-center" key={index}>
+                  <div className="binduz-er-bg-cover item-2" style={{ backgroundImage:"url(" + item.fields.image.fields.file.url + ")"}} id={index}></div>
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-7 col-md-7">
+                        <div className="binduz-er-hero-news-content">
+                          <div className="binduz-er-hero-meta">
+                            <div className="binduz-er-meta-category">
+                              <Link href={`/thi-truong-v2/${item.fields.slug}`}>Chi Tiết</Link>
+                            </div>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+              </div></Link>
                 ) : (
                   ''
                 );

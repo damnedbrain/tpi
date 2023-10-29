@@ -10,26 +10,26 @@
   justify-content: center;
   max-width: 1440px;
   width: 100vw;
-  height: max-content;
-  @include responsive-size(screen-xs) {
-    height: calc(500px / 1440px * 100vw);
-  }
-  &:hover {
-    & > :first-child {
-      & ~ div {
-        & > :first-child {
-          & > :first-child {
-            &::before {
-              width: 90%;
-              @include responsive-size(screen-s) {
-                background-color: $White;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+  // height: max-content;
+  // @include responsive-size(screen-xs) {
+  //   height: calc(500px / 1440px * 100vw);
+  // }
+  // &:hover {
+  //   & > :first-child {
+  //     & ~ div {
+  //       & > :first-child {
+  //         & > :first-child {
+  //           &::before {
+  //             width: 90%;
+  //             @include responsive-size(screen-s) {
+  //               background-color: $White;
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
   // max-height: calc(400px / 1200px * 100vw);
   opacity: 1;
   &.active-anim {

@@ -64,25 +64,25 @@ const SubBannerPromo = ({ news }) => {
     e.currentTarget.addEventListener('mouseup', onMouseUp, { once: true });
   };
 
-  const onResize = useCallback(() => {
-    setState(
-      produce((draft) => {
-        draft.isMobileBanner = window.innerWidth <= 480;
-      })
-    );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isMobileBanner]);
+  // const onResize = useCallback(() => {
+  //   setState(
+  //     produce((draft) => {
+  //       draft.isMobileBanner = window.innerWidth <= 480;
+  //     })
+  //   );
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [isMobileBanner]);
 
-  useEffect(() => {
-    onResize();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  // useEffect(() => {
+  //   onResize();
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
-  useEffect(() => {
-    window.addEventListener('resize', () => onResize());
-    return () => window.removeEventListener('resize', () => onResize());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [window.innerWidth]);
+  // useEffect(() => {
+  //   window.addEventListener('resize', () => onResize());
+  //   return () => window.removeEventListener('resize', () => onResize());
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [window.innerWidth]);
 
   return (
     <>

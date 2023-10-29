@@ -11,6 +11,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { SSRProvider } from 'react-bootstrap';
 import * as ga from 'components/lib/ga';
 import TagManager from 'react-gtm-module';
+import "../styles/custom.css"
 
 
 function MyApp({ Component, pageProps }) {
