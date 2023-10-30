@@ -28,6 +28,10 @@ export default function Document() {
           `,
             }}
           />
+          <meta name='title' content="TOAN PHAT GROUP" />
+            <meta name='description' content="TOANPHAT GROUP | Chiếu xạ - Lưu trữ kho lạnh - Vận chuyển 
+            TOANPHAT GROUP (TPG) gồm hai thành viên: Công ty TNHH Chiếu Xạ Toàn Phát (Nhà Máy Chiếu Xạ Toàn Phát) và Công ty TNHH Kho Vận Toàn Phát (Kho Lạnh Toàn Phát).
+            TPG hướng đến trở thành Trung tâm Logistics (Logistics HUB) hiện đại và thông minh tại Đồng bằng sông Cửu Long cung cấp đầy đủ 03 dịch vụ: Chiếu xạ - Lưu trữ kho lạnh - Vận chuyển." />
       </Head>
       <body>
       
