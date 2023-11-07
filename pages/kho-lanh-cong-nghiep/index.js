@@ -13,6 +13,7 @@ export async function getStaticProps({ locale }) {
     const res = await client.getEntries({
       content_type: 'toanPhatMarketNews',
       locale: locale,
+      limit: 500
     });
 
     if (!res) {
