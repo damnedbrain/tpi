@@ -1648,7 +1648,8 @@ p {
 }
 .binduz-er-hero-area img {
   position: relative;
-  display: block;
+  display: inline-block;
+  width: 100%;
   z-index: -1;
 }
 .hero-slide-active {

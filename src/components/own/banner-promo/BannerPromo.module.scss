@@ -44,72 +44,72 @@
 //   }
 // }
 
-.setting-slider {
-  position: relative;
-  width: 100%;
-  max-width: 1440px;
-  height: max-content;
-  // max-height: calc(400px / 1200px * 100vw);
+// .setting-slider {
+//   position: relative;
+//   width: 100%;
+//   max-width: 1440px;
+//   // height: max-content;
+//   // max-height: calc(400px / 1200px * 100vw);
 
-  & > :nth-child(2) {
-    overflow: visible;
-    // max-height: calc(288px / 1440px * 100vw);
+//   & > :nth-child(2) {
+//     overflow: visible;
+//     // max-height: calc(288px / 1440px * 100vw);
 
-    & > :first-child {
-      overflow: visible;
-      width: max-content !important;
+//     & > :first-child {
+//       overflow: visible;
+//       width: max-content !important;
 
-      @include responsive-size(screen-m) {
-        height: -webkit-max-content;
-        height: -moz-max-content;
-        height: max-content;
-        max-height: -webkit-max-content;
-        max-height: -moz-max-content;
-        max-height: max-content;
-      }
-    }
-    @include responsive-size(screen-m) {
-      height: -webkit-max-content;
-      height: -moz-max-content;
-      height: max-content;
-      max-height: -webkit-max-content;
-      max-height: -moz-max-content;
-      max-height: max-content;
-    }
-  }
-  // & > :first-child {
-  //   overflow: visible;
-  //   // max-height: calc(288px / 1440px * 100vw);
-  //   @include responsive-size(screen-m) {
-  //     height: -webkit-max-content;
+//       @include responsive-size(screen-m) {
+//         height: -webkit-max-content;
+//         height: -moz-max-content;
+//         height: max-content;
+//         max-height: -webkit-max-content;
+//         max-height: -moz-max-content;
+//         max-height: max-content;
+//       }
+//     }
+//     @include responsive-size(screen-m) {
+//       height: -webkit-max-content;
+//       height: -moz-max-content;
+//       height: max-content;
+//       max-height: -webkit-max-content;
+//       max-height: -moz-max-content;
+//       max-height: max-content;
+//     }
+//   }
+//   // & > :first-child {
+//   //   overflow: visible;
+//   //   // max-height: calc(288px / 1440px * 100vw);
+//   //   @include responsive-size(screen-m) {
+//   //     height: -webkit-max-content;
 
-  //      max-height: -webkit-max-content;
+//   //      max-height: -webkit-max-content;
 
-  //   }
-  //   // & > :first-child {
-  //   //   max-height: calc(288px / 1440px * 100vw);
+//   //   }
+//   //   // & > :first-child {
+//   //   //   max-height: calc(288px / 1440px * 100vw);
 
-  //   //   @include responsive-size(screen-m) {
-  //   //      max-height: -webkit-max-content;
+//   //   //   @include responsive-size(screen-m) {
+//   //   //      max-height: -webkit-max-content;
 
-  //   //   }
-  //   // }
-  // }
+//   //   //   }
+//   //   // }
+//   // }
 
-  @include responsive-size(screen-m) {
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
-  }
-  @include responsive-size(screen-xs) {
-    height: calc(500px / 1440px * 100vw);
-  }
-  & > :first-child {
-    & > :first-child {
-      width: max-content !important;
-    }
-  }
-}
+//   @include responsive-size(screen-m) {
+//     height: -webkit-max-content;
+//     height: -moz-max-content;
+//     height: max-content;
+//   }
+//   @include responsive-size(screen-xs) {
+//     height: calc(500px / 1440px * 100vw);
+//   }
+//   & > :first-child {
+//     & > :first-child {
+//       width: max-content !important;
+//     }
+//   }
+// }
 
 .setting-dots {
   position: absolute;
