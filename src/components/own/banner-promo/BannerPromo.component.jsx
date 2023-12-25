@@ -59,14 +59,13 @@ const BannerPromo = ({ news }) => {
       swipeToSlide: true,
       touchMove: true,
       swipe: true,
-      infinite: true,
       // speed: 300,
       // autoplaySpeed: 5000,
       // slidesToShow: 1,
       // touchThreshold: 50,
       // slidesToScroll: 1,
-      adaptiveHeight: false,
-      height: 500,
+      adaptiveHeight: true,
+      // height: 500,
       // lazyLoad: 'progressive',
       cssEase: 'ease-out',
       nextArrow: <ArrowRight />,
@@ -83,36 +82,39 @@ const BannerPromo = ({ news }) => {
   //news.unshift(introduceBlock);
   return (
     <>
-      <div className={styles['container']}>
-        <div className={styles['slider-wrapper']} ref={refSlider}>
+      {/* <div className={styles['container']}>
+        <div className={styles['slider-wrapper']} ref={refSlider}> */}
+        <div className="hero-slide-active container">
           <Slider {...settings}>
             {Array.isArray(news) &&
               news.map((item, index) => {
                 return item?.fields?.promo ? (
                   // <SubBannerPromo key={index} news={item} />
-                  <Link href={`/thi-truong-v2/${item.fields.slug}`}>
+                <Link href={`/thi-truong-v2/${item.fields.slug}`}>
                   <div className="binduz-er-hero-area d-flex align-items-center" key={index}>
-                  <div className="binduz-er-bg-cover item-2" style={{ backgroundImage:"url(" + item.fields.image.fields.file.url + ")"}} id={index}></div>
                   <div className="container">
                     <div className="row">
-                      <div className="col-lg-7 col-md-7">
                         <div className="binduz-er-hero-news-content">
+                          <div>
+                            <img src={item.fields.image.fields.file.url} width={1440}  />
+                          </div>
                           <div className="binduz-er-hero-meta">
                             <div className="binduz-er-meta-category">
                               <Link href={`/thi-truong-v2/${item.fields.slug}`}>Chi Tiết</Link>
                             </div>
                         </div>
                       </div>
-                      </div>
                     </div>
                   </div>
-              </div></Link>
+                  </div>
+                </Link>
                 ) : (
                   ''
                 );
               })}
           </Slider>
-        </div>
+        {/* </div>
+      </div> */}
       </div>
     </>
   );
