@@ -2056,8 +2056,8 @@ export const footerInfo = [
     locale: 'vi',
     title1: `Chiếu Xạ Toàn Phát`,
     title2: `Kho Lạnh Toàn Phát`,
-    hotlineCX: `092 452 3888`,
-    hotlineKL: `092 191 6999`,
+    hotlineCX: `093 100 0001`,
+    hotlineKL: `093 100 0001`,
   },
   {
     locale: 'en-US',
@@ -2065,8 +2065,8 @@ export const footerInfo = [
 Irradiation`,
     title2: `Toan Phat
 Refrigerated Warehouse`,
-    hotlineCX: `(+84) 92 452 3888`,
-    hotlineKL: `(+84) 92 191 6999`,
+    hotlineCX: `(+84) 93 100 0001`,
+    hotlineKL: `(+84) 93 100 0001`,
   },
 ];
 
