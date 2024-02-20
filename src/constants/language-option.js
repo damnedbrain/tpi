@@ -1345,7 +1345,7 @@ export const contactAConsultant = [
             },           
             {
               icon: phoneIcon,
-              desc: `092 452 1888 - 092 452 3888`,
+              desc: `093 100 0001`,
             },           
             {
               icon: hotlineIcon,
@@ -1469,8 +1469,7 @@ export const contactAConsultant = [
             },           
             {
               icon: phoneIcon,
-              desc: `(+84) 92 452 1888
-              (+84) 92 191 6999`,
+              desc: `(+84) 93 100 0001`,
             },           
             {
               icon: hotlineIcon,
