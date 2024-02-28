@@ -79,14 +79,14 @@ const ContactBar = () => {
                         </Link>
                         <div className={styles['dropdown-item-add_desc']}>{refTitle.current?.kholanh}</div>
                     </Dropdown.Item>
-                    <Dropdown.Item className={styles['dropdown-item-add']} eventKey="2">
+                    {/* <Dropdown.Item className={styles['dropdown-item-add']} eventKey="2">
                         <Link
                             href='http://m.me/1305438312916916' 
                         >
                             <FontAwesomeIcon icon={faFacebookMessenger} style={{color: "#fff",}} size='2x' />
                         </Link>
                         <div className={styles['dropdown-item-add_desc']}>{refTitle.current?.chieuxa}</div>
-                    </Dropdown.Item>
+                    </Dropdown.Item> */}
                     
                     {/* <Dropdown.Item className={styles['dropdown-item-add']} eventKey="3">
                         <Link
@@ -106,36 +106,36 @@ const ContactBar = () => {
                     </Dropdown.Item> */}
                     <Dropdown.Item className={styles['dropdown-item-add']} eventKey="5">
                         <Link
-                            href='tel:092 452 3888'
+                            href='tel:093 100 0001'
                         >
                             <FontAwesomeIcon icon={faPhone} style={{color: "#fff",}} size='2x' />
                         </Link>
                         <div className={styles['dropdown-item-add_desc']}>{refTitle.current?.chieuxa}</div>
                     </Dropdown.Item>
-                    <Dropdown.Item className={styles['dropdown-item-add']} eventKey="5">
+                    {/* <Dropdown.Item className={styles['dropdown-item-add']} eventKey="5">
                         <Link
                             href='tel:092 191 6999'
                         >
                             <FontAwesomeIcon icon={faPhone} style={{color: "#fff",}} size='2x' />
                         </Link>
                         <div className={styles['dropdown-item-add_desc']}>{refTitle.current?.kholanh}</div>
-                    </Dropdown.Item>
+                    </Dropdown.Item> */}
                     <Dropdown.Item className={styles['dropdown-item-add']} eventKey="6">
                         <Link
-                            href='http://zalo.me/0924523888' 
+                            href='http://zalo.me/0931000001' 
                         >
                              <div className={styles['zalo2']}>b</div>
                         </Link>
                         <div className={styles['dropdown-item-add_desc']}>{refTitle.current?.chieuxa}</div>
                     </Dropdown.Item>
-                    <Dropdown.Item className={styles['dropdown-item-add']} eventKey="6">
+                    {/* <Dropdown.Item className={styles['dropdown-item-add']} eventKey="6">
                         <Link
                             href='http://zalo.me/0921916999' 
                         >
                              <div className={styles['zalo']}>b</div>
                         </Link>
                         <div className={styles['dropdown-item-add_desc']}>{refTitle.current?.kholanh}</div>
-                    </Dropdown.Item>
+                    </Dropdown.Item> */}
                 </Dropdown.Menu>
             </Dropdown>
         </div>
