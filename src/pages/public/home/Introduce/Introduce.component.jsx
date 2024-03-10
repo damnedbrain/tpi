@@ -26,8 +26,6 @@ const Introduce = () => {
         <Image
           src={introduce_img}
           alt=''
-          width={1440}
-          height={500}
           quality={100}
           priority
           sizes="100vw"
@@ -52,8 +50,6 @@ const Introduce = () => {
             <Image
               src={arrow_right}
               alt=''
-              width={22}
-              height={16}
               quality={100}
               sizes="100vw"
               style={{

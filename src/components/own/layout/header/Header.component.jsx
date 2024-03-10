@@ -94,8 +94,6 @@ const Header = () => {
             <Image
               src={toan_phat_icon}
               alt=''
-              width={56}
-              height={46}
               quality={100}
               sizes="100vw"
               style={{
@@ -108,8 +106,6 @@ const Header = () => {
             <Image
               src={toan_phat_mobile_icon}
               alt=''
-              width={56}
-              height={46}
               quality={100}
               sizes="100vw"
               style={{
@@ -169,8 +165,6 @@ const Header = () => {
             <Image
               src={router.locale === 'vi' ? flag_viet_nam : flag_us}
               alt=''
-              width={24}
-              height={24}
               quality={100}
               sizes="100vw"
               style={{
@@ -212,8 +206,6 @@ const Header = () => {
           <Image
             src={setting_icon}
             alt=''
-            width={24}
-            height={24}
             quality={100}
             sizes="100vw"
             style={{
@@ -229,8 +221,6 @@ const Header = () => {
           <Image
             src={toan_phat_icon}
             alt=''
-            width={43}
-            height={36}
             quality={100}
             sizes="100vw"
             style={{

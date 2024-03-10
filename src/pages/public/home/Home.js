@@ -20,18 +20,14 @@ export default function Home({ news }) {
       </Head>
       
       <BannerPromo news={news} />
-      <BestServices />
-      <LocationVideo />
-      <News news={news} />
-      <TeamMember />
-      <LeaderIndustrial />
-      <Certificate />
-      
-      <TrustedBy />
-      {
-        //<Testimonial />
-      }
-      <OurProject /> 
+      {/* <BestServices /> */}
+      {/* <LocationVideo /> */}
+      {/* <News news={news} /> */}
+      {/* <TeamMember /> */}
+      {/* <LeaderIndustrial /> */}
+      {/* <Certificate />      */}
+      {/* <TrustedBy /> */}
+      {/* <OurProject />  */}
     </>
   );
 }

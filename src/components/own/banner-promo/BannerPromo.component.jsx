@@ -37,43 +37,7 @@ function ArrowRight(props) {
 
 const BannerPromo = ({ news }) => {
   const refSlider = useRef(null);
-  // const refContent = useRef(null);
-
-  // const settings = useMemo(
-  //   () => ({
-  //     slidesToShow: 1,
-  //     infinite: true,
-  //     autoplay: true,
-  //     autoplaySpeed: 5000,
-  //     slidesToScroll: 1,
-  //     // arrows: false,
-  //     fade: true,
-  //     // className: styles['setting-slider'],
-  //     dotsClass: styles['setting-dots'],
-  //     // autoplay: true,
-  //     variableWidth: false,
-  //     // width: 1440,
-  //     dots: true,
-  //     arrows: true,
-  //     // fade: true,
-  //     swipeToSlide: true,
-  //     touchMove: true,
-  //     swipe: true,
-  //     // speed: 300,
-  //     // autoplaySpeed: 5000,
-  //     // slidesToShow: 1,
-  //     // touchThreshold: 50,
-  //     // slidesToScroll: 1,
-  //     // adaptiveHeight: true,
-  //     // height: 500,
-  //     // lazyLoad: 'progressive',
-  //     cssEase: 'ease-out',
-  //     nextArrow: <ArrowRight />,
-  //     prevArrow: <ArrowLef />,
-
-  //   }),
-  //   []
-  // );
+  
   const settings = {
     slidesToShow: 1,
     infinite: true,
@@ -87,23 +51,15 @@ const BannerPromo = ({ news }) => {
     height: 500,
     dots: true,
     dotsClass: styles['setting-dots'],
-    // asNavFor: ".hero-portal-active",
   };
-  // useObserverItem(refSlider, styles);
-  // useChooseLanguage(testimonial, refContent);
 
-
-  //news.unshift(introduceBlock);
   return (
     <>
-      {/* <div className={styles['container']}>
-        <div className={styles['slider-wrapper']} ref={refSlider}> */}
         <div className="hero-slide-active container">
           <Slider {...settings}>
             {Array.isArray(news) &&
               news.map((item, index) => {
                 return item?.fields?.promo ? (
-                  // <SubBannerPromo key={index} news={item} />
                 <Link href={`/thi-truong-v2/${item.fields.slug}`}>
                   <div className="binduz-er-hero-area d-flex align-items-center" key={index}>
                   <div className="container">

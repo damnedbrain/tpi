@@ -1,5 +1,4 @@
 const path = require('path');
-const { THITRUONG_V2_URL } = process.env;
 const securityHeaders = [
   {
     key: 'Cache-Control',
@@ -8,22 +7,7 @@ const securityHeaders = [
 ];
 
 module.exports = {
-  // async rewrites() {
-  //   return [
-  //     {
-  //       source: '/:path*',
-  //       destination: `/:path*`,
-  //     },
-  //     {
-  //       source: '/thi-truong-v2',
-  //       destination: `${THITRUONG_V2_URL}/thi-truong-v2`,
-  //     },
-  //     {
-  //       source: '/thi-truong-v2/:path*',
-  //       destination: `${THITRUONG_V2_URL}/thi-truong-v2/:path*`,
-  //     },
-  //   ]
-  // },
+
   reactStrictMode: false,
   basePath: "",
   trailingSlash: true,
@@ -50,7 +34,13 @@ module.exports = {
     rootDomains: process.env.REACT_APP_ROOT_DOMAIN,
   },
   images: {
-    domains: ['images.ctfassets.net', 'res.cloudinary.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.ctfassets.net',
+        pathname: '**',
+      },
+    ],
     formats: ['image/webp'],
   },
 

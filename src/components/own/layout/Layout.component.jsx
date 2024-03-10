@@ -65,7 +65,7 @@ const Layout = ({ children, SEOInfo = {} }) => {
   return (
     <div className={styles.container} id='layout-container'>
       <LayoutHead SEOInfo={Object.assign(SEOInfo, { url })} />
-      <ContactBar />
+      {/* <ContactBar /> */}
       <Header />
       {children}
       <Footer />
