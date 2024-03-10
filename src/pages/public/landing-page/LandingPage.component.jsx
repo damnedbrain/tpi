@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import styles from './LandingPage.module.scss';
-import Image from 'next/image';
+import Image from "next/image";
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { RoutePages } from '@constants/router';
@@ -49,57 +49,58 @@ const LandingPage = () => {
     event.target.playVideo();
   }
 
-  return (
-    <>
-      <Head>
-        <title>TOAN PHAT</title>
-        <meta name='og:image' content='/favicon.ico' />
-        <meta itemProp='image' content='/favicon.ico' />
-        <meta property='og:image' content='/favicon.ico' />
-      </Head>
-      <div className={styles['container']}>
-        <video autoPlay muted loop className={styles['video']}>
-          <source src={urlVideoDrive} type='video/mp4' />
-        </video>
+  return <>
+    <Head>
+      <title>TOAN PHAT</title>
+      <meta name='og:image' content='/favicon.ico' />
+      <meta itemProp='image' content='/favicon.ico' />
+      <meta property='og:image' content='/favicon.ico' />
+    </Head>
+    <div className={styles['container']}>
+      <video autoPlay muted loop className={styles['video']}>
+        <source src={urlVideoDrive} type='video/mp4' />
+      </video>
 
-        {/* <iframe       
-          id={videoInfo.id}
-          className={styles['video']}
-          type='text/html'
-          allow='autoplay'
-          src='https://www.youtube.com/embed/nNgW2NUjv6s?autoplay=1&controls=0&showinfo=0&modestbranding=1&rel=0&enablejsapi=1&disablekb=1'
-        ></iframe> */}
-        {/* 
-        <YouTube
-          videoId='nNgW2NUjv6s'
-          iframeClassName={styles['video']}
-          id={videoInfo.id}
-          opts={opts}
-          onReady={_onReady}
-        /> */}
-        <div className={styles['icon-toan-phat']}>
-          <Image
-            src={ToanPhat}
-            alt=''
-            width={209}
-            height={172}
-            layout='responsive'
-            objectFit='contain'
-            quality={100}
-          />
-        </div>
-        <div className={styles['btn-wrapper']}>
-          <div
-            className={styles['btn-wrapper__btn']}
-            onClick={() => chooseLanguageAndRedirect('vi')}
-          >{`Tiếng Việt`}</div>
-          <div
-            className={styles['btn-wrapper__btn']}
-            onClick={() => chooseLanguageAndRedirect('en-US')}
-      >{`English`}</div>
-        </div>
+      {/* <iframe       
+        id={videoInfo.id}
+        className={styles['video']}
+        type='text/html'
+        allow='autoplay'
+        src='https://www.youtube.com/embed/nNgW2NUjv6s?autoplay=1&controls=0&showinfo=0&modestbranding=1&rel=0&enablejsapi=1&disablekb=1'
+      ></iframe> */}
+      {/* 
+      <YouTube
+        videoId='nNgW2NUjv6s'
+        iframeClassName={styles['video']}
+        id={videoInfo.id}
+        opts={opts}
+        onReady={_onReady}
+      /> */}
+      <div className={styles['icon-toan-phat']}>
+        <Image
+          src={ToanPhat}
+          alt=''
+          width={209}
+          height={172}
+          quality={100}
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "auto",
+            objectFit: "contain"
+          }} />
       </div>
-    </>
-  );
+      <div className={styles['btn-wrapper']}>
+        <div
+          className={styles['btn-wrapper__btn']}
+          onClick={() => chooseLanguageAndRedirect('vi')}
+        >{`Tiếng Việt`}</div>
+        <div
+          className={styles['btn-wrapper__btn']}
+          onClick={() => chooseLanguageAndRedirect('en-US')}
+    >{`English`}</div>
+      </div>
+    </div>
+  </>;
 };
 export default LandingPage;

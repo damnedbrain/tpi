@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import { SubBannerPromo } from './sub-banner-promo';
 import { useObserverItem } from 'components/hook/useObserverItem';
 import introduce_img from '@assets/introduce/introduce-img.png';
-import Image from 'next/image';
+import Image from "next/image";
 import Link from 'next/link';
 
 function ArrowLef(props) {

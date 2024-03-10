@@ -1,6 +1,6 @@
 import React, { useRef, useCallback, useState, useEffect } from 'react';
 import styles from './SubBannerPromo.module.scss';
-import Image from 'next/image';
+import Image from "next/image";
 import { useObserverItem } from 'components/hook/useObserverItem';
 import { get } from 'lodash';
 import { RoutePages } from '@constants/router';
@@ -84,26 +84,27 @@ const SubBannerPromo = ({ news }) => {
   //   // eslint-disable-next-line react-hooks/exhaustive-deps
   // }, [window.innerWidth]);
 
-  return (
-    <>
-      <div
-        className={styles['container']}
-        ref={refContainer}
-        onMouseDown={(e) => activeImage(e)}
-      >
-        <div className={styles['main-image']}>
-          <Image
-            src={`https:${_imageURL}`}
-            alt=''
-            width={_imageWidth ? _imageWidth : 1440}
-            height={_imageHeight ? _imageHeight : 500}
-            layout={isMobileBanner ? 'fill' : 'responsive'}
-            objectFit={isMobileBanner ? 'fill' : 'cover'}
-            quality={100}
-          />
-        </div>
+  return <>
+    <div
+      className={styles['container']}
+      ref={refContainer}
+      onMouseDown={(e) => activeImage(e)}
+    >
+      <div className={styles['main-image']}>
+        <Image
+          src={`https:${_imageURL}`}
+          alt=''
+          width={_imageWidth ? _imageWidth : 1440}
+          height={_imageHeight ? _imageHeight : 500}
+          layout={isMobileBanner ? 'fill' : 'responsive'}
+          objectFit={isMobileBanner ? 'fill' : 'cover'}
+          quality={100}
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </div>
-    </>
-  );
+    </div>
+  </>;
 };
 export default React.memo(SubBannerPromo);

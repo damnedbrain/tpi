@@ -7,7 +7,7 @@ import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 import { foodIrradiationSystem } from '@constants/language-option';
 import { PioneeringTitle } from 'components/own/pioneering-title';
 import { GeneralInfo } from 'components/own/general-info';
-import Image from 'next/image';
+import Image from "next/image";
 
 const ChieuXaTab = () => {
   const [key, setKey] = useState('cobalt-60');
@@ -52,10 +52,13 @@ const ChieuXaTab = () => {
                       alt=''
                       width={383}
                       height={200}
-                      layout='responsive'
-                      objectFit='contain'
                       quality={100}
-                    />
+                      sizes="100vw"
+                      style={{
+                        width: "100%",
+                        height: "auto",
+                        objectFit: "contain"
+                      }} />
                   </div>
                   <div className={styles['sub-content__desc']}>{desc}</div>
                   <div className={styles['sub-content__title']}>{midTitle}</div>

@@ -1,7 +1,7 @@
 import React, { useRef, useMemo } from 'react';
 import styles from './Certificate.module.scss';
 import Slider from 'react-slick';
-import Image from 'next/image';
+import Image from "next/image";
 import { certificate } from '@constants/language-option';
 import { useObserverItem } from 'components/hook/useObserverItem';
 import { useChooseLanguage } from 'components/hook/useChooseLanguage';
@@ -52,68 +52,69 @@ const Certificate = () => {
     []
   );
 
-  return (
-    <>
-      <div className={styles['container']} ref={refContainer}>
-        <div className={styles['content-wrapper']}>
-          {/*<div className={styles['title']}>{refContent.current?.title}</div>*/}
-          <div className={styles['title-main']}>
-            {refContent.current?.titleMain}
-          </div>
-          <div className={styles['desc']}>{refContent.current?.desc}</div>
+  return <>
+    <div className={styles['container']} ref={refContainer}>
+      <div className={styles['content-wrapper']}>
+        {/*<div className={styles['title']}>{refContent.current?.title}</div>*/}
+        <div className={styles['title-main']}>
+          {refContent.current?.titleMain}
         </div>
-        <div className={styles['member-wrapper']}>
-          
-            {refContent.current?.sub.map((item, index) => (
-              <div className={styles['member']} key={index}>
-                <div className={styles['member__img']}>
-                  <Image
-                    src={certs[index].image}
-                    alt=''
-                    width={310}
-                    height={436}
-                    layout='responsive'
-                    objectFit='contain'
-                    quality={100}
-                  />
-                </div>
-                <div className={styles['member__desc']}>
-                  <div className={styles['bar']}></div>
-                  <div className={styles['desc']}>
-                    {/* {item.title} */}
-                    
-                    {item.desc}
-                  </div>
-                </div>
-              </div>
-            ))}
-          
-          {/* {refContent.current?.sub.map((item, index) => (
+        <div className={styles['desc']}>{refContent.current?.desc}</div>
+      </div>
+      <div className={styles['member-wrapper']}>
+        
+          {refContent.current?.sub.map((item, index) => (
             <div className={styles['member']} key={index}>
               <div className={styles['member__img']}>
                 <Image
-                  src={members[index].image}
+                  src={certs[index].image}
                   alt=''
-                  width={384}
+                  width={310}
                   height={436}
-                  layout='responsive'
-                  objectFit='contain'
                   quality={100}
-                />
+                  sizes="100vw"
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    objectFit: "contain"
+                  }} />
               </div>
               <div className={styles['member__desc']}>
                 <div className={styles['bar']}></div>
                 <div className={styles['desc']}>
-                  {item.title}
-                  <br />
+                  {/* {item.title} */}
+                  
                   {item.desc}
                 </div>
               </div>
             </div>
-          ))} */}
-        </div>
+          ))}
+        
+        {/* {refContent.current?.sub.map((item, index) => (
+          <div className={styles['member']} key={index}>
+            <div className={styles['member__img']}>
+              <Image
+                src={members[index].image}
+                alt=''
+                width={384}
+                height={436}
+                layout='responsive'
+                objectFit='contain'
+                quality={100}
+              />
+            </div>
+            <div className={styles['member__desc']}>
+              <div className={styles['bar']}></div>
+              <div className={styles['desc']}>
+                {item.title}
+                <br />
+                {item.desc}
+              </div>
+            </div>
+          </div>
+        ))} */}
       </div>
-    </>
-  );
+    </div>
+  </>;
 };
 export default React.memo(Certificate);

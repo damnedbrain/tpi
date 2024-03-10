@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import styles from './TrustedBy.module.scss';
-import Image from 'next/image';
+import Image from "next/image";
 import { useObserverItem } from 'components/hook/useObserverItem';
 import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 import { trustedBy } from '@constants/language-option';
@@ -32,29 +32,30 @@ const TrustedBy = () => {
   useObserverItem(refContentWrapper, styles);
   useChooseLanguage(trustedBy, refTitle);
 
-  return (
-    <>
-      <div className={styles['container']}>
-        <div className={styles['title']}>{refTitle.current?.title}</div>
-        <div className={styles['content-wrapper']} ref={refContentWrapper}>
-          {icons.map((item, index) => (
-            <div className={styles['content']} key={index}>
-              <div className={styles['content__icon-arrow-right']}>
-                <Image
-                  src={item}
-                  alt=''
-                  width={142}
-                  height={95}
-                  layout='responsive'
-                  objectFit='contain'
-                  quality={100}
-                />
-              </div>
+  return <>
+    <div className={styles['container']}>
+      <div className={styles['title']}>{refTitle.current?.title}</div>
+      <div className={styles['content-wrapper']} ref={refContentWrapper}>
+        {icons.map((item, index) => (
+          <div className={styles['content']} key={index}>
+            <div className={styles['content__icon-arrow-right']}>
+              <Image
+                src={item}
+                alt=''
+                width={142}
+                height={95}
+                quality={100}
+                sizes="100vw"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  objectFit: "contain"
+                }} />
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    </>
-  );
+    </div>
+  </>;
 };
 export default React.memo(TrustedBy);

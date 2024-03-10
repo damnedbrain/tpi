@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
+import Image from "next/image";
 import styles from './SubIrradiationAccordion.module.scss';
 
 const Accordion = ({ title, content, imgSrc }) => {
@@ -12,14 +12,17 @@ const Accordion = ({ title, content, imgSrc }) => {
         <div className={styles['accordion-title__sign']}>{isActive ? '-' : '+'}</div>
         <div className={styles['accordion-title__image']}>
         <Image
-            src={imgSrc}
-            alt=''
-            width={383}
-            height={200}
-            layout='responsive'
-            objectFit='contain'
-            quality={100}
-        />
+          src={imgSrc}
+          alt=''
+          width={383}
+          height={200}
+          quality={100}
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "auto",
+            objectFit: "contain"
+          }} />
         </div>
       </div>
       {isActive && <div className="accordion-content">{content}</div>}

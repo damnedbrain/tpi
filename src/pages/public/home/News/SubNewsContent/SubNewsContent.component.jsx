@@ -1,6 +1,6 @@
 import React, { useRef, useCallback } from 'react';
 import styles from './SubNewsContent.module.scss';
-import Image from 'next/image';
+import Image from "next/image";
 import { useObserverItem } from 'components/hook/useObserverItem';
 import { get } from 'lodash';
 import { RoutePages } from '@constants/router';
@@ -49,75 +49,76 @@ const SubNewsContent = ({ news }) => {
     'height',
   ]);
 
-  return (
-    <>
-      <div
-        className={styles['container']}
-        ref={refContainer}
-        onClick={() => redirectToPage(RoutePages.MARKET + `/${slug}`)}
-      >
-        <div className={styles['wrapper']} ref={refContainer}>
-          <div className={styles['image']}>
-            <Image
-              src={`https:${_imageURL}`}
-              alt=''
-              width={_imageWidth}
-              height={_imageHeight}
-              layout='responsive'
-              objectFit='fill'
-              quality={100}
-            />
-          </div>
-          <div className={styles['title']}>{title}</div>
-          <div className={styles['desc']}>
-            <ClampLines
-                text={desc.content[0].content[0].value}
-                id="slug"
-                lines={4}
-                ellipsis="..."
-                buttons={false}
-            />
-          </div>
-          <ReadMoreBtn readMore={RoutePages.MARKET + `/${slug}`} />
-        </div>
-        {/*
-        <div className={styles['main-image']}>
+  return <>
+    <div
+      className={styles['container']}
+      ref={refContainer}
+      onClick={() => redirectToPage(RoutePages.MARKET + `/${slug}`)}
+    >
+      <div className={styles['wrapper']} ref={refContainer}>
+        <div className={styles['image']}>
           <Image
             src={`https:${_imageURL}`}
             alt=''
-            width={_imageWidth ? _imageWidth : 383}
-            height={_imageHeight ? _imageHeight : 200}
-            layout='responsive'
-            objectFit='cover'
+            width={_imageWidth}
+            height={_imageHeight}
             quality={100}
+            sizes="100vw"
+            style={{
+              width: "100%",
+              height: "auto",
+              objectFit: "fill"
+            }} />
+        </div>
+        <div className={styles['title']}>{title}</div>
+        <div className={styles['desc']}>
+          <ClampLines
+              text={desc.content[0].content[0].value}
+              id="slug"
+              lines={4}
+              ellipsis="..."
+              buttons={false}
           />
         </div>
-        <div className={styles['client-wrapper']}>
-          <div className={styles['client']}>
-            <div className={styles['client__title']}>{title}</div>
-            <div className={styles['client__time']}>{convertTime(time)}</div>
-            <div className={styles['client__desc']}>
-              {documentToReactComponents(desc)}
+        <ReadMoreBtn readMore={RoutePages.MARKET + `/${slug}`} />
+      </div>
+      {/*
+      <div className={styles['main-image']}>
+        <Image
+          src={`https:${_imageURL}`}
+          alt=''
+          width={_imageWidth ? _imageWidth : 383}
+          height={_imageHeight ? _imageHeight : 200}
+          layout='responsive'
+          objectFit='cover'
+          quality={100}
+        />
+      </div>
+      <div className={styles['client-wrapper']}>
+        <div className={styles['client']}>
+          <div className={styles['client__title']}>{title}</div>
+          <div className={styles['client__time']}>{convertTime(time)}</div>
+          <div className={styles['client__desc']}>
+            {documentToReactComponents(desc)}
+          </div>
+          <div className={styles['author']}>
+            <div className={styles['author__avatar']}>
+              <Image
+                src={`https:${_avatar}`}
+                alt=''
+                width={_imageAvatarrWidth ? _imageAvatarrWidth : 50}
+                height={_imageAvatarrHeight ? _imageAvatarrHeight : 50}
+                layout='responsive'
+                objectFit='contain'
+                quality={100}
+              />
             </div>
-            <div className={styles['author']}>
-              <div className={styles['author__avatar']}>
-                <Image
-                  src={`https:${_avatar}`}
-                  alt=''
-                  width={_imageAvatarrWidth ? _imageAvatarrWidth : 50}
-                  height={_imageAvatarrHeight ? _imageAvatarrHeight : 50}
-                  layout='responsive'
-                  objectFit='contain'
-                  quality={100}
-                />
-              </div>
-              <div className={styles['author__name']}>{author}</div>
-            </div>
+            <div className={styles['author__name']}>{author}</div>
           </div>
         </div>
-      */}
       </div>
-    </>
-  );
+    */}
+    </div>
+  </>;
 };
 export default React.memo(SubNewsContent);

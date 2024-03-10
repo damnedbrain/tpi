@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import styles from './ThongDiep.module.scss';
-import Image from 'next/image';
+import Image from "next/image";
 import { useObserverItem } from 'components/hook/useObserverItem';
 import { NumberGeneralInfo } from 'components/own/number-general-info';
 import { useChooseLanguage } from 'components/hook/useChooseLanguage';

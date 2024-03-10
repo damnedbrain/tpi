@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 import styles from './Footer.module.scss';
-import Image from 'next/image';
+import Image from "next/image";
 import ToanPhat from '@assets/header/ToanPhat-Icon-white.svg';
 import socialYoutube from '@assets/icons/social-icon-youtube.png';
 import socialFacebook from '@assets/icons/social-icon-facebook.png';
@@ -18,106 +18,119 @@ const Footer = () => {
   const refLang = useRef();
   useChooseLanguage(footerInfo, refLang);
 
-  return (
-    <>
-      <div className={styles['container']}>
-        <div className={styles['content-wrapper']}>
-          <div className={styles['content']}>
-            <div className={styles['content__title']}>
-              {refLang.current?.title1}
-            </div>
-            <div className={styles['content__sub']}>
-              Hotline 24/7: <span>{refLang.current?.hotlineCX}</span>
-            </div>
-            <div className={styles['content__sub']}>Email: thongtin@tpirr.vn  - tiepnhan@tpirr.vn </div>
+  return <>
+    <div className={styles['container']}>
+      <div className={styles['content-wrapper']}>
+        <div className={styles['content']}>
+          <div className={styles['content__title']}>
+            {refLang.current?.title1}
           </div>
-          <div className={styles['content-mid']}>
-            <div className={styles['content-mid__icon-toan-phat']}>
+          <div className={styles['content__sub']}>
+            Hotline 24/7: <span>{refLang.current?.hotlineCX}</span>
+          </div>
+          <div className={styles['content__sub']}>Email: thongtin@tpirr.vn  - tiepnhan@tpirr.vn </div>
+        </div>
+        <div className={styles['content-mid']}>
+          <div className={styles['content-mid__icon-toan-phat']}>
+            <Image
+              src={ToanPhat}
+              alt=''
+              width={209}
+              height={172}
+              quality={100}
+              sizes="100vw"
+              style={{
+                width: "100%",
+                height: "auto",
+                objectFit: "contain"
+              }} />
+          </div>
+          <div className={styles['content-mid-social']}>
+            <div className={styles['content-mid-social__social-icon']}>
+            <Link href='https://www.facebook.com/chieuxatoanphat' passHref>
               <Image
-                src={ToanPhat}
+                src={socialFacebook}
                 alt=''
-                width={209}
-                height={172}
-                layout='responsive'
-                objectFit='contain'
+                width={20}
+                height={20}
                 quality={100}
-              />
+                sizes="100vw"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  objectFit: "contain"
+                }} />
+              </Link>
             </div>
-            <div className={styles['content-mid-social']}>
-              <div className={styles['content-mid-social__social-icon']}>
-              <Link href='https://www.facebook.com/chieuxatoanphat' passHref>
-                <Image
-                  src={socialFacebook}
-                  alt=''
-                  width={20}
-                  height={20}
-                  layout='responsive'
-                  objectFit='contain'
-                  quality={100}
-                />
-                </Link>
-              </div>
-              <div className={styles['content-mid-social__social-icon']}>
-              <Link href='https://www.youtube.com/channel/UCJoEaA2uVz0YXs2iWCanQOA' passHref>
-                <Image
-                  src={socialYoutube}
-                  alt=''
-                  width={20}
-                  height={20}
-                  layout='responsive'
-                  objectFit='contain'
-                  quality={100}
-                />
-                </Link>
-              </div>
-              <div className={styles['content-mid-social__social-icon']}>
-              <Link href='https://www.linkedin.com/company/toanphat-group/' passHref>
-                <Image
-                  src={socialLinkedIn}
-                  alt=''
-                  width={20}
-                  height={20}
-                  layout='responsive'
-                  objectFit='contain'
-                  quality={100}
-                />
-                </Link>
-              </div>
-              <div className={styles['content-mid-social__social-icon']}>
-              <Link href='https://www.facebook.com/kholanhtoanphat' passHref>
-                <Image
-                  src={socialFacebook}
-                  alt=''
-                  width={20}
-                  height={20}
-                  layout='responsive'
-                  objectFit='contain'
-                  quality={100}
-                />
-                </Link>
-              </div>
+            <div className={styles['content-mid-social__social-icon']}>
+            <Link href='https://www.youtube.com/channel/UCJoEaA2uVz0YXs2iWCanQOA' passHref>
+              <Image
+                src={socialYoutube}
+                alt=''
+                width={20}
+                height={20}
+                quality={100}
+                sizes="100vw"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  objectFit: "contain"
+                }} />
+              </Link>
             </div>
-          </div>
-          <div className={styles['content']}>
-            <div className={styles['content__title']}>{refLang.current?.title2}</div>
-            <div className={styles['content__sub']}>
-              Hotline 24/7: <span>{refLang.current?.hotlineKL}</span>
+            <div className={styles['content-mid-social__social-icon']}>
+            <Link href='https://www.linkedin.com/company/toanphat-group/' passHref>
+              <Image
+                src={socialLinkedIn}
+                alt=''
+                width={20}
+                height={20}
+                quality={100}
+                sizes="100vw"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  objectFit: "contain"
+                }} />
+              </Link>
             </div>
-            <div className={styles['content__sub']}>
-              Email: thongtin@tprw.vn - tiepnhan@tprw.vn
+            <div className={styles['content-mid-social__social-icon']}>
+            <Link href='https://www.facebook.com/kholanhtoanphat' passHref>
+              <Image
+                src={socialFacebook}
+                alt=''
+                width={20}
+                height={20}
+                quality={100}
+                sizes="100vw"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  objectFit: "contain"
+                }} />
+              </Link>
             </div>
           </div>
         </div>
-        <div className={styles['bottom']}>
-          <div className={styles['bottom__bar']}></div>
-          <div className={styles['bottom__desc']}>
-            2022 ©︎TOANPHAT GROUP. All rights Reserved.
-            admin@tpgr.vn
+        <div className={styles['content']}>
+          <div className={styles['content__title']}>{refLang.current?.title2}</div>
+          <div className={styles['content__sub']}>
+            Hotline 24/7: <span>{refLang.current?.hotlineKL}</span>
+          </div>
+          <div className={styles['content__sub']}>
+            Email: thongtin@tprw.vn - tiepnhan@tprw.vn
           </div>
         </div>
       </div>
-    </>
-  );
+      <div className={styles['bottom']}>
+        <div className={styles['bottom__bar']}></div>
+        <div className={styles['bottom__desc']}>
+          2022 ©︎TOANPHAT GROUP. All rights Reserved.
+          admin@tpgr.vn
+        </div>
+      </div>
+    </div>
+  </>;
 };
 
 export default React.memo(Footer);
