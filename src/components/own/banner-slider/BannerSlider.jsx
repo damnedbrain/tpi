@@ -10,8 +10,8 @@ export default function BannerSlider({banners}) {
         autoplay: true,
         autoplaySpeed: 2000,
         slidesToScroll: 1,
-        //arrows: true,
-        //dots: true,
+        arrows: true,
+        dots: true,
         fade: true,
         width: 1440,
         height: 500,
@@ -24,6 +24,7 @@ export default function BannerSlider({banners}) {
             {Array.isArray(banners) && 
             banners.map((item, index) => {
                 return item.fields.promo ? (
+                    <div key={item.sys.id} className={styles['slide-wrapper']}>
                     <Image 
                         src={`https:${item.fields.image.fields.file.url}`}
                         alt={item.fields.title}
@@ -31,11 +32,12 @@ export default function BannerSlider({banners}) {
                         width={1440}
                         height={550}
                         style={{
-                            width: '100%',
+                            width: '1440px',
                             height: 'auto',
                             objectFit: 'contain'
                         }}                        
                     />
+                    </div>
                 ) : null
             })
             }

@@ -46,7 +46,6 @@ const BannerPromo = ({ news }) => {
     slidesToScroll: 1,
     arrows: false,
     fade: true,
-    // adaptiveHeight: true,
     width: 1440,
     height: 500,
     dots: true,
