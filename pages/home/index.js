@@ -14,7 +14,8 @@ export async function getStaticProps({ locale }) {
       content_type: 'toanPhatMarketNews',
       locale: locale,
       order: '-sys.createdAt',
-      limit : 500
+      //fields: ['hightLight' , 'homePage'],
+      'fields.homePage' : true,
     });
 
     if (!res) {

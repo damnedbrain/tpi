@@ -60,7 +60,6 @@ const BannerPromo = ({ news }) => {
             {Array.isArray(news) &&
               news.map((item, index) => {
                 return item?.fields?.promo ? (
-                <Link href={`/thi-truong-v2/${item.fields.slug}`}>
                   <div className="binduz-er-hero-area d-flex align-items-center" key={index}>
                   <div className="container">
                     <div className="row">
@@ -77,7 +76,6 @@ const BannerPromo = ({ news }) => {
                     </div>
                   </div>
                   </div>
-                </Link>
                 ) : (
                   ''
                 );

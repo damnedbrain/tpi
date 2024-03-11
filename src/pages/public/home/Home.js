@@ -11,6 +11,7 @@ import { LocationVideo } from 'components/own/location-video';
 import { Certificate } from './Certificate';
 import { BannerPromo } from 'components/own/banner-promo';
 import Head from 'next/head';
+import BannerSlider from 'components/own/banner-slider/BannerSlider';
 
 export default function Home({ news }) {
   return (
@@ -18,8 +19,8 @@ export default function Home({ news }) {
       <Head>
         <title>TOAN PHAT - Home</title>
       </Head>
-      
-      <BannerPromo news={news} />
+      <BannerSlider banners={news} />
+      {/* <BannerPromo news={news} /> */}
       {/* <BestServices /> */}
       {/* <LocationVideo /> */}
       {/* <News news={news} /> */}

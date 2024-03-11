@@ -68,7 +68,7 @@ const Layout = ({ children, SEOInfo = {} }) => {
       {/* <ContactBar /> */}
       <Header />
       {children}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

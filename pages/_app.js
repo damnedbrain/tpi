@@ -2,15 +2,12 @@ import { useEffect, useState } from 'react';
 import { Router, useRouter } from 'next/router';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/globals.scss';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import Aos from 'aos';
 import { ScreenLoading } from '@my-components';
 import { Analytics } from '@vercel/analytics/react';
 import * as ga from 'components/lib/ga';
 import TagManager from 'react-gtm-module';
-import "../styles/custom.css"
 
 
 function MyApp({ Component, pageProps }) {

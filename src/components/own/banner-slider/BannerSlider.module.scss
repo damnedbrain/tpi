@@ -1,0 +1,17 @@
+@import '/styles/main';
+
+.slider-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 1440px;
+    max-height: 500px;
+    margin: auto;
+}
+
+.setting-slider {
+    max-width: 1440px;
+}
+
