@@ -5,7 +5,17 @@ const nextConfig = {
     locales: ['en-US', 'vi'],
     defaultLocale: 'vi',
     localeDetection: false,
-  }
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.ctfassets.net',
+        pathname: '**',
+      },
+    ],
+    formats: ['image/webp'],
+  },
 };
 
 export default nextConfig;

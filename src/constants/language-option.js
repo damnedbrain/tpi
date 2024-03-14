@@ -7,6 +7,10 @@ const item1_link2 = ' https://www.youtube.com/channel/UCJoEaA2uVz0YXs2iWCanQOA';
 const item2_link1 = ' https://www.facebook.com/kholanhtoanphat';
 const item2_link2 = ' https://www.youtube.com/channel/UCJoEaA2uVz0YXs2iWCanQOA';
 
+import BS_ChieuXaIcon from '@assets/best-services/chieu-xa.png';
+import BS_LuuTruIcon from '@assets/best-services/luu-tru.png';
+import BS_VanChuyenIcon from '@assets/best-services/van-chuyen.png';
+
 import addressIcon from '@assets/icons/address.png';
 import hotlineIcon from '@assets/icons/hotline.png';
 import phoneIcon from '@assets/icons/phone.png';
@@ -16,31 +20,13 @@ import taxIcon from '@assets/icons/tax.png';
 import cobaltIMG from '@assets/chieu-xa/Cobalt-60.jpg';
 import ebeamIMG from '@assets/chieu-xa/ebeam.jpg';
 import xrayIMG from '@assets/chieu-xa/X-Ray.png';
+import { Asset } from 'next/font/google';
 
 export const headerMenu = [
   {
     locale: 'vi',
     titles: [
       { title: 'Giới thiệu', status: '', link: RoutePages.ABOUT_US },
-      // {
-      //   title: 'Lĩnh vực tiên phong',
-      //   sub: [
-      //     {
-      //       title: 'Chiếu xạ',
-      //       status: 'sub',
-      //       link: RoutePages.CHIEU_XA,
-      //     },
-      //     {
-      //       title: 'Kho lạnh lưu trữ',
-      //       status: 'sub',
-      //       link: RoutePages.COLD_STORAGE,
-      //     },
-      //   ],
-      //   status: 'wrapper',
-      //   link: '',
-      // },
-
-      //{ title: 'Logistics HUB', status: '', link: RoutePages.Logistics_HUB }, // new
       {
         //Binh add
         title: 'Logistics HUB',
@@ -65,31 +51,13 @@ export const headerMenu = [
         link: '',
       },
 
-      { title: 'Vị trí', status: '', link: RoutePages.LOCATION }, // new
-      /*{
-        title: `Khách hàng & đối tác`,
-        status: '',
-        link: RoutePages.CUSTOMER_AND_PARTNER,
-      },*/ // new
-      {
+      { title: 'Vị trí', status: '', link: RoutePages.LOCATION },      {
         title: `Tin tức`,
         status: '',
         link: RoutePages.MARKET,
       }, // new
       {
         title: 'FAQs',
-        /*sub: [
-          {
-            title: 'Hỗ trợ',
-            status: 'sub',
-            link: RoutePages.SUPPORT,
-          },
-          {
-            title: 'Q&A',
-            status: 'sub',
-            link: RoutePages.QUESTION_AND_ANSWER,
-          },
-        ],*/
         status: '',
         link: RoutePages.QUESTION_AND_ANSWER,
       }, //new
@@ -103,35 +71,12 @@ export const headerMenu = [
         status: '',
         link: RoutePages.LOGIN,
       }, // new
-
-      // { title: 'Mục tiêu phát triển', status: '', link: RoutePages.GOALS },
-      // { title: 'Khách hàng', status: '', link: RoutePages.CUSTOMER },
-      // { title: 'Hỗ trợ', status: '', link: RoutePages.SUPPORT },
-      // { title: 'Q&A', status: '', link: RoutePages.QUESTION_AND_ANSWER },
     ],
   },
   {
     locale: 'en-US',
     titles: [
       { title: 'About Us', status: '', link: RoutePages.ABOUT_US },
-      // {
-      //   title: 'Pioneering Field',
-      //   sub: [
-      //     {
-      //       title: 'Irradiation',
-      //       status: 'sub',
-      //       link: RoutePages.CHIEU_XA,
-      //     },
-      //     {
-      //       title: 'Cold Storage',
-      //       status: 'sub',
-      //       link: RoutePages.COLD_STORAGE,
-      //     },
-      //   ],
-      //   status: 'wrapper',
-      //   link: '',
-      // },
-
       {
         //Binh add
         title: 'Logistics HUB',
@@ -156,11 +101,6 @@ export const headerMenu = [
         link: '',
       },
       { title: 'Location', status: '', link: RoutePages.LOCATION }, // new
-      /*{
-        title: 'Customer & Partner',
-        status: '',
-        link: RoutePages.CUSTOMER_AND_PARTNER,
-      },*/ // new
       {
         title: `News`,
         status: '',
@@ -168,18 +108,6 @@ export const headerMenu = [
       }, // new
       {
         title: 'FAQs',
-        // sub: [
-        //   {
-        //     title: 'Support',
-        //     status: 'sub',
-        //     link: RoutePages.SUPPORT,
-        //   },
-        //   {
-        //     title: 'Q&A',
-        //     status: 'sub',
-        //     link: RoutePages.QUESTION_AND_ANSWER,
-        //   },
-        // ],
         status: '',
         link: RoutePages.QUESTION_AND_ANSWER,
       }, //new
@@ -192,11 +120,7 @@ export const headerMenu = [
         title: `Login`,
         status: '',
         link: RoutePages.LOGIN,
-      }, // new
-      // { title: 'Goals', status: '', link: RoutePages.GOALS },
-      // { title: 'Customer', status: '', link: RoutePages.CUSTOMER },
-      // { title: 'Support', status: '', link: RoutePages.SUPPORT },
-      // { title: 'Q&A', status: '', link: RoutePages.QUESTION_AND_ANSWER },
+      },
     ],
   },
 ];
@@ -231,18 +155,21 @@ export const bestServices = [
         title: 'Chiếu Xạ',
         desc: ` TPG là một trong những đơn vị tiên phong trên thị trường hiện nay ứng dụng cả 3 công nghệ chiếu xạ: Cobalt-60, E-Beam, X-ray nhằm đẩy nhanh tiến độ xử lý hàng hóa và đảm bảo chất lượng tốt nhất cho Nông - Thuỷ sản. `,
         linksrc: RoutePages.CHIEU_XA,
+        icon: BS_ChieuXaIcon,
         btnText: 'Xem thêm >>'
       },
       {
         title: 'Kho Lạnh Lưu Trữ',
         desc: ` TPG xây dựng và đưa vào vận hành Kho Lạnh Toàn Phát với tổng số vị trí 12.000 pallet, tương đương với sức chứa lưu trữ tối đa lên đến 12.000 tấn. Nhiệt độ lưu trữ từ -20°C (+/-2°C), kho làm lạnh nhanh: -35°C.`,
         linksrc: RoutePages.COLD_STORAGE,
+        icon: BS_LuuTruIcon,
         btnText: 'Xem thêm >>'
       },
       {
         title: 'Vận Chuyển',
         desc: ` Chúng tôi hướng đến trở thành một Trung tâm Logistics với đầy đủ chức năng: Chiếu xạ - Lưu trữ - Vận chuyển, nhằm tối ưu chi phí, tạo đòn bẩy cạnh tranh cho hoạt động xuất khẩu Nông - Thủy sản.`,
         linksrc: RoutePages.Logistics_HUB,
+        icon: BS_VanChuyenIcon,
         btnText: 'Xem thêm >>'
       },
     ],
@@ -255,18 +182,21 @@ export const bestServices = [
         title: 'Irradiation service',
         desc: `With a view to accelerating the processing of the merchandise, TPG is one of the leading companies on the market today; in order to be certain of providing a good quality of Agricultural – Fishing products, TPG applies all three irradiation technologies - namely, Cobalt-60, E-Beam and X- ray.`,
         linksrc: RoutePages.CHIEU_XA,
+        icon: BS_ChieuXaIcon,
         btnText: 'Read more >>'
       },
       {
         title: 'Refrigerated Warehouse rental service',
         desc: `The Toan Phat Refrigerated Warehouse has been constructed and operated by the TPG with a total of 12.000 pallets, enough to allow for a maximum capacity of 12.000 tons. The storage temperature ranges from -20 degrees Celsius (+/-2 degrees Celsius) to the quick cooling warehouse: -35 degrees Celsius.`,
         linksrc: RoutePages.COLD_STORAGE,
+        icon: BS_LuuTruIcon,
         btnText: 'Read more >>'
       },
       {
         title: 'Transport service',
         desc: `We aim to become a Logistics Center supplying a variety of services: Irradiation, Storage, and Transport, developing to optimize expenses, and creating a competitive avenue for exports of Agricultural and Aquacultural products.`,
         linksrc: RoutePages.Logistics_HUB,
+        icon: BS_VanChuyenIcon,
         btnText: 'Read more >>'
       },
     ],
