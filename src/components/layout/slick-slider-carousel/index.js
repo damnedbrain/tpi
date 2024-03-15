@@ -4,7 +4,30 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from 'next/image';
 
-export default function SlickSlider({ entries, filterField }) {
+import RightArrowIcon from '@assets/icons/arrow-right.png';
+import LeftArrowIcon from '@assets/icons/arrow-left.png';
+
+const NextArrow = ({ className, style, onClick }) => (
+  <div
+    className={className}
+    style={{ ...style, display: "block", color: "black" }}
+    onClick={onClick}
+  >
+    <Image src={RightArrowIcon} alt="Next" />
+  </div>
+);
+
+const PrevArrow = ({ className, style, onClick }) => (
+  <div
+    className={className}
+    style={{ ...style, display: "block", color: "black" }}
+    onClick={onClick}
+  >
+    <Image src={LeftArrowIcon} alt="Previous" />
+  </div>
+);
+
+export default function SlickSlider({ entries }) {
   var settings = {
     dots: true,
     infinite: true,
@@ -12,19 +35,32 @@ export default function SlickSlider({ entries, filterField }) {
     autoplaySpeed: 3000,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    arrows: true,
+    nextArrow: <NextArrow className="absolute top-1/2 z-100 w-30 h-30 text-black right-2" />,
+    prevArrow: <PrevArrow className="absolute top-1/2 z-100 w-30 h-30 text-black left-2" />,
   };
   return (
-    <div className="max-w-screen-xl h-auto mx-auto">
-    <Slider {...settings}>
+    <div className="relative max-w-screen-xl h-auto mx-auto">
+    <Slider dots={settings.dots}
+            infinite={settings.infinite}
+            autoplay={settings.autoplay}
+            autoplaySpeed={settings.autoplaySpeed}
+            speed={settings.speed}
+            slidesToShow={settings.slidesToShow}
+            slidesToScroll={settings.slidesToScroll}
+            arrows={settings.arrows}
+            nextArrow={settings.nextArrow}
+            prevArrow={settings.prevArrow}
+    >
       {entries.map((item, index) => (
-        item.fields[`${filterField}`] &&
         <div key={index}>
           <Image 
-            src={`https:${item.fields.image.fields.file.url}`} 
-            alt={item.fields.title} 
-            width={item.fields.image.fields.file.details.image.width}
-            height={item.fields.image.fields.file.details.image.height} />
+            src={`https:${item.url}`} 
+            alt={item.alt}
+            priority={true} 
+            width={item.width}
+            height={item.height} />
         </div>
       ))}
     </Slider>

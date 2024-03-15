@@ -43,7 +43,7 @@ export default function Header() {
               <a href="#" className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out">Team</a>
               <a href="#" className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out">Projects</a>*/}
               <Link href="/" className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out">
-                <Image src={ToanPhatLogo} alt="logo" width={32} height='auto' />
+                <Image src={ToanPhatLogo} alt="logo" priority={true} width={32} height='auto' as="image" />
               </Link> 
             {arrMenu.map((item, index) => (
             <div className="relative" key={index}>
