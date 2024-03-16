@@ -227,7 +227,7 @@ export default function Home() {
             {/* Best Services section*/}
             <div className="flex flex-col md:flex-row max-w-7xl h-auto m-auto mt-8"> 
                 {bestServicesLocale.sub.map((item, index) => (
-                    <div className="animate-fadeInSlideIn w-full md:w-1/3">
+                    <div key={index} className="animate-fadeInSlideIn w-full md:w-1/3">
                     <NumberTitleDescWithLink 
                         icon={item.icon} 
                         number={index+1} 
