@@ -575,7 +575,7 @@ export const testimonial = [
   },
 ];
 
-export const ourProject = [
+export const GalleryDesc = [
   {
     locale: 'vi',
     title: 'Thư viện',

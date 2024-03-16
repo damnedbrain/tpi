@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import react from "react";
+import React from "react";
 import Image from "next/image"
 import { getEntries } from "@/components/contentful/ContentfulService";
 import { useEffect, useState } from "react";
@@ -12,13 +12,14 @@ import {bestServices,
         companyCulture,
         certificate,
         partners,
+        GalleryDesc
         } from "@/constants/language-option";
 
 import NumberTitleDescWithLink from "@/components/content-ui/NumberTitleDescWithLink";
 import VideoComponent from "@/components/content-ui/VideoComponent";
 import Link from "next/link";
 import LinesEllipsis from "react-lines-ellipsis";
-import { Gallery } from "react-grid-gallery";
+import Gallery from "@/components/content-ui/Gallery";
 
 const images = [
     {
@@ -155,7 +156,7 @@ export default function Home() {
         PartnersImages.push(partnerImage);
     }
 
-    
+    const galleryLocale = GalleryDesc.find(item => item.locale === locale);
 
     const [entries, setEntries] = useState([]);
     const [latestEntries, setLatestEntries] = useState([]);
@@ -429,10 +430,16 @@ export default function Home() {
                 {/*End Partners Section*/}
 
                 {/*Gallery Section*/}
-                <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-8">
-                    {console.log(images)}
-                    <Gallery images={images} enableImageSelection={false}/>
-                    <img src={images[0].src} alt="gallery" className="w-1/2" />
+                <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
+                    <div className="w-4/5">
+                        <h2 className="text-3xl text-center font-bold text-green-700 animate-fadeInSlideIn">
+                            {galleryLocale.title}
+                        </h2>
+                        <div className="text-center text-base text-gray-600 m-4 animate-fadeIn">
+                            {galleryLocale.desc}
+                        </div>
+                    </div>
+                    <Gallery images={images} />
                 </div>
                 {/*End Gallery Section*/}
             </div>
