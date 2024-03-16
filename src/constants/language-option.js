@@ -313,7 +313,7 @@ export const irradiationFlow = [
   },
 ];
 
-export const trustedBy = [
+export const Partners = [
   {
     locale: 'vi',
     title: 'Được tin cậy bởi các đối tác hàng đầu',
@@ -436,7 +436,7 @@ export const certificate = [
   },
 ];
 
-export const leaderIndustrial = [
+export const companyCulture = [
   {
     locale: 'vi',
     title: 'Văn hóa doanh nghiệp',

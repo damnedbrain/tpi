@@ -1,22 +1,56 @@
 import { useRouter } from "next/router"
+import Image from "next/image"
 import { getEntries } from "@/components/contentful/ContentfulService";
 import { useEffect, useState } from "react";
 
 import SlickSlider from "@/components/layout/slick-slider-carousel";
 
-import { bestServices, LocationMapContent } from "@/constants/language-option";
+import {bestServices, 
+        LocationMapContent, 
+        teamMember,
+        companyCulture,
+        certificate,
+        Partners, } from "@/constants/language-option";
 
 import NumberTitleDescWithLink from "@/components/content-ui/NumberTitleDescWithLink";
 import VideoComponent from "@/components/content-ui/VideoComponent";
+import Link from "next/link";
+import LinesEllipsis from "react-lines-ellipsis";
 
 
 export default function Home() {
     const locale = useRouter().locale;
 
     const bestServicesLocale = bestServices.find(item => item.locale === locale);
+
     const locationMapLocale = LocationMapContent.find(item => item.locale === locale);
 
+    const teamMemberLocale = teamMember.find(item => item.locale === locale);
+    const TeamMemberImages = [];
+    for (let i = 0; i < 3; i++) {
+        const memberImage = require(`@assets/team-member/member-${i+1}.png`);
+        TeamMemberImages.push(memberImage);
+    }
+
+    const companyCultureLocale = companyCulture.find(item => item.locale === locale);
+    const companyCultureImage = require(`@assets/company-culture/company-culture.png`);
+
+    const certificateLocale = certificate.find(item => item.locale === locale);
+    const CertificationImages = [];
+    for (let i = 0; i < 3; i++) {
+        const certificateImage = require(`@assets/certificate/cert-${i+1}.png`);
+        CertificationImages.push(certificateImage);
+    }
+
+    const partnersLocale = Partners.find(item => item.locale === locale);
+    const PartnersImages = [];
+    for (let i = 0; i < 5; i++) {
+        const partnerImage = require(`@assets/partners/trusted-by-${i+1}.png`);
+        PartnersImages.push(partnerImage);
+    }
+
     const [entries, setEntries] = useState([]);
+    const [latestEntries, setLatestEntries] = useState([]);
 
     useEffect(() => {
         async function getPageEntries() {
@@ -34,6 +68,24 @@ export default function Home() {
         getPageEntries();
     }, []);
 
+    useEffect(() => {
+        async function getLatestEntries() {
+            const LatestEntries = await getEntries(
+                "toanPhatMarketNews", 
+                locale, 
+                { 
+                    order: "-sys.createdAt",
+                    limit: 5,
+                    "fields.hightLight": "false",
+                    "fields.promo": "false",
+                    
+                });
+
+            setLatestEntries(LatestEntries);
+        }
+        getLatestEntries();
+    }, []);
+
     let heroEntries = entries.map((item, index) => {
         if (item.fields.promo) {
           return {
@@ -45,14 +97,16 @@ export default function Home() {
         }
     }).filter(Boolean);
 
-    let homepageEntries = entries.map((item, index) => {
-        if (!item.fields.promo) {
+    let highlighEntries = entries.map((item, index) => {
+        if (item.fields.hightLight && !item.fields.promo) {
           return {
-            url: item.fields.image.fields.file.url,
+            url: item.fields.thumbImage.fields.file.url,
+            slug: item.fields.slug,
             alt: item.fields.title,
             width: item.fields.image.fields.file.details.image.width,
             height: item.fields.image.fields.file.details.image.height,
             desc: item.fields.desc,
+            title: item.fields.title
           };
         }
       }).filter(Boolean);
@@ -82,7 +136,7 @@ export default function Home() {
            
             {/*Video Location section*/}
             <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-8">
-                <div className="w-4/5 md:w-1/2">
+                <div className="w-4/5">
                     <h2 className="text-3xl text-center font-bold text-green-700 animate-fadeInSlideIn">
                         {locationMapLocale.title}
                     </h2>
@@ -90,7 +144,7 @@ export default function Home() {
                         {locationMapLocale.desc}
                     </p>
                 </div>
-                <div className="w-4/5 md:w-1/2">
+                <div className="w-4/5">
                     {locale === "en" ? 
                         <VideoComponent videoSrc="/videos/location_map_video_eng.mp4" /> :
                         <VideoComponent videoSrc="/videos/location_map_video.mp4" />
@@ -100,16 +154,173 @@ export default function Home() {
             {/* End Video Location section*/}
 
             {/*News Homepage section*/}
-            <div className="flex flex-row md:flex-row max-w-7xl h-auto m-auto mt-8"> 
-                <h2 className="text-3xl text-center font-bold text-green-700">
-                    {locale === "en" ? "Latest News" : "Thị trường"}
-                </h2>
-                {homepageEntries.map((item, index) => (
-                    <div className="animate-fadeInSlideIn w-full md:w-1/3">
-                        <img src={item.url} alt={item.alt} width={item.width} height={item.height} />
+            {/*Big High Light Entries Section*/}
+            <div className="flex flex-col md:flex-col justify-center items-center max-w-7xl h-auto m-auto mt-8">
+                <div className="animate-fadeInSlideIn w-full md:w-1/3">
+                    <h2 className="text-3xl text-center font-bold text-green-700">
+                        {locale === "en" ? "Latest News" : "Thị trường"}
+                    </h2>
+                </div>
+                {/* {console.log(latestEntries)} */}
+                <div className="flex flex-col justify-center items-center w-full">
+                    {highlighEntries.map((item, index) => (
+                        <div className="flex flex-row animate-fadeInSlideIn w-full mt-4">
+                            <div className="flex flex-col w-1/2">
+                                <h1 className="text-bold text-green-700 font-semiBold text-2xl p-1">
+                                    {item.title}
+                                </h1>
+                                <p className="text-1xl p-1">
+                                    {item.desc.content[0].content[0].value}
+                                </p>
+                                <i className="text-green-600 text-1xl">
+                                    <Link href={`/news/${item.slug}`}>
+                                        {locale === "en" ? "Read more" : "Xem thêm"}
+                                    </Link>
+                                </i>
+                            </div>
+                            <Image src={`https:${item.url}`} alt={item.alt} width={item.width} height={item.height} className="w-1/2" />
+                        </div>
+                    )
+                    )}
+                </div>
+                {/*End Big High Light Entries Section*/}
+                {/*Latest Entries Section*/}
+                <div className="flex flex-row justify-center items-start w-full mt-4">
+                    {latestEntries.map((item, index) => (
+                        <div className="flex flex-col w-full animate-fadeIn">
+                            <div className="flex flex-col items-start justify-start w-full mt-0 p-2 flex-grow">
+                                <Image 
+                                    src={`https:${item.fields.thumbImage.fields.file.url}`}
+                                    alt={item.fields.title} 
+                                    width={item.fields.thumbImage.fields.file.details.image.width} 
+                                    height={item.fields.thumbImage.fields.file.details.image.height} 
+                                />
+                            </div>
+                            <div className="flex flex-col items-start justify-start w-full mt-0 p-2 flex-grow">
+                                <h1 className="text-bold items-start text-green-700 font-semiBold text-2xl p-1">
+                                    {item.fields.title}
+                                </h1>
+                            </div>
+                            <div className="flex flex-col items-start justify-start w-full mt-0 p-2 flex-grow">
+                                <p className="text-1xl p-1">
+                                    <LinesEllipsis
+                                        text={item.fields.desc.content[0].content[0].value}
+                                        maxLine='4'
+                                        ellipsis='...'
+                                        trimRight
+                                        basedOn='letters'
+                                    />
+                                </p>
+                            </div>
+                            <div className="flex flex-col items-start justify-start w-full mt-0 p-2 flex-grow">
+                                <i className="text-green-600 text-1xl">
+                                    <Link href={`/news/${item.fields.slug}`}>
+                                        {locale === "en" ? "Read more" : "Xem thêm"}
+                                    </Link>
+                                </i>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                {/*End Latest Entries Section*/}
+                {/*End News Homepage section*/}
+                
+                {/*Team Members Section*/}
+                <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-8">
+                    <div className="w-4/5">
+                        <h2 className="text-3xl text-center font-bold text-green-700 animate-fadeInSlideIn">
+                            {teamMemberLocale.titleMain}
+                        </h2>
+                        <p className="text-center text-base text-gray-600 m-4 animate-fadeIn">
+                            {teamMemberLocale.desc}
+                        </p>
+                        {console.log(TeamMemberImages)}
+                        <div className="flex flex-row justify-center items-center w-full mt-4">
+                            {TeamMemberImages.map((item, index) => (
+                                <div className="flex flex-col animate-fadeInSlideIn">
+                                    <Image src={item} alt="team" className="p-1 animate-fadeIn"/>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                )
-                )}
+                    <div className="w-4/5">
+                        {/* <Image src="/images/team.jpg" alt="team" width="800" height="500" /> */}
+                    </div>
+                </div>
+                {/*End Team Members Section*/}
+
+                {/*Company Culture Section*/}
+                <div className="flex flex-row bg-green-800 items-center justify-center m-auto h-auto mt-16 w-full mx-auto px-0">
+                    <div className="w-1/2">
+                        <Image src={companyCultureImage} alt="culture" />
+                    </div>
+                    <div className="w-1/2 ">
+                        <h2 className="text-3xl text-left m-4 font-bold text-white animate-fadeInSlideIn">
+                            {companyCultureLocale.title}
+                        </h2>
+                        <p className="text-left text-base text-white m-4 animate-fadeIn">
+                            {companyCultureLocale.desc}
+                        </p>
+                        <p className="text-left text-base text-white m-4 animate-fadeIn">
+                            {companyCultureLocale.subDesc.map((item, index) => (
+                                <li key={index} className="m-4">
+                                    {item.desc}
+                                </li>
+                            ))}
+                        </p>
+                        <Link href="" className="m-4 text-gray-200 italic font-semibold">
+                            {locale === "en" ? "Read more" : "Xem thêm"}
+                        </Link>
+                    </div>
+                </div>    
+                {/*End Company Culture Section*/}
+
+                {/*Certification Section*/}
+                <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-8">
+                    <div className="w-4/5">
+                        <h2 className="text-3xl text-center font-bold text-green-700 animate-fadeInSlideIn">
+                            {certificateLocale.titleMain}
+                        </h2>
+                        <p className="text-center text-base text-gray-600 m-4 animate-fadeIn">
+                            {certificateLocale.desc}
+                        </p>
+                    </div>
+                    <div className="flex flex-row w-4/5">
+                        {CertificationImages.map((item, index) => (
+                            <div className="m-2 w-full">
+                                <div className="flex flex-col animate-fadeInSlideIn">
+                                    <Image src={item} alt="cert" className="p-1 animate-fadeIn"/>
+                                </div>
+                                <div className="w-full h-1 bg-green-800"></div>
+                                <p className="text-center text-sm text-gray-600 m-4 animate-fadeIn">
+                                    {certificateLocale.sub[index].desc}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>          
+                {/*End Certification Section*/}
+
+                {/*Partners Section*/}
+                <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-8">
+                    <div className="w-4/5">
+                        <h2 className="text-3xl text-center font-bold text-green-700 animate-fadeInSlideIn">
+                            {partnersLocale.title}
+                        </h2>
+                    </div>
+                    <div className="flex flex-row w-4/5 items-end">
+                        {PartnersImages.map((item, index) => (
+                            <div className="m-8 w-full">
+                                <div className="flex flex-col animate-fadeInSlideIn">
+                                    <Image src={item} alt="partner" className="p-1 animate-fadeIn"/>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                {/*End Partners Section*/}
+
+                {/*Gallery Section*/}   
             </div>
         </>
     )

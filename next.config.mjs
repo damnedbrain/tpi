@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  basePath: '',
   i18n: {
     locales: ['en-US', 'vi'],
     defaultLocale: 'vi',
