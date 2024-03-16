@@ -9,7 +9,18 @@ export default function Footer() {
         <div className="bg-indigo-950 relative bottom-0 w-full sm:max-h-96">
             <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                 <div className="relative flex items-center justify-center h-auto">
-                    <Image as="image" priority={true} alt="logo" src={ToanPhatLogo} width={256} height='auto' className='p-4'/>
+                    <Image
+                        as="image"
+                        
+                        alt="logo"
+                        src={ToanPhatLogo}
+                        width={256}
+                        height='auto'
+                        className='p-4'
+                        style={{
+                            maxWidth: "100%",
+                            height: "auto"
+                        }} />
                 </div>
                 <div className="relative flex items-center justify-center h-auto gap-4 m-4">
                     <Link href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
@@ -27,5 +38,5 @@ export default function Footer() {
                 </h1>
             </div>
         </div>
-    )
+    );
 }

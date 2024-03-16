@@ -1,38 +1,41 @@
 import React from 'react';
 import styles from './DangNhap.module.scss';
-import Image from 'next/image';
+import Image from "next/image";
 
 import comingSoon from '@assets/van-chuyen/coming_soon.png';
 import comingSoonBG from '@assets/dang-nhap/bg.png';
 import comingSoonText from '@assets/van-chuyen/coming_soon_text.png';
 
 const DangNhap = () => {
-  return (
-    <>
-      <div className={styles['container']}>
-        <div className={styles['bg']}>
-          <Image
-            src={comingSoonBG}
-            alt=''
-            
-            layout='responsive'
-            objectFit='fill'
-            quality={100}
-          />
-          </div>
-        <div className={styles['text']}>
-          <Image
-            src={comingSoonText}
-            alt=''
-            width={478}
-            height={46}
-            layout='responsive'
-            objectFit='contain'
-            quality={100}
-          />
+  return <>
+    <div className={styles['container']}>
+      <div className={styles['bg']}>
+        <Image
+          src={comingSoonBG}
+          alt=''
+          quality={100}
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "auto",
+            objectFit: "fill"
+          }} />
         </div>
+      <div className={styles['text']}>
+        <Image
+          src={comingSoonText}
+          alt=''
+          width={478}
+          height={46}
+          quality={100}
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "auto",
+            objectFit: "contain"
+          }} />
       </div>
-    </>
-  );
+    </div>
+  </>;
 };
 export default DangNhap;

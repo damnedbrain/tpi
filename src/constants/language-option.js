@@ -313,7 +313,7 @@ export const irradiationFlow = [
   },
 ];
 
-export const Partners = [
+export const partners = [
   {
     locale: 'vi',
     title: 'Được tin cậy bởi các đối tác hàng đầu',

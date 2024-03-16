@@ -4,7 +4,7 @@ import { foodIrradiationSystem } from '@constants/language-option';
 import { SubIrrdiationAccordion } from './sub-irradiation-accordion';
 import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 import { useObserverItem } from 'components/hook/useObserverItem';
-import Image from 'next/image';
+import Image from "next/image";
 
 const IrradiationAccordion = () => {
   const refContainer = useRef();

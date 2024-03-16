@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import styles from './VanHoaDoanhNghiep.module.scss';
 import { useObserverItem } from 'components/hook/useObserverItem';
 import { useChooseLanguage } from 'components/hook/useChooseLanguage';
-import Image from 'next/image';
+import Image from "next/image";
 import mem1 from '@assets/team-member/team-member-img-1.png';
 import mem2 from '@assets/team-member/team-member-img-2.png';
 import { NumberAndDesc } from 'components/own/number-and-desc';
@@ -23,50 +23,54 @@ const VanHoaDoanhNghiep = () => {
   useObserverItem(refImageWrapper, styles);
   useObserverItem(refMemberContent, styles);
   useChooseLanguage(CorpCulture, refContent);
-  return (
-    <>
-      <div className={styles['container']}>
-        <div className={styles['member-img-wrapper']} ref={refImageWrapper}>
-          <div className={styles['member-img']}>
-            <Image
-              src={mem1}
-              alt=''
-              width={715}
-              height={500}
-              layout='responsive'
-              objectFit='contain'
-              quality={100}
-            />
-          </div>
-          <div className={styles['member-img']}>
-            <Image
-              src={mem2}
-              alt=''
-              width={715}
-              height={500}
-              layout='responsive'
-              objectFit='contain'
-              quality={100}
-            />
-          </div>
+  return <>
+    <div className={styles['container']}>
+      <div className={styles['member-img-wrapper']} ref={refImageWrapper}>
+        <div className={styles['member-img']}>
+          <Image
+            src={mem1}
+            alt=''
+            width={715}
+            height={500}
+            quality={100}
+            sizes="100vw"
+            style={{
+              width: "100%",
+              height: "auto",
+              objectFit: "contain"
+            }} />
         </div>
-        <div className={styles['member-content']}>
-          <div className={styles['member-content__title']}>{refContent.current?.mainTitle}</div>
-          <div className={styles['member-content__maindesc']}>{refContent.current?.mainDesc}</div>
-          <div
-            className={styles['member-content__content']}
-            ref={refMemberContent}
-          >
-            <div className={styles['member-content__content__title']} ref={refMemberContent}>{refContent.current?.title1}</div>
-            <NumberAndDesc number={1} desc={refContent.current?.desc1} />
-            <div className={styles['member-content__content__title']} ref={refMemberContent}>{refContent.current?.title2}</div>
-            <NumberAndDesc number={2} desc={refContent.current?.desc2} />
-            <div className={styles['member-content__content__title']} ref={refMemberContent}>{refContent.current?.title3}</div>
-            <NumberAndDesc number={3} desc={refContent.current?.desc3} />
-          </div>
+        <div className={styles['member-img']}>
+          <Image
+            src={mem2}
+            alt=''
+            width={715}
+            height={500}
+            quality={100}
+            sizes="100vw"
+            style={{
+              width: "100%",
+              height: "auto",
+              objectFit: "contain"
+            }} />
         </div>
       </div>
-    </>
-  );
+      <div className={styles['member-content']}>
+        <div className={styles['member-content__title']}>{refContent.current?.mainTitle}</div>
+        <div className={styles['member-content__maindesc']}>{refContent.current?.mainDesc}</div>
+        <div
+          className={styles['member-content__content']}
+          ref={refMemberContent}
+        >
+          <div className={styles['member-content__content__title']} ref={refMemberContent}>{refContent.current?.title1}</div>
+          <NumberAndDesc number={1} desc={refContent.current?.desc1} />
+          <div className={styles['member-content__content__title']} ref={refMemberContent}>{refContent.current?.title2}</div>
+          <NumberAndDesc number={2} desc={refContent.current?.desc2} />
+          <div className={styles['member-content__content__title']} ref={refMemberContent}>{refContent.current?.title3}</div>
+          <NumberAndDesc number={3} desc={refContent.current?.desc3} />
+        </div>
+      </div>
+    </div>
+  </>;
 };
 export default React.memo(VanHoaDoanhNghiep);

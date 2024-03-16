@@ -5,7 +5,7 @@ import { introduce } from '@constants/language-option';
 import { useChooseLanguage } from 'components/hook/useChooseLanguage';
 import timeline_img from '@assets/gioi-thieu/TPG_timeline.png';
 
-import Image from 'next/image';
+import Image from "next/image";
 
 
 const TimelineTPG = () => {

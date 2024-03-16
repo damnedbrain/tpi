@@ -1,7 +1,7 @@
 import React, { useRef, useCallback } from 'react';
 import styles from './SubMarket.module.scss';
 import { get } from 'lodash';
-import Image from 'next/image';
+import Image from "next/image";
 import { RoutePages } from '@constants/router';
 import { useObserverItem } from 'components/hook/useObserverItem';
 import { useRouter } from 'next/router';
@@ -76,49 +76,53 @@ const SubMarket = ({ news }) => {
   //   'height',
   // ]);
 
-  return (
-    <>
-      <div className={styles['container']} ref={refContent}>
+  return <>
+    <div className={styles['container']} ref={refContent}>
+      <div
+        className={styles['main-image']}
+        onClick={() => redirectToPage(RoutePages.MARKET + `/${slug}`)}
+      >
+        <Image
+          src={`https:${_thumbImageURL}`}
+          alt=''
+          width={494}
+          height={338}
+          quality={100}
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "auto",
+            objectFit: "cover"
+          }} />
+      </div>
+      <div className={styles['content-wrapper']}>
         <div
-          className={styles['main-image']}
+          className={styles['title']}
           onClick={() => redirectToPage(RoutePages.MARKET + `/${slug}`)}
         >
-          <Image
-            src={`https:${_thumbImageURL}`}
-            alt=''
-            width={494}
-            height={338}
-            layout='responsive'
-            objectFit='cover'
-            quality={100}
-          />
+          {title}
         </div>
-        <div className={styles['content-wrapper']}>
-          <div
-            className={styles['title']}
-            onClick={() => redirectToPage(RoutePages.MARKET + `/${slug}`)}
-          >
-            {title}
+        <div className={styles['time']}>{convertTime(time, locale)}</div>
+        <div className={styles['desc']}>{_desc}</div>
+        <div className={styles['author']}>
+          <div className={styles['author__avatar']}>
+            <Image
+              src={`https:${_avatar}`}
+              alt=''
+              width={40}
+              height={40}
+              quality={100}
+              sizes="100vw"
+              style={{
+                width: "100%",
+                height: "auto",
+                objectFit: "contain"
+              }} />
           </div>
-          <div className={styles['time']}>{convertTime(time, locale)}</div>
-          <div className={styles['desc']}>{_desc}</div>
-          <div className={styles['author']}>
-            <div className={styles['author__avatar']}>
-              <Image
-                src={`https:${_avatar}`}
-                alt=''
-                width={40}
-                height={40}
-                layout='responsive'
-                objectFit='contain'
-                quality={100}
-              />
-            </div>
-            <div className={styles['author__name']}>{author}</div>
-          </div>
+          <div className={styles['author__name']}>{author}</div>
         </div>
       </div>
-    </>
-  );
+    </div>
+  </>;
 };
 export default React.memo(SubMarket);

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './MarketDetail.module.scss';
-import Image from 'next/image';
+import Image from "next/image";
 import Head from 'next/head';
 import { get } from 'lodash';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
@@ -54,8 +54,11 @@ const renderOptions = {
           height={node.data.target.fields.file.details.image.height}
           width={node.data.target.fields.file.details.image.width}
           alt={node.data.target.fields.description}
-          layout='responsive'
-        />
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "auto"
+          }} />
       );
     },
   },
@@ -110,69 +113,73 @@ const MarketDetail = ({ news, locale }) => {
     },
   ];
 
-  return (
-    <>
-      <Head>
-        <title>{title}</title>
-        <meta name='title' content={title} />
-        <meta name='description' content={title} />
-        <meta name='image' content={`https:${_image}`} />
+  return <>
+    <Head>
+      <title>{title}</title>
+      <meta name='title' content={title} />
+      <meta name='description' content={title} />
+      <meta name='image' content={`https:${_image}`} />
 
-        <meta name='og:title' content={title} />
-        <meta name='og:description' content={title} />
-        <meta name='og:image' content={`https:${_image}`} />
+      <meta name='og:title' content={title} />
+      <meta name='og:description' content={title} />
+      <meta name='og:image' content={`https:${_image}`} />
 
-        <meta itemProp='name' content={title} />
-        <meta itemProp='description' content={title} />
-        <meta itemProp='image' content={`https:${_image}`} />
+      <meta itemProp='name' content={title} />
+      <meta itemProp='description' content={title} />
+      <meta itemProp='image' content={`https:${_image}`} />
 
-        <meta property='og:url' content={RoutePages.MARKET + `/${slug}`} />
-        <meta property='og:type' content='website' />
-        <meta property='og:title' content={title} />
-        <meta property='og:description' content={title} />
-        <meta property='og:image' content={`https:${_image}`} />
+      <meta property='og:url' content={RoutePages.MARKET + `/${slug}`} />
+      <meta property='og:type' content='website' />
+      <meta property='og:title' content={title} />
+      <meta property='og:description' content={title} />
+      <meta property='og:image' content={`https:${_image}`} />
 
-      </Head>
-      <div className={styles['container']}>
-        <Breadcrumb data={marketDetailBreadcrumb} />
+    </Head>
+    <div className={styles['container']}>
+      <Breadcrumb data={marketDetailBreadcrumb} />
 
-        <div className={styles['content-wrapper']}>
-          <div className={styles['title']}>{title}</div>
-          <div className={styles['author']}>
-            <div className={styles['author__avatar']}>
-              <Image
-                src={`https:${_avatar}`}
-                alt=''
-                width={_imageAvatarrWidth ? _imageAvatarrWidth : 50}
-                height={_imageAvatarrHeight ? _imageAvatarrHeight : 50}
-                layout='responsive'
-                objectFit='contain'
-                quality={100}
-              />
-            </div>
-            <div className={styles['author__name']}>{author}</div>
-          </div>
-          <div className={styles['time']}>{convertTime(time, locale)}</div>
-
-          <div className={styles['main-image']}>
+      <div className={styles['content-wrapper']}>
+        <div className={styles['title']}>{title}</div>
+        <div className={styles['author']}>
+          <div className={styles['author__avatar']}>
             <Image
-              src={`https:${_image}`}
+              src={`https:${_avatar}`}
               alt=''
-              width={_imageWidth ? _imageWidth : 383}
-              height={_imageHeight ? _imageHeight : 200}
-              layout='responsive'
-              objectFit='contain'
+              width={_imageAvatarrWidth ? _imageAvatarrWidth : 50}
+              height={_imageAvatarrHeight ? _imageAvatarrHeight : 50}
               quality={100}
-            />
+              sizes="100vw"
+              style={{
+                width: "100%",
+                height: "auto",
+                objectFit: "contain"
+              }} />
           </div>
-          
+          <div className={styles['author__name']}>{author}</div>
+        </div>
+        <div className={styles['time']}>{convertTime(time, locale)}</div>
 
-          <div className={styles['desc']}>
-            {documentToReactComponents(desc, renderOptions)}
-          </div>
+        <div className={styles['main-image']}>
+          <Image
+            src={`https:${_image}`}
+            alt=''
+            width={_imageWidth ? _imageWidth : 383}
+            height={_imageHeight ? _imageHeight : 200}
+            quality={100}
+            sizes="100vw"
+            style={{
+              width: "100%",
+              height: "auto",
+              objectFit: "contain"
+            }} />
+        </div>
+        
+
+        <div className={styles['desc']}>
+          {documentToReactComponents(desc, renderOptions)}
         </div>
       </div>
-    </>
-  );
+    </div>
+  </>;
 };
 export default React.memo(MarketDetail);

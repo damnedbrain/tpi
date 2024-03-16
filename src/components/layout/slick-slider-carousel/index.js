@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import Image from 'next/image';
+import Image from "next/image";
 
 import RightArrowIcon from '@assets/icons/arrow-right.png';
 import LeftArrowIcon from '@assets/icons/arrow-left.png';
@@ -13,7 +13,13 @@ const NextArrow = ({ className, style, onClick }) => (
     style={{ ...style, display: "block", color: "black" }}
     onClick={onClick}
   >
-    <Image src={RightArrowIcon} alt="Next" />
+    <Image
+      src={RightArrowIcon}
+      alt="Next"
+      style={{
+        maxWidth: "100%",
+        height: "auto"
+      }} />
   </div>
 );
 
@@ -23,7 +29,13 @@ const PrevArrow = ({ className, style, onClick }) => (
     style={{ ...style, display: "block", color: "black" }}
     onClick={onClick}
   >
-    <Image src={LeftArrowIcon} alt="Previous" />
+    <Image
+      src={LeftArrowIcon}
+      alt="Previous"
+      style={{
+        maxWidth: "100%",
+        height: "auto"
+      }} />
   </div>
 );
 
@@ -55,12 +67,16 @@ export default function SlickSlider({ entries }) {
     >
       {entries.map((item, index) => (
         <div key={index}>
-          <Image 
-            src={`https:${item.url}`} 
+          <Image
+            src={`https:${item.url}`}
             alt={item.alt}
-            priority={true} 
+            priority={true}
             width={item.width}
-            height={item.height} />
+            height={item.height}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
       ))}
     </Slider>
