@@ -1,1 +1,0 @@
-export { default as FutureGoal } from './FutureGoal.component';
