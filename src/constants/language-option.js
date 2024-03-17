@@ -1197,19 +1197,12 @@ export const LocationMapContent = [
   },
 ];
 
-export const contactAConsultant = [
+export const contactInfo = [
   {
     locale: 'vi',
     title: 'Thông tin liên hệ',
     desc: ``,
-    username: { label: `Họ tên`, desc: `Nhập họ tên vào đây` },
-    phone: { label: `Số điện thoại`, desc: `Nhập số điện thoại vào đây`,},
-    email: { label: `Email`, desc: `Nhập Email vào đây`,},
-    address: { label: `Địa chỉ`, desc: `Nhập địa chỉ vào đây` },
-    typeProduct: { label: `Loại hàng`, desc: `Nhập loại hàng vào đây` },
-    register: { title: `Đăng ký`, label1: `Chiếu xạ`, label2: `Gửi kho` },
-    note: { label: `Ghi chú`, desc: `Nhập ghi chú vào đây` },
-    button: `Gửi thông tin`,
+    
     directContact: {
       title: `Liên hệ trực tiếp`,
       sub: [
@@ -1290,14 +1283,7 @@ export const contactAConsultant = [
     locale: 'en-US',
     title: 'Contact Info',
     desc: ``,
-    username: { label: `Họ tên`, desc: `Nhập họ tên vào đây` },
-    phone: { label: `Số điện thoại`, desc: `Nhập số điện thoại vào đây`,},
-    email: { label: `Email`, desc: `Nhập Email vào đây`,},
-    address: { label: `Địa chỉ`, desc: `Nhập địa chỉ vào đây` },
-    typeProduct: { label: `Loại hàng`, desc: `Nhập loại hàng vào đây` },
-    register: { title: `Đăng ký`, label1: `Chiếu xạ`, label2: `Gửi kho` },
-    note: { label: `Ghi chú`, desc: `Nhập ghi chú vào đây` },
-    button: `Gửi thông tin`,
+    
     directContact: {
       title: `Liên hệ trực tiếp`,
       sub: [
