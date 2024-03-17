@@ -1,0 +1,41 @@
+import { useRouter } from "next/router";
+
+import { questionContent } from "@/constants/language-option";
+import Image from "next/image";
+
+import QAImage from "@assets/question-and-answer/Q&A.png";
+
+export default function QuestionAndAnswer() {
+
+    const router = useRouter();
+    const locale = router.locale;
+    const questionContentLocale = questionContent.find((item) => item.locale === locale);
+    return (
+        <>
+            <div className="flex flex-col max-w-7xl w-full items-center justify-center m-auto h-auto mt-8">
+                <Image src={QAImage} alt="Q&A" className="w-full m-6 p-6 rounded-full" />
+                <h1 className="text-6xl font-bold w-full text-center mt-24 text-green-800">
+                    {questionContentLocale.title}
+                </h1>
+                <p className="text-xl w-full text-center mt-8 text-gray-600">
+                    {questionContentLocale.desc}
+                </p>
+                <div className="flex flex-col mt-12">
+                    {questionContentLocale.sub.map((item, index) => (
+                        <div key={index} className="flex flex-row border-4 m-4 rounded-xl">
+                            <h1 className="text-8xl font-semiBold text-center text-green-600 p-6">{index + 1}</h1>
+                            <div>
+                                <h1 className="text-4xl font-semiBold text-left text-green-600 mt-2 p-6">
+                                    {item.title}
+                                </h1>
+                                <p className="text-2xl text-left mt-2 p-6">
+                                    {item.desc}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </>
+    )
+}
