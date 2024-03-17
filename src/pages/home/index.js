@@ -244,7 +244,7 @@ export default function Home() {
             {/*End Best Services section*/}
            
             {/*Video Location section*/}
-            <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-8">
+            <div className="flex flex-col max-w-7xl items-center justify-center m-auto h-auto mt-8">
                 <div className="w-4/5">
                     <h2 className="text-3xl text-center font-bold text-green-700 animate-fadeInSlideIn">
                         {locationMapLocale.title}
@@ -253,7 +253,7 @@ export default function Home() {
                         {locationMapLocale.desc}
                     </div>
                 </div>
-                <div className="w-4/5 m-auto">
+                <div className="flex flex-col w-full m-auto">
                     {locale === "en" ? 
                         <VideoComponent videoSrc="/videos/location_map_video_eng.mp4" /> :
                         <VideoComponent videoSrc="/videos/location_map_video.mp4" />

@@ -37,11 +37,12 @@ export default function Header() {
                 </svg>
               </button>
             </div>
+
+            {/* BIG NAV BAR */}
+
             <div className="hidden sm:block sm:ml-6">
               <div className="flex flex-row items-end">
-                {/* <a href="#" className="px-3 py-2 rounded-md text-sm font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out">Dashboard</a>
-                <a href="#" className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out">Team</a>
-                <a href="#" className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out">Projects</a>*/}
+              {/* LOGO */}
                 <Link href="/" className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out">
                   <Image
                     src={ToanPhatLogo}
@@ -54,35 +55,59 @@ export default function Header() {
                       maxWidth: "100%",
                       height: "auto"
                     }} />
-                </Link> 
+                </Link>
+              {/* LOGO END */}
+
+              {/* MENU */} 
               {arrMenu.map((item, index) => (
-              <div className="relative" key={index}>
-                <button onClick={() => handleMenu(item.title)} className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-green-700 focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out">
-                  {item.title}
-                </button>
-                {activeMenu === item.title && item.status && (
-                  <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg">
-                    <div className="py-1 rounded-md bg-white shadow-xs">
+                <div key={index} className="relative group">
+                  <Link href={item.sub ? "#" : item.link} legacyBehavior>
+                    <a className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out">
+                      {item.title}
+                    </a>
+                  </Link>
+                  {item.sub && item.sub.length > 0 && (
+                    <div className="absolute left-0 w-48 mt-2 py-2 bg-white rounded-md shadow-xl z-20 hidden group-hover:block">
                       {item.sub.map((subItem, subIndex) => (
-                        <Link key={subIndex} href={subItem.link} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                          {subItem.title}
+                        <Link key={subIndex} href={subItem.link} legacyBehavior>
+                          <a className="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                            {subItem.title}
+                          </a>
                         </Link>
                       ))}
                     </div>
-                  </div>
-                )}
-              </div>
-            ))}
+                  )}
+                </div>
+              ))}
+              {/* MENU END */}
               </div>
             </div>
+            {/* BIG NAV BAR END */}
+
           </div>
         </div>
         <div className={`${isOpen ? 'block' : 'hidden'} sm:hidden`}>
           <div className="px-2 pt-2 pb-3">
-            <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out">Dashboard</a>
-            <a href="#" className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out">Team</a>
-            <a href="#" className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out">Projects</a>
-            <a href="#" className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out">Calendar</a>
+            {arrMenu.map((item, index) => (
+              <div key={index} className="relative group">
+                <Link href={item.sub ? "#" : item.link} legacyBehavior>
+                  <a className="block px-3 py-2 text-base font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out">
+                    {item.title}
+                  </a>
+                </Link>
+                {item.sub && item.sub.length > 0 && (
+                  <div className="absolute left-0 w-48 mt-2 py-2 bg-white rounded-md shadow-xl z-20 hidden group-hover:block">
+                    {item.sub.map((subItem, subIndex) => (
+                      <Link key={subIndex} href={subItem.link} legacyBehavior>
+                        <a className="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                          {subItem.title}
+                        </a>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </nav>
