@@ -14,6 +14,8 @@ import AboutUsImage from "@/assets/gioi-thieu/About-Us-Image.png";
 import MessageImage from "@/assets/gioi-thieu/About-Us-Image-message.png";
 import MissionValueImage from "@assets/gioi-thieu/Mission-and-value.png";
 import TeamMemberImage from "@assets/gioi-thieu/human-resource.png";
+import TeamMemberExtraImages1 from "@assets/team-member/team-member-img-1.png";
+import TeamMemberExtraImages2 from "@assets/team-member/team-member-img-2.png";
 
 import VideoComponent from "@components/content-ui/VideoComponent";
 import NumberTitleDescWithLink from "@/components/content-ui/NumberTitleDescWithLink";
@@ -174,17 +176,23 @@ export default function GioiThieu() {
             {/* Future Goal TPG Section END */}
 
             {/* Team Member TPG Section */}
-            <div className="flex flex-row w-full items-center justify-center m-auto h-auto mt-12">
-                <div className="flex flex-col w-full items-start justify-center bg-violet-950 p-8">
-                    <h1 className="text-5xl font-semiBold text-left text-green-600 animate-fadeInSlideIn">
-                        {teamMemberTPGLocale.titleMain}
-                    </h1>
-                    <p className="text-xl leading-8 tracking-normal text-white mt-4 whitespace-pre-line animate-fadeInSlideIn">
-                        {teamMemberTPGLocale.desc}
-                    </p>
+            <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
+                <div className="flex flex-row w-full">
+                    <div className="flex flex-col w-1/2 items-start justify-center bg-violet-950 ">
+                        <h1 className="text-5xl font-semiBold text-left text-green-600 animate-fadeInSlideIn p-8">
+                            {teamMemberTPGLocale.titleMain}
+                        </h1>
+                        <p className="text-xl leading-8 tracking-normal text-white p-8 mt-4 whitespace-pre-line animate-fadeInSlideIn">
+                            {teamMemberTPGLocale.desc}
+                        </p>
+                    </div>
+                    <div className="flex flex-row w-1/2 items-center justify-center m-auto h-auto">
+                        <Image src={TeamMemberImage} alt="Message Image" className="w-full animate-fadeInSlideIn" />
+                    </div>
                 </div>
-                <div className="flex flex-row w-full items-center justify-center m-auto h-auto">
-                    <Image src={TeamMemberImage} alt="Message Image" className="w-full animate-fadeInSlideIn" />
+                <div className="flex flex-row w-full items-center justify-center mt-8 h-auto">
+                    <Image src={TeamMemberExtraImages1} alt="Message Image" className="w-1/2 animate-fadeInSlideIn" />
+                    <Image src={TeamMemberExtraImages2} alt="Message Image" className="w-1/2 animate-fadeInSlideIn" />
                 </div>
             </div>
             {/* Team Member TPG Section END */}
@@ -227,6 +235,8 @@ export default function GioiThieu() {
                     </div>
                 </div>
             </div>
+            {/* Corp Culture TPG Section END */}
+            
         </div>
     </>
   );
