@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 
 import { contactInfo } from "@/constants/language-option";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Contact() {
 
@@ -23,6 +24,7 @@ export default function Contact() {
                             <p className="text-2xl text-left mt-1 p-1">
                                 {item.desc}
                             </p>
+                            <FontAwesomeIcon icon="fas fa-landmark" size="3x" />
                         </div>
                     ))}
                 </div>
