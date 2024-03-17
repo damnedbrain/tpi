@@ -330,64 +330,14 @@ export const teamMember = [
     title: 'Đội ngũ nhân sự & Văn hóa doanh nghiệp',
     titleMain: 'Đội ngũ nhân sự',
     desc: `Mỗi cá nhân sẽ tạo nên tập thể, từng đóng góp nhỏ là tiền đề của những thành quả lớn. Tại TPG, chúng tôi trân trọng giá trị của từng cá nhân, từ lãnh đạo, quản lý cấp cao am hiểu kiến thức chuyên môn đến những người trẻ với nguồn năng lượng tích cực và ham học hỏi. Một tập thể luôn coi trọng lợi ích chung và hướng đến sự cải tiến sẽ tạo nên một doanh nghiệp phát triển vững mạnh. Và tất cả những giá trị, kết quả tích cực đó đều được hình thành từ việc coi trọng Văn hóa doanh nghiệp. `,
-    sub: [
-      {
-        title: 'Tên',
-        desc: `Chức vụ`,
-      },
-      {
-        title: 'Tên',
-        desc: `Chức vụ`,
-      },
-      {
-        title: 'Tên',
-        desc: `Chức vụ`,
-      },
-      {
-        title: 'Tên',
-        desc: `Chức vụ`,
-      },
-      {
-        title: 'Tên',
-        desc: `Chức vụ`,
-      },
-      {
-        title: 'Tên',
-        desc: `Chức vụ`,
-      },
-    ],
+    
   },
   {
     locale: 'en-US',
     title: 'Human resources',
     titleMain: 'Human resources',
     desc: `Each person will be an integral part of the team, because even the smallest of contributions can be a key to a great achievement. At TPG, we respect the value of each individual, from leaders and senior managers with professional knowledge to young people with positive energy and eagerness to learn. A successful business will be a team that values common interests and seeks improvement. A respect of corporate culture is at the heart of all these values and positive results.`,
-    sub: [
-      {
-        title: 'Name goes here',
-        desc: `Tittle goes here`,
-      },
-      {
-        title: 'Name goes here',
-        desc: `Tittle goes here`,
-      },
-      {
-        title: 'Name goes here',
-        desc: `Tittle goes here`,
-      },
-      {
-        title: 'Name goes here',
-        desc: `Tittle goes here`,
-      },
-      {
-        title: 'Name goes here',
-        desc: `Tittle goes here`,
-      },
-      {
-        title: 'Name goes here',
-        desc: `Tittle goes here`,
-      },
-    ],
+    
   },
 ];
 

@@ -253,7 +253,7 @@ export default function Home() {
                         {locationMapLocale.desc}
                     </div>
                 </div>
-                <div className="w-4/5">
+                <div className="w-4/5 m-auto">
                     {locale === "en" ? 
                         <VideoComponent videoSrc="/videos/location_map_video_eng.mp4" /> :
                         <VideoComponent videoSrc="/videos/location_map_video.mp4" />
