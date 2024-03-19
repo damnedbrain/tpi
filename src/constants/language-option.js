@@ -1946,3 +1946,28 @@ export const contactBarLabel = [
     chieuxa: "TPI",
   },
 ];
+
+export const  topTagslabel =  [
+  {
+    locale: 'vi',
+    mainLabel: "Chuyên Mục",
+    topTags: [
+      "Nông Sản",
+      "Thủy Sản",
+      "Chiếu Xạ",
+      "Kho Lạnh",
+      "Xuất Nhập Khẩu",
+    ]
+  },
+  {
+    locale: 'en-US',
+    mainLabel: "Categories",
+    topTags: [
+      "Agricultural",
+      "Seafood",
+      "Irradiation",
+      "Refrigerated Warehouse",
+      "Logistics",
+    ]
+  }
+];

@@ -19,7 +19,8 @@ function shortenEntries (entries) {
             thumbImage: item.fields.thumbImage.fields.file.url,
             thumbImageAlt: `Thumb Image ${item.fields.thumbImage.fields.title}`,
             thumbImageWidth: item.fields.thumbImage.fields.file.details.image.width,
-            thumbImageHeight: item.fields.thumbImage.fields.file.details.image.height,  
+            thumbImageHeight: item.fields.thumbImage.fields.file.details.image.height,
+            postTime: item.sys.createdAt,  
         }
     }).filter(Boolean);
 }
@@ -28,104 +29,51 @@ export default function ThiTruong() {
     const router = useRouter();
     const locale = router.locale;
 
-    // Fetch hero entries
+    // Prep the loading state
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
     const [heroEntries, setHeroEntries] = useState([]);
-    useEffect(() => {
-        async function fetchHeroEntries() {
-            const entries = await getEntries(
-                "toanPhatMarketNews",
-                locale,
-                {
-                    order: '-sys.createdAt',
-                    limit: 5,
-                    "fields.promo": "true"
-                }
-                );
-            setHeroEntries(shortenEntries(entries));
-        };
-        fetchHeroEntries();
-    }, []);
-
-    // Fetch featured ( hightLight ) entries
     const [featuredEntries, setFeaturedEntries] = useState([]);
-    useEffect(() => {
-        async function fetchFeaturedEntries() {
-            const entries = await getEntries(
-                "toanPhatMarketNews",
-                locale,
-                {
-                    order: '-sys.createdAt',
-                    limit: 5,
-                    "fields.hightLight": "true"
-                }
-                );
-            setFeaturedEntries(shortenEntries(entries));
-        };
-        fetchFeaturedEntries();
-    }, []);
-
-    // Fetch news entries
     const [newsEntries, setNewsEntries] = useState([]);
-    useEffect(() => {
-        async function fetchNewsEntries() {
-            const entries = await getEntries(
-                "toanPhatMarketNews",
-                locale,
-                {
-                    order: '-sys.createdAt',
-                    limit: 9,
-                    "fields.type": "news"
-                }
-                );
-            setNewsEntries(shortenEntries(entries));
-        };
-        fetchNewsEntries();
-    }, []);
-
-    // Fetch blog entries
     const [blogEntries, setBlogEntries] = useState([]);
-    useEffect(() => {
-        async function fetchBlogEntries() {
-            const entries = await getEntries(
-                "toanPhatMarketNews",
-                locale,
-                {
-                    order: '-sys.createdAt',
-                    limit: 9,
-                    "fields.type": "blog"
-                }
-                );
-            setBlogEntries(shortenEntries(entries));
-        };
-        fetchBlogEntries();
-    }, []);
-
-    // Fetch promotion entries
     const [promotionEntries, setPromotionEntries] = useState([]);
+
     useEffect(() => {
-        async function fetchPromotionEntries() {
-            const entries = await getEntries(
-                "toanPhatMarketNews",
-                locale,
-                {
-                    order: '-sys.createdAt',
-                    limit: 9,
-                    "fields.type": "promo"
-                }
-                );
-            setPromotionEntries(shortenEntries(entries));
-        };
-        fetchPromotionEntries();
+    // Fetch data
+    Promise.all([
+        getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 5, "fields.promo": "true" }),
+        getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 5, "fields.hightLight": "true" }),
+        getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 9, "fields.type": "news" }),
+        getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 9, "fields.type": "blog" }),
+        getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 9, "fields.type": "promo" })
+    ]).then(([hero, feature, news, blogs, promotions]) => {
+        // Set data in state
+        setHeroEntries(shortenEntries(hero));
+        setFeaturedEntries(shortenEntries(feature));
+        setNewsEntries(shortenEntries(news));
+        setBlogEntries(shortenEntries(blogs));
+        setPromotionEntries(shortenEntries(promotions));
+        // Set loading state to false
+        setIsLoading(false);
+    }).catch((error) => {
+        setError(error);
+        console.error("Error fetching data:", error);
+        
+        // Set loading state to false
+        setIsLoading(false);
     }, []);
+    });
 
-
-
+    // Render
+    if (isLoading) {
+    return <div>Loading...</div>; // Or your custom loading component
+    }
 
     return(
         <>
-            {console.log(heroEntries)}
+            {/* {console.log(newsEntries, blogEntries, promotionEntries, heroEntries, featuredEntries)} */}
             <SlickSlider entries={heroEntries} />
-            <FeaturedEntries entries={featuredEntries} />
+            <FeaturedEntries newsEntries={newsEntries} blogEntries={blogEntries} promotionEntries={promotionEntries} />
         </>
     )
 }
