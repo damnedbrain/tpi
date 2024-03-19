@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 import { getEntries } from "@/components/contentful/ContentfulService";
 import SlickSlider from "@/components/layout/slick-slider-carousel";
+import FeaturedEntries from "@/components/content-ui/FeaturedEntries";
 
 function shortenEntries (entries) {
     return entries.map((item, index) => {
@@ -20,7 +21,7 @@ function shortenEntries (entries) {
             thumbImageWidth: item.fields.thumbImage.fields.file.details.image.width,
             thumbImageHeight: item.fields.thumbImage.fields.file.details.image.height,  
         }
-    })
+    }).filter(Boolean);
 }
 
 export default function ThiTruong() {
@@ -124,7 +125,7 @@ export default function ThiTruong() {
         <>
             {console.log(heroEntries)}
             <SlickSlider entries={heroEntries} />
-
+            <FeaturedEntries entries={featuredEntries} />
         </>
     )
 }
