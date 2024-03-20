@@ -6,6 +6,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 import { topTagslabel } from "@/constants/language-option";
+import { formatDate } from "@/components/api/FormatDateTime";
+import { capitalizeFirstLetter } from "@/components/api/UpperCaseFirstLatter";
+import { ResolveLabelForContentType } from "@/components/api/ResolveLabelForContentType";
 
 
 export default function FeaturedEntries({ newsEntries, blogEntries, promotionEntries }) {
@@ -63,12 +66,77 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                             </button>
                         </div>
                     </div>
-                    <div className="flex flex-row w-full">
-                        <div>
-                            {currentTypeEntries && currentTypeEntries[0] && currentTypeEntries[0].title}
+                    {currentTypeEntries && currentTypeEntries[0] && (
+                    <div className="flex flex-row w-full h-96">
+                        <div className="flex flex-col flex-wrap items-end justify-end rounded-xl bg-black w-1/2 h-full m-2 ">
+                            <Image
+                            className="z-0 opacity-50 h-full object-cover object-left-top"
+                            src={`https:${currentTypeEntries[0].thumbImage}`}
+                            alt={currentTypeEntries[0].thumbImageAlt}
+                            width={currentTypeEntries[0].thumbImageWidth}
+                            height={currentTypeEntries[0].thumbImageHeight}
+                            />
+                            <div className="absolute flex flex-col flex-wrap">
+                                <div className="flex flex-row">
+                                    <p className="w-1/2 text-semiBold text-gray-200">{formatDate(currentTypeEntries[0].postTime)}</p>
+                                    <p className="w-1/2 text-semiBold text-gray-200">{capitalizeFirstLetter(ResolveLabelForContentType({ type: currentTypeEntries[0].type, locale }))}</p>
+                                </div>
+                                <h1 className="text-3xl text-bold text-left text-white flex-wrap  p-2">{currentTypeEntries[0].title}</h1>
+                            </div>
                         </div>
+                        <div className="flex flex-col w-1/2 h-full">
+                            {currentTypeEntries.slice(1, 4).map((entry, index) => (
+                                <div className="h-1/3 m-2">
+                                    <Image
+                                        key={index}
+                                        className="h-full object-cover object-center"
+                                        src={`https:${entry.thumbImage}`}
+                                        alt={entry.thumbImageAlt}
+                                        width={entry.thumbImageWidth}
+                                        height={0.3*entry.thumbImageHeight}
+                                    />
+                                    
+                                </div>
+                            ))}
+                        </div>
+                    </div>)}
+                    {currentTypeEntries && currentTypeEntries[0] && (
+                        <div className="grid grid-cols-2 grid-rows-3  w-full mt-6">
+                            <div className="col-start-1 col-span-1 row-span-3 flex flex-col items-end justify-end">
+                                <div className="relative bg-black">
+                                    <Image
+                                        className="z-0 bg-black opacity-50"
+                                        src={`https:${currentTypeEntries[0].thumbImage}`}
+                                        alt={currentTypeEntries[0].thumbImageAlt}
+                                        width={currentTypeEntries[0].thumbImageWidth}
+                                        height={currentTypeEntries[0].thumbImageHeight}
+                                    />
+                                </div>
+                                <div className="absolute">
+                                    <div className="flex flex-row w-full">
+                                        <p className="w-1/2 text-semiBold text-gray-200">{formatDate(currentTypeEntries[0].postTime)}</p>
+                                        <p className="w-1/2 text-semiBold text-gray-200">{capitalizeFirstLetter(ResolveLabelForContentType({ type: currentTypeEntries[0].type, locale }))}</p>
+                                    </div>
+                                    <h1 className="text-2xl text-bold text-left text-white p-2">{currentTypeEntries[0].title}</h1>
+                                </div>
+                            </div>
+                            
+                                {currentTypeEntries.slice(1, 4).map((entry, index) => (
+                                    <div className="row-span-1">
+                                        <Image
+                                            key={index}
+                                            src={`https:${entry.thumbImage}`}
+                                            alt={entry.thumbImageAlt}
+                                            width={entry.thumbImageWidth}
+                                            height={entry.thumbImageHeight}
+                                        />
+                                    </div>
+                                ))}
 
-                    </div>
+
+                        </div>
+                    )}
+                    
                 </div>
                 <div className="flex flex-col w-1/4 justify-center items-center">
                     <a

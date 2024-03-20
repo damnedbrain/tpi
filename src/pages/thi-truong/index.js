@@ -20,7 +20,8 @@ function shortenEntries (entries) {
             thumbImageAlt: `Thumb Image ${item.fields.thumbImage.fields.title}`,
             thumbImageWidth: item.fields.thumbImage.fields.file.details.image.width,
             thumbImageHeight: item.fields.thumbImage.fields.file.details.image.height,
-            postTime: item.sys.createdAt,  
+            postTime: item.sys.createdAt,
+            type: item.fields.type, 
         }
     }).filter(Boolean);
 }
