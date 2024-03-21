@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { getEntries } from "@/components/contentful/ContentfulService";
 import SlickSlider from "@/components/layout/slick-slider-carousel";
 import FeaturedEntries from "@/components/content-ui/FeaturedEntries";
+import HighlightFeaturedEntries from "@/components/content-ui/HighlightFeaturedEntries";
 
 function shortenEntries (entries) {
     return entries.map((item, index) => {
@@ -70,11 +71,15 @@ export default function ThiTruong() {
     return <div>Loading...</div>; // Or your custom loading component
     }
 
+
     return(
         <>
             {/* {console.log(newsEntries, blogEntries, promotionEntries, heroEntries, featuredEntries)} */}
             <SlickSlider entries={heroEntries} />
             <FeaturedEntries newsEntries={newsEntries} blogEntries={blogEntries} promotionEntries={promotionEntries} />
+            <div className="w-full bg-slate-200 mt-8 p-4">
+                <HighlightFeaturedEntries entries={featuredEntries} />
+            </div>
         </>
     )
 }

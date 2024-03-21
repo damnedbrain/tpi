@@ -28,38 +28,50 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
         });
         setAllEntries(allEntries);
         setCurrentNewsType(allEntries);
-    } , [newsEntries, blogEntries, promotionEntries]);
+    } , []);
 
     
     return (
         <div className="flex flex-col md:flex-row max-w-7xl h-auto m-auto mt-8 items-start justify-start">
                 <div className="flex flex-col w-3/4">
-                    <div className="flex flex-row w-full justify-end items-end">
+                    <div className="relative flex flex-row w-full justify-end items-end">
                         <div className="text-5xl text-bold whitespace-nowrap">
                             {locale === "en" ? "News" : "Tin tức"}
                         </div>
                         <div className="bg-green-700 w-1/3 h-1 mb-5 ml-4 mr-4"></div>
                         <div className="flex flex-row w-full">
                             <button
-                                onClick={() => setCurrentNewsType(allEntries)}
+                                onClick={(event) => {
+                                    event.preventDefault();
+                                    setCurrentNewsType(allEntries)
+                                }}
                                 className="text-semiBold w-full m-2 p-3 rounded-md -skew-x-12 bg-green-700 text-white"
                             >
                                 {locale === "en" ? "All" : "Tất cả"}
                             </button>
                             <button
-                                onClick={() => setCurrentNewsType(newsEntries)}
+                                onClick={(event) => {
+                                    event.preventDefault();
+                                    setCurrentNewsType(newsEntries)
+                                }}
                                 className="text-semiBold w-full m-2 p-3 rounded-md -skew-x-12 bg-green-700 text-white"
                             >
                                 {locale === "en" ? "News" : "Tin tức"}
                             </button>
                             <button
-                                onClick={() => setCurrentNewsType(blogEntries)}
+                                onClick={(event) => {
+                                    event.preventDefault();
+                                    setCurrentNewsType(blogEntries)
+                                }}
                                 className="text-semiBold w-full m-2 p-3 rounded-md -skew-x-12 bg-green-700 text-white"
                             >
                                 {locale === "en" ? "Blog" : "Blog"}
                             </button>
                             <button
-                                onClick={() => setCurrentNewsType(promotionEntries)}
+                                onClick={(event) => {
+                                    event.preventDefault();
+                                    setCurrentNewsType(promotionEntries)
+                                }}
                                 className="text-semiBold w-full m-2 p-3 rounded-md -skew-x-12 bg-green-700 text-white"
                             >
                                 {locale === "en" ? "Promotion" : "Ưu đãi"}
@@ -67,76 +79,59 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                         </div>
                     </div>
                     {currentTypeEntries && currentTypeEntries[0] && (
-                    <div className="flex flex-row w-full h-96">
-                        <div className="flex flex-col flex-wrap items-end justify-end rounded-xl bg-black w-1/2 h-full m-2 ">
-                            <Image
-                            className="z-0 opacity-50 h-full object-cover object-left-top"
-                            src={`https:${currentTypeEntries[0].thumbImage}`}
-                            alt={currentTypeEntries[0].thumbImageAlt}
-                            width={currentTypeEntries[0].thumbImageWidth}
-                            height={currentTypeEntries[0].thumbImageHeight}
-                            />
-                            <div className="absolute flex flex-col flex-wrap">
-                                <div className="flex flex-row">
-                                    <p className="w-1/2 text-semiBold text-gray-200">{formatDate(currentTypeEntries[0].postTime)}</p>
-                                    <p className="w-1/2 text-semiBold text-gray-200">{capitalizeFirstLetter(ResolveLabelForContentType({ type: currentTypeEntries[0].type, locale }))}</p>
-                                </div>
-                                <h1 className="text-3xl text-bold text-left text-white flex-wrap  p-2">{currentTypeEntries[0].title}</h1>
+                    <div className="flex w-full h-96">
+                    <div className="relative w-1/2 h-full m-2 rounded-xl bg-black overflow-hidden">
+                      <Image
+                        className="absolute inset-0 object-cover w-full h-full opacity-50"
+                        src={`https:${currentTypeEntries[0].thumbImage}`}
+                        alt={currentTypeEntries[0].thumbImageAlt}
+                        layout="fill"
+                      />
+                      <div className="absolute bottom-0 left-0 z-10 p-2 text-white">
+                        <div className="flex items-end justify-between p-2">
+                          <h1 className="text-semiBold">
+                            {formatDate(currentTypeEntries[0].postTime)}
+                          </h1>
+                          <h1 className="text-semiBold bg-green-700 p-3 rounded-md">
+                            {capitalizeFirstLetter(ResolveLabelForContentType({ type: currentTypeEntries[0].type, locale }))}
+                          </h1>
+                        </div>
+                        <h1 className="text-3xl text-bold">
+                          <Link href={currentTypeEntries[0].slug}>{currentTypeEntries[0].title}</Link>
+                        </h1>
+                      </div>
+                    </div>
+                    <div className="flex flex-col w-1/2">
+                        {currentTypeEntries.slice(1, 4).map((entry, index) => (
+                            <div className="flex h-1/3 w-full m-2">
+                            <div className="relative w-1/2 h-full rounded-xl">
+                                <Image
+                                key={index}
+                                className="absolute inset-0 object-cover w-full h-full rounded-xl"
+                                src={`https:${entry.thumbImage}`}
+                                alt={entry.thumbImageAlt}
+                                layout="fill"
+                                />
                             </div>
-                        </div>
-                        <div className="flex flex-col w-1/2 h-full">
-                            {currentTypeEntries.slice(1, 4).map((entry, index) => (
-                                <div className="h-1/3 m-2">
-                                    <Image
-                                        key={index}
-                                        className="h-full object-cover object-center"
-                                        src={`https:${entry.thumbImage}`}
-                                        alt={entry.thumbImageAlt}
-                                        width={entry.thumbImageWidth}
-                                        height={0.3*entry.thumbImageHeight}
-                                    />
-                                    
+                            <div className="relative w-1/2">
+                                <div className="absolute bottom-0 left-0 p-1 text-green">
+                                <div className="flex items-end justify-between p-1">
+                                    <h1 className=" text-sm text-semiBold">
+                                    {formatDate(entry.postTime)}
+                                    </h1>
+                                    <h1 className="text-semiBold text-sm text-white bg-green-700 p-2 rounded-md">
+                                    {capitalizeFirstLetter(ResolveLabelForContentType({ type: entry.type, locale }))}
+                                    </h1>
                                 </div>
-                            ))}
-                        </div>
-                    </div>)}
-                    {currentTypeEntries && currentTypeEntries[0] && (
-                        <div className="grid grid-cols-2 grid-rows-3  w-full mt-6">
-                            <div className="col-start-1 col-span-1 row-span-3 flex flex-col items-end justify-end">
-                                <div className="relative bg-black">
-                                    <Image
-                                        className="z-0 bg-black opacity-50"
-                                        src={`https:${currentTypeEntries[0].thumbImage}`}
-                                        alt={currentTypeEntries[0].thumbImageAlt}
-                                        width={currentTypeEntries[0].thumbImageWidth}
-                                        height={currentTypeEntries[0].thumbImageHeight}
-                                    />
-                                </div>
-                                <div className="absolute">
-                                    <div className="flex flex-row w-full">
-                                        <p className="w-1/2 text-semiBold text-gray-200">{formatDate(currentTypeEntries[0].postTime)}</p>
-                                        <p className="w-1/2 text-semiBold text-gray-200">{capitalizeFirstLetter(ResolveLabelForContentType({ type: currentTypeEntries[0].type, locale }))}</p>
-                                    </div>
-                                    <h1 className="text-2xl text-bold text-left text-white p-2">{currentTypeEntries[0].title}</h1>
+                                <h1 className="text-sm text-bold text-green-800">
+                                    <Link href={entry.slug}>{entry.title}</Link>
+                                </h1>
                                 </div>
                             </div>
-                            
-                                {currentTypeEntries.slice(1, 4).map((entry, index) => (
-                                    <div className="row-span-1">
-                                        <Image
-                                            key={index}
-                                            src={`https:${entry.thumbImage}`}
-                                            alt={entry.thumbImageAlt}
-                                            width={entry.thumbImageWidth}
-                                            height={entry.thumbImageHeight}
-                                        />
-                                    </div>
-                                ))}
-
-
+                            </div>
+                        ))}
                         </div>
-                    )}
-                    
+                  </div>)}
                 </div>
                 <div className="flex flex-col w-1/4 justify-center items-center">
                     <a
@@ -156,32 +151,6 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                         ))}
                     </div>  
                 </div>
-                {/* <div className="">
-                    {currentTypeEntries.map((entry) => (
-                        <Link href={`/thi-truong/${entry.slug}`} key={entry.id} legacyBehavior>
-                            <a className="">
-                                <div className="">
-                                    <Image
-                                        src={`https:${entry.thumbImage}`}
-                                        alt={entry.thumbImageAlt}
-                                        width={entry.thumbImageWidth}
-                                        height={entry.thumbImageHeight}
-                                    />
-                                </div>
-                                <div className="">
-                                    <h3>{entry.title}</h3>
-                                    {console.log(entry.desc)}
-                                    {documentToReactComponents(entry.description, {
-                                        renderNode: {
-                                            [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
-                                            // Add more node type renderers as needed
-                                        },
-                                    })}
-                                </div>
-                            </a>
-                        </Link>
-                    ))}
-                </div> */}
         </div>
     );
 }
