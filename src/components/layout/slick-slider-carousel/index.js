@@ -48,9 +48,9 @@ export default function SlickSlider({ entries }) {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
-    nextArrow: <NextArrow className="absolute top-1/2 z-100 w-30 h-30 text-black right-2" />,
-    prevArrow: <PrevArrow className="absolute top-1/2 z-100 w-30 h-30 text-black left-2" />,
+    arrows: false,
+    // nextArrow: <NextArrow className="absolute top-1/2 z-100 w-30 h-30 text-black right-2" />,
+    // prevArrow: <PrevArrow className="absolute top-1/2 z-100 w-30 h-30 text-black left-2" />,
   };
   return (
     <div className="relative max-w-screen-xl h-auto mx-auto">
