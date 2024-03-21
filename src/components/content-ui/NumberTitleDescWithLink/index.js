@@ -16,7 +16,9 @@ const NumberTitleDescWithLink = ({ icon, number, title, desc, link, btnText }) =
             style={{
               width: "100%",
               height: "auto",
-              objectFit: "contain"
+              objectFit: "contain",
+              maxWidth: "100%",
+              height: "auto"
             }} />
         </div>
         <h2 className="text-2xl text-green-700 tracking-wide font-bold">{title}</h2>

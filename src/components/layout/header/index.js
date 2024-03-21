@@ -47,11 +47,12 @@ export default function Header() {
                   <Image
                     src={ToanPhatLogo}
                     alt="logo"
-                    
                     width={32}
                     height='auto'
                     as="image"
                     style={{
+                      maxWidth: "100%",
+                      height: "auto",
                       maxWidth: "100%",
                       height: "auto"
                     }} />

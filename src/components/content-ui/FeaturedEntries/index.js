@@ -82,11 +82,11 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                     <div className="flex w-full h-96">
                     <div className="relative w-1/2 h-full m-2 rounded-xl bg-black overflow-hidden">
                       <Image
-                        className="absolute inset-0 object-cover w-full h-full opacity-50"
-                        src={`https:${currentTypeEntries[0].thumbImage}`}
-                        alt={currentTypeEntries[0].thumbImageAlt}
-                        layout="fill"
-                      />
+                          className="absolute inset-0 object-cover w-full h-full opacity-50"
+                          src={`https:${currentTypeEntries[0].thumbImage}`}
+                          alt={currentTypeEntries[0].thumbImageAlt}
+                          fill
+                          sizes="100vw" />
                       <div className="absolute bottom-0 left-0 z-10 p-2 text-white">
                         <div className="flex items-end justify-between p-2">
                           <h1 className="text-semiBold">
@@ -106,12 +106,12 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                             <div className="flex h-1/3 w-full m-2">
                             <div className="relative w-1/2 h-full rounded-xl">
                                 <Image
-                                key={index}
-                                className="absolute inset-0 object-cover w-full h-full rounded-xl"
-                                src={`https:${entry.thumbImage}`}
-                                alt={entry.thumbImageAlt}
-                                layout="fill"
-                                />
+                                    key={index}
+                                    className="absolute inset-0 object-cover w-full h-full rounded-xl"
+                                    src={`https:${entry.thumbImage}`}
+                                    alt={entry.thumbImageAlt}
+                                    fill
+                                    sizes="100vw" />
                             </div>
                             <div className="relative w-1/2">
                                 <div className="absolute bottom-0 left-0 p-1 text-green">

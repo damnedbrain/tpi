@@ -11,13 +11,14 @@ export default function Footer() {
                 <div className="relative flex items-center justify-center h-auto">
                     <Image
                         as="image"
-                        
                         alt="logo"
                         src={ToanPhatLogo}
                         width={256}
                         height='auto'
                         className='p-4'
                         style={{
+                            maxWidth: "100%",
+                            height: "auto",
                             maxWidth: "100%",
                             height: "auto"
                         }} />
