@@ -20,6 +20,8 @@ export default function Footer() {
                             maxWidth: "100%",
                             height: "auto",
                             maxWidth: "100%",
+                            height: "auto",
+                            maxWidth: "100%",
                             height: "auto"
                         }} />
                 </div>

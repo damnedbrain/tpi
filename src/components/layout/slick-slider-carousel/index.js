@@ -20,6 +20,8 @@ const NextArrow = ({ className, style, onClick }) => (
         maxWidth: "100%",
         height: "auto",
         maxWidth: "100%",
+        height: "auto",
+        maxWidth: "100%",
         height: "auto"
       }} />
   </div>
@@ -35,6 +37,8 @@ const PrevArrow = ({ className, style, onClick }) => (
       src={LeftArrowIcon}
       alt="Previous"
       style={{
+        maxWidth: "100%",
+        height: "auto",
         maxWidth: "100%",
         height: "auto",
         maxWidth: "100%",
@@ -78,6 +82,8 @@ export default function SlickSlider({ entries }) {
             width={item.width}
             height={item.height}
             style={{
+              maxWidth: "100%",
+              height: "auto",
               maxWidth: "100%",
               height: "auto",
               maxWidth: "100%",

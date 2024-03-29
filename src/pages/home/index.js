@@ -295,6 +295,8 @@ export default function Home() {
                             className="w-1/2"
                             style={{
                                 maxWidth: "100%",
+                                height: "auto",
+                                maxWidth: "100%",
                                 height: "auto"
                             }} />
                     </div>
@@ -313,6 +315,8 @@ export default function Home() {
                                 width={item.fields.thumbImage.fields.file.details.image.width}
                                 height={item.fields.thumbImage.fields.file.details.image.height}
                                 style={{
+                                    maxWidth: "100%",
+                                    height: "auto",
                                     maxWidth: "100%",
                                     height: "auto"
                                 }} />
@@ -365,6 +369,8 @@ export default function Home() {
                                     className="p-1 animate-fadeIn"
                                     style={{
                                         maxWidth: "100%",
+                                        height: "auto",
+                                        maxWidth: "100%",
                                         height: "auto"
                                     }} />
                             </div>
@@ -384,6 +390,8 @@ export default function Home() {
                         src={companyCultureImage}
                         alt="culture"
                         style={{
+                            maxWidth: "100%",
+                            height: "auto",
                             maxWidth: "100%",
                             height: "auto"
                         }} />
@@ -429,6 +437,8 @@ export default function Home() {
                                     className="p-1 animate-fadeIn"
                                     style={{
                                         maxWidth: "100%",
+                                        height: "auto",
+                                        maxWidth: "100%",
                                         height: "auto"
                                     }} />
                             </div>
@@ -458,6 +468,8 @@ export default function Home() {
                                     alt="partner"
                                     className="p-1 animate-fadeIn"
                                     style={{
+                                        maxWidth: "100%",
+                                        height: "auto",
                                         maxWidth: "100%",
                                         height: "auto"
                                     }} />

@@ -68,6 +68,8 @@ export default function GioiThieu() {
                   className="mt-4 w-full animate-fadeInSlideIn"
                   style={{
                       maxWidth: "100%",
+                      height: "auto",
+                      maxWidth: "100%",
                       height: "auto"
                   }} />
           </div>
@@ -131,6 +133,8 @@ export default function GioiThieu() {
                       className="mt-4 w-full animate-fadeInSlideIn"
                       style={{
                           maxWidth: "100%",
+                          height: "auto",
+                          maxWidth: "100%",
                           height: "auto"
                       }} />
               </div>
@@ -159,6 +163,8 @@ export default function GioiThieu() {
                       className="mt-4 w-1/2 animate-fadeInSlideIn"
                       style={{
                           maxWidth: "100%",
+                          height: "auto",
+                          maxWidth: "100%",
                           height: "auto"
                       }} />
                   <Image
@@ -166,6 +172,8 @@ export default function GioiThieu() {
                       alt="Message Image"
                       className="mt-4 w-1/2 animate-fadeInSlideIn"
                       style={{
+                          maxWidth: "100%",
+                          height: "auto",
                           maxWidth: "100%",
                           height: "auto"
                       }} />
@@ -220,6 +228,8 @@ export default function GioiThieu() {
                           className="w-full animate-fadeInSlideIn"
                           style={{
                               maxWidth: "100%",
+                              height: "auto",
+                              maxWidth: "100%",
                               height: "auto"
                           }} />
                   </div>
@@ -231,6 +241,8 @@ export default function GioiThieu() {
                       className="w-1/2 animate-fadeInSlideIn"
                       style={{
                           maxWidth: "100%",
+                          height: "auto",
+                          maxWidth: "100%",
                           height: "auto"
                       }} />
                   <Image
@@ -238,6 +250,8 @@ export default function GioiThieu() {
                       alt="Message Image"
                       className="w-1/2 animate-fadeInSlideIn"
                       style={{
+                          maxWidth: "100%",
+                          height: "auto",
                           maxWidth: "100%",
                           height: "auto"
                       }} />

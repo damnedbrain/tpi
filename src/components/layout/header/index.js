@@ -54,6 +54,8 @@ export default function Header() {
                       maxWidth: "100%",
                       height: "auto",
                       maxWidth: "100%",
+                      height: "auto",
+                      maxWidth: "100%",
                       height: "auto"
                     }} />
                 </Link>

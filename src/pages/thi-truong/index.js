@@ -82,76 +82,88 @@ export default function ThiTruong() {
     }
 
 
-    return(
-        <>
-            {/* {console.log(newsEntries, blogEntries, promotionEntries, heroEntries, featuredEntries)} */}
-            <SlickSlider entries={heroEntries} />
-            <FeaturedEntries newsEntries={newsEntries} blogEntries={blogEntries} promotionEntries={promotionEntries} />
-            <div className="w-full bg-slate-200 mt-8 p-4">
-                <HighlightFeaturedEntries entries={featuredEntries} />
+    return <>
+        {/* {console.log(newsEntries, blogEntries, promotionEntries, heroEntries, featuredEntries)} */}
+        <SlickSlider entries={heroEntries} />
+        <FeaturedEntries newsEntries={newsEntries} blogEntries={blogEntries} promotionEntries={promotionEntries} />
+        <div className="w-full bg-slate-200 mt-8 p-4">
+            <HighlightFeaturedEntries entries={featuredEntries} />
+        </div>
+        <div className="flex flex-row max-w-7xl h-auto m-auto">
+            <div className="flex flex-col w-4/5 m-auto">
+                {/* {console.log(newsEntries, blogEntries, promotionEntries)} */}
+                <NewsEntries entries={newsEntries} />
+                <BlogEntries entries={blogEntries} />
+                <PromotionEntries entries={promotionEntries} />
             </div>
-            <div className="flex flex-row max-w-7xl h-auto m-auto">
-                <div className="flex flex-col w-4/5 m-auto">
-                    {/* {console.log(newsEntries, blogEntries, promotionEntries)} */}
-                    <NewsEntries entries={newsEntries} />
-                    <BlogEntries entries={blogEntries} />
-                    <PromotionEntries entries={promotionEntries} />
+            <div className="flex flex-col w-1/5 mt-28">
+                <div className="round-xl mb-40 p-3">
+                    <Image
+                        className="round-xl"
+                        src={TopBanner}
+                        alt="Top Banner"
+                        style={{
+                            maxWidth: "100%",
+                            height: "auto"
+                        }} />
                 </div>
-                <div className="flex flex-col w-1/5 mt-28">
-                    <div className="round-xl mb-40 p-3">
-                        <Image className="round-xl" src={TopBanner} alt="Top Banner" />
-                    </div>
-                    <div className="round-xl mb-40 p-3">
-                        <Image className="round-xl" src={BottomBanner} alt="Bottom Banner" />
-                    </div>
+                <div className="round-xl mb-40 p-3">
+                    <Image
+                        className="round-xl"
+                        src={BottomBanner}
+                        alt="Bottom Banner"
+                        style={{
+                            maxWidth: "100%",
+                            height: "auto"
+                        }} />
                 </div>
             </div>
-            <div className="flex flex-col max-w-7xl h-auto m-auto mt-16">
-                <div>
-                    <h1 className="text-5xl text-bold p-4 text-green-700">Video</h1>
-                    <div className="bg-slate-100 w-full h-1 ml-4 mr-4"></div>
-                </div>
-                <div className="flex flex-row w-full h-auto p-2">
-                        <div className="w-1/3 p-3">
-                            <div className="mt-8">
-                                <h1 className="text-2xl text-bold text-left p-1">{videoList[0].title}</h1>
-                                <div>
-                                    <p>{formatDate(videoList[0].date)}</p>
-                                </div>
-                                <iframe
-                                    className="w-full"
-                                    src={`https://www.youtube.com/embed/${videoList[0].ytbid}`}
-                                    title={videoList[0].title} frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen />
-                            </div>
-                            <div className="mt-8">
-                                <h1 className="text-2xl text-bold text-left p-1">{videoList[1].title}</h1>
-                                <div>
-                                    <p>{formatDate(videoList[1].date)}</p>
-                                </div>
-                                <iframe
-                                    className="w-full h-auto"
-                                    src={`https://www.youtube.com/embed/${videoList[1].ytbid}`}
-                                    title={videoList[1].title} frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen />
-                            </div>
-                        </div>
-                        <div className="w-2/3 mt-8 p-3 h-full">
-                            <h1 className="text-2xl text-bold text-left p-1">{videoList[4].title}</h1>
+        </div>
+        <div className="flex flex-col max-w-7xl h-auto m-auto mt-16">
+            <div>
+                <h1 className="text-5xl text-bold p-4 text-green-700">Video</h1>
+                <div className="bg-slate-100 w-full h-1 ml-4 mr-4"></div>
+            </div>
+            <div className="flex flex-row w-full h-auto p-2">
+                    <div className="w-1/3 p-3">
+                        <div className="mt-8">
+                            <h1 className="text-2xl text-bold text-left p-1">{videoList[0].title}</h1>
                             <div>
-                                <p>{formatDate(videoList[4].date)}</p>
+                                <p>{formatDate(videoList[0].date)}</p>
                             </div>
                             <iframe
-                                className="w-full h-96"
-                                src={`https://www.youtube.com/embed/${videoList[4].ytbid}`}
-                                title={videoList[4].title} frameborder="0"
+                                className="w-full"
+                                src={`https://www.youtube.com/embed/${videoList[0].ytbid}`}
+                                title={videoList[0].title} frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen />
                         </div>
+                        <div className="mt-8">
+                            <h1 className="text-2xl text-bold text-left p-1">{videoList[1].title}</h1>
+                            <div>
+                                <p>{formatDate(videoList[1].date)}</p>
+                            </div>
+                            <iframe
+                                className="w-full h-auto"
+                                src={`https://www.youtube.com/embed/${videoList[1].ytbid}`}
+                                title={videoList[1].title} frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen />
                         </div>
-            </div>
-        </>
-    )
+                    </div>
+                    <div className="w-2/3 mt-8 p-3 h-full">
+                        <h1 className="text-2xl text-bold text-left p-1">{videoList[4].title}</h1>
+                        <div>
+                            <p>{formatDate(videoList[4].date)}</p>
+                        </div>
+                        <iframe
+                            className="w-full h-96"
+                            src={`https://www.youtube.com/embed/${videoList[4].ytbid}`}
+                            title={videoList[4].title} frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen />
+                    </div>
+                    </div>
+        </div>
+    </>;
 }

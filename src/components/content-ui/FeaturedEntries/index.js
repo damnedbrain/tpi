@@ -86,7 +86,11 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                           src={`https:${currentTypeEntries[0].thumbImage}`}
                           alt={currentTypeEntries[0].thumbImageAlt}
                           fill
-                          sizes="100vw" />
+                          sizes="100vw"
+                          style={{
+                              maxWidth: "100%",
+                              height: "auto"
+                          }} />
                       <div className="absolute bottom-0 left-0 z-10 p-2 text-white">
                         <div className="flex items-end justify-between p-2">
                           <h1 className="text-semiBold">
@@ -111,7 +115,11 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                                     src={`https:${entry.thumbImage}`}
                                     alt={entry.thumbImageAlt}
                                     fill
-                                    sizes="100vw" />
+                                    sizes="100vw"
+                                    style={{
+                                        maxWidth: "100%",
+                                        height: "auto"
+                                    }} />
                             </div>
                             <div className="relative w-1/2">
                                 <div className="absolute bottom-0 left-0 p-1 text-green">

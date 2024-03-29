@@ -18,6 +18,8 @@ const NumberTitleDescWithLink = ({ icon, number, title, desc, link, btnText }) =
               height: "auto",
               objectFit: "contain",
               maxWidth: "100%",
+              height: "auto",
+              maxWidth: "100%",
               height: "auto"
             }} />
         </div>

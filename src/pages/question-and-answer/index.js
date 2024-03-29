@@ -18,6 +18,8 @@ export default function QuestionAndAnswer() {
                 className="w-full m-6 p-6 rounded-full"
                 style={{
                     maxWidth: "100%",
+                    height: "auto",
+                    maxWidth: "100%",
                     height: "auto"
                 }} />
             <h1 className="text-6xl font-bold w-full text-center mt-24 text-green-800">
