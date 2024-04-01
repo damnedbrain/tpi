@@ -32,10 +32,10 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
 
     
     return (
-        <div className="flex flex-col md:flex-row max-w-7xl h-auto m-auto mt-8 items-start justify-start">
+        <div className="flex flex-col font-inter md:flex-row max-w-7xl h-auto m-auto mt-8 items-start justify-start">
                 <div className="flex flex-col w-3/4">
                     <div className="relative flex flex-row w-full justify-end items-end">
-                        <div className="text-5xl text-bold whitespace-nowrap">
+                        <div className="text-5xl font-bold whitespace-nowrap">
                             {locale === "en" ? "News" : "Tin tức"}
                         </div>
                         <div className="bg-green-700 w-1/3 h-1 mb-5 ml-4 mr-4"></div>
@@ -45,7 +45,7 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                                     event.preventDefault();
                                     setCurrentNewsType(allEntries)
                                 }}
-                                className="text-semiBold w-full m-2 p-3 rounded-md -skew-x-12 bg-green-700 text-white"
+                                className="font-semibold w-full m-2 p-3 rounded-md -skew-x-12 bg-green-700 text-white"
                             >
                                 {locale === "en" ? "All" : "Tất cả"}
                             </button>
@@ -54,7 +54,7 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                                     event.preventDefault();
                                     setCurrentNewsType(newsEntries)
                                 }}
-                                className="text-semiBold w-full m-2 p-3 rounded-md -skew-x-12 bg-green-700 text-white"
+                                className="font-semibold w-full m-2 p-3 rounded-md -skew-x-12 bg-green-700 text-white"
                             >
                                 {locale === "en" ? "News" : "Tin tức"}
                             </button>
@@ -63,7 +63,7 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                                     event.preventDefault();
                                     setCurrentNewsType(blogEntries)
                                 }}
-                                className="text-semiBold w-full m-2 p-3 rounded-md -skew-x-12 bg-green-700 text-white"
+                                className="font-semibold w-full m-2 p-3 rounded-md -skew-x-12 bg-green-700 text-white"
                             >
                                 {locale === "en" ? "Blog" : "Blog"}
                             </button>
@@ -72,7 +72,7 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                                     event.preventDefault();
                                     setCurrentNewsType(promotionEntries)
                                 }}
-                                className="text-semiBold w-full m-2 p-3 rounded-md -skew-x-12 bg-green-700 text-white"
+                                className="font-semibold w-full m-2 p-3 rounded-md -skew-x-12 bg-green-700 text-white"
                             >
                                 {locale === "en" ? "Promotion" : "Ưu đãi"}
                             </button>
@@ -89,18 +89,18 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                           sizes="100vw"
                           style={{
                               maxWidth: "100%",
-                              height: "auto"
+                            //   height: "auto"
                           }} />
                       <div className="absolute bottom-0 left-0 z-10 p-2 text-white">
                         <div className="flex items-end justify-between p-2">
-                          <h1 className="text-semiBold">
+                          <h1 className="font-semibold">
                             {formatDate(currentTypeEntries[0].postTime)}
                           </h1>
-                          <h1 className="text-semiBold bg-green-700 p-3 rounded-md">
+                          <h1 className="font-semibold bg-green-700 p-3 rounded-md">
                             {capitalizeFirstLetter(ResolveLabelForContentType({ type: currentTypeEntries[0].type, locale }))}
                           </h1>
                         </div>
-                        <h1 className="text-3xl text-bold">
+                        <h1 className="text-3xl font-sans font-bold">
                           <Link href={currentTypeEntries[0].slug}>{currentTypeEntries[0].title}</Link>
                         </h1>
                       </div>
@@ -118,20 +118,20 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                                     sizes="100vw"
                                     style={{
                                         maxWidth: "100%",
-                                        height: "auto"
+                                        // height: "auto"
                                     }} />
                             </div>
                             <div className="relative w-1/2">
                                 <div className="absolute bottom-0 left-0 p-1 text-green">
                                 <div className="flex items-end justify-between p-1">
-                                    <h1 className=" text-sm text-semiBold">
+                                    <h1 className=" text-sm font-semibold">
                                     {formatDate(entry.postTime)}
                                     </h1>
-                                    <h1 className="text-semiBold text-sm text-white bg-green-700 p-2 rounded-md">
+                                    <h1 className="font-semibold text-sm text-white bg-green-700 p-2 rounded-md">
                                     {capitalizeFirstLetter(ResolveLabelForContentType({ type: entry.type, locale }))}
                                     </h1>
                                 </div>
-                                <h1 className="text-sm text-bold text-green-800">
+                                <h1 className="text-sm font-sans font-semibold text-green-800">
                                     <Link href={entry.slug}>{entry.title}</Link>
                                 </h1>
                                 </div>
@@ -143,7 +143,7 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                 </div>
                 <div className="flex flex-col w-1/4 justify-center items-center">
                     <a
-                        className="text-semiBold text-3xl w-full m-1 p-3 rounded-md -skew-x-12 bg-slate-50 text-green-700 items-center justify-center text-right"
+                        className="font-semibold font-sans text-3xl w-full m-1 p-3 rounded-md -skew-x-12 bg-slate-50 text-green-700 items-center justify-center text-right"
                     >
                         {topTagslabelLocale.mainLabel}
                     </a>
@@ -151,7 +151,7 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                         {topTagslabelLocale.topTags.map((item, index) => (
                             <a
                                 key={index}
-                                className="text-bold w-full m-1 p-2 rounded-md -skew-x-12 text-white items-center justify-center text-right"
+                                className="font-bold w-full m-1 p-2 rounded-md -skew-x-12 text-white items-center justify-center text-right"
                                 style={{ backgroundImage: `url(/images/thi-truong/tags-image-0${index}.png)`, backgroundSize: 'cover', width: '100%', height: '100%'}}
                             >
                                 {item}

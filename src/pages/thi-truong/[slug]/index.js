@@ -110,8 +110,8 @@ export default function EntryDetail( { entry, locale }) {
 
           [BLOCKS.PARAGRAPH]: (node, children) => 
             <p className="text-left font-normal leading-normal mt-4">{children}</p>,
-        //   [MARKS.BOLD]: text => 
-        //     <b className="text-bold text-3xl text-left mt-11">{text}</b>,
+          [MARKS.BOLD]: text => 
+            <b className="font-bold font-sans text-3xl text-left mt-2">{text}</b>,
       
           [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
             // render the EMBEDDED_ASSET as you need
@@ -133,30 +133,38 @@ export default function EntryDetail( { entry, locale }) {
         },
       };
     return <>
-        <div className="flex flex-col w-full bg-white items-center justify-center">
-            <div className="flex flex-col bg-slate-100 m-auto mt-16 max-w-7xl h-auto items-start justify-center p-4">
-                <h1 className="text-4xl text-left font-bold mt-8 ml-8">
-                    {entry.fields.title}
-                </h1>
-                {console.log(entry)}
-                <div className="flex flex-col ml-8 mt-8 text-green-800 text-semiBold text-left text-2xl">
-                    <div className="p-2 bg-green-800 text-white ">{ResolveLabelForContentType({type: entry.fields.type, locale})}</div>
-                    <div className="italic">{formatDate(entry.sys.createdAt)}</div>
+        <div className="flex font-inter flex-row w-full bg-white items-center justify-center">
+            <div className="flex flex-row rounded-xl bg-gray-50 m-auto mt-16 max-w-7xl h-auto items-start justify-center p-4">
+                <div className="w-3/4">
+                    <h1 className="text-4xl text-left font-bold mt-8 ml-8">
+                        {entry.fields.title}
+                    </h1>
+                    {/* {console.log(entry)} */}
+                    <div className="flex flex-col ml-8 mt-8 text-green-800 text-semiBold text-left text-2xl">
+                        <div className="p-2 bg-green-800 text-white ">{ResolveLabelForContentType({type: entry.fields.type, locale})}</div>
+                        <div className="italic">{formatDate(entry.sys.createdAt)}</div>
+                    </div>
+                    <Image
+                        className="mt-8 ml-8"
+                        src={`https:${entry.fields.image.fields.file.url}`}
+                        width={entry.fields.image.fields.file.details.image.width}
+                        height={entry.fields.image.fields.file.details.image.height}
+                        alt={entry.fields.image.fields.title}
+                        style={{
+                            maxWidth: "100%",
+                            height: "auto"
+                        }} />
+                    <div className="flex flex-col leading-relaxed m-auto w-full h-auto items-start justify-center text-left p-8">
+                        {documentToReactComponents(entry.fields.desc, renderOptions)}
+                    </div>
                 </div>
-                <Image
-                    className="mt-8 ml-8"
-                    src={`https:${entry.fields.image.fields.file.url}`}
-                    width={entry.fields.image.fields.file.details.image.width}
-                    height={entry.fields.image.fields.file.details.image.height}
-                    alt={entry.fields.image.fields.title}
-                    style={{
-                        maxWidth: "100%",
-                        height: "auto"
-                    }} />
-                <div className="flex flex-col leading-relaxed m-auto w-full h-auto items-start justify-center text-left p-8">                        
-                    {documentToReactComponents(entry.fields.desc, renderOptions)}
+                <div className="round-xl w-1/4 flex flex-col items-start justify-start mb-40 p-3">
+                    <h1 className="font-semibold text-2xl font-sans">
+                        {locale === "en" ? "Related News" : "Tin Liên Quan"}
+                    </h1>
                 </div>
             </div>
+            
         </div>
     </>;
 }

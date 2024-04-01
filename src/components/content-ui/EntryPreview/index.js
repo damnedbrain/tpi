@@ -11,7 +11,7 @@ export default function EntryPreview({ entry }) {
     const locale = router.locale;
     return <> 
         {/* {console.log(entry)} */}
-        <div className="flex flex-col w-full h-full bg-white rounded-md shadow-md">
+        <div className="flex flex-col w-full h-full bg-white rounded-md shadow-md border-2 border-slate-300">
             <div className="flex flex-col w-full justify-between items-center">
                 <div>
                     <Image
@@ -31,13 +31,13 @@ export default function EntryPreview({ entry }) {
                     </div>
                     <div className="text-sm text-semiBold text-right w-1/2 text-gray-500 ml-4">
                         {ResolveLabelForContentType({type: entry.type, locale})}
-                        {console.log(entry.type)}
+                        
                     </div>
                 </div>
                 <div className="flex flex-row p-2">
                     <div className="text-xl text-bold">
                         <Link
-                            href={`/news/${entry.slug}`}
+                            href={`/thi-truong/${entry.slug}`}
                             className="text-green-700 hover:text-green-900"
                         >
                             {entry.title}

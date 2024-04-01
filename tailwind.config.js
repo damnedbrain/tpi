@@ -9,6 +9,7 @@ module.exports = {
     fontFamily: {
       sans: ["Josefin Sans", "sans-serif"],
       mono: ["Josefin Sans", "monospace"],
+      inter: ["Inter", "sans-serif"],
     },
     extend: {
       backgroundImage: {

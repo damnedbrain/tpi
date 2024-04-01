@@ -78,7 +78,7 @@ export default function ThiTruong() {
 
     // Render
     if (isLoading) {
-    return <div>Loading...</div>; // Or your custom loading component
+    return <div className="flex flex-col font-fold font-3xl items-center justify-center">Loading...</div>; // Or your custom loading component
     }
 
 
@@ -91,7 +91,6 @@ export default function ThiTruong() {
         </div>
         <div className="flex flex-row max-w-7xl h-auto m-auto">
             <div className="flex flex-col w-4/5 m-auto">
-                {/* {console.log(newsEntries, blogEntries, promotionEntries)} */}
                 <NewsEntries entries={newsEntries} />
                 <BlogEntries entries={blogEntries} />
                 <PromotionEntries entries={promotionEntries} />
@@ -104,7 +103,7 @@ export default function ThiTruong() {
                         alt="Top Banner"
                         style={{
                             maxWidth: "100%",
-                            height: "auto"
+                            // height: "auto"
                         }} />
                 </div>
                 <div className="round-xl mb-40 p-3">
@@ -114,7 +113,7 @@ export default function ThiTruong() {
                         alt="Bottom Banner"
                         style={{
                             maxWidth: "100%",
-                            height: "auto"
+                            // height: "auto"
                         }} />
                 </div>
             </div>
