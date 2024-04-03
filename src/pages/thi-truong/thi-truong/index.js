@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import ReactPaginate from "react-paginate";
 
 import { getEntries } from "@/components/contentful/ContentfulService";
 
@@ -57,7 +58,7 @@ export default function ThiTruong() {
                                 locale, 
                                 { order: '-sys.createdAt', 
                                   limit: pageSize, 
-                                  skip: pageNo * pageSize, 
+                                  skip: (pageNo-1) * pageSize, 
                                   "fields.type": "news" 
                                 });
             setNewsEntries(shortenEntries(res));
@@ -117,7 +118,23 @@ export default function ThiTruong() {
                     
                     <div className="bg-slate-200 w-1/3 h-1 ml-4 mr-4"></div>
                     <div className="flex flex-col m-auto mt-12">
-                        <EntriesWithPagination entries={newsEntries} pageNo={1} />                
+                        <EntriesWithPagination entries={newsEntries} />                
+                        <ReactPaginate
+                            previousLabel={locale === 'en' ? 'Previous' : 'Trang trước'}
+                            nextLabel={locale === 'en' ? 'Next' : 'Trang kế'}
+                            // breakLabel={'...'}
+                            // breakClassName={'break-me'}
+                            pageCount={5}
+                            marginPagesDisplayed={2}
+                            pageRangeDisplayed={5}
+                            // onPageChange={handlePageClick}
+                            containerClassName="flex flex-row w-2/5 h-auto m-auto mt-8 items-center justify-center space-x-1"
+                            pageClassName="w-24 h-8 flex items-center justify-center border border-gray-300 rounded hover:bg-gray-200 cursor-pointer"
+                            previousClassName="w-full h-full flex items-center justify-center border border-gray-300 rounded hover:bg-gray-200 cursor-pointer"
+                            nextClassName="w-full h-full flex items-center justify-center border border-gray-300 rounded hover:bg-gray-200 cursor-pointer"
+                            activeClassName="w-24 h-8 flex items-center justify-center border border-gray-300 bg-gray-200 rounded cursor-pointer"
+                            disabledClassName="w-full h-full flex items-center justify-center border border-gray-300 bg-gray-100 rounded cursor-not-allowed"
+                        />
                     </div>
                 </div>                
                 <div className="flex flex-col w-1/5 mt-36">
