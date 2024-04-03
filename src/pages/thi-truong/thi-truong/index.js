@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Head from "next/head";
 import ReactPaginate from "react-paginate";
 
 import { getEntries } from "@/components/contentful/ContentfulService";
@@ -109,7 +110,12 @@ export default function ThiTruong() {
     }
 
     return (
-        <>            
+        <>    
+            <Head>
+                <title>
+                    {locale === "en" ? "TOAN PHAT GROUP - News" : "TẬP ĐOÀN TOÀN PHÁT - Thị trường"}
+                </title>
+            </Head>    
             <div className="flex flex-row max-w-7xl h-auto m-auto">
                 <div className='flex flex-col w-4/5 items-center justify-center mt-8'>
                     <h1 className="text-4xl font-extrabold col-span-3 row-span-1 mt-4 mb-2">

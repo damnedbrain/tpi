@@ -20,6 +20,7 @@ import VideoComponent from "@/components/content-ui/VideoComponent";
 import Link from "next/link";
 import LinesEllipsis from "react-lines-ellipsis";
 import Gallery from "@/components/content-ui/Gallery";
+import Head from "next/head";
 
 const images = [
     {
@@ -222,6 +223,11 @@ export default function Home() {
 
 
     return <>
+        <Head>
+            <title>
+                {locale === "en" ? "TOAN PHAT GROUP - Homepage" : "Tập đoàn Toàn Phát - Trang chủ"}
+            </title>
+        </Head>
         {/* {console.log(entries)} */}
         <SlickSlider entries={heroEntries}/>
         {/* Best Services section*/}
