@@ -1,15 +1,15 @@
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
-import Image from "next/image";
-import Head from "next/head";
-import ReactPaginate from "react-paginate";
+import React, {useState, useEffect} from 'react';
+import { useRouter } from 'next/router';
+import ReactPaginate from 'react-paginate';
+import { getEntries } from '@/components/contentful/ContentfulService';
+import EntryPreview from '@/components/content-ui/EntryPreview';
+import EntriesWithPagination from '@/components/content-ui/EntriesPreviewWithPagination';
 
-import { getEntries } from "@/components/contentful/ContentfulService";
+import Image from 'next/image';
 
 import TopBanner from '@assets/thi-truong-banner/top.jpg';
 import BottomBanner from '@assets/thi-truong-banner/bottom.jpg';
 
-import EntriesWithPagination from "@/components/content-ui/EntriesPreviewWithPagination";
 
 function shortenEntries (entries) {
     return entries.map((item, index) => {
@@ -32,37 +32,39 @@ function shortenEntries (entries) {
     }).filter(Boolean);
 }
 
-export default function ThiTruong() {
+export default function ThiTruongPage() {
     const router = useRouter();
+    const { page } = router.query;
+    
     const locale = router.locale;
-
-    // Prep the loading state
     const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState(null);
-
     const [newsEntries, setNewsEntries] = useState([]);
-
-
-    const [pageNo, setPageNo] = useState(1);
-    const [totalPages, setTotalPages] = useState(1);
+    const [pageIndex, setPageIndex] = useState(1);
+    const [error, setError] = useState(null);
+    const [pageCount, setPageCount] = useState(1);
     const pageSize = 15;
 
     useEffect(() => {
-        loadEntries(0);
-    }, []);
+        const pageNumber = page ? parseInt(page, 10) : 0;
+        const currentPageIndex = pageNumber === 0 ? 0 : pageNumber - 1;
+        setPageIndex(currentPageIndex);
+        loadEntries(currentPageIndex);
+    }, [page]);
 
-    const loadEntries = async (pageNo) => {
+    const loadEntries = async (pageIndex) => {
         setIsLoading(true);
         try {
             const res = await getEntries(
-                                "toanPhatMarketNews", 
-                                locale, 
-                                { order: '-sys.createdAt', 
-                                  limit: pageSize, 
-                                  skip: (pageNo-1) * pageSize, 
-                                  "fields.type": "news" 
-                                });
-            setNewsEntries(shortenEntries(res));
+                "toanPhatMarketNews", 
+                locale, 
+                { 
+                    order: '-sys.createdAt', 
+                    limit: pageSize, 
+                    skip: pageIndex * pageSize, 
+                    "fields.type": "news" 
+                }
+            );
+            setNewsEntries(shortenEntries(res.items));
             setPageCount(Math.ceil(res.total / pageSize));
         } catch (error) {
             setError(error);
@@ -71,74 +73,47 @@ export default function ThiTruong() {
         setIsLoading(false);
     }
 
-    // useEffect(() => {
-    // // Fetch data
-    // Promise.all([
-    //     // getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 5, "fields.promo": "true" }),
-    //     // getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 5, "fields.hightLight": "true" }),
-    //     getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 15, "fields.type": "news" }),
-    //     // getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 9, "fields.type": "blog" }),
-    //     // getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 9, "fields.type": "promo" })
-    // ]).then(([news]) => {
-    //     // Set data in state
-    //     // setHeroEntries(shortenEntries(hero));
-    //     // setFeaturedEntries(shortenEntries(feature));
-    //     setNewsEntries(shortenEntries(news));
-    //     // setBlogEntries(shortenEntries(blogs));
-    //     // setPromotionEntries(shortenEntries(promotions));
-    //     // Set loading state to false
-    //     setIsLoading(false);
-    // }).catch((error) => {
-    //     setError(error);
-    //     console.error("Error fetching data:", error);
-        
-    //     // Set loading state to false
-    //     setIsLoading(false);
-    // }, []);
-    // });
-
-    const handlePageChange = (data) => {
-        let selected = data.selected;
-        router.push(`/thi-truong/thi-truong/page/${selected + 1}`);
-        loadEntries(selected);
+    const handlePageClick = (data) => {
+        const selected = data.selected;
+        console.log(data);
+        // setPageIndex(selected);
+        selected === 0 ? router.push(`/thi-truong/thi-truong/`) : router.push(`/thi-truong/thi-truong/${selected + 1}`);
+        // loadEntries(selected);
     }
 
-
-    // Render
     if (isLoading) {
-    return <div className="flex flex-col font-fold font-3xl items-center justify-center text-slate-800 mt-24">Loading...</div>; // Or your custom loading component
+        return <div 
+                className="flex flex-col font-fold font-3xl items-center justify-center text-slate-800 mt-24">
+                    Loading...
+                </div>
     }
-
+    
     return (
-        <>    
-            <Head>
-                <title>
-                    {locale === "en" ? "TOAN PHAT GROUP - News" : "TẬP ĐOÀN TOÀN PHÁT - Thị trường"}
-                </title>
-            </Head>    
-            <div className="flex flex-row max-w-7xl h-auto m-auto">
+        <>
+            
+                <div className="flex flex-row max-w-7xl h-auto m-auto">
                 <div className='flex flex-col w-4/5 items-center justify-center mt-8'>
                     <h1 className="text-4xl font-extrabold col-span-3 row-span-1 mt-4 mb-2">
                         {locale === "en" ? "News" : "Thị trường"}
-                    </h1>
-                    
+                    </h1>                    
                     <div className="bg-slate-200 w-1/3 h-1 ml-4 mr-4"></div>
+                    {console.log(pageIndex)}
                     <div className="flex flex-col m-auto mt-12">
                         <EntriesWithPagination entries={newsEntries} />                
                         <ReactPaginate
                             previousLabel={locale === 'en' ? 'Previous' : 'Trang trước'}
                             nextLabel={locale === 'en' ? 'Next' : 'Trang kế'}
-                            // breakLabel={'...'}
-                            // breakClassName={'break-me'}
-                            pageCount={5}
+                            breakLabel={'...'}
+                            breakClassName={'break-me'}
+                            pageCount={pageCount}
                             marginPagesDisplayed={2}
-                            pageRangeDisplayed={5}
-                            // onPageChange={handlePageClick}
+                            pageRangeDisplayed={2}
+                            onPageChange={handlePageClick}
                             containerClassName="flex flex-row w-2/5 h-auto m-auto mt-8 items-center justify-center space-x-1"
                             pageClassName="w-24 h-8 flex items-center justify-center border border-gray-300 rounded hover:bg-gray-200 cursor-pointer"
                             previousClassName="w-full h-full flex items-center justify-center border border-gray-300 rounded hover:bg-gray-200 cursor-pointer"
                             nextClassName="w-full h-full flex items-center justify-center border border-gray-300 rounded hover:bg-gray-200 cursor-pointer"
-                            activeClassName="w-24 h-8 flex items-center justify-center border border-gray-300 bg-gray-200 rounded cursor-pointer"
+                            //activeClassName="w-24 h-8 flex items-center justify-center border border-gray-300 bg-gray-200 rounded cursor-pointer"
                             disabledClassName="w-full h-full flex items-center justify-center border border-gray-300 bg-gray-100 rounded cursor-not-allowed"
                         />
                     </div>
@@ -166,6 +141,7 @@ export default function ThiTruong() {
                     </div>
                 </div>
             </div>
+
         </>
-    );
+    )
 }

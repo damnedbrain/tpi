@@ -52,29 +52,29 @@ export default function ThiTruong() {
 
     useEffect(() => {
     // Fetch data
-    Promise.all([
-        getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 5, "fields.promo": "true" }),
-        getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 5, "fields.hightLight": "true" }),
-        getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 9, "fields.type": "news" }),
-        getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 9, "fields.type": "blog" }),
-        getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 9, "fields.type": "promo" })
-    ]).then(([hero, feature, news, blogs, promotions]) => {
-        // Set data in state
-        setHeroEntries(shortenEntries(hero));
-        setFeaturedEntries(shortenEntries(feature));
-        setNewsEntries(shortenEntries(news));
-        setBlogEntries(shortenEntries(blogs));
-        setPromotionEntries(shortenEntries(promotions));
-        // Set loading state to false
-        setIsLoading(false);
-    }).catch((error) => {
-        setError(error);
-        console.error("Error fetching data:", error);
-        
-        // Set loading state to false
-        setIsLoading(false);
-    }, []);
-    });
+        Promise.all([
+            getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 5, "fields.promo": "true" }),
+            getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 5, "fields.hightLight": "true" }),
+            getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 9, "fields.type": "news" }),
+            getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 9, "fields.type": "blog" }),
+            getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 9, "fields.type": "promo" })
+        ]).then(([hero, feature, news, blogs, promotions]) => {
+            // Set data in state
+            setHeroEntries(shortenEntries(hero.items));
+            setFeaturedEntries(shortenEntries(feature.items));
+            setNewsEntries(shortenEntries(news.items));
+            setBlogEntries(shortenEntries(blogs.items));
+            setPromotionEntries(shortenEntries(promotions.items));
+            // Set loading state to false
+            setIsLoading(false);
+        }).catch((error) => {
+            setError(error);
+            console.error("Error fetching data:", error);
+            
+            // Set loading state to false
+            setIsLoading(false);
+        }, []);
+    }, [locale]);
 
     // Render
     if (isLoading) {
@@ -123,7 +123,7 @@ export default function ThiTruong() {
                 <h1 className="text-5xl text-bold p-4 text-green-700">Video</h1>
                 <div className="bg-slate-100 w-full h-1 ml-4 mr-4"></div>
             </div>
-            <div className="flex flex-row w-full h-auto p-2">
+            {/* <div className="flex flex-row w-full h-auto p-2">
                     <div className="w-1/3 p-3">
                         <div className="mt-8">
                             <h1 className="text-2xl text-bold text-left p-1">{videoList[0].title}</h1>
@@ -162,7 +162,7 @@ export default function ThiTruong() {
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen />
                     </div>
-                    </div>
+            </div> */}
         </div>
     </>;
 }

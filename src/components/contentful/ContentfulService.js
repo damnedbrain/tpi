@@ -11,5 +11,5 @@ export async function getEntries(contentType, locale, query) {
         locale: locale,
         ...query
     });
-    if (entries.items) return entries.items;
+    if (entries.items) return { items: entries.items, total: entries.total };
 }

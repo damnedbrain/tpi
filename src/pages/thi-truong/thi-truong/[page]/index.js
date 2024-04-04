@@ -39,29 +39,33 @@ export default function ThiTruongPage() {
     const locale = router.locale;
     const [isLoading, setIsLoading] = useState(true);
     const [newsEntries, setNewsEntries] = useState([]);
-    const [pageNo, setPageNo] = useState(1);
+    const [pageIndex, setPageIndex] = useState(1);
     const [error, setError] = useState(null);
+    const [pageCount, setPageCount] = useState(1);
     const pageSize = 15;
 
     useEffect(() => {
-        const pageNumber = page ? parseInt(page, 10) : 1;
-        const validPageNumber = Number.isInteger(pageNumber) ? pageNumber : 1;
-        loadEntries(validPageNumber);
+        const pageNumber = page ? parseInt(page) : 0;
+        const currentPageIndex = pageNumber === 0 ? 0 : pageNumber - 1;
+        setPageIndex(currentPageIndex);
+        loadEntries(currentPageIndex);
     }, [page]);
 
-    const loadEntries = async (pageNo) => {
+    const loadEntries = async (pageIndex) => {
         setIsLoading(true);
         try {
             const res = await getEntries(
-                                "toanPhatMarketNews", 
-                                locale, 
-                                { order: '-sys.createdAt', 
-                                  limit: pageSize, 
-                                  skip: (pageNo-1) * pageSize, 
-                                  "fields.type": "news" 
-                                });
-            setNewsEntries(shortenEntries(res));
-            // setPageCount(Math.ceil(res.total / pageSize));
+                "toanPhatMarketNews", 
+                locale, 
+                { 
+                    order: '-sys.createdAt', 
+                    limit: pageSize, 
+                    skip: pageIndex * pageSize, 
+                    "fields.type": "news" 
+                }
+            );
+            setNewsEntries(shortenEntries(res.items));
+            setPageCount(Math.ceil(res.total / pageSize));
         } catch (error) {
             setError(error);
             console.error("Error fetching data:", error);
@@ -71,9 +75,10 @@ export default function ThiTruongPage() {
 
     const handlePageClick = (data) => {
         const selected = data.selected;
-        setPageNo(selected);
-        router.push(`/thi-truong/thi-truong/page/${selected + 1}`);
-        loadEntries(selected);
+        console.log(data);
+        // setPageIndex(selected);
+        selected === 0 ? router.push(`/thi-truong/thi-truong/`) : router.push(`/thi-truong/thi-truong/${selected + 1}`);
+        // loadEntries(selected);
     }
 
     if (isLoading) {
@@ -82,7 +87,7 @@ export default function ThiTruongPage() {
                     Loading...
                 </div>
     }
-
+    
     return (
         <>
             
@@ -92,6 +97,7 @@ export default function ThiTruongPage() {
                         {locale === "en" ? "News" : "Thị trường"}
                     </h1>                    
                     <div className="bg-slate-200 w-1/3 h-1 ml-4 mr-4"></div>
+                    {console.log(pageIndex, page)}
                     <div className="flex flex-col m-auto mt-12">
                         <EntriesWithPagination entries={newsEntries} />                
                         <ReactPaginate
@@ -99,15 +105,16 @@ export default function ThiTruongPage() {
                             nextLabel={locale === 'en' ? 'Next' : 'Trang kế'}
                             breakLabel={'...'}
                             breakClassName={'break-me'}
-                            pageCount={5}
+                            pageCount={pageCount}
                             marginPagesDisplayed={2}
-                            pageRangeDisplayed={pageNo}
+                            pageRangeDisplayed={2}
                             onPageChange={handlePageClick}
+                            forcePage={pageIndex + 1}
                             containerClassName="flex flex-row w-2/5 h-auto m-auto mt-8 items-center justify-center space-x-1"
                             pageClassName="w-24 h-8 flex items-center justify-center border border-gray-300 rounded hover:bg-gray-200 cursor-pointer"
                             previousClassName="w-full h-full flex items-center justify-center border border-gray-300 rounded hover:bg-gray-200 cursor-pointer"
                             nextClassName="w-full h-full flex items-center justify-center border border-gray-300 rounded hover:bg-gray-200 cursor-pointer"
-                            activeClassName="w-24 h-8 flex items-center justify-center border border-gray-300 bg-gray-200 rounded cursor-pointer"
+                            //activeClassName="w-24 h-8 flex items-center justify-center border border-gray-300 bg-gray-200 rounded cursor-pointer"
                             disabledClassName="w-full h-full flex items-center justify-center border border-gray-300 bg-gray-100 rounded cursor-not-allowed"
                         />
                     </div>

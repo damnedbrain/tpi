@@ -19,23 +19,26 @@ export async function getStaticPaths({ }) {
         { content_type:"toanPhatMarketNews" });   
     let paths = [];
     entries.items.map((entry) => {
-        paths.push({
-            params: { 
-                slug: entry.fields.slug 
-            },
-        locale: 'vi',
-        });
-        paths.push({
-            params: { 
-                slug: entry.fields.slug 
-            },
-            locale: 'en-US',
-        });
+        if (entry.locale === 'vi') {
+            paths.push({
+                params: { 
+                    slug: entry.fields.slug 
+                },
+            });
+        }
+        if (entry.locale === 'en-US') {
+            paths.push({
+                params: { 
+                    slug: entry.fields.slug 
+                },
+                locale: 'en-US',
+            });
+        }
     })
 
     return {
         paths,
-        fallback: true,
+        fallback: 'blocking',
     };
 }
 
@@ -63,7 +66,8 @@ export async function getStaticProps({ params, locale }) {
     return {
         props: {
             entry: entry.items[0],
-            revalidate: 1,
+            locale,
+            revalidate: 10,
     }
     };
 }
@@ -75,7 +79,7 @@ export default function EntryDetail( { entry, locale }) {
             // target the contentType of the EMBEDDED_ENTRY to display as you need
             if (node.data.target.sys.contentType.sys.id === "blogPost") {
               return (
-                <a href={`/blog/${node.data.target.fields.slug}`}
+                <a href={`/thi-truong/${node.data.target.fields.slug}`}
                     className="flex flex-col items-center justify-center text-green-500 text-left font-bold hover:text-green-700"
                 >            
                     {node.data.target.fields.title}

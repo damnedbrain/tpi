@@ -41,7 +41,7 @@ export default function HighlightFeaturedEntries({ entries }) {
                     </div>
                     <div className="flex flex-col w-1/2">
                         {entries.slice(0, 3).map((entry, index) => (
-                            <div className="flex h-1/3 w-full m-2">
+                            <div key={index} className="flex h-1/3 w-full m-2">
                             <div className="relative w-1/2 h-full rounded-xl">
                                 <Image
                                     key={index}

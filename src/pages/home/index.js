@@ -229,7 +229,7 @@ export default function Home() {
             </title>
         </Head>
         {/* {console.log(entries)} */}
-        <SlickSlider entries={heroEntries}/>
+        <SlickSlider className='relative' entries={heroEntries}/>
         {/* Best Services section*/}
         <div className="flex flex-col md:flex-row max-w-7xl h-auto m-auto mt-8"> 
             {bestServicesLocale.sub.map((item, index) => (
