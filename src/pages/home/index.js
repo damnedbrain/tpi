@@ -252,7 +252,7 @@ export default function Home() {
         {/*Video Location section*/}
         <div className="flex flex-col max-w-7xl items-center justify-center m-auto h-auto mt-8">
             <div className="w-4/5">
-                <h2 className="text-3xl text-center font-bold text-green-700 animate-fadeInSlideIn">
+                <h2 className="text-3xl text-center font-bold text-green-800 animate-fadeInSlideIn">
                     {locationMapLocale.title}
                 </h2>
                 <div className="text-center text-base text-gray-600 m-4 animate-fadeIn">
@@ -359,7 +359,7 @@ export default function Home() {
             {/*Team Members Section*/}
             <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-8">
                 <div className="w-4/5">
-                    <h2 className="text-3xl text-center font-bold text-green-700 animate-fadeInSlideIn">
+                    <h2 className="text-3xl text-center font-bold text-green-800 animate-fadeInSlideIn">
                         {teamMemberLocale.titleMain}
                     </h2>
                     <div className="text-center text-base text-gray-600 m-4 animate-fadeIn">
@@ -426,7 +426,7 @@ export default function Home() {
             {/*Certification Section*/}
             <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-8">
                 <div className="w-4/5">
-                    <h2 className="text-3xl text-center font-bold text-green-700 animate-fadeInSlideIn">
+                    <h2 className="text-3xl text-center font-bold text-green-800 animate-fadeInSlideIn">
                         {certificateLocale.titleMain}
                     </h2>
                     <div className="text-center text-base text-gray-600 m-4 animate-fadeIn">
@@ -461,7 +461,7 @@ export default function Home() {
             {/*Partners Section*/}
             <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-8">
                 <div className="w-4/5">
-                    <h2 className="text-3xl text-center font-bold text-green-700 animate-fadeInSlideIn">
+                    <h2 className="text-3xl text-center font-bold text-green-800 animate-fadeInSlideIn">
                         {partnersLocale.title}
                     </h2>
                 </div>
@@ -489,7 +489,7 @@ export default function Home() {
             {/*Gallery Section*/}
             <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
                 <div className="w-4/5">
-                    <h2 className="text-3xl text-center font-bold text-green-700 animate-fadeInSlideIn">
+                    <h2 className="text-3xl text-center font-bold text-green-800 animate-fadeInSlideIn">
                         {galleryLocale.title}
                     </h2>
                     <div className="text-center text-base text-gray-600 m-4 animate-fadeIn">

@@ -83,7 +83,7 @@ export default function EntryDetail( { entry, locale }) {
             if (node.data.target.sys.contentType.sys.id === "blogPost") {
               return (
                 <a href={`/thi-truong/${node.data.target.fields.slug}`}
-                    className="flex flex-col items-center justify-center text-green-500 text-left font-bold hover:text-green-700"
+                    className="flex flex-col items-center justify-center text-green-800 text-left font-bold hover:text-green-800"
                 >            
                     {node.data.target.fields.title}
                 </a>

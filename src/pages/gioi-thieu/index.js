@@ -220,7 +220,7 @@ export default function GioiThieu() {
           <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
               <div className="flex flex-row w-full">
                   <div className="flex flex-col w-1/2 items-start justify-center bg-violet-950 ">
-                      <h1 className="text-5xl font-semiBold text-left text-green-600 animate-fadeInSlideIn p-8">
+                      <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn p-8">
                           {teamMemberTPGLocale.titleMain}
                       </h1>
                       <p className="text-xl leading-8 tracking-normal text-white p-8 mt-4 whitespace-pre-line animate-fadeInSlideIn">

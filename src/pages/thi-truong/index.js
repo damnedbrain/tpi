@@ -130,7 +130,7 @@ export default function ThiTruong() {
         </div>
         <div className="flex flex-col max-w-7xl h-auto m-auto mt-16">
             <div>
-                <h1 className="text-5xl text-bold p-4 text-green-700">Video</h1>
+                <h1 className="text-5xl text-bold p-4 text-green-800">Video</h1>
                 <div className="bg-slate-100 w-full h-1 ml-4 mr-4"></div>
             </div>
             <div className="flex flex-row w-full h-auto p-2">

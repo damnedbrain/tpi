@@ -143,7 +143,7 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                 </div>
                 <div className="flex flex-col w-1/4 justify-center items-center">
                     <a
-                        className="font-semibold font-sans text-3xl w-full m-1 p-3 rounded-md -skew-x-12 bg-slate-50 text-green-700 items-center justify-center text-right"
+                        className="font-semibold font-sans text-3xl w-full m-1 p-3 rounded-md -skew-x-12 bg-slate-50 text-green-800 items-center justify-center text-right"
                     >
                         {topTagslabelLocale.mainLabel}
                     </a>

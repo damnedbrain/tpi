@@ -30,7 +30,7 @@ export default function Contact() {
                 <div className="grid grid-cols-2 gap-24 mt-12">
                     {contactInfoLocale.directContact.sub.map((item, index) => (
                         <div key={index} className="flex flex-col items-start">
-                            <h1 className="text-3xl font-semiBold text-left text-green-600 mt-1 p-1">
+                            <h1 className="text-3xl font-semiBold text-left text-green-800 mt-1 p-1">
                                 {item.title}
                             </h1>
                             <p className="text-2xl text-left mt-1 p-1">

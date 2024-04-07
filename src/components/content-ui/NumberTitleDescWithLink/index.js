@@ -23,9 +23,9 @@ const NumberTitleDescWithLink = ({ icon, number, title, desc, link, btnText }) =
               height: "auto"
             }} />
         </div>
-        <h2 className="text-2xl text-green-700 tracking-wide font-bold">{title}</h2>
+        <h2 className="text-2xl text-green-800 tracking-wide font-bold">{title}</h2>
         <p className="text-base">{desc}</p>
-        <Link href={link ? link : '#'} passHref className="text-green-600 hover:underline">
+        <Link href={link ? link : '#'} passHref className="text-green-800 hover:underline">
           {btnText}
         </Link>
         <div className="absolute right-12 text-right text-9xl font-bold z-10 opacity-10">{number}</div>

@@ -38,7 +38,7 @@ export default function EntryPreview({ entry }) {
                     <div className="text-xl text-bold">
                         <Link
                             href={`/thi-truong/${entry.slug}`}
-                            className="text-green-700 hover:text-green-900"
+                            className="text-green-800 hover:text-green-800"
                         >
                             {entry.title}
                         </Link>
