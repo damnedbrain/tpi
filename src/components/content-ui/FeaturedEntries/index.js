@@ -101,7 +101,7 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                           </h1>
                         </div>
                         <h1 className="text-3xl font-sans font-bold">
-                          <Link href={currentTypeEntries[0].slug}>{currentTypeEntries[0].title}</Link>
+                          <Link href={`/thi-truong/${currentTypeEntries[0].slug}`}>{currentTypeEntries[0].title}</Link>
                         </h1>
                       </div>
                     </div>
@@ -132,7 +132,7 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                                     </h1>
                                 </div>
                                 <h1 className="text-sm font-sans font-semibold text-green-800">
-                                    <Link href={entry.slug}>{entry.title}</Link>
+                                    <Link href={`/thi-truong/${entry.slug}`}>{entry.title}</Link>
                                 </h1>
                                 </div>
                             </div>

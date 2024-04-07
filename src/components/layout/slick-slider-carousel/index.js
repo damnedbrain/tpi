@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
+import Link from 'next/link';
 
 import RightArrowIcon from '@assets/icons/arrow-right.png';
 import LeftArrowIcon from '@assets/icons/arrow-left.png';
@@ -75,20 +76,22 @@ export default function SlickSlider({ entries }) {
     >
       {entries.map((item, index) => (
         <div key={index}>
-          <Image
-            src={`https:${item.url}`}
-            alt={item.alt}
-            priority={true}
-            width={item.width}
-            height={item.height}
-            style={{
-              maxWidth: "100%",
-              height: "auto",
-              maxWidth: "100%",
-              height: "auto",
-              maxWidth: "100%",
-              height: "auto"
-            }} />
+          <Link href={`/thi-truong/${item.slug}`}>
+            <Image
+              src={`https:${item.url}`}
+              alt={item.alt}
+              priority={true}
+              width={item.width}
+              height={item.height}
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+                maxWidth: "100%",
+                height: "auto",
+                maxWidth: "100%",
+                height: "auto"
+              }} />
+          </Link>
         </div>
       ))}
     </Slider>

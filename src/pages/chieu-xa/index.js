@@ -17,6 +17,8 @@ import product12 from "@/assets/chieu-xa/pro-12.png";
 
 import { foodIrradiationSystem, productOfIrradiation, subMethodIrradiation } from "@/constants/language-option";
 
+import Head from "next/head";
+
 export default function ChieuXa() {
 
     const productImages = [
@@ -31,6 +33,11 @@ export default function ChieuXa() {
     const [currentTab, setCurrentTab] = useState('tab1');
     return (
         <>
+            <Head>
+            <title>
+                {locale === "en" ? "TOAN PHAT GROUP - Irradiation" : "Tập đoàn Toàn Phát - Chiếu xạ"}
+            </title>
+            </Head>
             <div className="flex flex-col md:flex-col justify-center items-center max-w-7xl h-auto m-auto mt-8">
                 <div className="flex flex-col items-center justify-end mt-24">
                     <div className="flex flex-row ">

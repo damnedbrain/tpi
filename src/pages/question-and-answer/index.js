@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 
 import { questionContent } from "@/constants/language-option";
 import Image from "next/image";
+import Head from "next/head";
 
 import QAImage from "@assets/question-and-answer/Q&A.png";
 
@@ -11,6 +12,11 @@ export default function QuestionAndAnswer() {
     const locale = router.locale;
     const questionContentLocale = questionContent.find((item) => item.locale === locale);
     return <>
+        <Head>
+            <title>
+                {locale === "en" ? "TOAN PHAT GROUP - Q&A" : "Tập đoàn Toàn Phát - Hỏi đáp"}
+            </title>
+        </Head>
         <div className="flex flex-col max-w-7xl w-full items-center justify-center m-auto h-auto mt-8">
             <Image
                 src={QAImage}

@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Head from "next/head";
+import Link from "next/link";
 
 import { getEntries } from "@/components/contentful/ContentfulService";
 import SlickSlider from "@/components/layout/slick-slider-carousel";
@@ -83,6 +85,11 @@ export default function ThiTruong() {
 
 
     return <>
+        <Head>
+            <title>
+                {locale === "en" ? "TOAN PHAT GROUP - News" : "Tập đoàn Toàn Phát - Tin tức thị trường"}
+            </title>
+        </Head>
         {/* {console.log(newsEntries, blogEntries, promotionEntries, heroEntries, featuredEntries)} */}
         <SlickSlider entries={heroEntries} />
         <FeaturedEntries newsEntries={newsEntries} blogEntries={blogEntries} promotionEntries={promotionEntries} />
@@ -123,7 +130,7 @@ export default function ThiTruong() {
                 <h1 className="text-5xl text-bold p-4 text-green-700">Video</h1>
                 <div className="bg-slate-100 w-full h-1 ml-4 mr-4"></div>
             </div>
-            {/* <div className="flex flex-row w-full h-auto p-2">
+            <div className="flex flex-row w-full h-auto p-2">
                     <div className="w-1/3 p-3">
                         <div className="mt-8">
                             <h1 className="text-2xl text-bold text-left p-1">{videoList[0].title}</h1>
@@ -151,7 +158,9 @@ export default function ThiTruong() {
                         </div>
                     </div>
                     <div className="w-2/3 mt-8 p-3 h-full">
-                        <h1 className="text-2xl text-bold text-left p-1">{videoList[4].title}</h1>
+                        <Link href={`https://www.youtube.com/embed/${videoList[4].ytbid}`}>
+                            <h1 className="text-2xl text-bold text-left p-1">{videoList[4].title}</h1>
+                        </Link>
                         <div>
                             <p>{formatDate(videoList[4].date)}</p>
                         </div>
@@ -162,7 +171,7 @@ export default function ThiTruong() {
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen />
                     </div>
-            </div> */}
+            </div>
         </div>
     </>;
 }

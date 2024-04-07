@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
+import Head from "next/head";
 
 import { AboutTPGDesc,
          ThongDiepTPG,
@@ -52,6 +53,11 @@ export default function GioiThieu() {
 
 
   return <>
+        <Head>
+            <title>
+                {locale === "en" ? "TOAN PHAT GROUP - About Us" : "Tập đoàn Toàn Phát - Giới thiệu"}
+            </title>
+        </Head>
       <div className="flex flex-col max-w-7xl w-full items-center justify-center m-auto h-auto mt-8">
 
           {/* About TPG Section */}
@@ -260,7 +266,7 @@ export default function GioiThieu() {
           {/* Team Member TPG Section END */}
 
           {/* Corp Culture TPG Section */}
-          <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
+          <div id="corp-culture" className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
               <h1 className="text-5xl font-bold text-left text-green-800 animate-fadeInSlideIn">
                   {corpCultureTPGLocale.mainTitle}
               </h1>

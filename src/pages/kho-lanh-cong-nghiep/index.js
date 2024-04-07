@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
+import Head from "next/head";
 
 import { coldStorageTopContent } from "@/constants/language-option";
 
@@ -24,6 +25,12 @@ export default function KhoLanhCongNghiep() {
     ]
 
     return (
+        <>
+        <Head>
+            <title>
+                {locale === "en" ? "TOAN PHAT GROUP - Cold storage" : "Tập đoàn Toàn Phát - Kho lạnh công nghiệp"}
+            </title>
+        </Head>
         <div className="flex flex-col md:flex-col justify-center items-center max-w-7xl h-auto m-auto mt-8">
             <Image src={cold1} alt="cold-storage" className="w-full h-auto" />
             <div className="flex flex-row mt-8">
@@ -65,5 +72,6 @@ export default function KhoLanhCongNghiep() {
             </div>
 
         </div>
+        </>
     )
 }

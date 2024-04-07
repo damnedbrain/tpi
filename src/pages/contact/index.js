@@ -1,9 +1,13 @@
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 import { contactInfo } from "@/constants/language-option";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLandmark, faPhone, faEnvelope, faMobileAlt, faMapMarkedAlt } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import IMG from '@assets/support/support-banner.png'
+
+import Head from "next/head";
 
 
 export default function Contact() {
@@ -14,6 +18,11 @@ export default function Contact() {
     
     return(
         <>
+            <Head>
+            <title>
+                {locale === "en" ? "TOAN PHAT GROUP - Contact" : "Tập đoàn Toàn Phát - Liên hệ"}
+            </title>
+            </Head>
             <div className="flex flex-col max-w-7xl w-full items-center justify-center m-auto h-auto mt-8">
                 <h1 className="text-5xl font-bold w-full text-center mt-24 text-green-800">
                     {contactInfoLocale.title}
@@ -64,6 +73,7 @@ export default function Contact() {
                         </div>
                     ))}
                 </div>
+                <Image src={IMG} alt="support-banner" className="w-full h-auto mt-12" />
             </div>
         </>
     )

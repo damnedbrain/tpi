@@ -1,3 +1,4 @@
+import HighlightEntriesProvider from "@/components/api/HighlightEntriesProvider";
 import Layout from "@/components/layout";
 import "@/styles/globals.css";
 import { Josefin_Sans } from "next/font/google";
@@ -17,7 +18,9 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Layout>
-      <Component {...pageProps} />
+        <HighlightEntriesProvider>
+        <Component {...pageProps} />
+        </HighlightEntriesProvider>
       </Layout>
     </>
   )

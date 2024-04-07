@@ -239,7 +239,7 @@ export default function Home() {
                     number={index+1} 
                     title={item.title} 
                     desc={item.desc} 
-                    link={item.link} 
+                    link={item.linksrc} 
                     btnText={item.btnText} 
                     key={index}
                 />
@@ -282,13 +282,13 @@ export default function Home() {
                     <div key={index} className="flex flex-row animate-fadeInSlideIn w-full mt-4">
                         <div className="flex flex-col w-1/2">
                             <h1 className="text-bold text-green-700 font-semiBold text-2xl p-1">
-                                {item.title}
+                                <Link href={`/thi-truong/${item.slug}`}>{item.title}</Link>
                             </h1>
                             <div className="text-1xl p-1">
                                 {item.desc.content[0].content[0].value}                                        
                             </div>
                             <i className="text-green-600 text-1xl">
-                                <Link href={`/news/${item.slug}`}>
+                                <Link href={`/thi-truong/${item.slug}`}>
                                     {locale === "en" ? "Read more" : "Xem thêm"}
                                 </Link>
                             </i>
@@ -329,7 +329,7 @@ export default function Home() {
                         </div>
                         <div className="flex flex-col items-start justify-start w-full mt-0 p-2 flex-grow">
                             <h1 className="text-bold items-start text-green-700 font-semiBold text-2xl p-1">
-                                {item.fields.title}
+                                <Link href={`/thi-truong/${item.fields.slug}`}>{item.fields.title}</Link>
                             </h1>
                         </div>
                         <div className="flex flex-col items-start justify-start w-full mt-0 p-2 flex-grow">
@@ -345,7 +345,7 @@ export default function Home() {
                         </div>
                         <div className="flex flex-col items-start justify-start w-full mt-0 p-2 flex-grow">
                             <i className="text-green-600 text-1xl">
-                                <Link href={`/news/${item.fields.slug}`}>
+                                <Link href={`/thi-truong/${item.fields.slug}`}>
                                     {locale === "en" ? "Read more" : "Xem thêm"}
                                 </Link>
                             </i>
@@ -416,7 +416,7 @@ export default function Home() {
                             </div>
                         ))}
                     </div>
-                    <Link href="" className="m-4 text-gray-200 italic font-semibold">
+                    <Link href="/gioi-thieu#corp-culture" className="m-4 text-gray-200 italic font-semibold">
                         {locale === "en" ? "Read more" : "Xem thêm"}
                     </Link>
                 </div>

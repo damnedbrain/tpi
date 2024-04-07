@@ -35,7 +35,7 @@ export default function HighlightFeaturedEntries({ entries }) {
                           </h1>
                         </div>
                         <h1 className="text-3xl font-sans font-bold">
-                          <Link href={entries[0].slug}>{entries[0].title}</Link>
+                          <Link href={`/thi-truong/${entries[0].slug}`}>{entries[0].title}</Link>
                         </h1>
                       </div>
                     </div>
@@ -66,7 +66,7 @@ export default function HighlightFeaturedEntries({ entries }) {
                                     </h1>
                                 </div>
                                 <h1 className="text-sm font-sans font-semibold text-green-800">
-                                    <Link href={entry.slug}>{entry.title}</Link>
+                                    <Link href={`/thi-truong/${entry.slug}`}>{entry.title}</Link>
                                 </h1>
                                 </div>
                             </div>
