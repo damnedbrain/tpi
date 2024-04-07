@@ -33,7 +33,7 @@ export default function Document() {
         />
       </Head>
       
-      <body>
+      <body className="p-0">
         <Main />
         <NextScript />
       </body>

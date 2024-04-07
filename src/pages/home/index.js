@@ -231,7 +231,7 @@ export default function Home() {
         {/* {console.log(entries)} */}
         <SlickSlider className='relative' entries={heroEntries}/>
         {/* Best Services section*/}
-        <div className="flex flex-col md:flex-row max-w-7xl h-auto m-auto mt-8"> 
+        <div className="flex flex-col md:flex-row md:max-w-7xl h-auto m-auto mt-8"> 
             {bestServicesLocale.sub.map((item, index) => (
                 <div key={index} className="animate-fadeInSlideIn w-full md:w-1/3">
                 <NumberTitleDescWithLink 
