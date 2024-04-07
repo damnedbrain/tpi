@@ -146,7 +146,7 @@ export default function EntryDetail( { entry, locale }) {
                 {`TOAN PHAT GROUP - ${entry.fields.title}`}
             </title>
         </Head>
-            {console.log(highlightEntries)}
+            {/* {console.log(highlightEntries)} */}
             <div className="flex font-inter flex-row w-full bg-white items-center justify-center">
                 <div className="flex flex-row rounded-xl bg-gray-50 m-auto mt-16 max-w-7xl h-auto items-start justify-center p-4">
                     <div className="w-3/4">
