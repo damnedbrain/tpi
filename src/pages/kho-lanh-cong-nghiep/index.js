@@ -52,7 +52,7 @@ export default function KhoLanhCongNghiep() {
                 ))}
             </div>
             <div className="flex flex-col items-center justify-end mt-24">
-                <h1 className="text-5xl font-semiBold text-green-700">
+                <h1 className="text-5xl font-semiBold text-green-800">
                     {coldStorageTopContentLocale.midTitle}
                 </h1>
             </div>

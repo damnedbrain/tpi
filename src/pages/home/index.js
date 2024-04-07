@@ -272,7 +272,7 @@ export default function Home() {
         {/*Big High Light Entries Section*/}
         <div className="flex flex-col md:flex-col justify-center items-center max-w-7xl h-auto m-auto mt-8">
             <div className="animate-fadeInSlideIn w-full md:w-1/3">
-                <h2 className="text-3xl text-center font-bold text-green-700">
+                <h2 className="text-3xl text-center font-bold text-green-800">
                     {locale === "en-US" ? "Latest News" : "Thị trường"}
                 </h2>
             </div>
@@ -281,13 +281,13 @@ export default function Home() {
                 {highlighEntries.map((item, index) => (
                     <div key={index} className="flex flex-col md:flex-row animate-fadeInSlideIn w-full mt-4">
                         <div className="flex flex-col md:w-1/2">
-                            <h1 className="text-bold text-green-700 font-semiBold text-2xl p-1">
+                            <h1 className="text-bold text-green-800 font-semiBold text-2xl p-1">
                                 <Link href={`/thi-truong/${item.slug}`}>{item.title}</Link>
                             </h1>
                             <div className="text-1xl p-1">
                                 {item.desc.content[0].content[0].value}                                        
                             </div>
-                            <i className="text-green-600 text-1xl">
+                            <i className="text-green-800 text-1xl">
                                 <Link href={`/thi-truong/${item.slug}`}>
                                     {locale === "en-US" ? "Read more" : "Xem thêm"}
                                 </Link>
@@ -328,7 +328,7 @@ export default function Home() {
                                 }} />
                         </div>
                         <div className="flex flex-col items-start justify-start w-full mt-0 p-2 flex-grow">
-                            <h1 className="text-bold items-start text-green-700 font-semiBold text-2xl p-1">
+                            <h1 className="text-bold items-start text-green-800 font-semiBold text-2xl p-1">
                                 <Link href={`/thi-truong/${item.fields.slug}`}>{item.fields.title}</Link>
                             </h1>
                         </div>
@@ -344,7 +344,7 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="flex flex-col items-start justify-start w-full mt-0 p-2 flex-grow">
-                            <i className="text-green-600 text-1xl">
+                            <i className="text-green-800 text-1xl">
                                 <Link href={`/thi-truong/${item.fields.slug}`}>
                                     {locale === "en-US" ? "Read more" : "Xem thêm"}
                                 </Link>
