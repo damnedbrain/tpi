@@ -29,7 +29,8 @@ function shortenEntries (entries) {
             thumbImageWidth: item.fields.thumbImage.fields.file.details.image.width,
             thumbImageHeight: item.fields.thumbImage.fields.file.details.image.height,
             postTime: item.sys.createdAt,
-            type: item.fields.type, 
+            type: item.fields.type,
+            tags: item.fields.tags, 
         }
     }).filter(Boolean);
 }
@@ -94,7 +95,7 @@ export default function ThiTruongPage() {
                 <div className="flex flex-row max-w-7xl h-auto m-auto">
                 <div className='flex flex-col w-4/5 items-center justify-center mt-8'>
                     <h1 className="text-4xl font-extrabold col-span-3 row-span-1 mt-4 mb-2">
-                        {locale === "en" ? "News" : "Thị trường"}
+                        {locale === "en" ? "Blog" : "Toàn Phát Blog"}
                     </h1>                    
                     <div className="bg-slate-200 w-1/3 h-1 ml-4 mr-4"></div>
                     {console.log(pageIndex)}

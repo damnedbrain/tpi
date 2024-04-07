@@ -64,7 +64,7 @@ export default function ThiTruongPage() {
                     order: '-sys.createdAt', 
                     limit: pageSize, 
                     skip: pageIndex * pageSize, 
-                    "fields.type": "promo" 
+                    "fields.tags[in]": "Kho Lạnh"
                 }
             );
             setNewsEntries(shortenEntries(res.items));
@@ -89,19 +89,20 @@ export default function ThiTruongPage() {
         <>
             <Head>
             <title>
-                {locale === "en" ? "TOAN PHAT GROUP - Promotions" : "Tập đoàn Toàn Phát - Ưu đãi"}
+                {locale === "en" ? "TOAN PHAT GROUP - News" : "Tập đoàn Toàn Phát - Tin tức thị trường"}
             </title>
             </Head>
+            
                 <div className="flex flex-row max-w-7xl h-auto m-auto">
                 <div className='flex flex-col w-4/5 items-center justify-center mt-8'>
                     <h1 className="text-4xl font-extrabold col-span-3 row-span-1 mt-4 mb-2">
-                        {locale === "en" ? "Promotions" : "Ưu đãi"}
+                        {locale === "en" ? "Cold storage" : "Kho lạnh công nghiệp"}
                     </h1>                    
                     <div className="bg-slate-200 w-1/3 h-1 ml-4 mr-4"></div>
                     {console.log(pageIndex)}
                     <div className="flex flex-col m-auto mt-12">
                         <EntriesWithPagination entries={newsEntries} />                
-                        <Pagination currentPage={pageIndex + 1} pageCount={pageCount} basePageURL="uu-dai" />
+                        <Pagination currentPage={pageIndex + 1} pageCount={pageCount} basePageURL="kho-lanh" />
                     </div>
                 </div>                
                 <div className="flex flex-col w-1/5 mt-36">

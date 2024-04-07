@@ -19,7 +19,8 @@ function shortenEntries (entries) {
             thumbImageWidth: item.fields.thumbImage.fields.file.details.image.width,
             thumbImageHeight: item.fields.thumbImage.fields.file.details.image.height,
             postTime: item.sys.createdAt,
-            type: item.fields.type, 
+            type: item.fields.type,
+            tags: item.fields.tags,
         }
     }).filter(Boolean);
 }

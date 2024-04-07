@@ -1957,6 +1957,13 @@ export const  topTagslabel =  [
       "Chiếu Xạ",
       "Kho Lạnh",
       "Xuất Nhập Khẩu",
+    ],
+    link: [
+      "/nong-san",
+      "/thuy-san",
+      "/chieu-xa",
+      "/kho-lanh",
+      "/xuat-nhap-khau",
     ]
   },
   {
@@ -1968,6 +1975,13 @@ export const  topTagslabel =  [
       "Irradiation",
       "Refrigerated Warehouse",
       "Logistics",
+    ],
+    link: [
+      "/nong-san",
+      "/thuy-san",
+      "/chieu-xa",
+      "/kho-lanh",
+      "/xuat-nhap-khau",
     ]
   }
 ];
