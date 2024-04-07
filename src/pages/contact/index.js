@@ -20,7 +20,7 @@ export default function Contact() {
         <>
             <Head>
             <title>
-                {locale === "en-US" ? "TOAN PHAT GROUP - Contact" : "Tập đoàn Toàn Phát - Liên hệ"}
+                {locale === "en-US" ? "TOANPHAT GROUP - Contact" : "TOANPHAT GROUP- Liên hệ"}
             </title>
             </Head>
             <div className="flex flex-col max-w-7xl w-full items-center justify-center m-auto h-auto mt-8">

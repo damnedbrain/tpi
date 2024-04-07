@@ -89,7 +89,7 @@ export default function ThiTruongPage() {
         <>
             <Head>
             <title>
-                {locale === "en-US" ? "TOAN PHAT GROUP" : "Tập đoàn Toàn Phát"}
+                {locale === "en-US" ? "TOANPHAT GROUP" : "Tập đoàn Toàn Phát"}
             </title>
             </Head>
                 <div className="flex flex-row max-w-7xl h-auto m-auto">

@@ -143,7 +143,7 @@ export default function EntryDetail( { entry, locale }) {
     return <>
         <Head>
             <title>
-                {`TOAN PHAT GROUP - ${entry.fields.title}`}
+                {`TOANPHAT GROUP - ${entry.fields.title}`}
             </title>
         </Head>
             {/* {console.log(highlightEntries)} */}

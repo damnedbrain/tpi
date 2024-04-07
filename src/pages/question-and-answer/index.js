@@ -14,7 +14,7 @@ export default function QuestionAndAnswer() {
     return <>
         <Head>
             <title>
-                {locale === "en-US" ? "TOAN PHAT GROUP - Q&A" : "Tập đoàn Toàn Phát - Hỏi đáp"}
+                {locale === "en-US" ? "TOANPHAT GROUP - Q&A" : "TOANPHAT GROUP- Hỏi đáp"}
             </title>
         </Head>
         <div className="flex flex-col max-w-7xl w-full items-center justify-center m-auto h-auto mt-8">

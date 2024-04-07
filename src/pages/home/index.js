@@ -225,7 +225,7 @@ export default function Home() {
     return <>
         <Head>
             <title>
-                {locale === "en-US" ? "TOAN PHAT GROUP - Homepage" : "Tập đoàn Toàn Phát - Trang chủ"}
+                {locale === "en-US" ? "TOANPHAT GROUP - Homepage" : "TOANPHAT GROUP- Trang chủ"}
             </title>
         </Head>
         {/* {console.log(entries)} */}
@@ -279,8 +279,8 @@ export default function Home() {
             {/* {console.log(latestEntries)} */}
             <div className="flex flex-col justify-center items-center w-full">
                 {highlighEntries.map((item, index) => (
-                    <div key={index} className="flex flex-row animate-fadeInSlideIn w-full mt-4">
-                        <div className="flex flex-col w-1/2">
+                    <div key={index} className="flex flex-col md:flex-row animate-fadeInSlideIn w-full mt-4">
+                        <div className="flex flex-col md:w-1/2">
                             <h1 className="text-bold text-green-700 font-semiBold text-2xl p-1">
                                 <Link href={`/thi-truong/${item.slug}`}>{item.title}</Link>
                             </h1>
@@ -298,7 +298,7 @@ export default function Home() {
                             alt={item.alt}
                             width={item.width}
                             height={item.height}
-                            className="w-1/2"
+                            className="md:w-1/2"
                             style={{
                                 maxWidth: "100%",
                                 height: "auto",
@@ -311,7 +311,7 @@ export default function Home() {
             </div>
             {/*End Big High Light Entries Section*/}
             {/*Latest Entries Section*/}
-            <div className="flex flex-row justify-center items-start w-full mt-4">
+            <div className="flex flex-col md:flex-row justify-center items-start w-full mt-4">
                 {latestEntries.map((item, index) => (
                     <div key={index} className="flex flex-col w-full animate-fadeIn">
                         <div className="flex flex-col items-start justify-start w-full mt-0 p-2 flex-grow">
