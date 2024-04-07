@@ -68,7 +68,7 @@ export default function Footer() {
                     </Link>
                 </div>
                 <h1 className="relative flex items-center justify-center h-auto text-gray-500 pt-4 pb-4 border-t-gray-500 border-t">
-                    2022 ©︎TOANPHAT GROUP. All rights Reserved. admin@tpgr.vn
+                    2024 ©︎TOANPHAT GROUP. All rights Reserved. admin@tpgr.vn
                 </h1>
             </div>
         </div>

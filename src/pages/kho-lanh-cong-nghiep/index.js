@@ -28,8 +28,10 @@ export default function KhoLanhCongNghiep() {
         <>
         <Head>
             <title>
-                {locale === "en" ? "TOAN PHAT GROUP - Cold storage" : "Tập đoàn Toàn Phát - Kho lạnh công nghiệp"}
+                {locale === "en-US" ? "TOAN PHAT GROUP - Cold storage" : "Tập đoàn Toàn Phát - Kho lạnh công nghiệp"}
             </title>
+            <meta name="keywords" content={ locale === "en-US" ? "toanphatgroup, toanphat group, toàn phát group, Cold storage rental service, Frozen storage rental service, Cold storage in Long An, Cold storage in Ben Luc, Frozen storage, Cold storage rental service in HCMC, Cold warehouse for rent in Phu An Thanh industrial park, Long Hau industrial park warehouse for rent, Cold storage price list, Cold storage rental price, Cold warehouse for rent, Cold storage for preserving agricultural products, Cold storage for fruit preservation" :
+                                                                 "toanphatgroup, toanphat group, toàn phát group, Dịch vụ cho thuê kho lạnh, Cho thuê kho đông lạnh, Kho lạnh Long An, Kho lạnh Bến Lức, Kho đông lạnh, Cho thuê kho lạnh tại tphcm, Cho thuê kho kcn Phú An Thạnh, Cho thuê kho kcn long hậu, Bảng giá kho lạnh, Giá thuê kho lạnh, Cho thuê kho, Kho lạnh bảo quản nông sản, Kho lạnh bảo quản trái cây"} />
         </Head>
         <div className="flex flex-col md:flex-col justify-center items-center max-w-7xl h-auto m-auto mt-8">
             <Image src={cold1} alt="cold-storage" className="w-full h-auto" />

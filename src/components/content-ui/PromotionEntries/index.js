@@ -8,7 +8,7 @@ export default function PromotionEntries({ entries }) {
     <>
         <div className='flex flex-row w-full items-center justify-start mt-8'>
             <h1 className="text-4xl font-bold font-sans col-span-3 row-span-1 mt-4 mb-2">
-                {locale === "en" ? "Promotion" : "Ưu đãi"}
+                {locale === "en-US" ? "Promotion" : "Ưu đãi"}
             </h1>
             <div className="bg-slate-200 w-1/3 h-1 ml-4 mr-4"></div>
         </div>
@@ -22,7 +22,7 @@ export default function PromotionEntries({ entries }) {
             )}
             <div>
                 <button className="bg-green-700 text-white hover:bg-slate-800 font-bold py-2 px-4 rounded-full mt-1">
-                    <a href="/thi-truong/uu-dai">{locale === "en" ? "View More" : "Xem Thêm"}</a>
+                    <a href="/thi-truong/uu-dai">{locale === "en-US" ? "View More" : "Xem Thêm"}</a>
                 </button>
             </div>
         </div>

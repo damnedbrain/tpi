@@ -225,7 +225,7 @@ export default function Home() {
     return <>
         <Head>
             <title>
-                {locale === "en" ? "TOAN PHAT GROUP - Homepage" : "Tập đoàn Toàn Phát - Trang chủ"}
+                {locale === "en-US" ? "TOAN PHAT GROUP - Homepage" : "Tập đoàn Toàn Phát - Trang chủ"}
             </title>
         </Head>
         {/* {console.log(entries)} */}
@@ -260,7 +260,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="flex flex-col w-full m-auto">
-                {locale === "en" ? 
+                {locale === "en-US" ? 
                     <VideoComponent videoSrc="/videos/location_map_video_eng.mp4" /> :
                     <VideoComponent videoSrc="/videos/location_map_video.mp4" />
                 }
@@ -273,7 +273,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-col justify-center items-center max-w-7xl h-auto m-auto mt-8">
             <div className="animate-fadeInSlideIn w-full md:w-1/3">
                 <h2 className="text-3xl text-center font-bold text-green-700">
-                    {locale === "en" ? "Latest News" : "Thị trường"}
+                    {locale === "en-US" ? "Latest News" : "Thị trường"}
                 </h2>
             </div>
             {/* {console.log(latestEntries)} */}
@@ -289,7 +289,7 @@ export default function Home() {
                             </div>
                             <i className="text-green-600 text-1xl">
                                 <Link href={`/thi-truong/${item.slug}`}>
-                                    {locale === "en" ? "Read more" : "Xem thêm"}
+                                    {locale === "en-US" ? "Read more" : "Xem thêm"}
                                 </Link>
                             </i>
                         </div>
@@ -346,7 +346,7 @@ export default function Home() {
                         <div className="flex flex-col items-start justify-start w-full mt-0 p-2 flex-grow">
                             <i className="text-green-600 text-1xl">
                                 <Link href={`/thi-truong/${item.fields.slug}`}>
-                                    {locale === "en" ? "Read more" : "Xem thêm"}
+                                    {locale === "en-US" ? "Read more" : "Xem thêm"}
                                 </Link>
                             </i>
                         </div>
@@ -417,7 +417,7 @@ export default function Home() {
                         ))}
                     </div>
                     <Link href="/gioi-thieu#corp-culture" className="m-4 text-gray-200 italic font-semibold">
-                        {locale === "en" ? "Read more" : "Xem thêm"}
+                        {locale === "en-US" ? "Read more" : "Xem thêm"}
                     </Link>
                 </div>
             </div>    

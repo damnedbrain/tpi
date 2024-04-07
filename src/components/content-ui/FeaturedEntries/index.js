@@ -36,7 +36,7 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                 <div className="flex flex-col w-3/4">
                     <div className="relative flex flex-row w-full justify-end items-end">
                         <div className="text-5xl font-bold whitespace-nowrap">
-                            {locale === "en" ? "News" : "Tin tức"}
+                            {locale === "en-US" ? "News" : "Tin tức"}
                         </div>
                         <div className="bg-green-700 w-1/3 h-1 mb-5 ml-4 mr-4"></div>
                         <div className="flex flex-row w-full">
@@ -47,7 +47,7 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                                 }}
                                 className="font-semibold w-full m-2 p-3 rounded-md -skew-x-12 bg-green-700 text-white"
                             >
-                                {locale === "en" ? "All" : "Tất cả"}
+                                {locale === "en-US" ? "All" : "Tất cả"}
                             </button>
                             <button
                                 onClick={(event) => {
@@ -56,7 +56,7 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                                 }}
                                 className="font-semibold w-full m-2 p-3 rounded-md -skew-x-12 bg-green-700 text-white"
                             >
-                                {locale === "en" ? "News" : "Tin tức"}
+                                {locale === "en-US" ? "News" : "Tin tức"}
                             </button>
                             <button
                                 onClick={(event) => {
@@ -65,7 +65,7 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                                 }}
                                 className="font-semibold w-full m-2 p-3 rounded-md -skew-x-12 bg-green-700 text-white"
                             >
-                                {locale === "en" ? "Blog" : "Blog"}
+                                {locale === "en-US" ? "Blog" : "Blog"}
                             </button>
                             <button
                                 onClick={(event) => {
@@ -74,7 +74,7 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                                 }}
                                 className="font-semibold w-full m-2 p-3 rounded-md -skew-x-12 bg-green-700 text-white"
                             >
-                                {locale === "en" ? "Promotion" : "Ưu đãi"}
+                                {locale === "en-US" ? "Promotion" : "Ưu đãi"}
                             </button>
                         </div>
                     </div>

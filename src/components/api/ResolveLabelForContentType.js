@@ -1,12 +1,12 @@
 export function ResolveLabelForContentType({ type, locale }) {
     switch (type) {
         case "news":
-            return locale === "en" ? "News" : "Thị trường";
+            return locale === "en-US" ? "News" : "Thị trường";
         case "blog":
-            return locale === "en" ? "Blog" : "Blog";
+            return locale === "en-US" ? "Blog" : "Blog";
         case "promo":
-            return locale === "en" ? "Promotion" : "Ưu đãi";
+            return locale === "en-US" ? "Promotion" : "Ưu đãi";
         default:
-            return locale === "en" ? "All" : "Tất cả";
+            return locale === "en-US" ? "All" : "Tất cả";
     }
 }

@@ -55,7 +55,7 @@ export default function GioiThieu() {
   return <>
         <Head>
             <title>
-                {locale === "en" ? "TOAN PHAT GROUP - About Us" : "Tập đoàn Toàn Phát - Giới thiệu"}
+                {locale === "en-US" ? "TOAN PHAT GROUP - About Us" : "Tập đoàn Toàn Phát - Giới thiệu"}
             </title>
         </Head>
       <div className="flex flex-col max-w-7xl w-full items-center justify-center m-auto h-auto mt-8">
@@ -87,7 +87,7 @@ export default function GioiThieu() {
                   {locale === "vi" ? "Lịch sử phát triển TOANPHAT GROUP" : "Company Milestones and Achievement"}
               </h1>
               <div className="w-full m-auto">
-                  {locale === "en" ? 
+                  {locale === "en-US" ? 
                       <VideoComponent videoSrc="/videos/TPG_timeline_ENG.mp4" /> :
                       <VideoComponent videoSrc="/videos/TPG_timeline.mp4" />
                   }

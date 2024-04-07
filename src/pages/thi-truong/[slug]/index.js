@@ -174,7 +174,7 @@ export default function EntryDetail( { entry, locale }) {
                     </div>
                     <div className="round-xl w-1/4 flex flex-col items-start justify-start mb-40 p-3">
                         <h1 className="font-semibold text-2xl font-sans">
-                            {locale === "en" ? "Hot news" : "Tin Nổi Bật"}
+                            {locale === "en-US" ? "Hot news" : "Tin Nổi Bật"}
                         </h1>
                         <div className="flex flex-col w-full">
                             {highlightEntries.map((item, index) => {
