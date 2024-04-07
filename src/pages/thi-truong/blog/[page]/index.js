@@ -62,7 +62,7 @@ export default function ThiTruongPage() {
                     order: '-sys.createdAt', 
                     limit: pageSize, 
                     skip: pageIndex * pageSize, 
-                    "fields.type": "news" 
+                    "fields.type": "blog" 
                 }
             );
             setNewsEntries(shortenEntries(res.items));
@@ -101,7 +101,7 @@ export default function ThiTruongPage() {
                     {console.log(pageIndex, page)}
                     <div className="flex flex-col m-auto mt-12">
                         <EntriesWithPagination entries={newsEntries} />                
-                        <Pagination currentPage={pageIndex + 1} pageCount={pageCount} basePageURL="thi-truong" />
+                        <Pagination currentPage={pageIndex + 1} pageCount={pageCount} basePageURL="blog" />
                     </div>
                 </div>                
                 <div className="flex flex-col w-1/5 mt-36">

@@ -173,7 +173,7 @@ export default function Home() {
                     "fields.homePage": "true"
                 });
 
-            setEntries(entries);
+            setEntries(entries.items);
         }
         getPageEntries();
     }, []);
@@ -191,7 +191,7 @@ export default function Home() {
                     
                 });
 
-            setLatestEntries(LatestEntries);
+            setLatestEntries(LatestEntries.items);
         }
         getLatestEntries();
     }, []);

@@ -1,13 +1,16 @@
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
-import Image from "next/image";
+import React, {useState, useEffect} from 'react';
+import { useRouter } from 'next/router';
+import ReactPaginate from 'react-paginate';
+import { getEntries } from '@/components/contentful/ContentfulService';
+import EntryPreview from '@/components/content-ui/EntryPreview';
+import EntriesWithPagination from '@/components/content-ui/EntriesPreviewWithPagination';
 
-import { getEntries } from "@/components/contentful/ContentfulService";
+import Image from 'next/image';
 
 import TopBanner from '@assets/thi-truong-banner/top.jpg';
 import BottomBanner from '@assets/thi-truong-banner/bottom.jpg';
+import Pagination from '@/components/content-ui/Pagination';
 
-import EntriesWithPagination from "@/components/content-ui/EntriesPreviewWithPagination";
 
 function shortenEntries (entries) {
     return entries.map((item, index) => {
@@ -30,61 +33,75 @@ function shortenEntries (entries) {
     }).filter(Boolean);
 }
 
-export default function Promotions() {
+export default function ThiTruongPage() {
     const router = useRouter();
+    const { page } = router.query;
+    
     const locale = router.locale;
-
-    // Prep the loading state
     const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState(null);
-    const [heroEntries, setHeroEntries] = useState([]);
-    const [featuredEntries, setFeaturedEntries] = useState([]);
     const [newsEntries, setNewsEntries] = useState([]);
-    const [blogEntries, setBlogEntries] = useState([]);
-    const [promotionEntries, setPromotionEntries] = useState([]);
+    const [pageIndex, setPageIndex] = useState(1);
+    const [error, setError] = useState(null);
+    const [pageCount, setPageCount] = useState(1);
+    const pageSize = 15;
 
     useEffect(() => {
-    // Fetch data
-    Promise.all([
-        // getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 5, "fields.promo": "true" }),
-        // getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 5, "fields.hightLight": "true" }),
-        // getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 15, "fields.type": "news" }),
-        // getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 9, "fields.type": "blog" }),
-        getEntries("toanPhatMarketNews", locale, { order: '-sys.createdAt', limit: 15, "fields.type": "promo" })
-    ]).then(([promotions]) => {
-        // Set data in state
-        // setHeroEntries(shortenEntries(hero));
-        // setFeaturedEntries(shortenEntries(feature));
-        // setNewsEntries(shortenEntries(news));
-        // setBlogEntries(shortenEntries(blogs));
-        setPromotionEntries(shortenEntries(promotions));
-        // Set loading state to false
-        setIsLoading(false);
-    }).catch((error) => {
-        setError(error);
-        console.error("Error fetching data:", error);
-        
-        // Set loading state to false
-        setIsLoading(false);
-    }, []);
-    });
+        const pageNumber = page ? parseInt(page, 10) : 0;
+        const currentPageIndex = pageNumber === 0 ? 0 : pageNumber - 1;
+        setPageIndex(currentPageIndex);
+        loadEntries(currentPageIndex);
+    }, [page]);
 
-    // Render
-    if (isLoading) {
-    return <div className="flex flex-col font-fold font-3xl items-center justify-center">Loading...</div>; // Or your custom loading component
+    const loadEntries = async (pageIndex) => {
+        setIsLoading(true);
+        try {
+            const res = await getEntries(
+                "toanPhatMarketNews", 
+                locale, 
+                { 
+                    order: '-sys.createdAt', 
+                    limit: pageSize, 
+                    skip: pageIndex * pageSize, 
+                    "fields.type": "promo" 
+                }
+            );
+            setNewsEntries(shortenEntries(res.items));
+            setPageCount(Math.ceil(res.total / pageSize));
+        } catch (error) {
+            setError(error);
+            console.error("Error fetching data:", error);
+        }
+        setIsLoading(false);
     }
 
+    const handlePageClick = (data) => {
+        const selected = data.selected;
+        console.log(data);
+        setPageIndex(selected);
+        selected === 0 ? router.push(`/thi-truong/thi-truong/`) : router.push(`/thi-truong/thi-truong/${selected + 1}`);
+        loadEntries(selected);
+    }
+
+    if (isLoading) {
+        return <div 
+                className="flex flex-col font-fold font-3xl items-center justify-center text-slate-800 mt-24">
+                    Loading...
+                </div>
+    }
+    
     return (
-        <>            
-            <div className="flex flex-row max-w-7xl h-auto m-auto">
+        <>
+            
+                <div className="flex flex-row max-w-7xl h-auto m-auto">
                 <div className='flex flex-col w-4/5 items-center justify-center mt-8'>
                     <h1 className="text-4xl font-extrabold col-span-3 row-span-1 mt-4 mb-2">
-                        {locale === "en" ? "Promotions" : "Ưu đãi"}
-                    </h1>
-                    
+                        {locale === "en" ? "News" : "Thị trường"}
+                    </h1>                    
                     <div className="bg-slate-200 w-1/3 h-1 ml-4 mr-4"></div>
+                    {console.log(pageIndex)}
                     <div className="flex flex-col m-auto mt-12">
-                        <EntriesWithPagination entries={promotionEntries} pageNo={1} />                
+                        <EntriesWithPagination entries={newsEntries} />                
+                        <Pagination currentPage={pageIndex + 1} pageCount={pageCount} basePageURL="uu-dai" />
                     </div>
                 </div>                
                 <div className="flex flex-col w-1/5 mt-36">
@@ -110,6 +127,7 @@ export default function Promotions() {
                     </div>
                 </div>
             </div>
+
         </>
-    );
+    )
 }

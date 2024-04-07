@@ -9,6 +9,7 @@ import Image from 'next/image';
 
 import TopBanner from '@assets/thi-truong-banner/top.jpg';
 import BottomBanner from '@assets/thi-truong-banner/bottom.jpg';
+import Pagination from '@/components/content-ui/Pagination';
 
 
 function shortenEntries (entries) {
@@ -76,9 +77,9 @@ export default function ThiTruongPage() {
     const handlePageClick = (data) => {
         const selected = data.selected;
         console.log(data);
-        // setPageIndex(selected);
+        setPageIndex(selected);
         selected === 0 ? router.push(`/thi-truong/thi-truong/`) : router.push(`/thi-truong/thi-truong/${selected + 1}`);
-        // loadEntries(selected);
+        loadEntries(selected);
     }
 
     if (isLoading) {
@@ -100,22 +101,7 @@ export default function ThiTruongPage() {
                     {console.log(pageIndex)}
                     <div className="flex flex-col m-auto mt-12">
                         <EntriesWithPagination entries={newsEntries} />                
-                        <ReactPaginate
-                            previousLabel={locale === 'en' ? 'Previous' : 'Trang trước'}
-                            nextLabel={locale === 'en' ? 'Next' : 'Trang kế'}
-                            breakLabel={'...'}
-                            breakClassName={'break-me'}
-                            pageCount={pageCount}
-                            marginPagesDisplayed={2}
-                            pageRangeDisplayed={2}
-                            onPageChange={handlePageClick}
-                            containerClassName="flex flex-row w-2/5 h-auto m-auto mt-8 items-center justify-center space-x-1"
-                            pageClassName="w-24 h-8 flex items-center justify-center border border-gray-300 rounded hover:bg-gray-200 cursor-pointer"
-                            previousClassName="w-full h-full flex items-center justify-center border border-gray-300 rounded hover:bg-gray-200 cursor-pointer"
-                            nextClassName="w-full h-full flex items-center justify-center border border-gray-300 rounded hover:bg-gray-200 cursor-pointer"
-                            //activeClassName="w-24 h-8 flex items-center justify-center border border-gray-300 bg-gray-200 rounded cursor-pointer"
-                            disabledClassName="w-full h-full flex items-center justify-center border border-gray-300 bg-gray-100 rounded cursor-not-allowed"
-                        />
+                        <Pagination currentPage={pageIndex + 1} pageCount={pageCount} basePageURL="thi-truong" />
                     </div>
                 </div>                
                 <div className="flex flex-col w-1/5 mt-36">
