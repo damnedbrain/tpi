@@ -74,13 +74,7 @@ export default function ThiTruongPage() {
         setIsLoading(false);
     }
 
-    const handlePageClick = (data) => {
-        const selected = data.selected;
-        console.log(data);
-        setPageIndex(selected);
-        selected === 0 ? router.push(`/thi-truong/thi-truong/`) : router.push(`/thi-truong/thi-truong/${selected + 1}`);
-        loadEntries(selected);
-    }
+    
 
     if (isLoading) {
         return <div 
