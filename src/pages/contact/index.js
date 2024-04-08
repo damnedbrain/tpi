@@ -1,14 +1,21 @@
-import { useRouter } from "next/router";
-import Image from "next/image";
+import Head from 'next/head';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
 
-import { contactInfo } from "@/constants/language-option";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLandmark, faPhone, faEnvelope, faMobileAlt, faMapMarkedAlt } from "@fortawesome/free-solid-svg-icons";
-import { faFacebook, faYoutube } from "@fortawesome/free-brands-svg-icons";
-import IMG from '@assets/support/support-banner.png'
-
-import Head from "next/head";
-
+import { contactInfo } from '@/constants/language-option';
+import IMG from '@assets/support/support-banner.png';
+import {
+  faFacebook,
+  faYoutube,
+} from '@fortawesome/free-brands-svg-icons';
+import {
+  faEnvelope,
+  faLandmark,
+  faMapMarkedAlt,
+  faMobileAlt,
+  faPhone,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Contact() {
 
@@ -27,7 +34,7 @@ export default function Contact() {
                 <h1 className="text-5xl font-bold w-full text-center mt-24 text-green-800">
                     {contactInfoLocale.title}
                 </h1>
-                <div className="grid grid-cols-2 gap-24 mt-12">
+                <div className="grid lg:grid-cols-2 gap-24 mt-12">
                     {contactInfoLocale.directContact.sub.map((item, index) => (
                         <div key={index} className="flex flex-col items-start">
                             <h1 className="text-3xl font-semiBold text-left text-green-800 mt-1 p-1">

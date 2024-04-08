@@ -1,23 +1,25 @@
-import { useRouter } from "next/router";
-import { useState } from "react";
-import Image from "next/image";
+import { useState } from 'react';
 
-import product1 from "@/assets/chieu-xa/pro-1.png";
-import product2 from "@/assets/chieu-xa/pro-2.png";
-import product3 from "@/assets/chieu-xa/pro-3.png";
-import product4 from "@/assets/chieu-xa/pro-4.png";
-import product5 from "@/assets/chieu-xa/pro-5.png";
-import product6 from "@/assets/chieu-xa/pro-6.png";
-import product7 from "@/assets/chieu-xa/pro-7.png";
-import product8 from "@/assets/chieu-xa/pro-8.png";
-import product9 from "@/assets/chieu-xa/pro-9.png";
-import product10 from "@/assets/chieu-xa/pro-10.png";
-import product11 from "@/assets/chieu-xa/pro-11.png";
-import product12 from "@/assets/chieu-xa/pro-12.png";
+import Head from 'next/head';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
 
-import { foodIrradiationSystem, productOfIrradiation, subMethodIrradiation } from "@/constants/language-option";
-
-import Head from "next/head";
+import product1 from '@/assets/chieu-xa/pro-1.png';
+import product10 from '@/assets/chieu-xa/pro-10.png';
+import product11 from '@/assets/chieu-xa/pro-11.png';
+import product12 from '@/assets/chieu-xa/pro-12.png';
+import product2 from '@/assets/chieu-xa/pro-2.png';
+import product3 from '@/assets/chieu-xa/pro-3.png';
+import product4 from '@/assets/chieu-xa/pro-4.png';
+import product5 from '@/assets/chieu-xa/pro-5.png';
+import product6 from '@/assets/chieu-xa/pro-6.png';
+import product7 from '@/assets/chieu-xa/pro-7.png';
+import product8 from '@/assets/chieu-xa/pro-8.png';
+import product9 from '@/assets/chieu-xa/pro-9.png';
+import {
+  foodIrradiationSystem,
+  productOfIrradiation,
+} from '@/constants/language-option';
 
 export default function ChieuXa() {
 
@@ -40,7 +42,7 @@ export default function ChieuXa() {
             <meta name="keywords" content={locale === "en-US" ? "Irradiation, What's Irradiation, Toan Phat Irradiation Co ltd, Irradiation companies in Vietnam, Toan Phat Irradiation, Preserved by irradiation, Irradiation center, Irradiation centers in Vietnam, Food irradiation machine, Irradiation fruits for exported, What is gamma ray irradiation?, Gamma ray irradiation, Fruit irradiation machine, Irradiation and sterilization center, What is the use of fruit irradiation, Seed irradiation, Irradiation is a preservation method, Seed irradiation to improve plant varieties, Advantages of irradiation preservation method, Irradiation in agriculture, Irradiation to kill microorganisms, Irradiation method in agriculture, What is ebeam irradiation?, Ebeam irradiation, What is x-ray irradiation, X-ray irradiation" :
                                                              " Chieu xa, Chiếu xạ là gì, Công ty TNHH Chiếu xạ Toàn Phát, Các công ty chiếu xạ ở Việt Nam, Các cơ sở chiếu xạ sản ở Việt Nam, Công ty chiếu xạ, Nhà máy chiếu xạ Toàn Phát, Bảo quản bằng chiếu xa, Trung tâm chiếu xạ, Các trung tâm chiếu xạ sản ở Việt Nam, Máy chiếu xạ thực phẩm, Chiếu xạ trái cây xuất khẩu, Chiếu xạ tia gamma là gì, Chiếu xạ tia gamma, Máy chiếu xạ trái cây, Trung tâm chiếu xạ khử trùng, Chiếu xạ trái cây để làm gì, Chiếu xạ hạt giống, Chiếu xạ là phương pháp bảo quản, Chiếu xạ hạt giống để cải tạo giống cây trồng, Ưu điểm phương pháp bảo quản bằng chiếu xạ, Chiếu xạ trong nông nghiệp, Chiếu xạ để diệt vi sinh vật, Phương pháp chiếu xạ trong nông nghiệp, chiếu xạ ebeam là gì, chiếu xạ ebeam, chiếu xạ tia x là gì, chiếu xạ tia x"} />
             </Head>
-            <div className="flex flex-col md:flex-col justify-center items-center max-w-7xl h-auto m-auto mt-8">
+            <div className="flex flex-col md:flex-col justify-center items-center max-w-7xl h-auto m-auto mt-8 p-2">
                 <div className="flex flex-col items-center justify-end mt-24">
                     <div className="flex flex-row ">
                         <h1 className="text-bold text-gray-400 text-6xl p-4">1</h1>
@@ -139,13 +141,13 @@ export default function ChieuXa() {
                             {productOfIrradiationLocale.title}
                         </h1>
                         <div className="bg-slate-200 w-1/3 h-1 ml-4 mr-4"></div>
-                        <div className="grid grid-cols-4 w-full justify-center items-center mt-12">
+                        <div className="grid grid-cols-4 w-full justify-center items-start mt-12">
                             {productImages.map((item, index) => (
-                                <div className="flex flex-col items-center justify-center">
+                                <div className="flex flex-col items-center justify-center p-2">
                                     <div className="m-4 w-max h-auto">
-                                        <Image src={item} alt="product" width={80} height={80} className="rounded-full p-2 bg-green-100" />
+                                        <Image src={item} alt="product" width={72} height={72} className="rounded-full p-2 bg-green-100" />
                                     </div>
-                                    <h1>
+                                    <h1 className='text-center'>
                                         {productOfIrradiationLocale.subDesc[index].desc}
                                     </h1>
                                 </div>
