@@ -1,12 +1,17 @@
-import { useState, useMemo, useEffect } from "react";
-import { useRouter } from "next/router";
-import { headerMenu } from "@/constants/language-option";
-import Link from "next/link";
-import Image from "next/image";
-import ToanPhatLogo from "@assets/TPI-brand/ToanPhat-Icon-white.svg"
-import FlagVi from '@assets/header/flag-viet-nam.png';
-import FlagUs from '@assets/header/flag-us.png';
+import {
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+
+import { headerMenu } from '@/constants/language-option';
+import FlagUs from '@assets/header/flag-us.png';
+import FlagVi from '@assets/header/flag-viet-nam.png';
+import ToanPhatLogo from '@assets/TPI-brand/ToanPhat-Icon-white.svg';
 
 export default function Header() {
 
@@ -44,7 +49,7 @@ export default function Header() {
 
   return (
     <div className="bg-indigo-950">
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div className="max-w-7xl w-full mx-auto px-2">
         <div className="relative flex items-center justify-center h-auto">
           {/* MOBILE menu button SVG */}
           <div className="relative inset-y-0 left-0 flex items-start lg:hidden">
