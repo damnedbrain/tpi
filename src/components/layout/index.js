@@ -1,5 +1,6 @@
-import Footer from "./footer";
-import Header from "./header";
+import ContactBar from './contact-bar';
+import Footer from './footer';
+import Header from './header';
 
 export default function Layout({ children }) {
     return (
@@ -9,7 +10,9 @@ export default function Layout({ children }) {
                     <main className="flex-grow pb-16">
                         {children}
                     </main>
+                <ContactBar />
                 <Footer />
+                
             </div>
         </>
     )
