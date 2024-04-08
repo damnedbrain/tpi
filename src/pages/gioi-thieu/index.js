@@ -1,25 +1,26 @@
-import { useRouter } from "next/router";
-import Image from "next/image";
-import Head from "next/head";
+import Head from 'next/head';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
 
-import { AboutTPGDesc,
-         ThongDiepTPG,
-         CoreValueTPG,
-         FutureGoalTPG,
-         sixWord,
-         teamMember,
-         CorpCulture
-        } from "@/constants/language-option";
-
-import AboutUsImage from "@/assets/gioi-thieu/About-Us-Image.png";
-import MessageImage from "@/assets/gioi-thieu/About-Us-Image-message.png";
-import MissionValueImage from "@assets/gioi-thieu/Mission-and-value.png";
-import TeamMemberImage from "@assets/gioi-thieu/human-resource.png";
-import TeamMemberExtraImages1 from "@assets/team-member/team-member-img-1.png";
-import TeamMemberExtraImages2 from "@assets/team-member/team-member-img-2.png";
-
-import VideoComponent from "@components/content-ui/VideoComponent";
-import NumberTitleDescWithLink from "@/components/content-ui/NumberTitleDescWithLink";
+import AboutUsImage from '@/assets/gioi-thieu/About-Us-Image.png';
+import FutureGoalImage1 from '@/assets/gioi-thieu/future-goal-1.png';
+import FutureGoalImage2 from '@/assets/gioi-thieu/future-goal-2.png';
+import NumberTitleDescWithLink
+  from '@/components/content-ui/NumberTitleDescWithLink';
+import {
+  AboutTPGDesc,
+  CoreValueTPG,
+  CorpCulture,
+  FutureGoalTPG,
+  sixWord,
+  teamMember,
+  ThongDiepTPG,
+} from '@/constants/language-option';
+import TeamMemberImage from '@assets/gioi-thieu/human-resource.png';
+import MissionValueImage from '@assets/gioi-thieu/Mission-and-value.png';
+import TeamMemberExtraImages1 from '@assets/team-member/team-member-img-1.png';
+import TeamMemberExtraImages2 from '@assets/team-member/team-member-img-2.png';
+import VideoComponent from '@components/content-ui/VideoComponent';
 
 const SixWordIcons = [];
 for (let i = 0; i < 6; i++) {
@@ -28,9 +29,6 @@ for (let i = 0; i < 6; i++) {
         title: `six-word-icon-${i}`
     });
 }
-
-import FutureGoalImage1 from "@/assets/gioi-thieu/future-goal-1.png";
-import FutureGoalImage2 from "@/assets/gioi-thieu/future-goal-2.png";
 
 export default function GioiThieu() {
 
@@ -61,7 +59,7 @@ export default function GioiThieu() {
       <div className="flex flex-col max-w-7xl w-full items-center justify-center m-auto h-auto mt-8">
 
           {/* About TPG Section */}
-          <div className="flex flex-col w-full items-start justify-center m-auto h-auto mt-24 ">
+          <div className="flex flex-col w-full items-start justify-center m-auto h-auto mt-24 p-2">
               <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
                   {aboutTPGLocale.title}
               </h1>
@@ -82,7 +80,7 @@ export default function GioiThieu() {
           {/* About TPG Section END */}
 
           {/* History Video TPG Section */}
-          <div className="flex flex-col w-full items-start justify-center m-auto h-auto mt-12">
+          <div className="flex flex-col w-full items-start justify-center m-auto h-auto mt-12 p-2">
               <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
                   {locale === "vi" ? "Lịch sử phát triển TOANPHAT GROUP" : "Company Milestones and Achievement"}
               </h1>
@@ -96,7 +94,7 @@ export default function GioiThieu() {
           {/* History Video TPG Section END */}
 
           {/* Thong Diep TPG Section */}
-          <div className="flex flex-col w-full items-start justify-center m-auto h-auto mt-12">
+          <div className="flex flex-col w-full items-start justify-center m-auto h-auto mt-12 p-2">
               <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
                   {thongDiepTPGLocale.title}
               </h1>
@@ -107,8 +105,8 @@ export default function GioiThieu() {
           {/* Thong Diep TPG Section END */}
 
           {/* Core Value TPG Section */}
-          <div className="flex flex-row w-full items-start justify-center m-auto h-auto mt-12">
-              <div className="w-2/5 pr-6">
+          <div className="flex flex-col lg:flex-row w-full items-start justify-center m-auto h-auto mt-12 p-2">
+              <div className=" w-full lg:w-2/5 pr-6">
                   <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-4">
                       {coreValueTPGLocale.title1}
                   </h1>
@@ -132,7 +130,7 @@ export default function GioiThieu() {
                       {coreValueTPGLocale.desc}
                   </p>
               </div>
-              <div className="w-3/5 items-start justify-center">
+              <div className="w-full lg:w-3/5 items-start justify-center">
                   <Image
                       src={MissionValueImage}
                       alt="Message Image"
@@ -152,7 +150,7 @@ export default function GioiThieu() {
               <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
                   {sixWordTPGLocale.title}
               </h1>
-              <div className="grid grid-flow-row-dense grid-cols-1 grid-rows-6 sm:grid-cols-3 sm:grid-rows-2  gap-4 w-full mt-6">
+              <div className="grid grid-flow-row-dense grid-cols-1 grid-rows-6 sm:grid-cols-3 sm:grid-rows-2 gap-4 w-full mt-4">
                   {sixWordTPGLocale.sub.map((item, index) => (
                       <NumberTitleDescWithLink icon={SixWordIcons[index].icon} number={index+1} title={item.title} desc={item.desc} key={index} />
                   ))}
@@ -161,7 +159,7 @@ export default function GioiThieu() {
           {/* Six Word TPG Section END */}
 
           {/* Future Goal TPG Section */}
-          <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
+          <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12 p-2">
               <div className="flex flex-row w-full items-center justify-center">
                   <Image
                       src={FutureGoalImage1}
@@ -187,8 +185,8 @@ export default function GioiThieu() {
               <h1 className="text-5xl font-bold text-left text-green-800 animate-fadeInSlideIn mt-6">
                   {futureGoalTPGLocale.mainTitle}
               </h1>
-              <div className="flex flex-row w-full items-start justify-center m-auto h-auto mt-6">
-                  <div className="flex flex-col flex-1 p-4">
+              <div className="flex flex-col lg:flex-row w-full items-start justify-center m-auto h-auto mt-6">
+                  <div className="flex flex-col flex-1 mt-4">
                       <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
                           {futureGoalTPGLocale.title1}
                       </h1>
@@ -196,7 +194,7 @@ export default function GioiThieu() {
                           {futureGoalTPGLocale.desc1}
                       </p>
                   </div>
-                  <div className="flex flex-col flex-1 p-4">
+                  <div className="flex flex-col flex-1 mt-4">
                       <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
                           {futureGoalTPGLocale.title2}
                       </h1>
@@ -204,7 +202,7 @@ export default function GioiThieu() {
                           {futureGoalTPGLocale.desc2}
                       </p>
                   </div>
-                  <div className="flex flex-col flex-1 p-4">
+                  <div className="flex flex-col flex-1 mt-4">
                       <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
                           {futureGoalTPGLocale.title3}
                       </h1>
@@ -218,8 +216,8 @@ export default function GioiThieu() {
 
           {/* Team Member TPG Section */}
           <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
-              <div className="flex flex-row w-full">
-                  <div className="flex flex-col w-1/2 items-start justify-center bg-violet-950 ">
+              <div className="flex flex-col lg:flex-row w-full">
+                  <div className="flex flex-col lg:w-1/2 items-start justify-center bg-violet-950 ">
                       <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn p-8">
                           {teamMemberTPGLocale.titleMain}
                       </h1>
@@ -227,7 +225,7 @@ export default function GioiThieu() {
                           {teamMemberTPGLocale.desc}
                       </p>
                   </div>
-                  <div className="flex flex-row w-1/2 items-center justify-center m-auto h-auto">
+                  <div className="flex flex-row lg:w-1/2 items-center justify-center h-auto">
                       <Image
                           src={TeamMemberImage}
                           alt="Message Image"
@@ -235,12 +233,10 @@ export default function GioiThieu() {
                           style={{
                               maxWidth: "100%",
                               height: "auto",
-                              maxWidth: "100%",
-                              height: "auto"
                           }} />
                   </div>
               </div>
-              <div className="flex flex-row w-full items-center justify-center mt-8 h-auto">
+              <div className="flex flex-row hidden lg:visible w-full items-center justify-center mt-8 p-2 h-auto">
                   <Image
                       src={TeamMemberExtraImages1}
                       alt="Message Image"
@@ -266,14 +262,14 @@ export default function GioiThieu() {
           {/* Team Member TPG Section END */}
 
           {/* Corp Culture TPG Section */}
-          <div id="corp-culture" className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
+          <div id="corp-culture" className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12 p-2">
               <h1 className="text-5xl font-bold text-left text-green-800 animate-fadeInSlideIn">
                   {corpCultureTPGLocale.mainTitle}
               </h1>
               <p className="text-xl leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
                   {corpCultureTPGLocale.mainDesc}
               </p>
-              <div className="flex flex-row">
+              <div className="flex flex-col lg:flex-row">
                   <div className="flex flex-1 p-4">
                       <h1 className="text-4xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-6">
                           {corpCultureTPGLocale.title1}
