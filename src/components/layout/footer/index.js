@@ -36,7 +36,7 @@ export default function Footer() {
                         src={ToanPhatLogo}
                         width={250}
                         height={100}
-                        responsive={true}
+                        responsive="true"
                         className='p-1 lg:p-4 w-1/3 lg:w-1/5'
                         />
                         <div className="w-1/3">

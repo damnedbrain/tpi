@@ -1,22 +1,25 @@
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
-import Image from "next/image";
-import Head from "next/head";
-import Link from "next/link";
+import {
+  useEffect,
+  useState,
+} from 'react';
 
-import { getEntries } from "@/components/contentful/ContentfulService";
-import SlickSlider from "@/components/layout/slick-slider-carousel";
-import FeaturedEntries from "@/components/content-ui/FeaturedEntries";
-import HighlightFeaturedEntries from "@/components/content-ui/HighlightFeaturedEntries";
-import NewsEntries from "@/components/content-ui/NewsEntries";
-import BlogEntries from "@/components/content-ui/BlogEntries";
-import PromotionEntries from "@/components/content-ui/PromotionEntries";
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-import TopBanner from '@assets/thi-truong-banner/top.jpg';
+import { formatDate } from '@/components/api/FormatDateTime';
+import BlogEntries from '@/components/content-ui/BlogEntries';
+import FeaturedEntries from '@/components/content-ui/FeaturedEntries';
+import HighlightFeaturedEntries
+  from '@/components/content-ui/HighlightFeaturedEntries';
+import NewsEntries from '@/components/content-ui/NewsEntries';
+import PromotionEntries from '@/components/content-ui/PromotionEntries';
+import { getEntries } from '@/components/contentful/ContentfulService';
+import SlickSlider from '@/components/layout/slick-slider-carousel';
+import { videoList } from '@/constants/video-list';
 import BottomBanner from '@assets/thi-truong-banner/bottom.jpg';
-
-import { videoList } from "@/constants/video-list";
-import { formatDate } from "@/components/api/FormatDateTime";
+import TopBanner from '@assets/thi-truong-banner/top.jpg';
 
 function shortenEntries (entries) {
     return entries.map((item, index) => {
@@ -96,7 +99,7 @@ export default function ThiTruong() {
         {/* {console.log(newsEntries, blogEntries, promotionEntries, heroEntries, featuredEntries)} */}
         <SlickSlider entries={heroEntries} />
         <FeaturedEntries newsEntries={newsEntries} blogEntries={blogEntries} promotionEntries={promotionEntries} />
-        <div className="w-full bg-slate-200 mt-8 p-4">
+        <div className="hidden lg:visible w-full bg-slate-200 mt-8 p-4">
             <HighlightFeaturedEntries entries={featuredEntries} />
         </div>
         <div className="flex flex-row max-w-7xl h-auto m-auto">
@@ -105,8 +108,8 @@ export default function ThiTruong() {
                 <BlogEntries entries={blogEntries} />
                 <PromotionEntries entries={promotionEntries} />
             </div>
-            <div className="flex flex-col w-1/5 mt-28">
-                <div className="round-xl mb-40 p-3">
+            <div className="flex flex-col w-1/5 mt-28 px-1 lg:p-3">
+                <div className="round-xl mb-4 lg:mb-40 lg:p-3">
                     <Image
                         className="round-xl"
                         src={TopBanner}
@@ -116,7 +119,7 @@ export default function ThiTruong() {
                             // height: "auto"
                         }} />
                 </div>
-                <div className="round-xl mb-40 p-3">
+                <div className="round-xl mb-40 lg:p-3">
                     <Image
                         className="round-xl"
                         src={BottomBanner}
@@ -131,10 +134,10 @@ export default function ThiTruong() {
         <div className="flex flex-col max-w-7xl h-auto m-auto mt-16">
             <div>
                 <h1 className="text-5xl text-bold p-4 text-green-800">Video</h1>
-                <div className="bg-slate-100 w-full h-1 ml-4 mr-4"></div>
+                <div className="bg-slate-100 w-full h-1 px-4"></div>
             </div>
-            <div className="flex flex-row w-full h-auto p-2">
-                    <div className="w-1/3 p-3">
+            <div className="flex flex-col lg:flex-row w-full h-auto p-2">
+                    <div className="w-full lg:w-1/3 p-3">
                         <div className="mt-8">
                             <h1 className="text-2xl text-bold text-left p-1">{videoList[0].title}</h1>
                             <div>
@@ -160,7 +163,7 @@ export default function ThiTruong() {
                                 allowfullscreen />
                         </div>
                     </div>
-                    <div className="w-2/3 mt-8 p-3 h-full">
+                    <div className=" w-full lg:w-2/3 mt-8 p-3 h-full">
                         <Link href={`https://www.youtube.com/embed/${videoList[4].ytbid}`}>
                             <h1 className="text-2xl text-bold text-left p-1">{videoList[4].title}</h1>
                         </Link>
