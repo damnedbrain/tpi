@@ -1,10 +1,11 @@
-import LinesEllipsis from "react-lines-ellipsis";
-import Link from "next/link";
-import { formatDate } from "@/components/api/FormatDateTime";
-import { ResolveLabelForContentType } from "@/components/api/ResolveLabelForContentType";
-import { capitalizeFirstLetter } from "@/components/api/UpperCaseFirstLatter";
-import Image from "next/image";
-import { useRouter } from "next/router";
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+
+import { formatDate } from '@/components/api/FormatDateTime';
+import {
+  ResolveLabelForContentType,
+} from '@/components/api/ResolveLabelForContentType';
 
 export default function EntryPreview({ entry }) {
     const router = useRouter();
@@ -15,7 +16,7 @@ export default function EntryPreview({ entry }) {
             <div className="flex flex-col w-full justify-between items-center">
                 <div>
                     <Image
-                        className="rounded-md w-full h-auto object-fill object-center"
+                        className="rounded-md w-full lg:h-auto h-12 object-fill object-center"
                         src={`https:${entry.thumbImage}`}
                         alt={entry.title}
                         width={entry.thumbImageWidth}
