@@ -1,6 +1,6 @@
-import EntryPreview from '@components/content-ui/EntryPreview';
 import { useRouter } from 'next/router';
-import ReactPaginate from 'react-paginate';
+
+import EntryPreview from '@components/content-ui/EntryPreview';
 
 export default function EntriesWithPagination({ entries, pageNo }) {
     const router = useRouter();
@@ -8,7 +8,7 @@ export default function EntriesWithPagination({ entries, pageNo }) {
     return (
     <>
         
-        <div className="grid grid-cols-3 grid-rows-3 gap-2 w-full h-auto mt-2">
+        <div className="flex flex-col lg:grid lg:grid-cols-3 lg:grid-rows-3 lg:gap-2 w-full h-auto mt-2">
             {entries && entries[0] && (
                 entries.map((entry, index) => (
                     <div key={index} className='col-span-1 row-span-1'>                        

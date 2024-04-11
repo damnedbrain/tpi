@@ -23,26 +23,26 @@ export default function ContactBar() {
                 <div className="bg-slate-900 hover:bg-slate-200 p-4 mr-2 mb-1 rounded-full size-14 items-center justify-center text-center hover:cursor-pointer">
                     <a 
                         href='http://m.me/116671641370296'>
-                        <FontAwesomeIcon icon={faFacebookMessenger} className='hover:text-green-700 text-white self-center' size='md' />
+                        <FontAwesomeIcon icon={faFacebookMessenger} className='hover:text-green-700 text-white self-center' size='sm' />
                     </a>
                 </div>
                 <div className="bg-slate-900 hover:bg-slate-200 p-4 mr-2 mb-1 rounded-full size-14 items-center justify-center text-center hover:cursor-pointer">
                     <a 
                         href='tel:093 100 0001'>
-                        <FontAwesomeIcon icon={faPhone} className='hover:text-green-700 text-white self-center' size='md' />
+                        <FontAwesomeIcon icon={faPhone} className='hover:text-green-700 text-white self-center' size='sm' />
                     </a>
                 </div>
                 <div className="bg-slate-900 hover:bg-slate-200 p-4 mr-2 mb-1 rounded-full size-14 items-center justify-center text-center hover:cursor-pointer">
                     <a 
                         href='http://zalo.me/0931000001'>
-                        <FontAwesomeIcon icon={faZ} className='hover:text-green-700 text-white self-center' size='md' />
+                        <FontAwesomeIcon icon={faZ} className='hover:text-green-700 text-white self-center' size='sm' />
                     </a>
                 </div>
             </div>
             <div className="bg-green-800 hover:bg-slate-900 p-4 rounded-full size-16 items-center justify-center text-center hover:cursor-pointer">
                 <a 
                     onClick={handleOpen}>
-                    <FontAwesomeIcon icon={faArrowUpFromBracket} className='text-white self-center' size='md' />
+                    <FontAwesomeIcon icon={faArrowUpFromBracket} className='text-white self-center' size='sm' />
                 </a>
             </div>
         </div>
