@@ -1,15 +1,23 @@
-import React, { useContext } from "react";
-import { useRouter } from "next/router";
-import { createClient } from "contentful";
-import Image from "next/image";
-import Head from "next/head";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
-import { ResolveLabelForContentType } from "@/components/api/ResolveLabelForContentType";
-import { formatDate } from "@/components/api/FormatDateTime";
+import React, { useContext } from 'react';
 
-import HighlightEntriesContext from "@/components/api/HighlightEntriesContext";
-import EntryPreview from "@/components/content-ui/EntryPreview";
+import { createClient } from 'contentful';
+import Head from 'next/head';
+import Image from 'next/image';
+
+import { formatDate } from '@/components/api/FormatDateTime';
+import HighlightEntriesContext from '@/components/api/HighlightEntriesContext';
+import {
+  ResolveLabelForContentType,
+} from '@/components/api/ResolveLabelForContentType';
+import EntryPreview from '@/components/content-ui/EntryPreview';
+import {
+  documentToReactComponents,
+} from '@contentful/rich-text-react-renderer';
+import {
+  BLOCKS,
+  INLINES,
+  MARKS,
+} from '@contentful/rich-text-types';
 
 export async function getStaticPaths({ }) {
     const client = createClient({
@@ -149,17 +157,17 @@ export default function EntryDetail( { entry, locale }) {
             {/* {console.log(highlightEntries)} */}
             <div className="flex font-inter flex-row w-full bg-white items-center justify-center">
                 <div className="flex flex-row rounded-xl bg-gray-50 m-auto mt-16 max-w-7xl h-auto items-start justify-center p-4">
-                    <div className="w-3/4">
-                        <h1 className="text-4xl text-left font-bold mt-8 ml-8">
+                    <div className="w-full lg:w-3/4">
+                        <h1 className="text-4xl text-left font-bold mt-8 lg:ml-8">
                             {entry.fields.title}
                         </h1>
                         {/* {console.log(entry)} */}
-                        <div className="flex flex-col ml-8 mt-8 text-green-800 text-semiBold text-left text-2xl">
+                        <div className="flex flex-col lg:ml-8 mt-8 text-green-800 text-semiBold text-left text-2xl">
                             <div className="p-2 bg-green-800 font-bold text-white w-max rounded-md ">{ResolveLabelForContentType({type: entry.fields.type, locale})}</div>
                             <div className="italic">{formatDate(entry.sys.createdAt)}</div>
                         </div>
                         <Image
-                            className="mt-8 ml-8"
+                            className="mt-8 lg:ml-8"
                             src={`https:${entry.fields.image.fields.file.url}`}
                             width={entry.fields.image.fields.file.details.image.width}
                             height={entry.fields.image.fields.file.details.image.height}
@@ -172,7 +180,7 @@ export default function EntryDetail( { entry, locale }) {
                             {documentToReactComponents(entry.fields.desc, renderOptions)}
                         </div>
                     </div>
-                    <div className="round-xl w-1/4 flex flex-col items-start justify-start mb-40 p-3">
+                    <div className="hidden lg:flex round-xl w-1/4 lg:flex-col items-start justify-start mb-40 p-3">
                         <h1 className="font-semibold text-2xl font-sans">
                             {locale === "en-US" ? "Hot news" : "Tin Nổi Bật"}
                         </h1>
