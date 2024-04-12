@@ -86,7 +86,7 @@ export default function ChieuXa() {
                                 {foodIrradiationSystemLocale.subDesc[0].desc}
                                 </p>
                                 <h1 className="font-bold text-xl text-center mt-8 text-green-800">
-                                    {foodIrradiationSystemLocale.subDesc[0].title}
+                                    {foodIrradiationSystemLocale.subDesc[0].midTitle}
                                 </h1>
                                 <div className="grid grid-cols-2 grid-rows-2 gap-12 p-4 mt-8">
                                     {foodIrradiationSystemLocale.subDesc[0].desc2.map((item, index) => (
@@ -104,7 +104,7 @@ export default function ChieuXa() {
                                 {foodIrradiationSystemLocale.subDesc[1].desc}
                                 </p>
                                 <h1 className="font-bold text-xl text-center mt-8 text-green-800">
-                                    {foodIrradiationSystemLocale.subDesc[1].title}
+                                    {foodIrradiationSystemLocale.subDesc[1].midTitle}
                                 </h1>
                                 <div className="grid grid-cols-2 grid-rows-2 gap-12 p-4 mt-8">
                                     {foodIrradiationSystemLocale.subDesc[1].desc2.map((item, index) => (
@@ -122,7 +122,7 @@ export default function ChieuXa() {
                                 {foodIrradiationSystemLocale.subDesc[2].desc}
                                 </p>
                                 <h1 className="font-bold text-xl text-center mt-8 text-green-800">
-                                    {foodIrradiationSystemLocale.subDesc[2].title}
+                                    {foodIrradiationSystemLocale.subDesc[2].midTitle}
                                 </h1>
                                 <div className="grid grid-cols-2 grid-rows-2 gap-12 p-4 mt-8">
                                     {foodIrradiationSystemLocale.subDesc[2].desc2.map((item, index) => (

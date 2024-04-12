@@ -181,7 +181,7 @@ export default function EntryDetail( { entry, locale }) {
                             {documentToReactComponents(entry.fields.desc, renderOptions)}
                         </div>
                     </div>
-                    <div className="hidden lg:flex round-xl w-1/4 lg:flex-col items-start justify-start mb-40 p-3">
+                    <div className="hidden lg:flex rounded-xl w-1/4 lg:flex-col items-start justify-start mb-40 p-3">
                         <h1 className="font-semibold text-2xl font-sans">
                             {locale === "en-US" ? "Hot news" : "Tin Nổi Bật"}
                         </h1>

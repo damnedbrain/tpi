@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import { contactInfo } from '@/constants/language-option';
@@ -74,8 +75,12 @@ export default function Contact() {
                                 </p>
                             </div>
                             <div className="flex flex-row w-full items-start justify-center pr-11 pl-0">                                
-                                <FontAwesomeIcon icon={faFacebook} size="3x" color="gray" className="p-2"/>
-                                <FontAwesomeIcon icon={faYoutube} size="3x" color="gray" className="p-2"/>
+                                <Link href={item.link1}>
+                                    <FontAwesomeIcon icon={faFacebook} size="3x" color="gray" className="p-2"/>
+                                </Link>
+                                <Link href={item.link2}>
+                                    <FontAwesomeIcon icon={faYoutube} size="3x" color="gray" className="p-2"/>
+                                </Link>
                             </div>
                         </div>
                     ))}

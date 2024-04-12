@@ -109,40 +109,45 @@ export default function ThiTruong() {
                 <PromotionEntries entries={promotionEntries} />
             </div>
             <div className="flex flex-col w-1/5 mt-28 px-1 lg:p-3">
-                <div className="round-xl mb-4 lg:mb-40 lg:p-3">
-                    <Image
-                        className="round-xl"
-                        src={TopBanner}
-                        alt="Top Banner"
-                        style={{
-                            maxWidth: "100%",
-                            // height: "auto"
-                        }} />
+                <div className="rounded-xl mb-4 lg:mb-40 lg:p-3">
+                    <Link href="/kho-lanh-cong-nghiep" className='cursor-pointer'>
+                        <Image
+                            className="rounded-xl"
+                            src={TopBanner}
+                            alt="Top Banner"
+                            style={{
+                                maxWidth: "100%",
+                                // height: "auto"
+                            }} />
+                    </Link>
                 </div>
-                <div className="round-xl mb-40 lg:p-3">
-                    <Image
-                        className="round-xl"
-                        src={BottomBanner}
-                        alt="Bottom Banner"
-                        style={{
-                            maxWidth: "100%",
-                            // height: "auto"
-                        }} />
+                <div className="rounded-xl mb-40 lg:p-3">
+                    <Link href="chieu-xa" className='cursor-pointer'>
+                        <Image
+                            className="rounded-xl"
+                            src={BottomBanner}
+                            alt="Bottom Banner"
+                            style={{
+                                maxWidth: "100%",
+                                // height: "auto"
+                            }} />
+                    </Link>
                 </div>
             </div>
         </div>
         <div className="flex flex-col max-w-7xl h-auto m-auto mt-16">
             <div>
-                <h1 className="text-5xl text-bold p-4 text-green-800">Video</h1>
+                <h1 className="text-5xl text-bold p-4 text-black">Media</h1>
                 <div className="bg-slate-100 w-full h-1 px-4"></div>
             </div>
             <div className="flex flex-col lg:flex-row w-full h-auto p-2">
                     <div className="w-full lg:w-1/3 p-3">
                         <div className="mt-8">
-                            <h1 className="text-2xl text-bold text-left p-1">{videoList[0].title}</h1>
                             <div>
                                 <p>{formatDate(videoList[0].date)}</p>
                             </div>
+                            <h1 className="text-green-800 text-2xl text-bold text-left p-1">{videoList[0].title}</h1>
+                            
                             <iframe
                                 className="w-full"
                                 src={`https://www.youtube.com/embed/${videoList[0].ytbid}`}
@@ -151,10 +156,11 @@ export default function ThiTruong() {
                                 allowfullscreen />
                         </div>
                         <div className="mt-8">
-                            <h1 className="text-2xl text-bold text-left p-1">{videoList[1].title}</h1>
                             <div>
                                 <p>{formatDate(videoList[1].date)}</p>
                             </div>
+                            <h1 className="text-green-800 text-2xl text-bold text-left p-1">{videoList[1].title}</h1>
+                            
                             <iframe
                                 className="w-full h-auto"
                                 src={`https://www.youtube.com/embed/${videoList[1].ytbid}`}
@@ -164,12 +170,13 @@ export default function ThiTruong() {
                         </div>
                     </div>
                     <div className=" w-full lg:w-2/3 mt-8 p-3 h-full">
-                        <Link href={`https://www.youtube.com/embed/${videoList[4].ytbid}`}>
-                            <h1 className="text-2xl text-bold text-left p-1">{videoList[4].title}</h1>
-                        </Link>
                         <div>
                             <p>{formatDate(videoList[4].date)}</p>
                         </div>
+                        <Link href={`https://www.youtube.com/embed/${videoList[4].ytbid}`}>
+                            <h1 className="text-green-800 text-2xl text-bold text-left p-1">{videoList[4].title}</h1>
+                        </Link>
+                        
                         <iframe
                             className="w-full h-96"
                             src={`https://www.youtube.com/embed/${videoList[4].ytbid}`}

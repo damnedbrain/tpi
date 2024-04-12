@@ -1612,7 +1612,7 @@ Các nhà máy vận hành công nghệ chiếu xạ phải tuân theo quy trìn
   {
     number: 11,
     title: 'Thời gian hoạt động của Nhà máy Chiếu xạ Toàn Phát và Kho Lạnh Toàn Phát như thế nào?',
-    desc: 'Nhà máy Chiếu xạ Toàn Phát và Kho Lạnh Toàn Phát hoạt động 24/7 kể cả các ngày Lễ Tết, Quý Khách hàng có nhu cầu tư vấn, đăng ký sử dụng dịch vụ chiếu xạ và lưu trữ kho lạnh vui lòng liên hệ Hotline 093 100 0001 hoặc 092 191 6999.',
+    desc: 'Nhà máy Chiếu xạ Toàn Phát và Kho Lạnh Toàn Phát hoạt động 24/7 kể cả các ngày Lễ Tết, Quý Khách hàng có nhu cầu tư vấn, đăng ký sử dụng dịch vụ chiếu xạ và lưu trữ kho lạnh vui lòng liên hệ Hotline 093 100 0001.',
   },
     ],
   },
@@ -1680,7 +1680,7 @@ Inhibition of germination and ripening: irradiation can be used to inhibit germi
   {
     number: 11,
     title: 'What Is the operating time of Toan Phat Irradiation Factory and Toan Phat Refrigerated Warehouse?',
-    desc: 'The Toan Phat Irradiation Factory and Toan Phat Refrigerated Warehouse operate continuously 24/7 including holidays or new year period. For further assistance with consultation or registration of irradiation and refrigerated warehouse service, please contact us via Hotline 093 100 0001 or 092 191 6999.',
+    desc: 'The Toan Phat Irradiation Factory and Toan Phat Refrigerated Warehouse operate continuously 24/7 including holidays or new year period. For further assistance with consultation or registration of irradiation and refrigerated warehouse service, please contact us via Hotline 093 100 0001.',
   },
     ],
   },

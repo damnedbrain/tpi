@@ -1,10 +1,9 @@
-import { useRouter } from "next/router";
+import Head from 'next/head';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
 
-import { questionContent } from "@/constants/language-option";
-import Image from "next/image";
-import Head from "next/head";
-
-import QAImage from "@assets/question-and-answer/Q&A.png";
+import { questionContent } from '@/constants/language-option';
+import QAImage from '@assets/question-and-answer/Q&A.png';
 
 export default function QuestionAndAnswer() {
 
@@ -21,7 +20,7 @@ export default function QuestionAndAnswer() {
             <Image
                 src={QAImage}
                 alt="Q&A"
-                className="w-full m-6 p-6 rounded-full"
+                className="w-full m-6 p-6 rounded-xl"
                 style={{
                     maxWidth: "100%",
                     height: "auto",

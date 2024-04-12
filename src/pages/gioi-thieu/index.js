@@ -236,7 +236,7 @@ export default function GioiThieu() {
                           }} />
                   </div>
               </div>
-              <div className="flex flex-row hidden lg:visible w-full items-center justify-center mt-8 p-2 h-auto">
+              <div className="flex-row hidden lg:flex w-full items-center justify-center mt-8 p-2 h-auto">
                   <Image
                       src={TeamMemberExtraImages1}
                       alt="Message Image"
@@ -271,29 +271,29 @@ export default function GioiThieu() {
               </p>
               <div className="flex flex-col lg:flex-row">
                   <div className="flex flex-1 p-4">
-                      <h1 className="text-4xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-6">
+                      <h1 className="text-3xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-6">
                           {corpCultureTPGLocale.title1}
                       </h1>
-                      <h1 className="text-8xl font-bold text-center text-gray-200 animate-fadeIn m-4">1</h1>
-                      <p className="text-xl leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
+                      <h1 className="text-6xl font-bold text-center text-gray-200 animate-fadeIn m-4">1</h1>
+                      <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
                           {corpCultureTPGLocale.desc1}
                       </p>
                   </div>
                   <div className="flex flex-1 p-4">
-                      <h1 className="text-4xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-6">
+                      <h1 className="text-3xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-6">
                           {corpCultureTPGLocale.title2}
                       </h1>
-                      <h1 className="text-8xl font-bold text-center text-gray-200 animate-fadeIn m-4">2</h1>
-                      <p className="text-xl leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
+                      <h1 className="text-6xl font-bold text-center text-gray-200 animate-fadeIn m-4">2</h1>
+                      <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
                           {corpCultureTPGLocale.desc2}
                       </p>
                   </div>
                   <div className="flex flex-1 p-4">
-                      <h1 className="text-4xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-6">
+                      <h1 className="text-3xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-6">
                           {corpCultureTPGLocale.title3}
                       </h1>
-                      <h1 className="text-8xl font-bold text-center text-gray-200 animate-fadeIn m-4">3</h1>
-                      <p className="text-xl leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
+                      <h1 className="text-6xl font-bold text-center text-gray-200 animate-fadeIn m-4">3</h1>
+                      <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
                           {corpCultureTPGLocale.desc3}
                       </p>
                   </div>

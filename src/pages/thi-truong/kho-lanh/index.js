@@ -5,6 +5,7 @@ import React, {
 
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import EntriesWithPagination
@@ -107,26 +108,30 @@ export default function ThiTruongPage() {
                     </div>
                 </div>                
                 <div className="flex flex-col w-1/5 mt-36">
-                    <div className="round-xl mb-1 p-3">
+                    <div className="rounded-xl mb-4 lg:mb-40 lg:p-3">
+                    <Link href="/kho-lanh-cong-nghiep" className='cursor-pointer'>
                         <Image
-                            className="round-xl"
+                            className="rounded-xl"
                             src={TopBanner}
                             alt="Top Banner"
                             style={{
                                 maxWidth: "100%",
                                 // height: "auto"
                             }} />
-                    </div>
-                    <div className="round-xl mb-1 p-3">
+                    </Link>
+                </div>
+                <div className="rounded-xl mb-40 lg:p-3">
+                    <Link href="chieu-xa" className='cursor-pointer'>
                         <Image
-                            className="round-xl"
+                            className="rounded-xl"
                             src={BottomBanner}
                             alt="Bottom Banner"
                             style={{
                                 maxWidth: "100%",
                                 // height: "auto"
                             }} />
-                    </div>
+                    </Link>
+                </div>
                 </div>
             </div>
 
