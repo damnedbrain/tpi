@@ -1,42 +1,29 @@
-const EXTERNAL_DATA_URL = 'https://jsonplaceholder.typicode.com/posts';
+import fetch from 'isomorphic-unfetch';
 
-function generateSiteMap(posts) {
+// This function generates the XML for the sitemap
+function generateSitemap(posts) {
   return `<?xml version="1.0" encoding="UTF-8"?>
-   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-     <!--We manually set the two URLs we know already-->
-     <url>
-       <loc>https://jsonplaceholder.typicode.com</loc>
-     </url>
-     <url>
-       <loc>https://jsonplaceholder.typicode.com/guide</loc>
-     </url>
-     ${posts
-       .map(({ id }) => {
-         return `
-       <url>
-           <loc>${`${EXTERNAL_DATA_URL}/${id}`}</loc>
-       </url>
-     `;
-       })
-       .join('')}
-   </urlset>
- `;
-}
-
-function SiteMap() {
-  // getServerSideProps will do the heavy lifting
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      ${posts.map(post => `
+        <url>
+          <loc>${post.url}</loc>
+          <lastmod>${post.lastmod}</lastmod>
+        </url>
+      `).join('')}
+    </urlset>
+  `;
 }
 
 export async function getServerSideProps({ res }) {
-  // We make an API call to gather the URLs for our site
-  const request = await fetch(EXTERNAL_DATA_URL);
+  // Fetch the data for your sitemap (e.g., the URLs of your site's pages)
+  const request = await fetch('https://tpg-website-git-newproduction-pagerout-f774d1-it-tpirrvn-s-team.vercel.app/');
   const posts = await request.json();
 
-  // We generate the XML sitemap with the posts data
-  const sitemap = generateSiteMap(posts);
+  // Generate the sitemap XML
+  const sitemap = generateSitemap(posts);
 
+  // Set the content type to 'text/xml' and send the sitemap XML to the browser
   res.setHeader('Content-Type', 'text/xml');
-  // we send the XML to the browser
   res.write(sitemap);
   res.end();
 
@@ -45,4 +32,7 @@ export async function getServerSideProps({ res }) {
   };
 }
 
-export default SiteMap;
+export default function Sitemap() {
+  // This component doesn't render anything
+  return null;
+}
