@@ -10,33 +10,34 @@ import {
 export default function EntryPreview({ entry }) {
     const router = useRouter();
     const locale = router.locale;
-    return <> 
-        {/* {console.log(entry)} */}
-        <div className="flex flex-col w-full h-full bg-white rounded-md shadow-md border-2 border-slate-300">
-            <div className="flex flex-col w-full justify-between items-center">
-                <div>
-                    <Image
-                        className="rounded-md w-full lg:h-auto h-12 object-fill object-center"
-                        src={`https:${entry.thumbImage}`}
-                        alt={entry.title}
-                        width={entry.thumbImageWidth}
-                        height={entry.thumbImageHeight}
-                        style={{
-                            maxWidth: "100%",
-                            height: "auto"
-                        }} />
-                </div>
-                <div className="flex flex-row p-2 w-full">
+    return (
+        <div className="relative flex flex-col w-full h-28 overflow-hidden lg:h-full bg-white rounded-md shadow-xs border border-slate-300 my-2">
+            <Image
+                className="absolute inset-0 z-0 object-cover w-full h-full lg:hidden"
+                src={`https:${entry.thumbImage}`}
+                alt={entry.title}
+                layout="fill"
+                objectFit="cover"
+            />
+            <Image
+                className="hidden lg:block"
+                src={`https:${entry.thumbImage}`}
+                alt={entry.title}
+                width={500}
+                height={300}
+                objectFit="cover"
+            />
+            <div className="relative z-10 flex flex-col w-full justify-between items-center bg-white bg-opacity-80 rounded-b-lg">
+                <div className="relative flex flex-row p-2 w-full">
                     <div className="text-sm text-semiBold text-left w-1/2 text-gray-500">
                         {formatDate(entry.postTime)}
                     </div>
                     <div className="text-sm text-semiBold text-right w-1/2 text-gray-500 ml-4">
                         {ResolveLabelForContentType({type: entry.type, locale})}
-                        
                     </div>
                 </div>
-                <div className="flex flex-row p-2">
-                    <div className="text-xl text-bold">
+                <div className="relative flex flex-row p-2">
+                    <div className="text-sm lg:text-xl text-bold">
                         <Link
                             href={`/thi-truong/${entry.slug}`}
                             className="text-green-800 hover:text-green-800"
@@ -45,10 +46,7 @@ export default function EntryPreview({ entry }) {
                         </Link>
                     </div>
                 </div>
-                
-                <div className="flex flex-row">
-                </div>
             </div>
         </div>
-    </>;
+    );
 }

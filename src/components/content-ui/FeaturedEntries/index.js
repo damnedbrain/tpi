@@ -31,18 +31,18 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
         });
         setAllEntries(allEntries);
         setCurrentNewsType(allEntries);
-    } , [newsEntries, blogEntries, promotionEntries, allEntries, currentTypeEntries]);
+    } , [newsEntries, blogEntries, promotionEntries]);
 
     
     return (
-        <div className="flex flex-col font-inter md:flex-row lg:max-w-7xl h-auto m-auto mt-8 items-start justify-start">
+        <div className="flex flex-col font-inter lg:flex-row lg:max-w-7xl h-auto m-auto mt-8 items-start justify-start">
             <div className="flex flex-col w-full lg:w-3/4">
                 <div className="relative flex flex-row w-full justify-end items-end">
                     <div className="text-2xl lg:text-5xl font-bold whitespace-nowrap">
                         {locale === "en-US" ? "News" : "Tin tức"}
                     </div>
-                    <div className="hidden lg:visible bg-green-700 w-1/3 h-1 mb-5 ml-4 mr-4"></div>
-                    <div className="hidden lg:visible lg:flex flex-row w-full">
+                    <div className="hidden lg:block bg-green-700 w-1/3 h-1 mb-5 ml-4 mr-4"></div>
+                    <div className="hidden lg:flex lg:flex-row w-full">
                         <button
                             onClick={(event) => {
                                 event.preventDefault();
@@ -81,9 +81,10 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                         </button>
                     </div>
                 </div>
-                <div className='hidden lg:visible'> {/** hidden on mobile */}
+                <div className='hidden lg:block'> {/** hidden on mobile */}
                     {currentTypeEntries && currentTypeEntries[0] && (
                     <div className="flex w-full h-96">
+                        
                         <div className="relative w-1/2 h-full m-2 rounded-xl bg-black overflow-hidden">
                             <Image
                                 className="absolute inset-0 object-cover w-full h-full opacity-50"
@@ -145,7 +146,7 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                         </div>
                     </div>)}
                 </div>
-                <div className='lg:hidden'> {/** hidden on desktop */}
+                <div className='block lg:hidden'> {/** hidden on desktop */}
                     {allEntries && allEntries.slice(0,5).map((entry, index) => (
                         <div key={index} className="flex flex-col w-full p-2">
                             <div className="relative w-full h-28 rounded-xl">

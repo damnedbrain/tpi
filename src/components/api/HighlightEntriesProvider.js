@@ -1,6 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import HighlightEntriesContext from '@/components/api/HighlightEntriesContext'
+import React, {
+  useEffect,
+  useState,
+} from 'react';
+
 import { useRouter } from 'next/router';
+
+import HighlightEntriesContext from '@/components/api/HighlightEntriesContext';
 import { getEntries } from '@components/contentful/ContentfulService';
 
 function shortenEntries (entries) {
@@ -39,7 +44,7 @@ export default function HighlightEntriesProvider({ children }) {
             setHighlightEntries(shortenEntries(highlightEntries.items));
         })
        
-    }, []);
+    }, [highlightEntries]);
 
     return (
         <HighlightEntriesContext.Provider value={{ highlightEntries }}>

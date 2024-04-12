@@ -13,7 +13,7 @@ export default function BlogEntries({ entries }) {
             </h1>
             <div className="bg-slate-200 w-1/3 h-1 ml-4 mr-4"></div>
         </div>
-        <div className="flex flex-col p-2 lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:gap-2 w-full h-auto mt-2">
+        <div className="flex flex-col p-2 lg:grid lg:grid-cols-3 lg:grid-rows-1 lg:gap-2 w-full h-auto mt-2">
             {entries && entries[0] && (
                 entries.slice(0, 3).map((entry, index) => (
                     <div key={index} className='col-span-1 row-span-1'>                        
