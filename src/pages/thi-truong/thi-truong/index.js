@@ -1,17 +1,18 @@
-import React, {useState, useEffect} from 'react';
-import { useRouter } from 'next/router';
-import ReactPaginate from 'react-paginate';
-import { getEntries } from '@/components/contentful/ContentfulService';
-import EntryPreview from '@/components/content-ui/EntryPreview';
-import EntriesWithPagination from '@/components/content-ui/EntriesPreviewWithPagination';
+import React, {
+  useEffect,
+  useState,
+} from 'react';
 
-import Image from 'next/image';
 import Head from 'next/head';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
 
-import TopBanner from '@assets/thi-truong-banner/top.jpg';
-import BottomBanner from '@assets/thi-truong-banner/bottom.jpg';
+import EntriesWithPagination
+  from '@/components/content-ui/EntriesPreviewWithPagination';
 import Pagination from '@/components/content-ui/Pagination';
-
+import { getEntries } from '@/components/contentful/ContentfulService';
+import BottomBanner from '@assets/thi-truong-banner/bottom.jpg';
+import TopBanner from '@assets/thi-truong-banner/top.jpg';
 
 function shortenEntries (entries) {
     return entries.map((item, index) => {
@@ -93,7 +94,7 @@ export default function ThiTruongPage() {
             </title>
             </Head>
             
-                <div className="flex flex-row max-w-7xl h-auto m-auto">
+                <div className="flex flex-row max-w-7xl h-auto m-auto px-1">
                 <div className='flex flex-col w-4/5 items-center justify-center mt-8'>
                     <h1 className="text-4xl font-extrabold col-span-3 row-span-1 mt-4 mb-2">
                         {locale === "en-US" ? "News" : "Thị trường"}
