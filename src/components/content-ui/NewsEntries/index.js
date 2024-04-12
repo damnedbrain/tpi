@@ -17,7 +17,7 @@ export default function NewsEntries({ entries }) {
             {entries && entries[0] && (
                 entries.slice(0, 6).map((entry, index) => (
                     <div key={index} className='col-span-1 row-span-1'>                        
-                        <EntryPreview entry={entry} />                        
+                        <EntryPreview entry={entry} ellipsis="true" />                        
                     </div>
                 ))    
             )}
