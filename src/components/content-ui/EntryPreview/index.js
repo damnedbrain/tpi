@@ -52,7 +52,7 @@ export default function EntryPreview({ entry, ellipsis = false}) {
                                 ellipsis="..."
                                 trimRight
                                 basedOn="letters"
-                                className='text-sm italic text-gray-500 mt-2 w-full'
+                                className='hidden lg:block text-sm italic text-gray-500 mt-2 w-full'
                             />
                         )}
                     </div>
