@@ -20,13 +20,13 @@ export default function Footer() {
             <div className="max-w-7xl m-auto">
                 <div className="relative flex items-start lg:items-center justify-center h-auto p-1">
                     <div className="w-1/3">
-                        <h1 className="relative flex items-center justify-center h-auto text-white whitespace-pre-line text-xs text-center text lg:text-2xl font-bold">
+                        <h1 className="relative flex items-center justify-center h-auto text-white whitespace-pre-line text-xxs text-center lg:text-2xl font-bold">
                             {footerInfoLocale.title1}
                         </h1>
-                        <h1 className="relative flex items-center justify-center h-auto text-white whitespace-pre-line text-xs text-center text lg:text-lg">
+                        <h1 className="relative flex items-center justify-center h-auto text-white whitespace-pre-line text-xxs text-center lg:text-lg">
                             {`Hotline 24/7: ${footerInfoLocale.hotlineCX}`}
                         </h1>
-                        <h1 className="relative flex items-center justify-center h-auto text-white whitespace-pre-line text-xs text-center text lg:text-lg">
+                        <h1 className="relative flex items-center justify-center h-auto text-white whitespace-pre-line text-xxs text-center lg:text-lg">
                             Email : thongtin@tpirr.vn - tiepnhan@tpirr.vn
                         </h1>                        
                     </div>
@@ -39,13 +39,13 @@ export default function Footer() {
                         className='p-1 lg:p-4 w-1/3 lg:w-1/5'
                         />
                         <div className="w-1/3">
-                        <h1 className="relative flex items-center justify-center h-auto text-white whitespace-pre-line text-xs text-center text lg:text-2xl font-bold">
+                        <h1 className="relative flex items-center justify-center h-auto text-white whitespace-pre-line text-xxs text-center text lg:text-2xl font-bold">
                             {footerInfoLocale.title2}
                         </h1>
-                        <h1 className="relative flex items-center justify-center h-auto text-white whitespace-pre-line text-xs text-center text lg:text-lg">
+                        <h1 className="relative flex items-center justify-center h-auto text-white whitespace-pre-line text-xxs text-center text lg:text-lg">
                             {`Hotline 24/7: ${footerInfoLocale.hotlineKL}`}
                         </h1>
-                        <h1 className="relative flex items-center justify-center h-auto text-white whitespace-pre-line text-xs text-center text lg:text-lg">
+                        <h1 className="relative flex items-center justify-center h-auto text-white whitespace-pre-line text-xxs text-center text lg:text-lg">
                             Email : thongtin@tpirr.vn - tiepnhan@tpirr.vn
                         </h1>                        
                     </div>
