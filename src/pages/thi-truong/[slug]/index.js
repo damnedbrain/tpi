@@ -157,15 +157,16 @@ export default function EntryDetail( { entry, locale }) {
             {/* {console.log(highlightEntries)} */}
             <div className="flex font-inter flex-row w-full bg-white items-center justify-center">
                 <div className="flex flex-row rounded-xl bg-gray-50 m-auto mt-16 max-w-7xl h-auto items-start justify-center p-4">
-                    <div className="w-full lg:w-3/4">
+                    <div className="w-full lg:w-3/4 p-4">
+                        <div className="flex flex-col lg:flex-row items-end lg:justify-between lg:ml-8 mt-8 text-green-800 text-semiBold text-left text-2xl">
+                            <div className="p-2 bg-green-800 font-bold text-white w-max rounded-md ">{ResolveLabelForContentType({type: entry.fields.type, locale})}</div>
+                            <div className="italic lg:font-semibold">{formatDate(entry.sys.createdAt)}</div>
+                        </div>
                         <h1 className="text-4xl text-left font-bold mt-8 lg:ml-8">
                             {entry.fields.title}
                         </h1>
                         {/* {console.log(entry)} */}
-                        <div className="flex flex-col lg:ml-8 mt-8 text-green-800 text-semiBold text-left text-2xl">
-                            <div className="p-2 bg-green-800 font-bold text-white w-max rounded-md ">{ResolveLabelForContentType({type: entry.fields.type, locale})}</div>
-                            <div className="italic">{formatDate(entry.sys.createdAt)}</div>
-                        </div>
+                        
                         <Image
                             className="mt-8 lg:ml-8"
                             src={`https:${entry.fields.image.fields.file.url}`}
@@ -187,7 +188,7 @@ export default function EntryDetail( { entry, locale }) {
                         <div className="flex flex-col w-full">
                             {highlightEntries.map((item, index) => {
                                 return (
-                                    <div className="p-4">
+                                    <div className="px-4">
                                         <EntryPreview entry={item} />
                                     </div>
                                 )

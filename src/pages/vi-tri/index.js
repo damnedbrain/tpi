@@ -36,8 +36,8 @@ export default function ViTri() {
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
                 {LocationMapContentLocale.sub.map((item, index) => (
                     <div key={index} className="flex flex-col lg:flex-row">
-                        <h1 className="text-8xl font-semiBold text-center text-gray-400 p-2">{index + 1}</h1>
-                        <p className="text-2xl text-left mt-2 p-2">
+                        <h1 className="text-8xl font-semiBold text-center text-gray-200 p-2">{index + 1}</h1>
+                        <p className="text-xl text-gray-600 text-left mt-2 p-2">
                             {item.desc}
                         </p>
                     </div>

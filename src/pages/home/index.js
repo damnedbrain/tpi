@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import LinesEllipsis from 'react-lines-ellipsis';
 
+import { formatDate } from '@/components/api/FormatDateTime';
 import Gallery from '@/components/content-ui/Gallery';
 import NumberTitleDescWithLink
   from '@/components/content-ui/NumberTitleDescWithLink';
@@ -204,8 +205,10 @@ export default function Home() {
           return {
             url: item.fields.image.fields.file.url,
             alt: item.fields.title,
+            slug: item.fields.slug,
             width: item.fields.image.fields.file.details.image.width,
-            height: item.fields.image.fields.file.details.image.height
+            height: item.fields.image.fields.file.details.image.height,
+            date: item.sys.createdAt,
           };
         }
     }).filter(Boolean);
@@ -219,7 +222,8 @@ export default function Home() {
             width: item.fields.image.fields.file.details.image.width,
             height: item.fields.image.fields.file.details.image.height,
             desc: item.fields.desc,
-            title: item.fields.title
+            title: item.fields.title,
+            date: item.sys.createdAt,
           };
         }
       }).filter(Boolean);
@@ -276,23 +280,26 @@ export default function Home() {
         <div className="flex flex-col md:flex-col justify-center items-center max-w-7xl h-auto m-auto mt-12">
             <div className="animate-fadeInSlideIn w-full md:w-1/3">
                 <h2 className="text-3xl text-center font-bold text-green-800">
-                    {locale === "en-US" ? "Latest News" : "Thị trường"}
+                    {locale === "en-US" ? "Latest News" : "Tin tức"}
                 </h2>
             </div>
             {/* {console.log(latestEntries)} */}
             <div className="flex flex-col justify-center items-center w-full p-4">
                 {highlighEntries.map((item, index) => (
-                    <div key={index} className="flex flex-col md:flex-row animate-fadeInSlideIn w-full mt-4">
-                        <div className="flex flex-col md:w-1/2">
-                            <h1 className="text-bold text-green-800 font-semiBold text-2xl">
+                    <div key={index} className="flex flex-col lg:items-end md:flex-row animate-fadeInSlideIn w-full mt-4">
+                        <div className="flex flex-col lg:w-1/3 p-4">
+                            <h1 className="text-bold text-green-800 font-semiBold text-3xl mb-8">
                                 <Link href={`/thi-truong/${item.slug}`}>{item.title}</Link>
                             </h1>
-                            <div className="text-1xl">
+                            <h1 className='font-bold mb-4'>
+                                {formatDate(item.date)}
+                            </h1>
+                            <div className="text-xl italic mb-8">
                                 {item.desc.content[0].content[0].value}                                        
                             </div>
-                            <i className="text-green-800 text-1xl">
+                            <i className="text-green-800 text-xl mb-16">
                                 <Link href={`/thi-truong/${item.slug}`}>
-                                    {locale === "en-US" ? "Read more" : "Xem thêm"}
+                                    {locale === "en-US" ? "Read more >>>" : "Xem thêm >>>"}
                                 </Link>
                             </i>
                         </div>
@@ -301,7 +308,7 @@ export default function Home() {
                             alt={item.alt}
                             width={item.width}
                             height={item.height}
-                            className="md:w-1/2"
+                            className="lg:w-2/3 p-2"
                             style={{
                                 maxWidth: "100%",
                                 height: "auto",
@@ -314,9 +321,9 @@ export default function Home() {
             </div>
             {/*End Big High Light Entries Section*/}
             {/*Latest Entries Section*/}
-            <div className="flex flex-col md:flex-row justify-center items-start w-full mt-4 p-4">
+            <div className="flex flex-col md:flex-row justify-center items-start w-full mt-4 p-1">
                 {latestEntries.map((item, index) => (
-                    <div key={index} className="flex flex-col w-full animate-fadeIn mb-6">
+                    <div key={index} className="flex flex-col w-full animate-fadeIn mb-6 p-2">
                         <div className="flex flex-col items-start justify-start w-full mt-0 flex-grow">
                             <Image
                                 src={`https:${item.fields.thumbImage.fields.file.url}`}
@@ -347,9 +354,9 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="flex flex-col items-start justify-start w-full mt-0 flex-grow">
-                            <i className="text-green-800 text-1xl">
+                            <i className="text-green-800 text-1xl mt-2">
                                 <Link href={`/thi-truong/${item.fields.slug}`}>
-                                    {locale === "en-US" ? "Read more" : "Xem thêm"}
+                                    {locale === "en-US" ? "Read more >>>" : "Xem thêm >>>"}
                                 </Link>
                             </i>
                         </div>
@@ -415,12 +422,12 @@ export default function Home() {
                     <div className="text-left text-base text-white m-4 animate-fadeIn">
                         {companyCultureLocale.subDesc.map((item, index) => (
                             <div key={index} className="m-4">
-                                {item.desc}
+                                &bull; {item.desc}
                             </div>
                         ))}
                     </div>
-                    <Link href="/gioi-thieu#corp-culture" className="m-4 text-gray-200 italic font-semibold">
-                        {locale === "en-US" ? "Read more" : "Xem thêm"}
+                    <Link href="/gioi-thieu#corp-culture" className="m-4 text-white italic bg-slate-900 px-4 py-2 rounded-md">
+                        {locale === "en-US" ? "Read more >>>" : "Chi tiết >>>"}
                     </Link>
                 </div>
             </div>    

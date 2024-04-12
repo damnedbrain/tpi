@@ -99,7 +99,7 @@ export default function ThiTruong() {
         {/* {console.log(newsEntries, blogEntries, promotionEntries, heroEntries, featuredEntries)} */}
         <SlickSlider entries={heroEntries} />
         <FeaturedEntries newsEntries={newsEntries} blogEntries={blogEntries} promotionEntries={promotionEntries} />
-        <div className="hidden lg:visible w-full bg-slate-200 mt-8 p-4">
+        <div className="hidden lg:block w-full bg-slate-200 mt-8 p-4">
             <HighlightFeaturedEntries entries={featuredEntries} />
         </div>
         <div className="flex flex-row max-w-7xl h-auto m-auto">

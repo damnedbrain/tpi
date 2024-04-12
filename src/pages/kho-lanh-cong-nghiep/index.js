@@ -1,7 +1,14 @@
+import {
+  useEffect,
+  useState,
+} from 'react';
+
 import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
+import { getEntries } from '@/components/contentful/ContentfulService';
+import SlickSlider from '@/components/layout/slick-slider-carousel';
 import { coldStorageTopContent } from '@/constants/language-option';
 import cold1 from '@assets/cold-storage/cold-1.png';
 import cold2 from '@assets/cold-storage/cold-2.png';
@@ -21,6 +28,56 @@ export default function KhoLanhCongNghiep() {
         kholanh1, kholanh2, kholanh3, kholanh4, kholanh5
     ]
 
+    const [entries, setEntries] = useState([]);
+    const [latestEntries, setLatestEntries] = useState([]);
+
+    useEffect(() => {
+        async function getPageEntries() {
+            const entries = await getEntries(
+                "toanPhatMarketNews", 
+                locale, 
+                { 
+                    order: "-sys.createdAt",
+                    limit: 10,
+                    "fields.homePage": "true"
+                });
+
+            setEntries(entries.items);
+        }
+        getPageEntries();
+    }, []);
+
+    useEffect(() => {
+        async function getLatestEntries() {
+            const LatestEntries = await getEntries(
+                "toanPhatMarketNews", 
+                locale, 
+                { 
+                    order: "-sys.createdAt",
+                    limit: 5,
+                    "fields.hightLight": "false",
+                    "fields.promo": "false",
+                    
+                });
+
+            setLatestEntries(LatestEntries.items);
+        }
+        getLatestEntries();
+    }, []);
+
+    let heroEntries = entries.map((item, index) => {
+        if (item.fields.promo) {
+          return {
+            url: item.fields.image.fields.file.url,
+            alt: item.fields.title,
+            slug: item.fields.slug,
+            width: item.fields.image.fields.file.details.image.width,
+            height: item.fields.image.fields.file.details.image.height,
+            date: item.sys.createdAt,
+          };
+        }
+    }).filter(Boolean);
+
     return (
         <>
         <Head>
@@ -31,7 +88,8 @@ export default function KhoLanhCongNghiep() {
                                                                  "toanphatgroup, toanphat group, toàn phát group, Dịch vụ cho thuê kho lạnh, Cho thuê kho đông lạnh, Kho lạnh Long An, Kho lạnh Bến Lức, Kho đông lạnh, Cho thuê kho lạnh tại tphcm, Cho thuê kho kcn Phú An Thạnh, Cho thuê kho kcn long hậu, Bảng giá kho lạnh, Giá thuê kho lạnh, Cho thuê kho, Kho lạnh bảo quản nông sản, Kho lạnh bảo quản trái cây"} />
         </Head>
         <div className="flex flex-col md:flex-col justify-center items-center max-w-7xl h-auto m-auto">
-            <Image src={cold1} alt="cold-storage" className="w-full h-auto" />
+            {console.log(heroEntries)}
+            <SlickSlider className='relative w-full' entries={heroEntries}/>
             <div className="flex flex-row mt-8">
                 <h1 className="text-bold text-gray-400 text-6xl p-4">2</h1>
                 <h1 className="text-bold text-green-800 text-6xl p-4">
@@ -64,6 +122,7 @@ export default function KhoLanhCongNghiep() {
                 ))}
 
             </div>
+            <Image src={cold1} alt="cold-storage" className="w-full h-auto" />
             <div className="flex flex-row w-full mt-8">
                 <Image src={cold2} alt="cold-storage" className="w-1/3 h-auto p-2" />
                 <Image src={cold3} alt="cold-storage" className="w-1/3 h-auto p-2" />

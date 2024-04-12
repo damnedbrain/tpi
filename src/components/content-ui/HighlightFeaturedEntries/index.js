@@ -1,20 +1,26 @@
-import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
-import Image from "next/image";
-import Link from "next/link";
-import LinesEllipsis from "react-lines-ellipsis";
-import { formatDate } from "@/components/api/FormatDateTime";
-import { capitalizeFirstLetter } from "@/components/api/UpperCaseFirstLatter";
-import { ResolveLabelForContentType } from "@/components/api/ResolveLabelForContentType";
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+
+import { formatDate } from '@/components/api/FormatDateTime';
+import {
+  ResolveLabelForContentType,
+} from '@/components/api/ResolveLabelForContentType';
+import { capitalizeFirstLetter } from '@/components/api/UpperCaseFirstLatter';
 
 export default function HighlightFeaturedEntries({ entries }) {
     const router = useRouter();
     const locale = router.locale;
     return <>
-        <div className="flex flex-col font-inter md:flex-row max-w-7xl h-auto m-auto p-4 bg-slate-200 items-start justify-start">
+        <div className="flex flex-col font-inter max-w-7xl h-auto m-auto p-4 bg-slate-200 items-start justify-start">
+            <h1 className='text-3xl font-bold p-4'>
+              {locale === "en-US" ? "Featured" : "Nổi bật"}
+            </h1>
+            <div className="bg-green-700 w-1/3 h-1 ml-4 mr-4"></div>
             {entries && entries[0] && (
                     <div className="flex w-full h-96">
                     <div className="relative w-1/2 h-full m-2 rounded-xl bg-black overflow-hidden">
+                      
                       <Image
                           className="absolute inset-0 object-cover w-full h-full opacity-50"
                           src={`https:${entries[0].thumbImage}`}
@@ -56,7 +62,7 @@ export default function HighlightFeaturedEntries({ entries }) {
                                     }} />
                             </div>
                             <div className="relative w-1/2">
-                                <div className="absolute bottom-0 left-0 p-1 text-green">
+                                <div className="absolute bottom-0 left-0 px-3 text-green">
                                 <div className="flex items-end justify-between p-1">
                                     <h1 className=" text-sm font-bold">
                                     {formatDate(entry.postTime)}

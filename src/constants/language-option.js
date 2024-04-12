@@ -1,26 +1,23 @@
+import BS_ChieuXaIcon from '@assets/best-services/chieu-xa.png';
+import BS_LuuTruIcon from '@assets/best-services/luu-tru.png';
+import BS_VanChuyenIcon from '@assets/best-services/van-chuyen.png';
+import cobaltIMG from '@assets/chieu-xa/Cobalt-60.jpg';
+import ebeamIMG from '@assets/chieu-xa/ebeam.jpg';
+import xrayIMG from '@assets/chieu-xa/X-Ray.png';
+import addressIcon from '@assets/icons/address.png';
+import facebookButton from '@assets/icons/facebook-button.png';
+import hotlineIcon from '@assets/icons/hotline.png';
+import mailIcon from '@assets/icons/mail.png';
+import phoneIcon from '@assets/icons/phone.png';
+import taxIcon from '@assets/icons/tax.png';
+import youtubeButton from '@assets/icons/youtube-button.png';
+
 import { RoutePages } from './router';
 
-import facebookButton from '@assets/icons/facebook-button.png';
-import youtubeButton from '@assets/icons/youtube-button.png';
 const item1_link1 = ' https://www.facebook.com/chieuxatoanphat';
 const item1_link2 = ' https://www.youtube.com/channel/UCJoEaA2uVz0YXs2iWCanQOA';
 const item2_link1 = ' https://www.facebook.com/kholanhtoanphat';
 const item2_link2 = ' https://www.youtube.com/channel/UCJoEaA2uVz0YXs2iWCanQOA';
-
-import BS_ChieuXaIcon from '@assets/best-services/chieu-xa.png';
-import BS_LuuTruIcon from '@assets/best-services/luu-tru.png';
-import BS_VanChuyenIcon from '@assets/best-services/van-chuyen.png';
-
-import addressIcon from '@assets/icons/address.png';
-import hotlineIcon from '@assets/icons/hotline.png';
-import phoneIcon from '@assets/icons/phone.png';
-import mailIcon from '@assets/icons/mail.png';
-import taxIcon from '@assets/icons/tax.png';
-
-import cobaltIMG from '@assets/chieu-xa/Cobalt-60.jpg';
-import ebeamIMG from '@assets/chieu-xa/ebeam.jpg';
-import xrayIMG from '@assets/chieu-xa/X-Ray.png';
-import { Asset } from 'next/font/google';
 
 export const headerMenu = [
   {
@@ -1950,7 +1947,7 @@ export const contactBarLabel = [
 export const  topTagslabel =  [
   {
     locale: 'vi',
-    mainLabel: "Chuyên Mục",
+    mainLabel: "Chuyên mục",
     topTags: [
       "Nông Sản",
       "Thủy Sản",

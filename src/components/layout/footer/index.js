@@ -6,7 +6,6 @@ import { footerInfo } from '@/constants/language-option';
 import ToanPhatLogo from '@assets/TPI-brand/ToanPhat-Icon-white.svg';
 import {
   faFacebook,
-  faFacebookMessenger,
   faLinkedin,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
@@ -58,11 +57,11 @@ export default function Footer() {
                     <Link href="https://www.youtube.com/channel/UCJoEaA2uVz0YXs2iWCanQOA" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faYoutube} size="1x" color="white" />
                     </Link>
-                    <Link href="https://www.facebook.com/kholanhtoanphat" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faFacebookMessenger} size="1x" color="white" />
-                    </Link>
                     <Link href="https://www.linkedin.com/company/toanphat-group/" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faLinkedin} size="1x" color="white" />
+                    </Link>
+                    <Link href="https://www.facebook.com/kholanhtoanphat" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faFacebook} size="1x" color="white" />
                     </Link>
                 </div>
                 <h1 className="relative flex text-center items-center justify-center h-auto text-gray-500 pt-4 pb-4 border-t-gray-500 border-t">

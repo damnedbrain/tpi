@@ -56,21 +56,21 @@ export default function ChieuXa() {
 
                     {/*METHOD IRRADIATION*/}
                     <div className="bg-white shadow-md rounded my-6">
-                        <div className="flex items-start">
+                        <div className="flex items-end">
                             <button
-                                className={`p-4 w-1/3 py-4 ${currentTab === 'tab1' ? 'bg-green-800 text-white' : 'text-slate-800'}`}
+                                className={`rounded-t-xl p-4  w-1/3 py-4 ${currentTab === 'tab1' ? 'bg-slate-900 text-white border-t-2 border-l-2 border-r-2 border-slate-900' : 'text-slate-800'}`}
                                 onClick={() => setCurrentTab('tab1')}
                             >
                                 {foodIrradiationSystemLocale.subDesc[0].title}
                             </button>
                             <button
-                                className={`p-4 w-1/3 py-4 ${currentTab === 'tab2' ? 'bg-green-800 text-white' : 'text-slate-800'}`}
+                                className={`rounded-t-xl p-4 w-1/3 py-4 ${currentTab === 'tab2' ? 'bg-slate-900 text-white border-t-2 border-l-2 border-r-2 border-slate-900' : 'text-slate-800'}`}
                                 onClick={() => setCurrentTab('tab2')}
                             >
                                 {foodIrradiationSystemLocale.subDesc[1].title}
                             </button>
                             <button
-                                className={`p-4 w-1/3 py-4 ${currentTab === 'tab3' ? 'bg-green-800 text-white' : 'text-slate-800'}`}
+                                className={`rounded-t-xl p-4 w-1/3 py-4 ${currentTab === 'tab3' ? 'bg-slate-900 text-white border-t-2 border-l-2 border-r-2 border-slate-900' : 'text-slate-800'}`}
                                 onClick={() => setCurrentTab('tab3')}
                             >
                                 {foodIrradiationSystemLocale.subDesc[2].title}
@@ -78,14 +78,14 @@ export default function ChieuXa() {
                         </div>
                         <div className="flex flex-row items-center justify-center">
                             {currentTab === 'tab1' && (
-                            <div className="p-4 items-center justify-center">
+                            <div className="p-4 items-center justify-center border-t-2 border-slate-900">
                                 <div className="flex flex-col items-center justify-center p-4">
                                     <Image src={foodIrradiationSystemLocale.subDesc[0].imgSrc} alt="food-irradiation" width={500} height={500} className="justify-self-center" />
                                 </div>
                                 <p className="text-gray-600 text-base">
                                 {foodIrradiationSystemLocale.subDesc[0].desc}
                                 </p>
-                                <h1 className="font-bold text-xl mt-8 text-green-800">
+                                <h1 className="font-bold text-xl text-center mt-8 text-green-800">
                                     {foodIrradiationSystemLocale.subDesc[0].title}
                                 </h1>
                                 <div className="grid grid-cols-2 grid-rows-2 gap-12 p-4 mt-8">
@@ -96,14 +96,14 @@ export default function ChieuXa() {
                             </div>
                             )}
                             {currentTab === 'tab2' && (
-                            <div className="p-4 items-center">
+                            <div className="p-4 items-center border-t-2 border-slate-900">
                                 <div className="flex flex-col items-center justify-center p-4">
                                     <Image src={foodIrradiationSystemLocale.subDesc[1].imgSrc} alt="food-irradiation" width={500} height={500} className="justify-self-center" />
                                 </div>
                                 <p className="text-gray-600">
                                 {foodIrradiationSystemLocale.subDesc[1].desc}
                                 </p>
-                                <h1 className="font-bold text-xl mt-8 text-green-800">
+                                <h1 className="font-bold text-xl text-center mt-8 text-green-800">
                                     {foodIrradiationSystemLocale.subDesc[1].title}
                                 </h1>
                                 <div className="grid grid-cols-2 grid-rows-2 gap-12 p-4 mt-8">
@@ -114,14 +114,14 @@ export default function ChieuXa() {
                             </div>
                             )}
                             {currentTab === 'tab3' && (
-                            <div className="p-4 items-center">
+                            <div className="p-4 items-center border-t-2 border-slate-900">
                                 <div className="flex flex-col items-center justify-center p-4">
                                     <Image src={foodIrradiationSystemLocale.subDesc[2].imgSrc} alt="food-irradiation" width={500} height={500} className="justify-self-center" />
                                 </div>
                                 <p className="text-gray-600">
                                 {foodIrradiationSystemLocale.subDesc[2].desc}
                                 </p>
-                                <h1 className="font-bold text-xl mt-8 text-green-800">
+                                <h1 className="font-bold text-xl text-center mt-8 text-green-800">
                                     {foodIrradiationSystemLocale.subDesc[2].title}
                                 </h1>
                                 <div className="grid grid-cols-2 grid-rows-2 gap-12 p-4 mt-8">
@@ -137,7 +137,7 @@ export default function ChieuXa() {
 
                     {/*PRODUCT OF IRRADIATION*/}
                     <div className="flex flex-col w-full items-center justify-center mt-12">
-                        <h1 className="text-4xl font-extrabold col-span-3 row-span-1 mt-4 mb-2">
+                        <h1 className="text-4xl text-green-800 font-extrabold col-span-3 row-span-1 mt-4 mb-2">
                             {productOfIrradiationLocale.title}
                         </h1>
                         <div className="bg-slate-200 w-1/3 h-1 ml-4 mr-4"></div>

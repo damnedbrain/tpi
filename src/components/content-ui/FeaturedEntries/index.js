@@ -127,7 +127,7 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                                         }} />
                                 </div>
                                 <div className="relative w-1/2">
-                                    <div className="absolute bottom-0 left-0 p-1 text-green">
+                                    <div className="absolute bottom-0 left-0 px-3 text-green">
                                     <div className="flex items-end justify-between p-1">
                                         <h1 className=" text-sm font-semibold">
                                         {formatDate(entry.postTime)}
@@ -182,7 +182,7 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                 </div>
             </div>
 
-            <div className="flex flex-col w-full lg:w-1/4 justify-center items-center">
+            <div className="flex flex-col w-full lg:w-1/5 justify-center items-end lg:ml-12">
                 <a
                     className="font-semibold font-sans text-xl lg:text-3xl w-full m-1 p-3 rounded-md -skew-x-12 bg-slate-50 text-green-800 items-center justify-center text-right"
                 >
