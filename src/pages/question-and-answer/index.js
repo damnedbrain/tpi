@@ -2,6 +2,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
+import BreadCrump from '@/components/layout/breadcrump';
+
 import { questionContent } from '@/constants/language-option';
 import QAImage from '@assets/question-and-answer/Q&A.png';
 
@@ -16,7 +18,10 @@ export default function QuestionAndAnswer() {
                 {locale === "en-US" ? "TOANPHAT GROUP - Q&A" : "TOANPHAT GROUP- Hỏi đáp"}
             </title>
         </Head>
-        <div className="flex flex-col max-w-7xl w-full items-center justify-center m-auto h-auto mt-8">
+        <div className="flex flex-col max-w-7xl w-full items-center justify-center m-auto h-auto mt-4">
+            <div className='w-full left-0 items-start justify-start self-start italic px-4 py-2 bg-slate-100'>
+                <BreadCrump />
+            </div>
             <Image
                 src={QAImage}
                 alt="Q&A"
@@ -27,7 +32,7 @@ export default function QuestionAndAnswer() {
                     maxWidth: "100%",
                     height: "auto"
                 }} />
-            <h1 className="text-6xl font-bold w-full text-center mt-24 text-green-800">
+            <h1 className="text-6xl font-bold w-full text-center mt-6 text-green-800">
                 {questionContentLocale.title}
             </h1>
             <p className="text-xl w-full text-center mt-8 text-gray-600">

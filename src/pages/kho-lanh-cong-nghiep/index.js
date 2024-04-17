@@ -7,6 +7,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
+import BreadCrump from '@/components/layout/breadcrump';
+
 import { getEntries } from '@/components/contentful/ContentfulService';
 import SlickSlider from '@/components/layout/slick-slider-carousel';
 import { coldStorageTopContent } from '@/constants/language-option';
@@ -71,9 +73,11 @@ export default function KhoLanhCongNghiep() {
         </Head>
         <SlickSlider className='relative' entries={heroEntries}/>
         <div className="flex flex-col md:flex-col justify-center items-center max-w-7xl h-auto m-auto">
-            {console.log(heroEntries)}
+            <div className='w-full left-0 items-start justify-start self-start italic px-4 py-2 bg-slate-100 mt-10'>
+                <BreadCrump />
+            </div>
             
-            <div className="flex flex-row mt-8">
+            <div className="flex flex-row mt-4">
                 <h1 className="text-bold text-gray-400 text-6xl p-4">2</h1>
                 <h1 className="text-bold text-green-800 text-6xl p-4">
                     {coldStorageTopContentLocale.title}

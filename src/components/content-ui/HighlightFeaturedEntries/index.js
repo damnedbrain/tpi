@@ -32,7 +32,7 @@ export default function HighlightFeaturedEntries({ entries }) {
                               // height: "auto"
                           }} />
                       <div className="absolute bottom-0 left-0 z-10 p-2 text-white">
-                        <div className="flex items-end justify-between p-2">
+                        <div className="flex items-end justify-between py-2">
                           <h1 className="font-bold font">
                             {formatDate(entries[0].postTime)}
                           </h1>
@@ -63,8 +63,8 @@ export default function HighlightFeaturedEntries({ entries }) {
                             </div>
                             <div className="relative w-1/2">
                                 <div className="absolute bottom-0 left-0 px-3 text-green">
-                                <div className="flex items-end justify-between p-1">
-                                    <h1 className=" text-sm font-bold">
+                                <div className="flex items-end justify-between py-1">
+                                    <h1 className="text-sm font-bold">
                                     {formatDate(entry.postTime)}
                                     </h1>
                                     <h1 className="font-bold text-sm text-white bg-green-700 p-2 rounded-md">

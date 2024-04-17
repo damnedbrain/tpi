@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
+import BreadCrump from '@/components/layout/breadcrump';
+
 import VideoComponent from '@/components/content-ui/VideoComponent';
 import { LocationMapContent } from '@/constants/language-option';
 
@@ -19,8 +21,11 @@ export default function ViTri() {
             <meta name="keywords" content={ locale === "en-US" ? "toanphatgroup, toanphat group, toàn phát group, Cold storage rental service, Frozen storage rental service, Cold storage in Long An, Cold storage in Ben Luc, Frozen storage, Cold storage rental service in HCMC, Cold warehouse for rent in Phu An Thanh industrial park, Long Hau industrial park warehouse for rent, Cold storage price list, Cold storage rental price, Cold warehouse for rent, Cold storage for preserving agricultural products, Cold storage for fruit preservation" :
                                                                  "toanphatgroup, toanphat group, toàn phát group, Dịch vụ cho thuê kho lạnh, Cho thuê kho đông lạnh, Kho lạnh Long An, Kho lạnh Bến Lức, Kho đông lạnh, Cho thuê kho lạnh tại tphcm, Cho thuê kho kcn Phú An Thạnh, Cho thuê kho kcn long hậu, Bảng giá kho lạnh, Giá thuê kho lạnh, Cho thuê kho, Kho lạnh bảo quản nông sản, Kho lạnh bảo quản trái cây"} />
         </Head>
-        <div className="flex flex-col max-w-7xl w-full items-center justify-center m-auto h-auto mt-8 p-2">
-            <h1 className="text-4xl font-bold w-full text-left mt-24 text-green-800">
+        <div className="flex flex-col max-w-7xl w-full items-center justify-center m-auto h-auto mt-4">
+            <div className='w-full left-0 items-start justify-start self-start italic px-4 py-2 bg-slate-100'>
+                <BreadCrump />
+            </div>
+            <h1 className="text-4xl font-bold w-full text-left mt-6 text-green-800">
                 {LocationMapContentLocale.title}
             </h1>
             <div className="w-full flex flex-col md:flex-row justify-between items-center mt-8">

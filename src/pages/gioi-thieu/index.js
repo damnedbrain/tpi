@@ -21,6 +21,7 @@ import MissionValueImage from '@assets/gioi-thieu/Mission-and-value.png';
 import TeamMemberExtraImages1 from '@assets/team-member/team-member-img-1.png';
 import TeamMemberExtraImages2 from '@assets/team-member/team-member-img-2.png';
 import VideoComponent from '@components/content-ui/VideoComponent';
+import BreadCrump from '@/components/layout/breadcrump';
 
 const SixWordIcons = [];
 for (let i = 0; i < 6; i++) {
@@ -56,14 +57,16 @@ export default function GioiThieu() {
                 {locale === "en-US" ? "TOANPHAT GROUP - About Us" : "TOANPHAT GROUP- Giới thiệu"}
             </title>
         </Head>
-      <div className="flex flex-col max-w-7xl w-full items-center justify-center m-auto h-auto mt-8">
-
+      <div className="flex flex-col max-w-7xl w-full items-center justify-center m-auto h-auto mt-4">
+        <div className='w-full left-0 items-start justify-start self-start italic px-4 py-2 bg-slate-100'>
+            <BreadCrump />
+        </div>
           {/* About TPG Section */}
-          <div className="flex flex-col w-full items-start justify-center m-auto h-auto mt-24 p-2">
+          <div className="flex flex-col w-full items-start justify-center m-auto h-auto mt-6 p-2">
               <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
                   {aboutTPGLocale.title}
               </h1>
-              <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-preline animate-fadeInSlideIn">
+              <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
                   {aboutTPGLocale.desc}
               </p>
               <Image

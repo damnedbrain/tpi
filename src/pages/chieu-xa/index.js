@@ -4,6 +4,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
+import BreadCrump from '@/components/layout/breadcrump';
+
 import product1 from '@/assets/chieu-xa/pro-1.png';
 import product10 from '@/assets/chieu-xa/pro-10.png';
 import product11 from '@/assets/chieu-xa/pro-11.png';
@@ -42,8 +44,11 @@ export default function ChieuXa() {
             <meta name="keywords" content={locale === "en-US" ? "Irradiation, What's Irradiation, Toan Phat Irradiation Co ltd, Irradiation companies in Vietnam, Toan Phat Irradiation, Preserved by irradiation, Irradiation center, Irradiation centers in Vietnam, Food irradiation machine, Irradiation fruits for exported, What is gamma ray irradiation?, Gamma ray irradiation, Fruit irradiation machine, Irradiation and sterilization center, What is the use of fruit irradiation, Seed irradiation, Irradiation is a preservation method, Seed irradiation to improve plant varieties, Advantages of irradiation preservation method, Irradiation in agriculture, Irradiation to kill microorganisms, Irradiation method in agriculture, What is ebeam irradiation?, Ebeam irradiation, What is x-ray irradiation, X-ray irradiation" :
                                                              " Chieu xa, Chiếu xạ là gì, Công ty TNHH Chiếu xạ Toàn Phát, Các công ty chiếu xạ ở Việt Nam, Các cơ sở chiếu xạ sản ở Việt Nam, Công ty chiếu xạ, Nhà máy chiếu xạ Toàn Phát, Bảo quản bằng chiếu xa, Trung tâm chiếu xạ, Các trung tâm chiếu xạ sản ở Việt Nam, Máy chiếu xạ thực phẩm, Chiếu xạ trái cây xuất khẩu, Chiếu xạ tia gamma là gì, Chiếu xạ tia gamma, Máy chiếu xạ trái cây, Trung tâm chiếu xạ khử trùng, Chiếu xạ trái cây để làm gì, Chiếu xạ hạt giống, Chiếu xạ là phương pháp bảo quản, Chiếu xạ hạt giống để cải tạo giống cây trồng, Ưu điểm phương pháp bảo quản bằng chiếu xạ, Chiếu xạ trong nông nghiệp, Chiếu xạ để diệt vi sinh vật, Phương pháp chiếu xạ trong nông nghiệp, chiếu xạ ebeam là gì, chiếu xạ ebeam, chiếu xạ tia x là gì, chiếu xạ tia x"} />
             </Head>
-            <div className="flex flex-col md:flex-col justify-center items-center max-w-7xl h-auto m-auto mt-8 p-2">
-                <div className="flex flex-col items-center justify-end mt-24">
+            <div className="flex flex-col md:flex-col justify-center items-center max-w-7xl h-auto m-auto mt-4 p-2">
+                <div className='w-full left-0 items-start justify-start self-start italic px-4 py-2 bg-slate-100'>
+                    <BreadCrump />
+                </div>
+                <div className="flex flex-col items-center justify-end mt-6">
                     <div className="flex flex-row ">
                         <h1 className="text-bold text-gray-400 text-6xl p-4">1</h1>
                         <h1 className="text-bold text-green-800 text-6xl p-4">

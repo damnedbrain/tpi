@@ -14,6 +14,8 @@ import {
 import { capitalizeFirstLetter } from '@/components/api/UpperCaseFirstLatter';
 import { topTagslabel } from '@/constants/language-option';
 
+import LinesEllipsis from 'react-lines-ellipsis';
+
 export default function FeaturedEntries({ newsEntries, blogEntries, promotionEntries }) {
 
     const router = useRouter();
@@ -83,15 +85,14 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                 </div>
                 <div className='hidden lg:block'> {/** hidden on mobile */}
                     {currentTypeEntries && currentTypeEntries[0] && (
-                    <div className="flex w-full h-96">
-                        
-                        <div className="relative w-1/2 h-full m-2 rounded-xl bg-black overflow-hidden">
+                    <div className="flex w-full h-96">                        
+                        <div className="relative w-1/2 h-full m-1 rounded-xl bg-black overflow-hidden">
                             <Image
                                 className="absolute inset-0 object-cover w-full h-full opacity-50"
                                 src={`https:${currentTypeEntries[0].thumbImage}`}
                                 alt={currentTypeEntries[0].thumbImageAlt}
                                 fill
-                                sizes="100vw"
+                                // sizes="100vw"
                                 style={{
                                     maxWidth: "100%",
                                 //   height: "auto"
@@ -105,14 +106,14 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                                 {capitalizeFirstLetter(ResolveLabelForContentType({ type: currentTypeEntries[0].type, locale }))}
                                 </h1>
                             </div>
-                            <h1 className="text-3xl font-sans font-bold">
+                            <h1 className="text-2xl font-sans font-bold">
                                 <Link href={`/thi-truong/${currentTypeEntries[0].slug}`}>{currentTypeEntries[0].title}</Link>
                             </h1>
                             </div>
                         </div>
                         <div className="flex flex-col w-1/2">
                             {currentTypeEntries.slice(1, 4).map((entry, index) => (
-                                <div key={index} className="flex h-1/3 w-full m-2">
+                                <div key={index} className="flex h-1/3 w-full m-2 mt-1">
                                 <div className="relative w-1/2 h-full rounded-xl">
                                     <Image
                                         key={index}
@@ -127,17 +128,26 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                                         }} />
                                 </div>
                                 <div className="relative w-1/2">
-                                    <div className="absolute bottom-0 left-0 px-3 text-green">
-                                    <div className="flex items-end justify-between p-1">
-                                        <h1 className=" text-sm font-semibold">
+                                    <div className="absolute left-0 px-2 text-green">
+                                    <div className="flex items-center justify-between">
+                                        <h1 className=" text-xs italic font-semibold">
                                         {formatDate(entry.postTime)}
                                         </h1>
-                                        <h1 className="font-semibold text-sm text-white bg-green-700 p-2 rounded-md">
+                                        <h1 className="font-semibold text-xs text-white bg-green-700 p-2 rounded-md">
                                         {capitalizeFirstLetter(ResolveLabelForContentType({ type: entry.type, locale }))}
                                         </h1>
                                     </div>
-                                    <h1 className="text-sm font-sans font-semibold text-green-800">
-                                        <Link href={`/thi-truong/${entry.slug}`}>{entry.title}</Link>
+                                    <h1 className="text-sm font-sans text-green-800">
+                                        <Link href={`/thi-truong/${entry.slug}`}>
+                                            <LinesEllipsis
+                                                text={entry.title}
+                                                maxLine="3"
+                                                ellipsis="..."
+                                                trimRight
+                                                basedOn="letters"
+                                                className='text-sm font-sans text-green-800'
+                                            />
+                                        </Link>
                                     </h1>
                                     </div>
                                 </div>
