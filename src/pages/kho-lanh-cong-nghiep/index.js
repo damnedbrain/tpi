@@ -47,24 +47,6 @@ export default function KhoLanhCongNghiep() {
         getPageEntries();
     }, []);
 
-    useEffect(() => {
-        async function getLatestEntries() {
-            const LatestEntries = await getEntries(
-                "toanPhatMarketNews", 
-                locale, 
-                { 
-                    order: "-sys.createdAt",
-                    limit: 5,
-                    "fields.hightLight": "false",
-                    "fields.promo": "false",
-                    
-                });
-
-            setLatestEntries(LatestEntries.items);
-        }
-        getLatestEntries();
-    }, []);
-
     let heroEntries = entries.map((item, index) => {
         if (item.fields.promo) {
           return {
@@ -87,9 +69,10 @@ export default function KhoLanhCongNghiep() {
             <meta name="keywords" content={ locale === "en-US" ? "toanphatgroup, toanphat group, toàn phát group, Cold storage rental service, Frozen storage rental service, Cold storage in Long An, Cold storage in Ben Luc, Frozen storage, Cold storage rental service in HCMC, Cold warehouse for rent in Phu An Thanh industrial park, Long Hau industrial park warehouse for rent, Cold storage price list, Cold storage rental price, Cold warehouse for rent, Cold storage for preserving agricultural products, Cold storage for fruit preservation" :
                                                                  "toanphatgroup, toanphat group, toàn phát group, Dịch vụ cho thuê kho lạnh, Cho thuê kho đông lạnh, Kho lạnh Long An, Kho lạnh Bến Lức, Kho đông lạnh, Cho thuê kho lạnh tại tphcm, Cho thuê kho kcn Phú An Thạnh, Cho thuê kho kcn long hậu, Bảng giá kho lạnh, Giá thuê kho lạnh, Cho thuê kho, Kho lạnh bảo quản nông sản, Kho lạnh bảo quản trái cây"} />
         </Head>
+        <SlickSlider className='relative' entries={heroEntries}/>
         <div className="flex flex-col md:flex-col justify-center items-center max-w-7xl h-auto m-auto">
             {console.log(heroEntries)}
-            <SlickSlider className='relative w-full' entries={heroEntries}/>
+            
             <div className="flex flex-row mt-8">
                 <h1 className="text-bold text-gray-400 text-6xl p-4">2</h1>
                 <h1 className="text-bold text-green-800 text-6xl p-4">
@@ -98,7 +81,7 @@ export default function KhoLanhCongNghiep() {
             </div>
             <div className="grid lg:flex lg:flex-row">
                 {kholanhIcons.map((icon, index) => (
-                    <div className="flex flex-col w-full p-4 items-center justify-start mt-8">
+                    <div key={index} className="flex flex-col w-full p-4 items-center justify-start mt-8">
                         <Image key={index} src={icon} alt="kholanh-icon" className="w-12 h-auto" />
                         <h1 className="text-xl text-center mt-4">
                             {coldStorageTopContentLocale.desc[index].descc}
