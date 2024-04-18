@@ -7,9 +7,9 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import BreadCrump from '@/components/layout/breadcrump';
 
-import EntriesWithPagination
-  from '@/components/content-ui/EntriesPreviewWithPagination';
+import EntriesWithPagination  from '@/components/content-ui/EntriesPreviewWithPagination';
 import Pagination from '@/components/content-ui/Pagination';
 import { getEntries } from '@/components/contentful/ContentfulService';
 import BottomBanner from '@assets/thi-truong-banner/bottom.jpg';
@@ -94,7 +94,9 @@ export default function ThiTruongPage() {
                 {locale === "en-US" ? "TOANPHAT GROUP - News" : "TOANPHAT GROUP- Tin tức thị trường"}
             </title>
             </Head>
-            
+                <div className='w-full left-0 items-start justify-start self-start italic px-4 py-2 bg-slate-100'>
+                    <BreadCrump />
+                </div>
                 <div className="flex flex-row max-w-7xl h-auto m-auto px-1">
                 <div className='flex flex-col w-4/5 items-center justify-center mt-8'>
                     <h1 className="text-4xl font-extrabold col-span-3 row-span-1 mt-4 mb-2">
