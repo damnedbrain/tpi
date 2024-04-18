@@ -94,9 +94,9 @@ export default function ThiTruongPage() {
                 {locale === "en-US" ? "TOANPHAT GROUP - News" : "TOANPHAT GROUP- Tin tức thị trường"}
             </title>
             </Head>
-                <div className='w-full left-0 items-start justify-start self-start italic px-4 py-2 bg-slate-100'>
+                {/* <div className='w-full left-0 items-start justify-start self-start italic px-4 py-2 bg-slate-100'>
                     <BreadCrump />
-                </div>
+                </div> */}
                 <div className="flex flex-row max-w-7xl h-auto m-auto px-1">
                 <div className='flex flex-col w-4/5 items-center justify-center mt-8'>
                     <h1 className="text-4xl font-extrabold col-span-3 row-span-1 mt-4 mb-2">
@@ -110,7 +110,7 @@ export default function ThiTruongPage() {
                     </div>
                 </div>                
                 <div className="flex flex-col w-1/5 mt-36">
-                    <div className="rounded-xl mb-4 lg:mb-40 lg:p-3">
+                    <div className="rounded-xl mb-4 lg:mb-40 lg:p-4">
                     <Link href={`/${process.env.BANNER_TOP}`} className='cursor-pointer'>
                         <Image
                             className="rounded-xl"
@@ -122,7 +122,7 @@ export default function ThiTruongPage() {
                             }} />
                     </Link>
                 </div>
-                <div className="rounded-xl mb-40 lg:p-3">
+                <div className="rounded-xl mb-40 lg:p-4">
                     <Link href="chieu-xa" className='cursor-pointer'>
                         <Image
                             className="rounded-xl"

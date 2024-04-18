@@ -18,21 +18,21 @@ export default function QuestionAndAnswer() {
                 {locale === "en-US" ? "TOANPHAT GROUP - Q&A" : "TOANPHAT GROUP- Hỏi đáp"}
             </title>
         </Head>
-        <div className="flex flex-col max-w-7xl w-full items-center justify-center m-auto h-auto mt-4">
+        <div className="flex flex-col max-w-7xl w-full items-center justify-center m-auto h-auto mt-0">
             {/* <div className='w-full left-0 items-start justify-start self-start italic px-4 py-2 bg-slate-100'>
                 <BreadCrump />
             </div> */}
             <Image
                 src={QAImage}
                 alt="Q&A"
-                className="w-full m-6 p-6 rounded-xl"
+                className="w-full p-4 rounded-xl"
                 style={{
                     maxWidth: "100%",
                     height: "auto",
                     maxWidth: "100%",
                     height: "auto"
                 }} />
-            <h1 className="text-6xl font-bold w-full text-center mt-6 text-green-800">
+            <h1 className="text-6xl font-bold w-full text-center mt-2 text-green-800">
                 {questionContentLocale.title}
             </h1>
             <p className="text-xl w-full text-center mt-8 text-gray-600">

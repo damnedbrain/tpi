@@ -107,7 +107,7 @@ export default function ThiTruongPage() {
                     </div>
                 </div>                
                 <div className="flex flex-col w-1/5 mt-36">
-                    <div className="rounded-xl mb-4 lg:mb-40 lg:p-3">
+                    <div className="rounded-xl mb-4 lg:mb-40 lg:p-4">
                     <Link href={`/${process.env.BANNER_TOP}`} className='cursor-pointer'>
                         <Image
                             className="rounded-xl"
@@ -119,7 +119,7 @@ export default function ThiTruongPage() {
                             }} />
                     </Link>
                 </div>
-                <div className="rounded-xl mb-40 lg:p-3">
+                <div className="rounded-xl mb-40 lg:p-4">
                     <Link href="chieu-xa" className='cursor-pointer'>
                         <Image
                             className="rounded-xl"

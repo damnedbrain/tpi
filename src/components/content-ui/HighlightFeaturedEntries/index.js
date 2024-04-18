@@ -12,14 +12,14 @@ export default function HighlightFeaturedEntries({ entries }) {
     const router = useRouter();
     const locale = router.locale;
     return <>
-        <div className="flex flex-col font-inter max-w-7xl h-auto m-auto p-4 bg-slate-200 items-start justify-start">
-            <h1 className='text-3xl font-bold p-4'>
+        <div className="flex flex-col font-inter max-w-7xl h-auto m-auto py-4 bg-slate-200 items-start justify-start">
+            <h1 className='text-3xl font-bold py-4 ml-2'>
               {locale === "en-US" ? "Featured" : "Nổi bật"}
             </h1>
-            <div className="bg-green-700 w-1/3 h-1 ml-4 mr-4"></div>
+            <div className="bg-green-700 w-1/3 h-1 ml-2 mr-1"></div>
             {entries && entries[0] && (
                     <div className="flex w-full h-96">
-                    <div className="relative w-1/2 h-full m-2 rounded-xl bg-black overflow-hidden">
+                    <div className="relative w-1/2 h-full my-2 mx-1 rounded-xl bg-black overflow-hidden">
                       
                       <Image
                           className="absolute inset-0 object-cover w-full h-full opacity-50"

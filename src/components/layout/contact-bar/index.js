@@ -27,6 +27,12 @@ export default function ContactBar() {
                 </div>
                 <div className="bg-green-800 hover:bg-slate-200 p-4 mr-2 mb-1 rounded-full size-14 items-center justify-center text-center hover:cursor-pointer">
                     <a 
+                        href='http://www.facebook.com/chieuxatoanphat'>
+                        <FontAwesomeIcon icon={faFacebookMessenger} className='hover:text-green-700 text-white self-center' size='sm' />
+                    </a>
+                </div>
+                <div className="bg-green-800 hover:bg-slate-200 p-4 mr-2 mb-1 rounded-full size-14 items-center justify-center text-center hover:cursor-pointer">
+                    <a 
                         href='tel:093 100 0001'>
                         <FontAwesomeIcon icon={faPhone} className='hover:text-green-700 text-white self-center' size='sm' />
                     </a>

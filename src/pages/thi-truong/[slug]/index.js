@@ -139,9 +139,10 @@ export default function EntryDetail( { entry, locale }) {
                         alt={node.data.target.fields.title}
                         sizes="100vw"
                         style={{
-                            width: "100%",
+                            maxWidth: "100%",
                             height: "auto"
-                        }} />
+                        }}
+                         />
                 </div>
             );
           },
@@ -168,7 +169,7 @@ export default function EntryDetail( { entry, locale }) {
                         {/* {console.log(entry)} */}
                         
                         <Image
-                            className="mt-8 lg:ml-8"
+                            className="w-full mt-8 lg:ml-8"
                             src={`https:${entry.fields.image.fields.file.url}`}
                             width={entry.fields.image.fields.file.details.image.width}
                             height={entry.fields.image.fields.file.details.image.height}
