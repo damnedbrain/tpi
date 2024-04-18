@@ -189,7 +189,7 @@ export default function GioiThieu() {
                   {futureGoalTPGLocale.mainTitle}
               </h1>
               <div className="flex flex-col lg:flex-row w-full items-start justify-center m-auto h-auto mt-6">
-                  <div className="flex flex-col flex-1 mt-4">
+                  <div className="flex flex-col flex-1 mt-4 px-5">
                       <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
                           {futureGoalTPGLocale.title1}
                       </h1>
@@ -197,7 +197,7 @@ export default function GioiThieu() {
                           {futureGoalTPGLocale.desc1}
                       </p>
                   </div>
-                  <div className="flex flex-col flex-1 mt-4">
+                  <div className="flex flex-col flex-1 mt-4 px-5">
                       <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
                           {futureGoalTPGLocale.title2}
                       </h1>
@@ -205,7 +205,7 @@ export default function GioiThieu() {
                           {futureGoalTPGLocale.desc2}
                       </p>
                   </div>
-                  <div className="flex flex-col flex-1 mt-4">
+                  <div className="flex flex-col flex-1 mt-4 px-5">
                       <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
                           {futureGoalTPGLocale.title3}
                       </h1>
@@ -221,10 +221,10 @@ export default function GioiThieu() {
           <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
               <div className="flex flex-col lg:flex-row w-full">
                   <div className="flex flex-col lg:w-1/2 items-start justify-center bg-violet-950 ">
-                      <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn p-8">
+                      <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn px-8">
                           {teamMemberTPGLocale.titleMain}
                       </h1>
-                      <p className="text-sm leading-8 tracking-normal text-white p-8 mt-4 whitespace-pre-line animate-fadeInSlideIn">
+                      <p className="text-sm leading-8 tracking-normal text-white px-8 mt-4 whitespace-pre-line animate-fadeInSlideIn">
                           {teamMemberTPGLocale.desc}
                       </p>
                   </div>
