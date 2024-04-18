@@ -73,9 +73,9 @@ export default function KhoLanhCongNghiep() {
         </Head>
         <SlickSlider className='relative' entries={heroEntries}/>
         <div className="flex flex-col md:flex-col justify-center items-center max-w-7xl h-auto m-auto">
-            <div className='w-full left-0 items-start justify-start self-start italic px-4 py-2 bg-slate-100 mt-10'>
+            {/* <div className='w-full left-0 items-start justify-start self-start italic px-4 py-2 bg-slate-100 mt-10'>
                 <BreadCrump />
-            </div>
+            </div> */}
             
             <div className="flex flex-row mt-4">
                 <h1 className="text-bold text-gray-400 text-6xl p-4">2</h1>
@@ -93,7 +93,7 @@ export default function KhoLanhCongNghiep() {
                     </div>
                 ))}
             </div>
-            <div className="flex flex-col items-center justify-end mt-24">
+            <div className="flex flex-col items-center justify-end mt-12">
                 <h1 className="text-5xl font-semiBold text-green-800">
                     {coldStorageTopContentLocale.midTitle}
                 </h1>

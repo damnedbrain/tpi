@@ -31,8 +31,8 @@ export default function Contact() {
                 {locale === "en-US" ? "TOANPHAT GROUP - Contact" : "TOANPHAT GROUP- Liên hệ"}
             </title>
             </Head>
-            <div className="flex flex-col max-w-7xl w-full items-center justify-center m-auto h-auto mt-8">
-                <h1 className="text-5xl font-bold w-full text-center mt-24 text-green-800">
+            <div className="flex flex-col max-w-7xl w-full items-center justify-center m-auto h-auto mt-4">
+                <h1 className="text-5xl font-bold w-full text-center mt-12 text-green-800">
                     {contactInfoLocale.title}
                 </h1>
                 <div className="grid lg:grid-cols-2 gap-24 mt-12">
@@ -85,7 +85,7 @@ export default function Contact() {
                         </div>
                     ))}
                 </div>
-                <Image src={IMG} alt="support-banner" className="w-full h-auto mt-12" />
+                {/* <Image src={IMG} alt="support-banner" className="w-full h-auto mt-12" /> */}
             </div>
         </>
     )

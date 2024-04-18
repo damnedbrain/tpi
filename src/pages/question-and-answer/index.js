@@ -19,9 +19,9 @@ export default function QuestionAndAnswer() {
             </title>
         </Head>
         <div className="flex flex-col max-w-7xl w-full items-center justify-center m-auto h-auto mt-4">
-            <div className='w-full left-0 items-start justify-start self-start italic px-4 py-2 bg-slate-100'>
+            {/* <div className='w-full left-0 items-start justify-start self-start italic px-4 py-2 bg-slate-100'>
                 <BreadCrump />
-            </div>
+            </div> */}
             <Image
                 src={QAImage}
                 alt="Q&A"
