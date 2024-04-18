@@ -32,7 +32,7 @@ export default function QuestionAndAnswer() {
                     maxWidth: "100%",
                     height: "auto"
                 }} />
-            <h1 className="text-6xl font-bold w-full text-center mt-2 text-green-800">
+            <h1 className="text-4xl lg:text-6xl font-bold w-full text-center mt-2 text-green-800">
                 {questionContentLocale.title}
             </h1>
             <p className="text-xl w-full text-center mt-8 text-gray-600">
@@ -41,12 +41,12 @@ export default function QuestionAndAnswer() {
             <div className="flex flex-col mt-12">
                 {questionContentLocale.sub.map((item, index) => (
                     <div key={index} className="flex flex-row border-4 m-4 rounded-xl">
-                        <h1 className="text-8xl font-semiBold text-center text-green-800 p-6">{index + 1}</h1>
+                        <h1 className="text-3xl lg:text-8xl font-semiBold text-center text-green-800 p-4">{index + 1}</h1>
                         <div>
-                            <h1 className="text-4xl font-semiBold text-left text-green-800 mt-2 p-6">
+                            <h1 className="text-3xl lg:text-4xl font-semiBold text-left text-green-800 p-4">
                                 {item.title}
                             </h1>
-                            <p className="text-2xl text-left mt-2 p-6">
+                            <p className="text-base lg:text-2xl text-left p-4">
                                 {item.desc}
                             </p>
                         </div>

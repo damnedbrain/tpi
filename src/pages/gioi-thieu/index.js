@@ -63,7 +63,7 @@ export default function GioiThieu() {
         </div> */}
           {/* About TPG Section */}
           <div className="flex flex-col w-full items-start justify-center m-auto h-auto mt-6 p-2">
-              <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
+              <h1 className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
                   {aboutTPGLocale.title}
               </h1>
               <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
@@ -84,7 +84,7 @@ export default function GioiThieu() {
 
           {/* History Video TPG Section */}
           <div className="flex flex-col w-full items-start justify-center m-auto h-auto mt-12 p-2">
-              <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
+              <h1 className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
                   {locale === "vi" ? "Lịch sử phát triển TOANPHAT GROUP" : "Company Milestones and Achievement"}
               </h1>
               <div className="w-full m-auto">
@@ -98,7 +98,7 @@ export default function GioiThieu() {
 
           {/* Thong Diep TPG Section */}
           <div className="flex flex-col w-full items-start justify-center m-auto h-auto mt-12 p-2">
-              <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
+              <h1 className="text-3xl lg:text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
                   {thongDiepTPGLocale.title}
               </h1>
               <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
@@ -110,23 +110,23 @@ export default function GioiThieu() {
           {/* Core Value TPG Section */}
           <div className="flex flex-col lg:flex-row w-full items-start justify-center m-auto h-auto mt-12 p-2">
               <div className=" w-full lg:w-2/5 pr-6">
-                  <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-4">
+                  <h1 className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-4">
                       {coreValueTPGLocale.title1}
                   </h1>
-                  <h1 className="text-4xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-4">
+                  <h1 className="text-3xl lg:text-4xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-4">
                       {coreValueTPGLocale.subTitle1}
                   </h1>
                   <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
                       {coreValueTPGLocale.subDesc1}
                   </p>
-                  <h1 className="text-4xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-4">
+                  <h1 className="text-3xl lg:text-4xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-4">
                       {coreValueTPGLocale.subTitle2}
                   </h1>
                   <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
                       {coreValueTPGLocale.subDesc2}
                   </p>
                   <div className="w-2/3 h-2 bg-green-800 mt-6 mb-6"></div>
-                  <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-4">
+                  <h1 className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-4">
                       {coreValueTPGLocale.title2}
                   </h1>
                   <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
@@ -150,7 +150,7 @@ export default function GioiThieu() {
 
           {/* Six Word TPG Section */}
           <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
-              <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
+              <h1 className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
                   {sixWordTPGLocale.title}
               </h1>
               <div className="grid grid-flow-row-dense grid-cols-1 grid-rows-6 sm:grid-cols-3 sm:grid-rows-2 gap-4 w-full mt-4">
@@ -185,12 +185,12 @@ export default function GioiThieu() {
                           height: "auto"
                       }} />
               </div>
-              <h1 className="text-5xl font-bold text-left text-green-800 animate-fadeInSlideIn mt-6">
+              <h1 className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-6">
                   {futureGoalTPGLocale.mainTitle}
               </h1>
               <div className="flex flex-col lg:flex-row w-full items-start justify-center m-auto h-auto mt-6">
                   <div className="flex flex-col flex-1 mt-4 px-5">
-                      <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
+                      <h1 className="text-3xl lg:text-4xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
                           {futureGoalTPGLocale.title1}
                       </h1>
                       <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
@@ -198,7 +198,7 @@ export default function GioiThieu() {
                       </p>
                   </div>
                   <div className="flex flex-col flex-1 mt-4 px-5">
-                      <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
+                      <h1 className="text-3xl lg:text-4xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
                           {futureGoalTPGLocale.title2}
                       </h1>
                       <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
@@ -206,7 +206,7 @@ export default function GioiThieu() {
                       </p>
                   </div>
                   <div className="flex flex-col flex-1 mt-4 px-5">
-                      <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
+                      <h1 className="text-3xl lg:text-4xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
                           {futureGoalTPGLocale.title3}
                       </h1>
                       <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
@@ -220,7 +220,7 @@ export default function GioiThieu() {
           {/* Team Member TPG Section */}
           <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
               <div className="flex flex-col lg:flex-row w-full">
-                  <div className="flex flex-col lg:w-1/2 items-start justify-center bg-violet-950 ">
+                  <div className="flex flex-col lg:w-1/2 items-start justify-center bg-violet-950 p-2">
                       <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn px-8">
                           {teamMemberTPGLocale.titleMain}
                       </h1>
@@ -266,7 +266,7 @@ export default function GioiThieu() {
 
           {/* Corp Culture TPG Section */}
           <div id="corp-culture" className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12 p-2">
-              <h1 className="text-5xl font-bold text-left text-green-800 animate-fadeInSlideIn">
+              <h1 className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
                   {corpCultureTPGLocale.mainTitle}
               </h1>
               <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
@@ -274,28 +274,28 @@ export default function GioiThieu() {
               </p>
               <div className="flex flex-col lg:flex-row">
                   <div className="flex flex-1 p-4">
-                      <h1 className="text-3xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-6">
+                      <h1 className="text-2xl lg:text-3xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-6">
                           {corpCultureTPGLocale.title1}
                       </h1>
-                      <h1 className="text-6xl font-bold text-center text-gray-200 animate-fadeIn m-4">1</h1>
+                      <h1 className="text-5xl lg:text-6xl p-1 font-bold text-center text-gray-200 animate-fadeIn m-4">1</h1>
                       <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
                           {corpCultureTPGLocale.desc1}
                       </p>
                   </div>
                   <div className="flex flex-1 p-4">
-                      <h1 className="text-3xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-6">
+                      <h1 className="text-2xl lg:text-3xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-6">
                           {corpCultureTPGLocale.title2}
                       </h1>
-                      <h1 className="text-6xl font-bold text-center text-gray-200 animate-fadeIn m-4">2</h1>
+                      <h1 className="text-5xl lg:text-6xl p-1 font-bold text-center text-gray-200 animate-fadeIn m-4">2</h1>
                       <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
                           {corpCultureTPGLocale.desc2}
                       </p>
                   </div>
                   <div className="flex flex-1 p-4">
-                      <h1 className="text-3xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-6">
+                      <h1 className="text-2xl lg:text-3xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-6">
                           {corpCultureTPGLocale.title3}
                       </h1>
-                      <h1 className="text-6xl font-bold text-center text-gray-200 animate-fadeIn m-4">3</h1>
+                      <h1 className="text-5xl lg:text-6xl p-1 font-bold text-center text-gray-200 animate-fadeIn m-4">3</h1>
                       <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
                           {corpCultureTPGLocale.desc3}
                       </p>
