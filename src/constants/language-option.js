@@ -14,10 +14,10 @@ import youtubeButton from '@assets/icons/youtube-button.png';
 
 import { RoutePages } from './router';
 
-const item1_link1 = ' https://www.facebook.com/chieuxatoanphat';
-const item1_link2 = ' https://www.youtube.com/channel/UCJoEaA2uVz0YXs2iWCanQOA';
-const item2_link1 = ' https://www.facebook.com/kholanhtoanphat';
-const item2_link2 = ' https://www.youtube.com/channel/UCJoEaA2uVz0YXs2iWCanQOA';
+const item1_link1 = 'https://www.facebook.com/chieuxatoanphat';
+const item1_link2 = 'https://www.youtube.com/channel/UCJoEaA2uVz0YXs2iWCanQOA';
+const item2_link1 = 'https://www.facebook.com/kholanhtoanphat';
+const item2_link2 = 'https://www.youtube.com/channel/UCJoEaA2uVz0YXs2iWCanQOA';
 
 export const headerMenu = [
   {
