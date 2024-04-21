@@ -17,6 +17,20 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      height: {
+        "80-screen": "80vh",
+        "90-screen": "90vh",
+        "70-screen": "70vh",
+        "60-screen": "60vh",
+        "50-screen": "50vh",
+      },
+      width: {
+        "80-screen": "80vw",
+        "90-screen": "90vw",
+        "70-screen": "70vw",
+        "60-screen": "60vw",
+        "50-screen": "50vw",
+      },
       fontSize: {
         xxs: "0.625rem",
         xxxs: "0.35rem",

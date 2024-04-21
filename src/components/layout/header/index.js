@@ -136,14 +136,21 @@ export default function Header() {
         </div>
       </div>
       {/* MOBILE MENU */}
-      <div className={'lg:hidden'}>
-        <div className={`px-2 pt-2 pb-3 ${activeSideMenu ? 'flex flex-row justify-between items-end' : 'hidden'}`}>
+      <div className={`lg:hidden`}>
+        <div className={`h-80-screen px-2 pt-2 pb-3 ${activeSideMenu ? 'flex flex-row justify-between items-start' : 'hidden'}`}>
           <div>
+            <div className='ml-8 mb-8'>
+              <Link href='/' className={`${activeSideMenu ? 'block' : 'hidden'}`}>
+                  <Image src={ToanPhatLogo} alt="logo" width={activeSideMenu ? 96 : 48} height='auto' as="image"
+                    className='pt-2'
+                  />
+              </Link>
+            </div>
             {arrMenu.map((item, index) => (
-              <div key={index} className="relative group">
+              <div key={index} className="relative group border-b-2 border-slate-800">
                 <Link href={item.sub ? "#" : item.link} legacyBehavior>
                   <a
-                    className="block ml-4 px-2 py-1 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out"
+                    className="block ml-4 px-4 py-4 rounded-md text-3xl font-medium text-gray-300 hover:text-white focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out"
                     onClick={(e) => {
                       handleMenu(item.title)
                       !item.sub && setActiveSideMenu(false);
@@ -153,7 +160,7 @@ export default function Header() {
                   </a>
                 </Link>
                 {item.sub && item.sub.length > 0 && (
-                  <div className={`absolute left-0 w-48 mt-2 py-2 bg-white rounded-md shadow-xl z-20 ${activeMenu === item.title ? 'block' : 'hidden'} sm:hidden`}>
+                  <div className={`absolute left-0 w-64 mt-2 py-2 bg-white rounded-md shadow-xl z-20 ${activeMenu === item.title ? 'block' : 'hidden'} sm:hidden`}>
                     {item.sub.map((subItem, subIndex) => (
                       <Link key={subIndex} href={subItem.link} legacyBehavior>
                         <a
@@ -161,7 +168,7 @@ export default function Header() {
                             handleNavigation(subItem.link)
                             setActiveSideMenu(false);
                           }}
-                          className="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                          className="block px-4 py-2 text-2xl capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
                           {subItem.title}
                         </a>
                       </Link>
@@ -171,13 +178,7 @@ export default function Header() {
               </div>
             ))}
           </div>
-          <div>
-            <Link href='/' className={`${activeSideMenu ? 'block' : 'hidden'}`}>
-                <Image src={ToanPhatLogo} alt="logo" width={48} height='auto' as="image"
-                  className='p-2'
-                />
-            </Link>
-          </div>
+          
         </div>
         {/* LANGUAGE SWITCHER */}
         <div className={`space-x-2 ${activeSideMenu ? '' : 'hidden'} items-center justify-center md:flex p-2 m-auto mb-4 bg-slate-900`}>
