@@ -140,10 +140,12 @@ export default function Header() {
         <div className={`h-90-screen w-80-screen px-2 pt-2 pb-3 ${activeSideMenu ? 'flex flex-row items-start' : 'hidden'}`}>
           <div>
             <div className='ml-8 mb-8'>
-              <Link href='/' className={`${activeSideMenu ? 'block' : 'hidden'}`}>
-                  <Image src={ToanPhatLogo} alt="logo" width={activeSideMenu ? 96 : 48} height='auto' as="image"
-                    className='pt-2'
-                  />
+              <Link href='/' className={`${activeSideMenu ? 'block' : 'hidden'}`} legacyBehavior>
+                  <a onClick={(e) => setActiveSideMenu(false)}>
+                    <Image src={ToanPhatLogo} alt="logo" width={activeSideMenu ? 96 : 48} height='auto' as="image"
+                      className='pt-2'
+                    />
+                  </a>
               </Link>
             </div>
             {arrMenu.map((item, index) => (
