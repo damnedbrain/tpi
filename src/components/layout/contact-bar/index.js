@@ -24,21 +24,21 @@ export default function ContactBar() {
                         href='http://m.me/116671641370296'>
                         <FontAwesomeIcon icon={faFacebookMessenger} className='hover:text-green-700 text-white self-center' size='sm' />
                     </a>
-                    <h1 className='text-xxxs text-white relative -top-4 left-0 whitespace-nowrap text-center'>Kho lạnh</h1>
+                    <h1 className='text-xxxs text-white relative -top-4 left-0 whitespace-nowrap text-center'>{locale === 'en-US' ? "TPRW" : "Kho lạnh"}</h1>
                 </div>
                 <div className="bg-green-800 hover:bg-slate-200 p-4 mr-2 mb-1 rounded-full size-14 items-center justify-center text-center hover:cursor-pointer">
                     <a 
                         href='http://www.facebook.com/chieuxatoanphat'>
                         <FontAwesomeIcon icon={faFacebookMessenger} className='hover:text-green-700 text-white self-center' size='sm' />
                     </a>
-                    <h1 className='text-xxxs text-white relative -top-4 left-0 whitespace-nowrap text-center'>Chiếu xạ</h1>
+                    <h1 className='text-xxxs text-white relative -top-4 left-0 whitespace-nowrap text-center'>{locale === 'en-US' ? "TPI" : "Chiếu Xạ"}</h1>
                 </div>
                 <div className="bg-green-800 hover:bg-slate-200 p-4 mr-2 mb-1 rounded-full size-14 items-center justify-center text-center hover:cursor-pointer">
                     <a 
                         href='tel:093 100 0001'>
                         <FontAwesomeIcon icon={faPhone} className='hover:text-green-700 text-white self-center' size='sm' />
                     </a>
-                    <h1 className='text-xxxs text-white relative -top-4 left-0 whitespace-nowrap text-center'>Chiếu xạ</h1>
+                    <h1 className='text-xxxs text-white relative -top-4 left-0 whitespace-nowrap text-center'>{locale === 'en-US' ? "TPI" : "Chiếu Xạ"}</h1>
                 </div>
                 <div className="bg-green-800 hover:bg-slate-200 p-4 mr-2 mb-1 rounded-full size-14 items-center justify-center text-center hover:cursor-pointer">
                     <a 

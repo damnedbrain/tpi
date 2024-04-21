@@ -181,10 +181,18 @@ export default function Header() {
             ))}
             {/* LANGUAGE SWITCHER */}
             <div className={`space-x-2 ${activeSideMenu ? '' : 'hidden'} items-center justify-center flex p-1 m-auto mt-4 mb-4`}>
-                <button onClick={() => switchLocale('en-US')} className={`rounded-full px-3 py-3 ${locale === 'en-US' ? 'bg-green-900' : ''}`}>
+                <button onClick={() => {
+                    switchLocale('en-US')
+                    setActiveSideMenu(false)
+                  }} 
+                  className={`rounded-full px-3 py-3 ${locale === 'en-US' ? 'bg-green-900' : ''}`}>
                   <Image src={FlagUs} alt="English" className="h-4 w-auto" />
                 </button>
-                <button onClick={() => switchLocale('vi')} className={`rounded-full px-3 py-3 ${locale === 'vi' ? 'bg-green-900' : ''}`}>
+                <button onClick={() => {
+                  switchLocale('vi')
+                  setActiveSideMenu(false)
+                }} 
+                className={`rounded-full px-3 py-3 ${locale === 'vi' ? 'bg-green-900' : ''}`}>
                   <Image src={FlagVi} alt="Vietnamese" className="h-4 w-auto" />
                 </button>
             </div>
