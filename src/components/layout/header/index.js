@@ -136,8 +136,8 @@ export default function Header() {
         </div>
       </div>
       {/* MOBILE MENU */}
-      <div className={`lg:hidden`}>
-        <div className={`h-80-screen px-2 pt-2 pb-3 ${activeSideMenu ? 'flex flex-row justify-between items-start' : 'hidden'}`}>
+      <div className={`lg:hidden w-full`}>
+        <div className={`h-90-screen w-80-screen px-2 pt-2 pb-3 ${activeSideMenu ? 'flex flex-row items-start' : 'hidden'}`}>
           <div>
             <div className='ml-8 mb-8'>
               <Link href='/' className={`${activeSideMenu ? 'block' : 'hidden'}`}>
@@ -150,7 +150,7 @@ export default function Header() {
               <div key={index} className="relative group border-b-2 border-slate-800">
                 <Link href={item.sub ? "#" : item.link} legacyBehavior>
                   <a
-                    className="block ml-4 px-4 py-4 rounded-md text-3xl font-medium text-gray-300 hover:text-white focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out"
+                    className="block ml-4 px-4 py-4 rounded-md text-2xl font-medium text-gray-300 hover:text-white focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out"
                     onClick={(e) => {
                       handleMenu(item.title)
                       !item.sub && setActiveSideMenu(false);
@@ -177,19 +177,18 @@ export default function Header() {
                 )}
               </div>
             ))}
-          </div>
-          
-        </div>
-        {/* LANGUAGE SWITCHER */}
-        <div className={`space-x-2 ${activeSideMenu ? '' : 'hidden'} items-center justify-center md:flex p-2 m-auto mb-4 bg-slate-900`}>
-            <button onClick={() => switchLocale('en-US')} className={`rounded-full px-3 py-3 ${locale === 'en-US' ? 'bg-green-900' : ''}`}>
-              <Image src={FlagUs} alt="English" className="h-4 w-auto" />
-            </button>
-            <button onClick={() => switchLocale('vi')} className={`rounded-full px-3 py-3 ${locale === 'vi' ? 'bg-green-900' : ''}`}>
-              <Image src={FlagVi} alt="Vietnamese" className="h-4 w-auto" />
-            </button>
-          </div>
-          {/* LANGUAGE SWITCHER END */}
+            {/* LANGUAGE SWITCHER */}
+            <div className={`space-x-2 ${activeSideMenu ? '' : 'hidden'} items-center justify-center flex p-2 m-auto mt-8 mb-4`}>
+                <button onClick={() => switchLocale('en-US')} className={`rounded-full px-3 py-3 ${locale === 'en-US' ? 'bg-green-900' : ''}`}>
+                  <Image src={FlagUs} alt="English" className="h-4 w-auto" />
+                </button>
+                <button onClick={() => switchLocale('vi')} className={`rounded-full px-3 py-3 ${locale === 'vi' ? 'bg-green-900' : ''}`}>
+                  <Image src={FlagVi} alt="Vietnamese" className="h-4 w-auto" />
+                </button>
+            </div>
+            {/* LANGUAGE SWITCHER END */}
+          </div>          
+        </div>        
       </div>
     </div>
   );
