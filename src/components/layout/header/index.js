@@ -46,21 +46,29 @@ export default function Header() {
       document.removeEventListener('click', handleOutsideClick);
     };
   }, []);
+  const handleNavigation = (path) => {
+    router.push(path);
+  }
+
 
   return (
-    <div className="bg-indigo-950">
+    <div className="bg-indigo-950 sticky top-0 z-50">
       <div className="w-full mx-auto lg:px-6">
         <div className="relative flex items-center justify-center max-w-7xl m-auto h-auto">
           {/* MOBILE menu button SVG */}
-          <div className="relative inset-y-0 left-0 flex items-start lg:hidden">
+          <div className="relative inset-y-0 left-0 flex items-start justify-between w-full lg:hidden">
             <button onClick={() => setActiveSideMenu(!activeSideMenu)} className="inline-flex items-center justify-center p-2 rounded-md text-gray-400">
               <svg className={`${activeSideMenu ? 'bg-slate-900 block' : 'block'} h-6 w-6`} stroke="currentColor" fill="none" viewBox="0 0 24 24">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-              </svg>
-
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                </svg>
               </svg>
             </button>
+            <Link href='/' className={`${activeSideMenu ? 'hidden' : 'block'}`}>
+              <Image src={ToanPhatLogo} alt="logo" width={48} height='auto' as="image"
+                className='p-2'
+               />
+            </Link>
           </div>
           {/* END MOBILE menu button */}
 
@@ -129,30 +137,47 @@ export default function Header() {
       </div>
       {/* MOBILE MENU */}
       <div className={'lg:hidden'}>
-        <div className={`px-2 pt-2 pb-3 ${activeSideMenu ? 'block' : 'hidden'}`}>
-        {arrMenu.map((item, index) => (
-          <div key={index} className="relative group">
-            <Link href={item.sub ? "#" : item.link} legacyBehavior>
-              <a 
-                className="block ml-4 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out"
-                onClick={() => handleMenu(item.title)}
-              >
-                {item.title}
-              </a>
-            </Link>
-            {item.sub && item.sub.length > 0 && (
-              <div className={`absolute left-0 w-48 mt-2 py-2 bg-white rounded-md shadow-xl z-20 ${activeMenu === item.title ? 'block' : 'hidden'} sm:hidden`}>
-                {item.sub.map((subItem, subIndex) => (
-                  <Link key={subIndex} href={subItem.link} legacyBehavior>
-                    <a className="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
-                      {subItem.title}
-                    </a>
-                  </Link>
-                ))}
+        <div className={`px-2 pt-2 pb-3 ${activeSideMenu ? 'flex flex-row justify-between items-end' : 'hidden'}`}>
+          <div>
+            {arrMenu.map((item, index) => (
+              <div key={index} className="relative group">
+                <Link href={item.sub ? "#" : item.link} legacyBehavior>
+                  <a
+                    className="block ml-4 px-2 py-1 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out"
+                    onClick={(e) => {
+                      handleMenu(item.title)
+                      !item.sub && setActiveSideMenu(false);
+                    }}
+                  >
+                    {item.title}
+                  </a>
+                </Link>
+                {item.sub && item.sub.length > 0 && (
+                  <div className={`absolute left-0 w-48 mt-2 py-2 bg-white rounded-md shadow-xl z-20 ${activeMenu === item.title ? 'block' : 'hidden'} sm:hidden`}>
+                    {item.sub.map((subItem, subIndex) => (
+                      <Link key={subIndex} href={subItem.link} legacyBehavior>
+                        <a
+                          onClick={(e) => {
+                            handleNavigation(subItem.link)
+                            setActiveSideMenu(false);
+                          }}
+                          className="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                          {subItem.title}
+                        </a>
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
-            )}
+            ))}
           </div>
-        ))}
+          <div>
+            <Link href='/' className={`${activeSideMenu ? 'block' : 'hidden'}`}>
+                <Image src={ToanPhatLogo} alt="logo" width={48} height='auto' as="image"
+                  className='p-2'
+                />
+            </Link>
+          </div>
         </div>
         {/* LANGUAGE SWITCHER */}
         <div className={`space-x-2 ${activeSideMenu ? '' : 'hidden'} items-center justify-center md:flex p-2 m-auto mb-4 bg-slate-900`}>
