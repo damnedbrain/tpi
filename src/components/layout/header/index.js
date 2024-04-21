@@ -150,7 +150,7 @@ export default function Header() {
               <div key={index} className="relative group border-b-2 border-slate-800">
                 <Link href={item.sub ? "#" : item.link} legacyBehavior>
                   <a
-                    className="block ml-4 px-4 py-4 rounded-md text-2xl font-medium text-gray-300 hover:text-white focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out"
+                    className="block ml-4 px-4 py-2 rounded-md text-2xl font-medium text-gray-300 hover:text-white focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out"
                     onClick={(e) => {
                       handleMenu(item.title)
                       !item.sub && setActiveSideMenu(false);
@@ -178,7 +178,7 @@ export default function Header() {
               </div>
             ))}
             {/* LANGUAGE SWITCHER */}
-            <div className={`space-x-2 ${activeSideMenu ? '' : 'hidden'} items-center justify-center flex p-2 m-auto mt-8 mb-4`}>
+            <div className={`space-x-2 ${activeSideMenu ? '' : 'hidden'} items-center justify-center flex p-1 m-auto mt-4 mb-4`}>
                 <button onClick={() => switchLocale('en-US')} className={`rounded-full px-3 py-3 ${locale === 'en-US' ? 'bg-green-900' : ''}`}>
                   <Image src={FlagUs} alt="English" className="h-4 w-auto" />
                 </button>
