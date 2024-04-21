@@ -19,6 +19,7 @@ module.exports = {
       },
       fontSize: {
         xxs: "0.625rem",
+        xxxs: "0.35rem",
       },
       border: {
         "1/2": "0.5px",
