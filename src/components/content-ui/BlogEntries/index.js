@@ -8,7 +8,7 @@ export default function BlogEntries({ entries }) {
     return (
     <>
         <div className='flex flex-row w-full items-center justify-start mt-8'>
-            <h1 className="text-4xl font-bold font-sans col-span-3 row-span-1 mt-4 mb-2">
+            <h1 className="text-2xl lg:text-5xl font-bold font-sans col-span-3 row-span-1 mt-4 mb-2 px-1">
                 {locale === "en-US" ? "Blog" : "Blog"}
             </h1>
             <div className="bg-slate-200 w-1/3 h-1 ml-4 mr-4"></div>

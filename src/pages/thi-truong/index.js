@@ -103,12 +103,12 @@ export default function ThiTruong() {
             <HighlightFeaturedEntries entries={featuredEntries} />
         </div>
         <div className="flex flex-row max-w-7xl h-auto m-auto">
-            <div className="flex flex-col w-4/5 m-auto">
+            <div className="flex flex-col lg:w-4/5 m-auto">
                 <NewsEntries entries={newsEntries} />
                 <BlogEntries entries={blogEntries} />
                 <PromotionEntries entries={promotionEntries} />
             </div>
-            <div className="flex flex-col w-1/5 mt-28 px-1 lg:p-1">
+            <div className="hidden lg:flex lg:flex-col w-1/5 mt-28 px-1 lg:p-1">
                 <div className="rounded-xl mb-4 lg:mb-40 lg:p-1">
                     <Link href="kho-lanh-cong-nghiep" className='cursor-pointer'>
                         <Image
