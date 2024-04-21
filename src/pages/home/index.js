@@ -214,7 +214,7 @@ export default function Home() {
     }).filter(Boolean);
 
     let highlighEntries = entries.map((item, index) => {
-        if (item.fields.hightLight && !item.fields.promo) {
+        if (item.fields.hightLight) { // && item.fields.promo`  
           return {
             url: item.fields.thumbImage.fields.file.url,
             slug: item.fields.slug,
