@@ -91,49 +91,49 @@ export default function ThiTruongPage() {
         <>
             <Head>
             <title>
-                {locale === "en-US" ? "TOANPHAT GROUP - News" : "TOANPHAT GROUP- Tin tức thị trường"}
+                {locale === "en-US" ? "TOANPHAT GROUP" : "Tập đoàn Toàn Phát"}
             </title>
-            </Head>
-                <div className="flex flex-row max-w-7xl h-auto m-auto p-1">
-                <div className='flex flex-col w-4/5 items-center justify-center mt-8'>
-                    <h1 className="text-4xl font-extrabold col-span-3 row-span-1 mt-4 mb-2">
-                    {locale === "en-US" ? "Irradiation" : "Chiếu xạ"}
-                    </h1>                    
-                    <div className="bg-slate-200 w-1/3 h-1 ml-4 mr-4"></div>
-                    {console.log(pageIndex, page)}
-                    <div className="flex flex-col m-auto mt-12">
-                        <EntriesWithPagination entries={newsEntries} />                
-                        <Pagination currentPage={pageIndex + 1} pageCount={pageCount} basePageURL="chieu-xa" />
+            </Head>             
+            <div className="flex flex-col max-w-7xl h-auto m-auto p-1 items-center justify-center">
+                <h1 className="text-4xl font-extrabold col-span-3 row-span-1 mt-4 mb-2">
+                    {locale === "en-US" ? "Irradiation" : "Chiếu Xạ"}
+                </h1>
+                <div className="bg-slate-200 w-1/3 h-1 ml-4 mr-4"></div>
+                <div className='flex flex-row'>
+                    <div className='flex flex-col lg:w-4/5 items-center justify-start mt-8'>                        
+                        <div className="flex flex-col m-0">
+                            <EntriesWithPagination entries={newsEntries} />
+                            <Pagination currentPage={pageIndex + 1} pageCount={pageCount} basePageURL="chieu-xa" />
+                        </div>
                     </div>
-                </div>                
-                <div className="flex flex-col w-1/5 mt-36">
-                    <div className="rounded-xl mb-4 lg:mb-40 lg:p-3">
-                    <Link href={`/${process.env.BANNER_TOP}`} className='cursor-pointer'>
-                        <Image
-                            className="rounded-xl"
-                            src={TopBanner}
-                            alt="Top Banner"
-                            style={{
-                                maxWidth: "100%",
-                                // height: "auto"
-                            }} />
-                    </Link>
-                </div>
-                <div className="rounded-xl mb-40 lg:p-3">
-                    <Link href="chieu-xa" className='cursor-pointer'>
-                        <Image
-                            className="rounded-xl"
-                            src={BottomBanner}
-                            alt="Bottom Banner"
-                            style={{
-                                maxWidth: "100%",
-                                // height: "auto"
-                            }} />
-                    </Link>
-                </div>
+                    <div className="hidden lg:flex flex-col w-1/5 mt-8">
+                        <div className="rounded-xl mb-40 p-4">
+                            <Link href="/kho-lanh-cong-nghiep" className='cursor-pointer'>
+                                <Image
+                                    className="rounded-xl"
+                                    src={TopBanner}
+                                    alt="Top Banner"
+                                    style={{
+                                        maxWidth: "100%",
+                                        // height: "auto"
+                                    }} />
+                            </Link>
+                        </div>
+                        <div className="rounded-xl mb-40 p-4">
+                            <Link href="/chieu-xa" className='cursor-pointer'>
+                                <Image
+                                    className="rounded-xl"
+                                    src={BottomBanner}
+                                    alt="Bottom Banner"
+                                    style={{
+                                        maxWidth: "100%",
+                                        // height: "auto"
+                                    }} />
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </>
     )
 }

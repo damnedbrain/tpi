@@ -157,9 +157,9 @@ export default function EntryDetail( { entry, locale }) {
         </Head>
             {/* {console.log(highlightEntries)} */}
             <div className="flex font-inter flex-row w-full bg-white items-center justify-center">
-                <div className="flex flex-row rounded-xl bg-gray-50 m-auto mt-16 max-w-7xl h-auto items-start justify-center p-4">
-                    <div className="w-full lg:w-3/4 p-4">
-                        <div className="flex flex-col lg:flex-row items-end lg:justify-between lg:ml-8 mt-8 text-green-800 text-semiBold text-left text-2xl">
+                <div className="flex flex-row rounded-xl bg-gray-50 m-auto mt-4 max-w-7xl h-auto items-start justify-center p-0 lg:p-4">
+                    <div className="w-full lg:w-3/4 p-1 lg:p-4">
+                        <div className="flex flex-col lg:flex-row items-end lg:justify-between lg:ml-8 lg:mt-8 text-green-800 text-semiBold text-left text-2xl">
                             <div className="p-2 bg-green-800 font-bold text-white w-max rounded-md ">{ResolveLabelForContentType({type: entry.fields.type, locale})}</div>
                             <div className="italic lg:font-semibold">{formatDate(entry.sys.createdAt)}</div>
                         </div>
@@ -169,7 +169,7 @@ export default function EntryDetail( { entry, locale }) {
                         {/* {console.log(entry)} */}
                         
                         <Image
-                            className="w-full mt-8 lg:ml-8"
+                            className="w-full mt-4 lg:ml-8"
                             src={`https:${entry.fields.image.fields.file.url}`}
                             width={entry.fields.image.fields.file.details.image.width}
                             height={entry.fields.image.fields.file.details.image.height}
@@ -178,7 +178,7 @@ export default function EntryDetail( { entry, locale }) {
                                 maxWidth: "100%",
                                 height: "auto"
                             }} />
-                        <div className="flex flex-col leading-relaxed m-auto w-full h-auto items-start justify-center text-left p-8">
+                        <div className="flex flex-col leading-relaxed m-auto w-full h-auto items-start justify-center text-left lg:mt-4 p-1 lg:p-8">
                             {documentToReactComponents(entry.fields.desc, renderOptions)}
                         </div>
                     </div>
