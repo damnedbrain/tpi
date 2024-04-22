@@ -453,7 +453,7 @@ export default function Home() {
                             </div>
                         ))}
                     </div>
-                    <Link href="/gioi-thieu#corp-culture" className="m-4 text-white italic bg-slate-900 px-4 py-2 rounded-md">
+                    <Link href="/gioi-thieu#corp-culture" className="m-4 text-white italic bg-indigo-950 px-4 py-2 rounded-md">
                         {locale === "en-US" ? "Read more >>>" : "Chi tiết >>>"}
                     </Link>
                 </div>
