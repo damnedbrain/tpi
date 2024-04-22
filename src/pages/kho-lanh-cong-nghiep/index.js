@@ -30,26 +30,25 @@ export default function KhoLanhCongNghiep() {
         kholanh1, kholanh2, kholanh3, kholanh4, kholanh5
     ]
 
-    const [entries, setEntries] = useState([]);
-    const [latestEntries, setLatestEntries] = useState([]);
+    const [bannerEntries, setBannerEntries] = useState([]);
 
     useEffect(() => {
-        async function getPageEntries() {
+        async function getBannerEntries() {
             const entries = await getEntries(
                 "toanPhatMarketNews", 
                 locale, 
                 { 
                     order: "-sys.createdAt",
                     limit: 10,
-                    "fields.homePage": "true"
+                    "fields.promo": "true"
                 });
 
-            setEntries(entries.items);
+            setBannerEntries(entries.items);
         }
-        getPageEntries();
+        getBannerEntries();
     }, []);
 
-    let heroEntries = entries.map((item, index) => {
+    let heroEntries = bannerEntries.map((item, index) => {
         if (item.fields.promo) {
           return {
             url: item.fields.image.fields.file.url,
