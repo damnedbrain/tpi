@@ -522,7 +522,7 @@ export default function Home() {
             {/*End Partners Section*/}
 
             {/*Gallery Section*/}
-            <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
+            <div className="flex flex-col w-full items-center justify-center m-auto h-auto my-12">
                 <div className="lg:w-4/5">
                     <h2 className="text-3xl text-center font-bold text-green-800 animate-fadeInSlideIn">
                         {galleryLocale.title}
