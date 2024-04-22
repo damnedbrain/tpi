@@ -296,7 +296,7 @@ export default function Home() {
             <div className="flex flex-col w-full m-auto mt-4">
                 {locale === "en-US" ? 
                     <VideoComponent videoSrc="/videos/location_map_video_eng.mp4" /> :
-                    <VideoComponent videoSrc="/videos/location_map_video.mp4" />
+                    <VideoComponent videoSrc="/videos/location_map_video_eng.mp4" />
                 }
             </div>
         </div>

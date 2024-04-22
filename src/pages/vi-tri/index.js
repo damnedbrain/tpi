@@ -35,14 +35,14 @@ export default function ViTri() {
                     <VideoComponent videoSrc='/videos/location_map_video_eng.mp4' />
                 )}
             </div>
-            <p className="text-xl w-full text-left mt-8 text-gray-600">
+            <p className="text-md leading-loose w-full text-left mt-8 text-black">
                 {LocationMapContentLocale.desc}
             </p>
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
                 {LocationMapContentLocale.sub.map((item, index) => (
                     <div key={index} className="flex flex-col lg:flex-row">
                         <h1 className="text-8xl font-semiBold text-center text-gray-200 p-2">{index + 1}</h1>
-                        <p className="text-xl text-gray-600 text-left mt-2 p-2">
+                        <p className="text-md text-black text-left mt-2 p-2">
                             {item.desc}
                         </p>
                     </div>

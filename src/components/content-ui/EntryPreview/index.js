@@ -14,11 +14,11 @@ export default function EntryPreview({ entry, ellipsis = true}) {
     return (
         <div className="relative flex flex-col w-full overflow-hidden lg:h-full bg-white rounded-md shadow-xs border border-slate-300 my-2">            
             <Image
-                className="block h-32 object-cover"
+                className="block h-32 lg:h-60 object-fit"
                 src={`https:${entry.thumbImage}`}
                 alt={entry.title}
-                width={500}
-                height={300}
+                width={750}
+                height={500}
                 objectFit="cover"
             />
             <div className="flex flex-col w-full justify-between items-center bg-white bg-opacity-80 rounded-b-lg">

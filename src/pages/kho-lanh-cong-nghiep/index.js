@@ -86,7 +86,7 @@ export default function KhoLanhCongNghiep() {
                 {kholanhIcons.map((icon, index) => (
                     <div key={index} className="flex flex-col w-full p-4 items-center justify-start mt-8">
                         <Image key={index} src={icon} alt="kholanh-icon" className="w-12 h-auto" />
-                        <h1 className="text-xl text-center mt-4">
+                        <h1 className="text-xl text-center leading-loose mt-4">
                             {coldStorageTopContentLocale.desc[index].descc}
                         </h1>
                     </div>
@@ -100,9 +100,9 @@ export default function KhoLanhCongNghiep() {
             <div className="flex flex-col lg:grid lg:grid-cols-3 lg:grid-rows-3 gap-8 mt-8 p-2">
                 {coldStorageTopContentLocale.sub.map((item, index) => (
                     <div>
-                        <h1 className="text-6xl text-slate-300">{index+1}</h1>
-                        <h1 className="text-3xl text-green-800">{item.title}</h1>
-                        <p>{item.desc}</p>
+                        <h1 className="text-4xl lg:text-6xl text-slate-300">{index+1}</h1>
+                        <h1 className="text-2xl lg:text-3xl text-green-800">{item.title}</h1>
+                        <p className='leading-loose'>{item.desc}</p>
                     </div>
 
                 ))}

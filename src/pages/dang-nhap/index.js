@@ -3,9 +3,17 @@ import ComingSoonBG from '@assets/dang-nhap/bg.png';
 
 export default function VanChuyen() {
     return (
-        <div className="flex flex-col md:flex-col justify-center items-center max-w-7xl h-auto m-auto mt-12">
-            <h1 className="text-6xl font-bold text-green-800">COMING SOON</h1>
-            <Image src={ComingSoonBG} alt="coming-soon" className="w-full h-auto mt-4" />
+        <div className="flex items-start justify-center relative min-h-screen">
+            <Image 
+                src={ComingSoonBG} 
+                alt="coming-soon" 
+                layout="fill"
+                objectFit="cover"
+                quality={100}
+                className="fixed w-full h-full object-cover top-0 left-0 right-0 bottom-0" 
+            />
+        {/* Other content goes here */}
+            <h1 className="absolute text-2xl lg:text-6xl font-bold text-green-800 mt-48 z-50">COMING SOON</h1>
         </div>
     )
 }

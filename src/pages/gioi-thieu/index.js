@@ -90,7 +90,7 @@ export default function GioiThieu() {
               <div className="w-full m-auto">
                   {locale === "en-US" ? 
                       <VideoComponent videoSrc="/videos/TPG_timeline_ENG.mp4" /> :
-                      <VideoComponent videoSrc="/videos/TPG_timeline.mp4" />
+                      <VideoComponent videoSrc="/videos/TPG_timeline_ENG.mp4" />
                   }
               </div>
           </div>
@@ -110,26 +110,26 @@ export default function GioiThieu() {
           {/* Core Value TPG Section */}
           <div className="flex flex-col lg:flex-row w-full items-start justify-center m-auto h-auto mt-12 p-2">
               <div className=" w-full lg:w-2/5 pr-6">
-                  <h1 className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-4">
+                  <h1 className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-8">
                       {coreValueTPGLocale.title1}
                   </h1>
-                  <h1 className="text-3xl lg:text-4xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-4">
+                  <h1 className="text-3xl lg:text-4xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-8">
                       {coreValueTPGLocale.subTitle1}
                   </h1>
                   <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
                       {coreValueTPGLocale.subDesc1}
                   </p>
-                  <h1 className="text-3xl lg:text-4xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-4">
+                  <h1 className="text-3xl lg:text-4xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-8">
                       {coreValueTPGLocale.subTitle2}
                   </h1>
                   <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
                       {coreValueTPGLocale.subDesc2}
                   </p>
-                  <div className="w-2/3 h-2 bg-green-800 mt-6 mb-6"></div>
-                  <h1 className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-4">
+                  <div className="w-2/3 h-2 bg-green-800 mt-8 mb-8"></div>
+                  <h1 className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-12">
                       {coreValueTPGLocale.title2}
                   </h1>
-                  <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
+                  <p className="text-sm leading-8 tracking-normal text-black mt-8 whitespace-pre-line animate-fadeInSlideIn">
                       {coreValueTPGLocale.desc}
                   </p>
               </div>

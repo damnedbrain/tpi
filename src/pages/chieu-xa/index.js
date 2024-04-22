@@ -55,7 +55,7 @@ export default function ChieuXa() {
                             {foodIrradiationSystemLocale.title}
                         </h1>
                     </div>
-                    <p className="text-sm whitespace-pre-line mt-16">
+                    <p className="flex text-sm whitespace-pre-line mt-16 leading-loose">
                         {foodIrradiationSystemLocale.desc}
                     </p>
 
@@ -87,13 +87,13 @@ export default function ChieuXa() {
                                 <div className="flex flex-col items-center justify-center p-4">
                                     <Image src={foodIrradiationSystemLocale.subDesc[0].imgSrc} alt="food-irradiation" width={500} height={500} className="justify-self-center" />
                                 </div>
-                                <p className="text-black text-sm">
+                                <p className="text-black text-sm leading-loose">
                                 {foodIrradiationSystemLocale.subDesc[0].desc}
                                 </p>
                                 <h1 className="font-bold text-xl text-center mt-8 text-green-800">
                                     {foodIrradiationSystemLocale.subDesc[0].midTitle}
                                 </h1>
-                                <div className="grid grid-cols-2 grid-rows-2 gap-12 p-4 mt-8">
+                                <div className="grid grid-cols-2 grid-rows-2 gap-12 p-4 mt-8 leading-loose">
                                     {foodIrradiationSystemLocale.subDesc[0].desc2.map((item, index) => (
                                         <h1>{item.descc}</h1>
                                     ))}
@@ -105,13 +105,13 @@ export default function ChieuXa() {
                                 <div className="flex flex-col items-center justify-center p-4">
                                     <Image src={foodIrradiationSystemLocale.subDesc[1].imgSrc} alt="food-irradiation" width={500} height={500} className="justify-self-center" />
                                 </div>
-                                <p className="text-black text-sm">
+                                <p className="text-black text-sm leading-loose">
                                 {foodIrradiationSystemLocale.subDesc[1].desc}
                                 </p>
                                 <h1 className="font-bold text-xl text-center mt-8 text-green-800">
                                     {foodIrradiationSystemLocale.subDesc[1].midTitle}
                                 </h1>
-                                <div className="grid grid-cols-2 grid-rows-2 gap-12 p-4 mt-8">
+                                <div className="grid grid-cols-2 grid-rows-2 gap-12 p-4 mt-8 leading-loose">
                                     {foodIrradiationSystemLocale.subDesc[1].desc2.map((item, index) => (
                                         <h1>{item.descc}</h1>
                                     ))}
@@ -123,13 +123,13 @@ export default function ChieuXa() {
                                 <div className="flex flex-col items-center justify-center p-4">
                                     <Image src={foodIrradiationSystemLocale.subDesc[2].imgSrc} alt="food-irradiation" width={500} height={500} className="justify-self-center" />
                                 </div>
-                                <p className="text-black text-sm">
+                                <p className="text-black text-sm leading-loose">
                                 {foodIrradiationSystemLocale.subDesc[2].desc}
                                 </p>
                                 <h1 className="font-bold text-xl text-center mt-8 text-green-800">
                                     {foodIrradiationSystemLocale.subDesc[2].midTitle}
                                 </h1>
-                                <div className="grid grid-cols-2 grid-rows-2 gap-12 p-4 mt-8">
+                                <div className="grid grid-cols-2 grid-rows-2 gap-12 p-4 mt-8 leading-loose">
                                     {foodIrradiationSystemLocale.subDesc[2].desc2.map((item, index) => (
                                         <h1>{item.descc}</h1>
                                     ))}
