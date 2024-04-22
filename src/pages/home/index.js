@@ -165,6 +165,23 @@ export default function Home() {
 
     const [entries, setEntries] = useState([]);
     const [latestEntries, setLatestEntries] = useState([]);
+    const [bannerEntries, setBannerEntries] = useState([]);
+
+    useEffect(() => {
+        async function getBannerEntries() {
+            const entries = await getEntries(
+                "toanPhatMarketNews", 
+                locale, 
+                { 
+                    order: "-sys.createdAt",
+                    limit: 10,
+                    "fields.promo": "true"
+                });
+
+            setBannerEntries(entries.items);
+        }
+        getBannerEntries();
+    }, []);
 
     useEffect(() => {
         async function getPageEntries() {
@@ -200,7 +217,7 @@ export default function Home() {
         getLatestEntries();
     }, []);
 
-    let heroEntries = entries.map((item, index) => {
+    let heroEntries = bannerEntries.map((item, index) => {
         if (item.fields.promo) {
           return {
             url: item.fields.image.fields.file.url,
@@ -214,7 +231,7 @@ export default function Home() {
     }).filter(Boolean);
 
     let highlighEntries = entries.map((item, index) => {
-        if (item.fields.hightLight) { // && item.fields.promo`  
+        if (item.fields.hightLight && item.fields.promo ) { // 
           return {
             url: item.fields.thumbImage.fields.file.url,
             slug: item.fields.slug,
@@ -235,8 +252,18 @@ export default function Home() {
                 {locale === "en-US" ? "TOANPHAT GROUP - Homepage" : "TOANPHAT GROUP- Trang chủ"}
             </title>
         </Head>
-        {/* {console.log(entries)} */}
-        <SlickSlider className='relative' entries={heroEntries}/>
+        {console.log(heroEntries)}
+        <SlickSlider 
+            className='relative' 
+            entries={heroEntries}
+            settings={{
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }}
+        />
         {/* Best Services section*/}
         <div className="flex flex-col md:flex-row md:max-w-7xl h-auto m-auto mt-12"> 
             {bestServicesLocale.sub.map((item, index) => (
