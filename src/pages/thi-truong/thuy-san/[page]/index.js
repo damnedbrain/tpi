@@ -66,7 +66,7 @@ export default function ThiTruongPage() {
                     order: '-sys.createdAt', 
                     limit: pageSize, 
                     skip: pageIndex * pageSize, 
-                    "fields.tags[in]": "Thủy Sản"
+                    "fields.tags[in]": "Thuỷ Sản"
                 }
             );
             setNewsEntries(shortenEntries(res.items));

@@ -66,7 +66,7 @@ export default function ThiTruongPage() {
                     order: '-sys.createdAt', 
                     limit: pageSize, 
                     skip: pageIndex * pageSize, 
-                    "fields.tags[in]": "Thủy Sản"
+                    "fields.tags[in]": "Thuỷ Sản"
                 }
             );
             setNewsEntries(shortenEntries(res.items));
@@ -93,7 +93,8 @@ export default function ThiTruongPage() {
             <title>
                 {locale === "en-US" ? "TOANPHAT GROUP" : "TOANPHAT GROUP"}
             </title>
-            </Head>             
+            </Head>
+            {console.log(newsEntries)}          
             <div className="flex flex-col max-w-7xl h-auto m-auto p-1 items-center justify-center">
                 <h1 className="text-4xl font-extrabold col-span-3 row-span-1 mt-4 mb-2">
                     {locale === "en-US" ? "Seafood" : "Thủy sản"}
