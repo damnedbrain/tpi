@@ -142,7 +142,7 @@ export default function ChieuXa() {
 
                     {/*PRODUCT OF IRRADIATION*/}
                     <div className="flex flex-col w-full items-center justify-center mt-12">
-                        <h1 className="text-4xl text-green-800 font-extrabold col-span-3 row-span-1 mt-4 mb-2">
+                        <h1 className="text-xl text-center lg:text-4xl text-green-800 font-extrabold col-span-3 row-span-1 mt-4 mb-2">
                             {productOfIrradiationLocale.title}
                         </h1>
                         <div className="bg-slate-200 w-1/3 h-1 ml-4 mr-4"></div>

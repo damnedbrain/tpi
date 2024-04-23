@@ -153,7 +153,7 @@ export default function GioiThieu() {
               <h1 className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
                   {sixWordTPGLocale.title}
               </h1>
-              <div className="grid grid-flow-row-dense grid-cols-1 grid-rows-6 sm:grid-cols-3 sm:grid-rows-2 gap-4 w-full mt-4">
+              <div className="flex flex-col lg:grid lg:grid-flow-row-dense lg:grid-cols-3 lg:grid-rows-2 lg:gap-4 w-full mt-1 lg:mt-4">
                   {sixWordTPGLocale.sub.map((item, index) => (
                       <NumberTitleDescWithLink icon={SixWordIcons[index].icon} number={index+1} title={item.title} desc={item.desc} key={index} />
                   ))}
@@ -189,7 +189,7 @@ export default function GioiThieu() {
                   {futureGoalTPGLocale.mainTitle}
               </h1>
               <div className="flex flex-col lg:flex-row w-full items-start justify-center m-auto h-auto mt-6">
-                  <div className="flex flex-col flex-1 mt-4 px-5">
+                  <div className="flex flex-col mt-4 px-5 lg:w-[350px]">
                       <h1 className="text-3xl lg:text-4xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
                           {futureGoalTPGLocale.title1}
                       </h1>
@@ -197,7 +197,7 @@ export default function GioiThieu() {
                           {futureGoalTPGLocale.desc1}
                       </p>
                   </div>
-                  <div className="flex flex-col flex-1 mt-4 px-5">
+                  <div className="flex flex-col mt-4 px-5 lg:w-[350px]">
                       <h1 className="text-3xl lg:text-4xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
                           {futureGoalTPGLocale.title2}
                       </h1>
@@ -205,7 +205,7 @@ export default function GioiThieu() {
                           {futureGoalTPGLocale.desc2}
                       </p>
                   </div>
-                  <div className="flex flex-col flex-1 mt-4 px-5">
+                  <div className="flex flex-col mt-4 px-5 lg:w-[350px]">
                       <h1 className="text-3xl lg:text-4xl font-semiBold text-left text-green-800 animate-fadeInSlideIn">
                           {futureGoalTPGLocale.title3}
                       </h1>
@@ -218,10 +218,10 @@ export default function GioiThieu() {
           {/* Future Goal TPG Section END */}
 
           {/* Team Member TPG Section */}
-          <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
+          <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12 p-1 lg:p-1">
               <div className="flex flex-col lg:flex-row w-full">
-                  <div className="flex flex-col lg:w-1/2 items-start justify-center bg-violet-950 p-2">
-                      <h1 className="text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn px-8">
+                  <div className="flex flex-col lg:w-1/2 items-start justify-center bg-violet-950 p-2 py-4">
+                      <h1 className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 animate-fadeInSlideIn px-8">
                           {teamMemberTPGLocale.titleMain}
                       </h1>
                       <p className="text-sm leading-8 tracking-normal text-white px-8 mt-4 whitespace-pre-line animate-fadeInSlideIn">
@@ -239,7 +239,7 @@ export default function GioiThieu() {
                           }} />
                   </div>
               </div>
-              <div className="flex-row hidden lg:flex w-full items-center justify-center mt-8 p-2 h-auto">
+              <div className="flex-row hidden lg:flex w-full items-center justify-center mt-8 p-0 h-auto">
                   <Image
                       src={TeamMemberExtraImages1}
                       alt="Message Image"
@@ -273,33 +273,17 @@ export default function GioiThieu() {
                   {corpCultureTPGLocale.mainDesc}
               </p>
               <div className="flex flex-col lg:flex-row">
-                  <div className="flex flex-1 p-4">
-                      <h1 className="text-2xl lg:text-3xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-6">
-                          {corpCultureTPGLocale.title1}
-                      </h1>
-                      <h1 className="text-5xl lg:text-6xl p-1 font-bold text-center text-gray-200 animate-fadeIn m-4">1</h1>
-                      <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
-                          {corpCultureTPGLocale.desc1}
-                      </p>
-                  </div>
-                  <div className="flex flex-1 p-4">
-                      <h1 className="text-2xl lg:text-3xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-6">
-                          {corpCultureTPGLocale.title2}
-                      </h1>
-                      <h1 className="text-5xl lg:text-6xl p-1 font-bold text-center text-gray-200 animate-fadeIn m-4">2</h1>
-                      <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
-                          {corpCultureTPGLocale.desc2}
-                      </p>
-                  </div>
-                  <div className="flex flex-1 p-4">
-                      <h1 className="text-2xl lg:text-3xl font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-6">
-                          {corpCultureTPGLocale.title3}
-                      </h1>
-                      <h1 className="text-5xl lg:text-6xl p-1 font-bold text-center text-gray-200 animate-fadeIn m-4">3</h1>
-                      <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
-                          {corpCultureTPGLocale.desc3}
-                      </p>
-                  </div>
+              {Array.from({ length: 3 }).map((_, index) => (
+                    <div key={index} className="flex flex-row p-1 lg:px-8">
+                        <h1 className="text-2xl lg:text-3xl w-1/6 font-semiBold text-left text-green-800 animate-fadeInSlideIn mt-6">
+                            {corpCultureTPGLocale[`title${index + 1}`]}
+                        </h1>
+                        <h1 className="text-5xl lg:text-6xl w-1/6 p-1 font-bold text-center text-gray-200 animate-fadeIn m-4">{index + 1}</h1>
+                        <p className="text-sm w-2/3 leading-8 tracking-normal text-black mt-4 whitespace-pre-line animate-fadeInSlideIn">
+                            {corpCultureTPGLocale[`desc${index + 1}`]}
+                        </p>
+                    </div>
+                ))}                  
               </div>
           </div>
           {/* Corp Culture TPG Section END */}

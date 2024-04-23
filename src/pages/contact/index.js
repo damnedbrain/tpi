@@ -38,48 +38,48 @@ export default function Contact() {
                 <div className="grid lg:grid-cols-2 gap-24 mt-12">
                     {contactInfoLocale.directContact.sub.map((item, index) => (
                         <div key={index} className="flex flex-col items-start">
-                            <h1 className="text-2xl lg:text-3xl font-semiBold text-left text-green-800 mt-1 p-1">
+                            <h1 className="text-xl lg:text-2xl font-semiBold text-left text-green-800 mt-1 p-1">
                                 {item.title}
                             </h1>
-                            <p className="text-xl lg:text-2xl text-left mt-1 p-1">
+                            <p className="text-md lg:text-xl text-left mt-1 p-1">
                                 {item.desc}
                             </p>
-                            <div className="flex flex-row items-start justify-center">                                
-                                <FontAwesomeIcon icon={faLandmark} size="2x" color="green" className="p-2"/>
-                                <p className="text-xl lg:text-2xl font-light lg:font-normal text-left mt-1 p-2">
+                            <div className="flex flex-row items-center justify-center">                                
+                                <FontAwesomeIcon icon={faLandmark} size="1x" color="green" className="p-1"/>
+                                <p className="text-sm font-light lg:font-normal text-left mt-1 p-1">
                                     {item.desc2[0].desc}
                                 </p>
                             </div>
-                            <div className="flex flex-row items-start justify-center">                                
-                                <FontAwesomeIcon icon={faMobileAlt} size="2x" color="green" className="p-2"/>
-                                <p className="text-xl lg:text-2xl font-light lg:font-normal text-left mt-1 p-2">
+                            <div className="flex flex-row items-center justify-center">                                
+                                <FontAwesomeIcon icon={faMobileAlt} size="1x" color="green" className="p-1"/>
+                                <p className="text-sm font-light lg:font-normal text-left mt-1 p-1">
                                     {item.desc2[1].desc}
                                 </p>
                             </div>
-                            <div className="flex flex-row items-start justify-center">                                
-                                <FontAwesomeIcon icon={faPhone} size="2x" color="green" className="p-2"/>
-                                <p className="text-xl lg:text-2xl font-light lg:font-normal text-left mt-1 p-2">
+                            <div className="flex flex-row items-center justify-center">                                
+                                <FontAwesomeIcon icon={faPhone} size="1x" color="green" className="p-1"/>
+                                <p className="text-sm font-light lg:font-normal text-left mt-1 p-1">
                                     {item.desc2[2].desc}
                                 </p>
                             </div>
-                            <div className="flex flex-row items-start justify-center">                                
-                                <FontAwesomeIcon icon={faEnvelope} size="2x" color="green" className="p-2"/>
-                                <p className="text-xl lg:text-2xl font-light lg:font-normal text-left mt-1 p-2 whitespace-pre-line">
+                            <div className="flex flex-row items-center justify-center">                                
+                                <FontAwesomeIcon icon={faEnvelope} size="1x" color="green" className="p-1"/>
+                                <p className="text-sm font-light lg:font-normal text-left mt-1 p-2 whitespace-pre-line">
                                     {item.desc2[3].desc}
                                 </p>
                             </div>
-                            <div className="flex flex-row items-start justify-center">                                
-                                <FontAwesomeIcon icon={faMapMarkedAlt} size="2x" color="green" className="p-2"/>
-                                <p className="text-xl lg:text-2xl font-light lg:font-normal text-left mt-1 p-2 whitespace-pre-line">
+                            <div className="flex flex-row items-center justify-center">                                
+                                <FontAwesomeIcon icon={faMapMarkedAlt} size="1x" color="green" className="p-1"/>
+                                <p className="text-sm font-light lg:font-normal text-left mt-1 p-2 whitespace-pre-line">
                                     {item.desc2[4].desc}
                                 </p>
                             </div>
                             <div className="flex flex-row w-full items-start justify-center pr-11 pl-0">                                
                                 <Link href={item.link1}>
-                                    <FontAwesomeIcon icon={faFacebook} size="3x" color="gray" className="p-2"/>
+                                    <FontAwesomeIcon icon={faFacebook} size="2x" color="gray" className="p-1"/>
                                 </Link>
                                 <Link href={item.link2}>
-                                    <FontAwesomeIcon icon={faYoutube} size="3x" color="gray" className="p-2"/>
+                                    <FontAwesomeIcon icon={faYoutube} size="2x" color="gray" className="p-1"/>
                                 </Link>
                             </div>
                         </div>

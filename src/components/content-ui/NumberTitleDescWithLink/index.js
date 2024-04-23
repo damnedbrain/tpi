@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const NumberTitleDescWithLink = ({ icon, number, title, desc, link, btnText }) => {
     return (
-      <div className="relative flex flex-col items-start text-left space-y-4 m-3">
+      <div className="relative flex flex-col items-start text-left space-y-1 lg:space-y-4 m-3">
         <div className="flex items-center justify-center w-16 h-16">
           <Image
             src={icon}
@@ -23,7 +23,7 @@ const NumberTitleDescWithLink = ({ icon, number, title, desc, link, btnText }) =
               height: "auto"
             }} />
         </div>
-        <h2 className="text-2xl text-green-800 tracking-wide font-bold">{title}</h2>
+        <h2 className="text-2xl text-indigo-950 tracking-wide font-bold">{title}</h2>
         <p className="text-base">{desc}</p>
         <Link href={link ? link : '#'} passHref className="text-green-800 hover:underline">
           {btnText}

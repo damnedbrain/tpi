@@ -14,7 +14,7 @@ export default function EntryPreview({ entry, ellipsis = true}) {
     return (
         <div className="relative flex flex-col w-full overflow-hidden lg:h-full bg-white rounded-md shadow-xs border border-slate-300 my-2">            
             <Image
-                className="block h-32 lg:h-60 object-fit"
+                className="block h-56 object-cover"
                 src={`https:${entry.thumbImage}`}
                 alt={entry.title}
                 width={750}

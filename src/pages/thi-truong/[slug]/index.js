@@ -131,8 +131,9 @@ export default function EntryDetail( { entry, locale }) {
           [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
             // render the EMBEDDED_ASSET as you need
             return (
-                <div className="flex flex-col items-center justify-center">
+                <div className="flex flex-col items-center w-full justify-center object-fill">
                     <Image
+                        className='w-full mt-1 py-1'
                         src={`https:${node.data.target.fields.file.url}`}
                         height={node.data.target.fields.file.details.image.height}
                         width={node.data.target.fields.file.details.image.width}
@@ -189,7 +190,7 @@ export default function EntryDetail( { entry, locale }) {
                         <div className="flex flex-col w-full">
                             {highlightEntries.map((item, index) => {
                                 return (
-                                    <div className="px-4">
+                                    <div className="">
                                         <EntryPreview entry={item} />
                                     </div>
                                 )

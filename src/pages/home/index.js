@@ -313,8 +313,8 @@ export default function Home() {
             {/* {console.log(latestEntries)} */}
             <div className="flex flex-col justify-center items-center w-full p-4">
                 {highlighEntries.map((item, index) => (
-                    <div key={index} className="flex flex-col lg:items-end md:flex-row animate-fadeInSlideIn w-full mt-4">
-                        <div className="flex flex-col lg:w-1/3 p-4">
+                    <div key={index} className="flex flex-col-reverse lg:flex-row lg:items-end animate-fadeInSlideIn w-full mt-4">
+                        <div className="flex flex-col lg:w-1/3 lg:p-4">
                             <h1 className="text-bold text-green-800 font-semiBold text-3xl mb-8">
                                 <Link href={`/thi-truong/${item.slug}`}>{item.title}</Link>
                             </h1>
@@ -324,7 +324,7 @@ export default function Home() {
                             <div className="text-xl italic mb-8">
                                 {item.desc.content[0].content[0].value}                                        
                             </div>
-                            <i className="text-green-800 text-xl mb-16">
+                            <i className="text-green-800 text-xl mb-1 lg:mb-16">
                                 <Link href={`/thi-truong/${item.slug}`}>
                                     {locale === "en-US" ? "Read more >>>" : "Xem thêm >>>"}
                                 </Link>
@@ -335,7 +335,7 @@ export default function Home() {
                             alt={item.alt}
                             width={item.width}
                             height={item.height}
-                            className="lg:w-2/3 p-2"
+                            className="lg:w-2/3 mb-2 lg:p-4"
                             style={{
                                 maxWidth: "100%",
                                 height: "auto",

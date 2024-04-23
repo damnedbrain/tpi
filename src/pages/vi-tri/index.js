@@ -30,7 +30,7 @@ export default function ViTri() {
             </h1>
             <div className="w-full flex flex-col md:flex-row justify-between items-center mt-8">
                 {locale === "vi" ? (
-                    <VideoComponent videoSrc='/videos/location_map_video.mp4' />
+                    <VideoComponent videoSrc='/videos/location_map_video_eng.mp4' />
                 ) : (
                     <VideoComponent videoSrc='/videos/location_map_video_eng.mp4' />
                 )}

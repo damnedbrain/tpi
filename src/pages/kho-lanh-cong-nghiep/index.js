@@ -77,8 +77,8 @@ export default function KhoLanhCongNghiep() {
             </div> */}
             
             <div className="flex flex-row mt-4">
-                <h1 className="text-bold text-gray-400 text-6xl p-4">2</h1>
-                <h1 className="text-bold text-green-800 text-6xl p-4">
+                <h1 className="text-bold text-gray-400 text-4xl lg:text-6xl p-4">2</h1>
+                <h1 className="text-bold text-green-800 text-4xl lg:text-6xl p-4">
                     {coldStorageTopContentLocale.title}
                 </h1>
             </div>

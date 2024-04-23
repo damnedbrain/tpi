@@ -124,7 +124,7 @@ export default function ThiTruong() {
                 <div className="rounded-xl">
                     <Link href="chieu-xa" className='cursor-pointer'>
                         <Image
-                            className="rounded-xl translate-y-14 mt-96"
+                            className="rounded-xl mt-80"
                             src={BottomBanner}
                             alt="Bottom Banner"
                             style={{
