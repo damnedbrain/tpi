@@ -108,8 +108,8 @@ export default function ThiTruong() {
                 <BlogEntries entries={blogEntries} />
                 <PromotionEntries entries={promotionEntries} />
             </div>
-            <div className="hidden lg:flex lg:flex-col w-1/5 mt-28 px-1 lg:p-1">
-                <div className="rounded-xl mb-4 lg:mb-48 lg:mt-2 lg:p-1">
+            <div className="hidden lg:flex lg:flex-col w-1/5">
+                <div className="rounded-xl mt-32">
                     <Link href="kho-lanh-cong-nghiep" className='cursor-pointer'>
                         <Image
                             className="rounded-xl"
@@ -121,10 +121,10 @@ export default function ThiTruong() {
                             }} />
                     </Link>
                 </div>
-                <div className="rounded-xl mb-40 lg:mt-14 lg:p-1">
+                <div className="rounded-xl">
                     <Link href="chieu-xa" className='cursor-pointer'>
                         <Image
-                            className="rounded-xl"
+                            className="rounded-xl translate-y-14 mt-96"
                             src={BottomBanner}
                             alt="Bottom Banner"
                             style={{
