@@ -76,11 +76,14 @@ export default function KhoLanhCongNghiep() {
                 <BreadCrump />
             </div> */}
             
-            <div className="flex flex-row mt-4">
-                <h1 className="text-bold text-gray-400 text-4xl lg:text-6xl p-4">2</h1>
-                <h1 className="text-bold text-green-800 text-4xl lg:text-6xl p-4">
-                    {coldStorageTopContentLocale.title}
-                </h1>
+            <div className="flex flex-row mt-4 justify-end items-end">
+                <h1 className="text-bold text-gray-400 text-5xl lg:text-7xl p-4">2</h1>
+                <div>
+                    <h1 className="text-bold text-green-800 text-4xl lg:text-6xl p-4">
+                        {coldStorageTopContentLocale.title}
+                    </h1>
+                    <div className='h-1 bg-green-800 w-full'></div>
+                </div>
             </div>
             <div className="grid lg:flex lg:flex-row">
                 {kholanhIcons.map((icon, index) => (

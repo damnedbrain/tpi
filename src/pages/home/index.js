@@ -267,7 +267,7 @@ export default function Home() {
         {/* Best Services section*/}
         <div className="flex flex-col md:flex-row md:max-w-7xl h-auto m-auto mt-12"> 
             {bestServicesLocale.sub.map((item, index) => (
-                <div key={index} className="animate-fadeInSlideIn w-full md:w-1/3">
+                <div data-aos="fade-left" key={index} className=" w-full md:w-1/3">
                 <NumberTitleDescWithLink 
                     icon={item.icon} 
                     number={index+1} 
@@ -285,15 +285,15 @@ export default function Home() {
        
         {/*Video Location section*/}
         <div className="flex flex-col max-w-7xl items-center justify-center m-auto h-auto mt-12 p-4">
-            <div className="w-full">
-                <h2 className="text-3xl text-left lg:text-center font-bold text-green-800 animate-fadeInSlideIn">
+            <div data-aos="fade-up" className="w-full">
+                <h2 className="text-3xl text-left lg:text-center font-bold text-green-800 ">
                     {locationMapLocale.title}
                 </h2>
                 <div className="text-left lg:text-center text-base text-gray-600 m-auto animate-fadeIn mt-4">
                     {locationMapLocale.desc}
                 </div>
             </div>
-            <div className="flex flex-col w-full m-auto mt-4">
+            <div data-aos="fade-up" className="flex flex-col w-full m-auto mt-4">
                 {locale === "en-US" ? 
                     <VideoComponent videoSrc="/videos/location_map_video_eng.mp4" /> :
                     <VideoComponent videoSrc="/videos/location_map_video_eng.mp4" />
@@ -305,7 +305,7 @@ export default function Home() {
         {/*News Homepage section*/}
         {/*Big High Light Entries Section*/}
         <div className="flex flex-col md:flex-col justify-center items-center max-w-7xl h-auto m-auto mt-12">
-            <div className="animate-fadeInSlideIn w-full md:w-1/3">
+            <div className=" w-full md:w-1/3">
                 <h2 className="text-3xl text-center font-bold text-green-800">
                     {locale === "en-US" ? "Latest News" : "Tin tức"}
                 </h2>
@@ -313,8 +313,8 @@ export default function Home() {
             {/* {console.log(latestEntries)} */}
             <div className="flex flex-col justify-center items-center w-full p-4">
                 {highlighEntries.map((item, index) => (
-                    <div key={index} className="flex flex-col-reverse lg:flex-row lg:items-end animate-fadeInSlideIn w-full mt-4">
-                        <div className="flex flex-col lg:w-1/3 lg:p-4">
+                    <div data-aos="fade-left" key={index} className="flex flex-col-reverse lg:flex-row lg:items-end  w-full mt-4">
+                        <div data-aos="fade-up" className="flex flex-col lg:w-1/3 lg:p-4">
                             <h1 className="text-bold text-green-800 font-semiBold text-3xl mb-8">
                                 <Link href={`/thi-truong/${item.slug}`}>{item.title}</Link>
                             </h1>
@@ -350,7 +350,7 @@ export default function Home() {
             {/*Latest Entries Section*/}
             <div className="flex flex-col md:flex-row justify-center items-start w-full mt-4 p-1">
                 {latestEntries.map((item, index) => (
-                    <div key={index} className="flex flex-col w-full animate-fadeIn mb-6 p-2">
+                    <div data-aos="fade-up" key={index} className="flex flex-col w-full animate-fadeIn mb-6 p-2">
                         <div className="flex flex-col items-start justify-start w-full mt-0 flex-grow">
                             <Image
                                 src={`https:${item.fields.thumbImage.fields.file.url}`}
@@ -391,12 +391,13 @@ export default function Home() {
                 ))}
             </div>
             {/*End Latest Entries Section*/}
+            <div className='h-1 bg-slate-300 w-80-screen'></div>
             {/*End News Homepage section*/}
             
             {/*Team Members Section*/}
             <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12 p-4">
-                <div className="w-full">
-                    <h2 className="text-3xl text-left lg:text-center font-bold text-green-800 animate-fadeInSlideIn">
+                <div data-aos="fade-up" className="w-full">
+                    <h2 className="text-3xl text-left lg:text-center font-bold text-green-800 ">
                         {teamMemberLocale.titleMain}
                     </h2>
                     <div className="text-left lg:text-center text-base text-gray-600 animate-fadeIn">
@@ -405,7 +406,7 @@ export default function Home() {
                     {/* {console.log(TeamMemberImages.default)} */}
                     <div className="flex flex-row justify-center items-center w-full mt-4">
                         {TeamMemberImages.map((item, index) => (
-                            <div key={index} className="flex flex-col animate-fadeInSlideIn">
+                            <div key={index} className="flex flex-col ">
                                 <Image
                                     src={item}
                                     alt="team"
@@ -427,7 +428,7 @@ export default function Home() {
             {/*End Team Members Section*/}
 
             {/*Company Culture Section*/}
-            <div className="flex flex-col lg:flex-row bg-green-800 items-center justify-center m-auto h-auto mt-12 w-full mx-auto px-0">
+            <div data-aos="fade-up" className="flex flex-col lg:flex-row bg-green-800 items-center justify-center m-auto h-auto mt-12 w-full mx-auto px-0">
                 <div className="lg:w-1/2">
                     <Image
                         src={companyCultureImage}
@@ -440,7 +441,7 @@ export default function Home() {
                         }} />
                 </div>
                 <div className="lg:w-1/2 mb-4">
-                    <h2 className="text-3xl text-left m-4 font-bold text-white animate-fadeInSlideIn">
+                    <h2 className="text-3xl text-left m-4 font-bold text-white ">
                         {companyCultureLocale.title}
                     </h2>
                     <div className="text-left text-base text-white m-4 animate-fadeIn">
@@ -459,11 +460,11 @@ export default function Home() {
                 </div>
             </div>    
             {/*End Company Culture Section*/}
-
+            <div className='h-1 bg-slate-300 w-80-screen mt-8'></div>
             {/*Certification Section*/}
-            <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
+            <div data-aos="fade-up" className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
                 <div className="w-4/5">
-                    <h2 className="text-3xl text-center font-bold text-green-800 animate-fadeInSlideIn">
+                    <h2 className="text-3xl text-center font-bold text-green-800 ">
                         {certificateLocale.titleMain}
                     </h2>
                     <div className="text-center text-base text-gray-600 m-4 animate-fadeIn">
@@ -473,7 +474,7 @@ export default function Home() {
                 <div className="flex flex-col lg:flex-row w-4/5">
                     {CertificationImages.map((item, index) => (
                         <div key={index} className="m-2 w-full">
-                            <div className="flex flex-col animate-fadeInSlideIn">
+                            <div className="flex flex-col ">
                                 <Image
                                     src={item}
                                     alt="cert"
@@ -498,14 +499,14 @@ export default function Home() {
             {/*Partners Section*/}
             <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
                 <div className="lg:w-4/5">
-                    <h2 className="text-3xl text-center font-bold text-green-800 animate-fadeInSlideIn">
+                    <h2 className="text-3xl text-center font-bold text-green-800 ">
                         {partnersLocale.title}
                     </h2>
                 </div>
                 <div className="flex flex-row w-full lg:w-4/5 items-end">
                     {PartnersImages.map((item, index) => (
-                        <div key={index} className="m-2 lg:m-8 w-full">
-                            <div className="flex flex-col animate-fadeInSlideIn">
+                        <div data-aos="fade-left" key={index} className="m-2 lg:m-8 w-full">
+                            <div className="flex flex-col ">
                                 <Image
                                     src={item}
                                     alt="partner"
@@ -524,7 +525,7 @@ export default function Home() {
             {/*Gallery Section*/}
             <div className="flex flex-col w-full items-center justify-center m-auto h-auto my-12">
                 <div className="lg:w-4/5">
-                    <h2 className="text-3xl text-center font-bold text-green-800 animate-fadeInSlideIn">
+                    <h2 className="text-3xl text-center font-bold text-green-800 ">
                         {galleryLocale.title}
                     </h2>
                     <div className="text-center text-base text-gray-600 m-4 animate-fadeIn">

@@ -49,11 +49,14 @@ export default function ChieuXa() {
                     <BreadCrump />
                 </div> */}
                 <div className="flex flex-col items-center justify-end mt-6">
-                    <div className="flex flex-row ">
-                        <h1 className="text-bold text-gray-400 text-6xl p-4">1</h1>
-                        <h1 className="text-bold text-green-800 text-6xl p-4">
-                            {foodIrradiationSystemLocale.title}
-                        </h1>
+                    <div className="flex flex-row justify-end items-end">
+                        <h1 className="text-bold text-gray-400 text-5xl lg:text-7xl p-4">1</h1>
+                        <div>
+                            <h1 className="text-bold text-green-800 text-4xl lg:text-6xl p-4">
+                                {foodIrradiationSystemLocale.title}
+                            </h1>
+                            <div className='h-1 bg-green-800 w-full'></div>
+                        </div>
                     </div>
                     <p className="flex text-sm whitespace-pre-line mt-16 leading-loose">
                         {foodIrradiationSystemLocale.desc}
