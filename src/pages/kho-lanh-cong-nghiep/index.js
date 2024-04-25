@@ -77,17 +77,17 @@ export default function KhoLanhCongNghiep() {
             </div> */}
             
             <div className="flex flex-row mt-4 justify-end items-end">
-                <h1 className="text-bold text-gray-400 text-5xl lg:text-7xl p-4">2</h1>
+                <h1 data-aos='fade-up' className="text-bold text-gray-400 text-5xl lg:text-7xl p-4">2</h1>
                 <div>
-                    <h1 className="text-bold text-green-800 text-4xl lg:text-6xl p-4">
+                    <h1 data-aos='fade-up' className="text-bold text-green-800 text-4xl lg:text-6xl p-4">
                         {coldStorageTopContentLocale.title}
                     </h1>
-                    <div className='h-1 bg-green-800 w-full'></div>
+                    <div data-aos='fadeup' className='h-1 bg-green-800 w-full'></div>
                 </div>
             </div>
             <div className="grid lg:flex lg:flex-row">
                 {kholanhIcons.map((icon, index) => (
-                    <div key={index} className="flex flex-col w-full p-4 items-center justify-start mt-8">
+                    <div data-aos='fade-up' key={index} className="flex flex-col w-full p-4 items-center justify-start mt-8">
                         <Image key={index} src={icon} alt="kholanh-icon" className="w-12 h-auto" />
                         <h1 className="text-xl text-center leading-loose mt-4">
                             {coldStorageTopContentLocale.desc[index].descc}
@@ -96,13 +96,13 @@ export default function KhoLanhCongNghiep() {
                 ))}
             </div>
             <div className="flex flex-col items-center justify-end mt-12">
-                <h1 className="text-5xl font-semiBold text-green-800">
+                <h1 data-aos='fade-up' className="text-5xl font-semiBold text-green-800">
                     {coldStorageTopContentLocale.midTitle}
                 </h1>
             </div>
             <div className="flex flex-col lg:grid lg:grid-cols-3 lg:grid-rows-3 gap-8 mt-8 p-2">
                 {coldStorageTopContentLocale.sub.map((item, index) => (
-                    <div>
+                    <div data-aos='fade-up'>
                         <h1 className="text-4xl lg:text-6xl text-slate-300">{index+1}</h1>
                         <h1 className="text-2xl lg:text-3xl text-green-800">{item.title}</h1>
                         <p className='leading-loose'>{item.desc}</p>
@@ -111,8 +111,8 @@ export default function KhoLanhCongNghiep() {
                 ))}
 
             </div>
-            <Image src={cold1} alt="cold-storage" className="w-full h-auto" />
-            <div className="flex flex-row w-full mt-8">
+            <Image data-aos='fade-up' src={cold1} alt="cold-storage" className="w-full h-auto" />
+            <div data-aos='fade-up' className="flex flex-row w-full mt-8">
                 <Image src={cold2} alt="cold-storage" className="w-1/3 h-auto p-2" />
                 <Image src={cold3} alt="cold-storage" className="w-1/3 h-auto p-2" />
                 <Image src={cold4} alt="cold-storage" className="w-1/3 h-auto p-2" />

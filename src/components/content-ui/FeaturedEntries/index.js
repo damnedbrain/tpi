@@ -204,7 +204,7 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                         <Link href={`/thi-truong${topTagslabelLocale.link[index]}`} legacyBehavior>
                             <a
                                 key={index}
-                                className="font-bold text-xxs lg:text-xl w-full m-1 p-1 lg:p-2 rounded-md -skew-x-12 text-white items-center justify-between text-right whitespace-nowrap"
+                                className="font-semiBold text-xxs lg:text-xl w-full m-[1px] p-1 lg:p-2 rounded-md -skew-x-12 text-white items-center justify-between text-right whitespace-nowrap"
                                 style={{ backgroundImage: `url(/images/thi-truong/tags-image-0${index}.png)`, backgroundSize: 'cover', width: '100%', height: '100%'}}
                             >
                                 {item}

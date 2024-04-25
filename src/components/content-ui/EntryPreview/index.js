@@ -22,11 +22,11 @@ export default function EntryPreview({ entry, ellipsis = true}) {
                 objectFit="cover"
             />
             <div className="flex flex-col w-full justify-between items-center bg-white bg-opacity-80 rounded-b-lg">
-                <div className=" flex flex-row p-2 w-full">
-                    <div className="text-sm text-semiBold text-left w-1/2 text-gray-500">
+                <div className=" flex flex-row p-2 w-full items-end">
+                    <div className="text-xs lg:text-sm text-semiBold text-left w-1/2 text-gray-500">
                         {formatDate(entry.postTime)}
                     </div>
-                    <div className="bg-green-800 rounded-md text-sm text-semiBold text-center w-1/2 text-white ml-4 p-1">
+                    <div className="bg-green-800 rounded-md text-sm text-semiBold text-center w-1/2 text-white ml-36 p-1">
                         {ResolveLabelForContentType({type: entry.type, locale})}
                     </div>
                 </div>

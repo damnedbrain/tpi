@@ -267,7 +267,7 @@ export default function Home() {
         {/* Best Services section*/}
         <div className="flex flex-col md:flex-row md:max-w-7xl h-auto m-auto mt-12"> 
             {bestServicesLocale.sub.map((item, index) => (
-                <div data-aos="fade-left" key={index} className=" w-full md:w-1/3">
+                <div data-aos="fade-up" key={index} className=" w-full md:w-1/3">
                 <NumberTitleDescWithLink 
                     icon={item.icon} 
                     number={index+1} 
@@ -313,7 +313,7 @@ export default function Home() {
             {/* {console.log(latestEntries)} */}
             <div className="flex flex-col justify-center items-center w-full p-4">
                 {highlighEntries.map((item, index) => (
-                    <div data-aos="fade-left" key={index} className="flex flex-col-reverse lg:flex-row lg:items-end  w-full mt-4">
+                    <div data-aos="fade-up" key={index} className="flex flex-col-reverse lg:flex-row lg:items-end  w-full mt-4">
                         <div data-aos="fade-up" className="flex flex-col lg:w-1/3 lg:p-4">
                             <h1 className="text-bold text-green-800 font-semiBold text-3xl mb-8">
                                 <Link href={`/thi-truong/${item.slug}`}>{item.title}</Link>
@@ -391,7 +391,7 @@ export default function Home() {
                 ))}
             </div>
             {/*End Latest Entries Section*/}
-            <div className='h-1 bg-slate-300 w-80-screen'></div>
+            <div data-aos='fade-up' className='h-[2px] bg-slate-300 w-80-screen'></div>
             {/*End News Homepage section*/}
             
             {/*Team Members Section*/}
@@ -460,7 +460,7 @@ export default function Home() {
                 </div>
             </div>    
             {/*End Company Culture Section*/}
-            <div className='h-1 bg-slate-300 w-80-screen mt-8'></div>
+            <div data-aos='fade-up' className='h-[2px] bg-slate-300 w-80-screen mt-8'></div>
             {/*Certification Section*/}
             <div data-aos="fade-up" className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
                 <div className="w-4/5">
@@ -505,7 +505,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-row w-full lg:w-4/5 items-end">
                     {PartnersImages.map((item, index) => (
-                        <div data-aos="fade-left" key={index} className="m-2 lg:m-8 w-full">
+                        <div data-aos="fade-up" key={index} className="m-2 lg:m-8 w-full">
                             <div className="flex flex-col ">
                                 <Image
                                     src={item}

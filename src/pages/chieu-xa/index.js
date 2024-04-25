@@ -48,7 +48,7 @@ export default function ChieuXa() {
                 {/* <div className='w-full left-0 items-start justify-start self-start italic px-4 py-2 bg-slate-100'>
                     <BreadCrump />
                 </div> */}
-                <div data-aos='fade-left' className="flex flex-col items-center justify-end mt-6">
+                <div data-aos='fade-up' className="flex flex-col items-center justify-end mt-6">
                     <div className="flex flex-row justify-end items-end">
                         <h1 className="text-bold text-gray-400 text-5xl lg:text-7xl p-4">1</h1>
                         <div>
@@ -66,19 +66,19 @@ export default function ChieuXa() {
                     <div data-aos='fade-up' className="bg-white shadow-md rounded my-6">
                         <div className="flex items-end">
                             <button
-                                className={`rounded-t-xl p-4  w-1/3 py-4 ${currentTab === 'tab1' ? 'bg-green-800 text-white border-t-2 border-l-2 border-r-2 border-green-800' : 'text-slate-800'}`}
+                                className={`rounded-t-xl p-4 text-sm overflow-auto lg:text-base  w-1/3 py-4 ${currentTab === 'tab1' ? 'bg-green-800 text-white border-t-2 border-l-2 border-r-2 border-green-800' : 'text-slate-800'}`}
                                 onClick={() => setCurrentTab('tab1')}
                             >
                                 {foodIrradiationSystemLocale.subDesc[0].title}
                             </button>
                             <button
-                                className={`rounded-t-xl p-4 w-1/3 py-4 ${currentTab === 'tab2' ? 'bg-green-800 text-white border-t-2 border-l-2 border-r-2 border-green-800' : 'text-slate-800'}`}
+                                className={`rounded-t-xl p-4 text-sm overflow-auto lg:text-base w-1/3 py-4 ${currentTab === 'tab2' ? 'bg-green-800 text-white border-t-2 border-l-2 border-r-2 border-green-800' : 'text-slate-800'}`}
                                 onClick={() => setCurrentTab('tab2')}
                             >
                                 {foodIrradiationSystemLocale.subDesc[1].title}
                             </button>
                             <button
-                                className={`rounded-t-xl p-4 w-1/3 py-4 ${currentTab === 'tab3' ? 'bg-green-800 text-white border-t-2 border-l-2 border-r-2 border-green-800' : 'text-slate-800'}`}
+                                className={`rounded-t-xl p-4 text-sm overflow-auto lg:text-base w-1/3 py-4 ${currentTab === 'tab3' ? 'bg-green-800 text-white border-t-2 border-l-2 border-r-2 border-green-800' : 'text-slate-800'}`}
                                 onClick={() => setCurrentTab('tab3')}
                             >
                                 {foodIrradiationSystemLocale.subDesc[2].title}
@@ -145,17 +145,17 @@ export default function ChieuXa() {
 
                     {/*PRODUCT OF IRRADIATION*/}
                     <div className="flex flex-col w-full items-center justify-center mt-12">
-                        <h1 data-aos='fade-left' className="text-xl text-center lg:text-4xl text-green-800 font-extrabold col-span-3 row-span-1 mt-4 mb-2">
+                        <h1 data-aos='fade-up' className="text-xl text-center lg:text-4xl text-green-800 font-extrabold col-span-3 row-span-1 mt-4 mb-2">
                             {productOfIrradiationLocale.title}
                         </h1>
                         <div className="bg-slate-200 w-1/3 h-1 ml-4 mr-4"></div>
-                        <div className="grid grid-cols-4 w-full justify-center items-start mt-12">
+                        <div className="grid grid-cols-4 w-full justify-center items-start mt-12 mb-8">
                             {productImages.map((item, index) => (
-                                <div data-aos='fade-up' className="flex flex-col items-center justify-center p-2">
+                                <div data-aos='fade-up' className="flex flex-col items-center justify-center p-1 lg:p-2">
                                     <div className="m-4 w-max h-auto">
                                         <Image src={item} alt="product" width={72} height={72} className="rounded-full p-2 bg-green-100" />
                                     </div>
-                                    <h1 className='text-center'>
+                                    <h1 className='text-xs lg:text-md text-center'>
                                         {productOfIrradiationLocale.subDesc[index].desc}
                                     </h1>
                                 </div>
