@@ -167,6 +167,9 @@ export default function Home() {
     const [latestEntries, setLatestEntries] = useState([]);
     const [bannerEntries, setBannerEntries] = useState([]);
 
+    const isBrowser = typeof window !== 'undefined';
+    const animation = isBrowser && window.innerWidth > 768 ? 'fade-up' : 'fade-left';
+
     useEffect(() => {
         async function getBannerEntries() {
             const entries = await getEntries(
@@ -252,8 +255,10 @@ export default function Home() {
                 {locale === "en-US" ? "TOANPHAT GROUP - Homepage" : "TOANPHAT GROUP- Trang chủ"}
             </title>
         </Head>
-        {console.log(heroEntries)}
-        <SlickSlider 
+        {/*Hero section*/}
+        <SlickSlider
+            data-aos={animation}
+            data-aos-easing='ease-in-out'
             className='relative' 
             entries={heroEntries}
             settings={{
@@ -267,7 +272,12 @@ export default function Home() {
         {/* Best Services section*/}
         <div className="flex flex-col md:flex-row md:max-w-7xl h-auto m-auto mt-12"> 
             {bestServicesLocale.sub.map((item, index) => (
-                <div data-aos="fade-up" key={index} className=" w-full md:w-1/3">
+                <div
+                    data-aos={animation}
+                    data-aos-delay={index * 500}
+                    data-aos-easing='ease-in-out' 
+                    key={index} className=" w-full md:w-1/3"
+                >
                 <NumberTitleDescWithLink 
                     icon={item.icon} 
                     number={index+1} 
@@ -285,7 +295,7 @@ export default function Home() {
        
         {/*Video Location section*/}
         <div className="flex flex-col max-w-7xl items-center justify-center m-auto h-auto mt-12 p-4">
-            <div data-aos="fade-up" className="w-full">
+            <div  className="w-full">
                 <h2 className="text-3xl text-left lg:text-center font-bold text-green-800 ">
                     {locationMapLocale.title}
                 </h2>
@@ -293,7 +303,7 @@ export default function Home() {
                     {locationMapLocale.desc}
                 </div>
             </div>
-            <div data-aos="fade-up" className="flex flex-col w-full m-auto mt-4">
+            <div  className="flex flex-col w-full m-auto mt-4">
                 {locale === "en-US" ? 
                     <VideoComponent videoSrc="/videos/location_map_video_eng.mp4" /> :
                     <VideoComponent videoSrc="/videos/location_map_video_eng.mp4" />
@@ -313,24 +323,25 @@ export default function Home() {
             {/* {console.log(latestEntries)} */}
             <div className="flex flex-col justify-center items-center w-full p-4">
                 {highlighEntries.map((item, index) => (
-                    <div data-aos="fade-up" key={index} className="flex flex-col-reverse lg:flex-row lg:items-end  w-full mt-4">
-                        <div data-aos="fade-up" className="flex flex-col lg:w-1/3 lg:p-4">
-                            <h1 className="text-bold text-green-800 font-semiBold text-3xl mb-8">
+                    <div  key={index} className="flex flex-col-reverse lg:flex-row lg:items-end  w-full mt-4">
+                        <div  className="flex flex-col lg:w-1/3 lg:p-4">
+                            <h1 data-aos={animation} className="text-bold text-green-800 font-semiBold text-3xl mb-8">
                                 <Link href={`/thi-truong/${item.slug}`}>{item.title}</Link>
                             </h1>
-                            <h1 className='font-bold mb-4'>
+                            <h1 data-aos={animation} data-aos-delay='300' className='font-bold mb-4'>
                                 {formatDate(item.date)}
                             </h1>
-                            <div className="text-xl italic mb-8">
+                            <div data-aos={animation} data-aos-delay='600' className="text-xl italic mb-8">
                                 {item.desc.content[0].content[0].value}                                        
                             </div>
-                            <i className="text-green-800 text-xl mb-1 lg:mb-16">
+                            <i data-aos={animation} data-aos-delay='900' className="text-green-800 text-xl mb-1 lg:mb-16">
                                 <Link href={`/thi-truong/${item.slug}`}>
                                     {locale === "en-US" ? "Read more >>>" : "Xem thêm >>>"}
                                 </Link>
                             </i>
                         </div>
                         <Image
+                            data-aos={animation}
                             src={`https:${item.url}`}
                             alt={item.alt}
                             width={item.width}
@@ -350,7 +361,7 @@ export default function Home() {
             {/*Latest Entries Section*/}
             <div className="flex flex-col md:flex-row justify-center items-start w-full mt-4 p-1">
                 {latestEntries.map((item, index) => (
-                    <div data-aos="fade-up" key={index} className="flex flex-col w-full animate-fadeIn mb-6 p-2">
+                    <div data-aos={animation} data-aos-delay={index * 300} key={index} className="flex flex-col w-full animate-fadeIn mb-6 p-2">
                         <div className="flex flex-col items-start justify-start w-full mt-0 flex-grow">
                             <Image
                                 src={`https:${item.fields.thumbImage.fields.file.url}`}
@@ -391,12 +402,12 @@ export default function Home() {
                 ))}
             </div>
             {/*End Latest Entries Section*/}
-            <div data-aos='fade-up' className='h-[2px] bg-slate-300 w-80-screen'></div>
+            
             {/*End News Homepage section*/}
             
             {/*Team Members Section*/}
             <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12 p-4">
-                <div data-aos="fade-up" className="w-full">
+                <div  className="w-full">
                     <h2 className="text-3xl text-left lg:text-center font-bold text-green-800 ">
                         {teamMemberLocale.titleMain}
                     </h2>
@@ -428,7 +439,7 @@ export default function Home() {
             {/*End Team Members Section*/}
 
             {/*Company Culture Section*/}
-            <div data-aos="fade-up" className="flex flex-col lg:flex-row bg-green-800 items-center justify-center m-auto h-auto mt-12 w-full mx-auto px-0">
+            <div  className="flex flex-col lg:flex-row bg-green-800 items-center justify-center m-auto h-auto mt-12 w-full mx-auto px-0">
                 <div className="lg:w-1/2">
                     <Image
                         src={companyCultureImage}
@@ -460,9 +471,9 @@ export default function Home() {
                 </div>
             </div>    
             {/*End Company Culture Section*/}
-            <div data-aos='fade-up' className='h-[2px] bg-slate-300 w-80-screen mt-8'></div>
+            <div ></div>
             {/*Certification Section*/}
-            <div data-aos="fade-up" className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
+            <div  className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
                 <div className="w-4/5">
                     <h2 className="text-3xl text-center font-bold text-green-800 ">
                         {certificateLocale.titleMain}
@@ -505,7 +516,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-row w-full lg:w-4/5 items-end">
                     {PartnersImages.map((item, index) => (
-                        <div data-aos="fade-up" key={index} className="m-2 lg:m-8 w-full">
+                        <div  key={index} className="m-2 lg:m-8 w-full">
                             <div className="flex flex-col ">
                                 <Image
                                     src={item}

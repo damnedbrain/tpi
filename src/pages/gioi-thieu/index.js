@@ -62,11 +62,11 @@ export default function GioiThieu() {
             <BreadCrump />
         </div> */}
           {/* About TPG Section */}
-          <div data-aos='fade-up' className="flex flex-col w-full items-start justify-center m-auto h-auto mt-6 p-2">
-              <h1 data-aos="fade-up" className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 ">
+          <div  className="flex flex-col w-full items-start justify-center m-auto h-auto mt-6 p-2">
+              <h1  className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 ">
                   {aboutTPGLocale.title}
               </h1>
-              <p data-aos="fade-up" className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line ">
+              <p  className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line ">
                   {aboutTPGLocale.desc}
               </p>
               <Image
@@ -84,7 +84,7 @@ export default function GioiThieu() {
 
           {/* History Video TPG Section */}
           <div className="flex flex-col w-full items-start justify-center m-auto h-auto mt-12 p-2">
-              <h1 data-aos="fade-up" className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 ">
+              <h1  className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 ">
                   {locale === "vi" ? "Lịch sử phát triển TOANPHAT GROUP" : "Company Milestones and Achievement"}
               </h1>
               <div className="w-full m-auto">
@@ -97,7 +97,7 @@ export default function GioiThieu() {
           {/* History Video TPG Section END */}
           <div className='h-[2px] bg-slate-300 w-80-screen'></div>
           {/* Thong Diep TPG Section */}
-          <div data-aos="fade-up" className="flex flex-col w-full items-start justify-center m-auto h-auto mt-12 p-2">
+          <div  className="flex flex-col w-full items-start justify-center m-auto h-auto mt-12 p-2">
               <h1 className="text-3xl lg:text-5xl font-semiBold text-left text-green-800 ">
                   {thongDiepTPGLocale.title}
               </h1>
@@ -110,7 +110,7 @@ export default function GioiThieu() {
           {/* Core Value TPG Section */}
           <div className="flex flex-col lg:flex-row w-full items-start justify-center m-auto h-auto mt-12 p-2">
           
-              <div data-aos="fade-right" className=" w-full lg:w-2/5 pr-6">
+              <div  className=" w-full lg:w-2/5 pr-6">
                 
                   <h1 className="text-4xl lg:text-5xl font-semiBold text-left text-green-800  mt-8">
                       {coreValueTPGLocale.title1}
@@ -135,7 +135,7 @@ export default function GioiThieu() {
                       {coreValueTPGLocale.desc}
                   </p>
               </div>
-              <div data-aos="fade-up" className="w-full lg:w-3/5 items-start justify-center">
+              <div  className="w-full lg:w-3/5 items-start justify-center">
                   <Image
                       src={MissionValueImage}
                       alt="Message Image"
@@ -152,12 +152,12 @@ export default function GioiThieu() {
 
           {/* Six Word TPG Section */}
           <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
-              <h1 data-aos='fade-up' className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 ">
+              <h1  className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 ">
                   {sixWordTPGLocale.title}
               </h1>
               <div className="flex flex-col lg:grid lg:grid-flow-row-dense lg:grid-cols-3 lg:grid-rows-2 lg:gap-4 w-full mt-1 lg:mt-4">
                   {sixWordTPGLocale.sub.map((item, index) => (
-                      <div data-aos='fade-up'>
+                      <div >
                           <NumberTitleDescWithLink icon={SixWordIcons[index].icon} number={index+1} title={item.title} desc={item.desc} key={index} />
                       </div>
                   ))}
@@ -167,7 +167,7 @@ export default function GioiThieu() {
 
           {/* Future Goal TPG Section */}
           <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12 p-2">
-              <div data-aos='fade-up' className="flex flex-row w-full items-center justify-center">
+              <div  className="flex flex-row w-full items-center justify-center">
                   <Image
                       src={FutureGoalImage1}
                       alt="Message Image"
@@ -189,11 +189,11 @@ export default function GioiThieu() {
                           height: "auto"
                       }} />
               </div>
-              <h1 data-aos='fade-up' className="text-4xl lg:text-5xl font-semiBold text-left text-green-800  mt-6">
+              <h1  className="text-4xl lg:text-5xl font-semiBold text-left text-green-800  mt-6">
                   {futureGoalTPGLocale.mainTitle}
               </h1>
               <div className="flex flex-col lg:flex-row w-full items-start justify-center m-auto h-auto mt-6">
-                  <div data-aos='fade-up' className="flex flex-col mt-4 px-5 lg:w-[350px]">
+                  <div  className="flex flex-col mt-4 px-5 lg:w-[350px]">
                       <h1 className={`text-2xl ${locale === 'en-US' ? 'lg:h-[72px] lg:text-3xl' : 'text-4xl'} font-semiBold text-left text-green-800`}>
                           {futureGoalTPGLocale.title1}
                       </h1>
@@ -201,7 +201,7 @@ export default function GioiThieu() {
                           {futureGoalTPGLocale.desc1}
                       </p>
                   </div>
-                  <div data-aos='fade-up' className="flex flex-col mt-4 px-5 lg:w-[350px]">
+                  <div  className="flex flex-col mt-4 px-5 lg:w-[350px]">
                       <h1 className={`text-2xl ${locale === 'en-US' ? 'lg:h-[72px] lg:text-3xl' : 'text-4xl'} font-semiBold text-left text-green-800`}>
                           {futureGoalTPGLocale.title2}
                       </h1>
@@ -209,7 +209,7 @@ export default function GioiThieu() {
                           {futureGoalTPGLocale.desc2}
                       </p>
                   </div>
-                  <div data-aos='fade-up' className="flex flex-col mt-4 px-5 lg:w-[350px]">
+                  <div  className="flex flex-col mt-4 px-5 lg:w-[350px]">
                       <h1 className={`text-2xl ${locale === 'en-US' ? 'lg:h-[72px] lg:text-3xl' : 'text-4xl'} font-semiBold text-left text-green-800`}>
                           {futureGoalTPGLocale.title3}
                       </h1>
@@ -222,7 +222,7 @@ export default function GioiThieu() {
           {/* Future Goal TPG Section END */}
 
           {/* Team Member TPG Section */}
-          <div data-aos='fade-up' className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12 p-1 lg:p-1">
+          <div  className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12 p-1 lg:p-1">
               <div className="flex flex-col lg:flex-row w-full">
                   <div className="flex flex-col lg:w-1/2 items-start justify-center bg-violet-950 p-2 py-4">
                       <h1 className="text-4xl lg:text-5xl font-semiBold text-left text-green-800  px-8">
@@ -243,7 +243,7 @@ export default function GioiThieu() {
                           }} />
                   </div>
               </div>
-              <div data-aos='fade-up' className="flex-row hidden lg:flex w-full items-center justify-center mt-8 p-0 h-auto">
+              <div  className="flex-row hidden lg:flex w-full items-center justify-center mt-8 p-0 h-auto">
                   <Image
                       src={TeamMemberExtraImages1}
                       alt="Message Image"
@@ -278,7 +278,7 @@ export default function GioiThieu() {
               </p>
               <div className="flex flex-col lg:flex-row">
               {Array.from({ length: 3 }).map((_, index) => (
-                    <div data-aos='fade-up' key={index} className="flex flex-row p-1 lg:px-8">
+                    <div  key={index} className="flex flex-row p-1 lg:px-8">
                         <h1 className={`text-2xl ${locale === 'en-US' ? 'lg:text-md w-1/3' : 'lg:text-3xl w-1/6'} font-semiBold text-left text-green-800 whitespace-pre-wrap mt-6 `}>
                             {corpCultureTPGLocale[`title${index + 1}`]}
                         </h1>

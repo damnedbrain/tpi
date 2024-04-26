@@ -7,6 +7,8 @@ const NumberTitleDescWithLink = ({ icon, number, title, desc, link, btnText }) =
       <div className="relative flex flex-col items-start text-left space-y-1 lg:space-y-4 m-3">
         <div className="flex items-center justify-center w-16 h-16">
           <Image
+            data-aos='fade-up'
+            data-aos-duration='800'
             src={icon}
             alt=''
             width={64}
@@ -23,12 +25,12 @@ const NumberTitleDescWithLink = ({ icon, number, title, desc, link, btnText }) =
               height: "auto"
             }} />
         </div>
-        <h2 className="text-2xl text-indigo-950 tracking-wide font-bold">{title}</h2>
-        <p className="text-base">{desc}</p>
-        <Link href={link ? link : '#'} passHref className="text-green-800 hover:underline">
+        <h2 data-aos='fade-up' data-aos-duration='800' data-aos-delay='300' className="text-2xl text-indigo-950 tracking-wide font-bold">{title}</h2>
+        <p data-aos='fade-up' data-aos-duration='800' data-aos-delay='600' className="text-base">{desc}</p>
+        <Link data-aos='fade-up' data-aos-duration='800' data-aos-delay='900' href={link ? link : '#'} passHref className="text-green-800 hover:underline">
           {btnText}
         </Link>
-        <div className="absolute right-12 text-right text-9xl font-bold z-10 opacity-10">{number}</div>
+        <div data-aos='fade-left' data-aos-duration='800' data-aos-delay='1200' className="absolute right-12 text-right text-gray-200 text-9xl font-bold z-10 opacity-10">{number}</div>
       </div>
     );
 };

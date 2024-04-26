@@ -23,7 +23,7 @@ export default function QuestionAndAnswer() {
                 <BreadCrump />
             </div> */}
             <Image
-                data-aos='fade-up'
+                
                 src={QAImage}
                 alt="Q&A"
                 className="w-full p-4 rounded-xl"
@@ -33,15 +33,15 @@ export default function QuestionAndAnswer() {
                     maxWidth: "100%",
                     height: "auto"
                 }} />
-            <h1 data-aos='fade-up' className="text-4xl lg:text-6xl font-bold w-full text-center mt-2 text-green-800">
+            <h1  className="text-4xl lg:text-6xl font-bold w-full text-center mt-2 text-green-800">
                 {questionContentLocale.title}
             </h1>
-            <p data-aos='fade-up' className="text-xl w-full text-center mt-8 text-gray-600">
+            <p  className="text-xl w-full text-center mt-8 text-gray-600">
                 {questionContentLocale.desc}
             </p>
-            <div data-aos='fade-up' className="flex flex-col mt-12">
+            <div  className="flex flex-col mt-12">
                 {questionContentLocale.sub.map((item, index) => (
-                    <div data-aos='fadeup' key={index} className="flex flex-row border-4 m-4 rounded-xl">
+                    <div  key={index} className="flex flex-row border-4 m-4 rounded-xl">
                         <h1 className="text-2xl lg:text-6xl font-semiBold text-center text-green-800 p-4">{index + 1}</h1>
                         <div>
                             <h1 className="text-1xl lg:text-2xl font-semiBold text-left text-green-800 p-4">
