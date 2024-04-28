@@ -49,7 +49,8 @@ export default function GioiThieu() {
     const teamMemberTPGLocale = teamMember.find((item) => item.locale === locale);
 
     const corpCultureTPGLocale = CorpCulture.find((item) => item.locale === locale);
-
+    const isBrowser = typeof window !== 'undefined';
+    const animation = isBrowser && window.innerWidth > 768 ? 'fade-up' : 'fade-left';
 
   return <>
         <Head>
@@ -62,14 +63,16 @@ export default function GioiThieu() {
             <BreadCrump />
         </div> */}
           {/* About TPG Section */}
-          <div  className="flex flex-col w-full items-start justify-center m-auto h-auto mt-6 p-2">
-              <h1  className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 ">
+          <div className="flex flex-col w-full items-start justify-center m-auto h-auto mt-6 p-2">
+              <h1 data-aos={animation} className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 ">
                   {aboutTPGLocale.title}
               </h1>
-              <p  className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line ">
+              <p data-aos={animation} data-aos-delay='300' className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line ">
                   {aboutTPGLocale.desc}
               </p>
               <Image
+                  data-aos={animation}
+                  data-aos-delay='600'
                   src={AboutUsImage}
                   alt="About Us Image"
                   className="mt-4 w-full "
@@ -84,10 +87,10 @@ export default function GioiThieu() {
 
           {/* History Video TPG Section */}
           <div className="flex flex-col w-full items-start justify-center m-auto h-auto mt-12 p-2">
-              <h1  className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 ">
+              <h1 data-aos={animation} className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 ">
                   {locale === "vi" ? "Lịch sử phát triển TOANPHAT GROUP" : "Company Milestones and Achievement"}
               </h1>
-              <div className="w-full m-auto">
+              <div data-aos={animation} data-aos-delay='300' className="w-full m-auto">
                   {locale === "en-US" ? 
                       <VideoComponent videoSrc="/videos/TPG_timeline_ENG.mp4" /> :
                       <VideoComponent videoSrc="/videos/TPG_timeline_ENG.mp4" />
@@ -97,11 +100,11 @@ export default function GioiThieu() {
           {/* History Video TPG Section END */}
           <div className='h-[2px] bg-slate-300 w-80-screen'></div>
           {/* Thong Diep TPG Section */}
-          <div  className="flex flex-col w-full items-start justify-center m-auto h-auto mt-12 p-2">
-              <h1 className="text-3xl lg:text-5xl font-semiBold text-left text-green-800 ">
+          <div className="flex flex-col w-full items-start justify-center m-auto h-auto mt-12 p-2">
+              <h1 data-aos={animation} className="text-3xl lg:text-5xl font-semiBold text-left text-green-800 ">
                   {thongDiepTPGLocale.title}
               </h1>
-              <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line ">
+              <p data-aos={animation} data-aos-delay='300' className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line ">
                   {thongDiepTPGLocale.desc}
               </p>
           </div>
@@ -110,33 +113,35 @@ export default function GioiThieu() {
           {/* Core Value TPG Section */}
           <div className="flex flex-col lg:flex-row w-full items-start justify-center m-auto h-auto mt-12 p-2">
           
-              <div  className=" w-full lg:w-2/5 pr-6">
+              <div className=" w-full lg:w-2/5 pr-6">
                 
-                  <h1 className="text-4xl lg:text-5xl font-semiBold text-left text-green-800  mt-8">
+                  <h1 data-aos={animation} className="text-4xl lg:text-5xl font-semiBold text-left text-green-800  mt-8">
                       {coreValueTPGLocale.title1}
                   </h1>
-                  <h1 className="{`text-2xl ${locale === 'en-US' ? 'lg:text-3xl' : 'text-4xl'} font-semiBold text-left text-green-800`}  mt-8">
+                  <h1 data-aos={animation} data-aos-delay='200' className="{`text-2xl ${locale === 'en-US' ? 'lg:text-3xl' : 'text-4xl'} font-semiBold text-left text-green-800`}  mt-8">
                       {coreValueTPGLocale.subTitle1}
                   </h1>
-                  <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line ">
+                  <p data-aos={animation} data-aos-delay='400' className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line ">
                       {coreValueTPGLocale.subDesc1}
                   </p>
-                  <h1 className="{`text-2xl ${locale === 'en-US' ? 'lg:text-3xl' : 'text-4xl'} font-semiBold text-left text-green-800`}  mt-8">
+                  <h1 data-aos={animation} data-aos-delay='600' className="{`text-2xl ${locale === 'en-US' ? 'lg:text-3xl' : 'text-4xl'} font-semiBold text-left text-green-800`}  mt-8">
                       {coreValueTPGLocale.subTitle2}
                   </h1>
-                  <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line ">
+                  <p data-aos={animation} data-aos-delay='800' className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line ">
                       {coreValueTPGLocale.subDesc2}
                   </p>
-                  <div className="w-2/3 h-2 bg-green-800 mt-8 mb-8"></div>
-                  <h1 className="text-4xl lg:text-5xl font-semiBold text-left text-green-800  mt-12">
+                  <div data-aos={animation} data-aos-delay='800' className="w-2/3 h-2 bg-green-800 mt-8 mb-8"></div>
+                  <h1 data-aos={animation} data-aos-delay='800' className="text-4xl lg:text-5xl font-semiBold text-left text-green-800  mt-12">
                       {coreValueTPGLocale.title2}
                   </h1>
-                  <p className="text-sm leading-8 tracking-normal text-black mt-8 whitespace-pre-line ">
+                  <p data-aos={animation} data-aos-delay='800' className="text-sm leading-8 tracking-normal text-black mt-8 whitespace-pre-line ">
                       {coreValueTPGLocale.desc}
                   </p>
               </div>
-              <div  className="w-full lg:w-3/5 items-start justify-center">
+              <div className="w-full lg:w-3/5 items-start justify-center">
                   <Image
+                      data-aos={animation}
+                      data-aos-delay='600'
                       src={MissionValueImage}
                       alt="Message Image"
                       className="mt-4 w-full "
@@ -155,7 +160,7 @@ export default function GioiThieu() {
               <h1  className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 ">
                   {sixWordTPGLocale.title}
               </h1>
-              <div className="flex flex-col lg:grid lg:grid-flow-row-dense lg:grid-cols-3 lg:grid-rows-2 lg:gap-4 w-full mt-1 lg:mt-4">
+              <div data-aos={animation} data-aos-duration='600' className="flex flex-col lg:grid lg:grid-flow-row-dense lg:grid-cols-3 lg:grid-rows-2 lg:gap-4 w-full mt-1 lg:mt-4">
                   {sixWordTPGLocale.sub.map((item, index) => (
                       <div >
                           <NumberTitleDescWithLink icon={SixWordIcons[index].icon} number={index+1} title={item.title} desc={item.desc} key={index} />
@@ -169,6 +174,7 @@ export default function GioiThieu() {
           <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12 p-2">
               <div  className="flex flex-row w-full items-center justify-center">
                   <Image
+                      data-aos={animation}                      
                       src={FutureGoalImage1}
                       alt="Message Image"
                       className="mt-4 w-1/2 "
@@ -179,6 +185,8 @@ export default function GioiThieu() {
                           height: "auto"
                       }} />
                   <Image
+                      data-aos={animation}
+                      data-aos-delay='300'
                       src={FutureGoalImage2}
                       alt="Message Image"
                       className="mt-4 w-1/2 "
@@ -193,7 +201,7 @@ export default function GioiThieu() {
                   {futureGoalTPGLocale.mainTitle}
               </h1>
               <div className="flex flex-col lg:flex-row w-full items-start justify-center m-auto h-auto mt-6">
-                  <div  className="flex flex-col mt-4 px-5 lg:w-[350px]">
+                  <div data-aos={animation} className="flex flex-col mt-4 px-5 lg:w-[350px]">
                       <h1 className={`text-2xl ${locale === 'en-US' ? 'lg:h-[72px] lg:text-3xl' : 'text-4xl'} font-semiBold text-left text-green-800`}>
                           {futureGoalTPGLocale.title1}
                       </h1>
@@ -201,7 +209,7 @@ export default function GioiThieu() {
                           {futureGoalTPGLocale.desc1}
                       </p>
                   </div>
-                  <div  className="flex flex-col mt-4 px-5 lg:w-[350px]">
+                  <div data-aos={animation} data-aos-delay='300' className="flex flex-col mt-4 px-5 lg:w-[350px]">
                       <h1 className={`text-2xl ${locale === 'en-US' ? 'lg:h-[72px] lg:text-3xl' : 'text-4xl'} font-semiBold text-left text-green-800`}>
                           {futureGoalTPGLocale.title2}
                       </h1>
@@ -209,7 +217,7 @@ export default function GioiThieu() {
                           {futureGoalTPGLocale.desc2}
                       </p>
                   </div>
-                  <div  className="flex flex-col mt-4 px-5 lg:w-[350px]">
+                  <div data-aos={animation} data-aos-delay='600' className="flex flex-col mt-4 px-5 lg:w-[350px]">
                       <h1 className={`text-2xl ${locale === 'en-US' ? 'lg:h-[72px] lg:text-3xl' : 'text-4xl'} font-semiBold text-left text-green-800`}>
                           {futureGoalTPGLocale.title3}
                       </h1>
@@ -224,16 +232,18 @@ export default function GioiThieu() {
           {/* Team Member TPG Section */}
           <div  className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12 p-1 lg:p-1">
               <div className="flex flex-col lg:flex-row w-full">
-                  <div className="flex flex-col lg:w-1/2 items-start justify-center bg-violet-950 p-2 py-4">
-                      <h1 className="text-4xl lg:text-5xl font-semiBold text-left text-green-800  px-8">
+                  <div data-aos={animation} className="flex flex-col lg:w-1/2 items-start justify-center bg-violet-950 p-2 py-4">
+                      <h1 data-aos={animation} className="text-4xl lg:text-5xl font-semiBold text-left text-green-800  px-8">
                           {teamMemberTPGLocale.titleMain}
                       </h1>
-                      <p className="text-sm leading-8 tracking-normal text-white px-8 mt-4 whitespace-pre-line ">
+                      <p data-aos={animation} data-aos-delay='300' className="text-sm leading-8 tracking-normal text-white px-8 mt-4 whitespace-pre-line ">
                           {teamMemberTPGLocale.desc}
                       </p>
                   </div>
                   <div className="flex flex-row lg:w-1/2 items-center justify-center h-auto">
                       <Image
+                          data-aos={animation}
+                          data-aos-delay='300'
                           src={TeamMemberImage}
                           alt="Message Image"
                           className="w-full "
@@ -243,8 +253,9 @@ export default function GioiThieu() {
                           }} />
                   </div>
               </div>
-              <div  className="flex-row hidden lg:flex w-full items-center justify-center mt-8 p-0 h-auto">
+              <div className="flex-row hidden lg:flex w-full items-center justify-center mt-8 p-0 h-auto">
                   <Image
+                      data-aos={animation}                      
                       src={TeamMemberExtraImages1}
                       alt="Message Image"
                       className="w-1/2 "
@@ -255,6 +266,8 @@ export default function GioiThieu() {
                           height: "auto"
                       }} />
                   <Image
+                      data-aos={animation}
+                      data-aos-delay='300'
                       src={TeamMemberExtraImages2}
                       alt="Message Image"
                       className="w-1/2 "
@@ -270,19 +283,19 @@ export default function GioiThieu() {
 
           {/* Corp Culture TPG Section */}
           <div id="corp-culture" className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12 p-2">
-              <h1 className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 ">
+              <h1 data-aos={animation} className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 ">
                   {corpCultureTPGLocale.mainTitle}
               </h1>
-              <p className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line ">
+              <p data-aos={animation} data-aos-delay='300' className="text-sm leading-8 tracking-normal text-black mt-4 whitespace-pre-line ">
                   {corpCultureTPGLocale.mainDesc}
               </p>
               <div className="flex flex-col lg:flex-row">
               {Array.from({ length: 3 }).map((_, index) => (
-                    <div  key={index} className="flex flex-row p-1 lg:px-8">
+                    <div data-aos='fade-up' data-aos-delay={index * 300} key={index} className="flex flex-row p-1 lg:px-8">
                         <h1 className={`text-2xl ${locale === 'en-US' ? 'lg:text-md w-1/3' : 'lg:text-3xl w-1/6'} font-semiBold text-left text-green-800 whitespace-pre-wrap mt-6 `}>
                             {corpCultureTPGLocale[`title${index + 1}`]}
                         </h1>
-                        <h1 className="text-5xl lg:text-6xl w-1/6 p-1 font-bold text-center text-gray-200 animate-fadeIn m-4">{index + 1}</h1>
+                        <h1 data-aos='fade' data-aos-delay={index * 450} className="text-5xl lg:text-6xl w-1/6 p-1 font-bold text-center text-gray-200 animate-fadeIn m-4">{index + 1}</h1>
                         <p className="text-sm w-2/3 leading-8 tracking-normal text-black mt-4 whitespace-pre-line ">
                             {corpCultureTPGLocale[`desc${index + 1}`]}
                         </p>
