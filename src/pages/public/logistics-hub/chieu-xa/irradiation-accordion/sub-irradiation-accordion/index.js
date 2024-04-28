@@ -1,1 +1,0 @@
-export { default as SubIrrdiationAccordion } from './SubIrradiationAccordion.component';

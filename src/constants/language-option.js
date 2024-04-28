@@ -1,46 +1,29 @@
-import { RoutePages } from './router';
-
-import facebookButton from '@assets/icons/facebook-button.png';
-import youtubeButton from '@assets/icons/youtube-button.png';
-const item1_link1 = ' https://www.facebook.com/chieuxatoanphat';
-const item1_link2 = ' https://www.youtube.com/channel/UCJoEaA2uVz0YXs2iWCanQOA';
-const item2_link1 = ' https://www.facebook.com/kholanhtoanphat';
-const item2_link2 = ' https://www.youtube.com/channel/UCJoEaA2uVz0YXs2iWCanQOA';
-
-import addressIcon from '@assets/icons/address.png';
-import hotlineIcon from '@assets/icons/hotline.png';
-import phoneIcon from '@assets/icons/phone.png';
-import mailIcon from '@assets/icons/mail.png';
-import taxIcon from '@assets/icons/tax.png';
-
+import BS_ChieuXaIcon from '@assets/best-services/chieu-xa.png';
+import BS_LuuTruIcon from '@assets/best-services/luu-tru.png';
+import BS_VanChuyenIcon from '@assets/best-services/van-chuyen.png';
 import cobaltIMG from '@assets/chieu-xa/Cobalt-60.jpg';
 import ebeamIMG from '@assets/chieu-xa/ebeam.jpg';
 import xrayIMG from '@assets/chieu-xa/X-Ray.png';
+import addressIcon from '@assets/icons/address.png';
+import facebookButton from '@assets/icons/facebook-button.png';
+import hotlineIcon from '@assets/icons/hotline.png';
+import mailIcon from '@assets/icons/mail.png';
+import phoneIcon from '@assets/icons/phone.png';
+import taxIcon from '@assets/icons/tax.png';
+import youtubeButton from '@assets/icons/youtube-button.png';
+
+import { RoutePages } from './router';
+
+const item1_link1 = 'https://www.facebook.com/chieuxatoanphat';
+const item1_link2 = 'https://www.youtube.com/channel/UCJoEaA2uVz0YXs2iWCanQOA';
+const item2_link1 = 'https://www.facebook.com/kholanhtoanphat';
+const item2_link2 = 'https://www.youtube.com/channel/UCJoEaA2uVz0YXs2iWCanQOA';
 
 export const headerMenu = [
   {
     locale: 'vi',
     titles: [
       { title: 'Giới thiệu', status: '', link: RoutePages.ABOUT_US },
-      // {
-      //   title: 'Lĩnh vực tiên phong',
-      //   sub: [
-      //     {
-      //       title: 'Chiếu xạ',
-      //       status: 'sub',
-      //       link: RoutePages.CHIEU_XA,
-      //     },
-      //     {
-      //       title: 'Kho lạnh lưu trữ',
-      //       status: 'sub',
-      //       link: RoutePages.COLD_STORAGE,
-      //     },
-      //   ],
-      //   status: 'wrapper',
-      //   link: '',
-      // },
-
-      //{ title: 'Logistics HUB', status: '', link: RoutePages.Logistics_HUB }, // new
       {
         //Binh add
         title: 'Logistics HUB',
@@ -65,31 +48,13 @@ export const headerMenu = [
         link: '',
       },
 
-      { title: 'Vị trí', status: '', link: RoutePages.LOCATION }, // new
-      /*{
-        title: `Khách hàng & đối tác`,
-        status: '',
-        link: RoutePages.CUSTOMER_AND_PARTNER,
-      },*/ // new
-      {
+      { title: 'Vị trí', status: '', link: RoutePages.LOCATION },      {
         title: `Tin tức`,
         status: '',
         link: RoutePages.MARKET,
       }, // new
       {
         title: 'FAQs',
-        /*sub: [
-          {
-            title: 'Hỗ trợ',
-            status: 'sub',
-            link: RoutePages.SUPPORT,
-          },
-          {
-            title: 'Q&A',
-            status: 'sub',
-            link: RoutePages.QUESTION_AND_ANSWER,
-          },
-        ],*/
         status: '',
         link: RoutePages.QUESTION_AND_ANSWER,
       }, //new
@@ -103,35 +68,12 @@ export const headerMenu = [
         status: '',
         link: RoutePages.LOGIN,
       }, // new
-
-      // { title: 'Mục tiêu phát triển', status: '', link: RoutePages.GOALS },
-      // { title: 'Khách hàng', status: '', link: RoutePages.CUSTOMER },
-      // { title: 'Hỗ trợ', status: '', link: RoutePages.SUPPORT },
-      // { title: 'Q&A', status: '', link: RoutePages.QUESTION_AND_ANSWER },
     ],
   },
   {
     locale: 'en-US',
     titles: [
       { title: 'About Us', status: '', link: RoutePages.ABOUT_US },
-      // {
-      //   title: 'Pioneering Field',
-      //   sub: [
-      //     {
-      //       title: 'Irradiation',
-      //       status: 'sub',
-      //       link: RoutePages.CHIEU_XA,
-      //     },
-      //     {
-      //       title: 'Cold Storage',
-      //       status: 'sub',
-      //       link: RoutePages.COLD_STORAGE,
-      //     },
-      //   ],
-      //   status: 'wrapper',
-      //   link: '',
-      // },
-
       {
         //Binh add
         title: 'Logistics HUB',
@@ -156,11 +98,6 @@ export const headerMenu = [
         link: '',
       },
       { title: 'Location', status: '', link: RoutePages.LOCATION }, // new
-      /*{
-        title: 'Customer & Partner',
-        status: '',
-        link: RoutePages.CUSTOMER_AND_PARTNER,
-      },*/ // new
       {
         title: `News`,
         status: '',
@@ -168,18 +105,6 @@ export const headerMenu = [
       }, // new
       {
         title: 'FAQs',
-        // sub: [
-        //   {
-        //     title: 'Support',
-        //     status: 'sub',
-        //     link: RoutePages.SUPPORT,
-        //   },
-        //   {
-        //     title: 'Q&A',
-        //     status: 'sub',
-        //     link: RoutePages.QUESTION_AND_ANSWER,
-        //   },
-        // ],
         status: '',
         link: RoutePages.QUESTION_AND_ANSWER,
       }, //new
@@ -192,11 +117,7 @@ export const headerMenu = [
         title: `Login`,
         status: '',
         link: RoutePages.LOGIN,
-      }, // new
-      // { title: 'Goals', status: '', link: RoutePages.GOALS },
-      // { title: 'Customer', status: '', link: RoutePages.CUSTOMER },
-      // { title: 'Support', status: '', link: RoutePages.SUPPORT },
-      // { title: 'Q&A', status: '', link: RoutePages.QUESTION_AND_ANSWER },
+      },
     ],
   },
 ];
@@ -231,18 +152,21 @@ export const bestServices = [
         title: 'Chiếu Xạ',
         desc: ` TPG là một trong những đơn vị tiên phong trên thị trường hiện nay ứng dụng cả 3 công nghệ chiếu xạ: Cobalt-60, E-Beam, X-ray nhằm đẩy nhanh tiến độ xử lý hàng hóa và đảm bảo chất lượng tốt nhất cho Nông - Thuỷ sản. `,
         linksrc: RoutePages.CHIEU_XA,
+        icon: BS_ChieuXaIcon,
         btnText: 'Xem thêm >>'
       },
       {
         title: 'Kho Lạnh Lưu Trữ',
         desc: ` TPG xây dựng và đưa vào vận hành Kho Lạnh Toàn Phát với tổng số vị trí 12.000 pallet, tương đương với sức chứa lưu trữ tối đa lên đến 12.000 tấn. Nhiệt độ lưu trữ từ -20°C (+/-2°C), kho làm lạnh nhanh: -35°C.`,
         linksrc: RoutePages.COLD_STORAGE,
+        icon: BS_LuuTruIcon,
         btnText: 'Xem thêm >>'
       },
       {
         title: 'Vận Chuyển',
         desc: ` Chúng tôi hướng đến trở thành một Trung tâm Logistics với đầy đủ chức năng: Chiếu xạ - Lưu trữ - Vận chuyển, nhằm tối ưu chi phí, tạo đòn bẩy cạnh tranh cho hoạt động xuất khẩu Nông - Thủy sản.`,
         linksrc: RoutePages.Logistics_HUB,
+        icon: BS_VanChuyenIcon,
         btnText: 'Xem thêm >>'
       },
     ],
@@ -255,18 +179,21 @@ export const bestServices = [
         title: 'Irradiation service',
         desc: `With a view to accelerating the processing of the merchandise, TPG is one of the leading companies on the market today; in order to be certain of providing a good quality of Agricultural – Fishing products, TPG applies all three irradiation technologies - namely, Cobalt-60, E-Beam and X- ray.`,
         linksrc: RoutePages.CHIEU_XA,
+        icon: BS_ChieuXaIcon,
         btnText: 'Read more >>'
       },
       {
         title: 'Refrigerated Warehouse rental service',
         desc: `The Toan Phat Refrigerated Warehouse has been constructed and operated by the TPG with a total of 12.000 pallets, enough to allow for a maximum capacity of 12.000 tons. The storage temperature ranges from -20 degrees Celsius (+/-2 degrees Celsius) to the quick cooling warehouse: -35 degrees Celsius.`,
         linksrc: RoutePages.COLD_STORAGE,
+        icon: BS_LuuTruIcon,
         btnText: 'Read more >>'
       },
       {
         title: 'Transport service',
         desc: `We aim to become a Logistics Center supplying a variety of services: Irradiation, Storage, and Transport, developing to optimize expenses, and creating a competitive avenue for exports of Agricultural and Aquacultural products.`,
         linksrc: RoutePages.Logistics_HUB,
+        icon: BS_VanChuyenIcon,
         btnText: 'Read more >>'
       },
     ],
@@ -383,7 +310,7 @@ export const irradiationFlow = [
   },
 ];
 
-export const trustedBy = [
+export const partners = [
   {
     locale: 'vi',
     title: 'Được tin cậy bởi các đối tác hàng đầu',
@@ -400,64 +327,14 @@ export const teamMember = [
     title: 'Đội ngũ nhân sự & Văn hóa doanh nghiệp',
     titleMain: 'Đội ngũ nhân sự',
     desc: `Mỗi cá nhân sẽ tạo nên tập thể, từng đóng góp nhỏ là tiền đề của những thành quả lớn. Tại TPG, chúng tôi trân trọng giá trị của từng cá nhân, từ lãnh đạo, quản lý cấp cao am hiểu kiến thức chuyên môn đến những người trẻ với nguồn năng lượng tích cực và ham học hỏi. Một tập thể luôn coi trọng lợi ích chung và hướng đến sự cải tiến sẽ tạo nên một doanh nghiệp phát triển vững mạnh. Và tất cả những giá trị, kết quả tích cực đó đều được hình thành từ việc coi trọng Văn hóa doanh nghiệp. `,
-    sub: [
-      {
-        title: 'Tên',
-        desc: `Chức vụ`,
-      },
-      {
-        title: 'Tên',
-        desc: `Chức vụ`,
-      },
-      {
-        title: 'Tên',
-        desc: `Chức vụ`,
-      },
-      {
-        title: 'Tên',
-        desc: `Chức vụ`,
-      },
-      {
-        title: 'Tên',
-        desc: `Chức vụ`,
-      },
-      {
-        title: 'Tên',
-        desc: `Chức vụ`,
-      },
-    ],
+    
   },
   {
     locale: 'en-US',
     title: 'Human resources',
     titleMain: 'Human resources',
     desc: `Each person will be an integral part of the team, because even the smallest of contributions can be a key to a great achievement. At TPG, we respect the value of each individual, from leaders and senior managers with professional knowledge to young people with positive energy and eagerness to learn. A successful business will be a team that values common interests and seeks improvement. A respect of corporate culture is at the heart of all these values and positive results.`,
-    sub: [
-      {
-        title: 'Name goes here',
-        desc: `Tittle goes here`,
-      },
-      {
-        title: 'Name goes here',
-        desc: `Tittle goes here`,
-      },
-      {
-        title: 'Name goes here',
-        desc: `Tittle goes here`,
-      },
-      {
-        title: 'Name goes here',
-        desc: `Tittle goes here`,
-      },
-      {
-        title: 'Name goes here',
-        desc: `Tittle goes here`,
-      },
-      {
-        title: 'Name goes here',
-        desc: `Tittle goes here`,
-      },
-    ],
+    
   },
 ];
 
@@ -506,7 +383,7 @@ export const certificate = [
   },
 ];
 
-export const leaderIndustrial = [
+export const companyCulture = [
   {
     locale: 'vi',
     title: 'Văn hóa doanh nghiệp',
@@ -645,7 +522,7 @@ export const testimonial = [
   },
 ];
 
-export const ourProject = [
+export const GalleryDesc = [
   {
     locale: 'vi',
     title: 'Thư viện',
@@ -827,7 +704,7 @@ export const foodIrradiationSystem = [
         title: 'Hệ thống máy chiếu xạ bằng nguồn Cobalt-60 sử dụng tia Gamma',
         eventKey: 'cobalt-60',
         imgSrc: cobaltIMG,
-        desc: `Phương pháp chiếu xạ bằng tia Gamma sử dụng bức xạ tạo ra bởi sự phân rã của đồng vị phóng xạ Cobalt-60. Những chất này phát ra các photon có năng lượng cao (1,17MeV và 1,33MeV), có khả năng xuyên thấu vào thực phẩm đến độ sâu vài chục cm, vậy nên đặc biệt thích hợp để xử lý các sản phẩm có tỷ trọng cao. Quá trình chiếu xạ Gamma được ứng dụng để khử trùng, xử lý hiệu quả nhiều loại sản phẩm khác nhau như: thiết bị y tế, dược phẩm, mỹ phẩm, thực phẩm và thiết bị gia dụng…`,
+        desc: `Phương pháp chiếu xạ bằng tia Gamma sử dụng bức xạ tạo ra bởi sự phân rã của đồng vị phóng xạ Cobalt-60. Đồng vị này phát ra các photon có năng lượng cao (1,17MeV và 1,33MeV), có khả năng xuyên thấu vào thực phẩm đến độ sâu vài chục cm, vậy nên đặc biệt thích hợp để xử lý các sản phẩm có tỷ trọng cao. Quá trình chiếu xạ Gamma được ứng dụng để khử trùng, xử lý hiệu quả nhiều loại sản phẩm khác nhau như: thiết bị y tế, dược phẩm, mỹ phẩm, thực phẩm và thiết bị gia dụng…`,
         midTitle: `Ưu điểm của phương pháp chiếu xạ bằng tia Gamma`,
         desc2: [
           {
@@ -848,7 +725,7 @@ export const foodIrradiationSystem = [
         title: 'Hệ thống máy chiếu xạ E-Beam sử dụng chùm tia Electron',
         eventKey: 'e-beam',
         imgSrc: ebeamIMG,
-        desc: `Quá trình chiếu xạ bằng công nghệ E-Beam sử dụng bức xạ ion hoá là Electron năng lượng cao. Các Electron được tạo ra bởi Electron Gun, được gia tốc bởi sóng cao tần qua cấu trúc cộng hưởng sử dụng nguồn điện. Electron có điện tích âm, khối lượng nhỏ do đó dễ dàng tương tác với các nguyên tử trong thực phẩm và gây ra phản ứng rất nhanh trên các phân tử hoặc vi sinh vật.`,
+        desc: `Quá trình chiếu xạ bằng công nghệ E-Beam sử dụng bức xạ ion hoá là Electron năng lượng cao. Các Electron được tạo ra bởi Electron Gun, được gia tốc bởi sóng cao tần qua cấu trúc cộng hưởng năng lượng sóng cao tần được khuếch đại từ nguồn điện. Electron có điện tích âm, khối lượng nhỏ và năng lượng lớn, do đó dễ dàng tương tác với các nguyên tử, phân tử trong thực phẩm thông qua các hiệu ứng sơ cấp, thứ cấp và gây ra phản ứng rất nhanh trên các phân tử hoặc vi sinh vật.`,
         midTitle: `Ưu điểm của phương pháp chiếu xạ bằng chùm tia Electron`,
         desc2: [
           {
@@ -867,7 +744,7 @@ export const foodIrradiationSystem = [
         title: 'Hệ thống máy chiếu xạ Bremsstrahlung (X-ray) sử dụng tia X',
         eventKey: 'x-ray',
         imgSrc: xrayIMG,
-        desc: `Công nghệ chiếu xạ bằng tia X là một phương pháp được phát triển dựa trên công nghệ chiếu xạ bằng chùm tia điện tử. Electron được tạo ra trong thiết bị có năng lượng từ 5MeV - 7,5MeV. Các Electron tương tác với tấm Titanium tạo ra Tia X - Bremsstrahlung (bức xạ hãm).`,
+        desc: `Công nghệ chiếu xạ bằng tia X là một phương pháp được phát triển dựa trên công nghệ chiếu xạ bằng chùm tia điện tử. Electron được tạo ra trong thiết bị có mức năng lượng 5 MeV và 7,5 MeV. Các Electron tương tác với tấm Tantalum tạo ra Tia X - Bremsstrahlung (bức xạ hãm).`,
         midTitle: `Ưu điểm của công nghệ chiếu xạ bằng tia X`,
         desc2: [
           {
@@ -1317,19 +1194,12 @@ export const LocationMapContent = [
   },
 ];
 
-export const contactAConsultant = [
+export const contactInfo = [
   {
     locale: 'vi',
     title: 'Thông tin liên hệ',
     desc: ``,
-    username: { label: `Họ tên`, desc: `Nhập họ tên vào đây` },
-    phone: { label: `Số điện thoại`, desc: `Nhập số điện thoại vào đây`,},
-    email: { label: `Email`, desc: `Nhập Email vào đây`,},
-    address: { label: `Địa chỉ`, desc: `Nhập địa chỉ vào đây` },
-    typeProduct: { label: `Loại hàng`, desc: `Nhập loại hàng vào đây` },
-    register: { title: `Đăng ký`, label1: `Chiếu xạ`, label2: `Gửi kho` },
-    note: { label: `Ghi chú`, desc: `Nhập ghi chú vào đây` },
-    button: `Gửi thông tin`,
+    
     directContact: {
       title: `Liên hệ trực tiếp`,
       sub: [
@@ -1410,14 +1280,7 @@ export const contactAConsultant = [
     locale: 'en-US',
     title: 'Contact Info',
     desc: ``,
-    username: { label: `Họ tên`, desc: `Nhập họ tên vào đây` },
-    phone: { label: `Số điện thoại`, desc: `Nhập số điện thoại vào đây`,},
-    email: { label: `Email`, desc: `Nhập Email vào đây`,},
-    address: { label: `Địa chỉ`, desc: `Nhập địa chỉ vào đây` },
-    typeProduct: { label: `Loại hàng`, desc: `Nhập loại hàng vào đây` },
-    register: { title: `Đăng ký`, label1: `Chiếu xạ`, label2: `Gửi kho` },
-    note: { label: `Ghi chú`, desc: `Nhập ghi chú vào đây` },
-    button: `Gửi thông tin`,
+    
     directContact: {
       title: `Liên hệ trực tiếp`,
       sub: [
@@ -1749,7 +1612,7 @@ Các nhà máy vận hành công nghệ chiếu xạ phải tuân theo quy trìn
   {
     number: 11,
     title: 'Thời gian hoạt động của Nhà máy Chiếu xạ Toàn Phát và Kho Lạnh Toàn Phát như thế nào?',
-    desc: 'Nhà máy Chiếu xạ Toàn Phát và Kho Lạnh Toàn Phát hoạt động 24/7 kể cả các ngày Lễ Tết, Quý Khách hàng có nhu cầu tư vấn, đăng ký sử dụng dịch vụ chiếu xạ và lưu trữ kho lạnh vui lòng liên hệ Hotline 093 100 0001 hoặc 092 191 6999.',
+    desc: 'Nhà máy Chiếu xạ Toàn Phát và Kho Lạnh Toàn Phát hoạt động 24/7 kể cả các ngày Lễ Tết, Quý Khách hàng có nhu cầu tư vấn, đăng ký sử dụng dịch vụ chiếu xạ và lưu trữ kho lạnh vui lòng liên hệ Hotline 093 100 0001.',
   },
     ],
   },
@@ -1817,7 +1680,7 @@ Inhibition of germination and ripening: irradiation can be used to inhibit germi
   {
     number: 11,
     title: 'What Is the operating time of Toan Phat Irradiation Factory and Toan Phat Refrigerated Warehouse?',
-    desc: 'The Toan Phat Irradiation Factory and Toan Phat Refrigerated Warehouse operate continuously 24/7 including holidays or new year period. For further assistance with consultation or registration of irradiation and refrigerated warehouse service, please contact us via Hotline 093 100 0001 or 092 191 6999.',
+    desc: 'The Toan Phat Irradiation Factory and Toan Phat Refrigerated Warehouse operate continuously 24/7 including holidays or new year period. For further assistance with consultation or registration of irradiation and refrigerated warehouse service, please contact us via Hotline 093 100 0001.',
   },
     ],
   },
@@ -2079,4 +1942,43 @@ export const contactBarLabel = [
     kholanh: "TPRW",
     chieuxa: "TPI",
   },
+];
+
+export const  topTagslabel =  [
+  {
+    locale: 'vi',
+    mainLabel: "Chuyên mục",
+    topTags: [
+      "Nông Sản",
+      "Thủy Sản",
+      "Chiếu Xạ",
+      "Kho Lạnh",
+      "Xuất Nhập Khẩu",
+    ],
+    link: [
+      "/nong-san",
+      "/thuy-san",
+      "/chieu-xa",
+      "/kho-lanh",
+      "/xuat-nhap-khau",
+    ]
+  },
+  {
+    locale: 'en-US',
+    mainLabel: "Categories",
+    topTags: [
+      "Agricultural",
+      "Seafood",
+      "Irradiation",
+      "Refrigerated Warehouse",
+      "Logistics",
+    ],
+    link: [
+      "/nong-san",
+      "/thuy-san",
+      "/chieu-xa",
+      "/kho-lanh",
+      "/xuat-nhap-khau",
+    ]
+  }
 ];

@@ -1,1 +1,0 @@
-export { default as BigNewsContent } from './BigNewsContent.component';

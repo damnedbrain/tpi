@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://toanphatgroup.com
+
+# Sitemaps
+Sitemap: https://toanphatgroup.com/sitemap.xml

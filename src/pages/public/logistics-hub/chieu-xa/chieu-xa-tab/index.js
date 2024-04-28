@@ -1,1 +1,0 @@
-export { default as ChieuXaTab } from './ChieuXaTab.component';
