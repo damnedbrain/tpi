@@ -167,8 +167,27 @@ export default function Home() {
     const [latestEntries, setLatestEntries] = useState([]);
     const [bannerEntries, setBannerEntries] = useState([]);
 
-    const isBrowser = typeof window !== 'undefined';
-    const animation = isBrowser && window.innerWidth > 768 ? 'fade-up' : 'fade-left';
+    const [animation, setAnimation] = useState('fade-left');
+    useEffect(() => {
+        const handleResize = () => {
+          if (window.innerWidth <= 768) {
+            setAnimation('fade-up');
+          } else {
+            setAnimation('fade-left');
+          }
+        };
+    
+        // Call the function once to set the initial state
+        handleResize();
+    
+        // Attach the event listener
+        window.addEventListener('resize', handleResize);
+    
+        // Clean up the event listener when the component unmounts
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+      }, []);
 
     useEffect(() => {
         async function getBannerEntries() {

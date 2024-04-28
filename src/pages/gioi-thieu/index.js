@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
 import AboutUsImage from '@/assets/gioi-thieu/About-Us-Image.png';
 import FutureGoalImage1 from '@/assets/gioi-thieu/future-goal-1.png';
@@ -49,8 +50,27 @@ export default function GioiThieu() {
     const teamMemberTPGLocale = teamMember.find((item) => item.locale === locale);
 
     const corpCultureTPGLocale = CorpCulture.find((item) => item.locale === locale);
-    const isBrowser = typeof window !== 'undefined';
-    const animation = isBrowser && window.innerWidth > 768 ? 'fade-up' : 'fade-left';
+    const [animation, setAnimation] = useState('fade-left');
+    useEffect(() => {
+        const handleResize = () => {
+          if (window.innerWidth <= 768) {
+            setAnimation('fade-up');
+          } else {
+            setAnimation('fade-left');
+          }
+        };
+    
+        // Call the function once to set the initial state
+        handleResize();
+    
+        // Attach the event listener
+        window.addEventListener('resize', handleResize);
+    
+        // Clean up the event listener when the component unmounts
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+      }, []);
 
   return <>
         <Head>
