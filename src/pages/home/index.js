@@ -270,7 +270,8 @@ export default function Home() {
             }}
         />
         {/* Best Services section*/}
-        <div className="flex flex-col md:flex-row md:max-w-7xl h-auto m-auto mt-12"> 
+        <h1 data-aos={animation} className="text-3xl text-left mt-12 lg:text-center font-bold text-green-800">{bestServicesLocale.title}</h1>
+        <div className="flex flex-col md:flex-row md:max-w-7xl h-auto m-auto mt-12">
             {bestServicesLocale.sub.map((item, index) => (
                 <div
                     data-aos={animation}
@@ -295,15 +296,15 @@ export default function Home() {
        
         {/*Video Location section*/}
         <div className="flex flex-col max-w-7xl items-center justify-center m-auto h-auto mt-12 p-4">
-            <div  className="w-full">
-                <h2 className="text-3xl text-left lg:text-center font-bold text-green-800 ">
+            <div className="w-full">
+                <h2 data-aos={animation} className="text-3xl text-left lg:text-center font-bold text-green-800 ">
                     {locationMapLocale.title}
                 </h2>
-                <div className="text-left lg:text-center text-base text-gray-600 m-auto animate-fadeIn mt-4">
+                <div data-aos={animation} className="text-left lg:text-center text-base text-gray-600 m-auto animate-fadeIn mt-4">
                     {locationMapLocale.desc}
                 </div>
             </div>
-            <div  className="flex flex-col w-full m-auto mt-4">
+            <div data-aos={animation} className="flex flex-col w-full m-auto mt-4">
                 {locale === "en-US" ? 
                     <VideoComponent videoSrc="/videos/location_map_video_eng.mp4" /> :
                     <VideoComponent videoSrc="/videos/location_map_video_eng.mp4" />
@@ -408,16 +409,16 @@ export default function Home() {
             {/*Team Members Section*/}
             <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12 p-4">
                 <div  className="w-full">
-                    <h2 className="text-3xl text-left lg:text-center font-bold text-green-800 ">
+                    <h2 data-aos={animation} className="text-3xl text-left lg:text-center font-bold text-green-800 ">
                         {teamMemberLocale.titleMain}
                     </h2>
-                    <div className="text-left lg:text-center text-base text-gray-600 animate-fadeIn">
+                    <div data-aos={animation} data-aos-delay='300' className="text-left lg:text-center text-base text-gray-600 animate-fadeIn">
                         {teamMemberLocale.desc}
                     </div>
                     {/* {console.log(TeamMemberImages.default)} */}
                     <div className="flex flex-row justify-center items-center w-full mt-4">
                         {TeamMemberImages.map((item, index) => (
-                            <div key={index} className="flex flex-col ">
+                            <div data-aos={animation} data-aos-delay={(index+1)*300} key={index} className="flex flex-col ">
                                 <Image
                                     src={item}
                                     alt="team"
@@ -440,7 +441,7 @@ export default function Home() {
 
             {/*Company Culture Section*/}
             <div  className="flex flex-col lg:flex-row bg-green-800 items-center justify-center m-auto h-auto mt-12 w-full mx-auto px-0">
-                <div className="lg:w-1/2">
+                <div data-aos={animation} className="lg:w-1/2">
                     <Image
                         src={companyCultureImage}
                         alt="culture"
@@ -452,20 +453,20 @@ export default function Home() {
                         }} />
                 </div>
                 <div className="lg:w-1/2 mb-4">
-                    <h2 className="text-3xl text-left m-4 font-bold text-white ">
+                    <h2 data-aos={animation} data-aos-delay='300' className="text-3xl text-left m-4 font-bold text-white ">
                         {companyCultureLocale.title}
                     </h2>
-                    <div className="text-left text-base text-white m-4 animate-fadeIn">
+                    <div data-aos={animation} data-aos-delay='600' className="text-left text-base text-white m-4 animate-fadeIn">
                         {companyCultureLocale.desc}
                     </div>
                     <div className="text-left text-base text-white m-4 animate-fadeIn">
                         {companyCultureLocale.subDesc.map((item, index) => (
-                            <div key={index} className="m-4">
+                            <div data-aos={animation} data-aos-delay={900 + (index + 1)*300} key={index} className="m-4">
                                 &bull; {item.desc}
                             </div>
                         ))}
                     </div>
-                    <Link href="/gioi-thieu#corp-culture" className="m-4 text-white italic bg-indigo-950 px-4 py-2 rounded-md">
+                    <Link data-aos={animation} data-aos-delay='1500' href="/gioi-thieu#corp-culture" className="m-4 text-white italic bg-indigo-950 px-4 py-2 rounded-md">
                         {locale === "en-US" ? "Read more >>>" : "Chi tiết >>>"}
                     </Link>
                 </div>
@@ -475,16 +476,16 @@ export default function Home() {
             {/*Certification Section*/}
             <div  className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
                 <div className="w-4/5">
-                    <h2 className="text-3xl text-center font-bold text-green-800 ">
+                    <h2 data-aos={animation} className="text-3xl text-center font-bold text-green-800 ">
                         {certificateLocale.titleMain}
                     </h2>
-                    <div className="text-center text-base text-gray-600 m-4 animate-fadeIn">
+                    <div data-aos={animation} data-aos-delay='300' className="text-center text-base text-gray-600 m-4 animate-fadeIn">
                         {certificateLocale.desc}
                     </div>
                 </div>
                 <div className="flex flex-col lg:flex-row w-4/5">
                     {CertificationImages.map((item, index) => (
-                        <div key={index} className="m-2 w-full">
+                        <div data-aos={animation} data-aos-delay={300 + ( index + 1 ) * 300} key={index} className="m-2 w-full">
                             <div className="flex flex-col ">
                                 <Image
                                     src={item}
@@ -510,13 +511,13 @@ export default function Home() {
             {/*Partners Section*/}
             <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
                 <div className="lg:w-4/5">
-                    <h2 className="text-3xl text-center font-bold text-green-800 ">
+                    <h2 data-aos={animation} className="text-3xl text-center font-bold text-green-800 ">
                         {partnersLocale.title}
                     </h2>
                 </div>
                 <div className="flex flex-row w-full lg:w-4/5 items-end">
                     {PartnersImages.map((item, index) => (
-                        <div  key={index} className="m-2 lg:m-8 w-full">
+                        <div data-aos='fade-up' data-aos-delay={index*300} key={index} className="m-2 lg:m-8 w-full">
                             <div className="flex flex-col ">
                                 <Image
                                     src={item}

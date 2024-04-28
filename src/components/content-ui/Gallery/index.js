@@ -14,7 +14,7 @@ function Gallery({ images }) {
         <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-8">
             <div style={{ display: 'grid', gridAutoRows: '1fr', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '1rem' }}>
                 {images.map((image, index) => (
-                    <div  key={index} onClick={() => openLightbox(image.src)} className="cursor-pointer">
+                    <div data-aos='fade-up' data-aos-delay={ index * 100 } data-aos-duration='300' key={index} onClick={() => openLightbox(image.src)} className="cursor-pointer">
                         <img src={image.src} alt={`gallery ${index}`} className="w-full h-full object-cover" />
                     </div>
                 ))}
