@@ -162,7 +162,7 @@ export default function GioiThieu() {
               </h1>
               <div data-aos={animation} data-aos-duration='600' className="flex flex-col lg:grid lg:grid-flow-row-dense lg:grid-cols-3 lg:grid-rows-2 lg:gap-4 w-full mt-1 lg:mt-4">
                   {sixWordTPGLocale.sub.map((item, index) => (
-                      <div >
+                      <div key={index}>
                           <NumberTitleDescWithLink icon={SixWordIcons[index].icon} number={index+1} title={item.title} desc={item.desc} key={index} />
                       </div>
                   ))}
@@ -232,8 +232,8 @@ export default function GioiThieu() {
           {/* Team Member TPG Section */}
           <div  className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12 p-1 lg:p-1">
               <div className="flex flex-col lg:flex-row w-full">
-                  <div data-aos={animation} className="flex flex-col lg:w-1/2 items-start justify-center bg-violet-950 p-2 py-4">
-                      <h1 data-aos={animation} className="text-4xl lg:text-5xl font-semiBold text-left text-green-800  px-8">
+                  <div data-aos='fade-up' className="flex flex-col lg:w-1/2 items-start justify-center bg-violet-950 p-2 py-4">
+                      <h1 data-aos='fade-up' className="text-4xl lg:text-5xl font-semiBold text-left text-green-800  px-8">
                           {teamMemberTPGLocale.titleMain}
                       </h1>
                       <p data-aos={animation} data-aos-delay='300' className="text-sm leading-8 tracking-normal text-white px-8 mt-4 whitespace-pre-line ">
@@ -242,7 +242,7 @@ export default function GioiThieu() {
                   </div>
                   <div className="flex flex-row lg:w-1/2 items-center justify-center h-auto">
                       <Image
-                          data-aos={animation}
+                          data-aos='fade-up'
                           data-aos-delay='300'
                           src={TeamMemberImage}
                           alt="Message Image"
@@ -255,7 +255,7 @@ export default function GioiThieu() {
               </div>
               <div className="flex-row hidden lg:flex w-full items-center justify-center mt-8 p-0 h-auto">
                   <Image
-                      data-aos={animation}                      
+                      data-aos='fade-up'
                       src={TeamMemberExtraImages1}
                       alt="Message Image"
                       className="w-1/2 "
