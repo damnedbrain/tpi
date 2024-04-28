@@ -12,6 +12,8 @@ export default function QuestionAndAnswer() {
     const router = useRouter();
     const locale = router.locale;
     const questionContentLocale = questionContent.find((item) => item.locale === locale);
+    const isBrowser = typeof window !== 'undefined';
+    const animation = isBrowser && window.innerWidth > 768 ? 'fade-up' : 'fade-left';
     return <>
         <Head>
             <title>
@@ -23,7 +25,7 @@ export default function QuestionAndAnswer() {
                 <BreadCrump />
             </div> */}
             <Image
-                
+                data-aos={animation}
                 src={QAImage}
                 alt="Q&A"
                 className="w-full p-4 rounded-xl"
@@ -33,15 +35,15 @@ export default function QuestionAndAnswer() {
                     maxWidth: "100%",
                     height: "auto"
                 }} />
-            <h1  className="text-4xl lg:text-6xl font-bold w-full text-center mt-2 text-green-800">
+            <h1 data-aos={animation} data-aos-dela='300' className="text-4xl lg:text-6xl font-bold w-full text-center mt-2 text-green-800">
                 {questionContentLocale.title}
             </h1>
-            <p  className="text-xl w-full text-center mt-8 text-gray-600">
+            <p data-aos={animation} data-aos-delay='600' className="text-xl w-full text-center mt-8 text-gray-600">
                 {questionContentLocale.desc}
             </p>
-            <div  className="flex flex-col mt-12">
+            <div className="flex flex-col mt-12">
                 {questionContentLocale.sub.map((item, index) => (
-                    <div  key={index} className="flex flex-row border-4 m-4 rounded-xl">
+                    <div data-aos={animation} key={index} className="flex flex-row border-4 m-4 rounded-xl">
                         <h1 className="text-2xl lg:text-6xl font-semiBold text-center text-green-800 p-4">{index + 1}</h1>
                         <div>
                             <h1 className="text-1xl lg:text-2xl font-semiBold text-left text-green-800 p-4">
