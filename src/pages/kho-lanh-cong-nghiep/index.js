@@ -127,11 +127,11 @@ export default function KhoLanhCongNghiep({isMobile, ...otherProps}) {
 
                 ))}
             </div>
-            <Image data-aos='fade-up' src={cold1} alt="cold-storage" className="w-full h-auto" />
-            <div  className="flex flex-row w-full mt-8">
-                <Image data-aos={animation} data-aos-duration={duration} data-aos-delay={delay*0.5} src={cold2} alt="cold-storage" className="w-1/3 h-auto p-2" />
-                <Image data-aos={animation} data-aos-duration={duration} data-aos-delay={delay} src={cold3} alt="cold-storage" className="w-1/3 h-auto p-2" />
-                <Image data-aos={animation} data-aos-duration={duration} data-aos-delay={delay*1.5} src={cold4} alt="cold-storage" className="w-1/3 h-auto p-2" />
+            <Image data-aos='fade-up' src={cold1} alt="cold-storage" className="w-full h-auto p-1" />
+            <div  className="flex flex-row w-full mt-2">
+                <Image data-aos={animation} data-aos-duration={duration} data-aos-delay={delay*0.5} src={cold2} alt="cold-storage" className="w-1/3 h-auto p-1" />
+                <Image data-aos={animation} data-aos-duration={duration} data-aos-delay={delay} src={cold3} alt="cold-storage" className="w-1/3 h-auto p-1" />
+                <Image data-aos={animation} data-aos-duration={duration} data-aos-delay={delay*1.5} src={cold4} alt="cold-storage" className="w-1/3 h-auto p-1" />
             </div>
 
         </div>
