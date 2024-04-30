@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Gallery({ images }) {
+function Gallery({ isMobile, images }) {
     const [selectedImage, setSelectedImage] = useState(null);
     const openLightbox = (src) => {
         setSelectedImage(src);
@@ -10,11 +10,15 @@ function Gallery({ images }) {
         setSelectedImage(null);
     };
 
+    const animation = isMobile ? 'fade-up' : 'fade-left';
+    const duration = isMobile ? 200 : 400;
+    const delay = isMobile ? 0 : 150;
+
     return (
         <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-8">
             <div style={{ display: 'grid', gridAutoRows: '1fr', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '1rem' }}>
                 {images.map((image, index) => (
-                    <div data-aos='fade-up' data-aos-delay={ index * 100 } data-aos-duration='300' key={index} onClick={() => openLightbox(image.src)} className="cursor-pointer">
+                    <div data-aos={animation} data-aos-delay={ index * delay } data-aos-duration={duration} key={index} onClick={() => openLightbox(image.src)} className="cursor-pointer">
                         <img src={image.src} alt={`gallery ${index}`} className="w-full h-full object-cover" />
                     </div>
                 ))}

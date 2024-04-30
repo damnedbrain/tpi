@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }) {
   useEffect(() => {
     AOS.init({
       // Global settings:
-      disable: 'phone', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
       startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
       initClassName: 'aos-init', // class applied after initialization
       animatedClassName: 'aos-animate', // class applied on animation
@@ -41,7 +41,7 @@ export default function App({ Component, pageProps }) {
       easing: 'ease-in-out', // default easing for AOS animations
       once: false, // whether animation should happen only once - while scrolling down
       mirror: false, // whether elements should animate out while scrolling past them
-      anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+      anchorPlacement: 'top-left', // defines which position of the element regarding to window should trigger the animation
     
     });
   }, []);
