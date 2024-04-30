@@ -109,7 +109,7 @@ export default function KhoLanhCongNghiep() {
             </div>
             <div className="grid lg:flex lg:flex-row">
                 {kholanhIcons.map((icon, index) => (
-                    <div data-aos={animation} data-aos-delay={index*150} key={index} className="flex flex-col w-full p-4 items-center justify-start mt-8">
+                    <div data-aos={animation} data-aos-delay={index*50} key={index} className="flex flex-col w-full p-4 items-center justify-start mt-8">
                         <Image key={index} src={icon} alt="kholanh-icon" className="w-12 h-auto" />
                         <h1 className="text-xl text-center leading-loose mt-4">
                             {coldStorageTopContentLocale.desc[index].descc}
@@ -125,9 +125,9 @@ export default function KhoLanhCongNghiep() {
             <div className="flex flex-col lg:grid lg:grid-cols-3 lg:grid-rows-3 gap-8 mt-8 p-2">
                 {coldStorageTopContentLocale.sub.map((item, index) => (
                     <div >
-                        <h1 data-aos={animation} data-aos-delay={index*200} className="text-4xl lg:text-6xl text-slate-300">{index+1}</h1>
-                        <h1 data-aos={animation} data-aos-delay={index*200 + 100} className="text-2xl lg:text-3xl text-green-800">{item.title}</h1>
-                        <p data-aos={animation} data-aos-delay={index*200 + 200} className='leading-loose'>{item.desc}</p>
+                        <h1 data-aos={animation} data-aos-delay={index*50} className="text-4xl lg:text-6xl text-slate-300">{index+1}</h1>
+                        <h1 data-aos={animation} data-aos-delay={index*50 + 50} className="text-2xl lg:text-3xl text-green-800">{item.title}</h1>
+                        <p data-aos={animation} data-aos-delay={index*50 + 100} className='leading-loose'>{item.desc}</p>
                     </div>
 
                 ))}
@@ -135,9 +135,9 @@ export default function KhoLanhCongNghiep() {
             </div>
             <Image data-aos='fade-up' src={cold1} alt="cold-storage" className="w-full h-auto" />
             <div  className="flex flex-row w-full mt-8">
-                <Image data-aos={animation} data-aos-delay='100' src={cold2} alt="cold-storage" className="w-1/3 h-auto p-2" />
-                <Image data-aos={animation} data-aos-delay='300' src={cold3} alt="cold-storage" className="w-1/3 h-auto p-2" />
-                <Image data-aos={animation} data-aos-delay='500' src={cold4} alt="cold-storage" className="w-1/3 h-auto p-2" />
+                <Image data-aos={animation} data-aos-delay='50' src={cold2} alt="cold-storage" className="w-1/3 h-auto p-2" />
+                <Image data-aos={animation} data-aos-delay='100' src={cold3} alt="cold-storage" className="w-1/3 h-auto p-2" />
+                <Image data-aos={animation} data-aos-delay='150' src={cold4} alt="cold-storage" className="w-1/3 h-auto p-2" />
             </div>
 
         </div>

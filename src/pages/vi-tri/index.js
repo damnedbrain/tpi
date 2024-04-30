@@ -31,7 +31,7 @@ export default function ViTri() {
             <h1 data-aos={animation} className="text-4xl font-bold w-full text-left mt-6 text-green-800">
                 {LocationMapContentLocale.title}
             </h1>
-            <div data-aos={animation} data-aos-delay='300' className="w-full flex flex-col md:flex-row justify-between items-center mt-8">
+            <div data-aos={animation} data-aos-delay='50' className="w-full flex flex-col md:flex-row justify-between items-center mt-8">
                 {locale === "vi" ? (
                     <VideoComponent videoSrc='/videos/location_map_video_eng.mp4' />
                 ) : (
@@ -43,7 +43,7 @@ export default function ViTri() {
             </p>
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
                 {LocationMapContentLocale.sub.map((item, index) => (
-                    <div data-aos={animation} data-aos-delay={index*100} key={index} className="flex flex-col lg:flex-row">
+                    <div data-aos={animation} data-aos-delay={index*50} key={index} className="flex flex-col lg:flex-row">
                         <h1 className="text-8xl font-semiBold text-center text-gray-200 p-2">{index + 1}</h1>
                         <p className="text-md text-black text-left mt-2 p-2">
                             {item.desc}

@@ -97,7 +97,7 @@ export default function Header() {
             {/* MENU */} 
             {arrMenu.map((item, index) => (
               <div key={index} className="relative flex items-center h-12 justify-center lg:mx-4 p-1 group">
-                <Link href={item.sub ? "#" : item.link} legacyBehavior>
+                <Link href={item.sub ? "" : item.link} legacyBehavior>
                   <a 
                     className="p-1 block w-28 text-center items-center justify-center rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out"
                     onClick={() => handleMenu(item.title)}
@@ -109,7 +109,9 @@ export default function Header() {
                   <div className={`absolute left-0 w-48 mt-48 py-2 bg-indigo-950 text-white rounded-md shadow-xl z-20 ${activeMenu === item.title ? 'block' : 'hidden'}`}>
                     {item.sub.map((subItem, subIndex) => (
                       <Link key={subIndex} href={subItem.link} legacyBehavior>
-                        <a className="block px-4 py-2 text-sm capitalize text-white hover:bg-slate-200 hover:text-green-900">
+                        <a
+                          onClick={() => setActiveMenu(null)} 
+                          className="block px-4 py-2 text-sm capitalize text-white hover:bg-slate-200 hover:text-green-900">
                           {subItem.title}
                         </a>
                       </Link>

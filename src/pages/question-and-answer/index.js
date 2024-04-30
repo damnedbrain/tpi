@@ -55,10 +55,10 @@ export default function QuestionAndAnswer() {
                     maxWidth: "100%",
                     height: "auto"
                 }} />
-            <h1 data-aos={animation} data-aos-dela='300' className="text-4xl lg:text-6xl font-bold w-full text-center mt-2 text-green-800">
+            <h1 data-aos={animation} data-aos-dela='50' className="text-4xl lg:text-6xl font-bold w-full text-center mt-2 text-green-800">
                 {questionContentLocale.title}
             </h1>
-            <p data-aos={animation} data-aos-delay='600' className="text-xl w-full text-center mt-8 text-gray-600">
+            <p data-aos={animation} data-aos-delay='100' className="text-xl w-full text-center mt-8 text-gray-600">
                 {questionContentLocale.desc}
             </p>
             <div className="flex flex-col mt-12">

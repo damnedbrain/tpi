@@ -75,13 +75,13 @@ export default function ChieuXa() {
                     <div className="flex flex-row justify-end items-end">
                         <h1 data-aos={animation} className="text-bold text-gray-400 text-5xl lg:text-7xl p-4">1</h1>
                         <div>
-                            <h1 data-aos={animation} data-aos-delay='200' className="text-bold text-green-800 text-4xl lg:text-6xl p-4">
+                            <h1 data-aos={animation} data-aos-delay='50' className="text-bold text-green-800 text-4xl lg:text-6xl p-4">
                                 {foodIrradiationSystemLocale.title}
                             </h1>
-                            <div data-aos={animation} data-aos-delay='400' className='h-1 bg-green-800 w-full'></div>
+                            <div data-aos={animation} data-aos-delay='150' className='h-1 bg-green-800 w-full'></div>
                         </div>
                     </div>
-                    <p data-aos={animation} data-aos-delay='600' className="flex text-sm whitespace-pre-line mt-16 leading-loose">
+                    <p data-aos={animation} data-aos-delay='250' className="flex text-sm whitespace-pre-line mt-16 leading-loose">
                         {foodIrradiationSystemLocale.desc}
                     </p>
 
@@ -96,14 +96,14 @@ export default function ChieuXa() {
                                 {foodIrradiationSystemLocale.subDesc[0].title}
                             </button>
                             <button
-                                data-aos={animation} data-aos-delay='300'
+                                data-aos={animation} data-aos-delay='150'
                                 className={`rounded-t-xl p-4 text-sm overflow-auto lg:text-base w-1/3 py-4 ${currentTab === 'tab2' ? 'bg-green-800 text-white border-t-2 border-l-2 border-r-2 border-green-800' : 'text-slate-800'}`}
                                 onClick={() => setCurrentTab('tab2')}
                             >
                                 {foodIrradiationSystemLocale.subDesc[1].title}
                             </button>
                             <button
-                                data-aos={animation} data-aos-delay='500'
+                                data-aos={animation} data-aos-delay='200'
                                 className={`rounded-t-xl p-4 text-sm overflow-auto lg:text-base w-1/3 py-4 ${currentTab === 'tab3' ? 'bg-green-800 text-white border-t-2 border-l-2 border-r-2 border-green-800' : 'text-slate-800'}`}
                                 onClick={() => setCurrentTab('tab3')}
                             >
@@ -114,7 +114,7 @@ export default function ChieuXa() {
                         {foodIrradiationSystemLocale.subDesc.map((item, index) => {
                             if (currentTab === `tab${index + 1}`) {
                                 return (
-                                <div className="p-4 items-center justify-center border-t-2 border-green-800">
+                                <div key={index} className="p-4 items-center justify-center border-t-2 border-green-800">
                                     <div data-aos={animation} data-aos-delay='100' data-aos-duration='400'>
                                         <div className="flex flex-col items-center justify-center p-4">
                                             <Image src={item.imgSrc} alt="food-irradiation" width={500} height={500} className="justify-self-center" />
@@ -127,7 +127,7 @@ export default function ChieuXa() {
                                         </h1>
                                         <div className="grid grid-cols-2 grid-rows-2 gap-12 p-4 mt-8 leading-loose">
                                             {item.desc2.map((descItem, descIndex) => (
-                                                <h1 data-aos='fade-up' data-aos-duration='500' data-aos-delay={descIndex * 80} key={descIndex}>{descItem.descc}</h1>
+                                                <h1 data-aos='fade-up' data-aos-offset='10' data-aos-duration='250' data-aos-delay={descIndex * 10} key={descIndex}>{descItem.descc}</h1>
                                             ))}
                                         </div>
                                     </div>
