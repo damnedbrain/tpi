@@ -134,8 +134,6 @@ export async function getServerSideProps({ req }) {
     const isMobile = Boolean(userAgent.match(
         /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i,
     ));
-    console.log(userAgent)
-    console.log(isMobile)
     return {
         props: {
             isMobile,
