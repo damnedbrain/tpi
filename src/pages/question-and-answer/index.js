@@ -8,32 +8,28 @@ import BreadCrump from '@/components/layout/breadcrump';
 import { questionContent } from '@/constants/language-option';
 import QAImage from '@assets/question-and-answer/Q&A.png';
 
-export default function QuestionAndAnswer() {
+export async function getServerSideProps({ req }) {
+    const userAgent = req.headers['user-agent'];
+    const isMobile = Boolean(userAgent.match(
+        /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i,
+    ));
+    return {
+        props: {
+            isMobile,
+        }
+    }
+}
+
+export default function QuestionAndAnswer({isMobile, ...otherProps}) {
+
+    const animation = isMobile ? 'fade-up' : 'fade-left';
+    const duration = isMobile ? 300 : 600;
+    const delay = isMobile ? 0 : 250;
 
     const router = useRouter();
     const locale = router.locale;
     const questionContentLocale = questionContent.find((item) => item.locale === locale);
-    const [animation, setAnimation] = useState('fade-left');
-    useEffect(() => {
-        const handleResize = () => {
-          if (window.innerWidth <= 768) {
-            setAnimation('fade-up');
-          } else {
-            setAnimation('fade-left');
-          }
-        };
-    
-        // Call the function once to set the initial state
-        handleResize();
-    
-        // Attach the event listener
-        window.addEventListener('resize', handleResize);
-    
-        // Clean up the event listener when the component unmounts
-        return () => {
-          window.removeEventListener('resize', handleResize);
-        };
-      }, []);
+
     return <>
         <Head>
             <title>
