@@ -22,7 +22,24 @@ import kholanh3 from '@assets/icons/kholanh-03.png';
 import kholanh4 from '@assets/icons/kholanh-04.png';
 import kholanh5 from '@assets/icons/kholanh-05.png';
 
-export default function KhoLanhCongNghiep() {
+export async function getServerSideProps({ req }) {
+    const userAgent = req.headers['user-agent'];
+    const isMobile = Boolean(userAgent.match(
+        /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i,
+    ));
+    return {
+        props: {
+            isMobile,
+        }
+    }
+}
+
+export default function KhoLanhCongNghiep({isMobile, ...otherProps}) {
+
+    const animation = isMobile ? 'fade-up' : 'fade-left';
+    const duration = isMobile ? 300 : 600;
+    const delay = isMobile ? 0 : 50;
+
     const router = useRouter();
     const locale = router.locale;
     const coldStorageTopContentLocale = coldStorageTopContent.find(item => item.locale === locale);
@@ -31,8 +48,6 @@ export default function KhoLanhCongNghiep() {
     ]
 
     const [bannerEntries, setBannerEntries] = useState([]);
-
-    const [animation, setAnimation] = useState('fade-left');
     
     useEffect(() => {
         async function getBannerEntries() {
@@ -79,9 +94,9 @@ export default function KhoLanhCongNghiep() {
             </div> */}
             
             <div className="flex flex-row mt-4 justify-end items-end">
-                <h1 data-aos={animation} className="text-bold text-gray-400 text-5xl lg:text-7xl p-4">2</h1>
+                <h1 data-aos={animation} data-aos-duration={duration} className="text-bold text-gray-400 text-5xl lg:text-7xl p-4">2</h1>
                 <div>
-                    <h1 data-aos={animation} className="text-bold text-green-800 text-4xl lg:text-6xl p-4">
+                    <h1 data-aos={animation} data-aos-duration={duration} className="text-bold text-green-800 text-4xl lg:text-6xl p-4">
                         {coldStorageTopContentLocale.title}
                     </h1>
                     <div ></div>
@@ -89,7 +104,7 @@ export default function KhoLanhCongNghiep() {
             </div>
             <div className="grid lg:flex lg:flex-row">
                 {kholanhIcons.map((icon, index) => (
-                    <div data-aos={animation} data-aos-delay={index*50} key={index} className="flex flex-col w-full p-4 items-center justify-start mt-8">
+                    <div data-aos={animation} data-aos-duration={duration} data-aos-delay={index*delay} key={index} className="flex flex-col w-full p-4 items-center justify-start mt-8">
                         <Image key={index} src={icon} alt="kholanh-icon" className="w-12 h-auto" />
                         <h1 className="text-xl text-center leading-loose mt-4">
                             {coldStorageTopContentLocale.desc[index].descc}
@@ -98,26 +113,25 @@ export default function KhoLanhCongNghiep() {
                 ))}
             </div>
             <div className="flex flex-col items-center justify-end mt-12">
-                <h1 data-aos={animation} className="text-5xl font-semiBold text-green-800">
+                <h1 data-aos={animation} data-aos-duration={duration} className="text-5xl font-semiBold text-green-800">
                     {coldStorageTopContentLocale.midTitle}
                 </h1>
             </div>
             <div className="flex flex-col lg:grid lg:grid-cols-3 lg:grid-rows-3 gap-8 mt-8 p-2">
                 {coldStorageTopContentLocale.sub.map((item, index) => (
                     <div >
-                        <h1 data-aos={animation} data-aos-delay={index*50} className="text-4xl lg:text-6xl text-slate-300">{index+1}</h1>
-                        <h1 data-aos={animation} data-aos-delay={index*50 + 50} className="text-2xl lg:text-3xl text-green-800">{item.title}</h1>
-                        <p data-aos={animation} data-aos-delay={index*50 + 100} className='leading-loose'>{item.desc}</p>
+                        <h1 data-aos={animation} data-aos-duration={duration} data-aos-delay={index*delay} className="text-4xl lg:text-6xl text-slate-300">{index+1}</h1>
+                        <h1 data-aos={animation} data-aos-duration={duration} data-aos-delay={index*delay*2} className="text-2xl lg:text-3xl text-green-800">{item.title}</h1>
+                        <p data-aos={animation} data-aos-duration={duration} data-aos-delay={index*delay*3} className='leading-loose'>{item.desc}</p>
                     </div>
 
                 ))}
-
             </div>
             <Image data-aos='fade-up' src={cold1} alt="cold-storage" className="w-full h-auto" />
             <div  className="flex flex-row w-full mt-8">
-                <Image data-aos={animation} data-aos-delay='50' src={cold2} alt="cold-storage" className="w-1/3 h-auto p-2" />
-                <Image data-aos={animation} data-aos-delay='100' src={cold3} alt="cold-storage" className="w-1/3 h-auto p-2" />
-                <Image data-aos={animation} data-aos-delay='150' src={cold4} alt="cold-storage" className="w-1/3 h-auto p-2" />
+                <Image data-aos={animation} data-aos-duration={duration} data-aos-delay={delay*0.5} src={cold2} alt="cold-storage" className="w-1/3 h-auto p-2" />
+                <Image data-aos={animation} data-aos-duration={duration} data-aos-delay={delay} src={cold3} alt="cold-storage" className="w-1/3 h-auto p-2" />
+                <Image data-aos={animation} data-aos-duration={duration} data-aos-delay={delay*1.5} src={cold4} alt="cold-storage" className="w-1/3 h-auto p-2" />
             </div>
 
         </div>
