@@ -73,15 +73,15 @@ export default function ChieuXa() {
                 </div> */}
                 <div  className="flex flex-col items-center justify-end mt-6">
                     <div className="flex flex-row justify-end items-end">
-                        <h1 data-aos={animation} className="text-bold text-gray-400 text-5xl lg:text-7xl p-4">1</h1>
+                        <h1  className="text-bold text-gray-400 text-5xl lg:text-7xl p-4">1</h1>
                         <div>
-                            <h1 data-aos={animation} data-aos-delay='200' className="text-bold text-green-800 text-4xl lg:text-6xl p-4">
+                            <h1   className="text-bold text-green-800 text-4xl lg:text-6xl p-4">
                                 {foodIrradiationSystemLocale.title}
                             </h1>
-                            <div data-aos={animation} data-aos-delay='400' className='h-1 bg-green-800 w-full'></div>
+                            <div   className='h-1 bg-green-800 w-full'></div>
                         </div>
                     </div>
-                    <p data-aos={animation} data-aos-delay='600' className="flex text-sm whitespace-pre-line mt-16 leading-loose">
+                    <p   className="flex text-sm whitespace-pre-line mt-16 leading-loose">
                         {foodIrradiationSystemLocale.desc}
                     </p>
 
@@ -89,21 +89,21 @@ export default function ChieuXa() {
                     <div  className="bg-white shadow-md rounded my-6">
                         <div className="flex items-end">
                             <button
-                                data-aos={animation} data-aos-delay='100'
+                                 
                                 className={`rounded-t-xl p-4 text-sm overflow-auto lg:text-base  w-1/3 py-4 ${currentTab === 'tab1' ? 'bg-green-800 text-white border-t-2 border-l-2 border-r-2 border-green-800' : 'text-slate-800'}`}
                                 onClick={() => setCurrentTab('tab1')}
                             >
                                 {foodIrradiationSystemLocale.subDesc[0].title}
                             </button>
                             <button
-                                data-aos={animation} data-aos-delay='300'
+                                 
                                 className={`rounded-t-xl p-4 text-sm overflow-auto lg:text-base w-1/3 py-4 ${currentTab === 'tab2' ? 'bg-green-800 text-white border-t-2 border-l-2 border-r-2 border-green-800' : 'text-slate-800'}`}
                                 onClick={() => setCurrentTab('tab2')}
                             >
                                 {foodIrradiationSystemLocale.subDesc[1].title}
                             </button>
                             <button
-                                data-aos={animation} data-aos-delay='500'
+                                 
                                 className={`rounded-t-xl p-4 text-sm overflow-auto lg:text-base w-1/3 py-4 ${currentTab === 'tab3' ? 'bg-green-800 text-white border-t-2 border-l-2 border-r-2 border-green-800' : 'text-slate-800'}`}
                                 onClick={() => setCurrentTab('tab3')}
                             >
@@ -115,7 +115,7 @@ export default function ChieuXa() {
                             if (currentTab === `tab${index + 1}`) {
                                 return (
                                 <div className="p-4 items-center justify-center border-t-2 border-green-800">
-                                    <div data-aos={animation} data-aos-delay='100' data-aos-duration='400'>
+                                    <div   >
                                         <div className="flex flex-col items-center justify-center p-4">
                                             <Image src={item.imgSrc} alt="food-irradiation" width={500} height={500} className="justify-self-center" />
                                         </div>
@@ -127,7 +127,7 @@ export default function ChieuXa() {
                                         </h1>
                                         <div className="grid grid-cols-2 grid-rows-2 gap-12 p-4 mt-8 leading-loose">
                                             {item.desc2.map((descItem, descIndex) => (
-                                                <h1 data-aos='fade-up' data-aos-duration='500' data-aos-delay={descIndex * 80} key={descIndex}>{descItem.descc}</h1>
+                                                <h1    key={descIndex}>{descItem.descc}</h1>
                                             ))}
                                         </div>
                                     </div>
@@ -142,13 +142,13 @@ export default function ChieuXa() {
 
                     {/*PRODUCT OF IRRADIATION*/}
                     <div className="flex flex-col w-full items-center justify-center mt-12">
-                        <h1 data-aos={animation} className="text-xl text-center lg:text-4xl text-green-800 font-extrabold col-span-3 row-span-1 mt-4 mb-2">
+                        <h1  className="text-xl text-center lg:text-4xl text-green-800 font-extrabold col-span-3 row-span-1 mt-4 mb-2">
                             {productOfIrradiationLocale.title}
                         </h1>
-                        <div data-aos={animation} className="bg-slate-200 w-1/3 h-1 ml-4 mr-4"></div>
+                        <div  className="bg-slate-200 w-1/3 h-1 ml-4 mr-4"></div>
                         <div className="grid grid-cols-4 w-full justify-center items-start mt-12 mb-8">
                             {productImages.map((item, index) => (
-                                <div data-aos={animation} data-aos-delay={ index * 150 } className="flex flex-col items-center justify-center p-1 lg:p-2">
+                                <div   className="flex flex-col items-center justify-center p-1 lg:p-2">
                                     <div className="m-4 w-max h-auto">
                                         <Image src={item} alt="product" width={72} height={72} className="rounded-full p-2 bg-green-100" />
                                     </div>
