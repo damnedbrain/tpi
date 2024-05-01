@@ -23,7 +23,23 @@ import {
   productOfIrradiation,
 } from '@/constants/language-option';
 
-export default function ChieuXa() {
+export async function getServerSideProps({ req }) {
+    const userAgent = req.headers['user-agent'];
+    const isMobile = Boolean(userAgent.match(
+        /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i,
+    ));
+    return {
+        props: {
+            isMobile,
+        }
+    }
+}
+
+export default function ChieuXa({isMobile, ...otherProps}) {
+
+    const animation = isMobile ? 'fade-up' : 'fade-left';
+    const duration = isMobile ? 300 : 600;
+    const delay = isMobile ? 0 : 250;
 
     const productImages = [
         product1, product2, product3, product4, product5, product6, product7, product8, product9, product10, product11, product12,
@@ -35,28 +51,7 @@ export default function ChieuXa() {
     const productOfIrradiationLocale = productOfIrradiation.find(item => item.locale === locale);
 
     const [currentTab, setCurrentTab] = useState('tab1');
-
-    const [animation, setAnimation] = useState('fade-left');
-    useEffect(() => {
-        const handleResize = () => {
-          if (window.innerWidth <= 768) {
-            setAnimation('fade-up');
-          } else {
-            setAnimation('fade-left');
-          }
-        };
     
-        // Call the function once to set the initial state
-        handleResize();
-    
-        // Attach the event listener
-        window.addEventListener('resize', handleResize);
-    
-        // Clean up the event listener when the component unmounts
-        return () => {
-          window.removeEventListener('resize', handleResize);
-        };
-      }, []);
 
     return (
         <>
@@ -73,15 +68,15 @@ export default function ChieuXa() {
                 </div> */}
                 <div  className="flex flex-col items-center justify-end mt-6">
                     <div className="flex flex-row justify-end items-end">
-                        <h1  className="text-bold text-gray-400 text-5xl lg:text-7xl p-4">1</h1>
+                        <h1 data-aos={animation} data-aos-duration={duration} className="text-bold text-gray-400 text-5xl lg:text-7xl p-4">1</h1>
                         <div>
-                            <h1   className="text-bold text-green-800 text-4xl lg:text-6xl p-4">
+                            <h1 data-aos={animation} data-aos-duration={duration} data-aos-delay={delay} className="text-bold text-green-800 text-4xl lg:text-6xl p-4">
                                 {foodIrradiationSystemLocale.title}
                             </h1>
-                            <div   className='h-1 bg-green-800 w-full'></div>
+                            <div data-aos={animation} data-aos-duration={duration} data-aos-delay={delay*1.5} className='h-1 bg-green-800 w-full'></div>
                         </div>
                     </div>
-                    <p   className="flex text-sm whitespace-pre-line mt-16 leading-loose">
+                    <p data-aos={animation} data-aos-duration={duration} data-aos-delay={delay*2} className="flex text-sm whitespace-pre-line mt-16 leading-loose">
                         {foodIrradiationSystemLocale.desc}
                     </p>
 
@@ -89,21 +84,21 @@ export default function ChieuXa() {
                     <div  className="bg-white shadow-md rounded my-6">
                         <div className="flex items-end">
                             <button
-                                 
+                                data-aos={animation} data-aos-duration={duration} data-aos-delay={delay}
                                 className={`rounded-t-xl p-4 text-sm overflow-auto lg:text-base  w-1/3 py-4 ${currentTab === 'tab1' ? 'bg-green-800 text-white border-t-2 border-l-2 border-r-2 border-green-800' : 'text-slate-800'}`}
                                 onClick={() => setCurrentTab('tab1')}
                             >
                                 {foodIrradiationSystemLocale.subDesc[0].title}
                             </button>
                             <button
-                                 
+                                data-aos={animation} data-aos-duration={duration} data-aos-delay={delay}
                                 className={`rounded-t-xl p-4 text-sm overflow-auto lg:text-base w-1/3 py-4 ${currentTab === 'tab2' ? 'bg-green-800 text-white border-t-2 border-l-2 border-r-2 border-green-800' : 'text-slate-800'}`}
                                 onClick={() => setCurrentTab('tab2')}
                             >
                                 {foodIrradiationSystemLocale.subDesc[1].title}
                             </button>
                             <button
-                                 
+                                data-aos={animation} data-aos-duration={duration} data-aos-delay={delay}
                                 className={`rounded-t-xl p-4 text-sm overflow-auto lg:text-base w-1/3 py-4 ${currentTab === 'tab3' ? 'bg-green-800 text-white border-t-2 border-l-2 border-r-2 border-green-800' : 'text-slate-800'}`}
                                 onClick={() => setCurrentTab('tab3')}
                             >
@@ -114,8 +109,8 @@ export default function ChieuXa() {
                         {foodIrradiationSystemLocale.subDesc.map((item, index) => {
                             if (currentTab === `tab${index + 1}`) {
                                 return (
-                                <div className="p-4 items-center justify-center border-t-2 border-green-800">
-                                    <div   >
+                                <div key={index} className="p-4 items-center justify-center border-t-2 border-green-800">
+                                    <div data-aos={animation} data-aos-duration={duration} data-aos-delay={delay}>
                                         <div className="flex flex-col items-center justify-center p-4">
                                             <Image src={item.imgSrc} alt="food-irradiation" width={500} height={500} className="justify-self-center" />
                                         </div>
@@ -127,7 +122,7 @@ export default function ChieuXa() {
                                         </h1>
                                         <div className="grid grid-cols-2 grid-rows-2 gap-12 p-4 mt-8 leading-loose">
                                             {item.desc2.map((descItem, descIndex) => (
-                                                <h1    key={descIndex}>{descItem.descc}</h1>
+                                                <h1 data-aos={animation} data-aos-duration={duration} data-aos-delay={descIndex * delay} key={descIndex}>{descItem.descc}</h1>
                                             ))}
                                         </div>
                                     </div>
@@ -142,13 +137,13 @@ export default function ChieuXa() {
 
                     {/*PRODUCT OF IRRADIATION*/}
                     <div className="flex flex-col w-full items-center justify-center mt-12">
-                        <h1  className="text-xl text-center lg:text-4xl text-green-800 font-extrabold col-span-3 row-span-1 mt-4 mb-2">
+                        <h1 data-aos={animation} data-aos-duration={duration} className="text-xl text-center lg:text-4xl text-green-800 font-extrabold col-span-3 row-span-1 mt-4 mb-2">
                             {productOfIrradiationLocale.title}
                         </h1>
-                        <div  className="bg-slate-200 w-1/3 h-1 ml-4 mr-4"></div>
+                        <div data-aos={animation} data-aos-duration={duration} className="bg-slate-200 w-1/3 h-1 ml-4 mr-4"></div>
                         <div className="grid grid-cols-4 w-full justify-center items-start mt-12 mb-8">
                             {productImages.map((item, index) => (
-                                <div   className="flex flex-col items-center justify-center p-1 lg:p-2">
+                                <div data-aos={animation} data-aos-duration={duration} data-aos-delay={ index * delay } className="flex flex-col items-center justify-center p-1 lg:p-2">
                                     <div className="m-4 w-max h-auto">
                                         <Image src={item} alt="product" width={72} height={72} className="rounded-full p-2 bg-green-100" />
                                     </div>
