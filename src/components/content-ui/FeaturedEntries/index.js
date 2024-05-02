@@ -199,7 +199,7 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                 >
                     {topTagslabelLocale.mainLabel}
                 </a>
-                <div className="flex flex-row lg:flex-col lg:w-5/6">
+                <div className="flex flex-row w-full lg:flex-col lg:w-5/6">
                     {topTagslabelLocale.topTags.map((item, index) => (
                         <Link href={`/thi-truong${topTagslabelLocale.link[index]}`} legacyBehavior>
                             <a
