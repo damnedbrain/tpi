@@ -267,7 +267,7 @@ export default function Home({isMobile, ...otherProps}) {
     return <>
         <Head>
             <title>
-                {locale === "en-US" ? "TOANPHAT GROUP - Homepage" : "TOANPHAT GROUP- Trang chủ"}
+                {locale === "en-US" ? "TOAN PHAT - Home" : "TOAN PHAT - Home"}
             </title>
         </Head>
         {/*Hero section*/}

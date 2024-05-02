@@ -90,10 +90,25 @@ export default function ThiTruongPage() {
     return (
         <>
             <Head>
-            <title>
-                {locale === "en-US" ? "TOANPHAT GROUP" : "TOANPHAT GROUP"}
-            </title>
-            </Head>             
+                <title>
+                    {locale === "en-US" ? "TOAN PHAT - Seafood News" : "TOAN PHAT - Seafood News"}
+                </title>
+                <meta name='title' content={locale === "en-US" ? "TOAN PHAT - Seafood News" : "TOAN PHAT - Seafood News"}/>
+                <meta name='description' content={locale === "en-US" ? "TOAN PHAT - Seafood News" : "TOAN PHAT - Seafood News"}/>
+                {/* <meta name='image' content={`https:${entry.fields.thumbImage.fields.file.url}`} /> */}
+
+                <meta itemProp='name' content={locale === "en-US" ? "TOAN PHAT - Seafood News" : "TOAN PHAT - Seafood News"}/>
+                <meta itemProp='description' content={locale === "en-US" ? "TOAN PHAT - Seafood News" : "TOAN PHAT - Seafood News"}/>
+                {/* <meta itemProp='image' content={`https:${entry.fields.thumbImage.fields.file.url}`} /> */}
+
+                <meta property='og:url' content={'toanphatgroup.com/thi-truong/thuy-san/'} />
+                <meta property='og:type' content='website' />
+                <meta property='og:title' content={locale === "en-US" ? "TOAN PHAT - Seafood News" : "TOAN PHAT - Seafood News"}/>
+                <meta property='og:description' content={locale === "en-US" ? "TOAN PHAT - Seafood News" : "TOAN PHAT - Seafood News"}/>
+                {/* <meta property='og:image' content={`https:${entry.fields.thumbImage.fields.file.url}`} /> */}
+                <meta name="keywords" content={ locale === "en-US" ? "toanphatgroup, toanphat group, toàn phát group, Cold storage rental service, Frozen storage rental service, Cold storage in Long An, Cold storage in Ben Luc, Frozen storage, Cold storage rental service in HCMC, Cold warehouse for rent in Phu An Thanh industrial park, Long Hau industrial park warehouse for rent, Cold storage price list, Cold storage rental price, Cold warehouse for rent, Cold storage for preserving agricultural products, Cold storage for fruit preservation, Irradiation, What's Irradiation, Toan Phat Irradiation Co ltd, Irradiation companies in Vietnam, Toan Phat Irradiation, Preserved by irradiation, Irradiation center, Irradiation centers in Vietnam, Food irradiation machine, Irradiation fruits for exported, What is gamma ray irradiation?, Gamma ray irradiation, Fruit irradiation machine, Irradiation and sterilization center, What is the use of fruit irradiation, Seed irradiation, Irradiation is a preservation method, Seed irradiation to improve plant varieties, Advantages of irradiation preservation method, Irradiation in agriculture, Irradiation to kill microorganisms, Irradiation method in agriculture, What is ebeam irradiation?, Ebeam irradiation, What is x-ray irradiation, X-ray irradiation" :
+                                                                    "toanphatgroup, toanphat group, toàn phát group, Dịch vụ cho thuê kho lạnh, Cho thuê kho đông lạnh, Kho lạnh Long An, Kho lạnh Bến Lức, Kho đông lạnh, Cho thuê kho lạnh tại tphcm, Cho thuê kho kcn Phú An Thạnh, Cho thuê kho kcn long hậu, Bảng giá kho lạnh, Giá thuê kho lạnh, Cho thuê kho, Kho lạnh bảo quản nông sản, Kho lạnh bảo quản trái cây, Chieu xa, Chiếu xạ là gì, Công ty TNHH Chiếu xạ Toàn Phát, Các công ty chiếu xạ ở Việt Nam, Các cơ sở chiếu xạ sản ở Việt Nam, Công ty chiếu xạ, Nhà máy chiếu xạ Toàn Phát, Bảo quản bằng chiếu xa, Trung tâm chiếu xạ, Các trung tâm chiếu xạ sản ở Việt Nam, Máy chiếu xạ thực phẩm, Chiếu xạ trái cây xuất khẩu, Chiếu xạ tia gamma là gì, Chiếu xạ tia gamma, Máy chiếu xạ trái cây, Trung tâm chiếu xạ khử trùng, Chiếu xạ trái cây để làm gì, Chiếu xạ hạt giống, Chiếu xạ là phương pháp bảo quản, Chiếu xạ hạt giống để cải tạo giống cây trồng, Ưu điểm phương pháp bảo quản bằng chiếu xạ, Chiếu xạ trong nông nghiệp, Chiếu xạ để diệt vi sinh vật, Phương pháp chiếu xạ trong nông nghiệp, chiếu xạ ebeam là gì, chiếu xạ ebeam, chiếu xạ tia x là gì, chiếu xạ tia x"} />
+            </Head>          
             <div className="flex flex-col max-w-7xl h-auto m-auto p-1 items-center justify-center">
                 <h1 className="text-4xl font-extrabold col-span-3 row-span-1 mt-4 mb-2">
                     {locale === "en-US" ? "Seafood" : "Thủy sản"}
