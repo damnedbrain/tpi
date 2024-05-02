@@ -160,7 +160,7 @@ export default function EntryDetail( { entry, locale }) {
             <div className="flex font-inter flex-row w-full bg-white items-center justify-center">
                 <div className="flex flex-row rounded-xl bg-gray-50 m-auto mt-4 max-w-7xl h-auto items-start justify-center p-0 lg:p-4">
                     <div className="w-full lg:w-3/4 p-1 lg:p-4">
-                        <div className="flex flex-col lg:flex-row items-end lg:justify-between p-1 lg:mt-8 text-green-800 text-semiBold text-left text-2xl">
+                        <div className="flex flex-row items-end justify-between p-1 lg:mt-8 text-green-800 text-semiBold text-left text-2xl">
                             <div className="p-2 bg-green-800 font-bold text-white w-max rounded-md ">{ResolveLabelForContentType({type: entry.fields.type, locale})}</div>
                             <div className="italic lg:font-semibold">{formatDate(entry.sys.createdAt)}</div>
                         </div>
