@@ -36,7 +36,7 @@ const NumberTitleDescWithLink = ({ isMobile, icon, number, title, desc, link, bt
           {btnText}
         </div>
       </Link>
-      <div data-aos={animation} data-aos-duration= {duration} data-aos-delay={delay} className="absolute right-12 text-right text-gray-200 text-9xl font-bold z-10 opacity-10">{number}</div>
+      <div data-aos={animation} data-aos-duration= {duration} data-aos-delay={delay} className="absolute right-12 text-right text-gray-200 text-9xl font-bold -z-10 opacity-10">{number}</div>
     </div>
   );
 };
