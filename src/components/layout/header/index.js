@@ -106,7 +106,7 @@ export default function Header() {
                   </a>
                 </Link>
                 {item.sub && item.sub.length > 0 && (
-                  <div className={`absolute left-0 w-48 mt-48 py-2 bg-indigo-950 text-white rounded-md shadow-xl z-20 ${activeMenu === item.title ? 'block' : 'hidden'}`}>
+                  <div className={`absolute left-0 w-48 mt-48 py-2 bg-indigo-950 text-white rounded-md shadow-xl z-20 transition-all ease-in-out duration-200 transform ${activeMenu === item.title ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
                     {item.sub.map((subItem, subIndex) => (
                       <Link key={subIndex} href={subItem.link} legacyBehavior>
                         <a
