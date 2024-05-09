@@ -82,7 +82,7 @@ export default function KhoLanhCongNghiep({isMobile, ...otherProps}) {
         <>
         <Head>
             <title>
-                {locale === "en-US" ? "TOAN PHAT - Industrial Storage" : "TOAN PHAT - Industrial Storage"}
+                {locale === "en-US" ? "TOAN PHAT - Industrial Storage" : "Kho Lạnh Toàn Phát (Long An) - Dịch vụ cho thuê kho lạnh"}
             </title>
             <meta name="keywords" content={ locale === "en-US" ? "toanphatgroup, toanphat group, toàn phát group, Cold storage rental service, Frozen storage rental service, Cold storage in Long An, Cold storage in Ben Luc, Frozen storage, Cold storage rental service in HCMC, Cold warehouse for rent in Phu An Thanh industrial park, Long Hau industrial park warehouse for rent, Cold storage price list, Cold storage rental price, Cold warehouse for rent, Cold storage for preserving agricultural products, Cold storage for fruit preservation" :
                                                                  "toanphatgroup, toanphat group, toàn phát group, Dịch vụ cho thuê kho lạnh, Cho thuê kho đông lạnh, Kho lạnh Long An, Kho lạnh Bến Lức, Kho đông lạnh, Cho thuê kho lạnh tại tphcm, Cho thuê kho kcn Phú An Thạnh, Cho thuê kho kcn long hậu, Bảng giá kho lạnh, Giá thuê kho lạnh, Cho thuê kho, Kho lạnh bảo quản nông sản, Kho lạnh bảo quản trái cây"} />

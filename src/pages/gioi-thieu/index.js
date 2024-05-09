@@ -71,7 +71,7 @@ export default function GioiThieu({isMobile, ...otherProps}) {
   return <>
         <Head>
             <title>
-                {locale === "en-US" ? "TOAN PHAT - About Us" : "TOAN PHAT - About Us"}
+                {locale === "en-US" ? "TOAN PHAT - About Us" : "TOANPHAT GROUP - Dịch vụ chiếu xạ & dịch vụ cho thuê kho lạnh"}
             </title>
         </Head>
       <div className="flex flex-col max-w-7xl w-full items-center justify-center m-auto h-auto mt-4">

@@ -46,7 +46,7 @@ export default function Footer() {
                             {`Hotline 24/7: ${footerInfoLocale.hotlineKL}`}
                         </h1>
                         <h1 className="relative flex items-center justify-center h-auto text-white whitespace-pre-line text-xxs text-center text lg:text-lg">
-                            Email: thongtin@tpirr.vn - tiepnhan@tpirr.vn
+                            Email: thongtin@tprw.vn - tiepnhan@tprw.vn
                         </h1>                        
                     </div>
                 </div>
