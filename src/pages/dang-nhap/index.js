@@ -1,8 +1,11 @@
 import Image from 'next/image';
 import Head from 'next/head';
 import ComingSoonBG from '@assets/dang-nhap/bg.png';
+import { useRouter } from 'next/router';
 
 export default function VanChuyen() {
+    const router = useRouter();
+    const locale = router.locale;
     return (
         <>
             <Head>
