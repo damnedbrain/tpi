@@ -143,7 +143,7 @@ export default function ChieuXa({isMobile, ...otherProps}) {
                         <div data-aos={animation} data-aos-duration={duration} className="bg-slate-200 w-1/3 h-1 ml-4 mr-4"></div>
                         <div className="grid grid-cols-4 w-full justify-center items-start mt-12 mb-8">
                             {productImages.map((item, index) => (
-                                <div data-aos={animation} data-aos-duration={duration} data-aos-delay={ index * delay } className="flex flex-col items-center justify-center p-1 lg:p-2">
+                                <div key={index} data-aos={animation} data-aos-duration={duration} data-aos-delay={ index * delay } className="flex flex-col items-center justify-center p-1 lg:p-2">
                                     <div className="m-4 w-max h-auto">
                                         <Image src={item} alt="product" width={72} height={72} className="rounded-full p-2 bg-green-100" />
                                     </div>
