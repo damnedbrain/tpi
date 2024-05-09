@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Head from 'next/head';
 import ComingSoonBG from '@assets/dang-nhap/bg.png';
 
 export default function VanChuyen() {
