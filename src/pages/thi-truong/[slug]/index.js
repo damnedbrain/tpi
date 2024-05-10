@@ -121,15 +121,15 @@ export default function EntryDetail( { entry, locale }) {
             }
           },
 
-          [MARKS.BOLD]: (node, children) => <b className="font-bold text-3xl text-left mt-11">{children}</b>,
+          [MARKS.BOLD]: (node, children) => <b className="font-bold text-3xl text-left my-11">{children}</b>,
 
           [BLOCKS.HEADING_6]: (node, children) => 
             <h6 className="text-xl lg:text-2xl font-semibold my-2 p-1">{children}</h6>,
 
           [BLOCKS.PARAGRAPH]: (node, children) => 
-            <p className="text-left font-normal leading-normal mt-4">{children}</p>,
+            <p className="text-left font-normal leading-normal my-2">{children}</p>,
           [MARKS.BOLD]: text => 
-            <b className="font-bold font-sans text-3xl text-left mt-2">{text}</b>,
+            <b className="font-bold font-sans text-3xl text-left my-2">{text}</b>,
       
           [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
             // render the EMBEDDED_ASSET as you need

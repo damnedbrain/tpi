@@ -209,7 +209,8 @@ export default function Home({isMobile, ...otherProps}) {
                 { 
                     order: "-sys.createdAt",
                     limit: 10,
-                    "fields.homePage": "true"
+                    "fields.homePage": "true",
+                    "fields.hightLight": "true",
                 });
 
             setEntries(entries.items);
