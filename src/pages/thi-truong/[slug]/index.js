@@ -123,6 +123,9 @@ export default function EntryDetail( { entry, locale }) {
 
           [MARKS.BOLD]: (node, children) => <b className="font-bold text-3xl text-left mt-11">{children}</b>,
 
+          [BLOCKS.HEADING_6]: (node, children) => 
+            <h6 className="text-xl lg:text-2xl font-semibold my-2 p-1">{children}</h6>,
+
           [BLOCKS.PARAGRAPH]: (node, children) => 
             <p className="text-left font-normal leading-normal mt-4">{children}</p>,
           [MARKS.BOLD]: text => 
