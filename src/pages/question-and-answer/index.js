@@ -33,7 +33,7 @@ export default function QuestionAndAnswer({isMobile, ...otherProps}) {
     return <>
         <Head>
             <title>
-                {locale === "en-US" ? "TOANPHAT GROUP - Q&A" : "TOANPHAT GROUP- Hỏi đáp"}
+                {locale === "en-US" ? "TOANPHAT Group - Question & Answers" : "TOANPHAT Group - Hỏi đáp"}
             </title>
         </Head>
         <div className="flex flex-col max-w-7xl w-full items-center justify-center m-auto h-auto mt-0">

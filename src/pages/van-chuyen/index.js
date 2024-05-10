@@ -10,7 +10,7 @@ export default function VanChuyen() {
         <>
             <Head>
                 <title>
-                    {locale === "en-US" ? "TOAN PHAT - Industrial Storage" : "TOANPHAT GROUP - Dịch vụ vận chuyển"}
+                    {locale === "en-US" ? "TOANPHAT Group - Transport Service" : "TOANPHAT Group - Dịch vụ vận chuyển"}
                 </title>
             </Head>
             <div className="flex items-start justify-center relative min-h-screen">

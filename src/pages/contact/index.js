@@ -45,7 +45,7 @@ export default function Contact({isMobile, ...otherProps}) {
         <>
             <Head>
             <title>
-                {locale === "en-US" ? "TOANPHAT GROUP - Contact" : "TOANPHAT GROUP- Liên hệ"}
+                {locale === "en-US" ? "TOANPHAT Group - Contact" : "TOANPHAT Group - Liên hệ"}
             </title>
             </Head>
             <div className="flex flex-col max-w-7xl w-full items-center justify-center m-auto h-auto mt-4">
