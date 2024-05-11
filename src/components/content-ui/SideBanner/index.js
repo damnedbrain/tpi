@@ -5,7 +5,7 @@ import { getEntries } from "@/components/contentful/ContentfulService";
 
 
 
-export default function SideBanner() {
+export default function SideBanner({main = false}) {
     const [banner, setBanner] = useState();
     const [isLoading, setIsLoading] = useState(true);
 
@@ -30,6 +30,7 @@ export default function SideBanner() {
                     Loading...
                 </div>
     }
+    const botBannerMargin = main ? "mt-48" : "mb-40";
     return ( 
         <>
             <div className="rounded-xl mb-40 p-4">
@@ -46,7 +47,7 @@ export default function SideBanner() {
                         }} />
                 </Link>
             </div>
-            <div className="rounded-xl mb-40 p-4">
+            <div className={`rounded-xl p-4 ${botBannerMargin}`}>
                 <Link href="/chieu-xa" className='cursor-pointer'>
                     <Image
                         className="rounded-xl"

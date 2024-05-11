@@ -110,7 +110,7 @@ export default function ThiTruong() {
                 <PromotionEntries entries={promotionEntries} />
             </div>
             <div className="hidden lg:flex lg:flex-col w-1/5 mt-28">
-                <SideBanner />
+                <SideBanner main={true} />
             </div>
         </div>
         <div className="flex flex-col max-w-7xl h-auto m-auto mt-16">
