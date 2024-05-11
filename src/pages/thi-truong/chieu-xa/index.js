@@ -14,6 +14,7 @@ import Pagination from '@/components/content-ui/Pagination';
 import { getEntries } from '@/components/contentful/ContentfulService';
 import BottomBanner from '@assets/thi-truong-banner/bottom.jpg';
 import TopBanner from '@assets/thi-truong-banner/top.jpg';
+import SideBanner from '@/components/content-ui/SideBanner';
 
 function shortenEntries (entries) {
     return entries.map((item, index) => {
@@ -122,30 +123,7 @@ export default function ThiTruongPage() {
                         </div>
                     </div>
                     <div className="hidden lg:flex flex-col w-1/5 mt-8">
-                        <div className="rounded-xl mb-40 p-4">
-                            <Link href="/kho-lanh-cong-nghiep" className='cursor-pointer'>
-                                <Image
-                                    className="rounded-xl"
-                                    src={TopBanner}
-                                    alt="Top Banner"
-                                    style={{
-                                        maxWidth: "100%",
-                                        // height: "auto"
-                                    }} />
-                            </Link>
-                        </div>
-                        <div className="rounded-xl mb-40 p-4">
-                            <Link href="/chieu-xa" className='cursor-pointer'>
-                                <Image
-                                    className="rounded-xl"
-                                    src={BottomBanner}
-                                    alt="Bottom Banner"
-                                    style={{
-                                        maxWidth: "100%",
-                                        // height: "auto"
-                                    }} />
-                            </Link>
-                        </div>
+                        <SideBanner />
                     </div>
                 </div>
             </div>

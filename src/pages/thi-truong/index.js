@@ -20,6 +20,7 @@ import SlickSlider from '@/components/layout/slick-slider-carousel';
 import { videoList } from '@/constants/video-list';
 import BottomBanner from '@assets/thi-truong-banner/bottom.jpg';
 import TopBanner from '@assets/thi-truong-banner/top.jpg';
+import SideBanner from '@/components/content-ui/SideBanner';
 
 function shortenEntries (entries) {
     return entries.map((item, index) => {
@@ -108,31 +109,8 @@ export default function ThiTruong() {
                 <BlogEntries entries={blogEntries} />
                 <PromotionEntries entries={promotionEntries} />
             </div>
-            <div className="hidden lg:flex lg:flex-col w-1/5">
-                <div className="rounded-xl mt-32">
-                    <Link href="kho-lanh-cong-nghiep" className='cursor-pointer'>
-                        <Image
-                            className="rounded-xl"
-                            src={TopBanner}
-                            alt="Top Banner"
-                            style={{
-                                maxWidth: "100%",
-                                // height: "auto"
-                            }} />
-                    </Link>
-                </div>
-                <div className="rounded-xl">
-                    <Link href="chieu-xa" className='cursor-pointer'>
-                        <Image
-                            className="rounded-xl translate-y-2 mt-80"
-                            src={BottomBanner}
-                            alt="Bottom Banner"
-                            style={{
-                                maxWidth: "100%",
-                                // height: "auto"
-                            }} />
-                    </Link>
-                </div>
+            <div className="hidden lg:flex lg:flex-col w-1/5 mt-28">
+                <SideBanner />
             </div>
         </div>
         <div className="flex flex-col max-w-7xl h-auto m-auto mt-16">
@@ -151,9 +129,9 @@ export default function ThiTruong() {
                             <iframe
                                 className="w-full"
                                 src={`https://www.youtube.com/embed/${videoList[0].ytbid}`}
-                                title={videoList[0].title} frameborder="0"
+                                title={videoList[0].title} frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen />
+                                allowFullScreen />
                         </div>
                         <div className="mt-8">
                             <div>
@@ -164,9 +142,9 @@ export default function ThiTruong() {
                             <iframe
                                 className="w-full h-auto"
                                 src={`https://www.youtube.com/embed/${videoList[1].ytbid}`}
-                                title={videoList[1].title} frameborder="0"
+                                title={videoList[1].title} frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen />
+                                allowFullScreen />
                         </div>
                     </div>
                     <div className=" w-full lg:w-2/3 mt-8 p-3 h-full">
@@ -180,9 +158,9 @@ export default function ThiTruong() {
                         <iframe
                             className="w-full h-96"
                             src={`https://www.youtube.com/embed/${videoList[4].ytbid}`}
-                            title={videoList[4].title} frameborder="0"
+                            title={videoList[4].title} frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen />
+                            allowFullScreen />
                     </div>
             </div>
         </div>

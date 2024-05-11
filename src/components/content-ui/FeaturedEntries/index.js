@@ -114,7 +114,7 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                         <div className="flex flex-col w-1/2">
                             {currentTypeEntries.slice(1, 4).map((entry, index) => (
                                 <div key={index} className="flex h-1/3 w-full m-2 mt-1">
-                                <div className="relative w-1/2 h-full rounded-xl">
+                                <div key={index} className="relative w-1/2 h-full rounded-xl">
                                     <Image
                                         key={index}
                                         className="absolute inset-0 object-cover w-full h-full rounded-xl"
@@ -201,7 +201,7 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                 </a>
                 <div className="flex flex-row w-full lg:flex-col lg:w-5/6">
                     {topTagslabelLocale.topTags.map((item, index) => (
-                        <Link href={`/thi-truong${topTagslabelLocale.link[index]}`} legacyBehavior>
+                        <Link key={index} href={`/thi-truong${topTagslabelLocale.link[index]}`} legacyBehavior>
                             <a
                                 key={index}
                                 className="font-semiBold text-xxs lg:text-xl w-full m-[1px] p-1 lg:p-2 rounded-md -skew-x-12 text-white items-center justify-between text-right whitespace-nowrap"
