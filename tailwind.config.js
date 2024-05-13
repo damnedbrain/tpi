@@ -50,8 +50,13 @@ module.exports = {
         slideIn: 'slideIn 0.5s ease-in-out',
         fadeIn: 'fadeIn 0.5s ease-in-out',
         fadeInSlideIn: 'fadeInSlideIn 0.5s ease-in-out',
+        'scale-up-down': 'scaleUpDown 2s infinite'
       },
       keyframes: {
+        scaleUpDown: {
+          '0%, 100%' : { transform: 'scale(1)' },
+          '50%' : { transform: 'scale(1.15)' }
+        },
         slideIn: {
           '0%': { transform: 'translateX(-30%)' },
           '100%': { transform: 'translateX(0)' },
