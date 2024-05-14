@@ -9,6 +9,11 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import ZaloIcon from "@assets/contact-bar/zalo_app-icon.png";
+import MessengerIcon from "@assets/contact-bar/messenger.png";
+import PhoneIcon from "@assets/contact-bar/telephone.png";
+import Image from 'next/image';
+
 export default function ContactBar() {
     const router = useRouter()
     const locale = router.locale
@@ -19,41 +24,30 @@ export default function ContactBar() {
     return(
         <div className="flex flex-col z-50 bottom-24 sticky items-end justify-end mr-4 text-red-500 text-2xl font-bold">
             <div className={isOpen ? "visible flex flex-col w-14 items-center justify-center absolute bottom-16 mb-2" : "hidden"}>
-                <div className="bg-green-800 hover:bg-slate-200 p-4 mr-2 mb-1 rounded-full size-14 items-center justify-center text-center hover:cursor-pointer">
-                    <a 
+                <div className="bg-green-900 bg-opacity-95 hover:bg-slate-200 p-4 mr-2 mb-1 rounded-full size-14 items-center justify-center text-center hover:cursor-pointer">
+                    <a
                         href='http://m.me/116671641370296'>
-                        <FontAwesomeIcon icon={faFacebookMessenger} className='hover:text-green-700 text-white self-center' size='sm' />
+                        <Image src={MessengerIcon} alt='Messenger Kho Lanh' width={64} height={64} />
                     </a>
-                    <h1 className='text-xxxs text-white relative -top-4 left-0 whitespace-nowrap text-center'>{locale === 'en-US' ? "TPRW" : "Kho lạnh"}</h1>
                 </div>
-                <div className="bg-green-800 hover:bg-slate-200 p-4 mr-2 mb-1 rounded-full size-14 items-center justify-center text-center hover:cursor-pointer">
+                <div className="bg-green-900 bg-opacity-95 hover:bg-slate-200 p-4 mr-2 mb-1 rounded-full size-14 items-center justify-center text-center hover:cursor-pointer">
                     <a 
-                        href='http://m.me/1305438312916916'>
-                        <FontAwesomeIcon icon={faFacebookMessenger} className='hover:text-green-700 text-white self-center' size='sm' />
+                        href='http://m.me/1645438312916916'>
+                        <Image src={MessengerIcon} alt='Messenger Chieu xa' width={64} height={64} />
                     </a>
-                    <h1 className='text-xxxs text-white relative -top-4 left-0 whitespace-nowrap text-center'>{locale === 'en-US' ? "TPI" : "Chiếu xạ"}</h1>
                 </div>
-                <div className="bg-green-800 hover:bg-slate-200 p-4 mr-2 mb-1 rounded-full size-14 items-center justify-center text-center hover:cursor-pointer">
+                <div className="bg-green-900 bg-opacity-95 hover:bg-slate-200 p-4 mr-2 mb-1 rounded-full size-14 items-center justify-center text-center hover:cursor-pointer">
                     <a 
                         href='tel:093 100 0001'>
-                        <FontAwesomeIcon icon={faPhone} className='hover:text-green-700 text-white self-center' size='sm' />
+                        <Image src={PhoneIcon} alt='Messenger Kho Lanh' width={64} height={64} />
                     </a>
-                    <h1 className='text-xxxs text-white relative -top-4 left-0 whitespace-nowrap text-center'>{locale === 'en-US' ? "Hotline" : "Hotline"}</h1>
                 </div>
-                <div className="bg-green-800 hover:bg-slate-200 p-4 mr-2 mb-1 rounded-full size-14 items-center justify-center text-center hover:cursor-pointer">
-                    <a 
-                        href='http://zalo.me/0931000001'>
-                        <FontAwesomeIcon icon={faZ} className='hover:text-green-700 text-white self-center' size='sm' />
+                <div className="bg-green-900 bg-opacity-95 hover:bg-slate-200 p-4 mr-2 mb-1 rounded-full size-14 items-center justify-center text-center hover:cursor-pointer">
+                    <a href='http://zalo.me/0931000001'>
+                        <Image src={ZaloIcon} alt='Zalo' width={64} height={64} />
                     </a>
-                    <h1 className='text-xxxs text-white relative -top-4 left-0 whitespace-nowrap text-center'>Zalo</h1>
                 </div>
             </div>
-            {/* <div className="bg-green-800 hover:bg-green-800 p-4 rounded-full size-16 items-center justify-center text-center hover:cursor-pointer">
-                <a 
-                    onClick={handleOpen}>
-                    <FontAwesomeIcon icon={faArrowUpFromBracket} className='text-white self-center' size='sm' />
-                </a>
-            </div> */}
         </div>
     )
 }
