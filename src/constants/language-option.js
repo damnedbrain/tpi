@@ -126,7 +126,7 @@ export const introduce = [
   {
     locale: 'vi',
     id:1,
-    title: 'Lịch sử phát triển TOANPHAT GROUP',
+    title: 'Lịch sử phát triển TOANPHAT Group',
     videoLink: '/TPG_timeline.mp4',
     desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem etiam
             luctus amet ultrices sapien id gravida iaculis mattis.`,
@@ -343,7 +343,7 @@ export const certificate = [
     locale: 'vi',
     title: 'Đội ngũ nhân sự & Văn hóa doanh nghiệp',
     titleMain: 'Chất lượng được bảo chứng Quốc tế',
-    desc: `Nhằm mục đích đảm bảo chất lượng, hiệu quả, an toàn trong mỗi dịch vụ cung cấp đến khách hàng, TOANPHAT GROUP luôn tuân thủ các nguyên tắc về ngành nghề hoạt động và chuẩn hóa mọi quy trình phù hợp với tiêu chuẩn quốc tế. Chất lượng, uy tín của TOANPHAT GROUP được bảo chứng bởi các cơ quan, tổ chức quốc tế.`,
+    desc: `Nhằm mục đích đảm bảo chất lượng, hiệu quả, an toàn trong mỗi dịch vụ cung cấp đến khách hàng, TOANPHAT Group luôn tuân thủ các nguyên tắc về ngành nghề hoạt động và chuẩn hóa mọi quy trình phù hợp với tiêu chuẩn quốc tế. Chất lượng, uy tín của TOANPHAT Group được bảo chứng bởi các cơ quan, tổ chức quốc tế.`,
     sub: [
       {
         title: 'Tên',
@@ -364,7 +364,7 @@ export const certificate = [
     locale: 'en-US',
     title: 'Đội ngũ nhân sự & Văn hóa doanh nghiệp',
     titleMain: 'International Quality Assurance',
-    desc: `In order to ensure quality, efficiency, and safety in every service provided to customers, TOANPHAT GROUP always adheres to industry practices and standardizes all processes in accordance with international standards. The quality and reputation of TOANPHAT GROUP are guaranteed by international agencies and organizations.`,
+    desc: `In order to ensure quality, efficiency, and safety in every service provided to customers, TOANPHAT Group always adheres to industry practices and standardizes all processes in accordance with international standards. The quality and reputation of TOANPHAT Group are guaranteed by international agencies and organizations.`,
     sub: [
       {
         title: 'Tên',
@@ -1690,7 +1690,7 @@ export const breadcrumb = {
   gioiThieu: [
     {
       locale: 'vi',
-      sub: [{ path: '#', title: 'Giới thiệu về TOANPHAT GROUP' }],
+      sub: [{ path: '#', title: 'Giới thiệu về TOANPHAT Group' }],
     },
     {
       locale: 'en-US',
@@ -1794,15 +1794,15 @@ export const breadcrumb = {
 export const AboutTPGDesc = [
   {
     locale: 'vi',
-    title: 'Giới thiệu về TOANPHAT GROUP',
-    desc: `Năm 2017, bắt nguồn từ mong muốn chung tay cùng các doanh nghiệp nâng tầm thương hiệu và giá trị Nông - Thủy sản Việt, TOANPHAT GROUP (TPG) đã được xây dựng và phát triển. Để đặt nền móng cho sự khởi đầu, Dịch vụ Chiếu xạ (Công ty TNHH Chiếu Xạ Toàn Phát) là bước triển khai đầu tiên trong kế hoạch của TPG, thông qua đó đồng hành hỗ trợ các doanh nghiệp xuất khẩu Nông - Thủy sản giảm đi những áp lực về chi phí, nghiên cứu ứng dụng công nghệ để chủ động hơn trong lĩnh vực chiếu xạ và có thêm nhiều lợi thế khi xuất khẩu thực phẩm, hàng hóa ra quốc tế.
+    title: 'Giới thiệu về TOANPHAT Group',
+    desc: `Năm 2017, bắt nguồn từ mong muốn chung tay cùng các doanh nghiệp nâng tầm thương hiệu và giá trị Nông - Thủy sản Việt, TOANPHAT Group (TPG) đã được xây dựng và phát triển. Để đặt nền móng cho sự khởi đầu, Dịch vụ Chiếu xạ (Công ty TNHH Chiếu Xạ Toàn Phát) là bước triển khai đầu tiên trong kế hoạch của TPG, thông qua đó đồng hành hỗ trợ các doanh nghiệp xuất khẩu Nông - Thủy sản giảm đi những áp lực về chi phí, nghiên cứu ứng dụng công nghệ để chủ động hơn trong lĩnh vực chiếu xạ và có thêm nhiều lợi thế khi xuất khẩu thực phẩm, hàng hóa ra quốc tế.
 
     Với tầm nhìn xa hơn để con đường đưa Nông - Thủy sản Việt Nam có mặt trên thị trường thế giới được thuận lợi hơn nữa, năm 2023 TPG đã mở rộng lĩnh vực phát triển, xây dựng và đưa vào vận hành Kho Lạnh Toàn Phát (Công ty TNHH Kho Vận Toàn Phát) với khả năng lưu trữ tối đa lên đến 12.000 tấn. Trong chiến lược phát triển dài hạn, TPG hướng đến trở thành Trung tâm Logistics (Logistics HUB) tại khu vực Đồng bằng sông Cửu Long cung cấp đầy đủ 03 dịch vụ: Chiếu xạ - Lưu trữ - Vận chuyển.`,
   },
   {
     locale: 'en-US',
-    title: 'About TOANPHAT GROUP',
-    desc: `In 2017, TOANPHAT GROUP (TPG) was set up and built as a result of the desire to cooperate with enterprises and to enhance the brand image and value of Vietnamese Agricultural-Fisheries Products. In the beginning, Irradiation Service (Toan Phat Irradiation Co., Ltd.) was the initial step in TPG's plan to lay the fundamental foundation, thereby supporting Agricultural - Fisheries exporters to reduce the pressure on costs, as well as researching and utilizing technologies to lead more proactively in the field of irradiation and gain more advantages in exporting food and goods in the international market.
+    title: 'About TOANPHAT Group',
+    desc: `In 2017, TOANPHAT Group (TPG) was set up and built as a result of the desire to cooperate with enterprises and to enhance the brand image and value of Vietnamese Agricultural-Fisheries Products. In the beginning, Irradiation Service (Toan Phat Irradiation Co., Ltd.) was the initial step in TPG's plan to lay the fundamental foundation, thereby supporting Agricultural - Fisheries exporters to reduce the pressure on costs, as well as researching and utilizing technologies to lead more proactively in the field of irradiation and gain more advantages in exporting food and goods in the international market.
     
     In 2023, with a strategic vision and a desire to facilitate the development of Vietnam's Agriculture and Fisheries on the world market, TPG has expanded its scale by constructing and operating Toan Phat Refrigerated Warehouse (Toan Phat Logistics Co., Ltd.) with a maximum storage capacity of up to 12.000 tons. In its long-term development strategy, TPG has always intended to become a Logistics Center (LOGISTICS HUB) of the Mekong Delta, providing the full three services: Irradiation - Storage - Transport.`,
   },
@@ -1814,7 +1814,7 @@ export const ThongDiepTPG = [
     title: 'Thông điệp Ban Lãnh Đạo',
     desc: `Việt Nam có nhiều tiềm năng để phát triển Nông nghiệp, Đồng bằng sông Cửu Long là trung tâm lớn của ngành sản xuất Nông - Thủy sản, tuy nhiên những lợi thế đó vẫn chưa được tận dụng để có thể khẳng định thương hiệu và giá trị Nông - Thuỷ sản Quốc gia trên thị trường Quốc tế. 
 
-    TOANPHAT GROUP ra đời với tầm nhìn trở thành một Trung tâm Logistics (Logistics HUB) cung cấp cả 03 dịch vụ: “Chiếu xạ - Lưu trữ - Vận chuyển” với công nghệ hiện đại, kỹ thuật tiên tiến và chi phí tối ưu nhất. Chúng tôi luôn cam kết đồng hành về giá, hỗ trợ các doanh nghiệp xuất khẩu Nông - Thủy sản có thêm lợi thế cạnh tranh trên thị trường Quốc tế.
+    TOANPHAT Group ra đời với tầm nhìn trở thành một Trung tâm Logistics (Logistics HUB) cung cấp cả 03 dịch vụ: “Chiếu xạ - Lưu trữ - Vận chuyển” với công nghệ hiện đại, kỹ thuật tiên tiến và chi phí tối ưu nhất. Chúng tôi luôn cam kết đồng hành về giá, hỗ trợ các doanh nghiệp xuất khẩu Nông - Thủy sản có thêm lợi thế cạnh tranh trên thị trường Quốc tế.
     
     Từng mục tiêu nhỏ hướng về mục tiêu lớn, chúng tôi không chỉ nỗ lực đầu tư cả về trí tuệ con người, công nghệ hiện đại, trang thiết bị tiên tiến, mà còn quan tâm đến phản hồi của khách hàng để nâng cao chất lượng dịch vụ, tạo dựng uy tín thương hiệu và đưa TPG ngày càng vững mạnh.
     
@@ -1827,7 +1827,7 @@ export const ThongDiepTPG = [
     title: 'Message from the Board of Management',
     desc: `There are a lot of potential developments in Agriculture in Vietnam, one of which is the Mekong Delta, a major center for the Agricultural - Fisheries field. Nevertheless, those advantages have not been exploited to enhance the brand name and value of the national Agricultural-Fisheries on the international market.
 
-    With the strategic vision to become a Logistics Center (LOGISTICS HUB), which provides all three services: "Irradiation - Storage - Transport", with modern technologies and advanced techniques, TOANPHAT GROUP was founded at the most optimal cost. We always make a commitment for a reasonable price for companionship to support Agricultural-Fisheries' exporters to gain more competitive advantages on the international market.
+    With the strategic vision to become a Logistics Center (LOGISTICS HUB), which provides all three services: "Irradiation - Storage - Transport", with modern technologies and advanced techniques, TOANPHAT Group was founded at the most optimal cost. We always make a commitment for a reasonable price for companionship to support Agricultural-Fisheries' exporters to gain more competitive advantages on the international market.
 
     Taking small steps toward big goals, we would both strive to invest in human intelligence, modern technology and advanced equipment, and also put an emphasis on customer feedback to enhance service quality, build brand reputation and prestige, and to develop a stronger TPG.
 

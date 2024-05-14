@@ -8,7 +8,7 @@ const defaultData = [
         sub: [
             {
                 path: '#',
-                title: 'Giới thiệu về TOANPHAT GROUP',
+                title: 'Giới thiệu về TOANPHAT Group',
             },
         ]
     }

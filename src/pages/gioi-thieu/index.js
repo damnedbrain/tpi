@@ -104,7 +104,7 @@ export default function GioiThieu({isMobile, ...otherProps}) {
           {/* History Video TPG Section */}
           <div className="flex flex-col w-full items-start justify-center m-auto h-auto mt-12 p-2">
               <h1 data-aos={animation} data-aos-duration={duration} className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 ">
-                  {locale === "vi" ? "Lịch sử phát triển TOANPHAT GROUP" : "Company Milestones and Achievement"}
+                  {locale === "vi" ? "Lịch sử phát triển TOANPHAT Group" : "Company Milestones and Achievement"}
               </h1>
               <div data-aos={animation} data-aos-duration={duration} data-aos-delay={delay} className="w-full m-auto">
                   {locale === "en-US" ? 

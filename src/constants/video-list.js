@@ -9,7 +9,7 @@ export const videoList =
         },
         {
  
-            title: "Lịch sử hình thành và phát triển TOANPHAT GROUP (TPG)",
+            title: "Lịch sử hình thành và phát triển TOANPHAT Group (TPG)",
             url: "https://www.youtube.com/watch?v=4VW8aVOZ_7k",
             ytbid: "4VW8aVOZ_7k",
             date: "2023-06-20T10:25:14Z"
