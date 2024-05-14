@@ -8,20 +8,20 @@ import {
   faZ,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUpFromBracket } from '@fortawesome/free-solid-svg-icons';
 
-import ZaloIcon from "@assets/contact-bar/zalo.svg";
-import MessengerIcon from "@assets/contact-bar/messenger-svgrepo-com.svg";
-import MessengerChieuXa from "@assets/contact-bar/messenger-chieuxa.svg";
-import MessengerChieuXaEng from "@assets/contact-bar/messenger-chieuxa-eng.svg";
-import MessengerKhoLanh from "@assets/contact-bar/messenger-kholanh.svg";
-import MessengerKhoLanhEng from "@assets/contact-bar/messenger-kholanh-eng.svg";
-import PhoneIcon from "@assets/contact-bar/phone-in-circle-fill-svgrepo-com.svg";
+import ZaloIcon from "@assets/contact-bar/zalo_green.svg";
+import MessengerChieuXa from "@assets/contact-bar/messenger-chieuxa-green.svg";
+import MessengerChieuXaEng from "@assets/contact-bar/messenger-chieuxa-eng-green.svg";
+import MessengerKhoLanh from "@assets/contact-bar/messenger-kholanh-green.svg";
+import MessengerKhoLanhEng from "@assets/contact-bar/messenger-kholanh-eng-green.svg";
+import PhoneIcon from "@assets/contact-bar/phonegreen.svg";
 import Image from 'next/image';
 
 export default function ContactBar() {
     const router = useRouter()
     const locale = router.locale
-    const [isOpen, setIsOpen] = useState(true)
+    const [isOpen, setIsOpen] = useState(false)
     const handleOpen = () => {
         setIsOpen(!isOpen)
     }
@@ -51,6 +51,12 @@ export default function ContactBar() {
                         <Image src={ZaloIcon} alt='Zalo' width={128} height={128} />
                     </a>
                 </div>
+            </div>
+            <div className="bg-green-800 hover:bg-green-800 p-4 rounded-full size-16 items-center justify-center text-center hover:cursor-pointer animate-scale-up-down">
+                <a 
+                    onClick={handleOpen}>
+                    <FontAwesomeIcon icon={faArrowUpFromBracket} className='text-white self-center' size='sm' />
+                </a>
             </div>
         </div>
     )
