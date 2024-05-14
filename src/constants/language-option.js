@@ -1020,7 +1020,7 @@ export const coldStorageTopContent = [
   {
     locale: 'vi',
     title: 'Kho lạnh lưu trữ',
-    midTitle: ' Ưu thế vượt trội',
+    midTitle: ' Ưu thế cạnh tranh',
     desc: [
       { descc: `Quy mô: 10.000m²` },
       { descc: `Tổng vị trí: 12.000 pallet` },
