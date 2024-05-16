@@ -4,7 +4,7 @@
     "at-rule-no-unknown": [ 1, {
       "ignoreAtRules": ["tailwind", "apply", "variants", "responsive", "screen"]
     }],
-    "declaration-block-trailing-semicolon": null,
-    "no-descending-specificity": null
+    "declaration-block-trailing-semicolon": 0,
+    "no-descending-specificity": 0
   }
 }
