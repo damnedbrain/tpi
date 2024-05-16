@@ -26,14 +26,14 @@ export default function Document() {
           `,
             }}
         />
-        <meta name='title' content="TOAN PHAT Group" />
+        <meta name='title' content="TOANPHAT Group" />
         <meta name='description' content="TOANPHAT Group | Chiếu xạ - Lưu trữ kho lạnh - Vận chuyển 
             TOANPHAT Group (TPG) gồm hai thành viên: Công ty TNHH Chiếu Xạ Toàn Phát (Nhà Máy Chiếu Xạ Toàn Phát) và Công ty TNHH Kho Vận Toàn Phát (Kho Lạnh Toàn Phát).
             TPG hướng đến trở thành Trung tâm Logistics (Logistics HUB) hiện đại và thông minh tại Đồng bằng sông Cửu Long cung cấp đầy đủ 03 dịch vụ: Chiếu xạ - Lưu trữ kho lạnh - Vận chuyển." 
         />
         
         <meta name='image' content="https://toanphatgroup.com/favicon.ico"/>
-        <meta itemProp='name' content="TOAN PHAT Group" />
+        <meta itemProp='name' content="TOANPHAT Group" />
         <meta itemProp='description' content="TOANPHAT Group | Chiếu xạ - Lưu trữ kho lạnh - Vận chuyển 
             TOANPHAT Group (TPG) gồm hai thành viên: Công ty TNHH Chiếu Xạ Toàn Phát (Nhà Máy Chiếu Xạ Toàn Phát) và Công ty TNHH Kho Vận Toàn Phát (Kho Lạnh Toàn Phát).
             TPG hướng đến trở thành Trung tâm Logistics (Logistics HUB) hiện đại và thông minh tại Đồng bằng sông Cửu Long cung cấp đầy đủ 03 dịch vụ: Chiếu xạ - Lưu trữ kho lạnh - Vận chuyển."/>
@@ -41,12 +41,12 @@ export default function Document() {
 
         {/* <meta property='og:url' content='toanphatgroup.com/' />
         <meta property='og:type' content='website' />
-        <meta property='og:title' content="TOAN PHAT Group"/> */}
+        <meta property='og:title' content="TOANPHAT Group"/> */}
         <meta property='og:description' content="TOANPHAT Group | Chiếu xạ - Lưu trữ kho lạnh - Vận chuyển 
             TOANPHAT Group (TPG) gồm hai thành viên: Công ty TNHH Chiếu Xạ Toàn Phát (Nhà Máy Chiếu Xạ Toàn Phát) và Công ty TNHH Kho Vận Toàn Phát (Kho Lạnh Toàn Phát).
             TPG hướng đến trở thành Trung tâm Logistics (Logistics HUB) hiện đại và thông minh tại Đồng bằng sông Cửu Long cung cấp đầy đủ 03 dịch vụ: Chiếu xạ - Lưu trữ kho lạnh - Vận chuyển."/>
         {/* <meta property='og:image' content="https://toanphatgroup.com/favicon.ico"/>
-        <meta property='og:site_name' content="TOAN PHAT Group" /> */}
+        <meta property='og:site_name' content="TOANPHAT Group" /> */}
 
       </Head>
       
