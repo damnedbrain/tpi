@@ -51,6 +51,10 @@ export default function ThiTruongPage() {
     const pageSize = 15;
 
     useEffect(() => {
+        loadEntries(pageIndex);
+    }, [locale, pageIndex]);
+
+    useEffect(() => {
         const pageNumber = page ? parseInt(page, 10) : 0;
         const currentPageIndex = pageNumber === 0 ? 0 : pageNumber - 1;
         setPageIndex(currentPageIndex);
