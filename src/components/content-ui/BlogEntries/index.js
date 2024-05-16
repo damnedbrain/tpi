@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 
 import EntryPreview from '@components/content-ui/EntryPreview';
+import Link from 'next/link';
 
 export default function BlogEntries({ entries }) {
     const router = useRouter();
@@ -23,7 +24,7 @@ export default function BlogEntries({ entries }) {
             )}
             <div>
                 <button className="bg-green-700 text-white hover:bg-slate-800 font-bold py-2 px-4 rounded-full mt-4 lg:mt-1">
-                    <a href="/thi-truong/blog">{locale === "en-US" ? "View More" : "Xem Thêm"}</a>
+                    <Link href="/thi-truong/blog">{locale === "en-US" ? "View More" : "Xem Thêm"}</Link>
                 </button>
             </div>
         </div>
