@@ -10,7 +10,7 @@ import HighlightEntriesProvider
 import Layout from '@/components/layout';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import { Analytics } from '@vercel/analytics/react';
 
 
 const FontSans = Josefin_Sans({ subsets: ["latin"] });
@@ -52,6 +52,7 @@ export default function App({ Component, pageProps }) {
       <Layout>
         <HighlightEntriesProvider>
           <Component {...pageProps} />
+          <Analytics />
         </HighlightEntriesProvider>
       </Layout>
     </>
