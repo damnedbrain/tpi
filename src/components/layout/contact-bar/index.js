@@ -28,22 +28,22 @@ export default function ContactBar() {
     return(
         <div className="flex flex-col z-50 bottom-24 sticky items-end justify-end mr-12 text-red-500 text-2xl font-bold">
             <div className={isOpen ? "visible flex flex-col w-14 items-center justify-center absolute bottom-16 mb-2" : "hidden"}>
-                <div className="bg-gray-300 bg-opacity-70 hover:bg-slate-200 p-1 mr-2 mb-4 rounded-full size-14 lg:size-20 items-center justify-center text-center hover:cursor-pointer animate-scale-up-down">
+                <div className="bg-gray-300 bg-opacity-70 hover:bg-slate-200 p-1 mr-2 mb-4 rounded-full size-14 lg:size-15 items-center justify-center text-center hover:cursor-pointer animate-scale-up-down">
                     <a href='http://m.me/1166711281370296'>
                         <Image src={locale === "en-US" ? MessengerKhoLanhEng : MessengerKhoLanh} alt='Messenger Kho Lanh' width={128} height={128} />
                     </a>
                 </div>
-                <div className="bg-gray-300 bg-opacity-70 hover:bg-slate-200 p-1 mr-2 mb-4 rounded-full size-14 lg:size-20 items-center justify-center text-center hover:cursor-pointer animate-scale-up-down">
+                <div className="bg-gray-300 bg-opacity-70 hover:bg-slate-200 p-1 mr-2 mb-4 rounded-full size-14 lg:size-15 items-center justify-center text-center hover:cursor-pointer animate-scale-up-down">
                     <a href='http://m.me/11285438312916916'>
                         <Image src={locale === "en-US" ? MessengerChieuXaEng : MessengerChieuXa} alt='Messenger Chieu xa' width={128} height={128} />
                     </a>
                 </div>
-                <div className="bg-gray-300 bg-opacity-70 hover:bg-slate-200 p-1 mr-2 mb-4 rounded-full size-14 lg:size-20 items-center justify-center text-center hover:cursor-pointer animate-scale-up-down">
+                <div className="bg-gray-300 bg-opacity-70 hover:bg-slate-200 p-1 mr-2 mb-4 rounded-full size-14 lg:size-15 items-center justify-center text-center hover:cursor-pointer animate-scale-up-down">
                     <a href='tel:093 100 0001'>
                         <Image src={PhoneIcon} alt='Messenger Kho Lanh' width={128} height={128} className='p-2' />
                     </a>
                 </div>
-                <div className="bg-gray-300 bg-opacity-70 hover:bg-slate-200 p-1 mr-2 mb-4 rounded-full size-14 lg:size-20 items-center justify-center text-center hover:cursor-pointer animate-scale-up-down">
+                <div className="bg-gray-300 bg-opacity-70 hover:bg-slate-200 p-1 mr-2 mb-4 rounded-full size-14 lg:size-15 items-center justify-center text-center hover:cursor-pointer animate-scale-up-down">
                     <a href='http://zalo.me/0931000001'>
                         <Image src={ZaloIcon} alt='Zalo' width={128} height={128} className='p-2' />
                     </a>

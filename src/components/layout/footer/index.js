@@ -23,10 +23,10 @@ export default function Footer() {
                         <h1 className="relative flex items-center justify-center h-auto text-white whitespace-pre-line text-xxs text-center lg:text-2xl font-bold">
                             {footerInfoLocale.title1}
                         </h1>
-                        <h1 className="relative flex items-center justify-center h-auto text-white whitespace-pre-line text-xxs text-center lg:text-lg">
+                        <h1 className="relative flex items-center justify-center h-auto text-white whitespace-pre-line text-xxs text-center lg:text-sm font-light lg:mt-4">
                             {`Hotline 24/7: ${footerInfoLocale.hotlineCX}`}
                         </h1>
-                        <h1 className="relative flex items-center justify-center h-auto text-white whitespace-pre-line text-xxs text-center lg:text-lg">
+                        <h1 className="relative flex items-center justify-center h-auto text-white whitespace-pre-line text-xxs text-center lg:text-sm font-light lg:mt-1">
                             Email: thongtin@tpirr.vn - tiepnhan@tpirr.vn
                         </h1>                        
                     </div>
@@ -42,10 +42,10 @@ export default function Footer() {
                         <h1 className="relative flex items-center justify-center h-auto text-white whitespace-pre-line text-xxs text-center text lg:text-2xl font-bold">
                             {footerInfoLocale.title2}
                         </h1>
-                        <h1 className="relative flex items-center justify-center h-auto text-white whitespace-pre-line text-xxs text-center text lg:text-lg">
+                        <h1 className="relative flex items-center justify-center h-auto text-white whitespace-pre-line text-xxs text-center lg:text-sm font-light lg:mt-4">
                             {`Hotline 24/7: ${footerInfoLocale.hotlineKL}`}
                         </h1>
-                        <h1 className="relative flex items-center justify-center h-auto text-white whitespace-pre-line text-xxs text-center text lg:text-lg">
+                        <h1 className="relative flex items-center justify-center h-auto text-white whitespace-pre-line text-xxs text-center lg:text-sm font-light lg:mt-1">
                             Email: thongtin@tprw.vn - tiepnhan@tprw.vn
                         </h1>                        
                     </div>
