@@ -26,8 +26,8 @@ export default function ContactBar() {
         setIsOpen(!isOpen)
     }
     return(
-        <div className="flex flex-col z-50 bottom-24 sticky items-end justify-end mr-12 text-red-500 text-2xl font-bold">
-            <div className={isOpen ? "visible flex flex-col w-14 items-center justify-center absolute bottom-16 mb-2" : "hidden"}>
+        <div className="flex flex-col z-50 bottom-8 right-1 lg:bottom-24 lg:right-2 fixed items-end justify-end mr-4 lg:mr-12 text-red-500 text-2xl font-bold">
+            <div className={isOpen ? "visible flex flex-col w-14 items-center justify-center absolute bottom-16 mb-1" : "hidden"}>
                 <div className="bg-gray-300 bg-opacity-70 hover:bg-slate-200 p-1 mr-2 mb-4 rounded-full size-14 lg:size-15 items-center justify-center text-center hover:cursor-pointer animate-scale-up-down">
                     <a href='http://m.me/1166711281370296'>
                         <Image src={locale === "en-US" ? MessengerKhoLanhEng : MessengerKhoLanh} alt='Messenger Kho Lanh' width={128} height={128} />
@@ -40,16 +40,16 @@ export default function ContactBar() {
                 </div>
                 <div className="bg-gray-300 bg-opacity-70 hover:bg-slate-200 p-1 mr-2 mb-4 rounded-full size-14 lg:size-15 items-center justify-center text-center hover:cursor-pointer animate-scale-up-down">
                     <a href='tel:093 100 0001'>
-                        <Image src={PhoneIcon} alt='Messenger Kho Lanh' width={128} height={128} className='p-2' />
+                        <Image src={PhoneIcon} alt='Messenger Kho Lanh' width={128} height={128} className='p-1' />
                     </a>
                 </div>
                 <div className="bg-gray-300 bg-opacity-70 hover:bg-slate-200 p-1 mr-2 mb-4 rounded-full size-14 lg:size-15 items-center justify-center text-center hover:cursor-pointer animate-scale-up-down">
                     <a href='http://zalo.me/0931000001'>
-                        <Image src={ZaloIcon} alt='Zalo' width={128} height={128} className='p-2' />
+                        <Image src={ZaloIcon} alt='Zalo' width={128} height={128} className='p-1' />
                     </a>
                 </div>
             </div>
-            <div className="bg-green-800 hover:bg-green-800 p-4 rounded-full size-16 items-center justify-center text-center hover:cursor-pointer animate-scale-up-down">
+            <div className="bg-green-800 hover:bg-green-800 p-3 rounded-full size-14 lg:size-15 items-center justify-center text-center hover:cursor-pointer animate-scale-up-down">
                 <a onClick={handleOpen}>
                     <FontAwesomeIcon icon={faArrowUpFromBracket} className='text-white self-center' size='sm' />
                 </a>
