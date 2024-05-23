@@ -18,6 +18,15 @@ const nextConfig = {
     ],
     formats: ['image/webp'],
   },
+  async redirects() {
+    return [
+      {
+        source: "/thi-truong-v2/:path*",
+        destination: "/thi-truong/:path*",
+        permanent: true,
+      }
+    ]
+  }
 };
 
 export default nextConfig;
