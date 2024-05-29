@@ -81,13 +81,13 @@ export default function Contact({isMobile, ...otherProps}) {
                             </div>
                             <div data-aos={animation} data-aos-duration={duration} data-aos-delay={delay*3} className="flex flex-row items-center justify-center">
                                 <FontAwesomeIcon icon={faEnvelope} size="1x" color="green" className="p-2 w-[32px]"/>
-                                <p className="text-sm font-light lg:font-normal text-left mt-1 p-2 whitespace-pre-line">
+                                <p className="text-sm font-light lg:font-normal text-left mt-1 p-1 whitespace-pre-line">
                                     {item.desc2[3].desc}
                                 </p>
                             </div>
                             <div data-aos={animation} data-aos-duration={duration} data-aos-delay={delay*3.5} className="flex flex-row items-center justify-center">                                
                                 <FontAwesomeIcon icon={faMapMarkedAlt} size="1x" color="green" className="p-2 w-[32px]"/>
-                                <p className="text-sm font-light lg:font-normal text-left mt-1 p-2 whitespace-pre-line">
+                                <p className="text-sm font-light lg:font-normal text-left mt-1 p-1 whitespace-pre-line">
                                     {item.desc2[4].desc}
                                 </p>
                             </div>
