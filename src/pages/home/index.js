@@ -180,8 +180,8 @@ export default function Home({isMobile, ...otherProps}) {
 
     const addPartnerImage_6 = require(`@assets/partners/trusted-by-6.jpg`);
     const addPartnerImage_7 = require(`@assets/partners/trusted-by-7.png`);
-    PartnersImages.push(addPartnerImage_6);
     PartnersImages.push(addPartnerImage_7);
+    PartnersImages.push(addPartnerImage_6);
 
     const galleryLocale = GalleryDesc.find(item => item.locale === locale);
 
