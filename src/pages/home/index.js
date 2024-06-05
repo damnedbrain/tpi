@@ -141,6 +141,12 @@ export async function getServerSideProps({ req }) {
     }
 }
 
+function swapItems(array, index1, index2) {
+    let temp = array[index1];
+    array[index1] = array[index2];
+    array[index2] = temp;
+}
+
 export default function Home({isMobile, ...otherProps}) {
 
     const animation = isMobile ? 'fade-up' : 'fade-left';
@@ -179,9 +185,11 @@ export default function Home({isMobile, ...otherProps}) {
     }
 
     const addPartnerImage_6 = require(`@assets/partners/trusted-by-6.jpg`);
-    const addPartnerImage_7 = require(`@assets/partners/trusted-by-7.png`);
-    PartnersImages.push(addPartnerImage_7);
-    PartnersImages.push(addPartnerImage_6);
+    const addPartnerImage_7 = require(`@assets/partners/trusted-by-7.jpg`);
+    const insertIndex = 1; // Change this to the index where you want to insert the items
+    PartnersImages.splice(insertIndex, 0, addPartnerImage_6, addPartnerImage_7);
+
+
 
     const galleryLocale = GalleryDesc.find(item => item.locale === locale);
 
