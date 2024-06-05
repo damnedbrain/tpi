@@ -239,8 +239,8 @@ export default function Home({isMobile, ...otherProps}) {
                 { 
                     order: "-sys.createdAt",
                     limit: 5,
-                    "fields.hightLight": "false",
-                    "fields.promo": "false",
+                    "fields.hightLight": "true",
+                    // "fields.promo": "false",
                     
                 });
 
