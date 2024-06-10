@@ -34,7 +34,7 @@ export default function SideBanner({main = false}) {
     return ( 
         <>
             <div className="rounded-xl mb-40 p-4">
-                <Link href="/kho-lanh-cong-nghiep" className='cursor-pointer'>
+                <Link href={banner[0] ? banner[1].fields.link : ''} className='cursor-pointer'>
                     <Image
                         className="rounded-xl"
                         src={banner[0] ? `https:${banner[1].fields.banner.fields.file.url}` : TopBanner}
@@ -48,7 +48,7 @@ export default function SideBanner({main = false}) {
                 </Link>
             </div>
             <div className={`rounded-xl p-4 ${botBannerMargin}`}>
-                <Link href="/chieu-xa" className='cursor-pointer'>
+                <Link href={banner[0] ? banner[0].fields.link : ''} className='cursor-pointer'>
                     <Image
                         className="rounded-xl"
                         src={banner[0] ? `https:${banner[0].fields.banner.fields.file.url}` : BottomBanner}
