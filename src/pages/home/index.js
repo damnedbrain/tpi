@@ -212,7 +212,7 @@ export default function Home({isMobile, ...otherProps}) {
             setBannerEntries(entries.items);
         }
         getBannerEntries();
-    }, []);
+    }, [entries]);
 
     useEffect(() => {
         async function getPageEntries() {
@@ -229,7 +229,7 @@ export default function Home({isMobile, ...otherProps}) {
             setEntries(entries.items);
         }
         getPageEntries();
-    }, []);
+    }, [entries]);
 
     useEffect(() => {
         async function getLatestEntries() {
@@ -247,7 +247,7 @@ export default function Home({isMobile, ...otherProps}) {
             setLatestEntries(LatestEntries.items);
         }
         getLatestEntries();
-    }, []);
+    }, [latestEntries]);
 
     let heroEntries = bannerEntries.map((item, index) => {
         if (item.fields.promo) {

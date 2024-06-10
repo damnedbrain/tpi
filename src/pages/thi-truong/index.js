@@ -81,7 +81,7 @@ export default function ThiTruong() {
             // Set loading state to false
             setIsLoading(false);
         }, []);
-    }, [locale]);
+    }, [locale,heroEntries, featuredEntries, newsEntries, blogEntries, promotionEntries]);
 
     // Render
     if (isLoading) {
