@@ -2,28 +2,30 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { getEntries } from "@/components/contentful/ContentfulService";
+import { useRouter } from "next/router";
 
 
 
 export default function SideBanner({main = false}) {
-    const [banner, setBanner] = useState();
+    const router = useRouter();
+    const locale = router.locale;
+    const [banner, setBanner] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        loadBanner();
-    }, [])
-    
-    const loadBanner  = async() => {
-        setIsLoading(true);
-        try {
-            const res = await getEntries("toanPhatBanner");
-            setBanner(res.items);
-
-        } catch (error) {
-            console.log(error);
+        const loadBanner = async () => {
+            setIsLoading(true);
+            try {
+                const res = await getEntries("toanPhatBanner", locale, { order: "-sys.createdAt" });
+                setBanner(res.items);
+            } catch (error) {
+                console.log(error);
+            }
+            setIsLoading(false);
         }
-        setIsLoading(false);
-    }
+        loadBanner();
+    }, [locale])
+    
     if (isLoading) {
         return <div 
                 className="flex flex-col font-fold font-3xl items-center justify-center text-slate-800 mt-24">
