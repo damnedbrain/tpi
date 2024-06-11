@@ -28,104 +28,64 @@ import {
 
 const images = [
     {
-      src: '/gallery/1.png',
+      src: '/gallery/Hình 1.JPG',
       width: 1597,
       height: 1065,
     },
     {
-      src: '/gallery/2.png',
+      src: '/gallery/Hình 2.JPG',
       width: 1739,
       height: 892,
     },
     {
-      src: '/gallery/3.png',
+      src: '/gallery/Hình 3.JPG',
       width: 1588,
       height: 1189,
     },
     {
-      src: '/gallery/4.png',
+      src: '/gallery/Hình 4.JPG',
       width: 1586,
       height: 1185,
     },
     {
-      src: '/gallery/5.png',
+      src: '/gallery/Hình 5.JPG',
       width: 1582,
       height: 1186,
     },
-    // {
-    //   src: '/gallery/6.png',
-    //   width: 1586,
-    //   height: 1189,
-    // },
     {
-      src: '/gallery/7.png',
+      src: '/gallery/Hình 6.JPG',
       width: 1585,
       height: 1187,
     },
     {
-      src: '/gallery/8.png',
+      src: '/gallery/Hình 7.jpg',
       width: 1767,
       height: 1189,
     },
     {
-      src: '/gallery/9.png',
+      src: '/gallery/Hình 8.jpg',
       width: 1785,
       height: 1189,
     },
     {
-      src: '/gallery/10.png',
+      src: '/gallery/Hình 9.JPG',
       width: 1585,
       height: 1188,
     },
     {
-      src: '/gallery/11.png',
+      src: '/gallery/Hình 10.JPG',
       width: 1587,
       height: 1191,
     },
     {
-      src: '/gallery/12.png',
+      src: '/gallery/Hình 11.jpg',
       width: 1588,
       height: 1192,
     },
     {
-      src: '/gallery/13.png',
+      src: '/gallery/Hình 12.jpg',
       width: 1586,
       height: 1188,
-    },
-    {
-      src: '/gallery/14.png',
-      width: 1706,
-      height: 1190,
-    },
-    // {
-    //   src: '/gallery/15.png',
-    //   width: 1276,
-    //   height: 954,
-    // },
-    {
-      src: '/gallery/16.png',
-      width: 1277,
-      height: 958,
-    },
-    {
-      src: '/gallery/17.png',
-      width: 682,
-      height: 437,
-    },
-    {
-      src: '/gallery/18.png',
-      width: 1783,
-      height: 1188,
-    },
-    {
-      src: '/gallery/19.png',
-      width: 1669,
-      height: 1189,
-    },
-    {
-      src: '/gallery/20.png',
-      width: 1391,
-      height: 1186,
     },
 ];
 
