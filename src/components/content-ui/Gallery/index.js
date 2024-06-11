@@ -25,7 +25,7 @@ function Gallery({ isMobile, images }) {
             </div>
 
             {selectedImage && (
-                <div  className="fixed top-0 left-0 w-full h-full  bg-black bg-opacity-80 flex items-center justify-center z-50" onClick={closeLightbox}>
+                <div className="fixed top-0 left-0 w-full h-full  bg-black bg-opacity-80 flex items-center justify-center z-50" onClick={closeLightbox}>
                     <img src={selectedImage} alt="selected" className="max-w-1/3 max-h-1/3" />
                 </div>
             )}
