@@ -168,11 +168,11 @@ export default function EntryDetail( { entry, locale }) {
           },
         },
         renderMark: {
-            [MARKS.BOLD]: (node, children) => <b className="font-bold text-3xl text-left my-11">{children}</b>,
-            [MARKS.ITALIC]: (node, children) => <i className="font-italic text-3xl text-left my-11">{children}</i>,
-            [MARKS.UNDERLINE]: (node, children) => <u className="font-underline text-3xl text-left my-11">{children}</u>,
-            [MARKS.CODE]: (node, children) => <code className="font-mono text-3xl text-left my-11">{children}</code>,
-        }
+          [MARKS.BOLD]: (text) => <b>{text}</b>,
+          [MARKS.ITALIC]: (text) => <em>{text}</em>,
+          [MARKS.UNDERLINE]: (text) => <u>{text}</u>,
+          [MARKS.CODE]: (text) => <code className='font-mono'>{text}</code>,
+      }
       };
     const { highlightEntries } = useContext(HighlightEntriesContext)
     return <>
