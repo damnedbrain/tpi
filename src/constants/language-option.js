@@ -694,11 +694,13 @@ export const foodIrradiationSystem = [
   {
     locale: 'vi',
     title: 'Chiếu xạ',
-    desc: `TPG là một trong những đơn vị tiên phong ứng dụng cả 03 công nghệ chiếu xạ tiên tiến nhất hiện nay: Cobalt-60, E-Beam, X-ray. Mỗi công nghệ có những đặc tính riêng nhưng đều đảm bảo được tính an toàn cho các thực phẩm và hàng hóa khi chiếu xạ. Nhờ ứng dụng công nghệ hiện đại, TPG đẩy nhanh tiến độ xử lý hàng hóa chiếu xạ, nâng cao chất lượng dịch vụ, giảm thời gian chờ đợi và tối ưu hóa chi phí cho khách hàng.
-    
-    Đặc biệt, TPG tự hào là đơn vị chiếu xạ đã thành công trong việc sản xuất, lắp đặt dây chuyền cơ khí, phần mềm điều khiển cho hệ thống chiếu xạ Cobalt-60, thực hiện bởi đội ngũ của công ty 100% người Việt Nam được Cục An toàn Bức xạ và Hạt nhân (Bộ Khoa học và Công nghệ Việt Nam) cấp phép. Đồng thời được APHIS (USDA) công nhận đủ điều kiện thực hiện chiếu xạ trái cây tươi sang thị trường Hoa Kỳ.
+    desc: `Nhà máy Chiếu xạ Toàn Phát (TPI) - thành viên của TOANPHAT Group (TPG) là một trong những đơn vị tiên phong ứng dụng cả 03 công nghệ chiếu xạ tiên tiến nhất hiện nay: Cobalt-60, E-Beam, X-ray. Mỗi công nghệ có những đặc tính riêng nhưng đều đảm bảo được tính an toàn cho các thực phẩm và hàng hóa khi chiếu xạ. Nhờ ứng dụng công nghệ hiện đại, TPI đẩy nhanh tiến độ xử lý hàng hóa chiếu xạ, nâng cao chất lượng dịch vụ, giảm thời gian chờ đợi và tối ưu hóa chi phí cho khách hàng.
 
-    Với sự kết hợp của cả ba công nghệ, cùng việc không ngừng mở rộng nghiên cứu phát triển, TPG đã ứng dụng đa dạng hóa vào các mặt hàng chiếu xạ, đáp ứng tối đa nhu cầu của khách hàng và khẳng định vị thế vững mạnh trên thị trường.`,
+Đặc biệt, TPI tự hào là đơn vị chiếu xạ đã thành công trong việc sản xuất, lắp đặt dây chuyền cơ khí, phần mềm điều khiển cho hệ thống chiếu xạ Cobalt-60, thực hiện bởi đội ngũ của công ty 100% người Việt Nam được Cục An toàn Bức xạ và Hạt nhân (Bộ Khoa học và Công nghệ Việt Nam) cấp phép.
+
+TPI hiện là đối tác chính thức của Animal and Plant Health Inspection Service (APHIS) - Cơ quan trực thuộc Bộ Nông nghiệp Hoa Kỳ (United States Department of Agriculture - USDA), đối tác của Ministry for Primary Industries (MPI) - Cơ quan chính phủ của New Zealand, đối tác của Australian Biosecurity Import Conditions (BICON) - Cơ quan trực thuộc Bộ Nông nghiệp, Thuỷ sản và Lâm nghiệp Úc (Department of Agriculture, Fisheries and Forestry - DAFF), đủ điều kiện chiếu xạ trái cây tươi xuất khẩu sang các thị trường này.
+
+Với sự kết hợp của cả ba công nghệ chiếu xạ, cùng việc không ngừng mở rộng nghiên cứu phát triển, TPI đã ứng dụng và đa dạng hóa vào các mặt hàng chiếu xạ như: chiếu xạ nông sản, chiếu xạ thuỷ sản, chiếu xạ thực phẩm chế biến, các loại dược liệu - đông nam dược, thiết bị y tế, hoá mỹ phẩm, đá trang sức, đồ thủ công mỹ nghệ, thức ăn thú cưng… Qua đó, đáp ứng tối đa nhu cầu của khách hàng, đồng hành cùng các doanh nghiệp xuất khẩu hàng hoá ra thị trường quốc tế và ngày càng phát triển vững mạnh.`,
     subDesc: [
       {
         title: 'Hệ thống máy chiếu xạ bằng nguồn Cobalt-60 sử dụng tia Gamma',
@@ -767,11 +769,13 @@ export const foodIrradiationSystem = [
   {
     locale: 'en-US',
     title: 'Irradiation ',
-    desc: `In order to speed up the handling of goods and ensure the highest quality for Agricultural and Fisheries, TPG is one of the leading companies which use all three irradiation technologies: Cobalt-60, E-Beam, and X-ray. Even though each type of technology has its own features, they must all ensure the safety of food and goods during the irradiation process. Through the application of modern technology, TPG accelerates the processing of irradiated goods, improves service quality, decreases waiting time, and optimizes costs for customers.
-    
-    In particular, TPG is proud to be one of the irradiation groups that has succeeded in manufacturing and installing mechanical lines and the controlling software for the Cobalt-60 irradiation system, which has been implemented by the company's team of 100% Vietnamese staffs and licensed by the Department of Radiation and Nuclear Safety (Ministry of Science and Technology of Vietnam). Additionally, our group has been recognized by APHIS (USDA) as being eligible to carry out irradiation for fresh fruits exported to the US market.
-    
-    Along with the consistent expansion of research and development, TPG has applied the combination of all three technologies in various ways into irradiation products in order to meet the needs of its customers and to guarantee its firm position in the market.`,
+    desc: `In order to speed up the handling of goods and ensure the highest quality for Agricultural and Fisheries, Toan Phat Irradiation (TPI) - a member of TOANPHAT Group (TPG) is one of the leading companies which use all three irradiation technologies: Cobalt-60, E-Beam, and X-ray. Even though each type of technology has its own features, they must all ensure the safety of food and goods during the irradiation process. Through the application of modern technology, Toan Phat Irradiation accelerates the processing of irradiated goods, improves service quality, decreases waiting time, and optimizes costs for customers.
+
+In particular, Toan Phat Irradiation is proud to be one of the irradiation groups that has succeeded in manufacturing and installing mechanical lines and the controlling software for the Cobalt-60 irradiation system, which has been implemented by the company's team of 100% Vietnamese staffs and licensed by the Department of Radiation and Nuclear Safety (Ministry of Science and Technology of Vietnam).
+
+Toan Phat Irradiation is an official partner of the Animal and Plant Health Inspection Service (APHIS) - an agency under the United States Department of Agriculture (USDA), a partner of the Ministry for Primary Industries (MPI) - a government agency of New Zealand, and a partner of Australian Biosecurity Import Conditions (BICON) - an agency under the Department of Agriculture, Fisheries and Forestry (DAFF) of Australia. The factory of Toan Phat Irradiation is qualified to irradiate fresh fruit for export to these markets.
+
+Along with the consistent expansion of research and development, Toan Phat Irradiation has applied the combination of all three technologies in various ways into irradiation products in order to meet the needs of its customers and to guarantee its firm position in the market.`,
     subDesc: [
       {
         title: 'Cobalt-60 irradiation system by gamma rays',
