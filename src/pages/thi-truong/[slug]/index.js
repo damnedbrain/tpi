@@ -137,6 +137,14 @@ export default function EntryDetail( { entry, locale }) {
           [BLOCKS.QUOTE]: (node, children) =>
             <blockquote className="text-left text-gray-600 italic border-l-4 pl-4 border-gray-400 my-4">{children}</blockquote>,
           [BLOCKS.HR]: () => <hr className="my-4" />,
+
+          [BLOCKS.TABLE]: (node, children) => 
+            <table className="table-auto">
+              <tbody>{children}</tbody>
+            </table>,
+          [BLOCKS.TABLE_HEADER]: (node, children) => <thead className="bg-blue-500 text-white px-4 py-2">{children}</thead>,
+          [BLOCKS.TABLE_ROW]: (node, children) => <tr>{children}</tr>,
+          [BLOCKS.TABLE_CELL]: (node, children) => <td className="border-2 px-4 py-2 text-center">{children}</td>,   
           
       
           [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
