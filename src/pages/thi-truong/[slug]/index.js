@@ -6,18 +6,11 @@ import Image from 'next/image';
 
 import { formatDate } from '@/components/api/FormatDateTime';
 import HighlightEntriesContext from '@/components/api/HighlightEntriesContext';
-import {
-  ResolveLabelForContentType,
-} from '@/components/api/ResolveLabelForContentType';
+import { ResolveLabelForContentType } from '@/components/api/ResolveLabelForContentType';
 import EntryPreview from '@/components/content-ui/EntryPreview';
-import {
-  documentToReactComponents,
-} from '@contentful/rich-text-react-renderer';
-import {
-  BLOCKS,
-  INLINES,
-  MARKS,
-} from '@contentful/rich-text-types';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types';
+import { render } from 'react-dom';
 
 export async function getStaticPaths({ }) {
     const client = createClient({
@@ -120,16 +113,31 @@ export default function EntryDetail( { entry, locale }) {
               );
             }
           },
-
-          [MARKS.BOLD]: (node, children) => <b className="font-bold text-3xl text-left my-11">{children}</b>,
-
+          [BLOCKS.HEADING_1]: (node, children) =>
+            <h1 className="text-4xl lg:text-6xl font-bold my-2 p-1">{children}</h1>,
+          [BLOCKS.HEADING_2]: (node, children) =>
+            <h2 className="text-3xl lg:text-5xl font-bold my-2 p-1">{children}</h2>,
+          [BLOCKS.HEADING_3]: (node, children) =>
+            <h3 className="text-2xl lg:text-4xl font-bold my-2 p-1">{children}</h3>,
+          [BLOCKS.HEADING_4]: (node, children) =>
+            <h4 className="text-xl lg:text-3xl font-semibold my-2 p-1">{children}</h4>,
+          [BLOCKS.HEADING_5]: (node, children) =>
+            <h5 className="text-xl lg:text-2xl font-semibold my-2 p-1">{children}</h5>,
           [BLOCKS.HEADING_6]: (node, children) => 
             <h6 className="text-xl lg:text-2xl font-semibold my-2 p-1">{children}</h6>,
 
           [BLOCKS.PARAGRAPH]: (node, children) => 
             <p className="text-left font-normal leading-normal my-2">{children}</p>,
-          [MARKS.BOLD]: text => 
-            <b className="font-bold font-sans text-3xl text-left my-2">{text}</b>,
+          [BLOCKS.UL_LIST]: (node, children) =>
+            <ul className="list-disc list-inside">{children}</ul>,
+          [BLOCKS.OL_LIST]: (node, children) =>
+            <ol className="list-decimal list-inside">{children}</ol>,
+          [BLOCKS.LIST_ITEM]: (node, children) =>
+            <li className="text-left font-normal leading-normal my-2">{children}</li>,
+          [BLOCKS.QUOTE]: (node, children) =>
+            <blockquote className="text-left font-normal leading-normal my-2 p-1">{children}</blockquote>,
+          [BLOCKS.HR]: () => <hr className="my-4" />,
+          
       
           [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
             // render the EMBEDDED_ASSET as you need
@@ -151,6 +159,12 @@ export default function EntryDetail( { entry, locale }) {
             );
           },
         },
+        renderMark: {
+            [MARKS.BOLD]: (node, children) => <b className="font-bold text-3xl text-left my-11">{children}</b>,
+            [MARKS.ITALIC]: (node, children) => <i className="font-italic text-3xl text-left my-11">{children}</i>,
+            [MARKS.UNDERLINE]: (node, children) => <u className="font-underline text-3xl text-left my-11">{children}</u>,
+            [MARKS.CODE]: (node, children) => <code className="font-mono text-3xl text-left my-11">{children}</code>,
+        }
       };
     const { highlightEntries } = useContext(HighlightEntriesContext)
     return <>
