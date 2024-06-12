@@ -127,7 +127,34 @@ export default function EntryDetail( { entry, locale }) {
             <h6 className="text-xl lg:text-2xl font-semibold my-2 p-1">{children}</h6>,
           
           [INLINES.HYPERLINK]: (node, children) => {
-            return <a className='text-green-900 italic underline' href={node.data.uri} target="_blank" rel="noopener noreferrer">{children}</a>
+            // Only process youtube links
+            if (node.data.uri.includes("youtube.com")) {
+              // Extract videoId from the URL
+              const match = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/.exec(
+                node.data.uri
+              )
+              const videoId =
+                match && match[7].length === 11 ? match[7] : null
+              return (
+                videoId && (
+                <div className="video-container">
+                  <iframe
+                    className="video"
+                    title={`https://youtube.com/embed/${videoId}`}
+                    src={`https://youtube.com/embed/${videoId}`}
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                    frameBorder="0"
+                    allowFullScreen
+                    width={720}
+                    height={405}
+                  />
+                </div>
+                )
+              )
+            } else {
+              // Process non-youtube links
+              return <a className='text-green-900 italic underline' href={node.data.uri} target="_blank" rel="noopener noreferrer">{children}</a>
+            }
           },
 
           [BLOCKS.PARAGRAPH]: (node, children) => 
