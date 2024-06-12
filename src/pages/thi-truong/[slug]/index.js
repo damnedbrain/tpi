@@ -125,6 +125,10 @@ export default function EntryDetail( { entry, locale }) {
             <h5 className="text-xl lg:text-2xl font-semibold my-2 p-1">{children}</h5>,
           [BLOCKS.HEADING_6]: (node, children) => 
             <h6 className="text-xl lg:text-2xl font-semibold my-2 p-1">{children}</h6>,
+          
+          [INLINES.HYPERLINK]: (node, children) => {
+            return <a className='text-green-900 italic underline' href={node.data.uri} target="_blank" rel="noopener noreferrer">{children}</a>
+          },
 
           [BLOCKS.PARAGRAPH]: (node, children) => 
             <p className="text-left font-normal leading-normal my-2">{children}</p>,
