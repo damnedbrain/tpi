@@ -129,20 +129,20 @@ export default function EntryDetail( { entry, locale }) {
           [BLOCKS.PARAGRAPH]: (node, children) => 
             <p className="text-left font-normal leading-normal my-2">{children}</p>,
           [BLOCKS.UL_LIST]: (node, children) =>
-            <ul className="list-disc list-inside">{children}</ul>,
+            <ul className="list-disc my-1">{children}</ul>,
           [BLOCKS.OL_LIST]: (node, children) =>
-            <ol className="list-decimal list-inside">{children}</ol>,
+            <ol className="list-decimal my-1">{children}</ol>,
           [BLOCKS.LIST_ITEM]: (node, children) =>
-            <li className="text-left font-normal leading-normal my-2">{children}</li>,
+            <li className="text-left font-normal leading-normal my-1">{children}</li>,
           [BLOCKS.QUOTE]: (node, children) =>
-            <blockquote className="text-left font-normal leading-normal my-2 p-1">{children}</blockquote>,
+            <blockquote className="text-left text-gray-600 italic border-l-4 pl-4 border-gray-400 my-4">{children}</blockquote>,
           [BLOCKS.HR]: () => <hr className="my-4" />,
           
       
           [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
             // render the EMBEDDED_ASSET as you need
             return (
-                <div className="flex flex-col items-center w-full justify-center object-fill">
+                <div className="flex flex-col items-center w-full justify-center object-fill my-4">
                     <Image
                         className='w-full mt-1 py-1'
                         src={`https:${node.data.target.fields.file.url}`}
