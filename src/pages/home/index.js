@@ -311,7 +311,7 @@ export default function Home({isMobile, ...otherProps}) {
             {/* {console.log(latestEntries)} */}
             <div className="flex flex-col justify-center items-center w-full p-4">
                 {highlighEntries.map((item, index) => (
-                    <div  key={index} className="flex flex-col-reverse lg:flex-row lg:items-end  w-full mt-4">
+                    <div  key={index} className="flex flex-col-reverse lg:flex-row lg:items-start  w-full mt-4">
                         <div  className="flex flex-col lg:w-1/3 lg:p-4">
                             <h1 data-aos={animation} className="text-bold text-green-800 font-semiBold text-3xl mb-8">
                                 <Link href={`/thi-truong/${item.slug}`}>{item.title}</Link>
