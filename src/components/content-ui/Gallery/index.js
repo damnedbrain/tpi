@@ -11,8 +11,8 @@ function Gallery({ isMobile, images }) {
     };
 
     const animation = isMobile ? 'fade-up' : 'fade-left';
-    const duration = isMobile ? 200 : 400;
-    const delay = isMobile ? 0 : 150;
+    const duration = isMobile ? 200 : 300;
+    const delay = isMobile ? 0 : 50;
 
     return (
         <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-8">
