@@ -152,11 +152,11 @@ const images = [
         width: 1600,
         height: 1067,
     },
-    {
-        src: '/gallery/6 (2).png',
-        width: 1600,
-        height: 1067,
-    },
+    // {
+    //     src: '/gallery/6 (2).png',
+    //     width: 1600,
+    //     height: 1067,
+    // },
     {
         src: '/gallery/7 (2).png',
         width: 1600,
@@ -182,11 +182,11 @@ const images = [
         width: 1600,
         height: 1067,
     },
-    {
-        src: '/gallery/12 (2).png',
-        width: 1600,
-        height: 1067,
-    },
+    // {
+    //     src: '/gallery/12 (2).png',
+    //     width: 1600,
+    //     height: 1067,
+    // },
 ];
 
 export async function getServerSideProps({ req }) {
