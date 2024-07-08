@@ -244,7 +244,7 @@ export default function Home({isMobile, ...otherProps}) {
         PartnersImages.push(partnerImage);
     }
 
-    const addPartnerImage_6 = require(`@assets/partners/trusted-by-6.png`);
+    const addPartnerImage_6 = require(`@assets/partners/trusted-by-6.jpg`);
     const addPartnerImage_7 = require(`@assets/partners/trusted-by-7.jpg`);
     const insertIndex = 1; // Change this to the index where you want to insert the items
     PartnersImages.splice(insertIndex, 0, addPartnerImage_6, addPartnerImage_7);
