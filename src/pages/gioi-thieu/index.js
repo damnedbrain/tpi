@@ -108,8 +108,8 @@ export default function GioiThieu({isMobile, ...otherProps}) {
               </h1>
               <div data-aos={animation} data-aos-duration={duration} data-aos-delay={delay} className="w-full m-auto">
                   {locale === "en-US" ? 
-                      <VideoComponent videoSrc="/videos/TPG_timeline_ENG.mp4" /> :
-                      <VideoComponent videoSrc="/videos/TPG_timeline_ENG.mp4" />
+                      <VideoComponent videoSrc="/videos/TPG_timeline_150724.mp4" /> :
+                      <VideoComponent videoSrc="/videos/TPG_timeline_150724.mp4" />
                   }
               </div>
           </div>
