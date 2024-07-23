@@ -323,7 +323,7 @@ export default function Home({isMobile, ...otherProps}) {
     }).filter(Boolean);
 
     let highlighEntries = entries.map((item, index) => {
-        if (item.fields.hightLight && item.fields.promo ) { // 
+        if (item.fields.hightLight && item.fields.homePage ) { // 
           return {
             url: item.fields.thumbImage.fields.file.url,
             slug: item.fields.slug,
