@@ -97,10 +97,15 @@ export default function Header() {
             {/* MENU */} 
             {arrMenu.map((item, index) => (
               <div key={index} className="relative flex items-center h-12 justify-center lg:mx-4 p-1 group">
-                <Link href={item.sub ? "" : item.link} legacyBehavior>
+                <Link href={item.sub ? "#" : item.link} legacyBehavior>
                   <a 
                     className="p-1 block w-28 text-center items-center justify-center rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out"
-                    onClick={() => handleMenu(item.title)}
+                    onClick={(e) => {
+                      if (item.sub) {
+                        e.preventDefault();
+                        handleMenu(item.title);
+                      }
+                    }}
                   >
                     {item.title}
                   </a>

@@ -66,7 +66,7 @@ export default function Document() {
                 fbq('track', 'PageView');
               `,
             }}
-          />
+        />
         <noscript>
           <img
             height="1"
