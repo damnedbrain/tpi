@@ -28,6 +28,36 @@ import {
 
 const images = [
     {
+        src:'/gallery/Hình 1.png',
+        width: 1600,
+        height: 1067,
+    },
+    {
+        src:'/gallery/Hình 2.png',
+        width: 1600,
+        height: 1067,
+    },
+    {
+        src:'/gallery/Hình 3.png',
+        width: 1600,
+        height: 1067,
+    },
+    {
+        src:'/gallery/Hình 4.png',
+        width: 1600,
+        height: 1067,
+    },
+    {
+        src:'/gallery/Hình 5.png',
+        width: 1600,
+        height: 1067,
+    },
+    {
+        src:'/gallery/Hình 6.png',
+        width: 1600,
+        height: 1067,
+    },
+    {
       src: '/gallery/1.png',
       width: 1597,
       height: 1065,
