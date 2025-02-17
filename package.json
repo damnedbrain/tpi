@@ -20,6 +20,7 @@
     "@heroicons/react": "^2.1.1",
     "@vercel/analytics": "^1.2.2",
     "aos": "^2.3.4",
+    "audit": "^0.0.6",
     "clsx": "^2.1.0",
     "contentful": "^10.8.1",
     "immer": "^10.0.4",

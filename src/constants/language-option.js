@@ -357,6 +357,10 @@ export const certificate = [
         title: 'Tên',
         desc: `Bureau Veritas công nhận Nhà máy Chiếu xạ Toàn Phát đạt tiêu chuẩn Hệ thống quản lý chất lượng quốc tế ISO 9001:2015`,
       },
+      {
+        title: 'Tên',
+        desc: `Bureau Veritas đánh giá và công nhận Kho Lạnh Toàn Phát đạt chuẩn ISO 22000:2018 trong dịch vụ lưu trữ thực phẩm ở điều kiện mát và đông lạnh.`,
+      },
       
     ],
   },
@@ -377,6 +381,10 @@ export const certificate = [
       {
         title: 'Tên',
         desc: `Bureau Veritas certifies that Toan Phat Irradiation meets the international standard of the ISO 9001:2015 Quality Management System.`,
+      },
+      {
+        title: 'Tên',
+        desc: `Bureau Veritas đánh giá và công nhận Kho Lạnh Toàn Phát đạt chuẩn ISO 22000:2018 trong dịch vụ lưu trữ thực phẩm ở điều kiện mát và đông lạnh.`,
       },
       
     ],
