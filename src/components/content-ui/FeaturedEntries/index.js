@@ -32,8 +32,10 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
             return new Date(b.postTime) - new Date(a.postTime);
         });
         setAllEntries(allEntries);
-        setCurrentNewsType(allEntries);
-    } , [newsEntries, blogEntries, promotionEntries]);
+        if (currentTypeEntries.length === 0) {
+            setCurrentNewsType(allEntries);
+        }
+    }, [newsEntries, blogEntries, promotionEntries]);
 
     
     return (
