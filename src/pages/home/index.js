@@ -262,7 +262,7 @@ export default function Home({isMobile, ...otherProps}) {
 
     const certificateLocale = certificate.find(item => item.locale === locale);
     const CertificationImages = [];
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 5; i++) {
         const certificateImage = require(`@assets/certificate/cert-${i+1}.png`);
         CertificationImages.push(certificateImage);
     }

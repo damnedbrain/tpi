@@ -361,6 +361,10 @@ export const certificate = [
         title: 'Tên',
         desc: `Bureau Veritas đánh giá và công nhận Kho Lạnh Toàn Phát đạt chuẩn ISO 22000:2018 trong dịch vụ lưu trữ thực phẩm ở điều kiện mát và đông lạnh.`,
       },
+      {
+        title: 'Tên',
+        desc: `Bureau Veritas đánh giá và công nhận Kho Lạnh Toàn Phát đạt chuẩn HACCP CODEX (CXC 1-1969) Rev 2020 trong cung cấp dịch vụ lưu trữ thực phẩm ở điều kiện mát và đông lạnh.`,
+      },
       
     ],
   },
@@ -385,6 +389,10 @@ export const certificate = [
       {
         title: 'Tên',
         desc: `Bureau Veritas has assessed and certified that Toan Phat Refrigerated Warehouse meets the ISO 22000:2018 standard for food storage services under chilled and frozen conditions.`,
+      },
+      {
+        title: 'Tên',
+        desc: `Bureau Veritas has assessed and certified that Toan Phat Refrigerated Warehouse meets the HACCP CODEX (CXC 1-1969) standard for food storage services under chilled and frozen conditions.`,
       },
       
     ],
