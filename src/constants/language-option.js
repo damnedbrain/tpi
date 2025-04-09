@@ -1261,7 +1261,7 @@ export const contactInfo = [
         {
           title: `Kho Lạnh`,
           desc: [
-            `Công ty TNHH Kho Vận Toàn Phát`,          
+            `Công ty Cổ Phần Kho Vận Toàn Phát`,          
           ],
           desc2: [
             {
