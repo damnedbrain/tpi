@@ -262,7 +262,7 @@ export default function Home({isMobile, ...otherProps}) {
 
     const certificateLocale = certificate.find(item => item.locale === locale);
     const CertificationImages = [];
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 6; i++) {
         const certificateImage = require(`@assets/certificate/cert-${i+1}.png`);
         CertificationImages.push(certificateImage);
     }
@@ -591,8 +591,8 @@ export default function Home({isMobile, ...otherProps}) {
             {/*End Company Culture Section*/}
             <div ></div>
             {/*Certification Section*/}
-            <div  className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
-                <div className="w-4/5">
+            <div  className="flex flex-col  w-full items-center justify-center m-auto h-auto mt-12">
+                <div className="w-full">
                     <h2 data-aos={animation} data-aos-duration={duration} className="text-3xl text-center font-bold text-green-800 ">
                         {certificateLocale.titleMain}
                     </h2>
@@ -600,7 +600,7 @@ export default function Home({isMobile, ...otherProps}) {
                         {certificateLocale.desc}
                     </div>
                 </div>
-                <div className="flex flex-col lg:flex-row w-4/5">
+                <div className="flex flex-col lg:flex-row w-full">
                     {CertificationImages.map((item, index) => (
                         <div data-aos={animation} data-aos-duration={duration} data-aos-delay={delay*index} key={index} className="m-2 w-full">
                             <div className="flex flex-col ">
@@ -622,7 +622,7 @@ export default function Home({isMobile, ...otherProps}) {
                         </div>
                     ))}
                 </div>
-            </div>          
+            </div>
             {/*End Certification Section*/}
 
             {/*Partners Section*/}
