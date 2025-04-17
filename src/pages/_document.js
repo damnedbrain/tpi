@@ -27,6 +27,22 @@ export default function Document() {
           `,
             }}
         />
+        <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_2}`}
+        />
+        <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_2}', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+        />
         <meta name='title' content="TOANPHAT Group" />
         <meta name='description' content="TOANPHAT Group | Chiếu xạ - Lưu trữ kho lạnh - Vận chuyển 
             TOANPHAT Group (TPG) gồm hai thành viên: Công ty TNHH Chiếu Xạ Toàn Phát (Nhà Máy Chiếu Xạ Toàn Phát) và Công ty TNHH Kho Vận Toàn Phát (Kho Lạnh Toàn Phát).
