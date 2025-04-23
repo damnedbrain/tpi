@@ -11,13 +11,6 @@ export default function Document() {
         <link rel="icon" href="/favicon.ico" />
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />        
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
-        {/* <!-- Google tag (gtag.js) -->  */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17010767391"></script>
-        <script> 
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments)};
-            gtag('js', new Date()); gtag('config', 'AW-17010767391'); 
-        </script>
         <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
