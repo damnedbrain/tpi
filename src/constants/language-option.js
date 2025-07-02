@@ -359,7 +359,7 @@ export const certificate = [
       },
       {
         title: 'Tên',
-        desc: `Bureau Veritas công nhận Nhà máy Chiếu xạ Toàn Phát đạt tiêu chuẩn Hệ thống quản lý chất lượng quốc tế ISO 9001:2018 `,
+        desc: `Bureau Veritas công nhận Nhà máy Chiếu xạ Toàn Phát đạt tiêu chuẩn Hệ thống quản lý chất lượng quốc tế ISO 22000:2018 `,
       },
       {
         title: 'Tên',
@@ -392,7 +392,7 @@ export const certificate = [
       },
       {
         title: 'Tên',
-        desc: `Bureau Veritas certifies that Toan Phat Irradiation meets the international standard of the ISO 9001:2018 Quality Management System.`,
+        desc: `Bureau Veritas certifies that Toan Phat Irradiation meets the international standard of the ISO 22000:2018 Quality Management System.`,
       },
       {
         title: 'Tên',
@@ -1156,7 +1156,7 @@ export const LocationMapContent = [
     locale: 'vi',
     title: 'Vị trí cửa ngõ',
     ttt: 1,
-    desc: `Nhà máy Chiếu Xạ Toàn Phát và Kho Lạnh Toàn Phát được đặt tại Khu công nghiệp Phú An Thạnh (Bến Lức - Long An). Đây là vị trí vàng để kết nối đến các tuyến đường huyết mạch quốc gia, các “trục xương sống” trong hạ tầng giao thông của Đồng bằng sông Cửu Long. Đồng thời là tâm điểm kết nối đến hệ thống cảng sông, cảng biển và cảng hàng không quốc tế của khu vực. Lợi thế về vị trí sẽ giúp các doanh nghiệp tiết kiệm được chi phí lớn trong lộ trình vận chuyển hàng hoá đến cơ sở chiếu xạ, hay từ kho lạnh lưu trữ đến hệ thống cảng để xuất khẩu Nông - Thuỷ sản ra nước ngoài.`,
+    desc: `Nhà máy Chiếu Xạ Toàn Phát và Kho Lạnh Toàn Phát được đặt tại Khu công nghiệp Phú An Thạnh (Bến Lức - Tây Ninh). Đây là vị trí vàng để kết nối đến các tuyến đường huyết mạch quốc gia, các “trục xương sống” trong hạ tầng giao thông của Đồng bằng sông Cửu Long. Đồng thời là tâm điểm kết nối đến hệ thống cảng sông, cảng biển và cảng hàng không quốc tế của khu vực. Lợi thế về vị trí sẽ giúp các doanh nghiệp tiết kiệm được chi phí lớn trong lộ trình vận chuyển hàng hoá đến cơ sở chiếu xạ, hay từ kho lạnh lưu trữ đến hệ thống cảng để xuất khẩu Nông - Thuỷ sản ra nước ngoài.`,
     sub: [
       {
         desc: `Ngay nút giao Cao tốc Trung Lương - Bến Lức, cách Quốc lộ 1A: 3km`,
@@ -1175,7 +1175,7 @@ export const LocationMapContent = [
         desc: `Cách Cảng Hàng không Quốc tế Tân Sơn Nhất: 42 km`,
       },
       {
-        desc: `Giáp ranh với huyện Bình Chánh (TP. HCM)`,
+        desc: `Giáp ranh với xã Bình Chánh (TP. HCM)`,
       },
       {
         desc: `Cách trung tâm TP. HCM: 36km`,
@@ -1189,7 +1189,7 @@ export const LocationMapContent = [
     locale: 'en-US',
     title: 'Gateway location',
     ttt: 2,
-    desc: `Toan Phat Irradiation and the Toan Phat Refrigerated Warehouse are located in Phu An Thanh Industrial Park (Ben Luc - Long An). This is a prime location to link to the national arterial roads, which form the "backbone" of the transport infrastructure of the Mekong Delta. Furthermore, this is also the central point of connection with the river port and seaport system and the international airport in the region. Because of the advantageous location, enterprises can save on transport expenses when delivering cargo to the irradiation factories as well as from refrigerated warehouse to the port system for the export of agricultural - fishing products into foreign markets.`,
+    desc: `Toan Phat Irradiation and the Toan Phat Refrigerated Warehouse are located in Phu An Thanh Industrial Park (Ben Luc - Tay Ninh). This is a prime location to link to the national arterial roads, which form the "backbone" of the transport infrastructure of the Mekong Delta. Furthermore, this is also the central point of connection with the river port and seaport system and the international airport in the region. Because of the advantageous location, enterprises can save on transport expenses when delivering cargo to the irradiation factories as well as from refrigerated warehouse to the port system for the export of agricultural - fishing products into foreign markets.`,
     sub: [
       {
         desc: `Turn right on the intersection of Trung Luong and Ben Luc Expressway, 3km from National Highway 1A`,
@@ -1210,7 +1210,7 @@ export const LocationMapContent = [
         desc: `To Tan Son Nhat International Airport: 42km`,
       },
       {
-        desc: `Bordering with Binh Chanh district (HCMC)`,
+        desc: `Bordering with Binh Chanh Commune (HCMC)`,
       },
       {
         desc: `To HCMC centre: 36km`,
@@ -1257,8 +1257,8 @@ export const contactInfo = [
             {
               icon: addressIcon,
               desc: `Lô A24-1, Đường Ngang 1,
-              KCN Phú An Thạnh, Xã An Thạnh,
-              Huyện Bến Lức, Tỉnh Long An.`,
+              KCN Phú An Thạnh,
+              Xã Bến Lức, Tỉnh Tây Ninh.`,
             },
           ],
           button1: facebookButton,
@@ -1292,8 +1292,8 @@ export const contactInfo = [
             {
               icon: addressIcon,
               desc: `Lô A24-2, Đường Ngang 1,
-              KCN Phú An Thạnh, Xã An Thạnh,
-              Huyện Bến Lức, Tỉnh Long An.`,
+              KCN Phú An Thạnh,
+              Xã Bến Lức, Tỉnh Tây Ninh.`,
             },
           ],
           button1: facebookButton,
@@ -1338,9 +1338,8 @@ export const contactInfo = [
             {
               icon: addressIcon,
               desc: `Block A24-1, Ngang 1 Road,
-              Phu An Thanh Industrial Park, 
-              An Thanh Commune,
-              Ben Luc District, Long An Province.`,
+              Phu An Thanh Industrial Park,
+              Ben Luc Commune, Tay Ninh Province.`,
             },
           ],
           button1: facebookButton,
@@ -1375,8 +1374,7 @@ export const contactInfo = [
               icon: addressIcon,
               desc: `Block A24-2, Ngang 1 Road,
               Phu An Thanh Industrial Park, 
-              An Thanh Commune,
-              Ben Luc District, Long An Province.`,
+              Ben Luc Commune, Tay Ninh Province.`,
             },
           ],
           button1: facebookButton,
@@ -1825,14 +1823,14 @@ export const AboutTPGDesc = [
     title: 'Giới thiệu về TOANPHAT Group',
     desc: `Năm 2017, bắt nguồn từ mong muốn chung tay cùng các doanh nghiệp nâng tầm thương hiệu và giá trị Nông - Thủy sản Việt, TOANPHAT Group (TPG) đã được xây dựng và phát triển. Để đặt nền móng cho sự khởi đầu, Dịch vụ Chiếu xạ (Công ty TNHH Chiếu Xạ Toàn Phát) là bước triển khai đầu tiên trong kế hoạch của TPG, thông qua đó đồng hành hỗ trợ các doanh nghiệp xuất khẩu Nông - Thủy sản giảm đi những áp lực về chi phí, nghiên cứu ứng dụng công nghệ để chủ động hơn trong lĩnh vực chiếu xạ và có thêm nhiều lợi thế khi xuất khẩu thực phẩm, hàng hóa ra quốc tế.
 
-    Với tầm nhìn xa hơn để con đường đưa Nông - Thủy sản Việt Nam có mặt trên thị trường thế giới được thuận lợi hơn nữa, năm 2023 TPG đã mở rộng lĩnh vực phát triển, xây dựng và đưa vào vận hành Kho Lạnh Toàn Phát (Công ty TNHH Kho Vận Toàn Phát) với khả năng lưu trữ tối đa lên đến 12.000 tấn. Trong chiến lược phát triển dài hạn, TPG hướng đến trở thành Trung tâm Logistics (Logistics HUB) tại khu vực Đồng bằng sông Cửu Long cung cấp đầy đủ 03 dịch vụ: Chiếu xạ - Lưu trữ - Vận chuyển.`,
+    Với tầm nhìn xa hơn để con đường đưa Nông - Thủy sản Việt Nam có mặt trên thị trường thế giới được thuận lợi hơn nữa, năm 2023 TPG đã mở rộng lĩnh vực phát triển, xây dựng và đưa vào vận hành Kho Lạnh Toàn Phát (Công ty Cổ Phần Kho Vận Toàn Phát) với khả năng lưu trữ tối đa lên đến 12.000 tấn. Trong chiến lược phát triển dài hạn, TPG hướng đến trở thành Trung tâm Logistics (Logistics HUB) tại khu vực Đồng bằng sông Cửu Long cung cấp đầy đủ 03 dịch vụ: Chiếu xạ - Lưu trữ - Vận chuyển.`,
   },
   {
     locale: 'en-US',
     title: 'About TOANPHAT Group',
     desc: `In 2017, TOANPHAT Group (TPG) was set up and built as a result of the desire to cooperate with enterprises and to enhance the brand image and value of Vietnamese Agricultural-Fisheries Products. In the beginning, Irradiation Service (Toan Phat Irradiation Co., Ltd.) was the initial step in TPG's plan to lay the fundamental foundation, thereby supporting Agricultural - Fisheries exporters to reduce the pressure on costs, as well as researching and utilizing technologies to lead more proactively in the field of irradiation and gain more advantages in exporting food and goods in the international market.
     
-    In 2023, with a strategic vision and a desire to facilitate the development of Vietnam's Agriculture and Fisheries on the world market, TPG has expanded its scale by constructing and operating Toan Phat Refrigerated Warehouse (Toan Phat Logistics Co., Ltd.) with a maximum storage capacity of up to 12.000 tons. In its long-term development strategy, TPG has always intended to become a Logistics Center (LOGISTICS HUB) of the Mekong Delta, providing the full three services: Irradiation - Storage - Transport.`,
+    In 2023, with a strategic vision and a desire to facilitate the development of Vietnam's Agriculture and Fisheries on the world market, TPG has expanded its scale by constructing and operating Toan Phat Refrigerated Warehouse (Toan Phat Logistics Joint Stock Company) with a maximum storage capacity of up to 12.000 tons. In its long-term development strategy, TPG has always intended to become a Logistics Center (LOGISTICS HUB) of the Mekong Delta, providing the full three services: Irradiation - Storage - Transport.`,
   },
 ];
 
@@ -1847,7 +1845,7 @@ export const ThongDiepTPG = [
     Từng mục tiêu nhỏ hướng về mục tiêu lớn, chúng tôi không chỉ nỗ lực đầu tư cả về trí tuệ con người, công nghệ hiện đại, trang thiết bị tiên tiến, mà còn quan tâm đến phản hồi của khách hàng để nâng cao chất lượng dịch vụ, tạo dựng uy tín thương hiệu và đưa TPG ngày càng vững mạnh.
     
     Ông VƯƠNG HIẾU
-    Giám đốc Điều hành
+    Giám đốc
     `,
   },
   {
@@ -1860,7 +1858,7 @@ export const ThongDiepTPG = [
     Taking small steps toward big goals, we would both strive to invest in human intelligence, modern technology and advanced equipment, and also put an emphasis on customer feedback to enhance service quality, build brand reputation and prestige, and to develop a stronger TPG.
 
     Mr. VUONG HIEU
-    Managing Director
+    Director
     `,
   },
 ];
