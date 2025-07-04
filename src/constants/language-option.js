@@ -1292,8 +1292,8 @@ export const contactInfo = [
             {
               icon: addressIcon,
               desc: `Lô A24-2, Đường Ngang 1,
-              KCN Phú An Thạnh,
-              Xã Bến Lức, Tỉnh Tây Ninh.`,
+              KCN Phú An Thạnh, Xã Bến Lức, 
+              Tỉnh Tây Ninh, Việt Nam.`,
             },
           ],
           button1: facebookButton,
@@ -1339,7 +1339,8 @@ export const contactInfo = [
               icon: addressIcon,
               desc: `Block A24-1, Ngang 1 Road,
               Phu An Thanh Industrial Park,
-              Ben Luc Commune, Tay Ninh Province.`,
+              Ben Luc Commune, Tay Ninh
+              Province, Vietnam.`,
             },
           ],
           button1: facebookButton,
