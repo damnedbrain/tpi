@@ -262,7 +262,7 @@ export default function Home({isMobile, ...otherProps}) {
 
     const certificateLocale = certificate.find(item => item.locale === locale);
     const CertificationImages = [];
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 8; i++) {
         const certificateImage = require(`@assets/certificate/cert-${i+1}.png`);
         CertificationImages.push(certificateImage);
     }
@@ -589,9 +589,9 @@ export default function Home({isMobile, ...otherProps}) {
                 </div>
             </div>    
             {/*End Company Culture Section*/}
-            <div ></div>
+
             {/*Certification Section*/}
-            <div  className="flex flex-col  w-full items-center justify-center m-auto h-auto mt-12">
+            <div className="flex flex-col w-full items-center justify-center m-auto h-auto mt-12">
                 <div className="w-full">
                     <h2 data-aos={animation} data-aos-duration={duration} className="text-3xl text-center font-bold text-green-800 ">
                         {certificateLocale.titleMain}
@@ -600,17 +600,15 @@ export default function Home({isMobile, ...otherProps}) {
                         {certificateLocale.desc}
                     </div>
                 </div>
-                <div className="flex flex-col lg:flex-row w-full">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full">
                     {CertificationImages.map((item, index) => (
-                        <div data-aos={animation} data-aos-duration={duration} data-aos-delay={delay*index} key={index} className="m-2 w-full">
-                            <div className="flex flex-col ">
+                        <div data-aos={animation} data-aos-duration={duration} data-aos-delay={delay*index} key={index} className="w-full">
+                            <div className="flex flex-col">
                                 <Image
                                     src={item}
                                     alt="cert"
                                     className="p-1 animate-fadeIn"
                                     style={{
-                                        maxWidth: "100%",
-                                        height: "auto",
                                         maxWidth: "100%",
                                         height: "auto"
                                     }} />

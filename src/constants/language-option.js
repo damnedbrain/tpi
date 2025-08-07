@@ -369,7 +369,14 @@ export const certificate = [
         title: 'Tên',
         desc: `Bureau Veritas đánh giá và công nhận Kho Lạnh Toàn Phát đạt chuẩn HACCP CODEX (CXC 1-1969) Rev 2020 trong cung cấp dịch vụ lưu trữ thực phẩm ở điều kiện mát và đông lạnh.`,
       },
-      
+      {
+        title: 'Tên',
+        desc: `Halal Quốc gia Việt Nam – VNH chứng nhận dịch vụ kho lạnh và vận chuyển do Kho lạnh Toàn Phát cung cấp phù hợp với luật Shariah và Tiêu chuẩn MS 1500:2019 của JAKIM – Malaysia.`,
+      },
+      {
+        title: 'Tên',
+        desc: `Halal Quốc gia Việt Nam – VNH chứng nhận dịch vụ chiếu xạ do Nhà máy chiếu xạ Toàn Phát cung cấp phù hợp với luật Shariah và tiêu chuẩn MS 1500:2019 của JAKIM — Malaysia.`,
+      },
     ],
   },
   {
@@ -402,7 +409,14 @@ export const certificate = [
         title: 'Tên',
         desc: `Bureau Veritas has assessed and certified that Toan Phat Refrigerated Warehouse meets the HACCP CODEX (CXC 1-1969) standard for food storage services under chilled and frozen conditions.`,
       },
-      
+      {
+        title: 'Tên',
+        desc: `Vietnam International Halal (VNH) certifies that the cold storage and transportation services provided by Toan Phat Refrigerated Warehouse comply with Shariah Law and the MS 1500:2019 standard of JAKIM – Malaysia.`,
+      },
+      {
+        title: 'Tên',
+        desc: `Vietnam International Halal (VNH) certifies that the irradiation services provided by Toan Phat Irradiation comply with Shariah Law and the MS 1500:2019 standard of Jabatan Kemajuan Islam Malaysia (JAKIM).`,
+      },
     ],
   },
 ];
