@@ -66,6 +66,7 @@ export default function Header() {
             </button>
             <Link href='/' className={`${activeSideMenu ? 'hidden' : 'block'}`}>
               <Image src={ToanPhatLogo} alt="logo" width={48} height='auto' as="image"
+                loading="lazy"
                 className='p-2'
                />
             </Link>
@@ -83,6 +84,7 @@ export default function Header() {
                   width={48}
                   height='auto'
                   as="image"
+                  loading="lazy"
                   style={{
                     maxWidth: "100%",
                     height: "auto",
@@ -149,6 +151,7 @@ export default function Header() {
             <div className='ml-8 mb-8'>
               <Link href='/' className={`${activeSideMenu ? 'block' : 'hidden'}`} onClick={() => setActiveSideMenu(false)}>
                   <Image src={ToanPhatLogo} alt="logo" width={activeSideMenu ? 96 : 48} height='auto' as="image"
+                    loading="lazy"
                     className='pt-2'
                   />
               </Link>

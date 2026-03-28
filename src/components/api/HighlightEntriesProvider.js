@@ -14,15 +14,15 @@ function shortenEntries (entries) {
             id: item.sys.id,
             title: item.fields.title,
             slug: item.fields.slug,
-            description: item.fields.desc,
-            url: item.fields.image.fields.file.url,
+            description: item.fields.desc || item.fields.content,
+            url: item.fields.image?.fields?.file?.url || '',
             alt: `Image ${item.fields.title}`,
-            width: item.fields.image.fields.file.details.image.width,
-            height: item.fields.image.fields.file.details.image.height,
-            thumbImage: item.fields.thumbImage.fields.file.url,
-            thumbImageAlt: `Thumb Image ${item.fields.thumbImage.fields.title}`,
-            thumbImageWidth: item.fields.thumbImage.fields.file.details.image.width,
-            thumbImageHeight: item.fields.thumbImage.fields.file.details.image.height,
+            width: item.fields.image?.fields?.file?.details?.image?.width || 0,
+            height: item.fields.image?.fields?.file?.details?.image?.height || 0,
+            thumbImage: item.fields.thumbImage?.fields?.file?.url || item.fields.image?.fields?.file?.url || '',
+            thumbImageAlt: `Thumb Image ${item.fields.thumbImage?.fields?.title || item.fields.title}`,
+            thumbImageWidth: item.fields.thumbImage?.fields?.file?.details?.image?.width || item.fields.image?.fields?.file?.details?.image?.width || 0,
+            thumbImageHeight: item.fields.thumbImage?.fields?.file?.details?.image?.height || item.fields.image?.fields?.file?.details?.image?.height || 0,
             postTime: item.sys.createdAt,
             type: item.fields.type,
             tags: item.fields.tags,
@@ -44,7 +44,7 @@ export default function HighlightEntriesProvider({ children }) {
             setHighlightEntries(shortenEntries(highlightEntries.items));
         })
        
-    }, [highlightEntries]);
+    }, [locale]);
 
     return (
         <HighlightEntriesContext.Provider value={{ highlightEntries }}>

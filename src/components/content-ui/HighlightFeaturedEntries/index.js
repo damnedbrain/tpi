@@ -26,7 +26,7 @@ export default function HighlightFeaturedEntries({ entries }) {
                           src={`https:${entries[0].thumbImage}`}
                           alt={entries[0].thumbImageAlt}
                           fill
-                          sizes="100vw"
+                          sizes="(min-width: 1024px) 50vw, 100vw"
                           style={{
                               maxWidth: "100%",
                               // height: "auto"
@@ -55,7 +55,7 @@ export default function HighlightFeaturedEntries({ entries }) {
                                     src={`https:${entry.thumbImage}`}
                                     alt={entry.thumbImageAlt}
                                     fill
-                                    sizes="100vw"
+                                    sizes="(min-width: 1024px) 16vw, 50vw"
                                     style={{
                                         maxWidth: "100%",
                                         // height: "auto"

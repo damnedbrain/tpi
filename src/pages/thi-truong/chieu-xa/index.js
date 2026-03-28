@@ -40,26 +40,17 @@ function shortenEntries (entries) {
 
 export default function ThiTruongPage() {
     const router = useRouter();
-    const { page } = router.query;
-    
     const locale = router.locale;
     const [isLoading, setIsLoading] = useState(true);
     const [newsEntries, setNewsEntries] = useState([]);
-    const [pageIndex, setPageIndex] = useState(1);
     const [error, setError] = useState(null);
     const [pageCount, setPageCount] = useState(1);
     const pageSize = 15;
+    const pageIndex = 0;
 
     useEffect(() => {
         loadEntries(pageIndex);
-    }, [locale, pageIndex]);
-
-    useEffect(() => {
-        const pageNumber = page ? parseInt(page, 10) : 0;
-        const currentPageIndex = pageNumber === 0 ? 0 : pageNumber - 1;
-        setPageIndex(currentPageIndex);
-        loadEntries(currentPageIndex);
-    }, [page]);
+    }, [locale]);
 
     const loadEntries = async (pageIndex) => {
         setIsLoading(true);
@@ -123,7 +114,7 @@ export default function ThiTruongPage() {
                     <div className='flex flex-col lg:w-4/5 items-center justify-start mt-8'>                        
                         <div className="flex flex-col m-0">
                             <EntriesWithPagination entries={newsEntries} />
-                            <Pagination currentPage={pageIndex + 1} pageCount={pageCount} basePageURL="chieu-xa" />
+                            <Pagination currentPage={1} pageCount={pageCount} basePageURL="chieu-xa" />
                         </div>
                     </div>
                     <div className="hidden lg:flex flex-col w-1/5 mt-8">

@@ -15,6 +15,7 @@ import NumberTitleDescWithLink
   from '@/components/content-ui/NumberTitleDescWithLink';
 import VideoComponent from '@/components/content-ui/VideoComponent';
 import { getEntries } from '@/components/strapi/StrapiContentService';
+import { extractTextFromBlocks } from '@/components/strapi/blocks';
 import SlickSlider from '@/components/layout/slick-slider-carousel';
 import {
   bestServices,
@@ -450,7 +451,7 @@ export default function Home({isMobile, ...otherProps}) {
                                 {formatDate(item.date)}
                             </h1>
                             <div data-aos={animation} data-aos-delay={delay} className="text-xl italic mb-8">
-                                {item.desc.content[0].content[0].value}                                        
+                                {extractTextFromBlocks(item.desc)}                                        
                             </div>
                             <i data-aos={animation} data-aos-delay={delay} className="text-green-800 text-xl mb-1 lg:mb-16">
                                 <Link href={`/thi-truong/${item.slug}`}>
@@ -501,7 +502,7 @@ export default function Home({isMobile, ...otherProps}) {
                         <div className="flex flex-col items-start justify-start w-full mt-0 flex-grow">
                             <div className="text-1xl p-1">
                                 <LinesEllipsis
-                                    text={item.fields.desc.content[0].content[0].value}
+                                    text={extractTextFromBlocks(item.fields.desc)}
                                     maxLine='4'
                                     ellipsis='...'
                                     trimRight

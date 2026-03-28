@@ -80,9 +80,10 @@ export default function SlickSlider({ entries }) {
             <Image
               src={`https:${item.url}`}
               alt={item.alt}
-              priority={true}
+              priority={index === 0}
               width={item.width}
               height={item.height}
+              sizes="100vw"
               style={{
                 maxWidth: "100%",
                 height: "auto",

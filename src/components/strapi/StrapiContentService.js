@@ -42,118 +42,6 @@ function mediaToEntryAsset(media) {
   };
 }
 
-function textNodeFromBlockChild(node) {
-  const marks = [];
-  if (node.bold) marks.push({ type: 'bold' });
-  if (node.italic) marks.push({ type: 'italic' });
-  if (node.underline) marks.push({ type: 'underline' });
-  if (node.code) marks.push({ type: 'code' });
-  return {
-    nodeType: 'text',
-    value: node.text || '',
-    marks,
-    data: {},
-  };
-}
-
-function blockChildrenToRichTextNodes(children = []) {
-  return children.map((child) => {
-    if (child.type === 'text') {
-      return textNodeFromBlockChild(child);
-    }
-
-    if (child.type === 'link') {
-      return {
-        nodeType: 'hyperlink',
-        content: blockChildrenToRichTextNodes(child.children || []),
-        data: {
-          uri: child.url || '',
-        },
-      };
-    }
-
-    return textNodeFromBlockChild({ text: '' });
-  });
-}
-
-function blockToRichTextNode(block) {
-  switch (block.type) {
-    case 'paragraph':
-      return {
-        nodeType: 'paragraph',
-        content: blockChildrenToRichTextNodes(block.children),
-        data: {},
-      };
-    case 'heading':
-      return {
-        nodeType: `heading-${block.level || 1}`,
-        content: blockChildrenToRichTextNodes(block.children),
-        data: {},
-      };
-    case 'quote':
-      return {
-        nodeType: 'blockquote',
-        content: blockChildrenToRichTextNodes(block.children),
-        data: {},
-      };
-    case 'list':
-      return {
-        nodeType: block.format === 'ordered' ? 'ordered-list' : 'unordered-list',
-        content: (block.children || []).map((item) => ({
-          nodeType: 'list-item',
-          content: [
-            {
-              nodeType: 'paragraph',
-              content: blockChildrenToRichTextNodes(item.children || []),
-              data: {},
-            },
-          ],
-          data: {},
-        })),
-        data: {},
-      };
-    case 'image':
-      return {
-        nodeType: 'embedded-asset-block',
-        content: [],
-        data: {
-          target: {
-            fields: {
-              title: block.image?.alternativeText || block.image?.name || '',
-              file: {
-                url: toProtocolRelative(block.image?.url || ''),
-                details: {
-                  image: {
-                    width: block.image?.width || 0,
-                    height: block.image?.height || 0,
-                  },
-                },
-              },
-            },
-          },
-        },
-      };
-    default:
-      return {
-        nodeType: 'paragraph',
-        content: blockChildrenToRichTextNodes(block.children || []),
-        data: {},
-      };
-  }
-}
-
-function blocksToRichTextDocument(blocks) {
-  if (!Array.isArray(blocks)) {
-    return blocks || { nodeType: 'document', data: {}, content: [] };
-  }
-
-  return {
-    nodeType: 'document',
-    data: {},
-    content: blocks.map(blockToRichTextNode),
-  };
-}
-
 function normalizeUndefined(value) {
   if (value === undefined) return null;
   if (Array.isArray(value)) return value.map(normalizeUndefined);
@@ -173,8 +61,8 @@ function strapiEntryToPageItem(entry) {
     thumbImage: mediaToEntryAsset(entry.thumbImage),
     banner: mediaToEntryAsset(entry.banner),
     avatar: mediaToEntryAsset(entry.avatar),
-    desc: blocksToRichTextDocument(entry.desc),
-    content: blocksToRichTextDocument(entry.content),
+    desc: entry.desc,
+    content: entry.content,
     time: entry.time,
     author: entry.author,
     hightLight: entry.hightLight,
@@ -258,9 +146,41 @@ export async function getEntries(contentType, locale, query = {}) {
     throw new Error(`Unsupported content type: ${contentType}`);
   }
 
-  const payload = await fetchCollection(collection, locale, query);
+  const tagFilter = query['fields.tags[in]'];
+  const normalizedQuery = { ...query };
+
+  // Strapi filtering on JSON array tags is unreliable here, so fetch a broader
+  // result set and filter in the adapter for consistent page behavior.
+  if (tagFilter) {
+    delete normalizedQuery['fields.tags[in]'];
+    if (normalizedQuery.limit != null && normalizedQuery.skip != null) {
+      normalizedQuery.limit = normalizedQuery.limit + normalizedQuery.skip;
+      normalizedQuery.skip = 0;
+    } else if (normalizedQuery.limit != null) {
+      normalizedQuery.limit = Math.max(normalizedQuery.limit, 200);
+    } else {
+      normalizedQuery.limit = 2000;
+    }
+  }
+
+  const payload = await fetchCollection(collection, locale, normalizedQuery);
+  let items = (payload.data || []).map(strapiEntryToPageItem);
+
+  if (tagFilter) {
+    const wantedTag = String(tagFilter).trim();
+    items = items.filter((item) => Array.isArray(item.fields.tags) && item.fields.tags.includes(wantedTag));
+
+    const skip = query.skip || 0;
+    const limit = query.limit != null ? query.limit : items.length;
+
+    return {
+      items: items.slice(skip, skip + limit),
+      total: items.length,
+    };
+  }
+
   return {
-    items: (payload.data || []).map(strapiEntryToPageItem),
+    items,
     total: payload.meta?.pagination?.total || 0,
   };
 }

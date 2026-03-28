@@ -7,15 +7,22 @@ import { formatDate } from '@/components/api/FormatDateTime';
 import {
   ResolveLabelForContentType,
 } from '@/components/api/ResolveLabelForContentType';
+import { extractTextFromBlocks } from '@/components/strapi/blocks';
+
+function extractExcerpt(description) {
+    return extractTextFromBlocks(description);
+}
 
 export default function EntryPreview({ entry, ellipsis = true}) {
     const router = useRouter();
     const locale = router.locale;
+    const imageSrc = entry.thumbImage || entry.url || '';
+    const excerpt = entry.excerpt || extractExcerpt(entry.description);
     return (
         <div className="relative flex flex-col w-full overflow-hidden lg:h-full bg-white rounded-md shadow-xs border border-slate-300 my-2">            
             <Image
                 className="block h-56 object-cover"
-                src={`https:${entry.thumbImage}`}
+                src={`https:${imageSrc}`}
                 alt={entry.title}
                 width={750}
                 height={500}
@@ -40,7 +47,7 @@ export default function EntryPreview({ entry, ellipsis = true}) {
                         </Link>
                         {ellipsis && (
                             <LinesEllipsis
-                                text={entry.description.content[0].content[0].value}
+                                text={excerpt}
                                 maxLine="2"
                                 ellipsis="..."
                                 trimRight

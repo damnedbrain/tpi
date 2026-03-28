@@ -8,9 +8,7 @@ import { formatDate } from '@/components/api/FormatDateTime';
 import HighlightEntriesContext from '@/components/api/HighlightEntriesContext';
 import { ResolveLabelForContentType } from '@/components/api/ResolveLabelForContentType';
 import EntryPreview from '@/components/content-ui/EntryPreview';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types';
-import { render } from 'react-dom';
+import StrapiBlocks from '@/components/strapi/blocks';
 
 export async function getStaticPaths({ }) {
     const [viEntries, enEntries] = await Promise.all([
@@ -67,134 +65,6 @@ export async function getStaticProps({ params, locale }) {
 }
 
 export default function EntryDetail( { entry, locale }) {
-    const renderOptions = {
-        renderNode: {
-          [INLINES.EMBEDDED_ENTRY]: (node, children) => {
-            // target the contentType of the EMBEDDED_ENTRY to display as you need
-            if (node.data.target.sys.contentType.sys.id === "blogPost") {
-              return (
-                <a href={`/thi-truong/${node.data.target.fields.slug}`}
-                    className="flex flex-col items-center justify-center text-green-800 text-left font-bold hover:text-green-800"
-                >            
-                    {node.data.target.fields.title}
-                </a>
-              );
-            }
-          },
-          [BLOCKS.EMBEDDED_ENTRY]: (node, children) => {
-            // target the contentType of the EMBEDDED_ENTRY to display as you need
-            if (node.data.target.sys.contentType.sys.id === "codeBlock") {
-              return (
-                <pre>
-                  <code>{node.data.target.fields.code}</code>
-                </pre>
-              );
-            }
-      
-            if (node.data.target.sys.contentType.sys.id === "videoEmbed") {
-              return (
-                <iframe
-                  src={node.data.target.fields.embedUrl}
-                  height="100%"
-                  width="100%"
-                  title={node.data.target.fields.title}
-                  allowFullScreen={true}
-                />
-              );
-            }
-          },
-          [BLOCKS.HEADING_1]: (node, children) =>
-            <h1 className="text-4xl lg:text-6xl font-bold my-2 p-1">{children}</h1>,
-          [BLOCKS.HEADING_2]: (node, children) =>
-            <h2 className="text-3xl lg:text-5xl font-bold my-2 p-1">{children}</h2>,
-          [BLOCKS.HEADING_3]: (node, children) =>
-            <h3 className="text-2xl lg:text-4xl font-bold my-2 p-1">{children}</h3>,
-          [BLOCKS.HEADING_4]: (node, children) =>
-            <h4 className="text-xl lg:text-3xl font-semibold my-2 p-1">{children}</h4>,
-          [BLOCKS.HEADING_5]: (node, children) =>
-            <h5 className="text-xl lg:text-2xl font-semibold my-2 p-1">{children}</h5>,
-          [BLOCKS.HEADING_6]: (node, children) => 
-            <h6 className="text-xl lg:text-2xl font-semibold my-2 p-1">{children}</h6>,
-          
-          [INLINES.HYPERLINK]: (node, children) => {
-            // Only process youtube links
-            if (node.data.uri.includes("youtube.com")) {
-              // Extract videoId from the URL
-              const match = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/.exec(
-                node.data.uri
-              )
-              const videoId =
-                match && match[7].length === 11 ? match[7] : null
-              return (
-                videoId && (
-                <div className="video-container">
-                  <iframe
-                    className="video"
-                    title={`https://youtube.com/embed/${videoId}`}
-                    src={`https://youtube.com/embed/${videoId}`}
-                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                    frameBorder="0"
-                    allowFullScreen
-                    width={720}
-                    height={405}
-                  />
-                </div>
-                )
-              )
-            } else {
-              // Process non-youtube links
-              return <a className='text-green-900 italic underline' href={node.data.uri} target="_blank" rel="noopener noreferrer">{children}</a>
-            }
-          },
-
-          [BLOCKS.PARAGRAPH]: (node, children) => 
-            <p className="text-left font-normal leading-normal my-2">{children}</p>,
-          [BLOCKS.UL_LIST]: (node, children) =>
-            <ul className="list-disc my-1">{children}</ul>,
-          [BLOCKS.OL_LIST]: (node, children) =>
-            <ol className="list-decimal my-1">{children}</ol>,
-          [BLOCKS.LIST_ITEM]: (node, children) =>
-            <li className="text-left font-normal leading-normal my-1">{children}</li>,
-          [BLOCKS.QUOTE]: (node, children) =>
-            <blockquote className="text-left text-gray-600 italic border-l-4 pl-4 border-gray-400 my-4">{children}</blockquote>,
-          [BLOCKS.HR]: () => <hr className="my-4" />,
-
-          [BLOCKS.TABLE]: (node, children) => 
-            <table className="table-auto">
-              <tbody>{children}</tbody>
-            </table>,
-          [BLOCKS.TABLE_HEADER]: (node, children) => <thead className="bg-blue-500 text-white px-4 py-2">{children}</thead>,
-          [BLOCKS.TABLE_ROW]: (node, children) => <tr>{children}</tr>,
-          [BLOCKS.TABLE_CELL]: (node, children) => <td className="border-2 px-4 py-2 text-center">{children}</td>,   
-          
-      
-          [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
-            // render the EMBEDDED_ASSET as you need
-            return (
-                <div className="flex flex-col items-center w-full justify-center object-fill my-4">
-                    <Image
-                        className='w-full mt-1 py-1'
-                        src={`https:${node.data.target.fields.file.url}`}
-                        height={node.data.target.fields.file.details.image.height}
-                        width={node.data.target.fields.file.details.image.width}
-                        alt={node.data.target.fields.title}
-                        sizes="100vw"
-                        style={{
-                            maxWidth: "100%",
-                            height: "auto"
-                        }}
-                         />
-                </div>
-            );
-          },
-        },
-        renderMark: {
-          [MARKS.BOLD]: (text) => <b>{text}</b>,
-          [MARKS.ITALIC]: (text) => <em>{text}</em>,
-          [MARKS.UNDERLINE]: (text) => <u>{text}</u>,
-          [MARKS.CODE]: (text) => <code className='font-mono'>{text}</code>,
-      }
-      };
     const { highlightEntries } = useContext(HighlightEntriesContext)
     return <>
         <Head>
@@ -241,7 +111,7 @@ export default function EntryDetail( { entry, locale }) {
                                 height: "auto"
                             }} />
                         <div className="flex flex-col leading-relaxed m-auto w-full h-auto items-start justify-center text-left lg:mt-4 p-1">
-                            {documentToReactComponents(entry.fields.desc, renderOptions)}
+                            <StrapiBlocks blocks={entry.fields.desc} />
                         </div>
                     </div>
                     <div className="hidden lg:flex rounded-xl w-1/4 lg:flex-col items-start justify-start mb-40 p-3">

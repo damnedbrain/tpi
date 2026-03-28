@@ -18,7 +18,7 @@ const NumberTitleDescWithLink = ({ isMobile, icon, number, title, desc, link, bt
           width={64}
           height={64}
           quality={100}
-          sizes="100vw"
+          sizes="64px"
           style={{
             width: "100%",
             height: "auto",
