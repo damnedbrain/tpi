@@ -47,10 +47,25 @@ function normalizeUndefined(value) {
   return value;
 }
 
+function normalizeString(value) {
+  return typeof value === 'string' ? value.trim() : value;
+}
+
+function shouldExcludeEntry(contentType, entry) {
+  if (contentType !== 'toanPhatMarketNews') return false;
+
+  const title = normalizeString(entry.title);
+  const slug = normalizeString(entry.slug);
+
+  // Legacy export contains a stray HomeBanner record inside market news.
+  // Exclude it consistently so list/detail pages don't surface banner data as news.
+  return title === 'HomeBanner' && slug === 'home';
+}
+
 function strapiEntryToPageItem(entry) {
   const fields = {
-    title: entry.title,
-    slug: entry.slug,
+    title: normalizeString(entry.title),
+    slug: normalizeString(entry.slug),
     image: mediaToEntryAsset(entry.image),
     thumbImage: mediaToEntryAsset(entry.thumbImage),
     banner: mediaToEntryAsset(entry.banner),
@@ -58,16 +73,16 @@ function strapiEntryToPageItem(entry) {
     desc: entry.desc,
     content: entry.content,
     time: entry.time,
-    author: entry.author,
+    author: normalizeString(entry.author),
     hightLight: entry.hightLight,
     hightlight: entry.hightlight,
     homePage: entry.homePage,
     promo: entry.promo,
-    type: entry.type,
+    type: normalizeString(entry.type),
     tags: entry.tags,
-    question: entry.question,
-    answer: entry.answer,
-    link: entry.link,
+    question: normalizeString(entry.question),
+    answer: normalizeString(entry.answer),
+    link: normalizeString(entry.link),
   };
 
   return {
@@ -165,7 +180,12 @@ async function getEntriesFromStrapi(contentType, locale, query = {}) {
   }
 
   const payload = await fetchCollection(collection, locale, normalizedQuery);
-  let items = (payload.data || []).map(strapiEntryToPageItem);
+  let items = (payload.data || [])
+    .filter((entry) => !shouldExcludeEntry(contentType, entry))
+    .map(strapiEntryToPageItem);
+
+  const rawTotal = payload.meta?.pagination?.total || 0;
+  const excludedCount = (payload.data || []).length - items.length;
 
   if (tagFilter) {
     const wantedTag = String(tagFilter).trim();
@@ -182,7 +202,7 @@ async function getEntriesFromStrapi(contentType, locale, query = {}) {
 
   return {
     items,
-    total: payload.meta?.pagination?.total || 0,
+    total: Math.max(0, rawTotal - Math.max(0, excludedCount)),
   };
 }
 
