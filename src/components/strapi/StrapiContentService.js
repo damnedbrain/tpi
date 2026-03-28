@@ -1,10 +1,4 @@
 const STRAPI_BASE_URL = (process.env.NEXT_PUBLIC_STRAPI_URL || 'https://strapi.toanphatgroup.com').replace(/\/$/, '');
-const STRAPI_API_TOKEN =
-  process.env.NEXT_PUBLIC_STRAPI_API_TOKEN ||
-  process.env.STRAPI_API_TOKEN ||
-  process.env.STRAPI_READONLY_TOKEN ||
-  '';
-
 const CONTENT_TYPE_TO_COLLECTION = {
   toanPhatMarketNews: 'toan-phat-market-news',
   toanPhatBanner: 'toan-phat-banners',
@@ -93,7 +87,7 @@ function translateQuery(query = {}, locale) {
   if (locale) params.set('locale', locale);
   params.set('populate', '*');
 
-  if (query.limit != null) params.set('pagination[pageSize]', String(query.limit));
+  if (query.limit != null) params.set('pagination[limit]', String(query.limit));
   if (query.skip != null) params.set('pagination[start]', String(query.skip));
 
   if (query.order) {
@@ -123,9 +117,16 @@ async function fetchCollection(collection, locale, query = {}) {
   const headers = {
     Accept: 'application/json',
   };
+  const strapiApiToken =
+    typeof window === 'undefined'
+      ? process.env.STRAPI_API_TOKEN ||
+        process.env.STRAPI_READONLY_TOKEN ||
+        process.env.NEXT_PUBLIC_STRAPI_API_TOKEN ||
+        ''
+      : process.env.NEXT_PUBLIC_STRAPI_API_TOKEN || '';
 
-  if (STRAPI_API_TOKEN) {
-    headers.Authorization = `Bearer ${STRAPI_API_TOKEN}`;
+  if (strapiApiToken) {
+    headers.Authorization = `Bearer ${strapiApiToken}`;
   }
 
   const response = await fetch(`${STRAPI_BASE_URL}/api/${collection}?${params.toString()}`, {
@@ -140,7 +141,7 @@ async function fetchCollection(collection, locale, query = {}) {
   return response.json();
 }
 
-export async function getEntries(contentType, locale, query = {}) {
+async function getEntriesFromStrapi(contentType, locale, query = {}) {
   const collection = CONTENT_TYPE_TO_COLLECTION[contentType];
   if (!collection) {
     throw new Error(`Unsupported content type: ${contentType}`);
@@ -183,4 +184,33 @@ export async function getEntries(contentType, locale, query = {}) {
     items,
     total: payload.meta?.pagination?.total || 0,
   };
+}
+
+async function getEntriesViaApiRoute(contentType, locale, query = {}) {
+  const response = await fetch('/api/strapi/entries', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+    },
+    body: JSON.stringify({
+      contentType,
+      locale,
+      query,
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`Strapi proxy request failed: ${response.status} ${response.statusText}`);
+  }
+
+  return response.json();
+}
+
+export async function getEntries(contentType, locale, query = {}) {
+  if (typeof window !== 'undefined') {
+    return getEntriesViaApiRoute(contentType, locale, query);
+  }
+
+  return getEntriesFromStrapi(contentType, locale, query);
 }

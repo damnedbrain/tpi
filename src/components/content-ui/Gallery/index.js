@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 function Gallery({ isMobile, images }) {
     const [selectedImage, setSelectedImage] = useState(null);
@@ -19,7 +20,14 @@ function Gallery({ isMobile, images }) {
             <div style={{ display: 'grid', gridAutoRows: '1fr', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '1rem' }}>
                 {images.map((image, index) => (
                     <div data-aos={animation} data-aos-delay={ index * delay } data-aos-duration={duration} key={index} onClick={() => openLightbox(image.src)} className="cursor-pointer">
-                        <img src={image.src} alt={`gallery ${index}`} className="w-full h-full object-cover" />
+                        <Image
+                            src={image.src}
+                            alt={`gallery ${index}`}
+                            width={image.width || 1200}
+                            height={image.height || 800}
+                            className="w-full h-full object-cover"
+                            sizes="(min-width: 1024px) 25vw, 50vw"
+                        />
                     </div>
                 ))}
             </div>
@@ -27,7 +35,14 @@ function Gallery({ isMobile, images }) {
             {selectedImage && (
                 <div className="fixed top-0 left-0 w-full h-full  bg-black bg-opacity-80 flex items-center justify-center z-50" onClick={closeLightbox}>
                     <button className="absolute top-4 right-4 text-white text-2xl" onClick={closeLightbox}>X</button>
-                    <img src={selectedImage} alt="selected" className="max-w-[1024px] max-h-1/3" />
+                    <Image
+                        src={selectedImage}
+                        alt="selected"
+                        width={1024}
+                        height={768}
+                        className="max-w-[1024px] max-h-[75vh] w-auto h-auto"
+                        sizes="90vw"
+                    />
                 </div>
             )}
         </div>

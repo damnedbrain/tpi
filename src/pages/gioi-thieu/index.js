@@ -177,7 +177,7 @@ export default function GioiThieu({isMobile, ...otherProps}) {
               <h1 data-aos={animation} data-aos-duration={duration} className="text-4xl lg:text-5xl font-semiBold text-left text-green-800 ">
                   {sixWordTPGLocale.title}
               </h1>
-              <div data-aos={animation} ddata-aos-duration={duration} className="flex flex-col lg:grid lg:grid-flow-row-dense lg:grid-cols-3 lg:grid-rows-2 lg:gap-4 w-full mt-1 lg:mt-4">
+              <div data-aos={animation} data-aos-duration={duration} className="flex flex-col lg:grid lg:grid-flow-row-dense lg:grid-cols-3 lg:grid-rows-2 lg:gap-4 w-full mt-1 lg:mt-4">
                   {sixWordTPGLocale.sub.map((item, index) => (
                       <div key={index}>
                           <NumberTitleDescWithLink isMobile={isMobile} icon={SixWordIcons[index].icon} number={index+1} title={item.title} desc={item.desc} key={index} />

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { getEntries } from "@/components/strapi/StrapiContentService";
 import { useRouter } from "next/router";
 
-
+import { getEntries } from "@/components/strapi/StrapiContentService";
+import BottomBanner from "@assets/thi-truong-banner/bottom.jpg";
+import TopBanner from "@assets/thi-truong-banner/top.jpg";
 
 export default function SideBanner({main = false}) {
     const router = useRouter();
@@ -19,7 +20,7 @@ export default function SideBanner({main = false}) {
                 const res = await getEntries("toanPhatBanner", locale, { order: "-sys.createdAt" });
                 setBanner(res.items);
             } catch (error) {
-                console.log(error);
+                console.error("Error loading side banners:", error);
             }
             setIsLoading(false);
         }
@@ -33,33 +34,36 @@ export default function SideBanner({main = false}) {
                 </div>
     }
     const botBannerMargin = main ? "mt-48" : "mb-40";
+    const topBanner = banner[1] || null;
+    const bottomBanner = banner[0] || null;
+
     return ( 
         <>
             <div className="rounded-xl mb-40 p-4">
-                <Link href={banner[0] ? banner[1].fields.link : ''} className='cursor-pointer'>
+                <Link href={topBanner?.fields?.link || '#'} className='cursor-pointer'>
                     <Image
                         className="rounded-xl"
-                        src={banner[0] ? `https:${banner[1].fields.banner.fields.file.url}` : TopBanner}
-                        width={banner[0] ? banner[1].fields.banner.fields.file.details.image.width : 300}
-                        height={banner[0] ? banner[1].fields.banner.fields.file.details.image.height : 300}
+                        src={topBanner ? `https:${topBanner.fields.banner.fields.file.url}` : TopBanner}
+                        width={topBanner ? topBanner.fields.banner.fields.file.details.image.width : 300}
+                        height={topBanner ? topBanner.fields.banner.fields.file.details.image.height : 300}
                         alt="Top Banner"
                         style={{
                             maxWidth: "100%",
-                            // height: "auto"
+                            height: "auto"
                         }} />
                 </Link>
             </div>
             <div className={`rounded-xl p-4 ${botBannerMargin}`}>
-                <Link href={banner[0] ? banner[0].fields.link : ''} className='cursor-pointer'>
+                <Link href={bottomBanner?.fields?.link || '#'} className='cursor-pointer'>
                     <Image
                         className="rounded-xl"
-                        src={banner[0] ? `https:${banner[0].fields.banner.fields.file.url}` : BottomBanner}
-                        width={banner[0] ? banner[0].fields.banner.fields.file.details.image.width : 300}
-                        height={banner[0] ? banner[0].fields.banner.fields.file.details.image.height : 300}
-                        alt="Top Banner"
+                        src={bottomBanner ? `https:${bottomBanner.fields.banner.fields.file.url}` : BottomBanner}
+                        width={bottomBanner ? bottomBanner.fields.banner.fields.file.details.image.width : 300}
+                        height={bottomBanner ? bottomBanner.fields.banner.fields.file.details.image.height : 300}
+                        alt="Bottom Banner"
                         style={{
                             maxWidth: "100%",
-                            // height: "auto"
+                            height: "auto"
                         }} />
                 </Link>
             </div>

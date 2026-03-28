@@ -21,8 +21,8 @@ export default function Header() {
   const router = useRouter();
   const locale = router.locale;
   const arrMenu = useMemo(() => {
-    return headerMenu.find((item) => item.locale === locale).titles;
-  })
+    return headerMenu.find((item) => item.locale === locale)?.titles || headerMenu[0].titles;
+  }, [locale])
 
   const handleMenu = (menu) => {
     setActiveMenu(prevMenu => prevMenu === menu ? null : menu);

@@ -27,14 +27,30 @@ export async function getServerSideProps({ req }) {
     const isMobile = Boolean(userAgent.match(
         /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i,
     ));
+    let bannerEntries = [];
+    try {
+        const entries = await getEntries(
+            "toanPhatMarketNews",
+            'vi',
+            {
+                order: "-sys.createdAt",
+                limit: 10,
+                "fields.promo": "true"
+            }
+        );
+        bannerEntries = entries.items;
+    } catch (error) {
+        console.error("Error loading cold storage banners:", error);
+    }
     return {
         props: {
             isMobile,
+            bannerEntries,
         }
     }
 }
 
-export default function KhoLanhCongNghiep({isMobile, ...otherProps}) {
+export default function KhoLanhCongNghiep({isMobile, bannerEntries = [], ...otherProps}) {
 
     const animation = isMobile ? 'fade-up' : 'fade-left';
     const duration = isMobile ? 300 : 600;
@@ -46,24 +62,6 @@ export default function KhoLanhCongNghiep({isMobile, ...otherProps}) {
     const kholanhIcons = [
         kholanh1, kholanh2, kholanh3, kholanh4, kholanh5
     ]
-
-    const [bannerEntries, setBannerEntries] = useState([]);
-    
-    useEffect(() => {
-        async function getBannerEntries() {
-            const entries = await getEntries(
-                "toanPhatMarketNews", 
-                locale, 
-                { 
-                    order: "-sys.createdAt",
-                    limit: 10,
-                    "fields.promo": "true"
-                });
-
-            setBannerEntries(entries.items);
-        }
-        getBannerEntries();
-    }, []);
 
     let heroEntries = bannerEntries.map((item, index) => {
         if (item.fields.promo) {
@@ -119,7 +117,7 @@ export default function KhoLanhCongNghiep({isMobile, ...otherProps}) {
             </div>
             <div className="flex flex-col lg:grid lg:grid-cols-3 lg:grid-rows-3 gap-8 mt-8 p-2">
                 {coldStorageTopContentLocale.sub.map((item, index) => (
-                    <div >
+                    <div key={index}>
                         <h1 data-aos={animation} data-aos-duration={duration} data-aos-delay={index*delay} className="text-4xl lg:text-6xl text-slate-300">{index+1}</h1>
                         <h1 data-aos={animation} data-aos-duration={duration} data-aos-delay={index*delay*2} className="text-2xl lg:text-3xl text-green-800">{item.title}</h1>
                         <p data-aos={animation} data-aos-duration={duration} data-aos-delay={index*delay*3} className='leading-loose'>{item.desc}</p>

@@ -1,7 +1,4 @@
-import React, {
-  useEffect,
-  useState,
-} from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Head from 'next/head';
 import Image from 'next/image';
@@ -238,6 +235,14 @@ function swapItems(array, index1, index2) {
     array[index2] = temp;
 }
 
+function excerptFromBlocks(blocks, maxLength = 260) {
+    const plainText = extractTextFromBlocks(blocks);
+    if (plainText.length <= maxLength) {
+        return plainText;
+    }
+    return `${plainText.slice(0, maxLength).trim()}...`;
+}
+
 export default function Home({isMobile, ...otherProps}) {
 
     const animation = isMobile ? 'fade-up' : 'fade-left';
@@ -288,57 +293,58 @@ export default function Home({isMobile, ...otherProps}) {
     const [latestEntries, setLatestEntries] = useState([]);
     const [bannerEntries, setBannerEntries] = useState([]);
 
-
     useEffect(() => {
-        async function getBannerEntries() {
-            const entries = await getEntries(
-                "toanPhatMarketNews", 
-                locale, 
-                { 
-                    order: "-sys.createdAt",
-                    limit: 10,
-                    "fields.promo": "true"
-                });
+        let isActive = true;
 
-            setBannerEntries(entries.items);
+        async function loadHomepageEntries() {
+            try {
+                const [bannerResponse, pageResponse, latestResponse] = await Promise.all([
+                    getEntries(
+                        "toanPhatMarketNews",
+                        locale,
+                        {
+                            order: "-sys.createdAt",
+                            limit: 10,
+                            "fields.promo": "true"
+                        }
+                    ),
+                    getEntries(
+                        "toanPhatMarketNews",
+                        locale,
+                        {
+                            order: "-sys.createdAt",
+                            limit: 10,
+                            "fields.homePage": "true",
+                            "fields.hightLight": "true",
+                        }
+                    ),
+                    getEntries(
+                        "toanPhatMarketNews",
+                        locale,
+                        {
+                            order: "-sys.createdAt",
+                            limit: 5,
+                            "fields.hightLight": "true",
+                        }
+                    ),
+                ]);
+
+                if (!isActive) return;
+
+                setBannerEntries(bannerResponse.items);
+                setEntries(pageResponse.items);
+                setLatestEntries(latestResponse.items);
+            } catch (error) {
+                console.error("Error loading homepage entries:", error);
+            }
         }
-        getBannerEntries();
-    }, [entries]);
 
-    useEffect(() => {
-        async function getPageEntries() {
-            const entries = await getEntries(
-                "toanPhatMarketNews", 
-                locale, 
-                { 
-                    order: "-sys.createdAt",
-                    limit: 10,
-                    "fields.homePage": "true",
-                    "fields.hightLight": "true",
-                });
+        loadHomepageEntries();
 
-            setEntries(entries.items);
-        }
-        getPageEntries();
-    }, [entries]);
-
-    useEffect(() => {
-        async function getLatestEntries() {
-            const LatestEntries = await getEntries(
-                "toanPhatMarketNews", 
-                locale, 
-                { 
-                    order: "-sys.createdAt",
-                    limit: 5,
-                    "fields.hightLight": "true",
-                    // "fields.promo": "false",
-                    
-                });
-
-            setLatestEntries(LatestEntries.items);
-        }
-        getLatestEntries();
-    }, [latestEntries]);
+        return () => {
+            isActive = false;
+        };
+    }, [locale]);
 
     let heroEntries = bannerEntries.map((item, index) => {
         if (item.fields.promo) {
@@ -361,7 +367,7 @@ export default function Home({isMobile, ...otherProps}) {
             alt: item.fields.title,
             width: item.fields.image.fields.file.details.image.width,
             height: item.fields.image.fields.file.details.image.height,
-            desc: item.fields.desc,
+            excerpt: excerptFromBlocks(item.fields.desc, 420),
             title: item.fields.title,
             date: item.sys.createdAt,
           };
@@ -451,7 +457,13 @@ export default function Home({isMobile, ...otherProps}) {
                                 {formatDate(item.date)}
                             </h1>
                             <div data-aos={animation} data-aos-delay={delay} className="text-xl italic mb-8">
-                                {extractTextFromBlocks(item.desc)}                                        
+                                <LinesEllipsis
+                                    text={item.excerpt}
+                                    maxLine='8'
+                                    ellipsis='...'
+                                    trimRight
+                                    basedOn='words'
+                                />
                             </div>
                             <i data-aos={animation} data-aos-delay={delay} className="text-green-800 text-xl mb-1 lg:mb-16">
                                 <Link href={`/thi-truong/${item.slug}`}>
@@ -502,7 +514,7 @@ export default function Home({isMobile, ...otherProps}) {
                         <div className="flex flex-col items-start justify-start w-full mt-0 flex-grow">
                             <div className="text-1xl p-1">
                                 <LinesEllipsis
-                                    text={extractTextFromBlocks(item.fields.desc)}
+                                    text={excerptFromBlocks(item.fields.desc, 180)}
                                     maxLine='4'
                                     ellipsis='...'
                                     trimRight
