@@ -14,7 +14,7 @@ import Gallery from '@/components/content-ui/Gallery';
 import NumberTitleDescWithLink
   from '@/components/content-ui/NumberTitleDescWithLink';
 import VideoComponent from '@/components/content-ui/VideoComponent';
-import { getEntries } from '@/components/contentful/ContentfulService';
+import { getEntries } from '@/components/strapi/StrapiContentService';
 import SlickSlider from '@/components/layout/slick-slider-carousel';
 import {
   bestServices,

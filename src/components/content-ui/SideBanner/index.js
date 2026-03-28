@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { getEntries } from "@/components/contentful/ContentfulService";
+import { getEntries } from "@/components/strapi/StrapiContentService";
 import { useRouter } from "next/router";
 
 

@@ -15,8 +15,14 @@ const nextConfig = {
         hostname: 'images.ctfassets.net',
         pathname: '**',
       },
+      {
+        protocol: 'https',
+        hostname: 'strapi.toanphatgroup.com',
+        pathname: '**',
+      },
     ],
     formats: ['image/webp'],
+    qualities: [100, 75],
   },
   async redirects() {
     return [

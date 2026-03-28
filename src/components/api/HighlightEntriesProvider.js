@@ -6,7 +6,7 @@ import React, {
 import { useRouter } from 'next/router';
 
 import HighlightEntriesContext from '@/components/api/HighlightEntriesContext';
-import { getEntries } from '@components/contentful/ContentfulService';
+import { getEntries } from '@components/strapi/StrapiContentService';
 
 function shortenEntries (entries) {
     return entries.map((item, index) => {

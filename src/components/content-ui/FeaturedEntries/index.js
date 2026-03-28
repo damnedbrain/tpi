@@ -203,14 +203,13 @@ export default function FeaturedEntries({ newsEntries, blogEntries, promotionEnt
                 </a>
                 <div className="flex flex-row w-full lg:flex-col lg:w-5/6">
                     {topTagslabelLocale.topTags.map((item, index) => (
-                        <Link key={index} href={`/thi-truong${topTagslabelLocale.link[index]}`} legacyBehavior>
-                            <a
-                                key={index}
-                                className="font-semiBold text-xxs lg:text-xl w-full m-[1px] p-1 lg:p-2 rounded-md -skew-x-12 text-white items-center justify-between text-right whitespace-nowrap"
-                                style={{ backgroundImage: `url(/images/thi-truong/tags-image-0${index}.png)`, backgroundSize: 'cover', width: '100%', height: '100%'}}
-                            >
-                                {item}
-                            </a>
+                        <Link
+                            key={index}
+                            href={`/thi-truong${topTagslabelLocale.link[index]}`}
+                            className="font-semiBold text-xxs lg:text-xl w-full m-[1px] p-1 lg:p-2 rounded-md -skew-x-12 text-white items-center justify-between text-right whitespace-nowrap"
+                            style={{ backgroundImage: `url(/images/thi-truong/tags-image-0${index}.png)`, backgroundSize: 'cover', width: '100%', height: '100%'}}
+                        >
+                            {item}
                         </Link>
                     ))}
                 </div>  

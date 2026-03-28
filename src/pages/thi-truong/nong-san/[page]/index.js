@@ -11,7 +11,7 @@ import { useRouter } from 'next/router';
 import EntriesWithPagination
   from '@/components/content-ui/EntriesPreviewWithPagination';
 import Pagination from '@/components/content-ui/Pagination';
-import { getEntries } from '@/components/contentful/ContentfulService';
+import { getEntries } from '@/components/strapi/StrapiContentService';
 import BottomBanner from '@assets/thi-truong-banner/bottom.jpg';
 import TopBanner from '@assets/thi-truong-banner/top.jpg';
 import SideBanner from '@/components/content-ui/SideBanner';

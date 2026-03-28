@@ -9,7 +9,7 @@ import { useRouter } from 'next/router';
 
 import BreadCrump from '@/components/layout/breadcrump';
 
-import { getEntries } from '@/components/contentful/ContentfulService';
+import { getEntries } from '@/components/strapi/StrapiContentService';
 import SlickSlider from '@/components/layout/slick-slider-carousel';
 import { coldStorageTopContent } from '@/constants/language-option';
 import cold1 from '@assets/cold-storage/cold-1.png';

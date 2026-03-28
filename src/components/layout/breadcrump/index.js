@@ -32,9 +32,7 @@ export default function BreadCrump({data = defaultData}) {
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-4 h-4 mx-2 mb-1">
                             <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
                         </svg>
-                        <Link href='/' legacyBehavior>
-                            <a className='text-blue-500'>Home</a>
-                        </Link>
+                        <Link href='/' className='text-blue-500'>Home</Link>
                     </li>
 
                     {pathSegments.map((segment, index) => {
@@ -54,10 +52,8 @@ export default function BreadCrump({data = defaultData}) {
                                         {segment}
                                     </span>
                                 ) : (
-                                    <Link href={path} legacyBehavior>
-                                        <a className='text-blue-500 hover:text-blue-950'>
-                                            {stateData.sub.title}
-                                        </a>
+                                    <Link href={path} className='text-blue-500 hover:text-blue-950'>
+                                        {stateData.sub.title}
                                     </Link>
                                 )}
                             </li>

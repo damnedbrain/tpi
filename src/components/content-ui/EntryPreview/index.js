@@ -19,7 +19,7 @@ export default function EntryPreview({ entry, ellipsis = true}) {
                 alt={entry.title}
                 width={750}
                 height={500}
-                objectFit="cover"
+                style={{ objectFit: 'cover' }}
             />
             <div className="flex flex-col w-full justify-between items-center bg-white bg-opacity-80 rounded-b-lg">
                 <div className=" flex flex-row p-2 w-full items-end">

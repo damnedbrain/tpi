@@ -97,28 +97,28 @@ export default function Header() {
             {/* MENU */} 
             {arrMenu.map((item, index) => (
               <div key={index} className="relative flex items-center h-12 justify-center lg:mx-4 p-1 group">
-                <Link href={item.sub ? "#" : item.link} legacyBehavior>
-                  <a 
-                    className="p-1 block w-28 text-center items-center justify-center rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out"
-                    onClick={(e) => {
-                      if (item.sub) {
-                        e.preventDefault();
-                        handleMenu(item.title);
-                      }
-                    }}
-                  >
-                    {item.title}
-                  </a>
+                <Link
+                  href={item.sub ? "#" : item.link}
+                  className="p-1 block w-28 text-center items-center justify-center rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out"
+                  onClick={(e) => {
+                    if (item.sub) {
+                      e.preventDefault();
+                      handleMenu(item.title);
+                    }
+                  }}
+                >
+                  {item.title}
                 </Link>
                 {item.sub && item.sub.length > 0 && (
                   <div className={`absolute left-0 w-48 mt-48 py-2 bg-indigo-950 text-white rounded-md shadow-xl z-20 transition-all ease-in-out duration-200 transform ${activeMenu === item.title ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
                     {item.sub.map((subItem, subIndex) => (
-                      <Link key={subIndex} href={subItem.link} legacyBehavior>
-                        <a
-                          onClick={() => setActiveMenu(null)} 
-                          className="block px-4 py-2 text-sm capitalize text-white hover:bg-slate-200 hover:text-green-900">
-                          {subItem.title}
-                        </a>
+                      <Link
+                        key={subIndex}
+                        href={subItem.link}
+                        onClick={() => setActiveMenu(null)}
+                        className="block px-4 py-2 text-sm capitalize text-white hover:bg-slate-200 hover:text-green-900"
+                      >
+                        {subItem.title}
                       </Link>
                     ))}
                   </div>
@@ -147,39 +147,37 @@ export default function Header() {
         <div className={`h-90-screen w-80-screen px-2 pt-2 pb-3 ${activeSideMenu ? 'flex flex-row items-start' : 'hidden'}`}>
           <div>
             <div className='ml-8 mb-8'>
-              <Link href='/' className={`${activeSideMenu ? 'block' : 'hidden'}`} legacyBehavior>
-                  <a onClick={(e) => setActiveSideMenu(false)}>
-                    <Image src={ToanPhatLogo} alt="logo" width={activeSideMenu ? 96 : 48} height='auto' as="image"
-                      className='pt-2'
-                    />
-                  </a>
+              <Link href='/' className={`${activeSideMenu ? 'block' : 'hidden'}`} onClick={() => setActiveSideMenu(false)}>
+                  <Image src={ToanPhatLogo} alt="logo" width={activeSideMenu ? 96 : 48} height='auto' as="image"
+                    className='pt-2'
+                  />
               </Link>
             </div>
             {arrMenu.map((item, index) => (
               <div key={index} className="relative group border-b-2 border-slate-800">
-                <Link href={item.sub ? "#" : item.link} legacyBehavior>
-                  <a
-                    className="block ml-4 px-4 py-2 rounded-md text-2xl font-medium text-gray-300 hover:text-white focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out"
-                    onClick={(e) => {
-                      handleMenu(item.title)
-                      !item.sub && setActiveSideMenu(false);
-                    }}
-                  >
-                    {item.title}
-                  </a>
+                <Link
+                  href={item.sub ? "#" : item.link}
+                  className="block ml-4 px-4 py-2 rounded-md text-2xl font-medium text-gray-300 hover:text-white focus:outline-none focus:text-white focus:bg-green-900 transition duration-150 ease-in-out"
+                  onClick={() => {
+                    handleMenu(item.title)
+                    !item.sub && setActiveSideMenu(false);
+                  }}
+                >
+                  {item.title}
                 </Link>
                 {item.sub && item.sub.length > 0 && (
                   <div className={`absolute left-0 w-64 mt-2 py-2 bg-white rounded-md shadow-xl z-20 ${activeMenu === item.title ? 'block' : 'hidden'} sm:hidden`}>
                     {item.sub.map((subItem, subIndex) => (
-                      <Link key={subIndex} href={subItem.link} legacyBehavior>
-                        <a
-                          onClick={(e) => {
-                            handleNavigation(subItem.link)
-                            setActiveSideMenu(false);
-                          }}
-                          className="block px-4 py-2 text-2xl capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
-                          {subItem.title}
-                        </a>
+                      <Link
+                        key={subIndex}
+                        href={subItem.link}
+                        onClick={() => {
+                          handleNavigation(subItem.link)
+                          setActiveSideMenu(false);
+                        }}
+                        className="block px-4 py-2 text-2xl capitalize text-gray-700 hover:bg-blue-500 hover:text-white"
+                      >
+                        {subItem.title}
                       </Link>
                     ))}
                   </div>

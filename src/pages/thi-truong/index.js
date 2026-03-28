@@ -15,7 +15,7 @@ import HighlightFeaturedEntries
   from '@/components/content-ui/HighlightFeaturedEntries';
 import NewsEntries from '@/components/content-ui/NewsEntries';
 import PromotionEntries from '@/components/content-ui/PromotionEntries';
-import { getEntries } from '@/components/contentful/ContentfulService';
+import { getEntries } from '@/components/strapi/StrapiContentService';
 import SlickSlider from '@/components/layout/slick-slider-carousel';
 import { videoList } from '@/constants/video-list';
 import BottomBanner from '@assets/thi-truong-banner/bottom.jpg';

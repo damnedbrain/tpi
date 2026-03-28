@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 
-import { createClient } from 'contentful';
 import Head from 'next/head';
 import Image from 'next/image';
+import { getEntries } from '@/components/strapi/StrapiContentService';
 
 import { formatDate } from '@/components/api/FormatDateTime';
 import HighlightEntriesContext from '@/components/api/HighlightEntriesContext';
@@ -13,16 +13,12 @@ import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types';
 import { render } from 'react-dom';
 
 export async function getStaticPaths({ }) {
-    const client = createClient({
-        space: 
-        'nztbx73s7e26',
-        accessToken: 
-        'SbzQT6nC8k_XpLnxT7EogVUd9uKqCVAkDPpa_n25dXU',
-    });
-    const entries =  await client.getEntries(
-        { content_type:"toanPhatMarketNews" });   
+    const [viEntries, enEntries] = await Promise.all([
+        getEntries("toanPhatMarketNews", 'vi', { limit: 2000 }),
+        getEntries("toanPhatMarketNews", 'en-US', { limit: 2000 }),
+    ]);
     let paths = [];
-    entries.items.map((entry) => {
+    [...viEntries.items, ...enEntries.items].map((entry) => {
         if (entry.locale === 'vi') {
             paths.push({
                 params: { 
@@ -47,18 +43,11 @@ export async function getStaticPaths({ }) {
 }
 
 export async function getStaticProps({ params, locale }) {
-    const client = createClient({
-        space: 'nztbx73s7e26',
-        accessToken: 'SbzQT6nC8k_XpLnxT7EogVUd9uKqCVAkDPpa_n25dXU',
-    });
-
-  
-    const entry = await client.getEntries({
-        content_type: "toanPhatMarketNews",
+    const entry = await getEntries("toanPhatMarketNews", locale, {
         'fields.slug': params.slug,
-        locale: locale,
+        limit: 1,
     });
-    if (!entry) {
+    if (!entry?.items?.[0]) {
         return {
             redirect: {
                 destination: '/404',
@@ -71,9 +60,10 @@ export async function getStaticProps({ params, locale }) {
         props: {
             entry: entry.items[0],
             locale,
-            revalidate: 10,
+        },
+        revalidate: 10,
     }
-    };
+    
 }
 
 export default function EntryDetail( { entry, locale }) {
@@ -261,7 +251,7 @@ export default function EntryDetail( { entry, locale }) {
                         <div className="flex flex-col w-full">
                             {highlightEntries.map((item, index) => {
                                 return (
-                                    <div className="">
+                                    <div key={item.slug || item.id || index} className="">
                                         <EntryPreview entry={item} />
                                     </div>
                                 )

@@ -31,10 +31,10 @@ const NumberTitleDescWithLink = ({ isMobile, icon, number, title, desc, link, bt
       </div>
       <h2 data-aos= {animation} data-aos-duration= {duration} data-aos-delay={delay} className="text-2xl text-indigo-950 tracking-wide font-bold">{title}</h2>
       <p data-aos= {animation} data-aos-duration= {duration} data-aos-delay={delay} className="text-base">{desc}</p>
-      <Link href={link ? link : '#'} passHref className="text-green-800 hover:underline">
-        <div data-aos={animation} data-aos-duration={duration} data-aos-delay={delay}>
+      <Link href={link ? link : '#'} className="text-green-800 hover:underline">
+        <span data-aos={animation} data-aos-duration={duration} data-aos-delay={delay}>
           {btnText}
-        </div>
+        </span>
       </Link>
       <div data-aos={animation} data-aos-duration= {duration} data-aos-delay={delay} className="absolute right-12 text-right text-gray-200 text-9xl font-bold -z-10 opacity-10">{number}</div>
     </div>
